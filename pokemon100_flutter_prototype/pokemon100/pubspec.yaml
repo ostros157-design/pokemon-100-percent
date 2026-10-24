@@ -1,0 +1,95 @@
+name: pokemon_guide
+version: 0.1.0+1
+description: First working Flutter prototype for the Pokemon 100% app.
+publish_to: "none"
+
+# This prototype uses only Flutter SDK packages.
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+  flutter: ">=3.19.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/pokemon/
+    - assets/pokemon/gen1/
+    - assets/pokemon/gen2/
+    - assets/pokemon/gen3/
+    - assets/pokemon/gen4/
+    - assets/pokemon/gen5/
+    - assets/trainers/
+    - assets/items/
+    - assets/badges/
+    - assets/maps/
+    - assets/locations/
+    - assets/games/
+    - assets/icons/
+    - assets/pokemon/gen6/
+    - assets/pokemon/gen7/
+    - assets/pokemon/gen8/
+    - assets/pokemon/gen9/
+    - assets/trainers/gen1/
+    - assets/trainers/gen2/
+    - assets/trainers/gen3/
+    - assets/trainers/gen4/
+    - assets/trainers/gen5/
+    - assets/trainers/gen6/
+    - assets/trainers/gen7/
+    - assets/trainers/gen8/
+    - assets/trainers/gen9/
+    - assets/badges/gen1/
+    - assets/badges/gen2/
+    - assets/badges/gen3/
+    - assets/badges/gen4/
+    - assets/badges/gen5/
+    - assets/badges/gen6/
+    - assets/badges/gen7/
+    - assets/badges/gen8/
+    - assets/badges/gen9/
+    - assets/maps/gen1/
+    - assets/maps/gen2/
+    - assets/maps/gen3/
+    - assets/maps/gen4/
+    - assets/maps/gen5/
+    - assets/maps/gen6/
+    - assets/maps/gen7/
+    - assets/maps/gen8/
+    - assets/maps/gen9/
+    - assets/locations/gen1/
+    - assets/locations/gen2/
+    - assets/locations/gen3/
+    - assets/locations/gen4/
+    - assets/locations/gen5/
+    - assets/locations/gen6/
+    - assets/locations/gen7/
+    - assets/locations/gen8/
+    - assets/locations/gen9/
+    - assets/games/gen1/
+    - assets/games/gen2/
+    - assets/games/gen3/
+    - assets/games/gen4/
+    - assets/games/gen5/
+    - assets/games/gen6/
+    - assets/games/gen7/
+    - assets/games/gen8/
+    - assets/games/gen9/
+    - assets/icons/gen1/
+    - assets/icons/gen2/
+    - assets/icons/gen3/
+    - assets/icons/gen4/
+    - assets/icons/gen5/
+    - assets/icons/gen6/
+    - assets/icons/gen7/
+    - assets/icons/gen8/
+    - assets/icons/gen9/
