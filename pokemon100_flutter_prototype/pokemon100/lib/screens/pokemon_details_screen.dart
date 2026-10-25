@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../models/pokemon.dart';
@@ -88,23 +89,18 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
               child: SizedBox(
                 width: 220,
                 height: 220,
-                child: Image.network(
-                  'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png',
+                child: CachedNetworkImage(
+                  imageUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png',
                   fit: BoxFit.contain,
-                  errorBuilder: (context, error, stackTrace) => const Icon(
+                  placeholder: (context, url) => const SizedBox(
+                    width: 64,
+                    height: 64,
+                    child: Center(child: CircularProgressIndicator()),
+                  ),
+                  errorWidget: (context, url, error) => const Icon(
                     Icons.catching_pokemon,
                     size: 120,
                   ),
-                  loadingBuilder: (context, child, loadingProgress) {
-                    if (loadingProgress == null) return child;
-                    return const SizedBox(
-                      width: 64,
-                      height: 64,
-                      child: Center(
-                        child: CircularProgressIndicator(),
-                      ),
-                    );
-                  },
                 ),
               ),
             ),
