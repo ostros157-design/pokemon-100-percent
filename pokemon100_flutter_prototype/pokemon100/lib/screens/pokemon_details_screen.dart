@@ -194,6 +194,139 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
     );
   }
 
+  Widget _buildBaseStats(Pokemon pokemon) {
+    final stats = <(String, int?)>[
+      ('HP', pokemon.hp),
+      ('Atak', pokemon.attack),
+      ('Obrona', pokemon.defense),
+      ('Atak specjalny', pokemon.specialAttack),
+      ('Obrona specjalna', pokemon.specialDefense),
+      ('Szybkość', pokemon.speed),
+    ];
+    final complete = pokemon.hasCompleteBaseStats;
+    final maxStat = stats.map((entry) => entry.$2 ?? 0).fold<int>(1, (a, b) => a > b ? a : b);
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Text('Statystyki bazowe',
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+        const SizedBox(height: 8),
+        Card(
+          child: Padding(
+            padding: const EdgeInsets.all(12),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                for (final stat in stats)
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 10),
+                    child: Row(
+                      children: [
+                        SizedBox(width: 132, child: Text(stat.$1)),
+                        Expanded(
+                          child: stat.$2 == null
+                              ? const Text('Brak danych')
+                              : LinearProgressIndicator(
+                                  value: (stat.$2! / maxStat).clamp(0.0, 1.0),
+                                  minHeight: 8,
+                                ),
+                        ),
+                        const SizedBox(width: 10),
+                        SizedBox(
+                          width: 34,
+                          child: Text(
+                            stat.$2?.toString() ?? '—',
+                            textAlign: TextAlign.end,
+                            style: const TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                const Divider(),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Text('Suma statystyk bazowych',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                    Text(pokemon.baseStatTotal?.toString() ?? '—',
+                        style: const TextStyle(fontWeight: FontWeight.bold)),
+                  ],
+                ),
+                if (!complete)
+                  const Padding(
+                    padding: EdgeInsets.only(top: 8),
+                    child: Text(
+                      'Brak zweryfikowanych statystyk w lokalnym zbiorze danych. Wartości nie są zgadywane.',
+                      style: TextStyle(fontSize: 12, color: Colors.grey),
+                    ),
+                  ),
+              ],
+            ),
+          ),
+        ),
+        const SizedBox(height: 16),
+      ],
+    );
+  }
+
+  Widget _buildSpeciesData(Pokemon pokemon) {
+    String heightText(int? value) =>
+        value == null ? 'Brak danych' : '${(value / 10).toStringAsFixed(1)} m';
+    String weightText(int? value) =>
+        value == null ? 'Brak danych' : '${(value / 10).toStringAsFixed(1)} kg';
+
+    Widget valueRow(String label, String value) => Padding(
+      padding: const EdgeInsets.symmetric(vertical: 5),
+      child: Row(
+        children: [
+          Expanded(child: Text(label)),
+          Text(value, style: const TextStyle(fontWeight: FontWeight.w600)),
+        ],
+      ),
+    );
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Text('Dane gatunku',
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+        const SizedBox(height: 8),
+        Card(
+          child: Padding(
+            padding: const EdgeInsets.all(12),
+            child: Column(
+              children: [
+                valueRow('Wzrost', heightText(pokemon.height)),
+                valueRow('Masa', weightText(pokemon.weight)),
+                valueRow('Bazowe doświadczenie', pokemon.baseExperience?.toString() ?? 'Brak danych'),
+                const Divider(),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    pokemon.abilities.isEmpty
+                        ? 'Umiejętności: brak danych w lokalnym zbiorze'
+                        : 'Umiejętności: ${pokemon.abilities.join(', ')}',
+                  ),
+                ),
+                if (pokemon.hiddenAbilities.isNotEmpty)
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 6),
+                      child: Text('Umiejętności ukryte: ${pokemon.hiddenAbilities.join(', ')}'),
+                    ),
+                  ),
+              ],
+            ),
+          ),
+        ),
+        const SizedBox(height: 16),
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final pokemon = widget.pokemon;
@@ -260,6 +393,8 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
               )).toList(),
             ),
             _buildTypeMatchups(pokemon),
+            _buildBaseStats(pokemon),
+            _buildSpeciesData(pokemon),
             const SizedBox(height: 24),
             const Text('Informacje', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
             const SizedBox(height: 8),
