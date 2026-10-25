@@ -6,6 +6,16 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 
 ## Ostatnie prace
 
+### Pokédex — lokalny katalog ruchów (2026-10-25)
+- Dodano `lib/data/move_data.dart` z katalogiem 937 ruchów z pliku `moves.csv` PokéAPI oraz nazwami angielskimi z `move_names.csv`.
+- Każdy ruch ma ID, nazwę, typ, kategorię (physical/special/status), moc, PP, celność, priorytet i generację. Wartości nieznane w źródle pozostają `null`.
+- Katalog jest zapisany lokalnie i może działać offline.
+- Źródło: `PokeAPI/pokeapi/data/v2/csv/moves.csv`, `move_names.csv`, `types.csv`, `move_damage_classes.csv`.
+- Commit: `d8baa158f398eff1e71568bf9917ed0db6b6c445`.
+- Ograniczenie: źródłowy plik `pokemon_moves.csv` nie został zwrócony przez GitHub connector (pusty content), więc nie wolno jeszcze przypisywać tych ruchów do konkretnych Pokémonów ani udawać, że metody nauki są gotowe. Następny krok to pozyskać i zaimportować relacje Pokémon–ruch–gra–metoda nauki, potem zbudować interfejs ruchów na karcie.
+- Status: katalog wygenerowany i zapisany; Flutter analyze/test/build nieuruchomione.
+
+
 ### Pokédex — dodatkowe metadane gatunków (2026-10-25)
 - Rozszerzono model `Pokemon` o współczynnik łapania, bazową przyjaźń, cykl wykluwania, współczynnik płci, generację oraz flagi legendary/mythical/baby.
 - Uzupełniono wszystkie 1025 wpisów na podstawie `pokemon_species.csv` z repozytorium PokéAPI.
