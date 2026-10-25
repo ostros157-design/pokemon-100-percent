@@ -301,6 +301,27 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
                 valueRow('Wzrost', heightText(pokemon.height)),
                 valueRow('Masa', weightText(pokemon.weight)),
                 valueRow('Bazowe doświadczenie', pokemon.baseExperience?.toString() ?? 'Brak danych'),
+                valueRow('Współczynnik łapania', pokemon.captureRate?.toString() ?? 'Brak danych'),
+                valueRow('Bazowa przyjaźń', pokemon.baseHappiness?.toString() ?? 'Brak danych'),
+                valueRow('Cykl wykluwania', pokemon.hatchCounter?.toString() ?? 'Brak danych'),
+                valueRow('Generacja', pokemon.generation?.toString() ?? 'Brak danych'),
+                valueRow('Płeć', pokemon.genderRate == null
+                    ? 'Brak danych'
+                    : pokemon.genderRate == -1
+                        ? 'Brak płci'
+                        : 'Samce: ${((8 - pokemon.genderRate!) / 8 * 100).round()}%, samice: ${(pokemon.genderRate! / 8 * 100).round()}%'),
+                if (pokemon.isLegendary || pokemon.isMythical || pokemon.isBaby)
+                  Padding(
+                    padding: const EdgeInsets.only(top: 8, bottom: 4),
+                    child: Wrap(
+                      spacing: 6,
+                      children: [
+                        if (pokemon.isLegendary) const Chip(label: Text('Legendarny')),
+                        if (pokemon.isMythical) const Chip(label: Text('Mityczny')),
+                        if (pokemon.isBaby) const Chip(label: Text('Baby Pokémon')),
+                      ],
+                    ),
+                  ),
                 const Divider(),
                 Align(
                   alignment: Alignment.centerLeft,
