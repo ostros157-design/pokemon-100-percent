@@ -6,6 +6,14 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 
 ## Ostatnie prace
 
+### Pokédex — wyszukiwanie ruchów i testy integralności (2026-10-25)
+- Rozszerzono `lib/data/move_data.dart` o `moveById` oraz `searchMoves`, obsługujące wyszukiwanie po nazwie/typie/kategorii/ID i filtrowanie po typie oraz kategorii. Funkcje działają na danych lokalnych.
+- Dodano `test/data_integrity_test.dart`: kontrola liczby 1025 wpisów Pokédexa, unikalności ID, podstawowych pól i parametrów katalogu ruchów oraz testy wyszukiwania.
+- Commity: `a50dac9dff8e9b5c5e5ba3480b8c75fc9718d125` (API katalogu ruchów), `c8cdc17402dc1e84f614a835c4de05ca912faeda` (testy).
+- Status: testy zapisane, ale nieuruchomione — środowisko tej sesji nie uruchamia Flutter SDK. Nie oznaczać danych jako zweryfikowanych testami, dopóki nie zostanie wykonane `flutter test`.
+- Nadal otwarte: import relacji Pokémon–ruch–wersja gry–metoda nauki. Próba pobrania `pokemon_moves.csv` przez GitHub connector zwróciła pustą zawartość; nie przypisujemy ruchów do Pokémonów bez źródła.
+ 
+
 ### Pokédex — lokalny katalog ruchów (2026-10-25)
 - Dodano `lib/data/move_data.dart` z katalogiem 937 ruchów z pliku `moves.csv` PokéAPI oraz nazwami angielskimi z `move_names.csv`.
 - Każdy ruch ma ID, nazwę, typ, kategorię (physical/special/status), moc, PP, celność, priorytet i generację. Wartości nieznane w źródle pozostają `null`.
