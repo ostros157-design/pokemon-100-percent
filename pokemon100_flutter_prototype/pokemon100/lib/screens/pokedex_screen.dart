@@ -103,12 +103,11 @@ class _PokedexScreenState extends State<PokedexScreen> {
                     padding: const EdgeInsets.all(10),
                     gridDelegate:
                         const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
-                      crossAxisSpacing: 8,
-                      mainAxisSpacing: 8,
-                      // Shorter cards allow around four rows (eight Pokémon)
-                      // to fit on a typical phone screen.
-                      childAspectRatio: 1.3,
+                      // Three compact columns show more Pokémon at once.
+                      crossAxisCount: 3,
+                      crossAxisSpacing: 6,
+                      mainAxisSpacing: 6,
+                      childAspectRatio: 0.95,
                     ),
                     itemCount: pokemon.length,
                     itemBuilder: (context, index) {
