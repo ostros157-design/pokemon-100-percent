@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import '../data/pokemon_data.dart';
 import '../models/pokemon.dart';
@@ -14,6 +15,8 @@ class _PokedexScreenState extends State<PokedexScreen> {
   final TextEditingController _searchController = TextEditingController();
 
   String _search = '';
+  int _imagesCached = 0;
+  bool _cacheFinished = false;
 
   @override
   void initState() {
@@ -24,7 +27,26 @@ class _PokedexScreenState extends State<PokedexScreen> {
         _search = _searchController.text.toLowerCase();
       });
     });
+    WidgetsBinding.instance.addPostFrameCallback((_) => _cachePokemonImages());
   }
+
+  Future<void> _cachePokemonImages() async {
+    for (final pokemon in pokemonList) {
+      if (!mounted) return;
+      try {
+        await precacheImage(CachedNetworkImageProvider(_imageUrl(pokemon.id)), context);
+      } catch (_) {
+        // Failed downloads can be retried when the image is displayed.
+      }
+      if (!mounted) return;
+      setState(() => _imagesCached++);
+    }
+    if (!mounted) return;
+    setState(() => _cacheFinished = true);
+  }
+
+  String _imageUrl(int id) =>
+      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/$id.png';
 
   @override
   void dispose() {
@@ -54,6 +76,20 @@ class _PokedexScreenState extends State<PokedexScreen> {
       ),
       body: Column(
         children: [
+          if (!_cacheFinished)
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 8, 16, 4),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('Zapisywanie zdjęć Pokémonów: $_imagesCached/${pokemonList.length}'),
+                  const SizedBox(height: 6),
+                  LinearProgressIndicator(value: pokemonList.isEmpty ? 1 : _imagesCached / pokemonList.length),
+                  const SizedBox(height: 4),
+                  const Text('Po pobraniu dostępne będą również bez internetu.', style: TextStyle(fontSize: 12)),
+                ],
+              ),
+            ),
           Padding(
             padding: const EdgeInsets.all(12),
             child: TextField(
@@ -159,23 +195,13 @@ class _PokemonCard extends StatelessWidget {
               SizedBox(
                 width: 76,
                 height: 76,
-                child: Image.network(
-                  'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png',
+                child: CachedNetworkImage(
+                  imageUrl: _imageUrl(pokemon.id),
                   fit: BoxFit.contain,
-                  errorBuilder: (context, error, stackTrace) => const Icon(
-                    Icons.catching_pokemon,
-                    size: 42,
+                  placeholder: (context, url) => const Center(
+                    child: SizedBox(width: 24, height: 24, child: CircularProgressIndicator(strokeWidth: 2)),
                   ),
-                  loadingBuilder: (context, child, loadingProgress) {
-                    if (loadingProgress == null) return child;
-                    return const SizedBox(
-                      width: 42,
-                      height: 42,
-                      child: Center(
-                        child: CircularProgressIndicator(strokeWidth: 2),
-                      ),
-                    );
-                  },
+                  errorWidget: (context, url, error) => const Icon(Icons.catching_pokemon, size: 42),
                 ),
               ),
               const SizedBox(height: 4),
