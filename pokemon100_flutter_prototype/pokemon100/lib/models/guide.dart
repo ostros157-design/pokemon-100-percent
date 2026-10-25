@@ -4,6 +4,9 @@ final String title;
 final String description;
 final String? location;
 final List<String> pokemon;
+/// Verified encounter percentages for each Pokémon at this guide step/location.
+/// Keys must match Pokémon names; values are percentages from 0 to 100.
+final Map<String, double> encounterRatesPercent;
 final List<String> items;
 final bool optional;
 
@@ -12,6 +15,7 @@ required this.title,
 required this.description,
 this.location,
 this.pokemon = const [],
+this.encounterRatesPercent = const {},
 this.items = const [],
 this.optional = false,
 });
@@ -34,4 +38,3 @@ this.sections = const [],
 this.steps = const [],
 });
 }
-
