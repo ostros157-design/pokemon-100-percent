@@ -84,11 +84,28 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
               style: const TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 20),
-            CircleAvatar(
-              radius: 90,
-              child: Text(
-                '#${pokemon.id}',
-                style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+            Center(
+              child: SizedBox(
+                width: 220,
+                height: 220,
+                child: Image.network(
+                  'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png',
+                  fit: BoxFit.contain,
+                  errorBuilder: (context, error, stackTrace) => const Icon(
+                    Icons.catching_pokemon,
+                    size: 120,
+                  ),
+                  loadingBuilder: (context, child, loadingProgress) {
+                    if (loadingProgress == null) return child;
+                    return const SizedBox(
+                      width: 64,
+                      height: 64,
+                      child: Center(
+                        child: CircularProgressIndicator(),
+                      ),
+                    );
+                  },
+                ),
               ),
             ),
             const SizedBox(height: 20),
