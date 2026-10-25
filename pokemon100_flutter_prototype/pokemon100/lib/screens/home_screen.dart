@@ -10,6 +10,7 @@ import '../screens/achievements_screen.dart';
 import '../screens/profile_screen.dart';
 import '../screens/settings_screen.dart';
 import '../screens/pokemon_music_screen.dart';
+import '../screens/maps_screen.dart';
 
 class HomeScreen extends StatelessWidget {
 const HomeScreen({super.key});
@@ -74,6 +75,18 @@ guide: firstGuide,
 ),
 );
 }
+},
+),
+
+_HomeButton(
+icon: Icons.map,
+title: 'Mapy regionów',
+subtitle: 'Przeglądaj mapy regionów Pokémon',
+onTap: () {
+Navigator.push(
+context,
+MaterialPageRoute(builder: (_) => const MapsScreen()),
+);
 },
 ),
 
