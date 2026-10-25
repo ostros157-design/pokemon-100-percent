@@ -16,6 +16,11 @@ class _PokedexScreenState extends State<PokedexScreen> {
 
   String _search = '';
   final Set<String> _selectedTypes = <String>{};
+  String _selectedGame = 'all';
+  final Set<int> _shinyPokemonIds = <int>{};
+  static const Set<int> _letsGoPikachuUnavailable = {
+    15, 23, 24, 37, 38, 52, 69, 70, 71, 109, 110, 127, 151,
+  };
   static const List<String> _pokemonTypes = <String>[
     'Normal', 'Fire', 'Water', 'Electric', 'Grass', 'Ice', 'Fighting',
     'Poison', 'Ground', 'Flying', 'Psychic', 'Bug', 'Rock', 'Ghost',
@@ -59,8 +64,16 @@ class _PokedexScreenState extends State<PokedexScreen> {
     setState(() => _cacheFinished = true);
   }
 
-  String _imageUrl(int id) =>
-      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/$id.png';
+  String _imageUrl(int id, {bool shiny = false}) =>
+      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${shiny ? 'shiny/' : ''}$id.png';
+
+  void _toggleShiny(int id) {
+    setState(() {
+      if (!_shinyPokemonIds.add(id)) {
+        _shinyPokemonIds.remove(id);
+      }
+    });
+  }
 
   @override
   void dispose() {
@@ -76,7 +89,12 @@ class _PokedexScreenState extends State<PokedexScreen> {
       final normalizedTypes = pokemon.types.map((type) => type.toLowerCase()).toSet();
       final matchesTypes = _selectedTypes.isEmpty ||
           _selectedTypes.any((type) => normalizedTypes.contains(type.toLowerCase()));
-      return matchesSearch && matchesTypes;
+      final matchesGame = _selectedGame == 'all' ||
+          (_selectedGame == 'lets_go_pikachu' &&
+              pokemon.id >= 1 &&
+              pokemon.id <= 151 &&
+              !_letsGoPikachuUnavailable.contains(pokemon.id));
+      return matchesSearch && matchesTypes && matchesGame;
     }).toList();
   }
 
