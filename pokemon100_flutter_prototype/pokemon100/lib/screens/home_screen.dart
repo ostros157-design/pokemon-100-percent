@@ -5,6 +5,7 @@ import '../data/guides_data.dart';
 import '../screens/guide_screen.dart';
 import '../screens/game_select_screen.dart';
 import '../screens/pokedex_screen.dart';
+import '../screens/move_catalog_screen.dart';
 import '../screens/team_screen.dart';
 import '../screens/achievements_screen.dart';
 import '../screens/profile_screen.dart';
@@ -98,6 +99,18 @@ onTap: () {
 Navigator.push(
 context,
 MaterialPageRoute(builder: (_) => const PokemonMusicScreen()),
+);
+},
+),
+
+_HomeButton(
+icon: Icons.bolt,
+title: 'Katalog ruchów',
+subtitle: 'Wyszukuj ruchy, typy i parametry offline',
+onTap: () {
+Navigator.push(
+context,
+MaterialPageRoute(builder: (_) => const MoveCatalogScreen()),
 );
 },
 ),
