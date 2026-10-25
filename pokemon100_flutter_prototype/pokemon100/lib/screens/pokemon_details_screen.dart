@@ -134,21 +134,21 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
               ),
             ),
             const SizedBox(height: 24),
-            const Text('W przyszłości', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+            const Text('Spotkanie i łapanie', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
             const SizedBox(height: 8),
             const Card(
               child: Column(
                 children: [
                   ListTile(
                     leading: Icon(Icons.location_on),
-                    title: Text('Lokacje'),
-                    subtitle: Text('Tutaj później znajdą się miejsca, w których można zdobyć tego Pokémona.'),
+                    title: Text('Szansa pojawienia się'),
+                    subtitle: Text('Procent musi zależeć od wybranej gry, lokacji, metody spotkania i warunków. Te dane nie są jeszcze dostępne — nie pokazujemy zmyślonej wartości.'),
                   ),
                   Divider(),
                   ListTile(
                     leading: Icon(Icons.auto_awesome),
-                    title: Text('Ewolucje'),
-                    subtitle: Text('Tutaj później pojawią się informacje o ewolucjach.'),
+                    title: Text('Szansa złapania'),
+                    subtitle: Text('Zależy m.in. od gry, aktualnego HP, statusu, Poké Balla i parametrów spotkania. Kalkulator wymaga tych danych, więc procent nie jest jeszcze wyliczany.'),
                   ),
                   Divider(),
                   ListTile(
