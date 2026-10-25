@@ -464,7 +464,7 @@ class _TeamAnalysis extends StatelessWidget {
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           const Text('Analiza drużyny', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
           const SizedBox(height: 6),
-          const Text('Tarcza oznacza zagrożenia w obronie, a miecz — typy, przeciw którym brakuje super skutecznego pokrycia.'),
+          const Text('Jak czytać wynik: 2/6 oznacza, że 2 z 6 Pokémonów są słabe na ten typ ataku. Im mniejsza liczba, tym lepiej. To nie jest ocena całej drużyny — sprawdź też, czy te same Pokémony mają kilka wspólnych słabości.'),
           const SizedBox(height: 14),
           Row(children: [
             Icon(Icons.shield, color: Theme.of(context).colorScheme.error),
@@ -477,7 +477,7 @@ class _TeamAnalysis extends StatelessWidget {
           else
             Wrap(spacing: 8, runSpacing: 4, children: defensiveSorted.map((entry) => Chip(
               avatar: Icon(Icons.shield, size: 18, color: Theme.of(context).colorScheme.error),
-              label: Text('${entry.key} · ${entry.value}/${team.length}'),
+              label: Text('${entry.key} · ${entry.value}/${team.length} podatne'),
             )).toList()),
           const SizedBox(height: 14),
           Row(children: [
@@ -485,6 +485,8 @@ class _TeamAnalysis extends StatelessWidget {
             const SizedBox(width: 8),
             const Text('Miecz — braki w ataku', style: TextStyle(fontWeight: FontWeight.bold)),
           ]),
+          const SizedBox(height: 4),
+          const Text('Pokazuje typy przeciwników, na które żaden typ Twojego Pokémona nie zadaje super skutecznych obrażeń. Nie sprawdza jeszcze konkretnych ruchów.'),
           const SizedBox(height: 6),
           if (offensiveGaps.isEmpty)
             const Text('Drużyna ma super skuteczne pokrycie przeciwko wszystkim typom.')
