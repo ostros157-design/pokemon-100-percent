@@ -203,13 +203,16 @@ class _TeamScreenState extends State<TeamScreen> {
                       icon: const Icon(Icons.add),
                       label: const Text('Dodaj'),
                     ),
-                    const SizedBox(width: 8),
-                    FilledButton.tonalIcon(
-                      onPressed: _team.isEmpty ? null : _showRecommendations,
-                      icon: const Icon(Icons.auto_awesome),
-                      label: const Text('Dopasuj Pokémona'),
-                    ),
                   ],
+                ),
+                const SizedBox(height: 8),
+                SizedBox(
+                  width: double.infinity,
+                  child: FilledButton.tonalIcon(
+                    onPressed: _team.isEmpty ? null : _showRecommendations,
+                    icon: const Icon(Icons.auto_awesome),
+                    label: const Text('Dopasuj Pokémona'),
+                  ),
                 ),
                 const SizedBox(height: 8),
                 if (_team.isEmpty)
