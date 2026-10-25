@@ -62,7 +62,7 @@ class _PokemonGuideAppState extends State<PokemonGuideApp> {
                       labelStyle: TextStyle(color: foreground),
                     ),
                     listTileTheme: ListTileThemeData(textColor: foreground),
-                    cardTheme: CardTheme(
+                    cardTheme: CardThemeData(
                       color: isDark ? const Color(0xFF1E1E1E) : const Color(0xFFF8F8F8),
                     ),
                   ),
