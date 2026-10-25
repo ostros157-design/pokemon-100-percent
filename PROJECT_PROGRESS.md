@@ -6,6 +6,13 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 
 ## Ostatnie prace
 
+### Pokédex — kolekcja i sortowanie (2026-10-25)
+- Dodano oznaczanie złapanych Pokémonów bezpośrednio na kartach Pokédexa oraz filtr „Tylko złapane”.
+- Dodano licznik złapanych Pokémonów oraz sortowanie po numerze rosnąco/malejąco i alfabetycznie.
+- Stan złapania i wybór Shiny są zapisywane w SharedPreferences i odczytywane po ponownym uruchomieniu.
+- Zmiana zapisana w GitHubie w commicie `41d4d43c8d0667cf75df53c1d408224f7f2d2684`; kompilacja i testy nadal niepotwierdzone.
+
+
 ### Pokédex — drzewko ewolucji (2026-10-25)
 - Dodano sekcję „Drzewko ewolucji” na ekranie szczegółów Pokémona.
 - Formy z dostępnych rodzin są klikalne i prowadzą do karty wybranego Pokémona.
