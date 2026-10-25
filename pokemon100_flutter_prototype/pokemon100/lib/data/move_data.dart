@@ -947,3 +947,29 @@ const List<MoveData> moveCatalogue = [
   MoveData(id: 10017, name: 'Shadow Shed', type: 'shadow', category: 'status', power: null, pp: null, accuracy: null, priority: 0, generation: 3),
   MoveData(id: 10018, name: 'Shadow Sky', type: 'shadow', category: 'status', power: null, pp: null, accuracy: null, priority: 0, generation: 3),
 ];
+/// Find a move by its PokéAPI ID.
+MoveData? moveById(int id) {
+  for (final move in moveCatalogue) {
+    if (move.id == id) return move;
+  }
+  return null;
+}
+
+/// Search the offline move catalogue by name, type, or category.
+List<MoveData> searchMoves({
+  String query = '',
+  String? type,
+  String? category,
+}) {
+  final normalizedQuery = query.trim().toLowerCase();
+  return moveCatalogue.where((move) {
+    final matchesQuery = normalizedQuery.isEmpty ||
+        move.name.toLowerCase().contains(normalizedQuery) ||
+        move.type.toLowerCase().contains(normalizedQuery) ||
+        move.category.toLowerCase().contains(normalizedQuery) ||
+        move.id.toString() == normalizedQuery;
+    final matchesType = type == null || move.type == type;
+    final matchesCategory = category == null || move.category == category;
+    return matchesQuery && matchesType && matchesCategory;
+  }).toList(growable: false);
+}
