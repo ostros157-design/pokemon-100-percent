@@ -282,6 +282,8 @@ class _PokedexScreenState extends State<PokedexScreen> {
 
                       return _PokemonCard(
                         pokemon: currentPokemon,
+                        shiny: _shinyPokemonIds.contains(currentPokemon.id),
+                        onToggleShiny: () => _toggleShiny(currentPokemon.id),
                         onTap: () {
                           Navigator.push(
                             context,
