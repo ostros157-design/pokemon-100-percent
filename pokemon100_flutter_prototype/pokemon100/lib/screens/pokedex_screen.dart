@@ -253,11 +253,42 @@ class _PokedexScreenState extends State<PokedexScreen> {
                     onPressed: _showTypeFilters,
                     icon: const Icon(Icons.filter_list),
                     label: Text(_selectedTypes.isEmpty
-                        ? 'Filtry'
-                        : 'Filtry: ${_selectedTypes.length}'),
+                        ? 'Filtry typów'
+                        : 'Typy: ${_selectedTypes.length}'),
                   ),
                 ),
                 const SizedBox(width: 8),
+                Expanded(
+                  child: InputDecorator(
+                    decoration: const InputDecoration(
+                      labelText: 'Gra',
+                      contentPadding: EdgeInsets.symmetric(horizontal: 10, vertical: 2),
+                      border: OutlineInputBorder(),
+                    ),
+                    child: DropdownButtonHideUnderline(
+                      child: DropdownButton<String>(
+                        value: _selectedGame,
+                        isExpanded: true,
+                        isDense: true,
+                        items: const [
+                          DropdownMenuItem(
+                            value: 'all',
+                            child: Text('Wszystkie', overflow: TextOverflow.ellipsis),
+                          ),
+                          DropdownMenuItem(
+                            value: 'lets_go_pikachu',
+                            child: Text("Let's Go, Pikachu!", overflow: TextOverflow.ellipsis),
+                          ),
+                        ],
+                        onChanged: (value) {
+                          if (value != null) {
+                            setState(() => _selectedGame = value);
+                          }
+                        },
+                      ),
+                    ),
+                  ),
+                ),
                 if (_selectedTypes.isNotEmpty)
                   IconButton(
                     tooltip: 'Wyczyść filtry typów',
