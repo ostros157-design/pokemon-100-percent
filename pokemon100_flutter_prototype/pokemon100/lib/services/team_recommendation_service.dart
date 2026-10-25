@@ -16,7 +16,7 @@ class TeamRecommendationService {
   // not normally obtainable in-game. Trade evolutions remain available via trade.
   static const String supportedGameId = 'lets_go_pikachu';
   static const Set<int> _letsGoPikachuUnavailable = {
-    23, 24, 37, 38, 52, 69, 70, 71, 109, 110, 127, 151,
+    15, 23, 24, 37, 38, 52, 69, 70, 71, 109, 110, 127, 151,
   };
 
   static bool isAvailableInGame(Pokemon pokemon, String gameId) {
