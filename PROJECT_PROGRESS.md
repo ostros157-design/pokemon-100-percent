@@ -49,3 +49,11 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 3. Sprawdzić działanie filtrów typów, filtra gry i przełączania Shiny.
 4. Po weryfikacji dopisać wyniki testów do tego pliku.
 5. Kontynuować aktualizowanie dziennika przy każdej kolejnej zmianie.
+
+
+### Mapy regionów — 2026-10-25
+- Dodano ekran `MapsScreen` z wyborem regionu dla generacji 1–9 (Kanto, Johto, Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, Paldea).
+- Dodano wejście „Mapy regionów” na ekranie głównym.
+- Ekran próbuje wczytać grafikę z `assets/maps/genN/nazwa_regionu.png`; jeśli jej brakuje, pokazuje informację zamiast awarii.
+- Ważne: nie potwierdzono, że odpowiednie pliki graficzne są już w repozytorium. Trasy, miasta, oznaczenia Pokémonów/przedmiotów i połączenie z poradnikiem pozostają kolejnym etapem.
+- Status: zapisane w GitHubie; kompilacja i test na urządzeniu nie zostały uruchomione.
