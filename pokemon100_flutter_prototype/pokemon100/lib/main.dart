@@ -63,11 +63,11 @@ class _PokemonGuideAppState extends State<PokemonGuideApp> {
                       displayColor: foreground,
                     ),
                     chipTheme: ChipThemeData(
-                      backgroundColor: badgeColor.withValues(alpha: 0.14),
+                      backgroundColor: badgeColor.withOpacity(0.14),
                       labelStyle: TextStyle(color: foreground),
                     ),
                     listTileTheme: ListTileThemeData(textColor: foreground),
-                    cardTheme: CardThemeData(
+                    cardTheme: CardTheme(
                       color: isDark ? const Color(0xFF1E1E1E) : const Color(0xFFF8F8F8),
                     ),
                   ),
