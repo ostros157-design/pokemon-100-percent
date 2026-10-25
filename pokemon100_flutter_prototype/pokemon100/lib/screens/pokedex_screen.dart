@@ -15,6 +15,12 @@ class _PokedexScreenState extends State<PokedexScreen> {
   final TextEditingController _searchController = TextEditingController();
 
   String _search = '';
+  final Set<String> _selectedTypes = <String>{};
+  static const List<String> _pokemonTypes = <String>[
+    'Normal', 'Fire', 'Water', 'Electric', 'Grass', 'Ice', 'Fighting',
+    'Poison', 'Ground', 'Flying', 'Psychic', 'Bug', 'Rock', 'Ghost',
+    'Dragon', 'Dark', 'Steel', 'Fairy',
+  ];
   int _imagesCached = 0;
   bool _cacheFinished = false;
 
@@ -63,14 +69,90 @@ class _PokedexScreenState extends State<PokedexScreen> {
   }
 
   List<Pokemon> get _filteredPokemon {
-    if (_search.isEmpty) {
-      return pokemonList;
-    }
-
     return pokemonList.where((pokemon) {
-      return pokemon.name.toLowerCase().contains(_search) ||
+      final matchesSearch = _search.isEmpty ||
+          pokemon.name.toLowerCase().contains(_search) ||
           pokemon.id.toString().contains(_search);
+      final normalizedTypes = pokemon.types.map((type) => type.toLowerCase()).toSet();
+      final matchesTypes = _selectedTypes.isEmpty ||
+          _selectedTypes.any((type) => normalizedTypes.contains(type.toLowerCase()));
+      return matchesSearch && matchesTypes;
     }).toList();
+  }
+
+  Future<void> _showTypeFilters() async {
+    final draft = Set<String>.from(_selectedTypes);
+    final selected = await showModalBottomSheet<Set<String>>(
+      context: context,
+      isScrollControlled: true,
+      builder: (sheetContext) => StatefulBuilder(
+        builder: (context, setSheetState) => SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(16, 12, 16, 20),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Row(
+                  children: [
+                    const Expanded(
+                      child: Text('Filtruj według typu',
+                          style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                    ),
+                    TextButton(
+                      onPressed: () => setSheetState(() => draft.clear()),
+                      child: const Text('Wyczyść'),
+                    ),
+                  ],
+                ),
+                const Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text('Wybierz jeden lub kilka typów. Pokémon pasujący do dowolnego z nich zostanie pokazany.'),
+                ),
+                const SizedBox(height: 8),
+                Flexible(
+                  child: SingleChildScrollView(
+                    child: Wrap(
+                      spacing: 8,
+                      runSpacing: 4,
+                      children: _pokemonTypes.map((type) {
+                        final isSelected = draft.contains(type);
+                        return FilterChip(
+                          label: Text(type),
+                          selected: isSelected,
+                          onSelected: (value) => setSheetState(() {
+                            if (value) {
+                              draft.add(type);
+                            } else {
+                              draft.remove(type);
+                            }
+                          }),
+                        );
+                      }).toList(),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 12),
+                SizedBox(
+                  width: double.infinity,
+                  child: FilledButton(
+                    onPressed: () => Navigator.pop(sheetContext, draft),
+                    child: const Text('Zastosuj filtry'),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+
+    if (selected != null && mounted) {
+      setState(() {
+        _selectedTypes
+          ..clear()
+          ..addAll(selected);
+      });
+    }
   }
 
   @override
@@ -117,6 +199,29 @@ class _PokedexScreenState extends State<PokedexScreen> {
                   borderRadius: BorderRadius.circular(16),
                 ),
               ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(12, 0, 12, 8),
+            child: Row(
+              children: [
+                Expanded(
+                  child: OutlinedButton.icon(
+                    onPressed: _showTypeFilters,
+                    icon: const Icon(Icons.filter_list),
+                    label: Text(_selectedTypes.isEmpty
+                        ? 'Filtry'
+                        : 'Filtry: ${_selectedTypes.length}'),
+                  ),
+                ),
+                const SizedBox(width: 8),
+                if (_selectedTypes.isNotEmpty)
+                  IconButton(
+                    tooltip: 'Wyczyść filtry typów',
+                    onPressed: () => setState(() => _selectedTypes.clear()),
+                    icon: const Icon(Icons.filter_list_off),
+                  ),
+              ],
             ),
           ),
           Padding(
