@@ -6,6 +6,12 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 
 ## Ostatnie prace
 
+### Katalog ruchów — poprawka filtrów (2026-10-25)
+- Usunięto pozycje `DropdownMenuItem(value: null)` z list rozwijanych o typie `String`; puste pole oznacza teraz brak filtra, a więc wszystkie typy/kategorie. To eliminuje ryzyko asercji i niejednoznaczności wartości null w dropdownie.
+- Commit: `93d6be46ff7474a37fb9f02fb62c9011a17d5f10`.
+- Testy Flutter nie zostały uruchomione w tej sesji.
+
+
 ### Pokédex — API zapytań learnsetów (2026-10-25)
 - Rozszerzono lokalne repozytorium learnsetów o metody zwracające dostępne grupy wersji gry dla Pokémona oraz wpisy dla konkretnej grupy.
 - Metody korzystają z tego samego cache danych offline i nie wymagają połączenia sieciowego w aplikacji.
