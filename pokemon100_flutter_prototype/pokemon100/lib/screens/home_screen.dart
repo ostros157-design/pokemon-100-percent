@@ -9,6 +9,7 @@ import '../screens/team_screen.dart';
 import '../screens/achievements_screen.dart';
 import '../screens/profile_screen.dart';
 import '../screens/settings_screen.dart';
+import '../screens/pokemon_music_screen.dart';
 
 class HomeScreen extends StatelessWidget {
 const HomeScreen({super.key});
@@ -73,6 +74,18 @@ guide: firstGuide,
 ),
 );
 }
+},
+),
+
+_HomeButton(
+icon: Icons.music_note,
+title: 'Muzyka Pokémon',
+subtitle: 'Otwórz oficjalną bibliotekę melodii',
+onTap: () {
+Navigator.push(
+context,
+MaterialPageRoute(builder: (_) => const PokemonMusicScreen()),
+);
 },
 ),
 
