@@ -1,44 +1,29 @@
-/// Dane gatunku Pokémona. Pola rozszerzone są nullable, aby brakujące
-/// źródłowe dane nie były zastępowane zmyślonymi wartościami.
+/// Dane gatunku Pokémona. Wartości nieznane pozostają null.
 class Pokemon {
   final int id;
   final String name;
   final List<String> types;
   final String description;
-
-  /// Statystyki bazowe w kolejności używanej w grach głównej serii.
-  final int? hp;
-  final int? attack;
-  final int? defense;
-  final int? specialAttack;
-  final int? specialDefense;
-  final int? speed;
-
-  /// Wzrost w decymetrach i masa w hektogramach (jednostki PokéAPI).
-  final int? height;
-  final int? weight;
-  final int? baseExperience;
-
-  /// Nazwy umiejętności; hiddenAbilities oznacza umiejętności ukryte.
-  final List<String> abilities;
-  final List<String> hiddenAbilities;
+  final int? hp, attack, defense, specialAttack, specialDefense, speed;
+  /// Wzrost w decymetrach, masa w hektogramach.
+  final int? height, weight, baseExperience;
+  final List<String> abilities, hiddenAbilities;
+  /// Dane pochodzące z rekordu gatunku PokéAPI.
+  final int? captureRate, baseHappiness, hatchCounter, genderRate;
+  final bool isLegendary, isMythical, isBaby;
+  final int? generation;
 
   const Pokemon({
     required this.id,
     required this.name,
     required this.types,
     required this.description,
-    this.hp,
-    this.attack,
-    this.defense,
-    this.specialAttack,
-    this.specialDefense,
-    this.speed,
-    this.height,
-    this.weight,
-    this.baseExperience,
+    this.hp, this.attack, this.defense, this.specialAttack, this.specialDefense, this.speed,
+    this.height, this.weight, this.baseExperience,
     this.abilities = const <String>[],
     this.hiddenAbilities = const <String>[],
+    this.captureRate, this.baseHappiness, this.hatchCounter, this.genderRate, this.generation,
+    this.isLegendary = false, this.isMythical = false, this.isBaby = false,
   });
 
   int? get baseStatTotal {
