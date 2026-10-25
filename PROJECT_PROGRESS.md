@@ -6,6 +6,14 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 
 ## Ostatnie prace
 
+### Muzyka Pokémon — 2026-10-25
+- Dodano ekran „Muzyka Pokémon” oraz pozycję na ekranie głównym.
+- Ekran otwiera oficjalną Pokémon Game Sound Library w zewnętrznej przeglądarce; aplikacja nie hostuje, nie pobiera ani nie osadza chronionych nagrań.
+- Dodano zależność `url_launcher`.
+- Źródło: https://soundlibrary.pokemon.co.jp/en . Dostępność utworów i warunki użycia zależą od oficjalnej witryny.
+- Status: zmiany zapisane w GitHubie; kompilacja i działanie na urządzeniu niepotwierdzone.
+
+
 ### Pokédex — filtry typów
 - Dodano panel „Filtry” z wyborem typów Pokémonów.
 - Można wybrać kilka typów; wynik pasuje, jeśli Pokémon ma co najmniej jeden zaznaczony typ.
