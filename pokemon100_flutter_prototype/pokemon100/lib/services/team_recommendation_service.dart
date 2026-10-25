@@ -11,6 +11,19 @@ class TeamRecommendation {
 }
 
 class TeamRecommendationService {
+  // Confirmed conservative species filter for Let's Go, Pikachu!: the 151
+  // Kanto species, excluding Eevee-version exclusives and Mythicals that are
+  // not normally obtainable in-game. Trade evolutions remain available via trade.
+  static const String supportedGameId = 'lets_go_pikachu';
+  static const Set<int> _letsGoPikachuUnavailable = {
+    23, 24, 37, 38, 52, 69, 70, 71, 109, 110, 127, 151,
+  };
+
+  static bool isAvailableInGame(Pokemon pokemon, String gameId) {
+    if (gameId != supportedGameId) return false;
+    return pokemon.id >= 1 && pokemon.id <= 151 &&
+        !_letsGoPikachuUnavailable.contains(pokemon.id);
+  }
   static const Map<String, Set<String>> _superEffectiveAgainst = {
     'Normal': {}, 'Fire': {'Grass', 'Ice', 'Bug', 'Steel'},
     'Water': {'Fire', 'Ground', 'Rock'}, 'Electric': {'Water', 'Flying'},
@@ -39,8 +52,8 @@ class TeamRecommendationService {
     'Ghost': {'Normal', 'Fighting'}, 'Dark': {'Psychic'}, 'Steel': {'Poison'}, 'Fairy': {'Dragon'},
   };
 
-  static List<TeamRecommendation> recommend(List<Pokemon> team, {int limit = 5}) {
-    if (team.isEmpty) return const [];
+  static List<TeamRecommendation> recommend(List<Pokemon> team, {String gameId = supportedGameId, int limit = 5}) {
+    if (team.isEmpty || gameId != supportedGameId) return const [];
     final weakCounts = <String, int>{};
     for (final attackType in _superEffectiveAgainst.keys) {
       final count = team.where((member) {
@@ -55,6 +68,7 @@ class TeamRecommendationService {
       if (count > 0) weakCounts[attackType] = count;
     }
     final candidates = pokemonList.where((candidate) =>
+      isAvailableInGame(candidate, gameId) &&
       !team.any((member) => member.id == candidate.id) &&
       !(candidate.name == 'Gengar' && team.any((member) => member.name == 'Haunter')));
     final ranked = <TeamRecommendation>[];
