@@ -6,6 +6,13 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 
 ## Ostatnie prace
 
+### Pokédex — API zapytań learnsetów (2026-10-25)
+- Rozszerzono lokalne repozytorium learnsetów o metody zwracające dostępne grupy wersji gry dla Pokémona oraz wpisy dla konkretnej grupy.
+- Metody korzystają z tego samego cache danych offline i nie wymagają połączenia sieciowego w aplikacji.
+- Commit: `700ebd48344061d7d3e000f35a7cfe49f7789de0`.
+- Status testów bez zmian: Flutter SDK nie został uruchomiony w tej sesji; rzeczywisty JSON learnsetów pozostaje pustym placeholderem do czasu importu.
+
+
 ### Pokédex — integracja sekcji ruchów z kartą Pokémona (2026-10-25)
 - Dodano `lib/data/pokemon_learnset_data.dart`: model wpisu learnsetu, parser JSON i lokalny odczyt danych z bezpiecznym zachowaniem, gdy dane nie są jeszcze dostępne.
 - Dodano asset `assets/data/pokemon_learnsets.json` z pustym placeholderem oraz wpis do `pubspec.yaml`, aby projekt nie odwoływał się do nieistniejącego zasobu.
