@@ -161,7 +161,7 @@ class GuideStepCard extends StatelessWidget {
 
     return ActionChip(
       avatar: const Icon(Icons.catching_pokemon, size: 18),
-      label: Text(name),
+      label: Text(_pokemonLabel(name, encounterRate)),
       tooltip: 'Otwórz Pokédex: $name',
       onPressed: () {
         Navigator.of(context).push(
