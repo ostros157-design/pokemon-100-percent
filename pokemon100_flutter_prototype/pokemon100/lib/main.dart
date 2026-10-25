@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 import 'screens/home_screen.dart';
 import 'services/app_appearance.dart';
 
-void main() {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await AppAppearance.load();
   runApp(const PokemonGuideApp());
 }
 
@@ -16,12 +17,6 @@ class PokemonGuideApp extends StatefulWidget {
 }
 
 class _PokemonGuideAppState extends State<PokemonGuideApp> {
-  @override
-  void initState() {
-    super.initState();
-    AppAppearance.load();
-  }
-
   @override
   Widget build(BuildContext context) {
     return ValueListenableBuilder<bool>(
