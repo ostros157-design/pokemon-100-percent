@@ -1,3 +1,9 @@
+### Pokédex — sortowanie i ładowanie obrazów (2026-10-25)
+- Dodano widoczny wybór sortowania listy: numer National Pokédex rosnąco, numer malejąco oraz nazwa A–Z.
+- Usunięto automatyczne pobieranie wszystkich 1025 obrazów przy otwarciu ekranu. Obrazki są teraz pobierane przez widoczne karty, co ogranicza niepotrzebny transfer i opóźnienie startu.
+- Commit kodu: `7f5df3ef77156bb8a16625d4718982d776854c80`.
+- Status: zapisane w GitHubie; testy Flutter i kompilacja nie zostały uruchomione w tej sesji.
+
 # Pokémon 100% — postęp projektu
 
 Ostatnia aktualizacja: 2026-10-25
