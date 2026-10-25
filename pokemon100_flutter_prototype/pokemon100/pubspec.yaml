@@ -24,6 +24,7 @@ flutter:
   uses-material-design: true
 
   assets:
+    - assets/data/pokemon_learnsets.json
     - assets/pokemon/
     - assets/pokemon/gen1/
     - assets/pokemon/gen2/
