@@ -3,6 +3,8 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../models/pokemon.dart';
+import '../data/pokemon_data.dart';
+import '../data/evolution_data.dart';
 
 class PokemonDetailsScreen extends StatefulWidget {
   final Pokemon pokemon;
@@ -56,6 +58,67 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
     await preferences.setStringList(
       _caughtPokemonKey,
       ids.map((id) => id.toString()).toList(),
+    );
+  }
+
+  Widget _buildEvolutionTree(BuildContext context, Pokemon pokemon) {
+    final familyIds = evolutionFamilies[pokemon.id];
+    if (familyIds == null || familyIds.length < 2) {
+      return const SizedBox.shrink();
+    }
+    final family = familyIds
+        .map((id) => pokemonList.where((item) => item.id == id))
+        .where((matches) => matches.isNotEmpty)
+        .map((matches) => matches.first)
+        .toList();
+    if (family.length < 2) return const SizedBox.shrink();
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Text('Drzewko ewolucji',
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+        const SizedBox(height: 8),
+        Card(
+          child: Padding(
+            padding: const EdgeInsets.all(12),
+            child: Wrap(
+              alignment: WrapAlignment.center,
+              crossAxisAlignment: WrapCrossAlignment.center,
+              spacing: 8,
+              runSpacing: 8,
+              children: [
+                for (var i = 0; i < family.length; i++) ...[
+                  if (i > 0)
+                    const Icon(Icons.arrow_forward, color: Colors.grey),
+                  ActionChip(
+                    avatar: CachedNetworkImage(
+                      imageUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${family[i].id}.png',
+                      width: 38,
+                      height: 38,
+                      errorWidget: (context, url, error) =>
+                          const Icon(Icons.catching_pokemon),
+                    ),
+                    label: Text(family[i].name),
+                    tooltip: family[i].id == pokemon.id
+                        ? 'Aktualny Pokémon'
+                        : 'Otwórz ${family[i].name}',
+                    onPressed: family[i].id == pokemon.id
+                        ? null
+                        : () => Navigator.of(context).pushReplacement(
+                              MaterialPageRoute<void>(
+                                builder: (_) => PokemonDetailsScreen(
+                                  pokemon: family[i],
+                                ),
+                              ),
+                            ),
+                  ),
+                ],
+              ],
+            ),
+          ),
+        ),
+      ],
     );
   }
 
@@ -133,6 +196,7 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
                 child: Text(pokemon.description, style: const TextStyle(fontSize: 16, height: 1.5)),
               ),
             ),
+            _buildEvolutionTree(context, pokemon),
             const SizedBox(height: 24),
             const Text('Spotkanie i łapanie', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
             const SizedBox(height: 8),
