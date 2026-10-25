@@ -5,6 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../models/pokemon.dart';
 import '../data/pokemon_data.dart';
 import '../data/evolution_data.dart';
+import '../data/type_effectiveness.dart';
 
 class PokemonDetailsScreen extends StatefulWidget {
   final Pokemon pokemon;
@@ -122,6 +123,77 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
     );
   }
 
+  Widget _buildTypeMatchups(Pokemon pokemon) {
+    const attackTypes = <String>[
+      'Normal', 'Fire', 'Water', 'Electric', 'Grass', 'Ice', 'Fighting',
+      'Poison', 'Ground', 'Flying', 'Psychic', 'Bug', 'Rock', 'Ghost',
+      'Dragon', 'Dark', 'Steel', 'Fairy',
+    ];
+    final weaknesses = <String>[];
+    final resistances = <String>[];
+    final immunities = <String>[];
+    for (final attackType in attackTypes) {
+      final multiplier = effectivenessAgainst(attackType, pokemon.types);
+      if (multiplier == 0) {
+        immunities.add(attackType);
+      } else if (multiplier > 1) {
+        weaknesses.add('$attackType ×${multiplier.toStringAsFixed(multiplier == multiplier.roundToDouble() ? 0 : 2)}');
+      } else if (multiplier < 1) {
+        resistances.add('$attackType ×${multiplier.toStringAsFixed(multiplier == multiplier.roundToDouble() ? 0 : 2)}');
+      }
+    }
+
+    Widget group(String title, IconData icon, List<String> values) => Padding(
+      padding: const EdgeInsets.only(bottom: 12),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(title, style: const TextStyle(fontWeight: FontWeight.bold)),
+          const SizedBox(height: 6),
+          if (values.isEmpty)
+            const Text('Brak', style: TextStyle(color: Colors.grey))
+          else
+            Wrap(
+              spacing: 6,
+              runSpacing: 4,
+              children: values.map((value) => Chip(
+                avatar: Icon(icon, size: 16),
+                label: Text(value),
+                visualDensity: VisualDensity.compact,
+              )).toList(),
+            ),
+        ],
+      ),
+    );
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Text('Słabości i odporności',
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+        const SizedBox(height: 8),
+        Card(
+          child: Padding(
+            padding: const EdgeInsets.all(12),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                group('Słabości (obrażenia zwiększone)', Icons.warning_amber, weaknesses),
+                group('Odporności (obrażenia zmniejszone)', Icons.shield, resistances),
+                group('Immunitety (0× obrażeń)', Icons.block, immunities),
+                const Text(
+                  'Obliczenia uwzględniają oba typy Pokémona i standardową tabelę typów generacji VI+. Nie uwzględniają zdolności, przedmiotów ani zmian zasad konkretnej gry.',
+                  style: TextStyle(fontSize: 12, color: Colors.grey),
+                ),
+              ],
+            ),
+          ),
+        ),
+        const SizedBox(height: 16),
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final pokemon = widget.pokemon;
@@ -187,6 +259,7 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
                 label: Text(type, style: const TextStyle(fontWeight: FontWeight.bold)),
               )).toList(),
             ),
+            _buildTypeMatchups(pokemon),
             const SizedBox(height: 24),
             const Text('Informacje', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
             const SizedBox(height: 8),
