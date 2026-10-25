@@ -6,6 +6,13 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 
 ## Ostatnie prace
 
+### Pokédex — drzewko ewolucji (2026-10-25)
+- Dodano sekcję „Drzewko ewolucji” na ekranie szczegółów Pokémona.
+- Formy z dostępnych rodzin są klikalne i prowadzą do karty wybranego Pokémona.
+- Wykorzystywana jest istniejąca, częściowa mapa rodzin z `lib/data/evolution_data.dart`; nie obejmuje ona jeszcze wszystkich Pokémonów ani warunków ewolucji.
+- Status: zapisane w GitHubie (commit `98ff6563c10c90ea67e7078e9a048ad1e80c4171`); kompilacja i testy na urządzeniu niepotwierdzone.
+
+
 ### Muzyka Pokémon — 2026-10-25
 - Dodano ekran „Muzyka Pokémon” oraz pozycję na ekranie głównym.
 - Ekran otwiera oficjalną Pokémon Game Sound Library w zewnętrznej przeglądarce; aplikacja nie hostuje, nie pobiera ani nie osadza chronionych nagrań.
