@@ -6,6 +6,15 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 
 ## Ostatnie prace
 
+### Pokédex — dodatkowe metadane gatunków (2026-10-25)
+- Rozszerzono model `Pokemon` o współczynnik łapania, bazową przyjaźń, cykl wykluwania, współczynnik płci, generację oraz flagi legendary/mythical/baby.
+- Uzupełniono wszystkie 1025 wpisów na podstawie `pokemon_species.csv` z repozytorium PokéAPI.
+- Karta szczegółowa wyświetla teraz te wartości oraz etykiety „Legendarny”, „Mityczny” i „Baby Pokémon”. Współczynnik płci pokazuje procentowy podział, a gatunki bez płci są oznaczane osobno.
+- Commity: `16e5a8b7aba004a534db9b53f9189642e878d46c` (model), `593aae3b5ebd42241f693bb3edce39146ee75a55` (1025 wpisów), `2b0a53768c7aec6e5d888d5f9b65cf639512232b` (UI).
+- Status: zapisane w GitHubie. Kompilacja i testy nie zostały uruchomione.
+- Pozostaje: pełne ruchy z parametrami/metodami nauki oraz automatyczne testy i walidacja danych.
+
+
 ### Pokédex — lokalne statystyki i dane gatunków #001–#1025 (2026-10-25)
 - Zaimportowano dane domyślnych form dla wszystkich 1025 numerów National Pokédex z publicznych CSV PokéAPI: sześć statystyk bazowych, wzrost, masę, bazowe doświadczenie, umiejętności i umiejętności ukryte.
 - Wpisy `pokemon_data.dart` zawierają teraz konkretne wartości zamiast pustych pól. Karta szczegółowa może wyświetlać statystyki, BST, wzrost, masę i umiejętności offline, bez pobierania ich w czasie działania.
