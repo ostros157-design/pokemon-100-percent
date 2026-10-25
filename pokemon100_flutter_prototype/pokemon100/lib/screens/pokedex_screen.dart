@@ -31,15 +31,23 @@ class _PokedexScreenState extends State<PokedexScreen> {
   }
 
   Future<void> _cachePokemonImages() async {
-    for (final pokemon in pokemonList) {
+    // Download in small batches so the first visit does not issue 1025
+    // simultaneous requests or block the UI for one long sequential loop.
+    const batchSize = 12;
+    for (var start = 0; start < pokemonList.length; start += batchSize) {
       if (!mounted) return;
-      try {
-        await precacheImage(CachedNetworkImageProvider(_imageUrl(pokemon.id)), context);
-      } catch (_) {
-        // Failed downloads can be retried when the image is displayed.
-      }
-      if (!mounted) return;
-      setState(() => _imagesCached++);
+      final batch = pokemonList.skip(start).take(batchSize);
+      await Future.wait(batch.map((pokemon) async {
+        try {
+          await precacheImage(
+            CachedNetworkImageProvider(_imageUrl(pokemon.id)),
+            context,
+          );
+        } catch (_) {
+          // Failed downloads can be retried when the image is displayed.
+        }
+        if (mounted) setState(() => _imagesCached++);
+      }));
     }
     if (!mounted) return;
     setState(() => _cacheFinished = true);
@@ -122,7 +130,7 @@ class _PokedexScreenState extends State<PokedexScreen> {
                   ),
                 ),
                 const Spacer(),
-                const Text('Gen I • 151 Pokémon'),
+                const Text('National Pokédex • 1025 Pokémon'),
               ],
             ),
           ),
