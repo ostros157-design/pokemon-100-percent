@@ -70,12 +70,11 @@ class _MoveCatalogScreenState extends State<MoveCatalogScreen> {
                     value: _selectedType,
                     isExpanded: true,
                     decoration: const InputDecoration(
-                      labelText: 'Typ',
+                      labelText: 'Typ (puste = wszystkie)',
                       border: OutlineInputBorder(),
                       contentPadding: EdgeInsets.symmetric(horizontal: 10, vertical: 12),
                     ),
                     items: [
-                      const DropdownMenuItem(value: null, child: Text('Wszystkie')),
                       ..._types.map((type) => DropdownMenuItem(
                             value: type,
                             child: Text(_capitalize(type)),
@@ -90,12 +89,11 @@ class _MoveCatalogScreenState extends State<MoveCatalogScreen> {
                     value: _selectedCategory,
                     isExpanded: true,
                     decoration: const InputDecoration(
-                      labelText: 'Kategoria',
+                      labelText: 'Kategoria (pusta = wszystkie)',
                       border: OutlineInputBorder(),
                       contentPadding: EdgeInsets.symmetric(horizontal: 10, vertical: 12),
                     ),
                     items: const [
-                      DropdownMenuItem(value: null, child: Text('Wszystkie')),
                       DropdownMenuItem(value: 'physical', child: Text('Fizyczny')),
                       DropdownMenuItem(value: 'special', child: Text('Specjalny')),
                       DropdownMenuItem(value: 'status', child: Text('Statusowy')),
