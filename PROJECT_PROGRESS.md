@@ -6,6 +6,14 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 
 ## Ostatnie prace
 
+### Pokédex — automatyczne przygotowanie learnsetów (2026-10-25)
+- Ulepszono `tools/import_pokemon_moves.py`: opcja `--download` automatycznie pobiera brakujące CSV z oficjalnego repozytorium PokéAPI, więc nie trzeba ręcznie kopiować ani zapisywać wielkiego pliku.
+- Zaktualizowano `tools/README_pokemon_moves.md` o pojedynczą komendę PowerShell dla Windows.
+- Commity: `155a6928cdbde751278671b5c4c0ca9c6cd43600` (importer), `b5e9fa46ca33a1a6e7fcfe94070b9853edfb9e1a` (instrukcja).
+- Status: zmiany zapisane w repozytorium. Importu danych jeszcze nie uruchomiono, więc plik JSON z przypisaniami nie został jeszcze wygenerowany; aplikacja nie ma jeszcze gotowych learnsetów. Kolejny krok: podłączyć import do modelu i ekranu szczegółów oraz wygenerować dane źródłowe.
+- Testy/Flutter analyze/build nieuruchomione w tej sesji.
+
+
 ### Pokédex — ekran katalogu ruchów (2026-10-25)
 - Dodano `lib/screens/move_catalog_screen.dart`: ekran offline z wyszukiwaniem po nazwie/ID, filtrem typu i kategorii oraz rozwijanymi szczegółami mocy, celności, PP, priorytetu i generacji.
 - Dodano na ekranie głównym przycisk `Katalog ruchów`, który otwiera nowy ekran.
