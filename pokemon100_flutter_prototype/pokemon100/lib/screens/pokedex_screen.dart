@@ -304,10 +304,14 @@ class _PokedexScreenState extends State<PokedexScreen> {
 
 class _PokemonCard extends StatelessWidget {
   final Pokemon pokemon;
+  final bool shiny;
+  final VoidCallback onToggleShiny;
   final VoidCallback onTap;
 
   const _PokemonCard({
     required this.pokemon,
+    required this.shiny,
+    required this.onToggleShiny,
     required this.onTap,
   });
 
@@ -326,25 +330,38 @@ class _PokemonCard extends StatelessWidget {
               SizedBox(
                 width: 76,
                 height: 76,
-                child: CachedNetworkImage(
-                  imageUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png',
-                  fit: BoxFit.contain,
-                  placeholder: (context, url) => const Center(
-                    child: SizedBox(width: 24, height: 24, child: CircularProgressIndicator(strokeWidth: 2)),
+                child: GestureDetector(
+                  onTap: onToggleShiny,
+                  onHorizontalDragEnd: (details) {
+                    final velocity = details.primaryVelocity;
+                    if (velocity != null && velocity.abs() > 80) {
+                      onToggleShiny();
+                    }
+                  },
+                  child: CachedNetworkImage(
+                    imageUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${shiny ? 'shiny/' : ''}${pokemon.id}.png',
+                    fit: BoxFit.contain,
+                    placeholder: (context, url) => const Center(
+                      child: SizedBox(
+                        width: 24,
+                        height: 24,
+                        child: CircularProgressIndicator(strokeWidth: 2),
+                      ),
+                    ),
+                    errorWidget: (context, url, error) =>
+                        const Icon(Icons.catching_pokemon, size: 42),
                   ),
-                  errorWidget: (context, url, error) => const Icon(Icons.catching_pokemon, size: 42),
                 ),
               ),
               const SizedBox(height: 4),
+              if (shiny)
+                const Text('✨ Shiny', style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold)),
               Text(
                 pokemon.name,
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
                 textAlign: TextAlign.center,
-                style: const TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.bold,
-                ),
+                style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 2),
               Wrap(
@@ -353,10 +370,7 @@ class _PokemonCard extends StatelessWidget {
                 alignment: WrapAlignment.center,
                 children: pokemon.types.map((type) {
                   return Chip(
-                    label: Text(
-                      type,
-                      style: const TextStyle(fontSize: 9),
-                    ),
+                    label: Text(type, style: const TextStyle(fontSize: 9)),
                     visualDensity: VisualDensity.compact,
                     materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                     padding: EdgeInsets.zero,
