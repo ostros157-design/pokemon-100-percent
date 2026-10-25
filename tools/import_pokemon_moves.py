@@ -11,6 +11,9 @@ import argparse
 import csv
 import json
 from pathlib import Path
+from urllib.request import urlopen
+
+BASE_URL = "https://raw.githubusercontent.com/PokeAPI/pokeapi/master/data/v2/csv/"
 
 
 def read_csv(path):
@@ -20,12 +23,32 @@ def read_csv(path):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--pokemon-moves", required=True, type=Path)
-    parser.add_argument("--pokemon", required=True, type=Path)
-    parser.add_argument("--version-groups", required=True, type=Path)
+    parser.add_argument("--pokemon-moves", type=Path, default=Path("data/pokemon_moves.csv"))
+    parser.add_argument("--pokemon", type=Path, default=Path("data/pokemon.csv"))
+    parser.add_argument("--version-groups", type=Path, default=Path("data/version_groups.csv"))
+    parser.add_argument("--download", action="store_true", help="Download missing source CSVs from PokéAPI GitHub")
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--max-dex", type=int, default=1025)
     args = parser.parse_args()
+
+    if args.download:
+        for path in (args.pokemon_moves, args.pokemon, args.version_groups):
+            if path.exists():
+                continue
+            path.parent.mkdir(parents=True, exist_ok=True)
+            url = BASE_URL + path.name
+            print(f"Downloading {url} ...")
+            with urlopen(url, timeout=120) as response, path.open("wb") as target:
+                while True:
+                    chunk = response.read(1024 * 1024)
+                    if not chunk:
+                        break
+                    target.write(chunk)
+            print(f"Saved {path}")
+
+    for path in (args.pokemon_moves, args.pokemon, args.version_groups):
+        if not path.is_file():
+            raise SystemExit(f"Missing {path}. Run again with --download or provide the CSV file.")
 
     pokemon_rows = read_csv(args.pokemon)
     default_forms = {}
