@@ -131,7 +131,22 @@ class GuideStepCard extends StatelessWidget {
     );
   }
 
+  String _pokemonLabel(String name, double? encounterRate) {
+    if (encounterRate == null) return name;
+    final percent = encounterRate == encounterRate.roundToDouble()
+        ? encounterRate.toStringAsFixed(0)
+        : encounterRate.toStringAsFixed(1);
+    return '$name · $percent%';
+  }
+
   Widget _buildPokemonChip(BuildContext context, String name) {
+    double? encounterRate;
+    for (final entry in step.encounterRatesPercent.entries) {
+      if (entry.key.toLowerCase() == name.toLowerCase()) {
+        encounterRate = entry.value;
+        break;
+      }
+    }
     final matches = pokemonList.where(
       (pokemon) => pokemon.name.toLowerCase() == name.toLowerCase(),
     );
@@ -140,7 +155,7 @@ class GuideStepCard extends StatelessWidget {
     if (pokemon == null) {
       return Chip(
         avatar: const Icon(Icons.catching_pokemon, size: 18),
-        label: Text(name),
+        label: Text(_pokemonLabel(name, encounterRate)),
       );
     }
 
