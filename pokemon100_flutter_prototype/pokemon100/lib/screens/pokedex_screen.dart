@@ -204,7 +204,7 @@ class _PokemonCard extends StatelessWidget {
                 width: 76,
                 height: 76,
                 child: CachedNetworkImage(
-                  imageUrl: _imageUrl(pokemon.id),
+                  imageUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png',
                   fit: BoxFit.contain,
                   placeholder: (context, url) => const Center(
                     child: SizedBox(width: 24, height: 24, child: CircularProgressIndicator(strokeWidth: 2)),
