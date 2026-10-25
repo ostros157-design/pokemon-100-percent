@@ -6,6 +6,14 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 
 ## Ostatnie prace
 
+### Pokédex — ekran katalogu ruchów (2026-10-25)
+- Dodano `lib/screens/move_catalog_screen.dart`: ekran offline z wyszukiwaniem po nazwie/ID, filtrem typu i kategorii oraz rozwijanymi szczegółami mocy, celności, PP, priorytetu i generacji.
+- Dodano na ekranie głównym przycisk `Katalog ruchów`, który otwiera nowy ekran.
+- Commity: `f2b2e86db6b17e8596a550d96c3d5794548ba126` (ekran), `d00c075c76cb3a96b651ccda2909197e145dd4a5` (nawigacja).
+- Status: kod zapisany w repozytorium; kompilacja i testy nie zostały uruchomione. Należy sprawdzić zachowanie filtrów DropdownButtonFormField na docelowej wersji Flutter.
+- Learnsety przypisane do gatunków i wersji gier nadal nie są zintegrowane. PokéAPI publikuje plik `pokemon_moves.csv` o rozmiarze ok. 10,2 MB, którego nie udało się pobrać przez connector; źródło potwierdzone, dane niezaimportowane.
+
+
 ### Pokédex — wyszukiwanie ruchów i testy integralności (2026-10-25)
 - Rozszerzono `lib/data/move_data.dart` o `moveById` oraz `searchMoves`, obsługujące wyszukiwanie po nazwie/typie/kategorii/ID i filtrowanie po typie oraz kategorii. Funkcje działają na danych lokalnych.
 - Dodano `test/data_integrity_test.dart`: kontrola liczby 1025 wpisów Pokédexa, unikalności ID, podstawowych pól i parametrów katalogu ruchów oraz testy wyszukiwania.
