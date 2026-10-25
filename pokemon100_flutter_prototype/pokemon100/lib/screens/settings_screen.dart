@@ -99,6 +99,10 @@ class _ColorChoiceTile extends StatelessWidget {
     return ValueListenableBuilder<Color>(
       valueListenable: value,
       builder: (context, selected, _) {
+        final selectedName = AppAppearance.colorOptions.entries
+            .where((entry) => entry.value.value == selected.value)
+            .map((entry) => entry.key)
+            .firstOrNull ?? 'Niestandardowy';
         return Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
           child: Column(
@@ -149,7 +153,7 @@ class _ColorChoiceTile extends StatelessWidget {
               ),
               const SizedBox(height: 6),
               Text(
-                'Wybrano: ${AppAppearance.colorOptions.entries.firstWhere((e) => e.value.value == selected.value, orElse: () => const MapEntry('Niestandardowy', Colors.green)).key}',
+                'Wybrano: $selectedName',
                 style: Theme.of(context).textTheme.bodySmall,
               ),
             ],
