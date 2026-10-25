@@ -385,6 +385,7 @@ class _PokemonCard extends StatelessWidget {
           ),
         ),
       ),
+        ),
     );
   }
 }
