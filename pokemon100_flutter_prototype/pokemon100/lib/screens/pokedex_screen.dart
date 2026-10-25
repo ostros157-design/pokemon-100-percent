@@ -299,7 +299,6 @@ class _PokedexScreenState extends State<PokedexScreen> {
                   ),
           ),
         ],
-        ),
       ),
     );
   }
