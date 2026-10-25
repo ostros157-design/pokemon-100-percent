@@ -6,6 +6,8 @@ import '../models/pokemon.dart';
 import '../data/pokemon_data.dart';
 import '../data/evolution_data.dart';
 import '../data/type_effectiveness.dart';
+import '../data/move_data.dart';
+import '../data/pokemon_learnset_data.dart';
 
 class PokemonDetailsScreen extends StatefulWidget {
   final Pokemon pokemon;
@@ -20,6 +22,7 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
   static const _caughtPokemonKey = 'caught_pokemon_ids';
   bool _caught = false;
   bool _loadingCaught = true;
+  String? _selectedLearnsetVersion;
 
   @override
   void initState() {
@@ -348,6 +351,82 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
     );
   }
 
+
+  Widget _buildLearnset(Pokemon pokemon) {
+    return FutureBuilder<List<PokemonLearnsetEntry>>(
+      future: PokemonLearnsetData.forPokemon(pokemon.id),
+      builder: (context, snapshot) {
+        final entries = snapshot.data ?? const <PokemonLearnsetEntry>[];
+        final versionGroups = entries.map((e) => e.versionGroup).toSet().toList()..sort();
+        final selected = versionGroups.contains(_selectedLearnsetVersion)
+            ? _selectedLearnsetVersion
+            : (versionGroups.isNotEmpty ? versionGroups.first : null);
+        final visible = entries.where((e) => e.versionGroup == selected).toList()
+          ..sort((a, b) {
+            final method = a.methodId.compareTo(b.methodId);
+            if (method != 0) return method;
+            final level = a.level.compareTo(b.level);
+            if (level != 0) return level;
+            return (a.order ?? 999).compareTo(b.order ?? 999);
+          });
+
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text('Ruchy i ataki', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+            const SizedBox(height: 8),
+            Card(
+              child: Padding(
+                padding: const EdgeInsets.all(12),
+                child: snapshot.connectionState != ConnectionState.done
+                    ? const Center(child: Padding(
+                        padding: EdgeInsets.all(16),
+                        child: CircularProgressIndicator(),
+                      ))
+                    : entries.isEmpty
+                        ? const Text(
+                            'Dane nauki ruchów nie zostały jeszcze zaimportowane. Po wygenerowaniu pliku pokemon_learnsets.json ta sekcja pokaże ruchy tego Pokémona z podziałem na gry, poziomy i metody nauki.',
+                          )
+                        : Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              DropdownButtonFormField<String>(
+                                value: selected,
+                                decoration: const InputDecoration(labelText: 'Grupa wersji gry'),
+                                items: versionGroups.map((group) => DropdownMenuItem(
+                                  value: group,
+                                  child: Text(group.replaceAll('-', ' ')),
+                                )).toList(),
+                                onChanged: (value) => setState(() => _selectedLearnsetVersion = value),
+                              ),
+                              const SizedBox(height: 8),
+                              ...visible.map((entry) {
+                                final move = moveById(entry.moveId);
+                                final detail = move == null
+                                    ? 'Ruch #${entry.moveId}'
+                                    : '${move.name} • ${move.type} • ${move.category}'
+                                      '${move.power == null ? '' : ' • Moc ${move.power}'}';
+                                final method = entry.methodId == 1 && entry.level > 0
+                                    ? 'Poziom ${entry.level}'
+                                    : entry.methodLabel;
+                                return ListTile(
+                                  dense: true,
+                                  contentPadding: EdgeInsets.zero,
+                                  title: Text(detail),
+                                  subtitle: Text(method),
+                                );
+                              }),
+                            ],
+                          ),
+              ),
+            ),
+            const SizedBox(height: 16),
+          ],
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final pokemon = widget.pokemon;
@@ -416,6 +495,7 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
             _buildTypeMatchups(pokemon),
             _buildBaseStats(pokemon),
             _buildSpeciesData(pokemon),
+            _buildLearnset(pokemon),
             const SizedBox(height: 24),
             const Text('Informacje', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
             const SizedBox(height: 8),
@@ -442,12 +522,6 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
                     leading: Icon(Icons.auto_awesome),
                     title: Text('Szansa złapania'),
                     subtitle: Text('Zależy m.in. od gry, aktualnego HP, statusu, Poké Balla i parametrów spotkania. Kalkulator wymaga tych danych, więc procent nie jest jeszcze wyliczany.'),
-                  ),
-                  Divider(),
-                  ListTile(
-                    leading: Icon(Icons.sports_martial_arts),
-                    title: Text('Ataki'),
-                    subtitle: Text('Tutaj później znajdzie się lista dostępnych ataków.'),
                   ),
                   Divider(),
                   ListTile(
