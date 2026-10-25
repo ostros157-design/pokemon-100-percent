@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../services/app_appearance.dart';
+
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
 
@@ -14,31 +16,59 @@ class _SettingsScreenState extends State<SettingsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Ustawienia'),
-      ),
+      appBar: AppBar(title: const Text('Ustawienia')),
       body: ListView(
+        padding: const EdgeInsets.only(bottom: 24),
         children: [
+          const Padding(
+            padding: EdgeInsets.fromLTRB(16, 20, 16, 8),
+            child: Text('Wygląd aplikacji',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+          ),
+          ValueListenableBuilder<bool>(
+            valueListenable: AppAppearance.darkBackground,
+            builder: (context, isDark, _) => SwitchListTile(
+              secondary: Icon(isDark ? Icons.dark_mode : Icons.light_mode),
+              title: const Text('Ciemne tło'),
+              subtitle: Text(isDark
+                  ? 'Tło jest czarne, tekst zachowuje wybrany kolor.'
+                  : 'Tło jest białe, tekst zachowuje wybrany kolor.'),
+              value: isDark,
+              onChanged: (value) async {
+                await AppAppearance.setDarkBackground(value);
+              },
+            ),
+          ),
+          const Divider(),
+          _ColorChoiceTile(
+            title: 'Kolor tekstu',
+            subtitle: 'Ustaw kolor tekstów w aplikacji niezależnie od tła.',
+            value: AppAppearance.textColor,
+            onChanged: AppAppearance.setTextColor,
+          ),
+          _ColorChoiceTile(
+            title: 'Kolor znaczków',
+            subtitle: 'Kolor akcentów, znaczników i elementów wyróżnionych.',
+            value: AppAppearance.badgeColor,
+            onChanged: AppAppearance.setBadgeColor,
+          ),
+          const Padding(
+            padding: EdgeInsets.fromLTRB(16, 12, 16, 8),
+            child: Text('Pozostałe ustawienia',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+          ),
           SwitchListTile(
             title: const Text('Pokazuj spoilery'),
             subtitle: const Text(
               'Pozwala wyświetlać informacje o późniejszych wydarzeniach.',
             ),
             value: spoilers,
-            onChanged: (value) {
-              setState(() {
-                spoilers = value;
-              });
-            },
+            onChanged: (value) => setState(() => spoilers = value),
           ),
           SwitchListTile(
             title: const Text('Animacje'),
             value: animations,
-            onChanged: (value) {
-              setState(() {
-                animations = value;
-              });
-            },
+            onChanged: (value) => setState(() => animations = value),
           ),
           const Divider(),
           const ListTile(
@@ -47,6 +77,85 @@ class _SettingsScreenState extends State<SettingsScreen> {
           ),
         ],
       ),
+    );
+  }
+}
+
+class _ColorChoiceTile extends StatelessWidget {
+  final String title;
+  final String subtitle;
+  final ValueNotifier<Color> value;
+  final Future<void> Function(Color) onChanged;
+
+  const _ColorChoiceTile({
+    required this.title,
+    required this.subtitle,
+    required this.value,
+    required this.onChanged,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return ValueListenableBuilder<Color>(
+      valueListenable: value,
+      builder: (context, selected, _) {
+        return Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(title, style: const TextStyle(fontWeight: FontWeight.w600)),
+              const SizedBox(height: 4),
+              Text(subtitle, style: Theme.of(context).textTheme.bodySmall),
+              const SizedBox(height: 10),
+              Wrap(
+                spacing: 10,
+                runSpacing: 10,
+                children: AppAppearance.colorOptions.entries.map((entry) {
+                  final isSelected = selected.value == entry.value.value;
+                  return Semantics(
+                    button: true,
+                    selected: isSelected,
+                    label: entry.key,
+                    child: InkWell(
+                      onTap: () => onChanged(entry.value),
+                      borderRadius: BorderRadius.circular(24),
+                      child: Container(
+                        width: 42,
+                        height: 42,
+                        decoration: BoxDecoration(
+                          color: entry.value,
+                          shape: BoxShape.circle,
+                          border: Border.all(
+                            color: isSelected
+                                ? Theme.of(context).colorScheme.primary
+                                : Theme.of(context).dividerColor,
+                            width: isSelected ? 3 : 1,
+                          ),
+                        ),
+                        child: isSelected
+                            ? Icon(
+                                Icons.check,
+                                color: entry.value.computeLuminance() > 0.5
+                                    ? Colors.black
+                                    : Colors.white,
+                                size: 20,
+                              )
+                            : null,
+                      ),
+                    ),
+                  );
+                }).toList(),
+              ),
+              const SizedBox(height: 6),
+              Text(
+                'Wybrano: ${AppAppearance.colorOptions.entries.firstWhere((e) => e.value.value == selected.value, orElse: () => const MapEntry('Niestandardowy', Colors.green)).key}',
+                style: Theme.of(context).textTheme.bodySmall,
+              ),
+            ],
+          ),
+        );
+      },
     );
   }
 }
