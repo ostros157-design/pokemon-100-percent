@@ -299,6 +299,7 @@ class _PokedexScreenState extends State<PokedexScreen> {
                   ),
           ),
         ],
+        ),
       ),
     );
   }
@@ -322,7 +323,13 @@ class _PokemonCard extends StatelessWidget {
     return Card(
       elevation: 2,
       clipBehavior: Clip.antiAlias,
-      child: InkWell(
+      child: GestureDetector(
+        behavior: HitTestBehavior.opaque,
+        onHorizontalDragEnd: (details) {
+          final velocity = details.primaryVelocity;
+          if (velocity != null && velocity.abs() > 80) onToggleShiny();
+        },
+        child: InkWell(
         onTap: onTap,
         child: Padding(
           padding: const EdgeInsets.all(6),
@@ -334,12 +341,6 @@ class _PokemonCard extends StatelessWidget {
                 height: 76,
                 child: GestureDetector(
                   onTap: onToggleShiny,
-                  onHorizontalDragEnd: (details) {
-                    final velocity = details.primaryVelocity;
-                    if (velocity != null && velocity.abs() > 80) {
-                      onToggleShiny();
-                    }
-                  },
                   child: CachedNetworkImage(
                     imageUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${shiny ? 'shiny/' : ''}${pokemon.id}.png',
                     fit: BoxFit.contain,
