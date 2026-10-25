@@ -10,14 +10,19 @@ class PokemonMusicScreen extends StatelessWidget {
       Uri.parse('https://soundlibrary.pokemon.co.jp/en');
 
   Future<void> _openLibrary(BuildContext context) async {
-    final opened = await launchUrl(
-      _libraryUri,
-      mode: LaunchMode.externalApplication,
-    );
+    var opened = false;
+    try {
+      opened = await launchUrl(_libraryUri, mode: LaunchMode.externalApplication);
+      if (!opened) {
+        opened = await launchUrl(_libraryUri, mode: LaunchMode.platformDefault);
+      }
+    } catch (_) {
+      opened = false;
+    }
     if (!opened && context.mounted) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
-          content: Text('Nie udało się otworzyć oficjalnej biblioteki muzyki.'),
+          content: const Text('Nie udało się otworzyć strony. Sprawdź internet i domyślną przeglądarkę; możesz skopiować adres widoczny niżej.'),
         ),
       );
     }
