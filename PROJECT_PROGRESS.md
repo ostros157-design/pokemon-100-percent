@@ -6,6 +6,16 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 
 ## Ostatnie prace
 
+### Pokédex — lokalne statystyki i dane gatunków #001–#1025 (2026-10-25)
+- Zaimportowano dane domyślnych form dla wszystkich 1025 numerów National Pokédex z publicznych CSV PokéAPI: sześć statystyk bazowych, wzrost, masę, bazowe doświadczenie, umiejętności i umiejętności ukryte.
+- Wpisy `pokemon_data.dart` zawierają teraz konkretne wartości zamiast pustych pól. Karta szczegółowa może wyświetlać statystyki, BST, wzrost, masę i umiejętności offline, bez pobierania ich w czasie działania.
+- Jednostki źródłowe PokéAPI są przeliczane w UI: wzrost z decymetrów na metry, masa z hektogramów na kilogramy.
+- Źródła CSV: `PokeAPI/pokeapi/data/v2/csv/pokemon_stats.csv`, `pokemon.csv`, `pokemon_abilities.csv`, `abilities.csv`. Dane dotyczą domyślnych form; nie opisują wszystkich wariantów regionalnych/specjalnych.
+- Commity: `23e394d7e1ff431b8e5e21b021ea92947accae15` (wygenerowany zestaw danych pomocniczych), `ec2c6b142660572dbf205c0f23eff3a3e2088a83` (wpisy Pokédexa z wartościami).
+- Status: sprawdzono liczbę wygenerowanych rekordów na etapie importu (1025); kompilacja Flutter i testy automatyczne nie zostały uruchomione.
+- Nadal do zrobienia w ramach punktu 1: lokalne dane ruchów z parametrami i metodami nauki, pełniejsze informacje o gatunkach oraz automatyczna walidacja spójności danych i testy.
+
+
 ### Pokédex — rozszerzenie modelu danych gatunku (2026-10-25)
 - Rozszerzono model `Pokemon` o pola na sześć statystyk bazowych, sumę statystyk, wzrost, masę, bazowe doświadczenie, umiejętności i umiejętności ukryte.
 - Karta szczegółowa ma teraz sekcje „Statystyki bazowe” i „Dane gatunku”, w tym wizualne paski statystyk, sumę BST oraz jednostki wzrostu i masy.
