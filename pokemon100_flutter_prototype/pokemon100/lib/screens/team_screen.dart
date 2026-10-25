@@ -16,8 +16,20 @@ class TeamScreen extends StatefulWidget {
 class _TeamScreenState extends State<TeamScreen> {
   static const _storageKey = 'team_making_saved_team_v1';
   static const _teamNameKey = 'team_making_saved_name_v1';
+  static const _gameKey = 'team_making_selected_game_v1';
   static const _defaultIds = <int>[25, 93, 3, 6, 131, 68];
 
+  static const Map<String, String> _games = {
+    'lets_go_pikachu': "Pokémon: Let's Go, Pikachu!",
+    'emerald': 'Pokémon Emerald (dane do sprawdzenia)',
+    'firered': 'Pokémon FireRed (dane do sprawdzenia)',
+    'soulsilver': 'Pokémon SoulSilver (dane do sprawdzenia)',
+    'xy': 'Pokémon X/Y (dane do sprawdzenia)',
+    'sword': 'Pokémon Sword (dane do sprawdzenia)',
+    'legends_arceus': 'Pokémon Legends: Arceus (dane do sprawdzenia)',
+  };
+
+  String _selectedGame = TeamRecommendationService.supportedGameId;
   late List<Pokemon> _team;
   final TextEditingController _nameController = TextEditingController();
   bool _loading = true;
@@ -50,6 +62,8 @@ class _TeamScreenState extends State<TeamScreen> {
     setState(() {
       if (prefs.containsKey(_storageKey)) _team = restored;
       _nameController.text = prefs.getString(_teamNameKey) ?? 'Moja drużyna';
+      final savedGame = prefs.getString(_gameKey);
+      _selectedGame = _games.containsKey(savedGame) ? savedGame! : TeamRecommendationService.supportedGameId;
       _loading = false;
     });
   }
@@ -66,6 +80,7 @@ class _TeamScreenState extends State<TeamScreen> {
         _storageKey,
         _team.map((pokemon) => pokemon.id.toString()).toList(),
       );
+      await prefs.setString(_gameKey, _selectedGame);
       await prefs.setString(_teamNameKey, _nameController.text.trim().isEmpty
           ? 'Moja drużyna'
           : _nameController.text.trim());
@@ -86,11 +101,15 @@ class _TeamScreenState extends State<TeamScreen> {
       );
       return;
     }
+    if (_selectedGame != TeamRecommendationService.supportedGameId) {
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Dostępność Pokémonów nie została jeszcze zweryfikowana dla tej gry. Wybierz Let\'s Go, Pikachu!, aby uniknąć nieprawidłowych propozycji.')));
+      return;
+    }
     final chosen = await showModalBottomSheet<Pokemon>(
       context: context,
       isScrollControlled: true,
       showDragHandle: true,
-      builder: (context) => _PokemonPicker(excludedIds: _team.map((p) => p.id).toSet()),
+      builder: (context) => _PokemonPicker(excludedIds: _team.map((p) => p.id).toSet(), gameId: _selectedGame),
     );
     if (chosen == null || !mounted) return;
     setState(() {
@@ -102,7 +121,11 @@ class _TeamScreenState extends State<TeamScreen> {
   }
 
   Future<void> _showRecommendations() async {
-    final recommendations = TeamRecommendationService.recommend(_team);
+    if (_selectedGame != TeamRecommendationService.supportedGameId) {
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Nie pokazuję rekomendacji, dopóki dostępność gatunków w wybranej grze nie zostanie zweryfikowana.')));
+      return;
+    }
+    final recommendations = TeamRecommendationService.recommend(_team, gameId: _selectedGame);
     if (!mounted) return;
     if (recommendations.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -171,13 +194,38 @@ class _TeamScreenState extends State<TeamScreen> {
               padding: const EdgeInsets.all(16),
               children: [
                 const Text(
-                  "Pokémon: Let's Go, Pikachu!",
+                  'Dopasuj drużynę do gry',
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
-                const SizedBox(height: 6),
-                const Text(
-                  'Wybierz do 6 Pokémonów. Lista kandydatów pochodzi z ogólnego Pokédexu; '
-                  'ten ekran nie potwierdza, czy każdy gatunek można zdobyć w tej grze.',
+                const SizedBox(height: 8),
+                DropdownButtonFormField<String>(
+                  value: _selectedGame,
+                  isExpanded: true,
+                  decoration: const InputDecoration(
+                    labelText: 'Wybierz grę',
+                    border: OutlineInputBorder(),
+                    prefixIcon: Icon(Icons.videogame_asset),
+                  ),
+                  items: _games.entries.map((entry) => DropdownMenuItem<String>(
+                    value: entry.key,
+                    enabled: entry.key == TeamRecommendationService.supportedGameId,
+                    child: Text(entry.value, overflow: TextOverflow.ellipsis),
+                  )).toList(),
+                  onChanged: (value) {
+                    if (value == null) return;
+                    setState(() {
+                      _selectedGame = value;
+                      _status = value == TeamRecommendationService.supportedGameId
+                          ? "Dostępność filtrowana dla Let's Go, Pikachu!."
+                          : 'Brak zweryfikowanych danych dostępności dla tej gry — wybór Pokémonów i rekomendacje są zablokowane.';
+                    });
+                  },
+                ),
+                const SizedBox(height: 8),
+                Text(
+                  _selectedGame == TeamRecommendationService.supportedGameId
+                      ? "Filtr dostępności: Let's Go, Pikachu! Pokémony dostępne wyłącznie w wersji Eevee i Mew są wykluczone. Ewolucje przez wymianę mogą wymagać wymiany."
+                      : 'Dla tej gry nie ma jeszcze zweryfikowanej listy dostępnych gatunków. Nie będę proponować Pokémonów na ślepo.',
                 ),
                 const SizedBox(height: 16),
                 TextField(
@@ -272,8 +320,9 @@ class _TeamScreenState extends State<TeamScreen> {
 
 class _PokemonPicker extends StatefulWidget {
   final Set<int> excludedIds;
+  final String gameId;
 
-  const _PokemonPicker({required this.excludedIds});
+  const _PokemonPicker({required this.excludedIds, required this.gameId});
 
   @override
   State<_PokemonPicker> createState() => _PokemonPickerState();
@@ -287,6 +336,7 @@ class _PokemonPickerState extends State<_PokemonPicker> {
     final query = _query.trim().toLowerCase();
     final results = pokemonList.where((pokemon) {
       if (widget.excludedIds.contains(pokemon.id)) return false;
+      if (!TeamRecommendationService.isAvailableInGame(pokemon, widget.gameId)) return false;
       return query.isEmpty ||
           pokemon.name.toLowerCase().contains(query) ||
           pokemon.id.toString().contains(query) ||
