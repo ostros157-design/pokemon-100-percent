@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../data/pokemon_data.dart';
 import '../models/pokemon.dart';
 import 'pokemon_details_screen.dart';
@@ -18,6 +19,9 @@ class _PokedexScreenState extends State<PokedexScreen> {
   final Set<String> _selectedTypes = <String>{};
   String _selectedGame = 'all';
   final Set<int> _shinyPokemonIds = <int>{};
+  final Set<int> _caughtPokemonIds = <int>{};
+  bool _onlyCaught = false;
+  String _sortMode = 'number';
   static const Set<int> _letsGoPikachuUnavailable = {
     15, 23, 24, 37, 38, 52, 69, 70, 71, 109, 110, 127, 151,
   };
@@ -32,6 +36,7 @@ class _PokedexScreenState extends State<PokedexScreen> {
   @override
   void initState() {
     super.initState();
+    _loadSavedState();
 
     _searchController.addListener(() {
       setState(() {
@@ -39,6 +44,24 @@ class _PokedexScreenState extends State<PokedexScreen> {
       });
     });
     WidgetsBinding.instance.addPostFrameCallback((_) => _cachePokemonImages());
+  }
+
+  Future<void> _loadSavedState() async {
+    final prefs = await SharedPreferences.getInstance();
+    final caught = (prefs.getStringList('caught_pokemon_ids') ?? const <String>[]).map(int.tryParse).whereType<int>().toSet();
+    final shiny = (prefs.getStringList('shiny_pokemon_ids') ?? const <String>[]).map(int.tryParse).whereType<int>().toSet();
+    if (!mounted) return;
+    setState(() { _caughtPokemonIds..clear()..addAll(caught); _shinyPokemonIds..clear()..addAll(shiny); });
+  }
+
+  Future<void> _saveIds(String key, Set<int> ids) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setStringList(key, ids.map((id) => id.toString()).toList());
+  }
+
+  Future<void> _toggleCaught(int id) async {
+    setState(() { if (!_caughtPokemonIds.add(id)) _caughtPokemonIds.remove(id); });
+    await _saveIds('caught_pokemon_ids', _caughtPokemonIds);
   }
 
   Future<void> _cachePokemonImages() async {
@@ -68,11 +91,8 @@ class _PokedexScreenState extends State<PokedexScreen> {
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${shiny ? 'shiny/' : ''}$id.png';
 
   void _toggleShiny(int id) {
-    setState(() {
-      if (!_shinyPokemonIds.add(id)) {
-        _shinyPokemonIds.remove(id);
-      }
-    });
+    setState(() { if (!_shinyPokemonIds.add(id)) _shinyPokemonIds.remove(id); });
+    _saveIds('shiny_pokemon_ids', _shinyPokemonIds);
   }
 
   @override
@@ -94,8 +114,13 @@ class _PokedexScreenState extends State<PokedexScreen> {
               pokemon.id >= 1 &&
               pokemon.id <= 151 &&
               !_letsGoPikachuUnavailable.contains(pokemon.id));
-      return matchesSearch && matchesTypes && matchesGame;
-    }).toList();
+      final matchesCaught = !_onlyCaught || _caughtPokemonIds.contains(pokemon.id);
+      return matchesSearch && matchesTypes && matchesGame && matchesCaught;
+    }).toList()..sort((a, b) {
+      if (_sortMode == 'name') return a.name.toLowerCase().compareTo(b.name.toLowerCase());
+      if (_sortMode == 'reverse') return b.id.compareTo(a.id);
+      return a.id.compareTo(b.id);
+    });
   }
 
   Future<void> _showTypeFilters() async {
@@ -257,6 +282,7 @@ class _PokedexScreenState extends State<PokedexScreen> {
               ],
             ),
           ),
+          Padding(padding: const EdgeInsets.symmetric(horizontal: 12), child: Row(children: [Expanded(child: FilterChip(avatar: const Icon(Icons.check_circle_outline, size: 18), label: const Text('Tylko złapane'), selected: _onlyCaught, onSelected: (value) => setState(() => _onlyCaught = value))), const SizedBox(width: 8), Text('Złapane: ${_caughtPokemonIds.length}/${pokemonList.length}') ])),
           const SizedBox(height: 8),
           Expanded(
             child: pokemon.isEmpty
@@ -283,6 +309,8 @@ class _PokedexScreenState extends State<PokedexScreen> {
                       return _PokemonCard(
                         pokemon: currentPokemon,
                         shiny: _shinyPokemonIds.contains(currentPokemon.id),
+                        caught: _caughtPokemonIds.contains(currentPokemon.id),
+                        onToggleCaught: () => _toggleCaught(currentPokemon.id),
                         onToggleShiny: () => _toggleShiny(currentPokemon.id),
                         onTap: () {
                           Navigator.push(
@@ -307,12 +335,16 @@ class _PokedexScreenState extends State<PokedexScreen> {
 class _PokemonCard extends StatelessWidget {
   final Pokemon pokemon;
   final bool shiny;
+  final bool caught;
+  final VoidCallback onToggleCaught;
   final VoidCallback onToggleShiny;
   final VoidCallback onTap;
 
   const _PokemonCard({
     required this.pokemon,
     required this.shiny,
+    required this.caught,
+    required this.onToggleCaught,
     required this.onToggleShiny,
     required this.onTap,
   });
@@ -365,6 +397,7 @@ class _PokemonCard extends StatelessWidget {
                 textAlign: TextAlign.center,
                 style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
               ),
+              Row(mainAxisAlignment: MainAxisAlignment.center, children: [Icon(caught ? Icons.check_circle : Icons.add_circle_outline, size: 16, color: caught ? Colors.green : null), const SizedBox(width: 3), Text(caught ? 'Złapany' : 'Nie złapany', style: const TextStyle(fontSize: 10)), IconButton(tooltip: caught ? 'Oznacz jako niezłapany' : 'Oznacz jako złapany', onPressed: onToggleCaught, visualDensity: VisualDensity.compact, constraints: const BoxConstraints(minWidth: 28, minHeight: 28), padding: EdgeInsets.zero, icon: Icon(caught ? Icons.check_circle : Icons.add_circle_outline, size: 16))]),
               const SizedBox(height: 2),
               Wrap(
                 spacing: 3,
