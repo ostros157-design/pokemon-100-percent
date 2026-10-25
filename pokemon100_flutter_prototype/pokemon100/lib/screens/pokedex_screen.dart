@@ -30,8 +30,6 @@ class _PokedexScreenState extends State<PokedexScreen> {
     'Poison', 'Ground', 'Flying', 'Psychic', 'Bug', 'Rock', 'Ghost',
     'Dragon', 'Dark', 'Steel', 'Fairy',
   ];
-  int _imagesCached = 0;
-  bool _cacheFinished = false;
 
   @override
   void initState() {
@@ -43,7 +41,6 @@ class _PokedexScreenState extends State<PokedexScreen> {
         _search = _searchController.text.toLowerCase();
       });
     });
-    WidgetsBinding.instance.addPostFrameCallback((_) => _cachePokemonImages());
   }
 
   Future<void> _loadSavedState() async {
@@ -62,29 +59,6 @@ class _PokedexScreenState extends State<PokedexScreen> {
   Future<void> _toggleCaught(int id) async {
     setState(() { if (!_caughtPokemonIds.add(id)) _caughtPokemonIds.remove(id); });
     await _saveIds('caught_pokemon_ids', _caughtPokemonIds);
-  }
-
-  Future<void> _cachePokemonImages() async {
-    // Download in small batches so the first visit does not issue 1025
-    // simultaneous requests or block the UI for one long sequential loop.
-    const batchSize = 12;
-    for (var start = 0; start < pokemonList.length; start += batchSize) {
-      if (!mounted) return;
-      final batch = pokemonList.skip(start).take(batchSize);
-      await Future.wait(batch.map((pokemon) async {
-        try {
-          await precacheImage(
-            CachedNetworkImageProvider(_imageUrl(pokemon.id)),
-            context,
-          );
-        } catch (_) {
-          // Failed downloads can be retried when the image is displayed.
-        }
-        if (mounted) setState(() => _imagesCached++);
-      }));
-    }
-    if (!mounted) return;
-    setState(() => _cacheFinished = true);
   }
 
   String _imageUrl(int id, {bool shiny = false}) =>
@@ -209,20 +183,6 @@ class _PokedexScreenState extends State<PokedexScreen> {
       ),
       body: Column(
         children: [
-          if (!_cacheFinished)
-            Padding(
-              padding: const EdgeInsets.fromLTRB(16, 8, 16, 4),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text('Zapisywanie zdjęć Pokémonów: $_imagesCached/${pokemonList.length}'),
-                  const SizedBox(height: 6),
-                  LinearProgressIndicator(value: pokemonList.isEmpty ? 1 : _imagesCached / pokemonList.length),
-                  const SizedBox(height: 4),
-                  const Text('Po pobraniu dostępne będą również bez internetu.', style: TextStyle(fontSize: 12)),
-                ],
-              ),
-            ),
           Padding(
             padding: const EdgeInsets.all(12),
             child: TextField(
@@ -314,6 +274,33 @@ class _PokedexScreenState extends State<PokedexScreen> {
             ),
           ),
           Padding(padding: const EdgeInsets.symmetric(horizontal: 12), child: Row(children: [Expanded(child: FilterChip(avatar: const Icon(Icons.check_circle_outline, size: 18), label: const Text('Tylko złapane'), selected: _onlyCaught, onSelected: (value) => setState(() => _onlyCaught = value))), const SizedBox(width: 8), Text('Złapane: ${_caughtPokemonIds.length}/${pokemonList.length}') ])),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(12, 0, 12, 4),
+            child: Row(
+              children: [
+                const Text('Sortuj:'),
+                const SizedBox(width: 8),
+                Expanded(
+                  child: DropdownButtonFormField<String>(
+                    value: _sortMode,
+                    isExpanded: true,
+                    decoration: const InputDecoration(
+                      contentPadding: EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                      border: OutlineInputBorder(),
+                    ),
+                    items: const [
+                      DropdownMenuItem(value: 'number', child: Text('Numer rosnąco')),
+                      DropdownMenuItem(value: 'reverse', child: Text('Numer malejąco')),
+                      DropdownMenuItem(value: 'name', child: Text('Nazwa A–Z')),
+                    ],
+                    onChanged: (value) {
+                      if (value != null) setState(() => _sortMode = value);
+                    },
+                  ),
+                ),
+              ],
+            ),
+          ),
           const SizedBox(height: 8),
           Expanded(
             child: pokemon.isEmpty
