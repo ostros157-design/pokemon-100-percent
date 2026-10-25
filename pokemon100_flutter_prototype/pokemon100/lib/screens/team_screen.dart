@@ -397,73 +397,108 @@ class _PokemonPickerState extends State<_PokemonPicker> {
 }
 
 
-/// Szybka analiza słabości oparta na podstawowych relacjach typów.
+/// Analiza rozdziela problemy defensywne (tarcza) i ofensywne (miecz).
 class _TeamAnalysis extends StatelessWidget {
   final List<Pokemon> team;
-
   const _TeamAnalysis({required this.team});
 
-  static const Map<String, Set<String>> _superEffectiveAgainst = {
-    'Normal': {},
-    'Fire': {'Grass', 'Ice', 'Bug', 'Steel'},
-    'Water': {'Fire', 'Ground', 'Rock'},
-    'Electric': {'Water', 'Flying'},
-    'Grass': {'Water', 'Ground', 'Rock'},
-    'Ice': {'Grass', 'Ground', 'Flying', 'Dragon'},
-    'Fighting': {'Normal', 'Ice', 'Rock', 'Dark', 'Steel'},
-    'Poison': {'Grass', 'Fairy'},
-    'Ground': {'Fire', 'Electric', 'Poison', 'Rock', 'Steel'},
-    'Flying': {'Grass', 'Fighting', 'Bug'},
-    'Psychic': {'Fighting', 'Poison'},
-    'Bug': {'Grass', 'Psychic', 'Dark'},
-    'Rock': {'Fire', 'Ice', 'Flying', 'Bug'},
-    'Ghost': {'Psychic', 'Ghost'},
-    'Dragon': {'Dragon'},
-    'Dark': {'Psychic', 'Ghost'},
-    'Steel': {'Ice', 'Rock', 'Fairy'},
+  static const Map<String, Set<String>> _strongAgainst = {
+    'Normal': {}, 'Fire': {'Grass', 'Ice', 'Bug', 'Steel'},
+    'Water': {'Fire', 'Ground', 'Rock'}, 'Electric': {'Water', 'Flying'},
+    'Grass': {'Water', 'Ground', 'Rock'}, 'Ice': {'Grass', 'Ground', 'Flying', 'Dragon'},
+    'Fighting': {'Normal', 'Ice', 'Rock', 'Dark', 'Steel'}, 'Poison': {'Grass', 'Fairy'},
+    'Ground': {'Fire', 'Electric', 'Poison', 'Rock', 'Steel'}, 'Flying': {'Grass', 'Fighting', 'Bug'},
+    'Psychic': {'Fighting', 'Poison'}, 'Bug': {'Grass', 'Psychic', 'Dark'},
+    'Rock': {'Fire', 'Ice', 'Flying', 'Bug'}, 'Ghost': {'Psychic', 'Ghost'},
+    'Dragon': {'Dragon'}, 'Dark': {'Psychic', 'Ghost'}, 'Steel': {'Ice', 'Rock', 'Fairy'},
     'Fairy': {'Fighting', 'Dragon', 'Dark'},
   };
+  static const Map<String, Set<String>> _resists = {
+    'Normal': {}, 'Fire': {'Fire', 'Grass', 'Ice', 'Bug', 'Steel', 'Fairy'},
+    'Water': {'Fire', 'Water', 'Ice', 'Steel'}, 'Electric': {'Electric', 'Flying', 'Steel'},
+    'Grass': {'Water', 'Electric', 'Grass', 'Ground'}, 'Ice': {'Ice'},
+    'Fighting': {'Bug', 'Rock', 'Dark'}, 'Poison': {'Grass', 'Fighting', 'Poison', 'Bug', 'Fairy'},
+    'Ground': {'Poison', 'Rock'}, 'Flying': {'Fighting', 'Bug', 'Grass'},
+    'Psychic': {'Fighting', 'Psychic'}, 'Bug': {'Fighting', 'Ground', 'Grass'},
+    'Rock': {'Normal', 'Fire', 'Poison', 'Flying'}, 'Ghost': {'Poison', 'Bug'},
+    'Dragon': {'Fire', 'Water', 'Electric', 'Grass'}, 'Dark': {'Ghost', 'Dark'},
+    'Steel': {'Normal', 'Grass', 'Ice', 'Flying', 'Psychic', 'Bug', 'Rock', 'Dragon', 'Steel', 'Fairy'},
+    'Fairy': {'Fighting', 'Bug', 'Dark'},
+  };
+  static const Map<String, Set<String>> _immune = {
+    'Normal': {'Ghost'}, 'Electric': {}, 'Ground': {'Electric'},
+    'Flying': {'Ground'}, 'Ghost': {'Normal', 'Fighting'},
+    'Dark': {'Psychic'}, 'Steel': {'Poison'}, 'Fairy': {'Dragon'},
+  };
+
+  double _multiplier(String attackType, List<String> defendingTypes) {
+    var multiplier = 1.0;
+    for (final defendingType in defendingTypes) {
+      if (_immune[defendingType]?.contains(attackType) ?? false) return 0;
+      if (_strongAgainst[attackType]?.contains(defendingType) ?? false) {
+        multiplier *= 2;
+      } else if (_resists[defendingType]?.contains(attackType) ?? false) {
+        multiplier *= 0.5;
+      }
+    }
+    return multiplier;
+  }
 
   @override
   Widget build(BuildContext context) {
-    final weaknesses = <String, int>{};
-    for (final attackType in _superEffectiveAgainst.keys) {
-      final count = team.where((pokemon) =>
-          pokemon.types.any((defendingType) =>
-              _superEffectiveAgainst[attackType]!.contains(defendingType))).length;
-      if (count > 0) weaknesses[attackType] = count;
+    final defensive = <String, int>{};
+    for (final attackType in _strongAgainst.keys) {
+      final count = team.where((pokemon) => _multiplier(attackType, pokemon.types) > 1).length;
+      if (count > 0) defensive[attackType] = count;
     }
-    final sorted = weaknesses.entries.toList()
-      ..sort((a, b) {
-        final byCount = b.value.compareTo(a.value);
-        return byCount != 0 ? byCount : a.key.compareTo(b.key);
-      });
+    final defensiveSorted = defensive.entries.toList()
+      ..sort((a, b) => b.value != a.value ? b.value.compareTo(a.value) : a.key.compareTo(b.key));
+
+    final offensiveGaps = _strongAgainst.keys.where((defendingType) =>
+      !team.any((pokemon) => pokemon.types.any((attackType) =>
+        _strongAgainst[attackType]?.contains(defendingType) ?? false))).toList();
 
     return Card(
       child: Padding(
         padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text('Analiza słabości drużyny',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-            const SizedBox(height: 6),
-            const Text('Liczba Pokémonów w drużynie podatnych na dany typ. '
-                'To podstawowa analiza typów — nie uwzględnia zdolności, ruchów ani mnożników 4×.'),
-            const SizedBox(height: 10),
-            if (sorted.isEmpty)
-              const Text('Brak słabości do pokazania.')
-            else
-              Wrap(
-                spacing: 8,
-                runSpacing: 8,
-                children: sorted.map((entry) => Chip(
-                  avatar: const Icon(Icons.warning_amber_rounded, size: 18),
-                  label: Text('${entry.key}: ${entry.value}/${team.length}'),
-                )).toList(),
-              ),
-          ],
-        ),
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          const Text('Analiza drużyny', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+          const SizedBox(height: 6),
+          const Text('Tarcza oznacza zagrożenia w obronie, a miecz — typy, przeciw którym brakuje super skutecznego pokrycia.'),
+          const SizedBox(height: 14),
+          Row(children: [
+            Icon(Icons.shield, color: Theme.of(context).colorScheme.error),
+            const SizedBox(width: 8),
+            const Text('Tarcza — słabości w obronie', style: TextStyle(fontWeight: FontWeight.bold)),
+          ]),
+          const SizedBox(height: 6),
+          if (defensiveSorted.isEmpty)
+            const Text('Brak wykrytych słabości defensywnych.')
+          else
+            Wrap(spacing: 8, runSpacing: 4, children: defensiveSorted.map((entry) => Chip(
+              avatar: Icon(Icons.shield, size: 18, color: Theme.of(context).colorScheme.error),
+              label: Text('${entry.key} · ${entry.value}/${team.length}'),
+            )).toList()),
+          const SizedBox(height: 14),
+          Row(children: [
+            Icon(Icons.sports_martial_arts, color: Theme.of(context).colorScheme.primary),
+            const SizedBox(width: 8),
+            const Text('Miecz — braki w ataku', style: TextStyle(fontWeight: FontWeight.bold)),
+          ]),
+          const SizedBox(height: 6),
+          if (offensiveGaps.isEmpty)
+            const Text('Drużyna ma super skuteczne pokrycie przeciwko wszystkim typom.')
+          else
+            Wrap(spacing: 8, runSpacing: 4, children: offensiveGaps.map((type) => Chip(
+              avatar: Icon(Icons.sports_martial_arts, size: 18, color: Theme.of(context).colorScheme.primary),
+              label: Text(type),
+            )).toList()),
+          const SizedBox(height: 8),
+          Text(
+            'Analiza uwzględnia podstawowe relacje typów i podwójne typy w obronie. Nie uwzględnia rzeczywistych ruchów, zdolności ani statystyk Pokémonów.',
+            style: Theme.of(context).textTheme.bodySmall,
+          ),
+        ]),
       ),
     );
   }
