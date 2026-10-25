@@ -6,6 +6,15 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 
 ## Ostatnie prace
 
+### Pokédex — integracja sekcji ruchów z kartą Pokémona (2026-10-25)
+- Dodano `lib/data/pokemon_learnset_data.dart`: model wpisu learnsetu, parser JSON i lokalny odczyt danych z bezpiecznym zachowaniem, gdy dane nie są jeszcze dostępne.
+- Dodano asset `assets/data/pokemon_learnsets.json` z pustym placeholderem oraz wpis do `pubspec.yaml`, aby projekt nie odwoływał się do nieistniejącego zasobu.
+- Karta szczegółowa ma sekcję „Ruchy i ataki” z filtrem grupy wersji, nazwami ruchów z lokalnego katalogu, metodą nauki i poziomem. Usunięto dawny tekst zastępczy o przyszłej liście ataków.
+- Dodano test parsera learnsetu w `test/data_integrity_test.dart`.
+- Commity: `dcf9bd98615b99a3490bd682a74d19f172d65872` (model), `4ea98c875b612b791acfa27d47a3ae66b582eeb6` (karta), `c8f3a24f16f83a3257ab086d1f9c9e71eef4d41e` (asset), `cafab842332a7164a7cac6afdc9465c7587aaa4c` (pubspec), `73985700a3fbca5cfe74e2b76e40d607eb7e30a1` (test).
+- Status: kod zapisany; rzeczywisty zbiór learnsetów nadal nie został wygenerowany, więc sekcja pokaże informację o braku importu do czasu uruchomienia importera. `flutter test`, `flutter analyze` i build nie zostały uruchomione w tej sesji.
+
+
 ### Pokédex — automatyczne przygotowanie learnsetów (2026-10-25)
 - Ulepszono `tools/import_pokemon_moves.py`: opcja `--download` automatycznie pobiera brakujące CSV z oficjalnego repozytorium PokéAPI, więc nie trzeba ręcznie kopiować ani zapisywać wielkiego pliku.
 - Zaktualizowano `tools/README_pokemon_moves.md` o pojedynczą komendę PowerShell dla Windows.
