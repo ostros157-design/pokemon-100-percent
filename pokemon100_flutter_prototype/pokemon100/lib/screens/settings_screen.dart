@@ -99,10 +99,11 @@ class _ColorChoiceTile extends StatelessWidget {
     return ValueListenableBuilder<Color>(
       valueListenable: value,
       builder: (context, selected, _) {
-        final selectedName = AppAppearance.colorOptions.entries
-            .where((entry) => entry.value.value == selected.value)
-            .map((entry) => entry.key)
-            .firstOrNull ?? 'Niestandardowy';
+        final matchingColors = AppAppearance.colorOptions.entries
+            .where((entry) => entry.value.value == selected.value);
+        final selectedName = matchingColors.isEmpty
+            ? 'Niestandardowy'
+            : matchingColors.first.key;
         return Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
           child: Column(
