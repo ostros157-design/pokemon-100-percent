@@ -76,4 +76,23 @@ class PokemonLearnsetData {
     final all = await load();
     return all.where((entry) => entry.pokemonId == pokemonId).toList(growable: false);
   }
+
+  /// Available game groups for a Pokémon, in a stable display order.
+  static Future<List<String>> versionGroupsForPokemon(int pokemonId) async {
+    final entries = await forPokemon(pokemonId);
+    final groups = entries.map((entry) => entry.versionGroup).toSet().toList();
+    groups.sort();
+    return groups;
+  }
+
+  /// Look up all learnset rows for one game group.
+  static Future<List<PokemonLearnsetEntry>> forPokemonAndVersion(
+    int pokemonId,
+    String versionGroup,
+  ) async {
+    final entries = await forPokemon(pokemonId);
+    return entries
+        .where((entry) => entry.versionGroup == versionGroup)
+        .toList(growable: false);
+  }
 }
