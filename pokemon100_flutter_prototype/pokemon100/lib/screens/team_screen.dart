@@ -4,6 +4,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../data/pokemon_data.dart';
 import '../models/pokemon.dart';
+import '../services/team_recommendation_service.dart';
 
 class TeamScreen extends StatefulWidget {
   const TeamScreen({super.key});
@@ -100,6 +101,60 @@ class _TeamScreenState extends State<TeamScreen> {
     });
   }
 
+  Future<void> _showRecommendations() async {
+    final recommendations = TeamRecommendationService.recommend(_team);
+    if (!mounted) return;
+    if (recommendations.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Nie znaleziono kandydatów poprawiających pokrycie słabości na podstawie danych typów.')),
+      );
+      return;
+    }
+    final chosen = await showModalBottomSheet<Pokemon>(
+      context: context, isScrollControlled: true, showDragHandle: true,
+      builder: (sheetContext) => SafeArea(
+        child: SizedBox(
+          height: MediaQuery.of(sheetContext).size.height * 0.72,
+          child: ListView(
+            padding: const EdgeInsets.all(16),
+            children: [
+              const Text('Dopasuj Pokémona', style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
+              const SizedBox(height: 6),
+              const Text('Propozycje bazują na typach obecnej drużyny. Dostępność w konkretnej grze nie jest weryfikowana, ponieważ lokalny model nie zawiera list gatunków dla poszczególnych gier.'),
+              const SizedBox(height: 12),
+              ...recommendations.map((recommendation) => Card(
+                child: ListTile(
+                  leading: SizedBox(width: 48, height: 48, child: CachedNetworkImage(
+                    imageUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${recommendation.pokemon.id}.png',
+                    fit: BoxFit.contain,
+                    errorWidget: (_, __, ___) => CircleAvatar(child: Text('${recommendation.pokemon.id}')),
+                  )),
+                  title: Text(recommendation.pokemon.name),
+                  subtitle: Text('${recommendation.pokemon.types.join(' / ')}\n${recommendation.reasons.take(2).join('; ')}'),
+                  isThreeLine: true, trailing: Text('+ ${recommendation.score}'),
+                  onTap: () => Navigator.pop(sheetContext, recommendation.pokemon),
+                ),
+              )),
+            ],
+          ),
+        ),
+      ),
+    );
+    if (chosen == null || !mounted) return;
+    if (_team.length >= 6) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Drużyna ma już 6 Pokémonów. Usuń jednego przed dodaniem rekomendacji.')),
+      );
+      return;
+    }
+    setState(() {
+      if (!_team.any((pokemon) => pokemon.id == chosen.id)) {
+        _team.add(chosen);
+        _status = '${chosen.name} dodany do drużyny. Zapisz drużynę, aby zachować zmianę.';
+      }
+    });
+  }
+
   @override
   void dispose() {
     _nameController.dispose();
@@ -147,6 +202,12 @@ class _TeamScreenState extends State<TeamScreen> {
                       onPressed: _team.length >= 6 ? null : _choosePokemon,
                       icon: const Icon(Icons.add),
                       label: const Text('Dodaj'),
+                    ),
+                    const SizedBox(width: 8),
+                    FilledButton.tonalIcon(
+                      onPressed: _team.isEmpty ? null : _showRecommendations,
+                      icon: const Icon(Icons.auto_awesome),
+                      label: const Text('Dopasuj Pokémona'),
                     ),
                   ],
                 ),
