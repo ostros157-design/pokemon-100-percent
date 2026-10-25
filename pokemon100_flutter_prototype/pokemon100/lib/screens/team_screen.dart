@@ -185,6 +185,10 @@ class _TeamScreenState extends State<TeamScreen> {
                   );
                 }),
                 const SizedBox(height: 12),
+                if (_team.isNotEmpty) ...[
+                  const SizedBox(height: 12),
+                  _TeamAnalysis(team: _team),
+                ],
                 FilledButton.icon(
                   onPressed: _saving ? null : _saveTeam,
                   icon: _saving
@@ -271,6 +275,79 @@ class _PokemonPickerState extends State<_PokemonPicker> {
                       },
                     ),
             ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+
+/// Szybka analiza słabości oparta na podstawowych relacjach typów.
+class _TeamAnalysis extends StatelessWidget {
+  final List<Pokemon> team;
+
+  const _TeamAnalysis({required this.team});
+
+  static const Map<String, Set<String>> _superEffectiveAgainst = {
+    'Normal': {},
+    'Fire': {'Grass', 'Ice', 'Bug', 'Steel'},
+    'Water': {'Fire', 'Ground', 'Rock'},
+    'Electric': {'Water', 'Flying'},
+    'Grass': {'Water', 'Ground', 'Rock'},
+    'Ice': {'Grass', 'Ground', 'Flying', 'Dragon'},
+    'Fighting': {'Normal', 'Ice', 'Rock', 'Dark', 'Steel'},
+    'Poison': {'Grass', 'Fairy'},
+    'Ground': {'Fire', 'Electric', 'Poison', 'Rock', 'Steel'},
+    'Flying': {'Grass', 'Fighting', 'Bug'},
+    'Psychic': {'Fighting', 'Poison'},
+    'Bug': {'Grass', 'Psychic', 'Dark'},
+    'Rock': {'Fire', 'Ice', 'Flying', 'Bug'},
+    'Ghost': {'Psychic', 'Ghost'},
+    'Dragon': {'Dragon'},
+    'Dark': {'Psychic', 'Ghost'},
+    'Steel': {'Ice', 'Rock', 'Fairy'},
+    'Fairy': {'Fighting', 'Dragon', 'Dark'},
+  };
+
+  @override
+  Widget build(BuildContext context) {
+    final weaknesses = <String, int>{};
+    for (final attackType in _superEffectiveAgainst.keys) {
+      final count = team.where((pokemon) =>
+          pokemon.types.any((defendingType) =>
+              _superEffectiveAgainst[attackType]!.contains(defendingType))).length;
+      if (count > 0) weaknesses[attackType] = count;
+    }
+    final sorted = weaknesses.entries.toList()
+      ..sort((a, b) {
+        final byCount = b.value.compareTo(a.value);
+        return byCount != 0 ? byCount : a.key.compareTo(b.key);
+      });
+
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text('Analiza słabości drużyny',
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+            const SizedBox(height: 6),
+            const Text('Liczba Pokémonów w drużynie podatnych na dany typ. '
+                'To podstawowa analiza typów — nie uwzględnia zdolności, ruchów ani mnożników 4×.'),
+            const SizedBox(height: 10),
+            if (sorted.isEmpty)
+              const Text('Brak słabości do pokazania.')
+            else
+              Wrap(
+                spacing: 8,
+                runSpacing: 8,
+                children: sorted.map((entry) => Chip(
+                  avatar: const Icon(Icons.warning_amber_rounded, size: 18),
+                  label: Text('${entry.key}: ${entry.value}/${team.length}'),
+                )).toList(),
+              ),
           ],
         ),
       ),
