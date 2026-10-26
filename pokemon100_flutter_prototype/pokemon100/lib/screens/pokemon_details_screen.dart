@@ -21,6 +21,7 @@ class PokemonDetailsScreen extends StatefulWidget {
 
 class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
   bool _caught = false;
+  bool _shiny = false;
   String _activeGameId = 'lets_go_pikachu';
 
   String get _caughtPokemonKey => 'caught_pokemon_ids_${_activeGameId}';
@@ -50,11 +51,29 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
         .map(int.tryParse)
         .whereType<int>()
         .toSet();
+    final shinyKey = 'shiny_pokemon_ids_' + _activeGameId;
+    if (!preferences.containsKey(shinyKey)) {
+      final legacyShiny = preferences.getStringList('shiny_pokemon_ids');
+      if (legacyShiny != null) await preferences.setStringList(shinyKey, legacyShiny);
+    }
+    final shinyIds = (preferences.getStringList(shinyKey) ?? const <String>[])
+        .map(int.tryParse).whereType<int>().toSet();
     if (!mounted) return;
     setState(() {
       _caught = ids.contains(widget.pokemon.id);
+      _shiny = shinyIds.contains(widget.pokemon.id);
       _loadingCaught = false;
     });
+  }
+
+  Future<void> _toggleShiny() async {
+    final preferences = await SharedPreferences.getInstance();
+    final key = 'shiny_pokemon_ids_' + _activeGameId;
+    final ids = (preferences.getStringList(key) ?? const <String>[])
+        .map(int.tryParse).whereType<int>().toSet();
+    if (_shiny) { ids.remove(widget.pokemon.id); } else { ids.add(widget.pokemon.id); }
+    await preferences.setStringList(key, ids.map((id) => id.toString()).toList());
+    if (mounted) setState(() => _shiny = !_shiny);
   }
 
   Future<void> _toggleCaught() async {
@@ -446,7 +465,7 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
   Widget build(BuildContext context) {
     final pokemon = widget.pokemon;
     return Scaffold(
-      appBar: AppBar(title: Text(pokemon.name), centerTitle: true),
+      appBar: AppBar(title: Text(pokemon.name), centerTitle: true, actions: [IconButton(tooltip: _shiny ? 'Pokaż zwykłą formę' : 'Pokaż Shiny', onPressed: _toggleShiny, icon: Icon(_shiny ? Icons.auto_awesome : Icons.auto_awesome_outlined))]),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
         child: Column(
@@ -473,7 +492,7 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
                 width: 220,
                 height: 220,
                 child: CachedNetworkImage(
-                  imageUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png',
+                  imageUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${_shiny ? 'shiny/' : ''}${pokemon.id}.png',
                   fit: BoxFit.contain,
                   placeholder: (context, url) => const SizedBox(
                     width: 64,
