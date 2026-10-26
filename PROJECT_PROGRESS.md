@@ -1,3 +1,10 @@
+### Importer learnsetów — walidacja źródeł (2026-10-26)
+- Importer sprawdza wymagane kolumny CSV, odrzuca puste źródła i przerywa pracę, gdy nie znaleziono pasujących Pokémonów lub rekordów learnsetów.
+- Pobieranie zapisuje plik tymczasowy i podmienia plik docelowy dopiero po zakończeniu odczytu, ograniczając ryzyko pozostawienia częściowego CSV po przerwaniu pobierania.
+- Instrukcja `tools/README_pokemon_moves.md` opisuje nowe kontrole.
+- Commity: `994d66ba88150408f4f5eeed9c9ee8680fa21100` (importer), `9ac72c0e8dace3f75ae885348f8920756f2837ee` (instrukcja).
+- Status: zmiany zapisane; nie uruchomiono skryptu ani testów Flutter w tej sesji. Nadal potrzebne jest wygenerowanie rzeczywistego pliku learnsetów.
+
 ### Pokédex — testy parsowania learnsetów (2026-10-26)
 - Uzupełniono `test/data_integrity_test.dart` o test modelu `PokemonLearnsetEntry`: parsowanie identyfikatorów, grupy wersji, poziomu oraz etykiet metod nauki, w tym nieznanej metody.
 - Commit testu: `c976e5fd5b8d4f709574bd7d601836c6fcb726c0`.
