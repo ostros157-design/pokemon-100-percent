@@ -1,3 +1,9 @@
+### Automatyzacja generowania learnsetów (2026-10-26)
+- Dodano workflow GitHub Actions `.github/workflows/generate-pokemon-learnsets.yml`, uruchamiany ręcznie przez `workflow_dispatch`.
+- Workflow pobiera źródłowe CSV PokéAPI, uruchamia istniejący importer, sprawdza, czy JSON jest niepusty i ma wymagane pola, a następnie commituję wygenerowany asset do repozytorium, jeśli zawartość się zmieniła.
+- Commit workflow: `ceecfda349c4bc6ae31b3998db5bc3c365a78047`.
+- Status: workflow dodany, ale nieuruchomiony w tej sesji; `pokemon_learnsets.json` nie został jeszcze wygenerowany. Po uruchomieniu sprawdzić logi Actions oraz wynikowy plik i dopiero potem podłączenie danych w aplikacji.
+
 ### Pokédex — pełniejsze testy etykiet metod nauki (2026-10-26)
 - Rozszerzono test modelu learnsetu, aby sprawdzał wszystkie znane metody 5–11, a nie tylko metodę 5 i nieznany identyfikator.
 - Commit testu: `ff3f75b67cb6391e8fdbe4fe0a1de1afb7401a94`.
