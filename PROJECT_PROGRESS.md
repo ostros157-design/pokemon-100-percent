@@ -1,3 +1,10 @@
+### Generowanie learnsetów przez GitHub Actions (2026-10-26)
+- Zaktualizowano ręcznie uruchamiany workflow `.github/workflows/generate-pokemon-learnsets.yml`: parametr limitu National Dex, Python 3.12, limit czasu, kontrola minimalnej liczby rekordów i pól JSON oraz podsumowanie liczby Pokémonów i grup wersji.
+- Workflow ma po walidacji commitować wygenerowany plik `pokemon100_flutter_prototype/pokemon100/assets/data/pokemon_learnsets.json` do repozytorium.
+- Zaktualizowano `tools/README_pokemon_moves.md` o instrukcję uruchomienia w zakładce Actions i wymagane uprawnienia zapisu.
+- Commity tej aktualizacji: workflow `da509d84b8e1b4fc2fa4404fba0dcd8c37aead1f`, instrukcja `01c7b86be365b3f4bf74527f1aa6c9a5e23c084e`.
+- Status: workflow nie został uruchomiony z tej sesji. Plik learnsetów nadal wymaga wygenerowania i weryfikacji przez GitHub Actions.
+
 ### Automatyzacja generowania learnsetów (2026-10-26)
 - Dodano workflow GitHub Actions `.github/workflows/generate-pokemon-learnsets.yml`, uruchamiany ręcznie przez `workflow_dispatch`.
 - Workflow pobiera źródłowe CSV PokéAPI, uruchamia istniejący importer, sprawdza, czy JSON jest niepusty i ma wymagane pola, a następnie commituję wygenerowany asset do repozytorium, jeśli zawartość się zmieniła.
