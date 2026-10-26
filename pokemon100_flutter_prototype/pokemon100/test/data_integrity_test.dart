@@ -45,12 +45,26 @@ void main() {
       expect(entry.versionGroup, 'heartgold-soulsilver');
       expect(entry.level, 25);
       expect(entry.methodLabel, 'Poziom');
-      expect(PokemonLearnsetEntry.fromJson(<String, dynamic>{
-        'pokemonId': 25,
-        'moveId': 1,
-        'versionGroupId': 1,
-        'methodId': 5,
-      }).methodLabel, 'Specjalny ruch Pikachu');
+      final methodLabels = <int, String>{
+        5: 'Specjalny ruch Pikachu',
+        6: 'Jajko z Light Ball',
+        7: 'Oczyszczenie (Colosseum)',
+        8: 'Oczyszczenie (XD)',
+        9: 'Zmiana formy',
+        10: 'Przypomnienie ruchu',
+        11: 'Ponowne nauczenie ruchu',
+      };
+      for (final method in methodLabels.entries) {
+        expect(
+          PokemonLearnsetEntry.fromJson(<String, dynamic>{
+            'pokemonId': 25,
+            'moveId': 1,
+            'versionGroupId': 1,
+            'methodId': method.key,
+          }).methodLabel,
+          method.value,
+        );
+      }
       expect(PokemonLearnsetEntry.fromJson(<String, dynamic>{
         'pokemonId': 1,
         'moveId': 1,
