@@ -1,3 +1,9 @@
+### Pokédex — pełniejsze testy etykiet metod nauki (2026-10-26)
+- Rozszerzono test modelu learnsetu, aby sprawdzał wszystkie znane metody 5–11, a nie tylko metodę 5 i nieznany identyfikator.
+- Commit testu: `ff3f75b67cb6391e8fdbe4fe0a1de1afb7401a94`.
+- Potwierdzono odczytem repozytorium, że model zawiera etykiety metod 5–11; plik `assets/data/pokemon_learnsets.json` nadal zawiera pustą tablicę `[]`, więc rzeczywiste dane ruchów nie są jeszcze dostępne w aplikacji.
+- Status: testy nieuruchomione; import danych i kompilacja pozostają do wykonania.
+
 ### Pokédex — synchronizacja etykiet metod nauki (2026-10-26)
 - Ponownie zapisano korektę etykiet metod nauki ruchów w modelu; wcześniejsza próba nie utrwaliła zmian w pobranej wersji pliku.
 - Commit modelu: `b2fa96981ba0e00155ef5a4408b3103904a59b39`.
