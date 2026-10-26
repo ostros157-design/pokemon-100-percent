@@ -11,16 +11,19 @@ import '../data/pokemon_learnset_data.dart';
 
 class PokemonDetailsScreen extends StatefulWidget {
   final Pokemon pokemon;
+  final String? gameId;
 
-  const PokemonDetailsScreen({super.key, required this.pokemon});
+  const PokemonDetailsScreen({super.key, required this.pokemon, this.gameId});
 
   @override
   State<PokemonDetailsScreen> createState() => _PokemonDetailsScreenState();
 }
 
 class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
-  static const _caughtPokemonKey = 'caught_pokemon_ids';
   bool _caught = false;
+  String _activeGameId = 'lets_go_pikachu';
+
+  String get _caughtPokemonKey => 'caught_pokemon_ids_${_activeGameId}';
   bool _loadingCaught = true;
   String? _selectedLearnsetVersion;
 
@@ -32,6 +35,17 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
 
   Future<void> _loadCaughtStatus() async {
     final preferences = await SharedPreferences.getInstance();
+    _activeGameId = widget.gameId ??
+        preferences.getString('selected_pokemon_game_id') ??
+        'lets_go_pikachu';
+    // Preserve the legacy global collection and copy it only when this game's
+    // collection has not been initialized yet.
+    if (!preferences.containsKey(_caughtPokemonKey)) {
+      final legacyIds = preferences.getStringList('caught_pokemon_ids');
+      if (legacyIds != null) {
+        await preferences.setStringList(_caughtPokemonKey, legacyIds);
+      }
+    }
     final ids = (preferences.getStringList(_caughtPokemonKey) ?? const <String>[])
         .map(int.tryParse)
         .whereType<int>()
@@ -113,6 +127,7 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
                               MaterialPageRoute<void>(
                                 builder: (_) => PokemonDetailsScreen(
                                   pokemon: family[i],
+                                  gameId: widget.gameId ?? _activeGameId,
                                 ),
                               ),
                             ),
