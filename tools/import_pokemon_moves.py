@@ -11,14 +11,41 @@ import argparse
 import csv
 import json
 from pathlib import Path
+from urllib.error import URLError, HTTPError
 from urllib.request import urlopen
 
 BASE_URL = "https://raw.githubusercontent.com/PokeAPI/pokeapi/master/data/v2/csv/"
 
 
-def read_csv(path):
+def read_csv(path, required_columns=()):
     with path.open("r", encoding="utf-8-sig", newline="") as handle:
-        return list(csv.DictReader(handle))
+        reader = csv.DictReader(handle)
+        missing = set(required_columns) - set(reader.fieldnames or ())
+        if missing:
+            raise SystemExit(
+                f"Invalid CSV {path}: missing columns {', '.join(sorted(missing))}"
+            )
+        rows = list(reader)
+    if not rows:
+        raise SystemExit(f"CSV {path} is empty; refusing to generate an empty learnset.")
+    return rows
+
+
+def download_csv(path):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    url = BASE_URL + path.name
+    print(f"Downloading {url} ...")
+    try:
+        with urlopen(url, timeout=120) as response:
+            data = response.read()
+    except (HTTPError, URLError, TimeoutError) as error:
+        raise SystemExit(f"Could not download {url}: {error}") from error
+    if not data or b"pokemon_id" not in data[:4096] and path.name == "pokemon_moves.csv":
+        raise SystemExit(f"Downloaded file {path.name} is empty or does not look like CSV.")
+    temporary_path = path.with_suffix(path.suffix + ".tmp")
+    temporary_path.write_bytes(data)
+    temporary_path.replace(path)
+    print(f"Saved {path} ({len(data):,} bytes)")
 
 
 def main():
@@ -35,22 +62,13 @@ def main():
         for path in (args.pokemon_moves, args.pokemon, args.version_groups):
             if path.exists():
                 continue
-            path.parent.mkdir(parents=True, exist_ok=True)
-            url = BASE_URL + path.name
-            print(f"Downloading {url} ...")
-            with urlopen(url, timeout=120) as response, path.open("wb") as target:
-                while True:
-                    chunk = response.read(1024 * 1024)
-                    if not chunk:
-                        break
-                    target.write(chunk)
-            print(f"Saved {path}")
+            download_csv(path)
 
     for path in (args.pokemon_moves, args.pokemon, args.version_groups):
         if not path.is_file():
             raise SystemExit(f"Missing {path}. Run again with --download or provide the CSV file.")
 
-    pokemon_rows = read_csv(args.pokemon)
+    pokemon_rows = read_csv(args.pokemon, ("id", "species_id", "is_default"))
     default_forms = {}
     for row in pokemon_rows:
         if row.get("is_default") != "1":
@@ -64,7 +82,7 @@ def main():
             default_forms[pokemon_id] = species_id
 
     version_names = {}
-    for row in read_csv(args.version_groups):
+    for row in read_csv(args.version_groups, ("id", "identifier")):
         try:
             version_names[int(row["id"])] = row["identifier"]
         except (ValueError, KeyError):
@@ -73,7 +91,7 @@ def main():
     # Keep the source IDs and the raw level/method fields; interpretation of
     # method IDs is done by the app so new methods won't be silently discarded.
     output = []
-    for row in read_csv(args.pokemon_moves):
+    for row in read_csv(args.pokemon_moves, ("pokemon_id", "version_group_id", "move_id", "pokemon_move_method_id", "level")):
         try:
             pokemon_id = int(row["pokemon_id"])
             move_id = int(row["move_id"])
@@ -94,6 +112,13 @@ def main():
             "level": level,
             "order": int(row["order"]) if (row.get("order") or "").isdigit() else None,
         })
+
+    if not default_forms:
+        raise SystemExit("No default Pokémon forms matched the requested National Dex range.")
+    if not output:
+        raise SystemExit(
+            "No learnset rows matched. Check that the CSV files are complete and compatible."
+        )
 
     output.sort(key=lambda item: (
         item["pokemonId"], item["versionGroupId"], item["methodId"],
