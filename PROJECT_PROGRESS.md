@@ -1,3 +1,9 @@
+### Pokédex — poprawne etykiety metod nauki ruchów (2026-10-26)
+- Skorygowano opisy metod 5–11 zgodnie z identyfikatorami metod PokéAPI; metoda 5 nie jest ewolucją, jak sugerowała wcześniejsza etykieta.
+- Rozszerzono test parsowania o sprawdzenie etykiety specjalnego ruchu Pikachu.
+- Commity: `9a180732596188a9136e3f943c4675a4202af611` (model), `d101f611fca67e4ecc2ba3fe3f4c5b54b12fa7e4` (test).
+- Status: zapisane w repozytorium; testy nieuruchomione. Rzeczywiste learnsety nadal wymagają wygenerowania i dodania do assetów.
+
 ### Importer learnsetów — walidacja źródeł (2026-10-26)
 - Importer sprawdza wymagane kolumny CSV, odrzuca puste źródła i przerywa pracę, gdy nie znaleziono pasujących Pokémonów lub rekordów learnsetów.
 - Pobieranie zapisuje plik tymczasowy i podmienia plik docelowy dopiero po zakończeniu odczytu, ograniczając ryzyko pozostawienia częściowego CSV po przerwaniu pobierania.
