@@ -2,7 +2,19 @@
 
 Skrypt pobiera i przypisuje ruchy automatycznie na podstawie oficjalnych danych PokéAPI. Nie trzeba otwierać ani kopiować zawartości CSV ręcznie.
 
-## Najprostszy sposób (Windows / PowerShell)
+## Zalecany sposób: GitHub Actions (bez pobierania CSV na komputerze)
+
+Workflow `.github/workflows/generate-pokemon-learnsets.yml` uruchamia generator na serwerach GitHuba i zapisuje wynik w repozytorium.
+
+1. Otwórz repozytorium i przejdź do zakładki **Actions**.
+2. Wybierz **Generate Pokémon learnsets**.
+3. Kliknij **Run workflow**, pozostaw `max_dex` ustawione na `1025` i potwierdź.
+4. Poczekaj na zakończenie pobierania, walidacji i zapisu.
+5. Po sukcesie sprawdź commit `Generate Pokémon learnset data` oraz plik `pokemon100_flutter_prototype/pokemon100/assets/data/pokemon_learnsets.json`.
+
+Workflow wymaga uprawnienia `contents: write`. Jeśli nie może wypchnąć commita, otwórz **Settings → Actions → General → Workflow permissions** i zezwól GitHub Actions na zapisywanie zawartości repozytorium. W razie błędu sprawdź logi uruchomienia; nie zakładaj, że dane zostały wygenerowane.
+
+## Alternatywa: lokalnie w Windows / PowerShell
 
 Zainstaluj Python 3, otwórz PowerShell w katalogu głównym repozytorium i uruchom:
 
