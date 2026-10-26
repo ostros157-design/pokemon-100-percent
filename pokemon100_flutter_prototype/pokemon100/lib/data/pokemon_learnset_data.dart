@@ -39,8 +39,13 @@ class PokemonLearnsetEntry {
         2 => 'Jajko',
         3 => 'Tutor',
         4 => 'Maszyna (TM/HM)',
-        5 => 'Uczony przy ewolucji',
-        6 => 'Specjalna metoda',
+        5 => 'Specjalny ruch Pikachu',
+        6 => 'Jajko z Light Ball',
+        7 => 'Oczyszczenie (Colosseum)',
+        8 => 'Oczyszczenie (XD)',
+        9 => 'Zmiana formy',
+        10 => 'Przypomnienie ruchu',
+        11 => 'Ponowne nauczenie ruchu',
         _ => 'Metoda #$methodId',
       };
 }
