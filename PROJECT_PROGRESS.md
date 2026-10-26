@@ -1,3 +1,8 @@
+### Pokédex — testy parsowania learnsetów (2026-10-26)
+- Uzupełniono `test/data_integrity_test.dart` o test modelu `PokemonLearnsetEntry`: parsowanie identyfikatorów, grupy wersji, poziomu oraz etykiet metod nauki, w tym nieznanej metody.
+- Commit testu: `c976e5fd5b8d4f709574bd7d601836c6fcb726c0`.
+- Status: test dodany w GitHubie, ale nieuruchomiony; dane learnsetów nadal wymagają importu.
+
 ### Pokédex — osobna kolekcja dla wybranej gry (2026-10-26)
 - Ekran Pokédexa odczytuje teraz `selected_pokemon_game_id` i zapisuje złapane Pokémony oraz oznaczenia Shiny pod kluczami zależnymi od gry.
 - Karta szczegółów korzysta z tego samego klucza dla statusu złapania; przechodzenie między Pokémonami w drzewku ewolucji zachowuje kontekst gry.
