@@ -46,6 +46,12 @@ void main() {
       expect(entry.level, 25);
       expect(entry.methodLabel, 'Poziom');
       expect(PokemonLearnsetEntry.fromJson(<String, dynamic>{
+        'pokemonId': 25,
+        'moveId': 1,
+        'versionGroupId': 1,
+        'methodId': 5,
+      }).methodLabel, 'Specjalny ruch Pikachu');
+      expect(PokemonLearnsetEntry.fromJson(<String, dynamic>{
         'pokemonId': 1,
         'moveId': 1,
         'versionGroupId': 1,
