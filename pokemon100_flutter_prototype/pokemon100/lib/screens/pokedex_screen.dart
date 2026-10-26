@@ -22,6 +22,8 @@ class _PokedexScreenState extends State<PokedexScreen> {
   final Set<int> _caughtPokemonIds = <int>{};
   bool _onlyCaught = false;
   String _sortMode = 'number';
+  String _activeGameId = 'lets_go_pikachu';
+  static const String _selectedGameKey = 'selected_pokemon_game_id';
   static const Set<int> _letsGoPikachuUnavailable = {
     15, 23, 24, 37, 38, 52, 69, 70, 71, 109, 110, 127, 151,
   };
@@ -43,17 +45,46 @@ class _PokedexScreenState extends State<PokedexScreen> {
     });
   }
 
+  String _collectionKey(String base, String gameId) => '${base}_$gameId';
+
   Future<void> _loadSavedState() async {
     final prefs = await SharedPreferences.getInstance();
-    final caught = (prefs.getStringList('caught_pokemon_ids') ?? const <String>[]).map(int.tryParse).whereType<int>().toSet();
-    final shiny = (prefs.getStringList('shiny_pokemon_ids') ?? const <String>[]).map(int.tryParse).whereType<int>().toSet();
+    final savedGame = prefs.getString(_selectedGameKey);
+    final gameId = (savedGame != null && savedGame.trim().isNotEmpty)
+        ? savedGame
+        : 'lets_go_pikachu';
+    final caughtKey = _collectionKey('caught_pokemon_ids', gameId);
+    final shinyKey = _collectionKey('shiny_pokemon_ids', gameId);
+
+    // Migrate the old global collection once into the currently selected game,
+    // but keep the original keys so existing data is never deleted.
+    if (!prefs.containsKey(caughtKey)) {
+      final legacyCaught = prefs.getStringList('caught_pokemon_ids');
+      if (legacyCaught != null) await prefs.setStringList(caughtKey, legacyCaught);
+    }
+    if (!prefs.containsKey(shinyKey)) {
+      final legacyShiny = prefs.getStringList('shiny_pokemon_ids');
+      if (legacyShiny != null) await prefs.setStringList(shinyKey, legacyShiny);
+    }
+
+    final caught = (prefs.getStringList(caughtKey) ?? const <String>[])
+        .map(int.tryParse).whereType<int>().toSet();
+    final shiny = (prefs.getStringList(shinyKey) ?? const <String>[])
+        .map(int.tryParse).whereType<int>().toSet();
     if (!mounted) return;
-    setState(() { _caughtPokemonIds..clear()..addAll(caught); _shinyPokemonIds..clear()..addAll(shiny); });
+    setState(() {
+      _activeGameId = gameId;
+      _caughtPokemonIds..clear()..addAll(caught);
+      _shinyPokemonIds..clear()..addAll(shiny);
+    });
   }
 
-  Future<void> _saveIds(String key, Set<int> ids) async {
+  Future<void> _saveIds(String base, Set<int> ids) async {
     final prefs = await SharedPreferences.getInstance();
-    await prefs.setStringList(key, ids.map((id) => id.toString()).toList());
+    await prefs.setStringList(
+      _collectionKey(base, _activeGameId),
+      ids.map((id) => id.toString()).toList(),
+    );
   }
 
   Future<void> _toggleCaught(int id) async {
@@ -273,7 +304,7 @@ class _PokedexScreenState extends State<PokedexScreen> {
               ],
             ),
           ),
-          Padding(padding: const EdgeInsets.symmetric(horizontal: 12), child: Row(children: [Expanded(child: FilterChip(avatar: const Icon(Icons.check_circle_outline, size: 18), label: const Text('Tylko złapane'), selected: _onlyCaught, onSelected: (value) => setState(() => _onlyCaught = value))), const SizedBox(width: 8), Text('Złapane: ${_caughtPokemonIds.length}/${pokemonList.length}') ])),
+          Padding(padding: const EdgeInsets.symmetric(horizontal: 12), child: Row(children: [Expanded(child: FilterChip(avatar: const Icon(Icons.check_circle_outline, size: 18), label: const Text('Tylko złapane'), selected: _onlyCaught, onSelected: (value) => setState(() => _onlyCaught = value))), const SizedBox(width: 8), Text('Złapane: ${_caughtPokemonIds.length}/${pokemonList.length} • ${_activeGameId.replaceAll('_', ' ')}') ])),
           Padding(
             padding: const EdgeInsets.fromLTRB(12, 0, 12, 4),
             child: Row(
@@ -336,6 +367,7 @@ class _PokedexScreenState extends State<PokedexScreen> {
                             MaterialPageRoute(
                               builder: (_) => PokemonDetailsScreen(
                                 pokemon: currentPokemon,
+                                gameId: _activeGameId,
                               ),
                             ),
                           );
