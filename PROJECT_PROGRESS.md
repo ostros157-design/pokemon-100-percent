@@ -1,3 +1,10 @@
+### Pokédex — osobna kolekcja dla wybranej gry (2026-10-26)
+- Ekran Pokédexa odczytuje teraz `selected_pokemon_game_id` i zapisuje złapane Pokémony oraz oznaczenia Shiny pod kluczami zależnymi od gry.
+- Karta szczegółów korzysta z tego samego klucza dla statusu złapania; przechodzenie między Pokémonami w drzewku ewolucji zachowuje kontekst gry.
+- Istniejące globalne listy nie są kasowane. Przy pierwszym użyciu kolekcji danej gry stary zapis jest kopiowany, jeśli nie ma jeszcze zapisu dla tej gry.
+- Commity: `f57b97d197b4b6958a001462402c187d20666ec0` (Pokédex), `fca382ddc5d66690b280ed4cd00fd3e9e7a4e03b` (karta szczegółów).
+- Status: zapisane w GitHubie; nie uruchomiono `flutter analyze`, testów ani kompilacji. Wymagana weryfikacja na urządzeniu, szczególnie migracji starego zapisu i przełączania gry.
+
 ### Pokédex — sortowanie i ładowanie obrazów (2026-10-25)
 - Dodano widoczny wybór sortowania listy: numer National Pokédex rosnąco, numer malejąco oraz nazwa A–Z.
 - Usunięto automatyczne pobieranie wszystkich 1025 obrazów przy otwarciu ekranu. Obrazki są teraz pobierane przez widoczne karty, co ogranicza niepotrzebny transfer i opóźnienie startu.
