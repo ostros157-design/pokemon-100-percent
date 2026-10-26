@@ -1,0 +1,51 @@
+name: Generate Pokémon learnsets
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Generate learnset JSON from PokéAPI CSV
+        run: |
+          python tools/import_pokemon_moves.py --download --output pokemon100_flutter_prototype/pokemon100/assets/data/pokemon_learnsets.json
+
+      - name: Validate generated JSON
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path("pokemon100_flutter_prototype/pokemon100/assets/data/pokemon_learnsets.json")
+          data = json.loads(path.read_text(encoding="utf-8"))
+          if not isinstance(data, list) or not data:
+              raise SystemExit("Generated learnsets JSON is empty or has an unexpected format.")
+          required = {"pokemonId", "moveId", "versionGroupId", "versionGroup", "methodId", "level", "order"}
+          if not required.issubset(data[0]):
+              raise SystemExit(f"Missing fields: {sorted(required - set(data[0]))}")
+          print(f"Validated {len(data):,} learnset rows.")
+          PY
+
+      - name: Commit generated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add pokemon100_flutter_prototype/pokemon100/assets/data/pokemon_learnsets.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Generate Pokémon learnset data"
+            git push
+          fi
