@@ -1,5 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import '../lib/data/move_data.dart';
+import '../lib/data/pokemon_learnset_data.dart';
 import '../lib/data/pokemon_data.dart';
 
 void main() {
@@ -27,6 +28,29 @@ void main() {
           expect(move.accuracy, inInclusiveRange(0, 100));
         }
       }
+    });
+
+    test('learnset entries parse and label known learning methods', () {
+      final entry = PokemonLearnsetEntry.fromJson(<String, dynamic>{
+        'pokemonId': 94,
+        'moveId': 247,
+        'versionGroupId': 8,
+        'versionGroup': 'heartgold-soulsilver',
+        'methodId': 1,
+        'level': 25,
+        'order': 3,
+      });
+      expect(entry.pokemonId, 94);
+      expect(entry.moveId, 247);
+      expect(entry.versionGroup, 'heartgold-soulsilver');
+      expect(entry.level, 25);
+      expect(entry.methodLabel, 'Poziom');
+      expect(PokemonLearnsetEntry.fromJson(<String, dynamic>{
+        'pokemonId': 1,
+        'moveId': 1,
+        'versionGroupId': 1,
+        'methodId': 99,
+      }).methodLabel, 'Metoda #99');
     });
 
     test('move lookup and search filters work offline', () {
