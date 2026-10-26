@@ -2,25 +2,39 @@ name: Generate Pokémon learnsets
 
 on:
   workflow_dispatch:
+    inputs:
+      max_dex:
+        description: "National Dex limit (1025 = all supported species)"
+        required: true
+        default: "1025"
+        type: string
 
 permissions:
   contents: write
 
+concurrency:
+  group: generate-pokemon-learnsets
+  cancel-in-progress: false
+
 jobs:
   generate:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
-      - name: Checkout repository
+      - name: Check out repository
         uses: actions/checkout@v4
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.x"
+          python-version: "3.12"
 
-      - name: Generate learnset JSON from PokéAPI CSV
+      - name: Generate learnsets from PokéAPI CSV data
         run: |
-          python tools/import_pokemon_moves.py --download --output pokemon100_flutter_prototype/pokemon100/assets/data/pokemon_learnsets.json
+          python tools/import_pokemon_moves.py \
+            --download \
+            --max-dex "${{ inputs.max_dex }}" \
+            --output pokemon100_flutter_prototype/pokemon100/assets/data/pokemon_learnsets.json
 
       - name: Validate generated JSON
         run: |
@@ -30,21 +44,25 @@ jobs:
 
           path = Path("pokemon100_flutter_prototype/pokemon100/assets/data/pokemon_learnsets.json")
           data = json.loads(path.read_text(encoding="utf-8"))
-          if not isinstance(data, list) or not data:
-              raise SystemExit("Generated learnsets JSON is empty or has an unexpected format.")
+          if not isinstance(data, list) or len(data) < 1000:
+              count = len(data) if isinstance(data, list) else "not a list"
+              raise SystemExit(f"Invalid or suspiciously small learnset output: {count}")
           required = {"pokemonId", "moveId", "versionGroupId", "versionGroup", "methodId", "level", "order"}
           if not required.issubset(data[0]):
-              raise SystemExit(f"Missing fields: {sorted(required - set(data[0]))}")
-          print(f"Validated {len(data):,} learnset rows.")
+              raise SystemExit(f"Missing expected fields: {sorted(required - set(data[0]))}")
+          pokemon_count = len({row["pokemonId"] for row in data})
+          version_count = len({row["versionGroupId"] for row in data})
+          print(f"Validated {len(data):,} learnset rows, {pokemon_count} Pokémon, {version_count} version groups.")
+          print(f"Output size: {path.stat().st_size:,} bytes")
           PY
 
-      - name: Commit generated data
+      - name: Commit generated asset
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add pokemon100_flutter_prototype/pokemon100/assets/data/pokemon_learnsets.json
           if git diff --cached --quiet; then
-            echo "No changes to commit."
+            echo "Generated learnsets are already up to date."
           else
             git commit -m "Generate Pokémon learnset data"
             git push
