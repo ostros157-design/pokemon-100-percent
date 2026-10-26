@@ -21,6 +21,7 @@ class _PokedexScreenState extends State<PokedexScreen> {
   final Set<int> _shinyPokemonIds = <int>{};
   final Set<int> _caughtPokemonIds = <int>{};
   bool _onlyCaught = false;
+  bool _showSearchOptions = false;
   String _sortMode = 'number';
   String _activeGameId = 'lets_go_pikachu';
   static const String _selectedGameKey = 'selected_pokemon_game_id';
@@ -218,6 +219,7 @@ class _PokedexScreenState extends State<PokedexScreen> {
             padding: const EdgeInsets.all(12),
             child: TextField(
               controller: _searchController,
+              onTap: () => setState(() => _showSearchOptions = true),
               decoration: InputDecoration(
                 hintText: 'Szukaj Pokémona lub numeru...',
                 prefixIcon: const Icon(Icons.search),
@@ -235,104 +237,143 @@ class _PokedexScreenState extends State<PokedexScreen> {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(12, 0, 12, 8),
-            child: Row(
+          AnimatedCrossFade(
+            duration: const Duration(milliseconds: 220),
+            crossFadeState: _showSearchOptions
+                ? CrossFadeState.showFirst
+                : CrossFadeState.showSecond,
+            firstChild: Column(
+              mainAxisSize: MainAxisSize.min,
               children: [
-                Expanded(
-                  child: OutlinedButton.icon(
-                    onPressed: _showTypeFilters,
-                    icon: const Icon(Icons.filter_list),
-                    label: Text(_selectedTypes.isEmpty
-                        ? 'Filtry typów'
-                        : 'Typy: ${_selectedTypes.length}'),
-                  ),
-                ),
-                const SizedBox(width: 8),
-                Expanded(
-                  child: InputDecorator(
-                    decoration: const InputDecoration(
-                      labelText: 'Gra',
-                      contentPadding: EdgeInsets.symmetric(horizontal: 10, vertical: 2),
-                      border: OutlineInputBorder(),
-                    ),
-                    child: DropdownButtonHideUnderline(
-                      child: DropdownButton<String>(
-                        value: _selectedGame,
-                        isExpanded: true,
-                        isDense: true,
-                        items: const [
-                          DropdownMenuItem(
-                            value: 'all',
-                            child: Text('Wszystkie', overflow: TextOverflow.ellipsis),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(12, 0, 12, 8),
+                          child: Row(
+                            children: [
+                              Expanded(
+                                child: OutlinedButton.icon(
+                                  onPressed: _showTypeFilters,
+                                  icon: const Icon(Icons.filter_list),
+                                  label: Text(_selectedTypes.isEmpty
+                                      ? 'Filtry typów'
+                                      : 'Typy: ${_selectedTypes.length}'),
+                                ),
+                              ),
+                              const SizedBox(width: 8),
+                              Expanded(
+                                child: InputDecorator(
+                                  decoration: const InputDecoration(
+                                    labelText: 'Gra',
+                                    contentPadding: EdgeInsets.symmetric(horizontal: 10, vertical: 2),
+                                    border: OutlineInputBorder(),
+                                  ),
+                                  child: DropdownButtonHideUnderline(
+                                    child: DropdownButton<String>(
+                                      value: _selectedGame,
+                                      isExpanded: true,
+                                      isDense: true,
+                                      items: const [
+                                        DropdownMenuItem(
+                                          value: 'all',
+                                          child: Text('Wszystkie', overflow: TextOverflow.ellipsis),
+                                        ),
+                                        DropdownMenuItem(
+                                          value: 'lets_go_pikachu',
+                                          child: Text("Let's Go, Pikachu!", overflow: TextOverflow.ellipsis),
+                                        ),
+                                      ],
+                                      onChanged: (value) {
+                                        if (value != null) {
+                                          setState(() => _selectedGame = value);
+                                        }
+                                      },
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              if (_selectedTypes.isNotEmpty)
+                                IconButton(
+                                  tooltip: 'Wyczyść filtry typów',
+                                  onPressed: () => setState(() => _selectedTypes.clear()),
+                                  icon: const Icon(Icons.filter_list_off),
+                                ),
+                            ],
                           ),
-                          DropdownMenuItem(
-                            value: 'lets_go_pikachu',
-                            child: Text("Let's Go, Pikachu!", overflow: TextOverflow.ellipsis),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 16),
+                          child: Row(
+                            children: [
+                              Text(
+                                'Znaleziono: ${pokemon.length}',
+                                style: const TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              const Spacer(),
+                              const Text('National Pokédex • 1025 Pokémon'),
+                            ],
                           ),
-                        ],
-                        onChanged: (value) {
-                          if (value != null) {
-                            setState(() => _selectedGame = value);
-                          }
-                        },
-                      ),
+                        ),
+                        Padding(padding: const EdgeInsets.symmetric(horizontal: 12), child: Row(children: [Expanded(child: FilterChip(avatar: const Icon(Icons.check_circle_outline, size: 18), label: const Text('Tylko złapane'), selected: _onlyCaught, onSelected: (value) => setState(() => _onlyCaught = value))), const SizedBox(width: 8), Text('Złapane: ${_caughtPokemonIds.length}/${pokemonList.length} • ${_activeGameId.replaceAll('_', ' ')}') ])),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(12, 0, 12, 4),
+                          child: Row(
+                            children: [
+                              const Text('Sortuj:'),
+                              const SizedBox(width: 8),
+                              Expanded(
+                                child: DropdownButtonFormField<String>(
+                                  value: _sortMode,
+                                  isExpanded: true,
+                                  decoration: const InputDecoration(
+                                    contentPadding: EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                                    border: OutlineInputBorder(),
+                                  ),
+                                  items: const [
+                                    DropdownMenuItem(value: 'number', child: Text('Numer rosnąco')),
+                                    DropdownMenuItem(value: 'reverse', child: Text('Numer malejąco')),
+                                    DropdownMenuItem(value: 'name', child: Text('Nazwa A–Z')),
+                                  ],
+                                  onChanged: (value) {
+                                    if (value != null) setState(() => _sortMode = value);
+                                  },
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        const SizedBox(height: 8),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(12, 0, 12, 8),
+                  child: Align(
+                    alignment: Alignment.centerRight,
+                    child: TextButton.icon(
+                      onPressed: () => setState(() => _showSearchOptions = false),
+                      icon: const Icon(Icons.expand_less),
+                      label: const Text('Ukryj filtry'),
                     ),
                   ),
                 ),
-                if (_selectedTypes.isNotEmpty)
-                  IconButton(
-                    tooltip: 'Wyczyść filtry typów',
-                    onPressed: () => setState(() => _selectedTypes.clear()),
-                    icon: const Icon(Icons.filter_list_off),
-                  ),
               ],
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16),
-            child: Row(
-              children: [
-                Text(
-                  'Znaleziono: ${pokemon.length}',
-                  style: const TextStyle(
-                    fontWeight: FontWeight.bold,
+            secondChild: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+              child: Row(
+                children: [
+                  Text('Znaleziono: ${pokemon.length}',
+                      style: const TextStyle(fontWeight: FontWeight.bold)),
+                  const Spacer(),
+                  if (_selectedTypes.isNotEmpty)
+                    Chip(label: Text('Typy: ${_selectedTypes.length}')),
+                  TextButton(
+                    onPressed: () => setState(() => _showSearchOptions = true),
+                    child: const Text('Filtry'),
                   ),
-                ),
-                const Spacer(),
-                const Text('National Pokédex • 1025 Pokémon'),
-              ],
+                ],
+              ),
             ),
           ),
-          Padding(padding: const EdgeInsets.symmetric(horizontal: 12), child: Row(children: [Expanded(child: FilterChip(avatar: const Icon(Icons.check_circle_outline, size: 18), label: const Text('Tylko złapane'), selected: _onlyCaught, onSelected: (value) => setState(() => _onlyCaught = value))), const SizedBox(width: 8), Text('Złapane: ${_caughtPokemonIds.length}/${pokemonList.length} • ${_activeGameId.replaceAll('_', ' ')}') ])),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(12, 0, 12, 4),
-            child: Row(
-              children: [
-                const Text('Sortuj:'),
-                const SizedBox(width: 8),
-                Expanded(
-                  child: DropdownButtonFormField<String>(
-                    value: _sortMode,
-                    isExpanded: true,
-                    decoration: const InputDecoration(
-                      contentPadding: EdgeInsets.symmetric(horizontal: 10, vertical: 8),
-                      border: OutlineInputBorder(),
-                    ),
-                    items: const [
-                      DropdownMenuItem(value: 'number', child: Text('Numer rosnąco')),
-                      DropdownMenuItem(value: 'reverse', child: Text('Numer malejąco')),
-                      DropdownMenuItem(value: 'name', child: Text('Nazwa A–Z')),
-                    ],
-                    onChanged: (value) {
-                      if (value != null) setState(() => _sortMode = value);
-                    },
-                  ),
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(height: 8),
+          const SizedBox(height: 4),
           Expanded(
             child: pokemon.isEmpty
                 ? const Center(
@@ -357,10 +398,8 @@ class _PokedexScreenState extends State<PokedexScreen> {
 
                       return _PokemonCard(
                         pokemon: currentPokemon,
-                        shiny: _shinyPokemonIds.contains(currentPokemon.id),
                         caught: _caughtPokemonIds.contains(currentPokemon.id),
                         onToggleCaught: () => _toggleCaught(currentPokemon.id),
-                        onToggleShiny: () => _toggleShiny(currentPokemon.id),
                         onTap: () {
                           Navigator.push(
                             context,
@@ -384,18 +423,14 @@ class _PokedexScreenState extends State<PokedexScreen> {
 
 class _PokemonCard extends StatelessWidget {
   final Pokemon pokemon;
-  final bool shiny;
   final bool caught;
   final VoidCallback onToggleCaught;
-  final VoidCallback onToggleShiny;
   final VoidCallback onTap;
 
   const _PokemonCard({
     required this.pokemon,
-    required this.shiny,
     required this.caught,
     required this.onToggleCaught,
-    required this.onToggleShiny,
     required this.onTap,
   });
 
@@ -404,13 +439,7 @@ class _PokemonCard extends StatelessWidget {
     return Card(
       elevation: 2,
       clipBehavior: Clip.antiAlias,
-      child: GestureDetector(
-        behavior: HitTestBehavior.opaque,
-        onHorizontalDragEnd: (details) {
-          final velocity = details.primaryVelocity;
-          if (velocity != null && velocity.abs() > 80) onToggleShiny();
-        },
-        child: InkWell(
+      child: InkWell(
         onTap: onTap,
         child: Padding(
           padding: const EdgeInsets.all(6),
@@ -420,10 +449,8 @@ class _PokemonCard extends StatelessWidget {
               SizedBox(
                 width: 76,
                 height: 76,
-                child: GestureDetector(
-                  onTap: onToggleShiny,
-                  child: CachedNetworkImage(
-                    imageUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${shiny ? 'shiny/' : ''}${pokemon.id}.png',
+                child: CachedNetworkImage(
+                    imageUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png',
                     fit: BoxFit.contain,
                     placeholder: (context, url) => const Center(
                       child: SizedBox(
@@ -435,11 +462,8 @@ class _PokemonCard extends StatelessWidget {
                     errorWidget: (context, url, error) =>
                         const Icon(Icons.catching_pokemon, size: 42),
                   ),
-                ),
               ),
               const SizedBox(height: 4),
-              if (shiny)
-                const Text('✨ Shiny', style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold)),
               Text(
                 pokemon.name,
                 maxLines: 1,
@@ -467,7 +491,6 @@ class _PokemonCard extends StatelessWidget {
           ),
         ),
       ),
-        ),
     );
   }
 }
