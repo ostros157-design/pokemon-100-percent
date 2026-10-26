@@ -1,3 +1,9 @@
+### Pokédex — synchronizacja etykiet metod nauki (2026-10-26)
+- Ponownie zapisano korektę etykiet metod nauki ruchów w modelu; wcześniejsza próba nie utrwaliła zmian w pobranej wersji pliku.
+- Commit modelu: `b2fa96981ba0e00155ef5a4408b3103904a59b39`.
+- Test etykiety metody 5 znajduje się w `test/data_integrity_test.dart`; testów nie uruchomiono.
+- Status: zapis wykonany, wymagana późniejsza kontrola pobrania pliku oraz uruchomienie testów.
+
 ### Pokédex — poprawne etykiety metod nauki ruchów (2026-10-26)
 - Skorygowano opisy metod 5–11 zgodnie z identyfikatorami metod PokéAPI; metoda 5 nie jest ewolucją, jak sugerowała wcześniejsza etykieta.
 - Rozszerzono test parsowania o sprawdzenie etykiety specjalnego ruchu Pikachu.
