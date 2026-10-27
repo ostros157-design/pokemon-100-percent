@@ -78,8 +78,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
     final gameCaughtKey = '${_legacyCaughtPokemonKey}_${selectedGameId}';
     // The old global key is only a fallback for users who have not opened
     // the Pokédex since per-game collections were introduced.
+    final hasAnyPerGameCollection = preferences
+        .getKeys()
+        .any((key) => key.startsWith('${_legacyCaughtPokemonKey}_'));
     final caughtValues = preferences.getStringList(gameCaughtKey) ??
-        preferences.getStringList(_legacyCaughtPokemonKey) ??
+        (!hasAnyPerGameCollection
+            ? preferences.getStringList(_legacyCaughtPokemonKey)
+            : null) ??
         const <String>[];
     final caughtIds = caughtValues.map(int.tryParse).whereType<int>().toSet();
     final validCaughtCount =
