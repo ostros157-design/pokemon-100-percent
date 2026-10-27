@@ -947,13 +947,13 @@ const List<MoveData> moveCatalogue = [
   MoveData(id: 10017, name: 'Shadow Shed', type: 'shadow', category: 'status', power: null, pp: null, accuracy: null, priority: 0, generation: 3),
   MoveData(id: 10018, name: 'Shadow Sky', type: 'shadow', category: 'status', power: null, pp: null, accuracy: null, priority: 0, generation: 3),
 ];
+/// Index the offline catalogue once so repeated learnset lookups are O(1).
+final Map<int, MoveData> _moveByIdIndex = Map<int, MoveData>.unmodifiable({
+  for (final move in moveCatalogue) move.id: move,
+});
+
 /// Find a move by its PokéAPI ID.
-MoveData? moveById(int id) {
-  for (final move in moveCatalogue) {
-    if (move.id == id) return move;
-  }
-  return null;
-}
+MoveData? moveById(int id) => _moveByIdIndex[id];
 
 /// Search the offline move catalogue by name, type, or category.
 List<MoveData> searchMoves({
