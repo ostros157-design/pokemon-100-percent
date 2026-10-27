@@ -49,6 +49,7 @@ class _MapsScreenState extends State<MapsScreen> {
         break;
       }
     }
+    savedGame ??= gamesList.isEmpty ? null : gamesList.first;
     if (!mounted) return;
     setState(() {
       if (savedGame != null) {
