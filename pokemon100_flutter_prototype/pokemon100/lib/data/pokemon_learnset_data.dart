@@ -51,10 +51,11 @@ class PokemonLearnsetEntry {
 }
 
 /// Offline reader for the generated PokéAPI learnset asset.
-/// Missing asset is treated as "not imported yet", not as an app crash.
+/// Missing or invalid data is treated as "not imported yet", not as an app crash.
 class PokemonLearnsetData {
   static const assetPath = 'assets/data/pokemon_learnsets.json';
   static Future<List<PokemonLearnsetEntry>>? _cache;
+  static Future<Map<int, List<PokemonLearnsetEntry>>>? _indexCache;
 
   static Future<List<PokemonLearnsetEntry>> load() {
     return _cache ??= _load();
@@ -63,7 +64,8 @@ class PokemonLearnsetData {
   static Future<List<PokemonLearnsetEntry>> _load() async {
     try {
       final raw = await rootBundle.loadString(assetPath);
-      final decoded = jsonDecode(raw) as List<dynamic>;
+      final decoded = jsonDecode(raw);
+      if (decoded is! List<dynamic>) return const <PokemonLearnsetEntry>[];
       return decoded
           .whereType<Map<String, dynamic>>()
           .map(PokemonLearnsetEntry.fromJson)
@@ -77,9 +79,28 @@ class PokemonLearnsetData {
     }
   }
 
+  /// Builds a stable index that can also be tested without loading Flutter assets.
+  static Map<int, List<PokemonLearnsetEntry>> indexEntries(
+    Iterable<PokemonLearnsetEntry> entries,
+  ) {
+    final mutable = <int, List<PokemonLearnsetEntry>>{};
+    for (final entry in entries) {
+      mutable.putIfAbsent(entry.pokemonId, () => <PokemonLearnsetEntry>[])
+          .add(entry);
+    }
+    return Map<int, List<PokemonLearnsetEntry>>.unmodifiable({
+      for (final item in mutable.entries)
+        item.key: List<PokemonLearnsetEntry>.unmodifiable(item.value),
+    });
+  }
+
+  static Future<Map<int, List<PokemonLearnsetEntry>>> _index() {
+    return _indexCache ??= load().then(indexEntries);
+  }
+
   static Future<List<PokemonLearnsetEntry>> forPokemon(int pokemonId) async {
-    final all = await load();
-    return all.where((entry) => entry.pokemonId == pokemonId).toList(growable: false);
+    final index = await _index();
+    return index[pokemonId] ?? const <PokemonLearnsetEntry>[];
   }
 
   /// Available game groups for a Pokémon, in a stable display order.
