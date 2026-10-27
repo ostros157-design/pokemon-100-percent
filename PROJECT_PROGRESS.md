@@ -285,3 +285,12 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 - Stary klucz `caught_pokemon_ids` jest używany jako fallback tylko wtedy, gdy nie istnieje jeszcze żadna kolekcja per gra. Gdy kolekcje per gra już istnieją, brak wpisu dla danej wersji oznacza 0 zapisanych Pokémonów w tej wersji.
 - Commity poprawek: `10830d15221cb8242beb00fa8e118e1285039a97` (profil), `8e03b5318710e9c37c75ae0fa928bdd4f58f9a62` (osiągnięcia).
 - Status: zapisano w GitHubie; wymagane lokalne `flutter analyze`, testy i build APK.
+
+
+### Osiągnięcia — wspólna kolekcja między grami (2026-10-27)
+- Zmieniono `lib/screens/achievements_screen.dart`, aby kamienie milowe Pokédexu 1/25/50/100 liczyły różne gatunki zebrane we wszystkich zapisach gier, a nie tylko w aktualnie wybranej grze.
+- Liczenie używa sumy unikalnych National Dex ID z kluczy `caught_pokemon_ids_<gameId>`, więc ten sam Pokémon złapany w kilku grach liczy się do globalnego osiągnięcia tylko raz.
+- Starszy globalny zapis `caught_pokemon_ids` pozostaje obsługiwany, gdy użytkownik nie ma jeszcze żadnych zapisów per gra.
+- Ekran pokazuje teraz osobno globalną liczbę różnych Pokémonów i liczbę złapanych w wybranej grze. Osiągnięcia zależne od odznak, walk, ewolucji i drużyn nadal pozostają zablokowane, ponieważ te zdarzenia nie są jeszcze śledzone.
+- Commit: `4a3f242021bc9adb760de32fd82b347a05dd385c`.
+- Status: zapisano w GitHubie; nie uruchomiono jeszcze `flutter analyze`, testów ani kompilacji APK. Należy sprawdzić składnię i progi 1/25/50/100 po pobraniu zmian.
