@@ -65,11 +65,7 @@ class PokemonLearnsetData {
     try {
       final raw = await rootBundle.loadString(assetPath);
       final decoded = jsonDecode(raw);
-      if (decoded is! List<dynamic>) return const <PokemonLearnsetEntry>[];
-      return decoded
-          .whereType<Map<String, dynamic>>()
-          .map(PokemonLearnsetEntry.fromJson)
-          .toList(growable: false);
+      return parseRows(decoded);
     } on FlutterError {
       return const <PokemonLearnsetEntry>[];
     } on FormatException {
@@ -77,6 +73,33 @@ class PokemonLearnsetData {
     } on TypeError {
       return const <PokemonLearnsetEntry>[];
     }
+  }
+
+  /// Parses valid rows independently. A malformed row is skipped without
+  /// discarding the other valid learnset records in the same JSON file.
+  static List<PokemonLearnsetEntry> parseRows(Object? decoded) {
+    if (decoded is! List) return const <PokemonLearnsetEntry>[];
+    final entries = <PokemonLearnsetEntry>[];
+    for (final row in decoded) {
+      if (row is! Map<String, dynamic>) continue;
+      try {
+        final entry = PokemonLearnsetEntry.fromJson(row);
+        if (entry.pokemonId <= 0 ||
+            entry.moveId <= 0 ||
+            entry.versionGroupId <= 0 ||
+            entry.methodId <= 0 ||
+            entry.level < 0) {
+          continue;
+        }
+        entries.add(entry);
+      } on TypeError {
+        // Ignore this row only; keep valid rows around it.
+        continue;
+      } on FormatException {
+        continue;
+      }
+    }
+    return List<PokemonLearnsetEntry>.unmodifiable(entries);
   }
 
   /// Builds a stable index that can also be tested without loading Flutter assets.
