@@ -214,9 +214,17 @@ class _MapsScreenState extends State<MapsScreen> {
                               Text(selectedGame?.name ??
                                   'Brak gry z tej generacji w katalogu aplikacji.'),
                               const SizedBox(height: 8),
-                              const Text(
-                                'Pełna mapa graficzna nie jest jeszcze dostępna. Poniższy indeks pokazuje wyłącznie lokacje zapisane w poradnikach — nie dopisuje fikcyjnych tras ani przedmiotów.',
-                              ),
+                              if (_generation == 1) ...[
+                                const SizedBox(height: 12),
+                                const Text(
+                                  'Mapa poglądowa Kanto — układ schematyczny, nie mapa w skali. Węzły pokazują główne miasta i wybrane lokacje.',
+                                ),
+                                const SizedBox(height: 8),
+                                const _KantoRegionMap(),
+                              ] else
+                                const Text(
+                                  'Mapa graficzna tego regionu nie została jeszcze przygotowana. Indeks poniżej pokazuje wyłącznie lokacje zapisane w poradnikach.',
+                                ),
                             ],
                           ),
                         ),
@@ -377,4 +385,144 @@ class _EmptyState extends StatelessWidget {
           ],
         ),
       );
+}
+
+
+/// Pierwsza offline mapa poglądowa Kanto. Położenia są schematyczne;
+/// nie udają dokładnej mapy gry ani nie wyznaczają niepotwierdzonych tras.
+class _KantoRegionMap extends StatelessWidget {
+  const _KantoRegionMap();
+
+  @override
+  Widget build(BuildContext context) {
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(14),
+      child: AspectRatio(
+        aspectRatio: 0.88,
+        child: CustomPaint(
+          painter: _KantoMapPainter(
+            land: Theme.of(context).colorScheme.surfaceContainerHighest,
+            route: Theme.of(context).colorScheme.primary,
+            label: Theme.of(context).colorScheme.onSurface,
+            water: Theme.of(context).colorScheme.primaryContainer.withValues(alpha: 0.45),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _KantoMapPainter extends CustomPainter {
+  final Color land;
+  final Color route;
+  final Color label;
+  final Color water;
+
+  const _KantoMapPainter({
+    required this.land,
+    required this.route,
+    required this.label,
+    required this.water,
+  });
+
+  static const _places = <_MapPlace>[
+    _MapPlace('Pallet Town', 0.22, 0.82, 0),
+    _MapPlace('Viridian City', 0.28, 0.68, 1),
+    _MapPlace('Pewter City', 0.25, 0.43, 2),
+    _MapPlace('Cerulean City', 0.63, 0.35, 3),
+    _MapPlace('Vermilion City', 0.57, 0.65, 4),
+    _MapPlace('Lavender Town', 0.78, 0.48, 5),
+    _MapPlace('Celadon City', 0.43, 0.52, 6),
+    _MapPlace('Saffron City', 0.59, 0.49, 7),
+    _MapPlace('Fuchsia City', 0.65, 0.82, 8),
+    _MapPlace('Cinnabar Island', 0.12, 0.94, 9),
+    _MapPlace('Indigo Plateau', 0.10, 0.23, 10),
+  ];
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    canvas.drawRect(Offset.zero & size, Paint()..color = water);
+    final p = (double x, double y) => Offset(x * size.width, y * size.height);
+
+    final coast = Path()
+      ..moveTo(size.width * .08, size.height * .18)
+      ..cubicTo(size.width * .18, size.height * .06, size.width * .42, size.height * .08, size.width * .53, size.height * .16)
+      ..cubicTo(size.width * .69, size.height * .12, size.width * .87, size.height * .24, size.width * .87, size.height * .39)
+      ..cubicTo(size.width * .96, size.height * .52, size.width * .83, size.height * .67, size.width * .79, size.height * .78)
+      ..cubicTo(size.width * .74, size.height * .92, size.width * .51, size.height * .91, size.width * .42, size.height * .84)
+      ..cubicTo(size.width * .29, size.height * .91, size.width * .16, size.height * .83, size.width * .18, size.height * .70)
+      ..cubicTo(size.width * .08, size.height * .57, size.width * .12, size.height * .40, size.width * .08, size.height * .18)
+      ..close();
+    canvas.drawPath(coast, Paint()..color = land);
+    canvas.drawPath(coast, Paint()
+      ..color = route.withValues(alpha: .45)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 2);
+
+    const links = <(int, int)>[
+      (0, 1), (1, 2), (2, 10), (1, 6), (6, 7), (7, 3),
+      (7, 4), (7, 5), (4, 8), (0, 9), (3, 5),
+    ];
+    final roadPaint = Paint()
+      ..color = route.withValues(alpha: .72)
+      ..strokeWidth = 2.4
+      ..strokeCap = StrokeCap.round;
+    for (final link in links) {
+      final a = _places[link.$1];
+      final b = _places[link.$2];
+      canvas.drawLine(p(a.x, a.y), p(b.x, b.y), roadPaint);
+    }
+
+    for (final place in _places) {
+      final point = p(place.x, place.y);
+      canvas.drawCircle(point, 7, Paint()..color = route);
+      canvas.drawCircle(point, 3, Paint()..color = Colors.white);
+      final text = TextPainter(
+        text: TextSpan(
+          text: place.name,
+          style: TextStyle(
+            color: label,
+            fontSize: size.width < 360 ? 9 : 10.5,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+        textDirection: TextDirection.ltr,
+        maxLines: 1,
+      )..layout(maxWidth: size.width * .42);
+      var dx = point.dx + 9;
+      if (dx + text.width > size.width - 4) dx = point.dx - text.width - 9;
+      var dy = point.dy - text.height / 2;
+      dy = dy.clamp(4.0, size.height - text.height - 4);
+      text.paint(canvas, Offset(dx, dy));
+    }
+
+    final title = TextPainter(
+      text: TextSpan(
+        text: 'KANTO',
+        style: TextStyle(
+          color: route,
+          fontSize: 18,
+          fontWeight: FontWeight.w900,
+          letterSpacing: 3,
+        ),
+      ),
+      textDirection: TextDirection.ltr,
+    )..layout();
+    title.paint(canvas, Offset(size.width - title.width - 14, 12));
+  }
+
+  @override
+  bool shouldRepaint(covariant _KantoMapPainter oldDelegate) =>
+      land != oldDelegate.land ||
+      route != oldDelegate.route ||
+      label != oldDelegate.label ||
+      water != oldDelegate.water;
+}
+
+class _MapPlace {
+  final String name;
+  final double x;
+  final double y;
+
+  const _MapPlace(this.name, this.x, this.y, int id);
 }
