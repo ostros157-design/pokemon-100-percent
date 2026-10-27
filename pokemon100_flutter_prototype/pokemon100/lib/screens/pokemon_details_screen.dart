@@ -392,9 +392,14 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
       builder: (context, snapshot) {
         final entries = snapshot.data ?? const <PokemonLearnsetEntry>[];
         final versionGroups = entries.map((e) => e.versionGroup).toSet().toList()..sort();
+        final preferred = PokemonLearnsetData.preferredVersionGroupForGame(
+          widget.gameId ?? _activeGameId,
+        );
         final selected = versionGroups.contains(_selectedLearnsetVersion)
             ? _selectedLearnsetVersion
-            : (versionGroups.isNotEmpty ? versionGroups.first : null);
+            : versionGroups.contains(preferred)
+                ? preferred
+                : (versionGroups.isNotEmpty ? versionGroups.first : null);
         final visible = entries.where((e) => e.versionGroup == selected).toList()
           ..sort((a, b) {
             final method = a.methodId.compareTo(b.methodId);
