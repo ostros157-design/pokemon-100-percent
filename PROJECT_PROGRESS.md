@@ -314,3 +314,9 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 - Jeśli ID ruchu z learnsetu nie występuje w katalogu, ekran jawnie pokazuje jego ID i informację o braku w katalogu zamiast przypisywać mu błędną nazwę.
 - Commit: `a7922158be3cc1d919ce05f36d9a214d7e68818a`.
 - Status: zapisane w GitHubie. Nie uruchomiono testów Flutter, analizy statycznej ani kompilacji APK. Dane learnsetu nadal wymagają wygenerowania i sprawdzenia workflow GitHub Actions.
+
+### Pokédex — odporne wczytywanie learnsetów (2026-10-27)
+- `lib/data/pokemon_learnset_data.dart`: dodano `parseRows`, które waliduje identyfikatory i pomija pojedyncze wadliwe rekordy zamiast odrzucać cały plik przez błąd jednego wiersza. Nieprawidłowy format głównego JSON-a nadal daje pustą listę.
+- `test/data_integrity_test.dart`: dodano test mieszanki poprawnych rekordów, błędnego pola, elementu niebędącego mapą, niepoprawnego ID oraz niemodyfikowalnego wyniku.
+- Commity: `28bdc8c47f3e5b8fdbd573ea1238cedd9bc28d62`, `dac9e8eddf87ae5546dc24249a0bc9ce8c49bfa9`.
+- Status: kod i test zapisane na GitHubie. Testów nie uruchomiono lokalnie. Nadal wymagane jest uruchomienie workflow importującego rzeczywiste dane PokéAPI oraz sprawdzenie jego wyniku.
