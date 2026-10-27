@@ -73,6 +73,44 @@ void main() {
       }).methodLabel, 'Metoda #99');
     });
 
+    test('learnset index groups entries by Pokémon without mixing species', () {
+      const entries = <PokemonLearnsetEntry>[
+        PokemonLearnsetEntry(
+          pokemonId: 25,
+          moveId: 84,
+          versionGroupId: 1,
+          versionGroup: 'red-blue',
+          methodId: 1,
+          level: 9,
+          order: 1,
+        ),
+        PokemonLearnsetEntry(
+          pokemonId: 25,
+          moveId: 85,
+          versionGroupId: 2,
+          versionGroup: 'gold-silver',
+          methodId: 1,
+          level: 15,
+          order: 2,
+        ),
+        PokemonLearnsetEntry(
+          pokemonId: 1,
+          moveId: 33,
+          versionGroupId: 1,
+          versionGroup: 'red-blue',
+          methodId: 1,
+          level: 1,
+        ),
+      ];
+
+      final index = PokemonLearnsetData.indexEntries(entries);
+      expect(index.keys, containsAll(<int>[1, 25]));
+      expect(index[25]!.map((entry) => entry.moveId), <int>[84, 85]);
+      expect(index[1]!.map((entry) => entry.moveId), <int>[33]);
+      expect(index[999], isNull);
+      expect(() => index[25]!.add(entries.first), throwsUnsupportedError);
+    });
+
     test('move lookup and search filters work offline', () {
       expect(moveById(1)?.name, 'Pound');
       expect(moveById(-1), isNull);
