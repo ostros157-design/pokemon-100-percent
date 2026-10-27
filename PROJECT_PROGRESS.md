@@ -379,3 +379,5 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 - Ograniczenie: w repozytorium nie ma jeszcze rzeczywistych map regionów — obecne pliki w `assets/maps` to jedynie katalogi i plik `charmander.png`, a nie mapy. Ten etap dostarcza działający indeks lokacji z poradników, nie pełną mapę graficzną.
 - Status: kod zapisany i ponownie odczytany z GitHuba; Flutter analyze/test/build nie zostały uruchomione w tej sesji.
 
+- Dodatkowa poprawka: jeśli użytkownik nie ma jeszcze zapisanej gry, indeks map wybiera pierwszą grę z katalogu zamiast pokazywać pusty ekran (`e666101ff122842d3a0c0adbf2ecd30471cfff09`).
+
