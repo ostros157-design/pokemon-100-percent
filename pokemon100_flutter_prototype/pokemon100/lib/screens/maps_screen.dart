@@ -20,6 +20,7 @@ class _MapsScreenState extends State<MapsScreen> {
   int _generation = 1;
   String? _selectedGameId;
   bool _loading = true;
+  String _searchQuery = '';
 
   static const Map<int, String> _regions = {
     1: 'Kanto',
@@ -111,8 +112,13 @@ class _MapsScreenState extends State<MapsScreen> {
   Widget build(BuildContext context) {
     final games = _gamesForGeneration;
     final selectedGame = _selectedGame;
-    final locationEntries = _locations.entries.toList()
-      ..sort((a, b) => a.key.toLowerCase().compareTo(b.key.toLowerCase()));
+    // Preserve first appearance in the guide: this approximates the player's
+    // route progression better than alphabetical sorting.
+    final allLocationEntries = _locations.entries.toList();
+    final normalizedQuery = _searchQuery.trim().toLowerCase();
+    final locationEntries = allLocationEntries
+        .where((entry) => entry.key.toLowerCase().contains(normalizedQuery))
+        .toList();
 
     return Scaffold(
       appBar: AppBar(title: const Text('Mapy i lokacje')),
@@ -219,13 +225,23 @@ class _MapsScreenState extends State<MapsScreen> {
                   ),
                 ),
                 const SizedBox(height: 12),
+                TextField(
+                  decoration: const InputDecoration(
+                    labelText: 'Szukaj lokacji',
+                    hintText: 'Np. Viridian City, Route 1',
+                    prefixIcon: Icon(Icons.search),
+                    border: OutlineInputBorder(),
+                  ),
+                  onChanged: (value) => setState(() => _searchQuery = value),
+                ),
+                const SizedBox(height: 12),
                 Row(
                   children: [
                     Expanded(
                       child: Text('Lokacje z poradników',
                           style: Theme.of(context).textTheme.titleLarge),
                     ),
-                    Chip(label: Text('${locationEntries.length}')),
+                    Chip(label: Text('${locationEntries.length}/${allLocationEntries.length}')),
                   ],
                 ),
                 if (selectedGame == null || games.isEmpty)
@@ -238,10 +254,15 @@ class _MapsScreenState extends State<MapsScreen> {
                     message:
                         'Nie ma jeszcze poradnika z danymi lokacji dla tej gry. Gdy poradnik zostanie uzupełniony, lokacje pojawią się tutaj automatycznie.',
                   )
-                else if (locationEntries.isEmpty)
+                else if (allLocationEntries.isEmpty)
                   const _EmptyState(
                     message:
                         'Poradniki tej gry nie zawierają jeszcze nazw lokacji.',
+                  )
+                else if (locationEntries.isEmpty)
+                  const _EmptyState(
+                    message:
+                        'Nie znaleziono lokacji pasującej do wyszukiwania.',
                   )
                 else
                   ...locationEntries.map((entry) {
