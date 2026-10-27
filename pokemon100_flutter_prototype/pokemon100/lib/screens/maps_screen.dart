@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-/// Przegląd map regionów. Jeśli grafika regionu nie została jeszcze dodana
-/// do assets/maps, ekran pokazuje czytelną informację zamiast błędu.
+import '../data/games_data.dart';
+import '../data/guides_data.dart';
+import '../models/game.dart';
+import '../models/guide.dart';
+import 'guide_screen.dart';
+
+/// Offline location index built only from locations already present in guides.
+/// A decorative region image is not treated as a real map.
 class MapsScreen extends StatefulWidget {
   const MapsScreen({super.key});
 
@@ -11,106 +18,317 @@ class MapsScreen extends StatefulWidget {
 
 class _MapsScreenState extends State<MapsScreen> {
   int _generation = 1;
+  String? _selectedGameId;
+  bool _loading = true;
 
-  static const Map<int, Map<String, String>> _regions = {
-    1: {'name': 'Kanto', 'game': 'Red, Blue, Yellow, Let’s Go, Pikachu! / Eevee!', 'file': 'kanto.png'},
-    2: {'name': 'Johto', 'game': 'Gold, Silver, Crystal, HeartGold, SoulSilver', 'file': 'johto.png'},
-    3: {'name': 'Hoenn', 'game': 'Ruby, Sapphire, Emerald, Omega Ruby, Alpha Sapphire', 'file': 'hoenn.png'},
-    4: {'name': 'Sinnoh', 'game': 'Diamond, Pearl, Platinum, Brilliant Diamond, Shining Pearl', 'file': 'sinnoh.png'},
-    5: {'name': 'Unova', 'game': 'Black, White, Black 2, White 2', 'file': 'unova.png'},
-    6: {'name': 'Kalos', 'game': 'X, Y', 'file': 'kalos.png'},
-    7: {'name': 'Alola', 'game': 'Sun, Moon, Ultra Sun, Ultra Moon', 'file': 'alola.png'},
-    8: {'name': 'Galar', 'game': 'Sword, Shield', 'file': 'galar.png'},
-    9: {'name': 'Paldea', 'game': 'Scarlet, Violet', 'file': 'paldea.png'},
+  static const Map<int, String> _regions = {
+    1: 'Kanto',
+    2: 'Johto',
+    3: 'Hoenn',
+    4: 'Sinnoh',
+    5: 'Unova',
+    6: 'Kalos',
+    7: 'Alola',
+    8: 'Galar / Hisui',
+    9: 'Paldea',
   };
 
   @override
+  void initState() {
+    super.initState();
+    _loadSelectedGame();
+  }
+
+  Future<void> _loadSelectedGame() async {
+    final preferences = await SharedPreferences.getInstance();
+    final savedId = preferences.getString('selected_pokemon_game_id');
+    final savedGame = gamesList.where((game) => game.id == savedId).firstOrNull;
+    if (!mounted) return;
+    setState(() {
+      if (savedGame != null) {
+        _selectedGameId = savedGame.id;
+        _generation = _generationFromLabel(savedGame.generation);
+      }
+      _loading = false;
+    });
+  }
+
+  int _generationFromLabel(String label) {
+    final match = RegExp(r'Generacja (\\d+)').firstMatch(label);
+    return match == null ? 1 : int.parse(match.group(1)!);
+  }
+
+  List<Game> get _gamesForGeneration => gamesList
+      .where((game) => _generationFromLabel(game.generation) == _generation)
+      .toList();
+
+  Game? get _selectedGame {
+    for (final game in gamesList) {
+      if (game.id == _selectedGameId) return game;
+    }
+    return null;
+  }
+
+  List<Guide> get _guidesForGame => guidesList
+      .where((guide) => guide.gameId == _selectedGameId)
+      .toList();
+
+  Map<String, List<_LocationReference>> get _locations {
+    final result = <String, List<_LocationReference>>{};
+    for (final guide in _guidesForGame) {
+      for (var index = 0; index < guide.steps.length; index++) {
+        final step = guide.steps[index];
+        final location = step.location?.trim();
+        if (location == null || location.isEmpty) continue;
+        result.putIfAbsent(location, () => <_LocationReference>[]).add(
+          _LocationReference(guide: guide, step: step, stepNumber: index + 1),
+        );
+      }
+    }
+    return result;
+  }
+
+  Future<void> _selectGame(String? gameId) async {
+    if (gameId == null) return;
+    final preferences = await SharedPreferences.getInstance();
+    await preferences.setString('selected_pokemon_game_id', gameId);
+    if (!mounted) return;
+    setState(() => _selectedGameId = gameId);
+  }
+
+  @override
   Widget build(BuildContext context) {
-    final region = _regions[_generation]!;
-    final asset = 'assets/maps/gen$_generation/${region['file']}';
+    final games = _gamesForGeneration;
+    final selectedGame = _selectedGame;
+    final locationEntries = _locations.entries.toList()
+      ..sort((a, b) => a.key.toLowerCase().compareTo(b.key.toLowerCase()));
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Mapy regionów')),
-      body: ListView(
-        padding: const EdgeInsets.all(16),
-        children: [
-          const Text(
-            'Wybierz region Pokémon',
-            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-          ),
-          const SizedBox(height: 8),
-          DropdownButtonFormField<int>(
-            value: _generation,
-            decoration: const InputDecoration(
-              labelText: 'Generacja',
-              border: OutlineInputBorder(),
-            ),
-            items: _regions.entries.map((entry) => DropdownMenuItem<int>(
-              value: entry.key,
-              child: Text('Generacja ${entry.key} — ${entry.value['name']}'),
-            )).toList(),
-            onChanged: (value) {
-              if (value != null) setState(() => _generation = value);
-            },
-          ),
-          const SizedBox(height: 16),
-          Card(
-            clipBehavior: Clip.antiAlias,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
+      appBar: AppBar(title: const Text('Mapy i lokacje')),
+      body: _loading
+          ? const Center(child: CircularProgressIndicator())
+          : ListView(
+              padding: const EdgeInsets.all(16),
               children: [
-                Container(
-                  color: Theme.of(context).colorScheme.surfaceContainerHighest,
-                  constraints: const BoxConstraints(minHeight: 230),
-                  alignment: Alignment.center,
-                  child: Image.asset(
-                    asset,
-                    fit: BoxFit.contain,
-                    errorBuilder: (context, error, stackTrace) => Padding(
-                      padding: const EdgeInsets.all(24),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Icon(Icons.map_outlined,
-                            size: 64,
+                Text(
+                  'Regiony Pokémon',
+                  style: Theme.of(context).textTheme.headlineSmall,
+                ),
+                const SizedBox(height: 8),
+                const Text(
+                  'Wybierz generację i grę, aby zobaczyć lokacje znalezione w dostępnych poradnikach. Dane działają offline.',
+                ),
+                const SizedBox(height: 16),
+                DropdownButtonFormField<int>(
+                  value: _generation,
+                  isExpanded: true,
+                  decoration: const InputDecoration(
+                    labelText: 'Region / generacja',
+                    border: OutlineInputBorder(),
+                  ),
+                  items: _regions.entries
+                      .map((entry) => DropdownMenuItem<int>(
+                            value: entry.key,
+                            child: Text(
+                              'Generacja ${entry.key} — ${entry.value}',
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ))
+                      .toList(),
+                  onChanged: (value) {
+                    if (value == null) return;
+                    final generationGames = gamesList
+                        .where((game) =>
+                            _generationFromLabel(game.generation) == value)
+                        .toList();
+                    setState(() {
+                      _generation = value;
+                      if (!generationGames.any(
+                          (game) => game.id == _selectedGameId)) {
+                        _selectedGameId = generationGames.isEmpty
+                            ? null
+                            : generationGames.first.id;
+                      }
+                    });
+                    if (_selectedGameId != null) {
+                      _selectGame(_selectedGameId);
+                    }
+                  },
+                ),
+                const SizedBox(height: 12),
+                DropdownButtonFormField<String>(
+                  value: games.any((game) => game.id == _selectedGameId)
+                      ? _selectedGameId
+                      : null,
+                  isExpanded: true,
+                  decoration: const InputDecoration(
+                    labelText: 'Gra',
+                    border: OutlineInputBorder(),
+                  ),
+                  items: games
+                      .map((game) => DropdownMenuItem<String>(
+                            value: game.id,
+                            child: Text(game.name,
+                                overflow: TextOverflow.ellipsis),
+                          ))
+                      .toList(),
+                  onChanged: _selectGame,
+                ),
+                const SizedBox(height: 16),
+                Card(
+                  child: Padding(
+                    padding: const EdgeInsets.all(16),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Icon(Icons.map_outlined,
+                            size: 42,
                             color: Theme.of(context).colorScheme.primary),
-                          const SizedBox(height: 12),
-                          Text('Mapa regionu ${region['name']} nie została jeszcze dodana.',
-                            textAlign: TextAlign.center,
-                            style: const TextStyle(fontWeight: FontWeight.bold)),
-                          const SizedBox(height: 8),
-                          const Text(
-                            'Ekran map jest gotowy. Po dodaniu legalnej grafiki do folderu assets mapa wyświetli się tutaj.',
-                            textAlign: TextAlign.center),
-                        ],
-                      ),
+                        const SizedBox(width: 12),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                _regions[_generation] ?? 'Region Pokémon',
+                                style: Theme.of(context).textTheme.titleLarge,
+                              ),
+                              const SizedBox(height: 4),
+                              Text(selectedGame?.name ??
+                                  'Brak gry z tej generacji w katalogu aplikacji.'),
+                              const SizedBox(height: 8),
+                              const Text(
+                                'Pełna mapa graficzna nie jest jeszcze dostępna. Poniższy indeks pokazuje wyłącznie lokacje zapisane w poradnikach — nie dopisuje fikcyjnych tras ani przedmiotów.',
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(16),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(region['name']!,
-                        style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
-                      const SizedBox(height: 6),
-                      Text('Gry: ${region['game']}'),
-                      const SizedBox(height: 12),
-                      const Text('Planowane rozszerzenia: trasy i miasta, ważne lokacje, przedmioty oraz Pokémony powiązane z krokami poradnika.'),
-                    ],
-                  ),
+                const SizedBox(height: 12),
+                Row(
+                  children: [
+                    Expanded(
+                      child: Text('Lokacje z poradników',
+                          style: Theme.of(context).textTheme.titleLarge),
+                    ),
+                    Chip(label: Text('${locationEntries.length}')),
+                  ],
                 ),
+                if (selectedGame == null || games.isEmpty)
+                  const _EmptyState(
+                    message:
+                        'W katalogu nie ma jeszcze gry przypisanej do tej generacji.',
+                  )
+                else if (_guidesForGame.isEmpty)
+                  const _EmptyState(
+                    message:
+                        'Nie ma jeszcze poradnika z danymi lokacji dla tej gry. Gdy poradnik zostanie uzupełniony, lokacje pojawią się tutaj automatycznie.',
+                  )
+                else if (locationEntries.isEmpty)
+                  const _EmptyState(
+                    message:
+                        'Poradniki tej gry nie zawierają jeszcze nazw lokacji.',
+                  )
+                else
+                  ...locationEntries.map((entry) {
+                    final references = entry.value;
+                    final first = references.first;
+                    final pokemon = <String>{};
+                    final items = <String>{};
+                    for (final reference in references) {
+                      pokemon.addAll(reference.step.pokemon);
+                      items.addAll(reference.step.items);
+                    }
+
+                    return Card(
+                      child: ExpansionTile(
+                        leading: const Icon(Icons.place_outlined),
+                        title: Text(entry.key),
+                        subtitle: Text(
+                          '${references.length} ${references.length == 1 ? 'krok poradnika' : 'kroki poradnika'}',
+                        ),
+                        children: [
+                          if (pokemon.isNotEmpty || items.isNotEmpty)
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(16, 8, 16, 4),
+                              child: Wrap(
+                                spacing: 6,
+                                runSpacing: 4,
+                                children: [
+                                  ...pokemon.map((name) => Chip(
+                                        avatar: const Icon(Icons.catching_pokemon,
+                                            size: 16),
+                                        label: Text(name),
+                                      )),
+                                  ...items.map((name) => Chip(
+                                        avatar: const Icon(Icons.inventory_2_outlined,
+                                            size: 16),
+                                        label: Text(name),
+                                      )),
+                                ],
+                              ),
+                            ),
+                          ...references.map((reference) => ListTile(
+                                title: Text(
+                                    'Krok ${reference.stepNumber}: ${reference.step.title}'),
+                                subtitle: Text(reference.guide.title),
+                                trailing:
+                                    const Icon(Icons.open_in_new, size: 18),
+                                onTap: () => Navigator.of(context).push(
+                                  MaterialPageRoute<void>(
+                                    builder: (_) => GuideScreen(
+                                      guide: reference.guide,
+                                    ),
+                                  ),
+                                ),
+                              )),
+                          if (first.step.description.isNotEmpty)
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(16, 0, 16, 12),
+                              child: Align(
+                                alignment: Alignment.centerLeft,
+                                child: Text(first.step.description),
+                              ),
+                            ),
+                        ],
+                      ),
+                    );
+                  }),
               ],
             ),
-          ),
-          const SizedBox(height: 8),
-          const Text(
-            'Uwaga: obecność pliku graficznego zależy od zawartości assets. Nie pokazujemy fikcyjnych lokalizacji ani nie oznaczamy map jako kompletnych, dopóki dane nie zostaną dodane.',
-            style: TextStyle(fontSize: 12),
-          ),
-        ],
-      ),
     );
   }
+}
+
+class _LocationReference {
+  final Guide guide;
+  final GuideStep step;
+  final int stepNumber;
+
+  const _LocationReference({
+    required this.guide,
+    required this.step,
+    required this.stepNumber,
+  });
+}
+
+class _EmptyState extends StatelessWidget {
+  final String message;
+
+  const _EmptyState({required this.message});
+
+  @override
+  Widget build(BuildContext context) => Padding(
+        padding: const EdgeInsets.all(24),
+        child: Column(
+          children: [
+            const Icon(Icons.explore_off_outlined, size: 42),
+            const SizedBox(height: 10),
+            Text(message, textAlign: TextAlign.center),
+          ],
+        ),
+      );
 }
