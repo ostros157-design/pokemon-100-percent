@@ -24,6 +24,16 @@ python tools/import_pokemon_moves.py --download --output pokemon100_flutter_prot
 
 Skrypt sam pobierze brakujące pliki źródłowe do folderu `data` i wygeneruje JSON z relacjami Pokémon–ruch–gra–metoda nauki.
 
+## Testy importera
+
+Testy regresyjne korzystają wyłącznie z małych, syntetycznych plików CSV — nie pobierają danych z internetu ani nie zmieniają assetu aplikacji. Uruchom je z katalogu głównego repozytorium:
+
+```powershell
+python -m unittest tools.test_import_pokemon_moves -v
+```
+
+Workflow GitHub Actions uruchamia te testy automatycznie przed pobraniem pełnych danych.
+
 ## Źródła CSV
 
 - [pokemon_moves.csv](https://raw.githubusercontent.com/PokeAPI/pokeapi/master/data/v2/csv/pokemon_moves.csv)
