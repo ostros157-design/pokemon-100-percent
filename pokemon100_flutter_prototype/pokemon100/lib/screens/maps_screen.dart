@@ -85,6 +85,10 @@ class _MapsScreenState extends State<MapsScreen> {
       _selectedGameId == 'lets_go_pikachu' ||
       _selectedGameId == 'lets_go_eevee';
 
+  String get _letsGoSourceSlug => _selectedGameId == 'lets_go_eevee'
+      ? 'lets-go-eevee'
+      : 'lets-go-pikachu';
+
   List<Game> get _gamesForGeneration => gamesList
       .where((game) => _generationFromLabel(game.generation) == _generation)
       .toList();
@@ -281,7 +285,7 @@ class _MapsScreenState extends State<MapsScreen> {
                                           OutlinedButton.icon(
                                             onPressed: () => launchUrl(
                                               Uri.parse(
-                                                'https://theroutepedia.com/pokemon-${_selectedGameId == 'lets_go_eevee' ? 'lets-go-eevee' : 'lets-go-pikachu'}/map/kanto',
+                                                'https://theroutepedia.com/pokemon-$_letsGoSourceSlug/map/kanto',
                                               ),
                                               mode: LaunchMode.externalApplication,
                                             ),
@@ -291,7 +295,7 @@ class _MapsScreenState extends State<MapsScreen> {
                                           OutlinedButton.icon(
                                             onPressed: () => launchUrl(
                                               Uri.parse(
-                                                'https://theroutepedia.com/pokemon-${_selectedGameId == 'lets_go_eevee' ? 'lets-go-eevee' : 'lets-go-pikachu'}/pallet-town',
+                                                'https://theroutepedia.com/pokemon-$_letsGoSourceSlug/pallet-town',
                                               ),
                                               mode: LaunchMode.externalApplication,
                                             ),
@@ -301,7 +305,7 @@ class _MapsScreenState extends State<MapsScreen> {
                                           OutlinedButton.icon(
                                             onPressed: () => launchUrl(
                                               Uri.parse(
-                                                'https://theroutepedia.com/pokemon-${_selectedGameId == 'lets_go_eevee' ? 'lets-go-eevee' : 'lets-go-pikachu'}/route-1',
+                                                'https://theroutepedia.com/pokemon-$_letsGoSourceSlug/route-1',
                                               ),
                                               mode: LaunchMode.externalApplication,
                                             ),
