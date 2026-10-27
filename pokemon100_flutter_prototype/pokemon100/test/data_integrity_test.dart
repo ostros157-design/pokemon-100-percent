@@ -73,6 +73,30 @@ void main() {
       }).methodLabel, 'Metoda #99');
     });
 
+    test('selected games map to their PokéAPI version groups', () {
+      expect(
+        PokemonLearnsetData.preferredVersionGroupForGame('lets_go_pikachu'),
+        'lets-go-pikachu-eevee',
+      );
+      expect(
+        PokemonLearnsetData.preferredVersionGroupForGame('sword'),
+        'sword-shield',
+      );
+      expect(
+        PokemonLearnsetData.preferredVersionGroupForGame('legends_arceus'),
+        'legends-arceus',
+      );
+      expect(
+        PokemonLearnsetData.preferredVersionGroupForGame('emerald'),
+        'emerald',
+      );
+      expect(
+        PokemonLearnsetData.preferredVersionGroupForGame('not_a_game'),
+        isNull,
+      );
+      expect(PokemonLearnsetData.preferredVersionGroupForGame(null), isNull);
+    });
+
     test('learnset parser keeps valid rows around malformed data', () {
       final rows = PokemonLearnsetData.parseRows(<dynamic>[
         <String, dynamic>{
