@@ -351,3 +351,10 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 - Commit dokumentacji: `cc5207e605c9b473872a097a4dc933124c3d7948`.
 - Status: dokumentacja zapisana; testów nadal nie uruchomiono w tej sesji.
 
+### Karta Pokémona — dopasowanie learnsetu do wybranej gry (2026-10-27)
+- Dodano mapowanie ID gier aplikacji na identyfikatory grup wersji PokéAPI w `PokemonLearnsetData.preferredVersionGroupForGame`.
+- Sekcja „Ruchy i ataki” próbuje teraz domyślnie wybrać grupę odpowiadającą aktywnej grze (np. Emerald → `emerald`, Sword → `sword-shield`, X/Y → `x-y`). Jeśli w danych Pokémona nie ma tej grupy, zachowany jest bezpieczny fallback do pierwszej dostępnej grupy. Użytkownik nadal może ręcznie zmienić wybór.
+- Dodano testy mapowania znanych gier oraz nieznanego/null ID.
+- Commity: mapowanie `3fb21772110f870e48a8b23883ae49e05efac3ca`, UI `4b0ccc9c6044b8990af089ca75d6da8d926700d8`, test `f90ebfa678f17f274cb904b5cf14c1a5e6dc4e74`.
+- Status: zapisane w GitHubie; testy i analiza Flutter nie zostały uruchomione. Rzeczywisty dobór grup wymaga potwierdzenia po wygenerowaniu pełnego pliku learnsetów.
+
