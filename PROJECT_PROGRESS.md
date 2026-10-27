@@ -358,3 +358,9 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 - Commity: mapowanie `3fb21772110f870e48a8b23883ae49e05efac3ca`, UI `4b0ccc9c6044b8990af089ca75d6da8d926700d8`, test `f90ebfa678f17f274cb904b5cf14c1a5e6dc4e74`.
 - Status: zapisane w GitHubie; testy i analiza Flutter nie zostały uruchomione. Rzeczywisty dobór grup wymaga potwierdzenia po wygenerowaniu pełnego pliku learnsetów.
 
+### Korekta identyfikatora grupy Let's Go (2026-10-27)
+- Podczas ponownego przeglądu mapowania wykryto niepoprawny identyfikator grupy PokéAPI dla Let's Go. Zmieniono go na `lets-go-pikachu-lets-go-eevee` dla obu wersji gry.
+- Rozszerzono test, aby sprawdzał zarówno Let's Go, Pikachu!, jak i Let's Go, Eevee!.
+- Commity: poprawka mapowania `a7540aeb5e8a27566bd6646751afb0c8b7610686`; test `b298987ccec5d83dd09263973b7b7c358121a34c`.
+- Status: zapisane w GitHubie. Testy Flutter nadal nie zostały uruchomione; poprawność należy potwierdzić po uruchomieniu testów i workflow generowania danych.
+
