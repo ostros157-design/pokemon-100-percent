@@ -280,11 +280,33 @@ class _MapsScreenState extends State<MapsScreen> {
                                         children: [
                                           OutlinedButton.icon(
                                             onPressed: () => launchUrl(
-                                              Uri.parse('https://theroutepedia.com/pokemon-lets-go-pikachu/map/kanto'),
+                                              Uri.parse(
+                                                'https://theroutepedia.com/pokemon-${_selectedGameId == 'lets_go_eevee' ? 'lets-go-eevee' : 'lets-go-pikachu'}/map/kanto',
+                                              ),
                                               mode: LaunchMode.externalApplication,
                                             ),
                                             icon: const Icon(Icons.open_in_new, size: 16),
-                                            label: const Text('Mapa źródłowa'),
+                                            label: const Text('Mapa całego Kanto'),
+                                          ),
+                                          OutlinedButton.icon(
+                                            onPressed: () => launchUrl(
+                                              Uri.parse(
+                                                'https://theroutepedia.com/pokemon-${_selectedGameId == 'lets_go_eevee' ? 'lets-go-eevee' : 'lets-go-pikachu'}/pallet-town',
+                                              ),
+                                              mode: LaunchMode.externalApplication,
+                                            ),
+                                            icon: const Icon(Icons.home_outlined, size: 16),
+                                            label: const Text('Pallet Town'),
+                                          ),
+                                          OutlinedButton.icon(
+                                            onPressed: () => launchUrl(
+                                              Uri.parse(
+                                                'https://theroutepedia.com/pokemon-${_selectedGameId == 'lets_go_eevee' ? 'lets-go-eevee' : 'lets-go-pikachu'}/route-1',
+                                              ),
+                                              mode: LaunchMode.externalApplication,
+                                            ),
+                                            icon: const Icon(Icons.route_outlined, size: 16),
+                                            label: const Text('Route 1'),
                                           ),
                                           OutlinedButton.icon(
                                             onPressed: () => launchUrl(
