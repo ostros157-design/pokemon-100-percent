@@ -346,3 +346,8 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 - Commity: importer `b2411c517701bb972de8d1c8bc94dce989691154`, testy `60d33a68c69460a8ce87e7bfc6dc954a55544259`, workflow `ad50c0cefbd7cfe1c7cc8354dc5b6a92b77ad97b`.
 - Status: zmiany zapisane w GitHubie. Testy nie zostały uruchomione w tej sesji; nadal wymagane jest wykonanie workflow i sprawdzenie, czy wygenerowany learnset przechodzi walidację.
 
+### Importer learnsetów — instrukcja uruchamiania testów (2026-10-27)
+- Do `tools/README_pokemon_moves.md` dodano komendę uruchamiania testów regresyjnych w PowerShell oraz wyjaśnienie, że testy korzystają z syntetycznych CSV i nie wymagają internetu.
+- Commit dokumentacji: `cc5207e605c9b473872a097a4dc933124c3d7948`.
+- Status: dokumentacja zapisana; testów nadal nie uruchomiono w tej sesji.
+
