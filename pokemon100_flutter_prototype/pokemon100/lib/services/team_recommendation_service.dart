@@ -1,4 +1,5 @@
 import '../data/pokemon_data.dart';
+import '../data/team_game_availability.dart';
 import '../models/pokemon.dart';
 
 /// Recommendations use the types in the local Pokédex only. The current
@@ -11,19 +12,22 @@ class TeamRecommendation {
 }
 
 class TeamRecommendationService {
-  // Confirmed conservative species filter for Let's Go, Pikachu!: the 151
-  // Kanto species, excluding Eevee-version exclusives and Mythicals that are
-  // not normally obtainable in-game. Trade evolutions remain available via trade.
+  // Game availability is sourced from regional-dex data. Lists are conservative
+  // and do not guarantee every post-game encounter or event distribution.
   static const String supportedGameId = 'lets_go_pikachu';
-  static const Set<int> _letsGoPikachuUnavailable = {
-    15, 23, 24, 37, 38, 52, 69, 70, 71, 109, 110, 127, 151,
-  };
+
+  static bool isSupportedGame(String gameId) =>
+      gameId == supportedGameId || TeamGameAvailability.supports(gameId);
 
   static bool isAvailableInGame(Pokemon pokemon, String gameId) {
-    if (gameId != supportedGameId) return false;
-    return pokemon.id >= 1 && pokemon.id <= 151 &&
-        !_letsGoPikachuUnavailable.contains(pokemon.id);
+    if (gameId == supportedGameId) {
+      const unavailable = {15, 23, 24, 37, 38, 52, 69, 70, 71, 109, 110, 127, 151};
+      return pokemon.id >= 1 && pokemon.id <= 151 &&
+          !unavailable.contains(pokemon.id);
+    }
+    return TeamGameAvailability.contains(gameId, pokemon.id);
   }
+
   static const Map<String, Set<String>> _superEffectiveAgainst = {
     'Normal': {}, 'Fire': {'Grass', 'Ice', 'Bug', 'Steel'},
     'Water': {'Fire', 'Ground', 'Rock'}, 'Electric': {'Water', 'Flying'},
@@ -53,7 +57,7 @@ class TeamRecommendationService {
   };
 
   static List<TeamRecommendation> recommend(List<Pokemon> team, {String gameId = supportedGameId, int limit = 5}) {
-    if (team.isEmpty || gameId != supportedGameId) return const [];
+    if (team.isEmpty || !isSupportedGame(gameId)) return const [];
     final weakCounts = <String, int>{};
     for (final attackType in _superEffectiveAgainst.keys) {
       final count = team.where((member) {
