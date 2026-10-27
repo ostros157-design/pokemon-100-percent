@@ -16,10 +16,12 @@ class AchievementsScreen extends StatefulWidget {
 class _AchievementsScreenState extends State<AchievementsScreen> {
   static const _selectedGameKey = 'selected_pokemon_game_id';
   static const _caughtKeyPrefix = 'caught_pokemon_ids_';
+  static const _legacyCaughtKey = 'caught_pokemon_ids';
 
   bool _loading = true;
   String _selectedGameId = 'lets_go_pikachu';
-  int _caughtCount = 0;
+  int _globalCaughtCount = 0;
+  int _selectedGameCaughtCount = 0;
 
   @override
   void initState() {
@@ -31,23 +33,48 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
     final preferences = await SharedPreferences.getInstance();
     final gameId =
         preferences.getString(_selectedGameKey) ?? 'lets_go_pikachu';
-    final gameCaughtKey = '$_caughtKeyPrefix$gameId';
-    final hasAnyPerGameCollection = preferences
+
+    final hasPerGameCollections = preferences
         .getKeys()
         .any((key) => key.startsWith(_caughtKeyPrefix));
-    final caughtValues = preferences.getStringList(gameCaughtKey) ??
-        (!hasAnyPerGameCollection
-            ? preferences.getStringList('caught_pokemon_ids')
-            : null) ??
-        const <String>[];
-    final caughtIds = caughtValues.map(int.tryParse).whereType<int>().toSet();
-    final caughtCount =
-        pokemonList.where((pokemon) => caughtIds.contains(pokemon.id)).length;
+    final allCaughtIds = <int>{};
+    if (hasPerGameCollections) {
+      for (final key in preferences.getKeys()) {
+        if (!key.startsWith(_caughtKeyPrefix)) continue;
+        allCaughtIds.addAll(
+          (preferences.getStringList(key) ?? const <String>[])
+              .map(int.tryParse)
+              .whereType<int>(),
+        );
+      }
+    } else {
+      // Older versions used one global list; keep it available for migration.
+      allCaughtIds.addAll(
+        (preferences.getStringList(_legacyCaughtKey) ?? const <String>[])
+            .map(int.tryParse)
+            .whereType<int>(),
+      );
+    }
+
+    final selectedGameKey = '$_caughtKeyPrefix$gameId';
+    final selectedGameIds = (preferences.getStringList(selectedGameKey) ??
+            (!hasPerGameCollections
+                ? preferences.getStringList(_legacyCaughtKey)
+                : null) ??
+            const <String>[])
+        .map(int.tryParse)
+        .whereType<int>()
+        .toSet();
+
+    final validPokemonIds = pokemonList.map((pokemon) => pokemon.id).toSet();
+    allCaughtIds.retainAll(validPokemonIds);
+    selectedGameIds.retainAll(validPokemonIds);
 
     if (!mounted) return;
     setState(() {
       _selectedGameId = gameId;
-      _caughtCount = caughtCount;
+      _globalCaughtCount = allCaughtIds.length;
+      _selectedGameCaughtCount = selectedGameIds.length;
       _loading = false;
     });
   }
@@ -56,15 +83,16 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
     switch (achievement.id) {
       case 'first_pokemon':
       case 'pokedex_start':
-        return _caughtCount >= 1;
+        return _globalCaughtCount >= 1;
       case 'pokedex_25':
-        return _caughtCount >= 25;
+        return _globalCaughtCount >= 25;
       case 'pokedex_50':
-        return _caughtCount >= 50;
+        return _globalCaughtCount >= 50;
       case 'pokedex_100':
-        return _caughtCount >= 100;
+        return _globalCaughtCount >= 100;
       case 'pokedex_complete':
-        return _caughtCount >= pokemonList.length;
+        // This is a global database milestone, not a per-game regional dex.
+        return _globalCaughtCount >= pokemonList.length;
       default:
         // Do not unlock achievements until their real completion signals
         // (badges, battles, evolutions, team composition, etc.) are tracked.
@@ -87,10 +115,21 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
                   child: Card(
                     child: ListTile(
                       leading: const Icon(Icons.catching_pokemon),
-                      title: const Text('Pokédex wybranej gry'),
+                      title: const Text('Kolekcja ze wszystkich gier'),
                       subtitle: Text(
-                        '$_caughtCount / ${pokemonList.length} Pokémonów oznaczonych jako złapane · ${_selectedGameId.replaceAll('_', ' ')}',
+                        '$_globalCaughtCount różnych Pokémonów zarejestrowanych łącznie',
                       ),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(16, 0, 16, 4),
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'Wybrana gra: ${_selectedGameId.replaceAll('_', ' ')} · '
+                      '$_selectedGameCaughtCount złapanych',
+                      style: Theme.of(context).textTheme.bodySmall,
                     ),
                   ),
                 ),
