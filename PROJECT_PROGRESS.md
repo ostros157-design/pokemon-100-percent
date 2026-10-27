@@ -339,3 +339,10 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 - Commit zasobu: `4cd8c5ba169cc790b8218c1d8591aede827a973a`.
 - Testy i kompilacja Flutter nie zostały uruchomione.
 
+### Importer learnsetów — bezpieczniejszy zapis i testy regresyjne (2026-10-27)
+- `tools/import_pokemon_moves.py`: dodano walidację `--max-dex` (wartość musi być co najmniej 1). Wynik JSON jest zapisywany do pliku tymczasowego i podmieniany dopiero po poprawnym zakończeniu serializacji, aby błąd zapisu nie pozostawił uciętego pliku docelowego.
+- Dodano `tools/test_import_pokemon_moves.py` z testami na syntetycznych CSV: mapowanie domyślnych form na National Dex i sortowanie, odrzucenie nieprawidłowego limitu oraz zatrzymanie importu przy pustym źródle.
+- Workflow `.github/workflows/generate-pokemon-learnsets.yml` uruchamia teraz testy importera przed pobieraniem danych i generowaniem assetu.
+- Commity: importer `b2411c517701bb972de8d1c8bc94dce989691154`, testy `60d33a68c69460a8ce87e7bfc6dc954a55544259`, workflow `ad50c0cefbd7cfe1c7cc8354dc5b6a92b77ad97b`.
+- Status: zmiany zapisane w GitHubie. Testy nie zostały uruchomione w tej sesji; nadal wymagane jest wykonanie workflow i sprawdzenie, czy wygenerowany learnset przechodzi walidację.
+
