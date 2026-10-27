@@ -21,12 +21,12 @@ class _TeamScreenState extends State<TeamScreen> {
 
   static const Map<String, String> _games = {
     'lets_go_pikachu': "Pokémon: Let's Go, Pikachu!",
-    'emerald': 'Pokémon Emerald (dane do sprawdzenia)',
-    'firered': 'Pokémon FireRed (dane do sprawdzenia)',
-    'soulsilver': 'Pokémon SoulSilver (dane do sprawdzenia)',
-    'xy': 'Pokémon X/Y (dane do sprawdzenia)',
+    'emerald': 'Pokémon Emerald',
+    'firered': 'Pokémon FireRed',
+    'soulsilver': 'Pokémon SoulSilver',
+    'xy': 'Pokémon X/Y',
     'sword': 'Pokémon Sword (dane do sprawdzenia)',
-    'legends_arceus': 'Pokémon Legends: Arceus (dane do sprawdzenia)',
+    'legends_arceus': 'Pokémon Legends: Arceus',
   };
 
   String _selectedGame = TeamRecommendationService.supportedGameId;
@@ -101,7 +101,7 @@ class _TeamScreenState extends State<TeamScreen> {
       );
       return;
     }
-    if (_selectedGame != TeamRecommendationService.supportedGameId) {
+    if (!TeamRecommendationService.isSupportedGame(_selectedGame)) {
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Dostępność Pokémonów nie została jeszcze zweryfikowana dla tej gry. Wybierz Let\'s Go, Pikachu!, aby uniknąć nieprawidłowych propozycji.')));
       return;
     }
@@ -208,16 +208,16 @@ class _TeamScreenState extends State<TeamScreen> {
                   ),
                   items: _games.entries.map((entry) => DropdownMenuItem<String>(
                     value: entry.key,
-                    enabled: entry.key == TeamRecommendationService.supportedGameId,
+                    enabled: TeamRecommendationService.isSupportedGame(entry.key),
                     child: Text(entry.value, overflow: TextOverflow.ellipsis),
                   )).toList(),
                   onChanged: (value) {
                     if (value == null) return;
                     setState(() {
                       _selectedGame = value;
-                      _status = value == TeamRecommendationService.supportedGameId
-                          ? "Dostępność filtrowana dla Let's Go, Pikachu!."
-                          : 'Brak zweryfikowanych danych dostępności dla tej gry — wybór Pokémonów i rekomendacje są zablokowane.';
+                      _status = TeamRecommendationService.isSupportedGame(value)
+                          ? 'Filtr dostępności oparty na danych regionalnego Pokédexu.'
+                          : 'Brak danych dostępności dla tej gry — wybór i rekomendacje są zablokowane.';
                     });
                   },
                 ),
@@ -225,7 +225,9 @@ class _TeamScreenState extends State<TeamScreen> {
                 Text(
                   _selectedGame == TeamRecommendationService.supportedGameId
                       ? "Filtr dostępności: Let's Go, Pikachu! Pokémony dostępne wyłącznie w wersji Eevee i Mew są wykluczone. Ewolucje przez wymianę mogą wymagać wymiany."
-                      : 'Dla tej gry nie ma jeszcze zweryfikowanej listy dostępnych gatunków. Nie będę proponować Pokémonów na ślepo.',
+                      : TeamRecommendationService.isSupportedGame(_selectedGame)
+                          ? 'Filtr oparty na regionalnym Pokédexie; może nie obejmować wszystkich spotkań po zakończeniu gry.'
+                          : 'Dla tej gry nie ma jeszcze danych dostępności.' ,
                 ),
                 const SizedBox(height: 16),
                 TextField(
