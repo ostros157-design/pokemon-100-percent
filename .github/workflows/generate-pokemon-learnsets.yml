@@ -30,10 +30,12 @@ jobs:
           python-version: "3.12"
 
       - name: Generate learnsets from PokéAPI CSV data
+        env:
+          MAX_DEX: ${{ inputs.max_dex }}
         run: |
           python tools/import_pokemon_moves.py \
             --download \
-            --max-dex "${{ inputs.max_dex }}" \
+            --max-dex "$MAX_DEX" \
             --output pokemon100_flutter_prototype/pokemon100/assets/data/pokemon_learnsets.json
 
       - name: Validate generated JSON
@@ -48,10 +50,21 @@ jobs:
               count = len(data) if isinstance(data, list) else "not a list"
               raise SystemExit(f"Invalid or suspiciously small learnset output: {count}")
           required = {"pokemonId", "moveId", "versionGroupId", "versionGroup", "methodId", "level", "order"}
-          if not required.issubset(data[0]):
-              raise SystemExit(f"Missing expected fields: {sorted(required - set(data[0]))}")
+          for index, row in enumerate(data):
+              if not isinstance(row, dict) or not required.issubset(row):
+                  raise SystemExit(f"Row {index} is missing required fields or is not an object")
+              for field in ("pokemonId", "moveId", "versionGroupId", "methodId", "level"):
+                  if not isinstance(row[field], int):
+                      raise SystemExit(f"Row {index} has a non-integer {field}")
+              for field in ("pokemonId", "moveId", "versionGroupId", "methodId"):
+                  if row[field] <= 0:
+                      raise SystemExit(f"Row {index} has a non-positive {field}")
+              if row["level"] < 0 or not isinstance(row["versionGroup"], str):
+                  raise SystemExit(f"Row {index} has an invalid level or versionGroup")
           pokemon_count = len({row["pokemonId"] for row in data})
           version_count = len({row["versionGroupId"] for row in data})
+          if pokemon_count < 100:
+              raise SystemExit(f"Suspiciously low Pokémon coverage: {pokemon_count}")
           print(f"Validated {len(data):,} learnset rows, {pokemon_count} Pokémon, {version_count} version groups.")
           print(f"Output size: {path.stat().st_size:,} bytes")
           PY
