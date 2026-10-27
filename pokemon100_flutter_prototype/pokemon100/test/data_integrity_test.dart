@@ -151,12 +151,22 @@ void main() {
     test('move lookup and search filters work offline', () {
       expect(moveById(1)?.name, 'Pound');
       expect(moveById(-1), isNull);
+
+      // Every catalogue row must be reachable by its own ID, including
+      // special Shadow moves whose IDs are outside the regular move range.
+      for (final move in moveCatalogue) {
+        expect(moveById(move.id), same(move));
+      }
+      expect(moveById(10001)?.name, 'Shadow Rush');
+
       expect(searchMoves(query: 'thunder').any(
           (move) => move.name.toLowerCase().contains('thunder')), isTrue);
       expect(searchMoves(type: 'fire').every((move) => move.type == 'fire'),
           isTrue);
       expect(searchMoves(category: 'status')
           .every((move) => move.category == 'status'), isTrue);
+      expect(() => searchMoves(query: 'thunder').clear(),
+          throwsUnsupportedError);
     });
   });
 }
