@@ -235,6 +235,16 @@ class _MapsScreenState extends State<MapsScreen> {
                   onChanged: (value) => setState(() => _searchQuery = value),
                 ),
                 const SizedBox(height: 12),
+                Text(
+                  'Schemat podróży',
+                  style: Theme.of(context).textTheme.titleMedium,
+                ),
+                const SizedBox(height: 4),
+                const Text(
+                  'Numery pokazują kolejność lokacji w poradniku, a nie ich położenie geograficzne.',
+                  style: TextStyle(fontSize: 12),
+                ),
+                const SizedBox(height: 12),
                 Row(
                   children: [
                     Expanded(
@@ -265,7 +275,9 @@ class _MapsScreenState extends State<MapsScreen> {
                         'Nie znaleziono lokacji pasującej do wyszukiwania.',
                   )
                 else
-                  ...locationEntries.map((entry) {
+                  ...locationEntries.asMap().entries.map((indexedEntry) {
+                    final locationIndex = indexedEntry.key;
+                    final entry = indexedEntry.value;
                     final references = entry.value;
                     final first = references.first;
                     final pokemon = <String>{};
@@ -277,7 +289,9 @@ class _MapsScreenState extends State<MapsScreen> {
 
                     return Card(
                       child: ExpansionTile(
-                        leading: const Icon(Icons.place_outlined),
+                        leading: CircleAvatar(
+                          child: Text('${locationIndex + 1}'),
+                        ),
                         title: Text(entry.key),
                         subtitle: Text(
                           '${references.length} ${references.length == 1 ? 'krok poradnika' : 'kroki poradnika'}',
