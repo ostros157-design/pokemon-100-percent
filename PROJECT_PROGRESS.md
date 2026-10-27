@@ -1,3 +1,9 @@
+### Mapy — wyszukiwanie lokacji i kolejność poradnika (2026-10-27)
+- Ekran map zachowuje teraz kolejność pierwszego wystąpienia lokacji w poradniku, zamiast sortować je alfabetycznie — lista lepiej odzwierciedla kolejność podróży.
+- Dodano pole wyszukiwania lokacji oraz licznik wyników w formacie „wyniki/wszystkie”.
+- Zmiana kodu: `d37446301547367eeb98419a54ddb604fb1df943`.
+- Status: zmiana zapisana w GitHubie; nie uruchomiono `flutter analyze`, testów ani kompilacji. W repozytorium w `assets/maps/gen1` jest tylko plik `charmander.png`, który nie jest mapą regionu; nie potwierdzono jeszcze prawidłowych grafik map dla regionów. Nie oznaczamy więc listy lokacji jako pełnej mapy graficznej.
+
 ### Generowanie learnsetów przez GitHub Actions (2026-10-26)
 - Zaktualizowano ręcznie uruchamiany workflow `.github/workflows/generate-pokemon-learnsets.yml`: parametr limitu National Dex, Python 3.12, limit czasu, kontrola minimalnej liczby rekordów i pól JSON oraz podsumowanie liczby Pokémonów i grup wersji.
 - Workflow ma po walidacji commitować wygenerowany plik `pokemon100_flutter_prototype/pokemon100/assets/data/pokemon_learnsets.json` do repozytorium.
