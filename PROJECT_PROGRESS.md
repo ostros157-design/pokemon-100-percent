@@ -370,3 +370,12 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 - Commit: `975633b07dc0bc62b51410e14de4a864003c9efb`.
 - Status: zapisane w GitHubie; testów nie uruchomiono w tej sesji. Asset `pokemon_learnsets.json` nadal jest pustą listą i wymaga wygenerowania przez GitHub Actions.
 
+### Mapy — indeks lokacji offline powiązany z poradnikami (2026-10-27)
+- Przebudowano `lib/screens/maps_screen.dart`: ekran pozwala wybrać generację/region oraz konkretną grę z istniejącego katalogu.
+- Ekran odczytuje zapisaną grę (`selected_pokemon_game_id`) i zapisuje wybór gry; lokacje są agregowane wyłącznie z rzeczywistych pól `location` kroków `guidesList`, bez wymyślania tras, przedmiotów ani spotkań.
+- Rozwijane lokacje pokazują kroki poradnika oraz Pokémony i przedmioty wymienione w tych krokach; kliknięcie kroku otwiera odpowiedni poradnik.
+- Poprawiono obsługę gry Legends: Arceus, aby region wyświetlał się jako Hisui, oraz parsowanie numeru generacji.
+- Commity: `cca85265626b84fee2c903985b0cf08ad9f119e7` (ekran), `ccd73549c75bfeea880dfe8831a12c10507e0662` (poprawki wyboru gry i generacji).
+- Ograniczenie: w repozytorium nie ma jeszcze rzeczywistych map regionów — obecne pliki w `assets/maps` to jedynie katalogi i plik `charmander.png`, a nie mapy. Ten etap dostarcza działający indeks lokacji z poradników, nie pełną mapę graficzną.
+- Status: kod zapisany i ponownie odczytany z GitHuba; Flutter analyze/test/build nie zostały uruchomione w tej sesji.
+
