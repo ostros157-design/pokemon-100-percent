@@ -1,3 +1,10 @@
+### Mapy — źródła weryfikacji Let’s Go Kanto (2026-10-28)
+- Ekran Let’s Go pokazuje teraz pierwszy zakres audytu (Pallet Town i Route 1) oraz przyciski do zewnętrznych źródeł: interaktywnej mapy Routepedia, wykazu ukrytych jagód Altissimo i poradnika startowego Bulbapedia.
+- Linki są oznaczone jako źródła online do ręcznej weryfikacji, a nie jako gotowa mapa offline. Nie dodano współrzędnych przybliżonych ani niezweryfikowanych.
+- Potwierdzone dane tekstowe dla zakresu startowego: Pallet Town zawiera laboratorium Oaka, dom gracza i dom rywala; po otrzymaniu partnera gracz uzyskuje Pokédex i Town Map, a po dostarczeniu paczki — Razz Berries i Sportswear. Route 1 łączy Pallet Town z Viridian City i ma trenera Youngster Ronny; lista dzikich Pokémonów różni się między Let’s Go Pikachu i Eevee.
+- Źródła: https://theroutepedia.com/pokemon-lets-go-pikachu/map/kanto ; https://theroutepedia.com/pokemon-lets-go-pikachu/pallet-town ; https://theroutepedia.com/pokemon-lets-go-pikachu/route-1 ; https://altissimo1.github.io/Main-Series/LGPE/berries.html ; https://bulbapedia.bulbagarden.net/wiki/Walkthrough:Pok%C3%A9mon:_Let%27s_Go,_Pikachu!_and_Let%27s_Go,_Eevee!/Part_1
+- Status: etap źródeł i zakresu startowego zapisany. Brak lokalnego podkładu mapy z zatwierdzonymi punktami; pełna mapa nie jest ukończona. Nie uruchomiono Flutter analyze/test/build.
+ 
 ### Mapy — dokładność Kanto dla Let’s Go (2026-10-28)
 - Wstrzymano wyświetlanie schematycznej mapy z przybliżonymi punktami dla Pokémon Let’s Go, Pikachu! / Let’s Go, Eevee!. Użytkownik wymaga dokładnych położeń, więc przybliżone współrzędne nie mogą być przedstawiane jako właściwe.
 - Ekran map informuje teraz, że punkty pojawią się dopiero po przypisaniu zweryfikowanych współrzędnych do konkretnych map lokacji i rozdzieleniu kategorii: przedmioty, ukryte przedmioty, trenerzy, Pokémony i wejścia.
