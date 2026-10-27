@@ -42,7 +42,13 @@ class _MapsScreenState extends State<MapsScreen> {
   Future<void> _loadSelectedGame() async {
     final preferences = await SharedPreferences.getInstance();
     final savedId = preferences.getString('selected_pokemon_game_id');
-    final savedGame = gamesList.where((game) => game.id == savedId).firstOrNull;
+    Game? savedGame;
+    for (final game in gamesList) {
+      if (game.id == savedId) {
+        savedGame = game;
+        break;
+      }
+    }
     if (!mounted) return;
     setState(() {
       if (savedGame != null) {
@@ -54,9 +60,13 @@ class _MapsScreenState extends State<MapsScreen> {
   }
 
   int _generationFromLabel(String label) {
-    final match = RegExp(r'Generacja (\\d+)').firstMatch(label);
+    final match = RegExp(r'Generacja (\d+)').firstMatch(label);
     return match == null ? 1 : int.parse(match.group(1)!);
   }
+
+  String get _regionName => _selectedGameId == 'legends_arceus'
+      ? 'Hisui'
+      : (_regions[_generation] ?? 'Region Pokémon');
 
   List<Game> get _gamesForGeneration => gamesList
       .where((game) => _generationFromLabel(game.generation) == _generation)
@@ -190,7 +200,7 @@ class _MapsScreenState extends State<MapsScreen> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                _regions[_generation] ?? 'Region Pokémon',
+                                _regionName,
                                 style: Theme.of(context).textTheme.titleLarge,
                               ),
                               const SizedBox(height: 4),
