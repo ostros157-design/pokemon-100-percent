@@ -73,6 +73,43 @@ void main() {
       }).methodLabel, 'Metoda #99');
     });
 
+    test('learnset parser keeps valid rows around malformed data', () {
+      final rows = PokemonLearnsetData.parseRows(<dynamic>[
+        <String, dynamic>{
+          'pokemonId': 25,
+          'moveId': 84,
+          'versionGroupId': 1,
+          'versionGroup': 'red-blue',
+          'methodId': 1,
+          'level': 9,
+        },
+        <String, dynamic>{
+          'pokemonId': 'invalid',
+          'moveId': 85,
+          'versionGroupId': 1,
+          'methodId': 1,
+        },
+        'not a learnset row',
+        <String, dynamic>{
+          'pokemonId': 1,
+          'moveId': 33,
+          'versionGroupId': 1,
+          'methodId': 1,
+          'level': 1,
+        },
+        <String, dynamic>{
+          'pokemonId': -2,
+          'moveId': 33,
+          'versionGroupId': 1,
+          'methodId': 1,
+        },
+      ]);
+
+      expect(rows.map((entry) => entry.pokemonId), <int>[25, 1]);
+      expect(() => rows.add(rows.first), throwsUnsupportedError);
+      expect(PokemonLearnsetData.parseRows(<dynamic>{}), isEmpty);
+    });
+
     test('learnset index groups entries by Pokémon without mixing species', () {
       const entries = <PokemonLearnsetEntry>[
         PokemonLearnsetEntry(
