@@ -31,8 +31,14 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
     final preferences = await SharedPreferences.getInstance();
     final gameId =
         preferences.getString(_selectedGameKey) ?? 'lets_go_pikachu';
-    final caughtValues = preferences.getStringList('$_caughtKeyPrefix$gameId') ??
-        preferences.getStringList('caught_pokemon_ids') ??
+    final gameCaughtKey = '$_caughtKeyPrefix$gameId';
+    final hasAnyPerGameCollection = preferences
+        .getKeys()
+        .any((key) => key.startsWith(_caughtKeyPrefix));
+    final caughtValues = preferences.getStringList(gameCaughtKey) ??
+        (!hasAnyPerGameCollection
+            ? preferences.getStringList('caught_pokemon_ids')
+            : null) ??
         const <String>[];
     final caughtIds = caughtValues.map(int.tryParse).whereType<int>().toSet();
     final caughtCount =
