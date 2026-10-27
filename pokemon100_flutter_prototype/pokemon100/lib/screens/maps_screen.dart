@@ -528,8 +528,8 @@ class _KantoMapPainter extends CustomPainter {
       ..strokeWidth = 2.4
       ..strokeCap = StrokeCap.round;
     for (final link in links) {
-      final a = _places[link.$1];
-      final b = _places[link.$2];
+      final a = places[link.$1];
+      final b = places[link.$2];
       canvas.drawLine(p(a.x, a.y), p(b.x, b.y), roadPaint);
     }
 
