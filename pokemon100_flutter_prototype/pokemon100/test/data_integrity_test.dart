@@ -76,7 +76,11 @@ void main() {
     test('selected games map to their PokéAPI version groups', () {
       expect(
         PokemonLearnsetData.preferredVersionGroupForGame('lets_go_pikachu'),
-        'lets-go-pikachu-eevee',
+        'lets-go-pikachu-lets-go-eevee',
+      );
+      expect(
+        PokemonLearnsetData.preferredVersionGroupForGame('lets_go_eevee'),
+        'lets-go-pikachu-lets-go-eevee',
       );
       expect(
         PokemonLearnsetData.preferredVersionGroupForGame('sword'),
