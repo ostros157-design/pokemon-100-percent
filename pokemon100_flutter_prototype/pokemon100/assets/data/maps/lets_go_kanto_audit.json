@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "title": "Let’s Go Kanto — audyt danych do mapy",
+  "status": "research_only_no_coordinates",
+  "policy": "Do not render these records as positioned map pins. Coordinates and a local map background have not been verified.",
+  "gameIds": [
+    "lets_go_pikachu",
+    "lets_go_eevee"
+  ],
+  "sources": [
+    {
+      "id": "routepedia-map-pikachu",
+      "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/map/kanto",
+      "scope": "Interactive Kanto map and map layers"
+    },
+    {
+      "id": "routepedia-pallet-pikachu",
+      "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/pallet-town",
+      "scope": "Pallet Town locations and encounters"
+    },
+    {
+      "id": "routepedia-route1-pikachu",
+      "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/route-1",
+      "scope": "Route 1 trainer and version encounters"
+    },
+    {
+      "id": "routepedia-map-eevee",
+      "url": "https://theroutepedia.com/pokemon-lets-go-eevee/map/kanto",
+      "scope": "Let’s Go Eevee map reference"
+    },
+    {
+      "id": "routepedia-pallet-eevee",
+      "url": "https://theroutepedia.com/pokemon-lets-go-eevee/pallet-town",
+      "scope": "Let’s Go Eevee Pallet Town reference"
+    },
+    {
+      "id": "routepedia-route1-eevee",
+      "url": "https://theroutepedia.com/pokemon-lets-go-eevee/route-1",
+      "scope": "Let’s Go Eevee Route 1 reference"
+    },
+    {
+      "id": "altissimo-berries",
+      "url": "https://altissimo1.github.io/Main-Series/LGPE/berries.html",
+      "scope": "Hidden berry reference"
+    },
+    {
+      "id": "bulbapedia-start",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Walkthrough:Pok%C3%A9mon:Let%27s_Go,_Pikachu!_and_Let%27s_Go,_Eevee!/Part_1",
+      "scope": "Story sequence and gifts"
+    }
+  ],
+  "locations": [
+    {
+      "id": "pallet_town",
+      "name": "Pallet Town",
+      "kind": "town",
+      "connectsTo": [
+        "route_1",
+        "route_21"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "features": [
+        {
+          "id": "player_home",
+          "name": "Home",
+          "category": "building",
+          "status": "text_verified"
+        },
+        {
+          "id": "rival_home",
+          "name": "Rival’s House",
+          "category": "building",
+          "status": "text_verified"
+        },
+        {
+          "id": "oak_lab",
+          "name": "Oak’s Pokémon Lab",
+          "category": "building",
+          "status": "text_verified"
+        }
+      ],
+      "events": [
+        {
+          "id": "town_map",
+          "name": "Town Map",
+          "category": "story_item",
+          "note": "Obtained from the player's mother during the opening sequence.",
+          "status": "text_verified"
+        },
+        {
+          "id": "pokedex",
+          "name": "Pokédex",
+          "category": "story_item",
+          "note": "Obtained from Professor Oak after the partner Pokémon event.",
+          "status": "text_verified"
+        },
+        {
+          "id": "razz_berries",
+          "name": "Razz Berries",
+          "category": "story_item",
+          "note": "Oak gives berries after the parcel is delivered.",
+          "status": "text_verified"
+        },
+        {
+          "id": "sportswear",
+          "name": "Sportswear",
+          "category": "story_gift",
+          "note": "Received from the rival's sister near the Route 1 exit during the opening sequence.",
+          "status": "text_verified"
+        }
+      ],
+      "encounters": {
+        "lets_go_pikachu": {
+          "partner": {
+            "name": "Pikachu",
+            "level": 5
+          },
+          "rivalBattle": {
+            "name": "Eevee",
+            "level": 6
+          }
+        },
+        "lets_go_eevee": {
+          "partner": {
+            "name": "Eevee",
+            "level": 5
+          },
+          "rivalBattle": {
+            "name": "Pikachu",
+            "level": 6
+          }
+        }
+      }
+    },
+    {
+      "id": "route_1",
+      "name": "Route 1",
+      "kind": "route",
+      "connectsTo": [
+        "pallet_town",
+        "viridian_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "trainers": [
+        {
+          "name": "Youngster Ronny",
+          "team": [
+            {
+              "name": "Rattata",
+              "level": 3
+            }
+          ],
+          "status": "text_verified"
+        }
+      ],
+      "wildPokemon": {
+        "lets_go_pikachu": [
+          "Pidgey",
+          "Rattata",
+          "Oddish"
+        ],
+        "lets_go_eevee": [
+          "Pidgey",
+          "Rattata",
+          "Bellsprout"
+        ]
+      },
+      "hiddenItemsStatus": "requires_location_by_location_verification"
+    }
+  ]
+}
