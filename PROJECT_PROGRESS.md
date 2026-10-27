@@ -1,3 +1,8 @@
+### Mapy — poprawka referencji punktów Kanto (2026-10-27)
+- Przy kontroli kodu po dodaniu interakcji znaleziono dwie pozostałe referencje do dawnej nazwy listy punktów; poprawiono je, aby rysowanie połączeń korzystało z aktualnej listy `places`.
+- Commit poprawki: `ee7be8a42cdc8119f532673ddcc418e88e7e107c`.
+- Status: poprawka zapisana. Nadal nie uruchomiono Flutter analyze/test/build, więc nie traktujemy kompilacji jako potwierdzonej.
+
 ### Mapy — interaktywne punkty Kanto (2026-10-27)
 - Punkty miast na schematycznej mapie Kanto można teraz naciskać; wybrany punkt zostaje podświetlony, a pole wyszukiwania i indeks lokacji filtrują się do tej lokacji.
 - Jeśli wybrana lokacja nie ma jeszcze wpisu w poradniku aktualnie wybranej gry, aplikacja pokazuje komunikat zamiast sugerować, że ma dane poradnika.
