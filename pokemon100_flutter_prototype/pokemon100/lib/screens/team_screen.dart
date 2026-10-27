@@ -121,8 +121,8 @@ class _TeamScreenState extends State<TeamScreen> {
   }
 
   Future<void> _showRecommendations() async {
-    if (_selectedGame != TeamRecommendationService.supportedGameId) {
-      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Nie pokazuję rekomendacji, dopóki dostępność gatunków w wybranej grze nie zostanie zweryfikowana.')));
+    if (!TeamRecommendationService.isSupportedGame(_selectedGame)) {
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Nie ma jeszcze danych dostępności dla tej gry.')));
       return;
     }
     final recommendations = TeamRecommendationService.recommend(_team, gameId: _selectedGame);
