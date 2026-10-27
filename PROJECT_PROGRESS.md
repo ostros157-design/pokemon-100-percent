@@ -294,3 +294,11 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 - Ekran pokazuje teraz osobno globalną liczbę różnych Pokémonów i liczbę złapanych w wybranej grze. Osiągnięcia zależne od odznak, walk, ewolucji i drużyn nadal pozostają zablokowane, ponieważ te zdarzenia nie są jeszcze śledzone.
 - Commit: `4a3f242021bc9adb760de32fd82b347a05dd385c`.
 - Status: zapisano w GitHubie; nie uruchomiono jeszcze `flutter analyze`, testów ani kompilacji APK. Należy sprawdzić składnię i progi 1/25/50/100 po pobraniu zmian.
+
+
+### Pokédex — indeksowanie danych learnsetów (2026-10-27)
+- Zoptymalizowano `PokemonLearnsetData`: wpisy są indeksowane według National Dex ID, więc kolejne odczyty dla konkretnego Pokémona nie filtrują za każdym razem całego pliku.
+- Indeks jest budowany leniwie i cache'owany; listy w indeksie są niemodyfikowalne. Obsługa brakującego lub niepoprawnego assetu nadal zwraca pustą listę zamiast powodować awarię aplikacji.
+- Dodano test izolacji indeksu: wpisy różnych Pokémonów nie mieszają się, a brakujący ID zwraca brak wyniku.
+- Commity: `9c7e0ceff8b108580de6554e77469a08e7096ff5` (indeks), `f2dc4165758ec91674973a9aae02e3905276e467` (test).
+- Status: zmiany zapisane w GitHubie. Testy Flutter, analiza statyczna i kompilacja APK nie zostały uruchomione. Dane `pokemon_learnsets.json` nadal wymagają wygenerowania przez workflow GitHub Actions i sprawdzenia jego wyniku.
