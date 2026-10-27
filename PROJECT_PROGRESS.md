@@ -1,3 +1,11 @@
+### Mapy — manifest audytu Kanto bez zgadywanych współrzędnych (2026-10-28)
+- Dodano plik `pokemon100_flutter_prototype/pokemon100/assets/data/maps/lets_go_kanto_audit.json` i zarejestrowano go w `pubspec.yaml`.
+- Manifest porządkuje źródła i pierwsze fakty dla Pallet Town oraz Route 1: budynki, połączenia lokacji, wydarzenia fabularne, partnera startowego, przeciwnika oraz różnice spotkań między Pikachu i Eevee.
+- Każda lokacja ma jawny stan `coordinateStatus: unverified`, a podkład mapy pozostaje `null`. Manifest nie może być używany do rysowania pinów, dopóki nie zostaną sprawdzone współrzędne i zgodność z konkretnym podkładem.
+- Dane spotkań Route 1 są rozdzielone na wersje: Pikachu — Pidgey, Rattata, Oddish; Eevee — Pidgey, Rattata, Bellsprout. Ukryte przedmioty pozostają do sprawdzenia dla każdej lokacji, zamiast zakładać, że ich nie ma.
+- Status: manifest zapisany i zarejestrowany jako asset. Nie uruchomiono Flutter analyze/test/build; nie potwierdzono jeszcze odczytu JSON przez aplikację. To przygotowanie danych, a nie ukończona mapa offline.
+- Źródła: https://theroutepedia.com/pokemon-lets-go-pikachu/map/kanto ; https://theroutepedia.com/pokemon-lets-go-pikachu/pallet-town ; https://theroutepedia.com/pokemon-lets-go-pikachu/route-1 ; https://theroutepedia.com/pokemon-lets-go-eevee/map/kanto ; https://theroutepedia.com/pokemon-lets-go-eevee/pallet-town ; https://theroutepedia.com/pokemon-lets-go-eevee/route-1 ; https://altissimo1.github.io/Main-Series/LGPE/berries.html ; https://bulbapedia.bulbagarden.net/wiki/Walkthrough:Pok%C3%A9mon:Let%27s_Go,_Pikachu!_and_Let%27s_Go,_Eevee!/Part_1
+
 ### Mapy — źródła dopasowane do wersji Let’s Go (2026-10-28)
 - Ulepszono kartę w ekranie Mapy bez dodawania nowej pozycji do menu: źródła Routepedia są teraz osobnymi linkami do mapy całego Kanto, Pallet Town i Route 1.
 - Linki automatycznie wybierają właściwą wersję Routepedia dla Pokémon Let’s Go, Pikachu! albo Let’s Go, Eevee!, zależnie od wybranej gry w aplikacji. Dodano też ikonki ułatwiające wybór lokacji.
