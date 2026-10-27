@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../data/games_data.dart';
 import '../data/guides_data.dart';
@@ -239,29 +240,69 @@ class _MapsScreenState extends State<MapsScreen> {
                                     ),
                                     borderRadius: BorderRadius.circular(12),
                                   ),
-                                  child: const Column(
+                                  child: Column(
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
-                                      Row(
+                                      const Row(
                                         children: [
                                           Icon(Icons.gps_fixed),
                                           SizedBox(width: 8),
                                           Expanded(
                                             child: Text(
-                                              'Dokładna mapa Let’s Go — przygotowanie danych',
+                                              'Dokładna mapa Let’s Go — etap weryfikacji',
                                               style: TextStyle(fontWeight: FontWeight.w700),
                                             ),
                                           ),
                                         ],
                                       ),
-                                      SizedBox(height: 8),
-                                      Text(
-                                        'Nie wyświetlamy tu przybliżonych punktów. Mapa z ikonami pojawi się dopiero po przypisaniu zweryfikowanych współrzędnych do map poszczególnych lokacji. Dane muszą rozróżniać zwykłe przedmioty, ukryte przedmioty, trenerów, Pokémony i wejścia.',
+                                      const SizedBox(height: 8),
+                                      const Text(
+                                        'Nie pokazujemy przybliżonych punktów jako dokładnych. Do mapy offline każdy punkt musi mieć pozycję na właściwym podkładzie konkretnej lokacji oraz źródło weryfikacji. Kategorie: przedmioty, ukryte przedmioty, trenerzy, Pokémony i wejścia.',
                                       ),
-                                      SizedBox(height: 8),
-                                      Text(
-                                        'Źródła do weryfikacji: Routepedia (mapy lokacji i pozycje punktów) oraz dokumentacja lokacji i ukrytych przedmiotów Let’s Go. Sama lista nazw lokacji nie wystarcza do ustalenia współrzędnych.',
+                                      const SizedBox(height: 10),
+                                      const Text(
+                                        'Pierwszy zakres do opracowania',
+                                        style: TextStyle(fontWeight: FontWeight.w700),
+                                      ),
+                                      const SizedBox(height: 4),
+                                      const Text(
+                                        '• Pallet Town: dom gracza, dom rywala, laboratorium Oaka, Town Map i prezenty fabularne.\n• Route 1: układ trasy, trener Youngster Ronny i dzikie Pokémony.\n• Pozycje na mapie pozostają niezatwierdzone, dopóki nie zostaną przypisane do zweryfikowanego podkładu.',
+                                      ),
+                                      const SizedBox(height: 8),
+                                      const Text(
+                                        'Źródła online służą teraz do ręcznej weryfikacji. Nie są jeszcze danymi mapy offline aplikacji.',
                                         style: TextStyle(fontSize: 12),
+                                      ),
+                                      const SizedBox(height: 8),
+                                      Wrap(
+                                        spacing: 8,
+                                        runSpacing: 4,
+                                        children: [
+                                          OutlinedButton.icon(
+                                            onPressed: () => launchUrl(
+                                              Uri.parse('https://theroutepedia.com/pokemon-lets-go-pikachu/map/kanto'),
+                                              mode: LaunchMode.externalApplication,
+                                            ),
+                                            icon: const Icon(Icons.open_in_new, size: 16),
+                                            label: const Text('Mapa źródłowa'),
+                                          ),
+                                          OutlinedButton.icon(
+                                            onPressed: () => launchUrl(
+                                              Uri.parse('https://altissimo1.github.io/Main-Series/LGPE/berries.html'),
+                                              mode: LaunchMode.externalApplication,
+                                            ),
+                                            icon: const Icon(Icons.inventory_2_outlined, size: 16),
+                                            label: const Text('Ukryte jagody'),
+                                          ),
+                                          OutlinedButton.icon(
+                                            onPressed: () => launchUrl(
+                                              Uri.parse('https://bulbapedia.bulbagarden.net/wiki/Walkthrough:Pok%C3%A9mon:Let%27s_Go,_Pikachu!_and_Let%27s_Go,_Eevee!/Part_1'),
+                                              mode: LaunchMode.externalApplication,
+                                            ),
+                                            icon: const Icon(Icons.menu_book_outlined, size: 16),
+                                            label: const Text('Początek poradnika'),
+                                          ),
+                                        ],
                                       ),
                                     ],
                                   ),
