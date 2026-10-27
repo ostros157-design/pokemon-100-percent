@@ -1,3 +1,9 @@
+### Naprawa błędu kompilacji APK — FlutterError (2026-10-28)
+- Z logu użytkownika potwierdzono błąd kompilacji w `lib/data/pokemon_learnset_data.dart:104`: typ `FlutterError` nie był widoczny w pliku.
+- Dodano jawny import `package:flutter/foundation.dart` z symbolem `FlutterError`. Obsługa brakującego assetu pozostaje bez zmian.
+- Commit poprawki: `a19359ad35a607768b623f4d999f0463072fa2cb`.
+- Status: poprawka zapisana w repozytorium. Nie można jeszcze oznaczyć buildu jako naprawionego, dopóki użytkownik nie powtórzy `flutter build apk --release`; wynik kompilacji po zmianie nie jest dostępny.
+ 
 ### Mapy — manifest audytu Kanto bez zgadywanych współrzędnych (2026-10-28)
 - Dodano plik `pokemon100_flutter_prototype/pokemon100/assets/data/maps/lets_go_kanto_audit.json` i zarejestrowano go w `pubspec.yaml`.
 - Manifest porządkuje źródła i pierwsze fakty dla Pallet Town oraz Route 1: budynki, połączenia lokacji, wydarzenia fabularne, partnera startowego, przeciwnika oraz różnice spotkań między Pikachu i Eevee.
