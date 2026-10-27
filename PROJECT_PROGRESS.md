@@ -1,3 +1,10 @@
+### Mapy — źródła dopasowane do wersji Let’s Go (2026-10-28)
+- Ulepszono kartę w ekranie Mapy bez dodawania nowej pozycji do menu: źródła Routepedia są teraz osobnymi linkami do mapy całego Kanto, Pallet Town i Route 1.
+- Linki automatycznie wybierają właściwą wersję Routepedia dla Pokémon Let’s Go, Pikachu! albo Let’s Go, Eevee!, zależnie od wybranej gry w aplikacji. Dodano też ikonki ułatwiające wybór lokacji.
+- To skraca ręczną weryfikację pierwszego zakresu mapy. Nie oznacza jeszcze, że podkład ani współrzędne punktów są zapisane offline w aplikacji.
+- Status: zapisano w GitHubie; Flutter analyze/test/build nadal nie zostały uruchomione.
+- Źródła: https://theroutepedia.com/pokemon-lets-go-pikachu/map/kanto ; https://theroutepedia.com/pokemon-lets-go-pikachu/pallet-town ; https://theroutepedia.com/pokemon-lets-go-pikachu/route-1 ; https://theroutepedia.com/pokemon-lets-go-eevee/map/kanto ; https://theroutepedia.com/pokemon-lets-go-eevee/pallet-town ; https://theroutepedia.com/pokemon-lets-go-eevee/route-1
+
 ### Mapy — źródła weryfikacji Let’s Go Kanto (2026-10-28)
 - Ekran Let’s Go pokazuje teraz pierwszy zakres audytu (Pallet Town i Route 1) oraz przyciski do zewnętrznych źródeł: interaktywnej mapy Routepedia, wykazu ukrytych jagód Altissimo i poradnika startowego Bulbapedia.
 - Linki są oznaczone jako źródła online do ręcznej weryfikacji, a nie jako gotowa mapa offline. Nie dodano współrzędnych przybliżonych ani niezweryfikowanych.
