@@ -1,3 +1,10 @@
+### Mapy — pierwsza poglądowa mapa regionu Kanto (2026-10-27)
+- Dodano do istniejącego ekranu map schematyczną, działającą offline mapę Kanto rysowaną przez Flutter `CustomPainter`; nie wymaga osobnego pliku graficznego ani połączenia z internetem.
+- Mapa pokazuje główne miasta i wybrane punkty (m.in. Pallet Town, Viridian City, Pewter City, Cerulean City, Vermilion City, Lavender Town, Celadon City, Saffron City, Fuchsia City, Cinnabar Island i Indigo Plateau) oraz schematyczne połączenia.
+- Pozostałe regiony nadal pokazują uczciwy komunikat, że ich mapy graficzne nie są przygotowane. Opis na ekranie zaznacza, że Kanto jest schematyczne, a nie w skali; nie należy traktować linii jako dokładnego odwzorowania tras z gry.
+- Commit kodu mapy: `b2f47d94ebdf339c6f410fc63e4e925b40aed5a9`.
+- Status: zapisano w GitHubie. Nie uruchomiono jeszcze `flutter analyze`, testów ani kompilacji; wygląd i dopasowanie etykiet trzeba sprawdzić w aplikacji.
+
 ### Mapy — schemat kolejności podróży (2026-10-27)
 - Dodano numerowane oznaczenia lokacji zgodne z kolejnością ich pierwszego wystąpienia w poradniku oraz krótki opis wyjaśniający, że numeracja nie przedstawia położenia geograficznego.
 - Zmiana kodu: `255587758f511875521c67b85230d8c9fe97959c`.
