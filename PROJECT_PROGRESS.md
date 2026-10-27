@@ -278,3 +278,10 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 - Pozostałe osiągnięcia pozostają zablokowane, dopóki aplikacja nie będzie zapisywać rzeczywistych sygnałów ich ukończenia (np. odznak lub zwycięstw). Nie udajemy, że są już śledzone.
 - Commit kodu: `76a0710bed4b00d26b846f9e255dba92c955433b`.
 - Status: zapisano w GitHubie; testy, `flutter analyze` i build APK nie zostały uruchomione w tej sesji. Wymagane testy lokalne: progi 1/25/50/100, przełączanie wybranej gry oraz zgodność z istniejącymi zapisami.
+
+
+### Postęp gry — izolacja starszych zapisów (2026-10-27)
+- Dodatkowo zabezpieczono profil i osiągnięcia przed pokazywaniem starej globalnej kolekcji jako postępu w każdej nowej grze.
+- Stary klucz `caught_pokemon_ids` jest używany jako fallback tylko wtedy, gdy nie istnieje jeszcze żadna kolekcja per gra. Gdy kolekcje per gra już istnieją, brak wpisu dla danej wersji oznacza 0 zapisanych Pokémonów w tej wersji.
+- Commity poprawek: `10830d15221cb8242beb00fa8e118e1285039a97` (profil), `8e03b5318710e9c37c75ae0fa928bdd4f58f9a62` (osiągnięcia).
+- Status: zapisano w GitHubie; wymagane lokalne `flutter analyze`, testy i build APK.
