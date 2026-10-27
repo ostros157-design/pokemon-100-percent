@@ -364,3 +364,9 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 - Commity: poprawka mapowania `a7540aeb5e8a27566bd6646751afb0c8b7610686`; test `b298987ccec5d83dd09263973b7b7c358121a34c`.
 - Status: zapisane w GitHubie. Testy Flutter nadal nie zostały uruchomione; poprawność należy potwierdzić po uruchomieniu testów i workflow generowania danych.
 
+### Test pokrycia mapowania wszystkich gier (2026-10-27)
+- Dodano test integracyjny łączący `gamesList` z `PokemonLearnsetData.preferredVersionGroupForGame`: każda gra oferowana w selektorze musi mieć mapowanie grupy learnsetów.
+- Dzięki temu dodanie kolejnej gry bez mapowania zostanie wykryte przez test zamiast cicho wybierać niepasującą grupę.
+- Commit: `975633b07dc0bc62b51410e14de4a864003c9efb`.
+- Status: zapisane w GitHubie; testów nie uruchomiono w tej sesji. Asset `pokemon_learnsets.json` nadal jest pustą listą i wymaga wygenerowania przez GitHub Actions.
+
