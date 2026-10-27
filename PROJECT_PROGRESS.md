@@ -1,3 +1,10 @@
+### Mapy — interaktywne punkty Kanto (2026-10-27)
+- Punkty miast na schematycznej mapie Kanto można teraz naciskać; wybrany punkt zostaje podświetlony, a pole wyszukiwania i indeks lokacji filtrują się do tej lokacji.
+- Jeśli wybrana lokacja nie ma jeszcze wpisu w poradniku aktualnie wybranej gry, aplikacja pokazuje komunikat zamiast sugerować, że ma dane poradnika.
+- Pole wyszukiwania ma kontroler, więc kliknięcie punktu aktualizuje również widoczny tekst pola.
+- Commit: `acabfb01d9bda71331b5618eac58881dbcfa5f75`.
+- Status: zapisane w GitHubie. Nie uruchomiono `flutter analyze`, testów ani builda; trzeba zweryfikować działanie dotyku i układ na urządzeniu.
+
 ### Mapy — pierwsza poglądowa mapa regionu Kanto (2026-10-27)
 - Dodano do istniejącego ekranu map schematyczną, działającą offline mapę Kanto rysowaną przez Flutter `CustomPainter`; nie wymaga osobnego pliku graficznego ani połączenia z internetem.
 - Mapa pokazuje główne miasta i wybrane punkty (m.in. Pallet Town, Viridian City, Pewter City, Cerulean City, Vermilion City, Lavender Town, Celadon City, Saffron City, Fuchsia City, Cinnabar Island i Indigo Plateau) oraz schematyczne połączenia.
