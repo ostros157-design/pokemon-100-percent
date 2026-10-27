@@ -270,3 +270,11 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 - Profil pokazuje nazwę wybranej gry i opisuje procent jako postęp dla tej gry zamiast błędnie sumować poradniki z wielu wersji.
 - Commit kodu: `7170eb118f6307d18e119d395aa78cd7761671ac`.
 - Status: zapisano w GitHubie; `flutter analyze`, testy i kompilacja APK nie zostały uruchomione w tej sesji. Po stronie lokalnej należy pobrać zmiany i zweryfikować przełączanie gry oraz zachowanie starszych zapisów.
+
+
+### Osiągnięcia — odblokowywanie kamieni milowych Pokédexu (2026-10-27)
+- Zmieniono `lib/screens/achievements_screen.dart` z widoku statycznego na ekran odczytujący zapisane postępy dla aktualnie wybranej gry.
+- Osiągnięcia „Pierwszy Pokémon”, „Początek Pokédexu”, 25, 50, 100 Pokémonów oraz pełny Pokédex są teraz odblokowywane na podstawie liczby unikalnych Pokémonów oznaczonych jako złapane w tej grze.
+- Pozostałe osiągnięcia pozostają zablokowane, dopóki aplikacja nie będzie zapisywać rzeczywistych sygnałów ich ukończenia (np. odznak lub zwycięstw). Nie udajemy, że są już śledzone.
+- Commit kodu: `76a0710bed4b00d26b846f9e255dba92c955433b`.
+- Status: zapisano w GitHubie; testy, `flutter analyze` i build APK nie zostały uruchomione w tej sesji. Wymagane testy lokalne: progi 1/25/50/100, przełączanie wybranej gry oraz zgodność z istniejącymi zapisami.
