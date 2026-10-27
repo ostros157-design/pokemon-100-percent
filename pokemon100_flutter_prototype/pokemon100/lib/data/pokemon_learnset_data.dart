@@ -59,8 +59,8 @@ class PokemonLearnsetData {
   /// A preference is used only when that group exists in the imported rows.
   static String? preferredVersionGroupForGame(String? gameId) {
     return const <String, String>{
-      'lets_go_pikachu': 'lets-go-pikachu-eevee',
-      'lets_go_eevee': 'lets-go-pikachu-eevee',
+      'lets_go_pikachu': 'lets-go-pikachu-lets-go-eevee',
+      'lets_go_eevee': 'lets-go-pikachu-lets-go-eevee',
       'sword': 'sword-shield',
       'shield': 'sword-shield',
       'legends_arceus': 'legends-arceus',
