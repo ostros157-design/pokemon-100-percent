@@ -308,3 +308,9 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 - Dzięki temu odczyt ruchu podczas łączenia wpisów learnsetu z katalogiem ma średni koszt O(1). Nie zmieniono danych ruchów ani zasad ich interpretacji.
 - Commit: `1d5b6244a1374f6a6f83989179d1624ca057f5ac`.
 - Status: zapisane w GitHubie. Testy Flutter, `flutter analyze` i kompilacja APK nie zostały uruchomione. Rzeczywisty learnset nadal wymaga wygenerowania przez workflow GitHub Actions.
+
+### Pokédex — szczegóły ruchów w learnsecie (2026-10-27)
+- Rozszerzono listę ruchów na karcie szczegółowej Pokémona o dane dostępne w katalogu offline: moc, celność, PP i priorytet (pokazywane tylko wtedy, gdy źródło zawiera daną wartość).
+- Jeśli ID ruchu z learnsetu nie występuje w katalogu, ekran jawnie pokazuje jego ID i informację o braku w katalogu zamiast przypisywać mu błędną nazwę.
+- Commit: `a7922158be3cc1d919ce05f36d9a214d7e68818a`.
+- Status: zapisane w GitHubie. Nie uruchomiono testów Flutter, analizy statycznej ani kompilacji APK. Dane learnsetu nadal wymagają wygenerowania i sprawdzenia workflow GitHub Actions.
