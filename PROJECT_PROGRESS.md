@@ -302,3 +302,9 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 - Dodano test izolacji indeksu: wpisy różnych Pokémonów nie mieszają się, a brakujący ID zwraca brak wyniku.
 - Commity: `9c7e0ceff8b108580de6554e77469a08e7096ff5` (indeks), `f2dc4165758ec91674973a9aae02e3905276e467` (test).
 - Status: zmiany zapisane w GitHubie. Testy Flutter, analiza statyczna i kompilacja APK nie zostały uruchomione. Dane `pokemon_learnsets.json` nadal wymagają wygenerowania przez workflow GitHub Actions i sprawdzenia jego wyniku.
+
+### Pokédex — indeks katalogu ruchów (2026-10-27)
+- Zmieniono `lib/data/move_data.dart`: wyszukiwanie ruchu po PokéAPI ID korzysta teraz z niemodyfikowalnego indeksu budowanego raz, zamiast przeglądać cały katalog przy każdym wywołaniu.
+- Dzięki temu odczyt ruchu podczas łączenia wpisów learnsetu z katalogiem ma średni koszt O(1). Nie zmieniono danych ruchów ani zasad ich interpretacji.
+- Commit: `1d5b6244a1374f6a6f83989179d1624ca057f5ac`.
+- Status: zapisane w GitHubie. Testy Flutter, `flutter analyze` i kompilacja APK nie zostały uruchomione. Rzeczywisty learnset nadal wymaga wygenerowania przez workflow GitHub Actions.
