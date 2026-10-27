@@ -320,3 +320,9 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 - `test/data_integrity_test.dart`: dodano test mieszanki poprawnych rekordów, błędnego pola, elementu niebędącego mapą, niepoprawnego ID oraz niemodyfikowalnego wyniku.
 - Commity: `28bdc8c47f3e5b8fdbd573ea1238cedd9bc28d62`, `dac9e8eddf87ae5546dc24249a0bc9ce8c49bfa9`.
 - Status: kod i test zapisane na GitHubie. Testów nie uruchomiono lokalnie. Nadal wymagane jest uruchomienie workflow importującego rzeczywiste dane PokéAPI oraz sprawdzenie jego wyniku.
+
+### Automatyzacja — dokładniejsza walidacja importu learnsetów (2026-10-27)
+- Workflow `.github/workflows/generate-pokemon-learnsets.yml` przekazuje limit National Dex przez zmienną środowiskową zamiast wstawiać go bezpośrednio do polecenia powłoki.
+- Walidacja sprawdza teraz każdy rekord JSON: wymagane pola, typy liczbowe, dodatnie identyfikatory, nieujemny poziom, typ nazwy grupy wersji oraz minimalne pokrycie gatunków. Wcześniej kontrolowane były głównie pola pierwszego rekordu i ogólna liczba wierszy.
+- Commit: `600bce55e65db1461ff8bf20e5b40b5ad7d3a178`.
+- Status: workflow zapisany na GitHubie, ale nie został uruchomiony z tej sesji; walidacja nie jest jeszcze potwierdzona wykonaniem. Testy Flutter i budowanie APK również nie zostały uruchomione.
