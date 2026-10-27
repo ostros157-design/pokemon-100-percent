@@ -57,6 +57,8 @@ def main():
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--max-dex", type=int, default=1025)
     args = parser.parse_args()
+    if args.max_dex < 1:
+        parser.error("--max-dex must be at least 1")
 
     if args.download:
         for path in (args.pokemon_moves, args.pokemon, args.version_groups):
@@ -125,9 +127,16 @@ def main():
         item["level"], item["moveId"]
     ))
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    with args.output.open("w", encoding="utf-8", newline="\n") as handle:
-        json.dump(output, handle, ensure_ascii=False, separators=(",", ":"))
-        handle.write("\n")
+    temporary_output = args.output.with_suffix(args.output.suffix + ".tmp")
+    try:
+        with temporary_output.open("w", encoding="utf-8", newline="\n") as handle:
+            json.dump(output, handle, ensure_ascii=False, separators=(",", ":"))
+            handle.write("\n")
+        # Replace only after the complete JSON has been written successfully.
+        temporary_output.replace(args.output)
+    finally:
+        if temporary_output.exists():
+            temporary_output.unlink()
     print(f"Saved {len(output):,} learnset rows to {args.output}")
     print(f"Mapped {len(default_forms):,} default Pokémon forms through National Dex #{args.max_dex}.")
 
