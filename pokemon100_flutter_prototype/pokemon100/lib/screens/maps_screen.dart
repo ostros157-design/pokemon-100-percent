@@ -21,6 +21,13 @@ class _MapsScreenState extends State<MapsScreen> {
   String? _selectedGameId;
   bool _loading = true;
   String _searchQuery = '';
+  final TextEditingController _locationSearchController = TextEditingController();
+
+  @override
+  void dispose() {
+    _locationSearchController.dispose();
+    super.dispose();
+  }
 
   static const Map<int, String> _regions = {
     1: 'Kanto',
@@ -220,7 +227,26 @@ class _MapsScreenState extends State<MapsScreen> {
                                   'Mapa poglądowa Kanto — układ schematyczny, nie mapa w skali. Węzły pokazują główne miasta i wybrane lokacje.',
                                 ),
                                 const SizedBox(height: 8),
-                                const _KantoRegionMap(),
+                                _KantoRegionMap(
+                                  selectedLocation: _searchQuery,
+                                  onLocationSelected: (location) {
+                                    final exists = _locations.keys.any(
+                                      (name) => name.toLowerCase() == location.toLowerCase(),
+                                    );
+                                    if (!exists) {
+                                      ScaffoldMessenger.of(context).showSnackBar(
+                                        SnackBar(
+                                          content: Text('$location nie ma jeszcze wpisu w poradniku tej gry.'),
+                                        ),
+                                      );
+                                      return;
+                                    }
+                                    setState(() {
+                                      _searchQuery = location;
+                                      _locationSearchController.text = location;
+                                    });
+                                  },
+                                ),
                               ] else
                                 const Text(
                                   'Mapa graficzna tego regionu nie została jeszcze przygotowana. Indeks poniżej pokazuje wyłącznie lokacje zapisane w poradnikach.',
@@ -240,6 +266,7 @@ class _MapsScreenState extends State<MapsScreen> {
                     prefixIcon: Icon(Icons.search),
                     border: OutlineInputBorder(),
                   ),
+                  controller: _locationSearchController,
                   onChanged: (value) => setState(() => _searchQuery = value),
                 ),
                 const SizedBox(height: 12),
@@ -391,20 +418,51 @@ class _EmptyState extends StatelessWidget {
 /// Pierwsza offline mapa poglądowa Kanto. Położenia są schematyczne;
 /// nie udają dokładnej mapy gry ani nie wyznaczają niepotwierdzonych tras.
 class _KantoRegionMap extends StatelessWidget {
-  const _KantoRegionMap();
+  final String selectedLocation;
+  final ValueChanged<String> onLocationSelected;
+
+  const _KantoRegionMap({
+    required this.selectedLocation,
+    required this.onLocationSelected,
+  });
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.sizeOf(context).width;
     return ClipRRect(
       borderRadius: BorderRadius.circular(14),
       child: AspectRatio(
-        aspectRatio: 0.88,
-        child: CustomPaint(
-          painter: _KantoMapPainter(
-            land: Theme.of(context).colorScheme.surfaceContainerHighest,
-            route: Theme.of(context).colorScheme.primary,
-            label: Theme.of(context).colorScheme.onSurface,
-            water: Theme.of(context).colorScheme.primaryContainer.withValues(alpha: 0.45),
+        aspectRatio: screenWidth < 500 ? 0.82 : 1.25,
+        child: LayoutBuilder(
+          builder: (context, constraints) => GestureDetector(
+            behavior: HitTestBehavior.opaque,
+            onTapDown: (details) {
+              final tap = details.localPosition;
+              _MapPlace? nearest;
+              var nearestDistance = double.infinity;
+              for (final place in _KantoMapPainter.places) {
+                final dx = tap.dx - place.x * constraints.maxWidth;
+                final dy = tap.dy - place.y * constraints.maxHeight;
+                final distance = dx * dx + dy * dy;
+                if (distance < nearestDistance) {
+                  nearestDistance = distance;
+                  nearest = place;
+                }
+              }
+              if (nearest != null && nearestDistance < 34 * 34) {
+                onLocationSelected(nearest.name);
+              }
+            },
+            child: CustomPaint(
+              size: Size.infinite,
+              painter: _KantoMapPainter(
+                land: Theme.of(context).colorScheme.surfaceContainerHighest,
+                route: Theme.of(context).colorScheme.primary,
+                label: Theme.of(context).colorScheme.onSurface,
+                water: Theme.of(context).colorScheme.primaryContainer.withValues(alpha: 0.45),
+                selectedLocation: selectedLocation,
+              ),
+            ),
           ),
         ),
       ),
@@ -417,26 +475,28 @@ class _KantoMapPainter extends CustomPainter {
   final Color route;
   final Color label;
   final Color water;
+  final String selectedLocation;
 
   const _KantoMapPainter({
     required this.land,
     required this.route,
     required this.label,
     required this.water,
+    required this.selectedLocation,
   });
 
-  static const _places = <_MapPlace>[
-    _MapPlace('Pallet Town', 0.22, 0.82, 0),
-    _MapPlace('Viridian City', 0.28, 0.68, 1),
-    _MapPlace('Pewter City', 0.25, 0.43, 2),
-    _MapPlace('Cerulean City', 0.63, 0.35, 3),
-    _MapPlace('Vermilion City', 0.57, 0.65, 4),
-    _MapPlace('Lavender Town', 0.78, 0.48, 5),
-    _MapPlace('Celadon City', 0.43, 0.52, 6),
-    _MapPlace('Saffron City', 0.59, 0.49, 7),
-    _MapPlace('Fuchsia City', 0.65, 0.82, 8),
-    _MapPlace('Cinnabar Island', 0.12, 0.94, 9),
-    _MapPlace('Indigo Plateau', 0.10, 0.23, 10),
+  static const places = <_MapPlace>[
+    _MapPlace('Pallet Town', 0.22, 0.82),
+    _MapPlace('Viridian City', 0.28, 0.68),
+    _MapPlace('Pewter City', 0.25, 0.43),
+    _MapPlace('Cerulean City', 0.63, 0.35),
+    _MapPlace('Vermilion City', 0.57, 0.65),
+    _MapPlace('Lavender Town', 0.78, 0.48),
+    _MapPlace('Celadon City', 0.43, 0.52),
+    _MapPlace('Saffron City', 0.59, 0.49),
+    _MapPlace('Fuchsia City', 0.65, 0.82),
+    _MapPlace('Cinnabar Island', 0.12, 0.94),
+    _MapPlace('Indigo Plateau', 0.10, 0.23),
   ];
 
   @override
@@ -473,9 +533,13 @@ class _KantoMapPainter extends CustomPainter {
       canvas.drawLine(p(a.x, a.y), p(b.x, b.y), roadPaint);
     }
 
-    for (final place in _places) {
+    for (final place in places) {
       final point = p(place.x, place.y);
-      canvas.drawCircle(point, 7, Paint()..color = route);
+      final isSelected = place.name.toLowerCase() == selectedLocation.toLowerCase();
+      if (isSelected) {
+        canvas.drawCircle(point, 13, Paint()..color = route.withValues(alpha: .24));
+      }
+      canvas.drawCircle(point, isSelected ? 8 : 7, Paint()..color = route);
       canvas.drawCircle(point, 3, Paint()..color = Colors.white);
       final text = TextPainter(
         text: TextSpan(
@@ -516,7 +580,8 @@ class _KantoMapPainter extends CustomPainter {
       land != oldDelegate.land ||
       route != oldDelegate.route ||
       label != oldDelegate.label ||
-      water != oldDelegate.water;
+      water != oldDelegate.water ||
+      selectedLocation != oldDelegate.selectedLocation;
 }
 
 class _MapPlace {
@@ -524,5 +589,5 @@ class _MapPlace {
   final double x;
   final double y;
 
-  const _MapPlace(this.name, this.x, this.y, int id);
+  const _MapPlace(this.name, this.x, this.y);
 }
