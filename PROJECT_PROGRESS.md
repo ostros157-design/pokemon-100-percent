@@ -333,3 +333,9 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 - Commit testu: `eebcd21fa0d646303c1cb839e57e888796c0c78a`.
 - Status: test zapisany w GitHubie; nie został uruchomiony lokalnie, więc wynik pozostaje niepotwierdzony.
 
+### Dane offline — poprawny placeholder dla learnsetu (2026-10-27)
+- Pusty plik `assets/data/pokemon_learnsets.json` zastąpiono poprawnym JSON-em `[]`. Dzięki temu zasób jest składniowo poprawny i jasno oznacza brak zaimportowanych rekordów, zamiast zawierać pusty plik.
+- To **nie** jest pełny zbiór ruchów: sekcja learnsetu nadal będzie informować, że dane nie zostały zaimportowane, dopóki workflow nie wygeneruje właściwej zawartości.
+- Commit zasobu: `4cd8c5ba169cc790b8218c1d8591aede827a973a`.
+- Testy i kompilacja Flutter nie zostały uruchomione.
+
