@@ -326,3 +326,10 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 - Walidacja sprawdza teraz każdy rekord JSON: wymagane pola, typy liczbowe, dodatnie identyfikatory, nieujemny poziom, typ nazwy grupy wersji oraz minimalne pokrycie gatunków. Wcześniej kontrolowane były głównie pola pierwszego rekordu i ogólna liczba wierszy.
 - Commit: `600bce55e65db1461ff8bf20e5b40b5ad7d3a178`.
 - Status: workflow zapisany na GitHubie, ale nie został uruchomiony z tej sesji; walidacja nie jest jeszcze potwierdzona wykonaniem. Testy Flutter i budowanie APK również nie zostały uruchomione.
+
+### Testy danych — kompletność indeksu katalogu ruchów (2026-10-27)
+- Rozszerzono `test/data_integrity_test.dart`: test sprawdza teraz, że każdy ruch z katalogu jest dostępny przez `moveById` i zwraca dokładnie ten sam obiekt, w tym specjalne ruchy Cienia o ID spoza zwykłego zakresu.
+- Dodano sprawdzenie, że wyniki wyszukiwania są niemodyfikowalne, zgodnie z kontraktem usługi offline.
+- Commit testu: `eebcd21fa0d646303c1cb839e57e888796c0c78a`.
+- Status: test zapisany w GitHubie; nie został uruchomiony lokalnie, więc wynik pozostaje niepotwierdzony.
+
