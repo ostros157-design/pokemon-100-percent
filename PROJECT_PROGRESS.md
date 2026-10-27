@@ -255,3 +255,10 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 - Chip Pokémona w poradniku wyświetla procent obok nazwy, gdy taka wartość jest podana; nazwa nadal otwiera szczegóły w Pokédexie.
 - Nie wpisano przykładowych ani zmyślonych wartości. Obecne kroki poradników nie otrzymają procentów, dopóki nie uzupełnimy zweryfikowanych danych dla konkretnej gry i lokacji.
 - Status: zmiany zapisane w GitHubie; kompilacja/testy nie zostały uruchomione.
+
+### Pokédex — przywrócenie statystyk bazowych (2026-10-27)
+- Przywrócono w `pokemon_data.dart` sześć statystyk bazowych, wzrost, masę, bazowe doświadczenie, umiejętności i umiejętności ukryte dla wszystkich 1025 wpisów National Dex.
+- Zachowano aktualne metadane gatunków z bieżącego pliku, w tym współczynnik łapania, szczęście bazowe, licznik jaj, płeć, generację oraz flagi Legendary/Mythical/Baby.
+- Walidacja przed zapisem: 1025 wpisów, 1025 pól HP, 1025 wzrostów, 1025 zestawów umiejętności i 1025 współczynników łapania.
+- Commit danych: `68b77b65b7b8bdf6306aa67074de5450cdb1a8fd`.
+- Status: sprawdzono strukturę wygenerowanego tekstu; `flutter analyze`, testy i kompilacja APK nie zostały jeszcze uruchomione.
