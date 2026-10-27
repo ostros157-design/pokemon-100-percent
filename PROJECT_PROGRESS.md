@@ -1,3 +1,8 @@
+### Mapy — schemat kolejności podróży (2026-10-27)
+- Dodano numerowane oznaczenia lokacji zgodne z kolejnością ich pierwszego wystąpienia w poradniku oraz krótki opis wyjaśniający, że numeracja nie przedstawia położenia geograficznego.
+- Zmiana kodu: `255587758f511875521c67b85230d8c9fe97959c`.
+- Weryfikacja repozytorium: jedynym plikiem graficznym w `assets/maps` jest obecnie `gen1/charmander.png`; nie ma tam rzeczywistych map regionów. Nie wygenerowano fikcyjnych map ani lokalizacji. Testy i kompilacja nie zostały uruchomione.
+
 ### Mapy — wyszukiwanie lokacji i kolejność poradnika (2026-10-27)
 - Ekran map zachowuje teraz kolejność pierwszego wystąpienia lokacji w poradniku, zamiast sortować je alfabetycznie — lista lepiej odzwierciedla kolejność podróży.
 - Dodano pole wyszukiwania lokacji oraz licznik wyników w formacie „wyniki/wszystkie”.
