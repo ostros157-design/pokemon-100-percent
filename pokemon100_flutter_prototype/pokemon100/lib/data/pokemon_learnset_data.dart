@@ -54,6 +54,41 @@ class PokemonLearnsetEntry {
 /// Missing or invalid data is treated as "not imported yet", not as an app crash.
 class PokemonLearnsetData {
   static const assetPath = 'assets/data/pokemon_learnsets.json';
+
+  /// Maps the app's game IDs to PokéAPI version-group identifiers.
+  /// A preference is used only when that group exists in the imported rows.
+  static String? preferredVersionGroupForGame(String? gameId) {
+    return const <String, String>{
+      'lets_go_pikachu': 'lets-go-pikachu-eevee',
+      'lets_go_eevee': 'lets-go-pikachu-eevee',
+      'sword': 'sword-shield',
+      'shield': 'sword-shield',
+      'legends_arceus': 'legends-arceus',
+      'brilliant_diamond': 'brilliant-diamond-shining-pearl',
+      'shining_pearl': 'brilliant-diamond-shining-pearl',
+      'scarlet': 'scarlet-violet',
+      'violet': 'scarlet-violet',
+      'x': 'x-y',
+      'y': 'x-y',
+      'omega_ruby': 'omega-ruby-alpha-sapphire',
+      'alpha_sapphire': 'omega-ruby-alpha-sapphire',
+      'sun': 'sun-moon',
+      'moon': 'sun-moon',
+      'ultra_sun': 'ultra-sun-ultra-moon',
+      'ultra_moon': 'ultra-sun-ultra-moon',
+      'emerald': 'emerald',
+      'fire_red': 'firered-leafgreen',
+      'leaf_green': 'firered-leafgreen',
+      'ruby': 'ruby-sapphire',
+      'sapphire': 'ruby-sapphire',
+      'crystal': 'crystal',
+      'gold': 'gold-silver',
+      'silver': 'gold-silver',
+      'red': 'red-blue',
+      'blue': 'red-blue',
+      'yellow': 'yellow',
+    }[gameId];
+  }
   static Future<List<PokemonLearnsetEntry>>? _cache;
   static Future<Map<int, List<PokemonLearnsetEntry>>>? _indexCache;
 
