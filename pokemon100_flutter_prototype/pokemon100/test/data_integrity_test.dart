@@ -2,6 +2,7 @@ import 'package:flutter_test/flutter_test.dart';
 import '../lib/data/move_data.dart';
 import '../lib/data/pokemon_learnset_data.dart';
 import '../lib/data/pokemon_data.dart';
+import '../lib/data/games_data.dart';
 
 void main() {
   group('Offline Pokédex data', () {
@@ -99,6 +100,17 @@ void main() {
         isNull,
       );
       expect(PokemonLearnsetData.preferredVersionGroupForGame(null), isNull);
+    });
+
+    test('every selectable game has a learnset version-group mapping', () {
+      expect(gamesList, isNotEmpty);
+      for (final game in gamesList) {
+        expect(
+          PokemonLearnsetData.preferredVersionGroupForGame(game.id),
+          isNotNull,
+          reason: 'Missing learnset mapping for ${game.id} (${game.name})',
+        );
+      }
     });
 
     test('learnset parser keeps valid rows around malformed data', () {
