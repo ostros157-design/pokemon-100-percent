@@ -29,6 +29,9 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Test learnset importer
+        run: python -m unittest tools.test_import_pokemon_moves -v
+
       - name: Generate learnsets from PokéAPI CSV data
         env:
           MAX_DEX: ${{ inputs.max_dex }}
