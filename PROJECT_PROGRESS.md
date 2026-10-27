@@ -262,3 +262,11 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 - Walidacja przed zapisem: 1025 wpisów, 1025 pól HP, 1025 wzrostów, 1025 zestawów umiejętności i 1025 współczynników łapania.
 - Commit danych: `68b77b65b7b8bdf6306aa67074de5450cdb1a8fd`.
 - Status: sprawdzono strukturę wygenerowanego tekstu; `flutter analyze`, testy i kompilacja APK nie zostały jeszcze uruchomione.
+
+
+### Profil — postęp oddzielnie dla wybranej gry (2026-10-27)
+- Zmieniono `lib/screens/profile_screen.dart`, aby profil odczytywał wyłącznie kroki poradników przypisane do gry zapisanej pod `selected_pokemon_game_id`.
+- Liczba złapanych Pokémonów korzysta teraz z klucza `caught_pokemon_ids_<gameId>`, zgodnego z zapisem Pokédexa. Dodano zgodny wstecz fallback do starego klucza globalnego, aby nie ukrywać dotychczasowego postępu przed migracją.
+- Profil pokazuje nazwę wybranej gry i opisuje procent jako postęp dla tej gry zamiast błędnie sumować poradniki z wielu wersji.
+- Commit kodu: `7170eb118f6307d18e119d395aa78cd7761671ac`.
+- Status: zapisano w GitHubie; `flutter analyze`, testy i kompilacja APK nie zostały uruchomione w tej sesji. Po stronie lokalnej należy pobrać zmiany i zweryfikować przełączanie gry oraz zachowanie starszych zapisów.
