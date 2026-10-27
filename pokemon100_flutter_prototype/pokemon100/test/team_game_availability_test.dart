@@ -67,7 +67,7 @@ void main() {
       );
       final recommendations = TeamRecommendationService.recommend(
         [haunter],
-        gameId: 'lets_go_pikachu',
+        gameId: 'emerald',
       );
       expect(recommendations.any((entry) => entry.pokemon.name == 'Gengar'), isFalse);
     });
