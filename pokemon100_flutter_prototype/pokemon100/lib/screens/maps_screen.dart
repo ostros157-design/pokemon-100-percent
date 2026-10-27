@@ -77,6 +77,13 @@ class _MapsScreenState extends State<MapsScreen> {
       ? 'Hisui'
       : (_regions[_generation] ?? 'Region Pokémon');
 
+  // Let's Go is Kanto despite being labelled Generation I in the game catalog.
+  // Its old overview painter used guessed positions, so it must not be shown
+  // as if it were a precise in-game map.
+  bool get _isLetsGoKanto =>
+      _selectedGameId == 'lets_go_pikachu' ||
+      _selectedGameId == 'lets_go_eevee';
+
   List<Game> get _gamesForGeneration => gamesList
       .where((game) => _generationFromLabel(game.generation) == _generation)
       .toList();
@@ -221,7 +228,45 @@ class _MapsScreenState extends State<MapsScreen> {
                               Text(selectedGame?.name ??
                                   'Brak gry z tej generacji w katalogu aplikacji.'),
                               const SizedBox(height: 8),
-                              if (_generation == 1) ...[
+                              if (_isLetsGoKanto) ...[
+                                const SizedBox(height: 12),
+                                Container(
+                                  width: double.infinity,
+                                  padding: const EdgeInsets.all(14),
+                                  decoration: BoxDecoration(
+                                    border: Border.all(
+                                      color: Theme.of(context).colorScheme.outlineVariant,
+                                    ),
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                  child: const Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Row(
+                                        children: [
+                                          Icon(Icons.gps_fixed),
+                                          SizedBox(width: 8),
+                                          Expanded(
+                                            child: Text(
+                                              'Dokładna mapa Let’s Go — przygotowanie danych',
+                                              style: TextStyle(fontWeight: FontWeight.w700),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      SizedBox(height: 8),
+                                      Text(
+                                        'Nie wyświetlamy tu przybliżonych punktów. Mapa z ikonami pojawi się dopiero po przypisaniu zweryfikowanych współrzędnych do map poszczególnych lokacji. Dane muszą rozróżniać zwykłe przedmioty, ukryte przedmioty, trenerów, Pokémony i wejścia.',
+                                      ),
+                                      SizedBox(height: 8),
+                                      Text(
+                                        'Źródła do weryfikacji: Routepedia (mapy lokacji i pozycje punktów) oraz dokumentacja lokacji i ukrytych przedmiotów Let’s Go. Sama lista nazw lokacji nie wystarcza do ustalenia współrzędnych.',
+                                        style: TextStyle(fontSize: 12),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ] else if (_generation == 1) ...[
                                 const SizedBox(height: 12),
                                 const Text(
                                   'Mapa poglądowa Kanto — układ schematyczny, nie mapa w skali. Węzły pokazują główne miasta i wybrane lokacje.',
