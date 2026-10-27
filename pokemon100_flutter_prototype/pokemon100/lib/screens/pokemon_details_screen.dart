@@ -437,9 +437,16 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
                               ...visible.map((entry) {
                                 final move = moveById(entry.moveId);
                                 final detail = move == null
-                                    ? 'Ruch #${entry.moveId}'
-                                    : '${move.name} • ${move.type} • ${move.category}'
-                                      '${move.power == null ? '' : ' • Moc ${move.power}'}';
+                                    ? 'Ruch #${entry.moveId} • brak w katalogu offline'
+                                    : '${move.name} • ${move.type} • ${move.category}';
+                                final moveStats = move == null
+                                    ? null
+                                    : <String>[
+                                        if (move.power != null) 'Moc ${move.power}',
+                                        if (move.accuracy != null) 'Celność ${move.accuracy}%',
+                                        if (move.pp != null) 'PP ${move.pp}',
+                                        if (move.priority != 0) 'Priorytet ${move.priority > 0 ? '+' : ''}${move.priority}',
+                                      ].join(' • ');
                                 final method = entry.methodId == 1 && entry.level > 0
                                     ? 'Poziom ${entry.level}'
                                     : entry.methodLabel;
@@ -447,7 +454,10 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
                                   dense: true,
                                   contentPadding: EdgeInsets.zero,
                                   title: Text(detail),
-                                  subtitle: Text(method),
+                                  subtitle: Text([
+                                    method,
+                                    if (moveStats != null && moveStats.isNotEmpty) moveStats,
+                                  ].join(' • ')),
                                 );
                               }),
                             ],
