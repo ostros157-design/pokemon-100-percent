@@ -1,3 +1,10 @@
+### Mapy — dokładność Kanto dla Let’s Go (2026-10-28)
+- Wstrzymano wyświetlanie schematycznej mapy z przybliżonymi punktami dla Pokémon Let’s Go, Pikachu! / Let’s Go, Eevee!. Użytkownik wymaga dokładnych położeń, więc przybliżone współrzędne nie mogą być przedstawiane jako właściwe.
+- Ekran map informuje teraz, że punkty pojawią się dopiero po przypisaniu zweryfikowanych współrzędnych do konkretnych map lokacji i rozdzieleniu kategorii: przedmioty, ukryte przedmioty, trenerzy, Pokémony i wejścia.
+- Źródła weryfikacyjne znalezione w researchu: Routepedia udostępnia interaktywne mapy Let’s Go oraz pozycje punktów na mapach poszczególnych lokacji; Altissimo publikuje wykaz ukrytych przedmiotów i ich opisane miejsca. Źródła te są punktem odniesienia do dalszego opracowania, a nie dowodem, że kompletne dane współrzędnych zostały już zaimportowane.
+- Status: to zabezpieczenie przed fałszywą precyzją, nie ukończona mapa. Współrzędne dla wszystkich lokacji nie zostały jeszcze zebrane i zweryfikowane. Flutter analyze/test/build nie zostały uruchomione.
+- Źródła: https://theroutepedia.com/pokemon-lets-go-pikachu/map/kanto ; https://altissimo1.github.io/Main-Series/LGPE/hidden-items.html
+
 ### Mapy — poprawka referencji punktów Kanto (2026-10-27)
 - Przy kontroli kodu po dodaniu interakcji znaleziono dwie pozostałe referencje do dawnej nazwy listy punktów; poprawiono je, aby rysowanie połączeń korzystało z aktualnej listy `places`.
 - Commit poprawki: `ee7be8a42cdc8119f532673ddcc418e88e7e107c`.
