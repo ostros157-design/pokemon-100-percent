@@ -12,10 +12,12 @@ class TeamGameAvailability {
     'legends_arceus': '25,35-38,41-42,46-48,54-55,60,63-68,72-74,81-82,92-95,108,111-114,119,122-123,125-126,129-130,133-138,143,155-156,160,169,172-173,175-176,184-185,190,193,196-198,200-201,207-208,212,214-217,220-221,223-224,226,233-234,239-240,242,265-269,280-282,299,315,339-340,355-356,358,361-365,387-493,501-502,548,627,641-642,645,700,704,712,722-723,899-905',
   };
 
-  static bool supports(String gameId) => _ranges.containsKey(gameId);
+  static bool supports(String gameId) => _ranges.containsKey(gameId) || gameId == 'xy';
 
   static bool contains(String gameId, int nationalDex) {
-    final encoded = _ranges[gameId];
+    final encoded = gameId == 'xy'
+        ? '${_ranges['x']},${_ranges['y']}'
+        : _ranges[gameId];
     if (encoded == null) return false;
     for (final part in encoded.split(',')) {
       final bounds = part.split('-');
