@@ -471,3 +471,10 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 - Mapy offline: ekran Let’s Go pokazuje schematyczną mapę Kanto rysowaną lokalnie w aplikacji. Jest dostępna bez internetu, ale nie przedstawia dokładnej mapy gry ani dokładnych punktów przedmiotów/trenerów/Pokémonów. Pozostałe regiony nadal wymagają przygotowania zweryfikowanych map. Commit: `c4704815813541174212108b7e295b6f4ee68995`.
 - Ataki: wykryto, że `assets/data/pokemon_learnsets.json` zawierało `[]`, dlatego sekcja ruchów była pusta. Zmieniono workflow generowania learnsetów, aby uruchamiał się również po zmianach importera/workflow i domyślnie pobierał dane dla National Dex do #1025. Commity workflow: `1110b477d0fa369a9c42b12c522815e8c9400e35`, `42bad4aac7b7db27c2a1177adc76c7ad32a6b6e3`.
 - Status: generowanie danych i nowe kompilacje APK są w GitHub Actions. Nie oznaczać jeszcze learnsetów ani nowego APK jako przetestowanych, dopóki oba workflow nie zakończą się sukcesem i nie zostanie pobrane wydanie.
+
+### Automatyzacja — commit wygenerowanych learnsetów wykryty (2026-10-28)
+- W historii GitHuba pojawił się commit autorstwa `github-actions[bot]` **`c66dcd5a252b49733ad9ba9d34b801ad03a39ff1`** z komunikatem `Generate Pokémon learnset data`. To potwierdza, że automatyzacja wykonała etap zapisu pliku danych.
+- Connector plików nie zwraca obecnie zawartości dużego pliku `pokemon_learnsets.json` (zwraca pustą treść i dawny SHA), dlatego nie potwierdzono przez ten odczyt liczby rekordów ani ich zawartości. Nie należy na tej podstawie twierdzić, że dane są puste lub kompletne.
+- W commicie `5cd1b932c9a8a40e6a446aa8643f602613cf4629` workflow generowania rozszerzono o kroki instalacji Java 17 i Flutter, kompilację APK oraz publikację wydania `android-learnsets-N`.
+- **Status:** commit generujący dane istnieje; wynik kompilacji i istnienie opublikowanego Release wymagają osobnego potwierdzenia. Nie uruchomiono lokalnie Flutter analyze/test/build.
+
