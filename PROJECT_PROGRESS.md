@@ -1,3 +1,10 @@
+### Mapy — postęp ukończenia kroków przy lokacjach (2026-10-28)
+- Ekran map odczytuje teraz zapisane kroki poradnika z `SharedPreferences` i pokazuje dla każdej lokacji licznik ukończenia (np. `2/4 kroki ukończone`).
+- Lokacja, której wszystkie powiązane kroki są ukończone, otrzymuje znacznik ukończenia. Dane są odczytywane osobno dla wybranej gry, zgodnie z istniejącym kluczem `guide_progress_<gameId>_<guideId>`; nie dodano nowego, konkurencyjnego zapisu postępu.
+- Po powrocie z poradnika ekran map ponownie odczytuje zapis, więc licznik powinien odświeżyć się po zaznaczeniu kroków.
+- Commit kodu: `2650f33eb73e7ef0327327a043e32e939d85ee76`.
+- Status: zmiana zapisana w GitHubie. Nie uruchomiono `flutter analyze`, testów ani kompilacji APK; trzeba potwierdzić zachowanie po kompilacji. Dokładność mapy i współrzędne nadal pozostają osobnym zadaniem — ta zmiana dotyczy wyłącznie postępu poradnika przypisanego do lokacji.
+
 ### Aktualizacje Google Play i przygotowanie powiadomień push (2026-10-28)
 - Dodano zależności in_app_update oraz firebase_messaging, a także usługę sprawdzania aktualizacji Google Play.
 - Aplikacja wykonuje kontrolę po uruchomieniu i ponawia ją co 24 godziny, gdy proces pozostaje aktywny. Jeśli Google Play zgłasza nową wersję, pokazuje okno „Dostępna aktualizacja” z przyciskiem uruchomienia oficjalnego przepływu aktualizacji.
