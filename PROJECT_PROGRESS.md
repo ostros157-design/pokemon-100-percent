@@ -555,3 +555,11 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 - Commity kodu: `4cd99d0e67782ea1e72aaeeb22f26a9c65f1bf85` (lokalne schematy) oraz `f16a8c2233a9b3cc1d05d0cb1a86f4e13c174cc1` (jawna konwersja pozycji etykiety na `double`).
 - Status: zapisano w GitHubie. Nie uruchomiono `flutter analyze`, testów ani builda APK; wygląd i kompilacja wymagają weryfikacji w CI lub na urządzeniu.
 
+
+
+### Mapy i poradniki — otwieranie wybranego kroku (2026-10-28)
+- Rozszerzono `GuideScreen` o opcjonalny parametr `initialStepNumber`. Gdy poradnik jest otwierany z mapy, po odtworzeniu zapisanego postępu ekran przewija się do wskazanego kroku; zwykłe otwieranie poradnika nadal zaczyna się od początku.
+- Oba miejsca na ekranie map, które otwierają krok poradnika, przekazują teraz numer kroku. Dzięki temu kliknięcie lokacji/kroku nie tylko otwiera poradnik, ale od razu pokazuje właściwy fragment.
+- Zachowano dotychczasowy zapis postępu kroków w SharedPreferences. Widok listy kroków jest budowany z kluczami, aby przewinięcie mogło znaleźć konkretną kartę.
+- Commity kodu: `05acb2625730c3ae8609792ff9d0154cf78fdcc5` (GuideScreen), `bebdfd199d2e746427ec91e841c251e4e11afa7a` (mapy).
+- Status: zapisano bezpośrednio w GitHubie. Nie uruchomiono `flutter analyze`, testów ani builda APK w tej sesji; przewijanie należy potwierdzić po kompilacji i na urządzeniu.
