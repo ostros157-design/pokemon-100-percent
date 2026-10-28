@@ -99,7 +99,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     setState(() => _checkingUpdates = true);
                     try {
                       await AppUpdateService.checkForUpdate(
-                        context,
+                        context: context,
                         showStatusWhenUnavailable: true,
                       );
                     } finally {
@@ -123,7 +123,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
           const Divider(),
           const ListTile(
             title: Text('Wersja aplikacji'),
-            subtitle: Text('Wersja zostanie pokazana na podstawie metadanych kompilacji.'),
+            subtitle: Text('Nowe wersje będą dostarczane przez prywatny kanał testowy Google Play.'),
           ),
         ],
       ),
