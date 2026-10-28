@@ -512,6 +512,14 @@ class _MapsScreenState extends State<MapsScreen> {
                             const Text(
                               'Dane obejmują początek przygody: budynki i wydarzenia w Pallet Town oraz spotkania, trenera i przedmiot na Route 1. Nie pokazujemy pinezek przedmiotów, dopóki ich pozycje nie zostaną potwierdzone na podkładzie mapy.',
                             ),
+                          const SizedBox(height: 12),
+                          _KantoLocalAreaPanel(
+                            location: normalizedQuery == 'pallet town'
+                                ? 'Pallet Town'
+                                : normalizedQuery == 'route 1'
+                                    ? 'Route 1'
+                                    : null,
+                          ),
                           const SizedBox(height: 8),
                           const Text(
                             'Dane tekstowe offline; pozycje pikselowe przedmiotów nie są jeszcze zweryfikowane.',
@@ -667,6 +675,223 @@ class _EmptyState extends StatelessWidget {
       );
 }
 
+
+/// Mały schemat lokacji wybranej na mapie regionu. Układ punktów jest
+/// celowo poglądowy — nie przedstawia dokładnych współrzędnych z gry.
+class _KantoLocalAreaPanel extends StatefulWidget {
+  final String? location;
+
+  const _KantoLocalAreaPanel({required this.location});
+
+  @override
+  State<_KantoLocalAreaPanel> createState() => _KantoLocalAreaPanelState();
+}
+
+class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
+  String? _selectedFeature;
+
+  static const _palletFeatures = <String, String>{
+    'Dom gracza': 'Dom gracza — miejsce rozpoczęcia przygody.',
+    'Dom rywala': 'Dom rywala — punkt związany z początkiem historii.',
+    'Laboratorium Oaka': 'Laboratorium Profesora Oaka — ważne wydarzenia fabularne i Pokédex.',
+  };
+
+  static const _routeFeatures = <String, String>{
+    'Wyjście z Pallet Town': 'Południowe wejście na Route 1 prowadzi w stronę Pallet Town.',
+    'Trawa': 'Obszar spotkań z dzikimi Pokémonami opisany w poradniku. To symbol obszaru, nie dokładny zasięg trawy.',
+    'Youngster Ronny': 'Punkt informacyjny trenera Youngster Ronny. Zobacz opis walki i nagrody w danych Route 1.',
+    'Razz Berry': 'W poradniku opisano ukrytą Razz Berry. Dokładne miejsce nie jest tu zaznaczone.',
+  };
+
+  @override
+  void didUpdateWidget(covariant _KantoLocalAreaPanel oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.location != widget.location) _selectedFeature = null;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final location = widget.location;
+    if (location == null) return const SizedBox.shrink();
+
+    final isPallet = location == 'Pallet Town';
+    final features = isPallet ? _palletFeatures : _routeFeatures;
+    final selected = _selectedFeature;
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Schemat lokacji: $location',
+          style: Theme.of(context).textTheme.titleMedium,
+        ),
+        const SizedBox(height: 4),
+        const Text(
+          'Widok poglądowy. Rozmieszczenie symboli nie oznacza dokładnych współrzędnych ani skali mapy z gry.',
+          style: TextStyle(fontSize: 12),
+        ),
+        const SizedBox(height: 8),
+        ClipRRect(
+          borderRadius: BorderRadius.circular(12),
+          child: AspectRatio(
+            aspectRatio: 1.5,
+            child: CustomPaint(
+              painter: _KantoLocalAreaPainter(
+                isPallet: isPallet,
+                land: Theme.of(context).colorScheme.surfaceContainerHighest,
+                route: Theme.of(context).colorScheme.primary,
+                label: Theme.of(context).colorScheme.onSurface,
+              ),
+              child: const SizedBox.expand(),
+            ),
+          ),
+        ),
+        const SizedBox(height: 8),
+        Wrap(
+          spacing: 6,
+          runSpacing: 6,
+          children: features.keys.map((feature) {
+            final icon = feature.contains('Dom') || feature.contains('Laboratorium')
+                ? Icons.home_outlined
+                : feature == 'Trawa'
+                    ? Icons.grass
+                    : feature == 'Razz Berry'
+                        ? Icons.spa_outlined
+                        : feature == 'Youngster Ronny'
+                            ? Icons.person_outline
+                            : Icons.route_outlined;
+            return ChoiceChip(
+              avatar: Icon(icon, size: 16),
+              label: Text(feature),
+              selected: selected == feature,
+              onSelected: (_) => setState(() => _selectedFeature = feature),
+            );
+          }).toList(),
+        ),
+        if (selected != null) ...[
+          const SizedBox(height: 8),
+          Container(
+            width: double.infinity,
+            padding: const EdgeInsets.all(10),
+            decoration: BoxDecoration(
+              color: Theme.of(context).colorScheme.surfaceContainerHighest,
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: Text(features[selected]!),
+          ),
+        ],
+      ],
+    );
+  }
+}
+
+class _KantoLocalAreaPainter extends CustomPainter {
+  final bool isPallet;
+  final Color land;
+  final Color route;
+  final Color label;
+
+  const _KantoLocalAreaPainter({
+    required this.isPallet,
+    required this.land,
+    required this.route,
+    required this.label,
+  });
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    canvas.drawRect(Offset.zero & size, Paint()..color = land);
+    final roadPaint = Paint()
+      ..color = route.withValues(alpha: 0.42)
+      ..strokeWidth = 5
+      ..strokeCap = StrokeCap.round;
+    final path = Path();
+    if (isPallet) {
+      path
+        ..moveTo(size.width * .12, size.height * .78)
+        ..lineTo(size.width * .42, size.height * .78)
+        ..lineTo(size.width * .42, size.height * .52)
+        ..lineTo(size.width * .72, size.height * .52)
+        ..lineTo(size.width * .88, size.height * .25);
+    } else {
+      path
+        ..moveTo(size.width * .12, size.height * .88)
+        ..lineTo(size.width * .48, size.height * .58)
+        ..lineTo(size.width * .62, size.height * .34)
+        ..lineTo(size.width * .88, size.height * .12);
+    }
+    canvas.drawPath(path, roadPaint);
+
+    final markerPaint = Paint()..color = route;
+    final markers = isPallet
+        ? <(String, Offset)>[
+            ('Dom gracza', Offset(size.width * .22, size.height * .52)),
+            ('Dom rywala', Offset(size.width * .58, size.height * .72)),
+            ('Laboratorium Oaka', Offset(size.width * .72, size.height * .28)),
+          ]
+        : <(String, Offset)>[
+            ('Wyjście z Pallet Town', Offset(size.width * .12, size.height * .88)),
+            ('Trawa', Offset(size.width * .48, size.height * .58)),
+            ('Youngster Ronny', Offset(size.width * .62, size.height * .34)),
+            ('Razz Berry', Offset(size.width * .82, size.height * .20)),
+          ];
+
+    for (final marker in markers) {
+      final point = marker.$2;
+      if (isPallet && marker.$1.startsWith('Dom')) {
+        final house = Path()
+          ..moveTo(point.dx - 10, point.dy)
+          ..lineTo(point.dx, point.dy - 9)
+          ..lineTo(point.dx + 10, point.dy)
+          ..close();
+        canvas.drawPath(house, Paint()..color = Colors.brown.shade500);
+        canvas.drawRect(
+          Rect.fromLTWH(point.dx - 7, point.dy, 14, 10),
+          Paint()..color = Colors.orange.shade100,
+        );
+      } else {
+        canvas.drawCircle(point, 7, markerPaint);
+        canvas.drawCircle(point, 2.5, Paint()..color = Colors.white);
+      }
+      final text = TextPainter(
+        text: TextSpan(
+          text: marker.$1,
+          style: TextStyle(
+            color: label,
+            fontSize: 10,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+        textDirection: TextDirection.ltr,
+        maxLines: 2,
+      )..layout(maxWidth: size.width * .38);
+      var dx = point.dx + 10;
+      if (dx + text.width > size.width - 4) dx = point.dx - text.width - 10;
+      final dy = (point.dy + 8).clamp(2.0, size.height - text.height - 2);
+      text.paint(canvas, Offset(dx, dy));
+    }
+
+    final title = TextPainter(
+      text: TextSpan(
+        text: isPallet ? 'PALLET TOWN' : 'ROUTE 1',
+        style: TextStyle(
+          color: route,
+          fontSize: 13,
+          fontWeight: FontWeight.w900,
+          letterSpacing: 1.3,
+        ),
+      ),
+      textDirection: TextDirection.ltr,
+    )..layout(maxWidth: size.width - 12);
+    title.paint(canvas, const Offset(8, 8));
+  }
+
+  @override
+  bool shouldRepaint(covariant _KantoLocalAreaPainter oldDelegate) =>
+      isPallet != oldDelegate.isPallet ||
+      land != oldDelegate.land ||
+      route != oldDelegate.route ||
+      label != oldDelegate.label;
+}
 
 /// Pierwsza offline mapa poglądowa Kanto. Położenia są schematyczne;
 /// nie udają dokładnej mapy gry ani nie wyznaczają niepotwierdzonych tras.
