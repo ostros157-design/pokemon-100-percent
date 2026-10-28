@@ -394,6 +394,104 @@ class _MapsScreenState extends State<MapsScreen> {
                   controller: _locationSearchController,
                   onChanged: (value) => setState(() => _searchQuery = value),
                 ),
+                if (_isLetsGoKanto) ...[
+                  Card(
+                    child: Padding(
+                      padding: const EdgeInsets.all(16),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Dane lokacji — Let’s Go Kanto',
+                            style: Theme.of(context).textTheme.titleLarge,
+                          ),
+                          const SizedBox(height: 6),
+                          Text(
+                            normalizedQuery == 'pallet town'
+                                ? 'Pallet Town'
+                                : normalizedQuery == 'route 1'
+                                    ? 'Route 1'
+                                    : 'Wybierz Pallet Town lub Route 1, aby zobaczyć potwierdzone dane z początku gry.',
+                          ),
+                          const SizedBox(height: 10),
+                          Wrap(
+                            spacing: 8,
+                            runSpacing: 8,
+                            children: [
+                              ActionChip(
+                                avatar: const Icon(Icons.home_outlined, size: 18),
+                                label: const Text('Pallet Town'),
+                                onPressed: () {
+                                  _locationSearchController.text = 'Pallet Town';
+                                  setState(() => _searchQuery = 'Pallet Town');
+                                },
+                              ),
+                              ActionChip(
+                                avatar: const Icon(Icons.route_outlined, size: 18),
+                                label: const Text('Route 1'),
+                                onPressed: () {
+                                  _locationSearchController.text = 'Route 1';
+                                  setState(() => _searchQuery = 'Route 1');
+                                },
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 10),
+                          if (normalizedQuery == 'pallet town') ...[
+                            const Text(
+                              'Ważne miejsca',
+                              style: TextStyle(fontWeight: FontWeight.w700),
+                            ),
+                            const Text('• Dom gracza i dom rywala\n• Laboratorium Profesora Oaka'),
+                            const SizedBox(height: 8),
+                            const Text(
+                              'Początek gry',
+                              style: TextStyle(fontWeight: FontWeight.w700),
+                            ),
+                            const Text(
+                              '• Town Map — od mamy gracza\n'
+                              '• Pokédex — od Profesora Oaka po wydarzeniu z partnerem\n'
+                              '• Sportswear — od siostry rywala przy wyjściu na Route 1\n'
+                              '• Razz Berries — po dostarczeniu Oak’s Parcel',
+                            ),
+                            const SizedBox(height: 8),
+                            Text(
+                              _selectedGameId == 'lets_go_eevee'
+                                  ? 'Partner: Eevee Lv. 5 • rywal: Pikachu Lv. 6'
+                                  : 'Partner: Pikachu Lv. 5 • rywal: Eevee Lv. 6',
+                            ),
+                          ] else if (normalizedQuery == 'route 1') ...[
+                            const Text(
+                              'Dzikie Pokémony w trawie (poziomy 3–4)',
+                              style: TextStyle(fontWeight: FontWeight.w700),
+                            ),
+                            Text(
+                              _selectedGameId == 'lets_go_eevee'
+                                  ? '• Pidgey — 40%\n• Rattata — 30%\n• Bellsprout — 30%'
+                                  : '• Pidgey — 40%\n• Rattata — 30%\n• Oddish — 30%',
+                            ),
+                            const SizedBox(height: 8),
+                            const Text(
+                              'Trener: Youngster Ronny — Rattata Lv. 3; nagroda: 3 Poké Balle i ₽60.',
+                            ),
+                            const SizedBox(height: 8),
+                            const Text(
+                              'Ukryty przedmiot: Razz Berry w krzaku w północno-wschodniej części trasy. Partner musi zainteresować się krzakiem. Dokładna pozycja na mapie nie została potwierdzona.',
+                            ),
+                          ] else
+                            const Text(
+                              'Dane obejmują początek przygody: budynki i wydarzenia w Pallet Town oraz spotkania, trenera i przedmiot na Route 1. Nie pokazujemy pinezek przedmiotów, dopóki ich pozycje nie zostaną potwierdzone na podkładzie mapy.',
+                            ),
+                          const SizedBox(height: 8),
+                          const Text(
+                            'Dane tekstowe offline; pozycje pikselowe przedmiotów nie są jeszcze zweryfikowane.',
+                            style: TextStyle(fontSize: 12),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
                 const SizedBox(height: 12),
                 Text(
                   'Schemat podróży',
