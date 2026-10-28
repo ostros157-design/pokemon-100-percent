@@ -282,6 +282,34 @@ class _MapsScreenState extends State<MapsScreen> {
                                           setState(() => _searchQuery = location);
                                         },
                                       ),
+                                      const SizedBox(height: 10),
+                                      const Text(
+                                        'Legenda mapy',
+                                        style: TextStyle(fontWeight: FontWeight.w700),
+                                      ),
+                                      const SizedBox(height: 6),
+                                      Wrap(
+                                        spacing: 8,
+                                        runSpacing: 6,
+                                        children: const [
+                                          Chip(
+                                            avatar: Icon(Icons.home_outlined, size: 18),
+                                            label: Text('Miasto / budynki'),
+                                          ),
+                                          Chip(
+                                            avatar: Icon(Icons.catching_pokemon, size: 18),
+                                            label: Text('Poké Ball / nagroda'),
+                                          ),
+                                          Chip(
+                                            avatar: Icon(Icons.spa_outlined, size: 18),
+                                            label: Text('Jagoda / przedmiot'),
+                                          ),
+                                        ],
+                                      ),
+                                      const Text(
+                                        'Ikony przy Route 1 oznaczają informacje przypisane do tej lokacji, a nie dokładne współrzędne przedmiotów. Po wybraniu Route 1 sprawdź opis trasy, spotkania z Pokémonami i nagrodę trenera.',
+                                        style: TextStyle(fontSize: 12),
+                                      ),
                                       const SizedBox(height: 8),
                                       const Text(
                                         'Mapa jest schematyczna i służy do orientacji. Dokładne lokalne mapy poszczególnych lokacji będą dodawane dopiero po weryfikacji.',
