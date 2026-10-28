@@ -525,3 +525,11 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 - Dodano Route 1 jako osobny punkt na schemacie między Pallet Town a Viridian City. Kliknięcie oznaczonego punktu nadal wybiera lokację i aktualizuje wyszukiwanie.
 - Ważne ograniczenie: podkład pozostaje schematycznym rysunkiem Kanto, a nie wierną mapą z gry. Punkty mają charakter poglądowy; dokładna, duża mapa regionu i dokładne granice lokacji wymagają osobnego, zweryfikowanego podkładu/danych.
 - Testy Flutter, analiza statyczna i budowa APK nie zostały uruchomione w tej zmianie. Należy sprawdzić kompilację oraz zachowanie gestów na urządzeniu.
+
+## Mapy — czytelne ikony lokacji i przedmiotów (2026-10-28)
+
+- Ulepszono schemat Kanto w `lib/screens/maps_screen.dart`: połączenia między głównymi punktami prowadzą teraz przez Route 1 i Viridian City zamiast części wcześniejszych, nielogicznych skrótów.
+- Dodano proste graficzne znaczniki: budynek w Pallet Town oraz ikony Poké Balla i jagody przy Route 1, aby użytkownik szybciej rozpoznawał typ informacji.
+- Dodano legendę opisującą znaczenie ikon. Tekst jasno zaznacza, że znaczniki Route 1 przypisują informacje do obszaru, a nie wskazują dokładnych współrzędnych przedmiotów.
+- To nadal mapa poglądowa z własnoręcznie rysowanym podkładem; jej układ nie jest jeszcze wierną rekonstrukcją mapy gry.
+- Nie uruchomiono `flutter analyze`, testów ani budowy APK. Ostatnie uruchomienia GitHub Actions kończą się błędem; przed uznaniem funkcji za gotową trzeba ustalić przyczynę i sprawdzić kompilację.
