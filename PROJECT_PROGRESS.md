@@ -1,3 +1,11 @@
+### Aktualizacje Google Play i przygotowanie powiadomień push (2026-10-28)
+- Dodano zależności in_app_update oraz firebase_messaging, a także usługę sprawdzania aktualizacji Google Play.
+- Aplikacja wykonuje kontrolę po uruchomieniu i ponawia ją co 24 godziny, gdy proces pozostaje aktywny. Jeśli Google Play zgłasza nową wersję, pokazuje okno „Dostępna aktualizacja” z przyciskiem uruchomienia oficjalnego przepływu aktualizacji.
+- Ustawienia zawierają ręczne sprawdzanie aktualizacji oraz informację, czy FCM jest skonfigurowane. Dodano obsługę wiadomości FCM na pierwszym planie i uprawnienie Android 13+ do powiadomień.
+- Push jest przygotowany w kodzie, ale NIE jest jeszcze aktywny: brakuje konfiguracji Firebase/Google Services w Androidzie. Nie dodano pliku google-services.json ani sekretów. Instrukcja: docs/PRIVATE_UPDATES_SETUP.md.
+- Zapisano też ograniczenia: in-app update wymaga instalacji z Google Play, a sprawdzanie co 24 godziny działa tylko, gdy proces aplikacji pozostaje uruchomiony; następne sprawdzenie następuje przy kolejnym starcie.
+- W tej sesji nie uruchomiono flutter pub get, flutter analyze, testów ani buildu. Należy skonfigurować identyfikator pakietu, podpisywanie i kanał testowy Google Play oraz Firebase przed testem end-to-end.
+
 ### Mapy — połączenie schematów lokacji z poradnikiem (2026-10-28)
 - Po wybraniu elementu na schemacie Pallet Town lub Route 1 panel pokazuje teraz kroki poradnika przypisane do tej lokacji.
 - Kliknięcie kroku otwiera właściwy poradnik; dane pochodzą z istniejących `GuideStep.location` i nie dodają fikcyjnych kroków ani współrzędnych.
