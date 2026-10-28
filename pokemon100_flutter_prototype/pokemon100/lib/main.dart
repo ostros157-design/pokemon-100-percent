@@ -1,7 +1,12 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 import 'screens/home_screen.dart';
 import 'services/app_appearance.dart';
+import 'services/app_navigation.dart';
+import 'services/app_update_service.dart';
+import 'services/notification_service.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,6 +22,15 @@ class PokemonGuideApp extends StatefulWidget {
 }
 
 class _PokemonGuideAppState extends State<PokemonGuideApp> {
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      unawaited(NotificationService.initialize());
+      AppUpdateService.startDailyChecks();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return ValueListenableBuilder<bool>(
@@ -38,6 +52,7 @@ class _PokemonGuideAppState extends State<PokemonGuideApp> {
                   surface: background,
                 );
                 return MaterialApp(
+                  navigatorKey: AppNavigation.navigatorKey,
                   debugShowCheckedModeBanner: false,
                   title: 'Pokémon Guide',
                   theme: ThemeData(
