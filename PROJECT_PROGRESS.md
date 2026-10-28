@@ -1,3 +1,10 @@
+### Mapy — informacje lokacji oparte na poradniku (2026-10-28)
+- Rozszerzono panel lokalnej mapy o sekcję „Dane z poradnika”: Pokémony i przedmioty są zbierane z rzeczywistych pól kroków poradnika dla wybranej lokacji, a kroki opcjonalne są liczone na podstawie oznaczeń w danych.
+- Dodano informację wyjaśniającą, że lista jest oparta na poradniku i nie gwarantuje występowania każdego wpisu w każdym miejscu lokacji.
+- Usunięto z Route 1 niepotwierdzone etykiety „Youngster Ronny” i „Razz Berry”, a ikony na mapie opisują teraz ogólne informacje/obszar poglądowy zamiast sugerować zweryfikowane położenie nagrody lub przedmiotu.
+- Commit mapy: `081ac671417ce35a62454dd763df9c003b83c035`. Dodatkowa poprawka ikony: ef89df27d54d8545def709616792175037a3ccce.
+- Nie uruchomiono `flutter analyze`, testów ani kompilacji. Zmiana wymaga weryfikacji lokalnej. Schematyczne rozmieszczenie elementów nadal nie jest dokładną mapą gry.
+
 ### Mapy — postęp ukończenia kroków przy lokacjach (2026-10-28)
 - Ekran map odczytuje teraz zapisane kroki poradnika z `SharedPreferences` i pokazuje dla każdej lokacji licznik ukończenia (np. `2/4 kroki ukończone`).
 - Lokacja, której wszystkie powiązane kroki są ukończone, otrzymuje znacznik ukończenia. Dane są odczytywane osobno dla wybranej gry, zgodnie z istniejącym kluczem `guide_progress_<gameId>_<guideId>`; nie dodano nowego, konkurencyjnego zapisu postępu.
