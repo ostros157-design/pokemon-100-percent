@@ -455,3 +455,12 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 - Weryfikacja tekstowa opiera się na Serebii Pokéarth, Neoseeker i Routepedii. Źródła: https://www.serebii.net/pokearth/kanto/route1.shtml ; https://www.neoseeker.com/pokemon-lets-go-pikachu/Beginning_to_First_Gym/Route_1 ; https://theroutepedia.com/pokemon-lets-go-pikachu/route-1 ; https://theroutepedia.com/pokemon-lets-go-eevee/route-1
 - **Ograniczenie zachowane:** nie zatwierdzono współrzędnych ani lokalnego podkładu. Manifest nadal ma status badawczy i nie wolno rysować z niego dokładnych pinów. Pozycja Razz Berry jest opisana słownie, ale nie została dopasowana do pikseli/siatki mapy.
 - Status: dane zapisane w GitHubie; nie uruchomiono Flutter analyze, testów ani builda APK. Następny krok mapowy: zweryfikować podkład i układ Pallet Town oraz Route 1, zanim powstaną współrzędne.
+
+
+### Dystrybucja — automatyczny instalator APK w GitHub Releases (2026-10-28)
+- Dodano workflow `.github/workflows/build-android-release.yml`.
+- Workflow uruchamia się po zmianach w aplikacji na gałęzi `main` (oraz po ręcznym uruchomieniu z zakładki Actions), instaluje zależności Flutter i wykonuje `flutter build apk --release` na Ubuntu z Java 17.
+- Po udanej kompilacji workflow publikuje plik APK jako `pokemon-100-percent.apk` w nowym GitHub Release oznaczonym `android-build-N`; wydanie zawiera SHA commita źródłowego.
+- Plik workflow zapisany w commicie `140df77f3b358531dfc3905642ba24a621a67bc8`.
+- **Status:** konfiguracja zapisana, ale wynik pierwszego przebiegu GitHub Actions nie został jeszcze sprawdzony. Instalator nie jest potwierdzony jako dostępny do pobrania, dopóki workflow nie zakończy się sukcesem i nie pojawi się Release.
+- Repozytorium jest prywatne, więc dostęp do wydania i pobrania APK wymaga uprawnień do tego repozytorium. APK jest instalatorem Androida, nie programem Windows.
