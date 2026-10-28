@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../services/app_appearance.dart';
+import '../services/app_update_service.dart';
+import '../services/notification_service.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
@@ -12,6 +14,7 @@ class SettingsScreen extends StatefulWidget {
 class _SettingsScreenState extends State<SettingsScreen> {
   bool spoilers = false;
   bool animations = true;
+  bool _checkingUpdates = false;
 
   @override
   Widget build(BuildContext context) {
@@ -71,9 +74,56 @@ class _SettingsScreenState extends State<SettingsScreen> {
             onChanged: (value) => setState(() => animations = value),
           ),
           const Divider(),
+          const Padding(
+            padding: EdgeInsets.fromLTRB(16, 12, 16, 8),
+            child: Text('Aktualizacje i powiadomienia',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+          ),
+          ListTile(
+            leading: const Icon(Icons.system_update),
+            title: const Text('Aktualizacje Google Play'),
+            subtitle: const Text(
+              'Aplikacja sprawdza aktualizacje po uruchomieniu i co 24 godziny. '
+              'Aktualizacje w aplikacji działają po instalacji z Google Play.',
+            ),
+            trailing: _checkingUpdates
+                ? const SizedBox(
+                    width: 22,
+                    height: 22,
+                    child: CircularProgressIndicator(strokeWidth: 2),
+                  )
+                : const Icon(Icons.chevron_right),
+            onTap: _checkingUpdates
+                ? null
+                : () async {
+                    setState(() => _checkingUpdates = true);
+                    try {
+                      await AppUpdateService.checkForUpdate(
+                        context,
+                        showStatusWhenUnavailable: true,
+                      );
+                    } finally {
+                      if (mounted) setState(() => _checkingUpdates = false);
+                    }
+                  },
+          ),
+          ListTile(
+            leading: Icon(
+              NotificationService.isConfigured
+                  ? Icons.notifications_active
+                  : Icons.notifications_off_outlined,
+            ),
+            title: const Text('Powiadomienia push'),
+            subtitle: Text(
+              NotificationService.isConfigured
+                  ? 'Powiadomienia są skonfigurowane na tym urządzeniu.'
+                  : 'Wymaga konfiguracji Firebase w projekcie. Ta funkcja nie jest jeszcze aktywna.',
+            ),
+          ),
+          const Divider(),
           const ListTile(
             title: Text('Wersja aplikacji'),
-            subtitle: Text('Pokémon Guide 2.0.0'),
+            subtitle: Text('Wersja zostanie pokazana na podstawie metadanych kompilacji.'),
           ),
         ],
       ),
