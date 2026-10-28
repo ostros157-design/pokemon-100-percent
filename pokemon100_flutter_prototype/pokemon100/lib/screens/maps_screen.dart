@@ -866,7 +866,9 @@ class _KantoLocalAreaPainter extends CustomPainter {
       )..layout(maxWidth: size.width * .38);
       var dx = point.dx + 10;
       if (dx + text.width > size.width - 4) dx = point.dx - text.width - 10;
-      final dy = (point.dy + 8).clamp(2.0, size.height - text.height - 2);
+      final dy = (point.dy + 8)
+          .clamp(2.0, size.height - text.height - 2)
+          .toDouble();
       text.paint(canvas, Offset(dx, dy));
     }
 
