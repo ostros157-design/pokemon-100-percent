@@ -486,3 +486,9 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 - Istniejące wydanie z APK pozostaje dostępne: https://github.com/ostros157-design/pokemon-100-percent/releases/tag/android-build-2 . Istnieje też wydanie z danymi learnsetów: https://github.com/ostros157-design/pokemon-100-percent/releases/tag/android-learnsets-4 .
 - Commit zmiany workflow: `8a5076c546a43405cfbe8430b95877fa18477698`.
 - Status: poprawkę zapisano w GitHubie. Nowy przebieg Actions musi jeszcze potwierdzić, że publikacja Release przechodzi bez 403; sama kompilacja APK była potwierdzona w poprzednim przebiegu, ale jego publikacja nie.
+
+
+### Instalator Android — korekta składni workflow (2026-10-28)
+- Po zmianie publikowania wykryto, że workflow nie uruchomił zadania: blok akcji publikującej zawierał podwójne `with:`. Usunięto duplikat i pozostawiono `token` oraz wszystkie parametry publikacji w jednym bloku.
+- Commit korekty: `e0d54a228c51df3727e93cf9939b8f05ff1602f5`.
+- Status: poprawka zapisana. Trzeba sprawdzić kolejny przebieg GitHub Actions; dopiero jego wynik potwierdzi poprawność składni i publikacji APK.
