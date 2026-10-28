@@ -88,5 +88,6 @@ jobs:
             echo "Generated learnsets are already up to date."
           else
             git commit -m "Generate Pokémon learnset data"
+            git pull --rebase origin main
             git push
           fi
