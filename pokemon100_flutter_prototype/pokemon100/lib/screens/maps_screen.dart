@@ -844,7 +844,7 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
             ListTile(
               dense: true,
               contentPadding: EdgeInsets.zero,
-              leading: const Icon(Icons.catching_pokemon_outlined),
+              leading: const Icon(Icons.catching_pokemon),
               title: const Text('Pokémon wymienione w poradniku'),
               subtitle: Text(availablePokemon.join(', ')),
             ),
