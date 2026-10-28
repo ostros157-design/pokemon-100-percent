@@ -24,6 +24,7 @@ class _MapsScreenState extends State<MapsScreen> {
   String? _selectedGameId;
   bool _loading = true;
   String _searchQuery = '';
+  final Set<String> _completedStepKeys = <String>{};
   final TextEditingController _locationSearchController = TextEditingController();
 
   @override
@@ -69,7 +70,37 @@ class _MapsScreenState extends State<MapsScreen> {
       }
       _loading = false;
     });
+    await _loadCompletedSteps();
   }
+
+  Future<void> _loadCompletedSteps() async {
+    final preferences = await SharedPreferences.getInstance();
+    final completed = <String>{};
+    for (final guide in _guidesForGame) {
+      final saved = preferences.getStringList(
+            'guide_progress_${guide.gameId}_${guide.id}',
+          ) ??
+          const <String>[];
+      for (final rawIndex in saved) {
+        final index = int.tryParse(rawIndex);
+        if (index != null && index >= 0 && index < guide.steps.length) {
+          completed.add('${guide.id}:$index');
+        }
+      }
+    }
+    if (!mounted) return;
+    setState(() {
+      _completedStepKeys
+        ..clear()
+        ..addAll(completed);
+    });
+  }
+
+  int _completedCount(List<_LocationReference> references) =>
+      references.where((reference) =>
+          _completedStepKeys.contains(
+            '${reference.guide.id}:${reference.stepNumber - 1}',
+          )).length;
 
   int _generationFromLabel(String label) {
     final match = RegExp(r'Generacja (\d+)').firstMatch(label);
@@ -127,6 +158,7 @@ class _MapsScreenState extends State<MapsScreen> {
     await preferences.setString('selected_pokemon_game_id', gameId);
     if (!mounted) return;
     setState(() => _selectedGameId = gameId);
+    await _loadCompletedSteps();
   }
 
   @override
@@ -581,6 +613,9 @@ class _MapsScreenState extends State<MapsScreen> {
                     final entry = indexedEntry.value;
                     final references = entry.value;
                     final first = references.first;
+                    final completedCount = _completedCount(references);
+                    final allComplete = references.isNotEmpty &&
+                        completedCount == references.length;
                     final pokemon = <String>{};
                     final items = <String>{};
                     for (final reference in references) {
@@ -591,10 +626,16 @@ class _MapsScreenState extends State<MapsScreen> {
                     return Card(
                       child: ExpansionTile(
                         leading: CircleAvatar(
-                          child: Text('${locationIndex + 1}'),
+                          backgroundColor: allComplete
+                              ? Theme.of(context).colorScheme.primaryContainer
+                              : null,
+                          child: allComplete
+                              ? const Icon(Icons.check_circle_outline)
+                              : Text('${locationIndex + 1}'),
                         ),
                         title: Text(entry.key),
                         subtitle: Text(
+                          '$completedCount/${references.length} kroków ukończonych · '
                           '${references.length} ${references.length == 1 ? 'krok poradnika' : 'kroki poradnika'}',
                         ),
                         children: [
@@ -624,14 +665,17 @@ class _MapsScreenState extends State<MapsScreen> {
                                 subtitle: Text(reference.guide.title),
                                 trailing:
                                     const Icon(Icons.open_in_new, size: 18),
-                                onTap: () => Navigator.of(context).push(
-                                  MaterialPageRoute<void>(
-                                    builder: (_) => GuideScreen(
-                                      guide: reference.guide,
-                                      initialStepNumber: reference.stepNumber,
+                                onTap: () async {
+                                  await Navigator.of(context).push(
+                                    MaterialPageRoute<void>(
+                                      builder: (_) => GuideScreen(
+                                        guide: reference.guide,
+                                        initialStepNumber: reference.stepNumber,
+                                      ),
                                     ),
-                                  ),
-                                ),
+                                  );
+                                  await _loadCompletedSteps();
+                                },
                               )),
                           if (first.step.description.isNotEmpty)
                             Padding(
