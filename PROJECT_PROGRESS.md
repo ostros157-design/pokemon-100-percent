@@ -1,3 +1,10 @@
+### Mapy — połączenie schematów lokacji z poradnikiem (2026-10-28)
+- Po wybraniu elementu na schemacie Pallet Town lub Route 1 panel pokazuje teraz kroki poradnika przypisane do tej lokacji.
+- Kliknięcie kroku otwiera właściwy poradnik; dane pochodzą z istniejących `GuideStep.location` i nie dodają fikcyjnych kroków ani współrzędnych.
+- Gdy dla lokacji nie ma przypisanych kroków, aplikacja wyświetla jasny komunikat zamiast udawać, że powiązanie istnieje.
+- Commit kodu: `8d353f44fd4885f090e58639cbe1174c4ded5098`.
+- Status: zapisano w GitHubie. Nie uruchomiono `flutter analyze`, testów ani kompilacji APK, więc poprawność kompilacji i zachowanie w aplikacji nie są jeszcze potwierdzone.
+
 ### Naprawa błędu kompilacji APK — FlutterError (2026-10-28)
 - Z logu użytkownika potwierdzono błąd kompilacji w `lib/data/pokemon_learnset_data.dart:104`: typ `FlutterError` nie był widoczny w pliku.
 - Dodano jawny import `package:flutter/foundation.dart` z symbolem `FlutterError`. Obsługa brakującego assetu pozostaje bez zmian.
