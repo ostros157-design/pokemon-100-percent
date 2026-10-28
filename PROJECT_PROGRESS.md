@@ -509,3 +509,11 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 - Zachowano automatyczne uruchamianie po pushu do `main`, ręczne `workflow_dispatch`, anulowanie przestarzałych buildów oraz limit 45 minut.
 - Commity workflow: `a432b4a5844c28a6bd564a9340fcb7d89aba713d` (najnowsza kompilacja ma pierwszeństwo), `1238cffcdab23263dbdb7b1ab2fa2191ab5ee9b0` (nieblokowanie buildu przez błąd publikacji Release).
 - Status: build i upload artefaktu potwierdzone w logach uruchomienia 9; poprawka awaryjnego sukcesu oczekuje na wynik nowego uruchomienia. Bez zmiany uprawnień GitHuba nie można obiecać, że GitHub Release zostanie utworzony; artefakt Actions pozostaje działającą drogą pobrania APK.
+
+### Mapy — pierwsze szczegóły lokacji Let’s Go Kanto (2026-10-28)
+- Rozbudowano `lib/screens/maps_screen.dart` o offline’owy panel szczegółów dla Pallet Town i Route 1, z szybkimi przyciskami wyboru lokacji.
+- Pallet Town pokazuje ważne budynki, wydarzenia/podarki początku gry oraz partnera i Pokémon rywala zależnie od wersji Let’s Go Pikachu / Let’s Go Eevee.
+- Route 1 pokazuje potwierdzone spotkania w trawie z poziomami i procentami, trenera Youngster Ronny’ego z drużyną i nagrodą oraz opis ukrytej Razz Berry.
+- Nie dodano niezweryfikowanych pinezek ani współrzędnych. Panel jasno zaznacza, że pozycja pikselowa ukrytego przedmiotu nie została potwierdzona.
+- Commit kodu: `39112efe514d8df2585c3d8191511b0b8fb41f9c`.
+- Status: zmiany zapisane bezpośrednio w GitHubie; `flutter analyze`, testy i build nie zostały uruchomione w tej sesji. Wymagany test na urządzeniu oraz sprawdzenie automatycznej kompilacji APK.
