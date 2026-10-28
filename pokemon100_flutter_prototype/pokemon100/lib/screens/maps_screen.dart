@@ -253,7 +253,7 @@ class _MapsScreenState extends State<MapsScreen> {
                                           SizedBox(width: 8),
                                           Expanded(
                                             child: Text(
-                                              'Dokładna mapa Let’s Go — etap weryfikacji',
+                                              'Mapa offline Kanto — schemat regionu',
                                               style: TextStyle(fontWeight: FontWeight.w700),
                                             ),
                                           ),
@@ -261,16 +261,29 @@ class _MapsScreenState extends State<MapsScreen> {
                                       ),
                                       const SizedBox(height: 8),
                                       const Text(
-                                        'Nie pokazujemy przybliżonych punktów jako dokładnych. Do mapy offline każdy punkt musi mieć pozycję na właściwym podkładzie konkretnej lokacji oraz źródło weryfikacji. Kategorie: przedmioty, ukryte przedmioty, trenerzy, Pokémony i wejścia.',
+                                        'Poniżej znajduje się schematyczna mapa Kanto rysowana przez aplikację, więc działa bez internetu. Pokazuje główne miasta i ogólny układ regionu — nie jest mapą w skali i nie zawiera jeszcze dokładnych punktów przedmiotów, trenerów ani dzikich Pokémonów.',
                                       ),
                                       const SizedBox(height: 10),
                                       const Text(
-                                        'Pierwszy zakres do opracowania',
+                                        'Co działa offline i co wymaga dalszego opracowania',
                                         style: TextStyle(fontWeight: FontWeight.w700),
                                       ),
                                       const SizedBox(height: 4),
                                       const Text(
                                         '• Pallet Town: dom gracza, dom rywala, laboratorium Oaka, Town Map i prezenty fabularne.\n• Route 1: układ trasy, trener Youngster Ronny i dzikie Pokémony.\n• Pozycje na mapie pozostają niezatwierdzone, dopóki nie zostaną przypisane do zweryfikowanego podkładu.',
+                                      ),
+                                      const SizedBox(height: 12),
+                                      _KantoRegionMap(
+                                        selectedLocation: _searchQuery,
+                                        onLocationSelected: (location) {
+                                          _locationSearchController.text = location;
+                                          setState(() => _searchQuery = location);
+                                        },
+                                      ),
+                                      const SizedBox(height: 8),
+                                      const Text(
+                                        'Mapa jest schematyczna i służy do orientacji. Dokładne lokalne mapy poszczególnych lokacji będą dodawane dopiero po weryfikacji.',
+                                        style: TextStyle(fontSize: 12),
                                       ),
                                       const SizedBox(height: 8),
                                       const Text(
