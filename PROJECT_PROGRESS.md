@@ -478,3 +478,11 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 - W commicie `5cd1b932c9a8a40e6a446aa8643f602613cf4629` workflow generowania rozszerzono o kroki instalacji Java 17 i Flutter, kompilację APK oraz publikację wydania `android-learnsets-N`.
 - **Status:** commit generujący dane istnieje; wynik kompilacji i istnienie opublikowanego Release wymagają osobnego potwierdzenia. Nie uruchomiono lokalnie Flutter analyze/test/build.
 
+
+
+### Instalator Android — niezawodniejsze publikowanie APK (2026-10-28)
+- Sprawdzono historię GitHub Actions: kompilacja APK w przebiegu `40643466684` zakończyła się sukcesem i utworzyła plik ok. 55 MB, ale publikacja GitHub Release nie powiodła się błędem HTTP 403 `Resource not accessible by integration`.
+- Zaktualizowano `.github/workflows/build-android-release.yml`: jawne uprawnienie `contents: write` na poziomie zadania, jawne przekazanie `secrets.GITHUB_TOKEN` do akcji publikującej, stała nazwa pliku `pokemon-100-percent.apk` oraz dodatkowy artefakt Actions do pobrania przez 30 dni jako zabezpieczenie, gdy publikacja Release zawiedzie.
+- Istniejące wydanie z APK pozostaje dostępne: https://github.com/ostros157-design/pokemon-100-percent/releases/tag/android-build-2 . Istnieje też wydanie z danymi learnsetów: https://github.com/ostros157-design/pokemon-100-percent/releases/tag/android-learnsets-4 .
+- Commit zmiany workflow: `8a5076c546a43405cfbe8430b95877fa18477698`.
+- Status: poprawkę zapisano w GitHubie. Nowy przebieg Actions musi jeszcze potwierdzić, że publikacja Release przechodzi bez 403; sama kompilacja APK była potwierdzona w poprzednim przebiegu, ale jego publikacja nie.
