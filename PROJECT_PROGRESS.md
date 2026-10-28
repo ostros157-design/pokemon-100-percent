@@ -517,3 +517,11 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 - Nie dodano niezweryfikowanych pinezek ani współrzędnych. Panel jasno zaznacza, że pozycja pikselowa ukrytego przedmiotu nie została potwierdzona.
 - Commit kodu: `39112efe514d8df2585c3d8191511b0b8fb41f9c`.
 - Status: zmiany zapisane bezpośrednio w GitHubie; `flutter analyze`, testy i build nie zostały uruchomione w tej sesji. Wymagany test na urządzeniu oraz sprawdzenie automatycznej kompilacji APK.
+
+## Mapy — przesuwanie, przybliżanie i chwilowa etykieta lokacji (2026-10-28)
+
+- Mapa Kanto w `lib/screens/maps_screen.dart` ma teraz interakcje przesuwania i zoomu przez gesty, zamiast reagować wyłącznie na pojedyncze kliknięcia.
+- Podczas przesuwania/zoomowania aplikacja sprawdza, czy środek widocznego obszaru znajduje się blisko oznaczonej lokacji. Jeśli tak, pokazuje u góry nazwę miejsca; etykieta znika po około 2 sekundach bez zmiany lokacji.
+- Dodano Route 1 jako osobny punkt na schemacie między Pallet Town a Viridian City. Kliknięcie oznaczonego punktu nadal wybiera lokację i aktualizuje wyszukiwanie.
+- Ważne ograniczenie: podkład pozostaje schematycznym rysunkiem Kanto, a nie wierną mapą z gry. Punkty mają charakter poglądowy; dokładna, duża mapa regionu i dokładne granice lokacji wymagają osobnego, zweryfikowanego podkładu/danych.
+- Testy Flutter, analiza statyczna i budowa APK nie zostały uruchomione w tej zmianie. Należy sprawdzić kompilację oraz zachowanie gestów na urządzeniu.
