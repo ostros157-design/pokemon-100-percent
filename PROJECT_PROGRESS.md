@@ -540,3 +540,11 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 - Zmiana kodu: `de40ee6964300e10360a796220e36c3c1cd93433`.
 - Status: zapisano w GitHubie. Nie uruchomiono `flutter analyze`, testów ani kompilacji APK; działanie gestów i trafiania w ikony wymaga sprawdzenia w aplikacji.
 
+### Mapy — lokalne schematy Pallet Town i Route 1 (2026-10-28)
+- Po wpisaniu lub wybraniu dokładnie „Pallet Town” albo „Route 1” pod panelem danych pojawia się osobny, większy schemat lokalny działający offline.
+- Pallet Town pokazuje symbole domu gracza, domu rywala i laboratorium Oaka; Route 1 pokazuje wejście od strony Pallet Town, obszar trawy, punkt informacyjny trenera Youngster Ronny’ego oraz obszar informacji o Razz Berry.
+- Pod schematem są wybieralne etykiety. Po wybraniu etykiety pojawia się krótki opis danego punktu; przełączenie lokacji czyści poprzedni wybór.
+- Schematy są wyraźnie oznaczone jako poglądowe. Nie są deklarowane jako dokładne współrzędne ani rekonstrukcja pikselowa map z gry.
+- Commity kodu: `4cd99d0e67782ea1e72aaeeb22f26a9c65f1bf85` (lokalne schematy) oraz `f16a8c2233a9b3cc1d05d0cb1a86f4e13c174cc1` (jawna konwersja pozycji etykiety na `double`).
+- Status: zapisano w GitHubie. Nie uruchomiono `flutter analyze`, testów ani builda APK; wygląd i kompilacja wymagają weryfikacji w CI lub na urządzeniu.
+
