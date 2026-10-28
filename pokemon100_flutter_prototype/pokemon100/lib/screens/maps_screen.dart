@@ -912,9 +912,10 @@ class _KantoMapPainter extends CustomPainter {
       ..style = PaintingStyle.stroke
       ..strokeWidth = 2);
 
+    // Approximate route network for orientation, not a scale-accurate game map.
     const links = <(int, int)>[
-      (0, 11), (11, 1), (1, 2), (2, 10), (1, 6), (6, 7), (7, 3),
-      (7, 4), (7, 5), (4, 8), (0, 9), (3, 5),
+      (0, 1), (1, 2), (2, 3), (3, 4), (4, 8), (8, 5),
+      (5, 9), (2, 7), (7, 8), (8, 6), (3, 11), (5, 10),
     ];
     final roadPaint = Paint()
       ..color = route.withValues(alpha: .72)
@@ -931,6 +932,14 @@ class _KantoMapPainter extends CustomPainter {
       final isSelected = place.name.toLowerCase() == selectedLocation.toLowerCase();
       if (isSelected) {
         canvas.drawCircle(point, 13, Paint()..color = route.withValues(alpha: .24));
+      }
+      if (place.name == 'Pallet Town') {
+        _drawHouse(canvas, point + const Offset(0, -16), route);
+      } else if (place.name == 'Route 1') {
+        // A berry and Poké Ball indicate guide information for this route.
+        // They are area markers only; they do not claim exact item coordinates.
+        _drawBerry(canvas, point + const Offset(13, -15));
+        _drawPokeball(canvas, point + const Offset(-12, -15));
       }
       canvas.drawCircle(point, isSelected ? 8 : 7, Paint()..color = route);
       canvas.drawCircle(point, 3, Paint()..color = Colors.white);
@@ -966,6 +975,76 @@ class _KantoMapPainter extends CustomPainter {
       textDirection: TextDirection.ltr,
     )..layout();
     title.paint(canvas, Offset(size.width - title.width - 14, 12));
+  }
+
+  void _drawPokeball(Canvas canvas, Offset center) {
+    canvas.drawCircle(center, 7, Paint()..color = Colors.white);
+    canvas.drawArc(
+      Rect.fromCircle(center: center, radius: 7),
+      3.14159,
+      3.14159,
+      true,
+      Paint()..color = Colors.red.shade600,
+    );
+    canvas.drawCircle(
+      center,
+      7,
+      Paint()
+        ..color = Colors.black87
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 1,
+    );
+    canvas.drawLine(
+      center + const Offset(-6.5, 0),
+      center + const Offset(6.5, 0),
+      Paint()..color = Colors.black87..strokeWidth = 1.5,
+    );
+    canvas.drawCircle(center, 2.2, Paint()..color = Colors.white);
+    canvas.drawCircle(
+      center,
+      2.2,
+      Paint()
+        ..color = Colors.black87
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 1,
+    );
+  }
+
+  void _drawBerry(Canvas canvas, Offset center) {
+    final berryPaint = Paint()..color = Colors.pink.shade400;
+    canvas.drawCircle(center + const Offset(-3, 1), 4, berryPaint);
+    canvas.drawCircle(center + const Offset(3, 1), 4, berryPaint);
+    canvas.drawCircle(center + const Offset(0, 4), 4, berryPaint);
+    canvas.drawLine(
+      center + const Offset(0, -1),
+      center + const Offset(1, -7),
+      Paint()
+        ..color = Colors.green.shade700
+        ..strokeWidth = 2
+        ..strokeCap = StrokeCap.round,
+    );
+    canvas.drawCircle(center, 8, Paint()..color = Colors.white.withValues(alpha: .75)..style = PaintingStyle.stroke..strokeWidth = 1);
+  }
+
+  void _drawHouse(Canvas canvas, Offset center, Color color) {
+    final roof = Path()
+      ..moveTo(center.dx - 9, center.dy)
+      ..lineTo(center.dx, center.dy - 8)
+      ..lineTo(center.dx + 9, center.dy)
+      ..close();
+    canvas.drawPath(roof, Paint()..color = Colors.brown.shade500);
+    canvas.drawRect(
+      Rect.fromLTWH(center.dx - 7, center.dy, 14, 10),
+      Paint()..color = Colors.orange.shade100,
+    );
+    canvas.drawRect(
+      Rect.fromLTWH(center.dx - 2, center.dy + 3, 4, 7),
+      Paint()..color = color,
+    );
+    canvas.drawPath(
+      roof,
+      Paint()..color = Colors.black45..style = PaintingStyle.stroke..strokeWidth = 1,
+    );
   }
 
   @override
