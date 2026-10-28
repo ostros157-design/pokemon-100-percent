@@ -446,3 +446,12 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 
 - Dodatkowa poprawka: jeśli użytkownik nie ma jeszcze zapisanej gry, indeks map wybiera pierwszą grę z katalogu zamiast pokazywać pusty ekran (`e666101ff122842d3a0c0adbf2ecd30471cfff09`).
 
+
+
+### Mapy — weryfikacja tekstowych danych Route 1 Let’s Go (2026-10-28)
+- Rozszerzono manifest audytu `assets/data/maps/lets_go_kanto_audit.json` o osobne listy spotkań dla Let’s Go, Pikachu! i Let’s Go, Eevee!: Pidgey 40%, Rattata 30% oraz odpowiednio Oddish/Bellsprout 30%, wszystkie na poziomach 3–4.
+- Doprecyzowano Youngstera Ronny’ego: Rattata poziom 3, ruchy Tackle/Tail Whip, nagroda 60 i 3 Poké Balle.
+- Dodano opisane tekstowo przedmioty Route 1: Razz Berry z krzaka w północno-wschodniej części trasy (partner musi wskazać krzak), Potion od pracownika Poké Martu po dostarczeniu paczki oraz 3 Poké Balle za pokonanie trenera.
+- Weryfikacja tekstowa opiera się na Serebii Pokéarth, Neoseeker i Routepedii. Źródła: https://www.serebii.net/pokearth/kanto/route1.shtml ; https://www.neoseeker.com/pokemon-lets-go-pikachu/Beginning_to_First_Gym/Route_1 ; https://theroutepedia.com/pokemon-lets-go-pikachu/route-1 ; https://theroutepedia.com/pokemon-lets-go-eevee/route-1
+- **Ograniczenie zachowane:** nie zatwierdzono współrzędnych ani lokalnego podkładu. Manifest nadal ma status badawczy i nie wolno rysować z niego dokładnych pinów. Pozycja Razz Berry jest opisana słownie, ale nie została dopasowana do pikseli/siatki mapy.
+- Status: dane zapisane w GitHubie; nie uruchomiono Flutter analyze, testów ani builda APK. Następny krok mapowy: zweryfikować podkład i układ Pallet Town oraz Route 1, zanim powstaną współrzędne.
