@@ -34,7 +34,7 @@ jobs:
 
       - name: Generate learnsets from PokéAPI CSV data
         env:
-          MAX_DEX: ${{ inputs.max_dex }}
+          MAX_DEX: ${{ inputs.max_dex || '1025' }}
         run: |
           python tools/import_pokemon_moves.py \
             --download \
