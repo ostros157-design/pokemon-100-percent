@@ -1,6 +1,13 @@
 name: Generate Pokémon learnsets
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'tools/import_pokemon_moves.py'
+      - 'tools/test_import_pokemon_moves.py'
+      - '.github/workflows/generate-pokemon-learnsets.yml'
   workflow_dispatch:
     inputs:
       max_dex:
