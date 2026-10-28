@@ -729,6 +729,27 @@ class _KantoRegionMapState extends State<_KantoRegionMap> {
   }
 
   void _selectTappedPlace(Offset tap) {
+    // These two symbols sit beside the Route 1 node. Treat them as separate
+    // targets so tapping a symbol explains its meaning, not just the town.
+    final routeOne = _KantoMapPainter.places.firstWhere(
+      (place) => place.name == 'Route 1',
+    );
+    final routeX = routeOne.x * _mapSize;
+    final routeY = routeOne.y * _mapSize;
+    final pokeballCenter = Offset(routeX - 12, routeY - 15);
+    final berryCenter = Offset(routeX + 13, routeY - 15);
+
+    if ((tap - pokeballCenter).distance <= 14) {
+      _showLocation('Route 1 • nagroda trenera');
+      widget.onLocationSelected('Route 1');
+      return;
+    }
+    if ((tap - berryCenter).distance <= 14) {
+      _showLocation('Route 1 • Razz Berry (obszar przybliżony)');
+      widget.onLocationSelected('Route 1');
+      return;
+    }
+
     _MapPlace? nearest;
     var nearestDistance = double.infinity;
     for (final place in _KantoMapPainter.places) {
