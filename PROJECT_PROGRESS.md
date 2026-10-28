@@ -464,3 +464,10 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 - Plik workflow zapisany w commicie `140df77f3b358531dfc3905642ba24a621a67bc8`.
 - **Status:** konfiguracja zapisana, ale wynik pierwszego przebiegu GitHub Actions nie został jeszcze sprawdzony. Instalator nie jest potwierdzony jako dostępny do pobrania, dopóki workflow nie zakończy się sukcesem i nie pojawi się Release.
 - Repozytorium jest prywatne, więc dostęp do wydania i pobrania APK wymaga uprawnień do tego repozytorium. APK jest instalatorem Androida, nie programem Windows.
+
+
+### Poprawki po teście instalatora na urządzeniu (2026-10-28)
+- Osiągnięcia: odblokowane nazwy i ikony używają teraz jawnie koloru głównego motywu; zablokowane pozostają szare. Commit: `2e017795257fd5524faad265431187d37672c497`.
+- Mapy offline: ekran Let’s Go pokazuje schematyczną mapę Kanto rysowaną lokalnie w aplikacji. Jest dostępna bez internetu, ale nie przedstawia dokładnej mapy gry ani dokładnych punktów przedmiotów/trenerów/Pokémonów. Pozostałe regiony nadal wymagają przygotowania zweryfikowanych map. Commit: `c4704815813541174212108b7e295b6f4ee68995`.
+- Ataki: wykryto, że `assets/data/pokemon_learnsets.json` zawierało `[]`, dlatego sekcja ruchów była pusta. Zmieniono workflow generowania learnsetów, aby uruchamiał się również po zmianach importera/workflow i domyślnie pobierał dane dla National Dex do #1025. Commity workflow: `1110b477d0fa369a9c42b12c522815e8c9400e35`, `42bad4aac7b7db27c2a1177adc76c7ad32a6b6e3`.
+- Status: generowanie danych i nowe kompilacje APK są w GitHub Actions. Nie oznaczać jeszcze learnsetów ani nowego APK jako przetestowanych, dopóki oba workflow nie zakończą się sukcesem i nie zostanie pobrane wydanie.
