@@ -563,3 +563,5 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 - Zachowano dotychczasowy zapis postępu kroków w SharedPreferences. Widok listy kroków jest budowany z kluczami, aby przewinięcie mogło znaleźć konkretną kartę.
 - Commity kodu: `05acb2625730c3ae8609792ff9d0154cf78fdcc5` (GuideScreen), `bebdfd199d2e746427ec91e841c251e4e11afa7a` (mapy).
 - Status: zapisano bezpośrednio w GitHubie. Nie uruchomiono `flutter analyze`, testów ani builda APK w tej sesji; przewijanie należy potwierdzić po kompilacji i na urządzeniu.
+
+- Drobna korekta typowania po przeglądzie kodu: indeks kroku po ograniczeniu do zakresu jest jawnie konwertowany na `int`. Commit: `284314e0a893628a554f8dfc96b50106615d6da6`. Nadal nie uruchomiono analizy ani kompilacji.
