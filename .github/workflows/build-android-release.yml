@@ -13,14 +13,17 @@ on:
 permissions:
   contents: write
 
+# Keep only the newest build for main; stale queued builds should not block
+# the APK for the latest commit.
 concurrency:
   group: android-release-${{ github.ref }}
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build-and-release:
     name: Build APK and publish GitHub Release
     runs-on: ubuntu-latest
+    timeout-minutes: 45
     permissions:
       contents: write
     steps:
@@ -68,7 +71,7 @@ jobs:
           target_commitish: ${{ github.sha }}
           body: |
             Automatyczna kompilacja aplikacji Pokémon 100% dla Androida.
-            
+
             - Plik instalacyjny: `pokemon-100-percent.apk`
             - Kompilacja utworzona z commita: ${{ github.sha }}
             - To wydanie testowe; sprawdź działanie aplikacji przed użyciem jako wersji stabilnej.
