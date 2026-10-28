@@ -26,8 +26,8 @@ class AppUpdateService {
     );
   }
 
-  static Future<void> checkForUpdate(
-    [BuildContext? context], {
+  static Future<void> checkForUpdate({
+    BuildContext? context,
     bool showStatusWhenUnavailable = false,
   }) async {
     if (!Platform.isAndroid || _checkInProgress) return;
