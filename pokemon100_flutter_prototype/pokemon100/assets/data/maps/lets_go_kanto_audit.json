@@ -47,6 +47,21 @@
       "id": "bulbapedia-start",
       "url": "https://bulbapedia.bulbagarden.net/wiki/Walkthrough:Pok%C3%A9mon:Let%27s_Go,_Pikachu!_and_Let%27s_Go,_Eevee!/Part_1",
       "scope": "Story sequence and gifts"
+    },
+    {
+      "id": "serebii-route1",
+      "url": "https://www.serebii.net/pokearth/kanto/route1.shtml",
+      "scope": "Route 1 version-specific encounter rates, trainer, reward and items"
+    },
+    {
+      "id": "neoseeker-route1",
+      "url": "https://www.neoseeker.com/pokemon-lets-go-pikachu/Beginning_to_First_Gym/Route_1",
+      "scope": "Route 1 Razz Berry interaction and item acquisition details"
+    },
+    {
+      "id": "bulbapedia-part2",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Walkthrough:Pok%C3%A9mon:_Let%27s_Go,_Pikachu!_and_Let%27s_Go,_Eevee!/Part_2",
+      "scope": "Route 1 trainer and parcel-delivery event context"
     }
   ],
   "locations": [
@@ -149,10 +164,22 @@
           "team": [
             {
               "name": "Rattata",
-              "level": 3
+              "level": 3,
+              "moves": [
+                "Tackle",
+                "Tail Whip"
+              ]
             }
           ],
-          "status": "text_verified"
+          "reward": {
+            "pokeballs": 3,
+            "money": 60
+          },
+          "status": "text_verified",
+          "sourceIds": [
+            "serebii-route1",
+            "bulbapedia-part2"
+          ]
         }
       ],
       "wildPokemon": {
@@ -167,7 +194,114 @@
           "Bellsprout"
         ]
       },
-      "hiddenItemsStatus": "requires_location_by_location_verification"
+      "hiddenItemsStatus": "Textual item list verified against Serebii and Neoseeker; the Razz Berry's in-game area is described, but no pixel/tile coordinates are approved.",
+      "wildPokemonDetails": {
+        "lets_go_pikachu": [
+          {
+            "name": "Pidgey",
+            "method": "grass",
+            "levelRange": [
+              3,
+              4
+            ],
+            "ratePercent": 40
+          },
+          {
+            "name": "Rattata",
+            "method": "grass",
+            "levelRange": [
+              3,
+              4
+            ],
+            "ratePercent": 30
+          },
+          {
+            "name": "Oddish",
+            "method": "grass",
+            "levelRange": [
+              3,
+              4
+            ],
+            "ratePercent": 30
+          }
+        ],
+        "lets_go_eevee": [
+          {
+            "name": "Pidgey",
+            "method": "grass",
+            "levelRange": [
+              3,
+              4
+            ],
+            "ratePercent": 40
+          },
+          {
+            "name": "Rattata",
+            "method": "grass",
+            "levelRange": [
+              3,
+              4
+            ],
+            "ratePercent": 30
+          },
+          {
+            "name": "Bellsprout",
+            "method": "grass",
+            "levelRange": [
+              3,
+              4
+            ],
+            "ratePercent": 30
+          }
+        ],
+        "status": "text_verified",
+        "sourceIds": [
+          "serebii-route1",
+          "routepedia-route1-pikachu",
+          "routepedia-route1-eevee"
+        ]
+      },
+      "items": [
+        {
+          "id": "route1_razz_berry",
+          "name": "Razz Berry",
+          "category": "partner_found_hidden_item",
+          "quantity": 1,
+          "locationDescription": "Bush in the north-east corner of Route 1; interact with the partner Pokémon when it investigates the bush.",
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-route1",
+            "neoseeker-route1"
+          ],
+          "status": "text_verified_position_not_mapped"
+        },
+        {
+          "id": "route1_potion",
+          "name": "Potion",
+          "category": "npc_gift",
+          "quantity": 1,
+          "locationDescription": "Given by the Viridian City Poké Mart clerk after delivering Oak’s Parcel.",
+          "coordinateStatus": "not_applicable",
+          "sourceIds": [
+            "serebii-route1",
+            "neoseeker-route1"
+          ],
+          "status": "text_verified"
+        },
+        {
+          "id": "route1_pokeballs_reward",
+          "name": "Poké Ball",
+          "category": "trainer_reward",
+          "quantity": 3,
+          "locationDescription": "Reward for defeating Youngster Ronny.",
+          "coordinateStatus": "not_applicable",
+          "sourceIds": [
+            "serebii-route1",
+            "bulbapedia-part2"
+          ],
+          "status": "text_verified"
+        }
+      ]
     }
   ]
 }
