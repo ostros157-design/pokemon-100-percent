@@ -6,10 +6,13 @@ import '../widgets/guide_step_card.dart';
 
 class GuideScreen extends StatefulWidget {
   final Guide guide;
+  /// Optional one-based step number to reveal when opened from a map.
+  final int? initialStepNumber;
 
   const GuideScreen({
     super.key,
     required this.guide,
+    this.initialStepNumber,
   });
 
   @override
@@ -18,7 +21,11 @@ class GuideScreen extends StatefulWidget {
 
 class _GuideScreenState extends State<GuideScreen> {
   final Set<int> completedSteps = {};
+  final ScrollController _scrollController = ScrollController();
+  late final List<GlobalKey> _stepKeys =
+      List<GlobalKey>.generate(widget.guide.steps.length, (_) => GlobalKey());
   bool _isLoadingProgress = true;
+  bool _didApplyInitialStep = false;
 
   String get _progressKey =>
       'guide_progress_${widget.guide.gameId}_${widget.guide.id}';
@@ -27,6 +34,12 @@ class _GuideScreenState extends State<GuideScreen> {
   void initState() {
     super.initState();
     _loadProgress();
+  }
+
+  @override
+  void dispose() {
+    _scrollController.dispose();
+    super.dispose();
   }
 
   Future<void> _loadProgress() async {
@@ -44,6 +57,26 @@ class _GuideScreenState extends State<GuideScreen> {
         ..clear()
         ..addAll(restoredSteps);
       _isLoadingProgress = false;
+    });
+    _revealInitialStep();
+  }
+
+  void _revealInitialStep() {
+    if (_didApplyInitialStep) return;
+    _didApplyInitialStep = true;
+    final requested = widget.initialStepNumber;
+    if (requested == null || widget.guide.steps.isEmpty) return;
+    final index = (requested - 1).clamp(0, widget.guide.steps.length - 1);
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!mounted) return;
+      final targetContext = _stepKeys[index].currentContext;
+      if (targetContext == null) return;
+      Scrollable.ensureVisible(
+        targetContext,
+        alignment: 0.08,
+        duration: const Duration(milliseconds: 350),
+        curve: Curves.easeInOut,
+      );
     });
   }
 
@@ -81,13 +114,14 @@ class _GuideScreenState extends State<GuideScreen> {
                 Expanded(
                   child: guide.steps.isEmpty
                       ? _buildEmptyGuide()
-                      : ListView.builder(
+                      : ListView(
+                          controller: _scrollController,
                           padding: const EdgeInsets.all(16),
-                          itemCount: guide.steps.length,
-                          itemBuilder: (context, index) {
+                          children: List<Widget>.generate(guide.steps.length, (index) {
                             final step = guide.steps[index];
 
                             return GuideStepCard(
+                              key: _stepKeys[index],
                               step: step,
                               completed: completedSteps.contains(index),
                               onChanged: () async {
@@ -101,7 +135,7 @@ class _GuideScreenState extends State<GuideScreen> {
                                 await _saveProgress();
                               },
                             );
-                          },
+                          }),
                         ),
                 ),
               ],
