@@ -12,7 +12,7 @@
 
 1. Utwórz lub skonfiguruj aplikację w Google Play Console.
 2. Przed publikacją wybierz unikalny identyfikator pakietu. Obecny applicationId to com.example.pokemon_100 i jest przykładowy; należy go zmienić przed pierwszym wydaniem, a potem zachować bez zmian.
-3. Skonfiguruj podpisywanie wersji produkcyjnej i bezpiecznie zachowaj klucz/konfigurację podpisu. Nie używaj klucza debug jako klucza publikacyjnego.
+3. Ważne: obecny android/app/build.gradle.kts ustawia dla wariantu release podpisywanie kluczem debug. Przed publikacją trzeba skonfigurować bezpieczne podpisywanie release i zachować klucz/konfigurację podpisu. Nie publikuj wersji podpisanej kluczem debug.
 4. Włącz testy wewnętrzne i dodaj konto Google testera.
 5. Zbuduj i prześlij Android App Bundle (flutter build appbundle --release) zgodnie z konfiguracją podpisywania, a następnie zainstaluj aplikację z linku testowego Google Play.
 6. Każda kolejna wersja musi mieć większy versionCode (Flutter: liczba po znaku + w pubspec.yaml), a test aktualizacji należy wykonać na aplikacji zainstalowanej z Google Play. Funkcja in-app update nie działa dla lokalnie instalowanego APK.
