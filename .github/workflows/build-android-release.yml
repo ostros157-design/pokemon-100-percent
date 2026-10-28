@@ -21,6 +21,8 @@ jobs:
   build-and-release:
     name: Build APK and publish GitHub Release
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -45,8 +47,22 @@ jobs:
         working-directory: pokemon100_flutter_prototype/pokemon100
         run: flutter build apk --release
 
+      - name: Prepare consistently named APK
+        working-directory: pokemon100_flutter_prototype/pokemon100
+        run: cp build/app/outputs/flutter-apk/app-release.apk build/app/outputs/flutter-apk/pokemon-100-percent.apk
+
+      - name: Upload APK as a workflow artifact (fallback download)
+        uses: actions/upload-artifact@v4
+        with:
+          name: pokemon-100-percent-apk
+          path: pokemon100_flutter_prototype/pokemon100/build/app/outputs/flutter-apk/pokemon-100-percent.apk
+          if-no-files-found: error
+          retention-days: 30
+
       - name: Publish APK to GitHub Releases
         uses: softprops/action-gh-release@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: android-build-${{ github.run_number }}
           name: Pokémon 100% — Android build ${{ github.run_number }}
@@ -57,6 +73,6 @@ jobs:
             - Plik instalacyjny: `pokemon-100-percent.apk`
             - Kompilacja utworzona z commita: ${{ github.sha }}
             - To wydanie testowe; sprawdź działanie aplikacji przed użyciem jako wersji stabilnej.
-          files: pokemon100_flutter_prototype/pokemon100/build/app/outputs/flutter-apk/app-release.apk
+          files: pokemon100_flutter_prototype/pokemon100/build/app/outputs/flutter-apk/pokemon-100-percent.apk
           fail_on_unmatched_files: true
           make_latest: true
