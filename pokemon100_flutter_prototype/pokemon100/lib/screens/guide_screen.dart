@@ -66,7 +66,7 @@ class _GuideScreenState extends State<GuideScreen> {
     _didApplyInitialStep = true;
     final requested = widget.initialStepNumber;
     if (requested == null || widget.guide.steps.isEmpty) return;
-    final index = (requested - 1).clamp(0, widget.guide.steps.length - 1);
+    final index = (requested - 1).clamp(0, widget.guide.steps.length - 1).toInt();
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (!mounted) return;
       final targetContext = _stepKeys[index].currentContext;
