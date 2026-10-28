@@ -519,6 +519,11 @@ class _MapsScreenState extends State<MapsScreen> {
                                 : normalizedQuery == 'route 1'
                                     ? 'Route 1'
                                     : null,
+                            references: _locations[
+                                    normalizedQuery == 'pallet town'
+                                        ? 'Pallet Town'
+                                        : 'Route 1'] ??
+                                const <_LocationReference>[],
                           ),
                           const SizedBox(height: 8),
                           const Text(
@@ -680,8 +685,12 @@ class _EmptyState extends StatelessWidget {
 /// celowo poglądowy — nie przedstawia dokładnych współrzędnych z gry.
 class _KantoLocalAreaPanel extends StatefulWidget {
   final String? location;
+  final List<_LocationReference> references;
 
-  const _KantoLocalAreaPanel({required this.location});
+  const _KantoLocalAreaPanel({
+    required this.location,
+    required this.references,
+  });
 
   @override
   State<_KantoLocalAreaPanel> createState() => _KantoLocalAreaPanelState();
@@ -778,6 +787,40 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
             ),
             child: Text(features[selected]!),
           ),
+          const SizedBox(height: 10),
+          Text(
+            'Powiązane kroki poradnika',
+            style: Theme.of(context).textTheme.titleSmall,
+          ),
+          const SizedBox(height: 4),
+          if (widget.references.isEmpty)
+            const Text(
+              'Brak kroków poradnika przypisanych do tej lokacji. Możesz nadal korzystać z opisu mapy.',
+              style: TextStyle(fontSize: 12),
+            )
+          else
+            ...widget.references.map(
+              (reference) => Card(
+                margin: const EdgeInsets.only(bottom: 6),
+                child: ListTile(
+                  contentPadding: const EdgeInsets.symmetric(
+                    horizontal: 10,
+                    vertical: 2,
+                  ),
+                  leading: const Icon(Icons.menu_book_outlined),
+                  title: Text(
+                    'Krok ${reference.stepNumber}: ${reference.step.title}',
+                  ),
+                  subtitle: Text(reference.guide.title),
+                  trailing: const Icon(Icons.open_in_new, size: 18),
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute<void>(
+                      builder: (_) => GuideScreen(guide: reference.guide),
+                    ),
+                  ),
+                ),
+              ),
+            ),
         ],
       ],
     );
