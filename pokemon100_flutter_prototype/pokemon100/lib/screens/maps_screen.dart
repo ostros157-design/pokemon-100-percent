@@ -628,6 +628,7 @@ class _MapsScreenState extends State<MapsScreen> {
                                   MaterialPageRoute<void>(
                                     builder: (_) => GuideScreen(
                                       guide: reference.guide,
+                                      initialStepNumber: reference.stepNumber,
                                     ),
                                   ),
                                 ),
@@ -815,7 +816,10 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
                   trailing: const Icon(Icons.open_in_new, size: 18),
                   onTap: () => Navigator.of(context).push(
                     MaterialPageRoute<void>(
-                      builder: (_) => GuideScreen(guide: reference.guide),
+                      builder: (_) => GuideScreen(
+                        guide: reference.guide,
+                        initialStepNumber: reference.stepNumber,
+                      ),
                     ),
                   ),
                 ),
