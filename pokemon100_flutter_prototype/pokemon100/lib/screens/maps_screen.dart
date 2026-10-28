@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -640,7 +642,7 @@ class _EmptyState extends StatelessWidget {
 
 /// Pierwsza offline mapa poglądowa Kanto. Położenia są schematyczne;
 /// nie udają dokładnej mapy gry ani nie wyznaczają niepotwierdzonych tras.
-class _KantoRegionMap extends StatelessWidget {
+class _KantoRegionMap extends StatefulWidget {
   final String selectedLocation;
   final ValueChanged<String> onLocationSelected;
 
@@ -650,6 +652,81 @@ class _KantoRegionMap extends StatelessWidget {
   });
 
   @override
+  State<_KantoRegionMap> createState() => _KantoRegionMapState();
+}
+
+class _KantoRegionMapState extends State<_KantoRegionMap> {
+  static const double _mapSize = 900;
+  static const double _nearbyRadius = 95;
+  final TransformationController _transformController =
+      TransformationController();
+  Timer? _hideLocationTimer;
+  String? _visibleLocation;
+  bool _initialPositionSet = false;
+
+  @override
+  void dispose() {
+    _hideLocationTimer?.cancel();
+    _transformController.dispose();
+    super.dispose();
+  }
+
+  void _centeredLocation(Size viewportSize) {
+    final sceneCenter = _transformController.toScene(
+      Offset(viewportSize.width / 2, viewportSize.height / 2),
+    );
+    _MapPlace? nearest;
+    var nearestDistance = double.infinity;
+    for (final place in _KantoMapPainter.places) {
+      final dx = sceneCenter.dx - place.x * _mapSize;
+      final dy = sceneCenter.dy - place.y * _mapSize;
+      final distance = dx * dx + dy * dy;
+      if (distance < nearestDistance) {
+        nearestDistance = distance;
+        nearest = place;
+      }
+    }
+    final nextLocation =
+        nearest != null && nearestDistance <= _nearbyRadius * _nearbyRadius
+            ? nearest.name
+            : null;
+    if (nextLocation == _visibleLocation) return;
+    setState(() => _visibleLocation = nextLocation);
+    _hideLocationTimer?.cancel();
+    if (nextLocation != null) {
+      _hideLocationTimer = Timer(const Duration(seconds: 2), () {
+        if (mounted) setState(() => _visibleLocation = null);
+      });
+    }
+  }
+
+  void _selectTappedPlace(Offset tap) {
+    _MapPlace? nearest;
+    var nearestDistance = double.infinity;
+    for (final place in _KantoMapPainter.places) {
+      final dx = tap.dx - place.x * _mapSize;
+      final dy = tap.dy - place.y * _mapSize;
+      final distance = dx * dx + dy * dy;
+      if (distance < nearestDistance) {
+        nearestDistance = distance;
+        nearest = place;
+      }
+    }
+    if (nearest != null && nearestDistance < 38 * 38) {
+      _showLocation(nearest.name);
+      widget.onLocationSelected(nearest.name);
+    }
+  }
+
+  void _showLocation(String name) {
+    _hideLocationTimer?.cancel();
+    setState(() => _visibleLocation = name);
+    _hideLocationTimer = Timer(const Duration(seconds: 2), () {
+      if (mounted) setState(() => _visibleLocation = null);
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.sizeOf(context).width;
     return ClipRRect(
@@ -657,36 +734,128 @@ class _KantoRegionMap extends StatelessWidget {
       child: AspectRatio(
         aspectRatio: screenWidth < 500 ? 0.82 : 1.25,
         child: LayoutBuilder(
-          builder: (context, constraints) => GestureDetector(
-            behavior: HitTestBehavior.opaque,
-            onTapDown: (details) {
-              final tap = details.localPosition;
-              _MapPlace? nearest;
-              var nearestDistance = double.infinity;
-              for (final place in _KantoMapPainter.places) {
-                final dx = tap.dx - place.x * constraints.maxWidth;
-                final dy = tap.dy - place.y * constraints.maxHeight;
-                final distance = dx * dx + dy * dy;
-                if (distance < nearestDistance) {
-                  nearestDistance = distance;
-                  nearest = place;
-                }
-              }
-              if (nearest != null && nearestDistance < 34 * 34) {
-                onLocationSelected(nearest.name);
-              }
-            },
-            child: CustomPaint(
-              size: Size.infinite,
-              painter: _KantoMapPainter(
-                land: Theme.of(context).colorScheme.surfaceContainerHighest,
-                route: Theme.of(context).colorScheme.primary,
-                label: Theme.of(context).colorScheme.onSurface,
-                water: Theme.of(context).colorScheme.primaryContainer.withValues(alpha: 0.45),
-                selectedLocation: selectedLocation,
-              ),
-            ),
-          ),
+          builder: (context, constraints) {
+            if (!_initialPositionSet) {
+              _initialPositionSet = true;
+              WidgetsBinding.instance.addPostFrameCallback((_) {
+                if (!mounted) return;
+                _transformController.value = Matrix4.identity()
+                  ..translate(
+                    (constraints.maxWidth - _mapSize) / 2,
+                    (constraints.maxHeight - _mapSize) / 2,
+                  );
+              });
+            }
+            return Stack(
+              children: [
+                Positioned.fill(
+                  child: InteractiveViewer(
+                    transformationController: _transformController,
+                    constrained: false,
+                    minScale: 0.55,
+                    maxScale: 4,
+                    boundaryMargin: const EdgeInsets.all(160),
+                    onInteractionUpdate: (_) =>
+                        _centeredLocation(constraints.biggest),
+                    onInteractionEnd: (_) =>
+                        _centeredLocation(constraints.biggest),
+                    child: SizedBox(
+                      width: _mapSize,
+                      height: _mapSize,
+                      child: GestureDetector(
+                        behavior: HitTestBehavior.opaque,
+                        onTapDown: (details) =>
+                            _selectTappedPlace(details.localPosition),
+                        child: CustomPaint(
+                          painter: _KantoMapPainter(
+                            land: Theme.of(context)
+                                .colorScheme
+                                .surfaceContainerHighest,
+                            route: Theme.of(context).colorScheme.primary,
+                            label: Theme.of(context).colorScheme.onSurface,
+                            water: Theme.of(context)
+                                .colorScheme
+                                .primaryContainer
+                                .withValues(alpha: 0.45),
+                            selectedLocation: widget.selectedLocation,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  top: 12,
+                  left: 12,
+                  right: 12,
+                  child: IgnorePointer(
+                    child: AnimatedSwitcher(
+                      duration: const Duration(milliseconds: 180),
+                      child: _visibleLocation == null
+                          ? const SizedBox(
+                              key: ValueKey('map-location-empty'),
+                              height: 0,
+                            )
+                          : Container(
+                              key: ValueKey(_visibleLocation),
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 16,
+                                vertical: 10,
+                              ),
+                              decoration: BoxDecoration(
+                                color: Theme.of(context)
+                                    .colorScheme
+                                    .inverseSurface
+                                    .withValues(alpha: 0.94),
+                                borderRadius: BorderRadius.circular(24),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    blurRadius: 12,
+                                    color: Colors.black26,
+                                    offset: Offset(0, 3),
+                                  ),
+                                ],
+                              ),
+                              child: Text(
+                                _visibleLocation!,
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  color: Theme.of(context)
+                                      .colorScheme
+                                      .onInverseSurface,
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
+                            ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  right: 10,
+                  bottom: 10,
+                  child: DecoratedBox(
+                    decoration: BoxDecoration(
+                      color: Theme.of(context)
+                          .colorScheme
+                          .surface
+                          .withValues(alpha: 0.88),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: const Padding(
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 10,
+                        vertical: 6,
+                      ),
+                      child: Text(
+                        'Przesuń • przybliż',
+                        style: TextStyle(fontSize: 11),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            );
+          },
         ),
       ),
     );
@@ -710,6 +879,7 @@ class _KantoMapPainter extends CustomPainter {
 
   static const places = <_MapPlace>[
     _MapPlace('Pallet Town', 0.22, 0.82),
+    _MapPlace('Route 1', 0.25, 0.75),
     _MapPlace('Viridian City', 0.28, 0.68),
     _MapPlace('Pewter City', 0.25, 0.43),
     _MapPlace('Cerulean City', 0.63, 0.35),
@@ -743,7 +913,7 @@ class _KantoMapPainter extends CustomPainter {
       ..strokeWidth = 2);
 
     const links = <(int, int)>[
-      (0, 1), (1, 2), (2, 10), (1, 6), (6, 7), (7, 3),
+      (0, 11), (11, 1), (1, 2), (2, 10), (1, 6), (6, 7), (7, 3),
       (7, 4), (7, 5), (4, 8), (0, 9), (3, 5),
     ];
     final roadPaint = Paint()
