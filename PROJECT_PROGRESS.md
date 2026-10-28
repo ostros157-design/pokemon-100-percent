@@ -500,3 +500,12 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 - Zachowano publikację APK w GitHub Releases i artefakt Actions jako zapasową drogę pobrania.
 - Commit workflow: `a432b4a5844c28a6bd564a9340fcb7d89aba713d`.
 - Status: zmiana zapisana na GitHubie. Trwa sprawdzenie nowego przebiegu; automatyzację uznamy za działającą dopiero po potwierdzeniu udanego builda oraz publikacji APK.
+
+
+### Instalator Android — build działa, publikacja Release ma ograniczenie uprawnień (2026-10-28)
+- Odczyt logów GitHub Actions potwierdził, że `flutter build apk --release` zakończył się sukcesem i wygenerował APK o rozmiarze 57,7 MB. Artefakt `pokemon-100-percent-apk` również został poprawnie przesłany i jest dostępny przez 30 dni.
+- Dokładny błąd występuje dopiero przy tworzeniu GitHub Release: HTTP 403 `Resource not accessible by integration`, mimo deklaracji `contents: write`. To ograniczenie uprawnień tokena/integracji, a nie błąd kompilacji Flutter.
+- Zmieniono krok publikacji Release na opcjonalny (`continue-on-error: true`), aby problem uprawnień nie oznaczał nieudanego całego workflow i aby gotowy APK nadal był dostępny jako artefakt Actions.
+- Zachowano automatyczne uruchamianie po pushu do `main`, ręczne `workflow_dispatch`, anulowanie przestarzałych buildów oraz limit 45 minut.
+- Commity workflow: `a432b4a5844c28a6bd564a9340fcb7d89aba713d` (najnowsza kompilacja ma pierwszeństwo), `1238cffcdab23263dbdb7b1ab2fa2191ab5ee9b0` (nieblokowanie buildu przez błąd publikacji Release).
+- Status: build i upload artefaktu potwierdzone w logach uruchomienia 9; poprawka awaryjnego sukcesu oczekuje na wynik nowego uruchomienia. Bez zmiany uprawnień GitHuba nie można obiecać, że GitHub Release zostanie utworzony; artefakt Actions pozostaje działającą drogą pobrania APK.
