@@ -1,0 +1,62 @@
+name: Build Android installer
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'pokemon100_flutter_prototype/pokemon100/**'
+      - '.github/workflows/build-android-release.yml'
+      - 'PROJECT_PROGRESS.md'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: android-release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build-and-release:
+    name: Build APK and publish GitHub Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - name: Install Flutter dependencies
+        working-directory: pokemon100_flutter_prototype/pokemon100
+        run: flutter pub get
+
+      - name: Build release APK
+        working-directory: pokemon100_flutter_prototype/pokemon100
+        run: flutter build apk --release
+
+      - name: Publish APK to GitHub Releases
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: android-build-${{ github.run_number }}
+          name: Pokémon 100% — Android build ${{ github.run_number }}
+          target_commitish: ${{ github.sha }}
+          body: |
+            Automatyczna kompilacja aplikacji Pokémon 100% dla Androida.
+            
+            - Plik instalacyjny: `pokemon-100-percent.apk`
+            - Kompilacja utworzona z commita: ${{ github.sha }}
+            - To wydanie testowe; sprawdź działanie aplikacji przed użyciem jako wersji stabilnej.
+          files: pokemon100_flutter_prototype/pokemon100/build/app/outputs/flutter-apk/app-release.apk
+          fail_on_unmatched_files: true
+          make_latest: true
