@@ -329,12 +329,12 @@ class _MapsScreenState extends State<MapsScreen> {
                                             label: Text('Miasto / budynki'),
                                           ),
                                           Chip(
-                                            avatar: Icon(Icons.catching_pokemon, size: 18),
-                                            label: Text('Poké Ball / nagroda'),
+                                            avatar: Icon(Icons.info_outline, size: 18),
+                                            label: Text('Informacja z poradnika'),
                                           ),
                                           Chip(
-                                            avatar: Icon(Icons.spa_outlined, size: 18),
-                                            label: Text('Jagoda / przedmiot'),
+                                            avatar: Icon(Icons.place_outlined, size: 18),
+                                            label: Text('Obszar poglądowy'),
                                           ),
                                         ],
                                       ),
@@ -751,10 +751,9 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
   };
 
   static const _routeFeatures = <String, String>{
-    'Wyjście z Pallet Town': 'Południowe wejście na Route 1 prowadzi w stronę Pallet Town.',
-    'Trawa': 'Obszar spotkań z dzikimi Pokémonami opisany w poradniku. To symbol obszaru, nie dokładny zasięg trawy.',
-    'Youngster Ronny': 'Punkt informacyjny trenera Youngster Ronny. Zobacz opis walki i nagrody w danych Route 1.',
-    'Razz Berry': 'W poradniku opisano ukrytą Razz Berry. Dokładne miejsce nie jest tu zaznaczone.',
+    'Kierunek Pallet Town': 'Południowy koniec Route 1 prowadzi w stronę Pallet Town. Schemat nie przedstawia dokładnego przebiegu drogi.',
+    'Obszar trawiasty': 'Symbol obszaru spotkań z dzikimi Pokémonami. Dokładne pola trawy i miejsca spotkań nie są tu odwzorowane.',
+    'Kierunek Viridian City': 'Route 1 łączy Pallet Town z Viridian City. To oznaczenie kierunku, a nie współrzędne wejścia.',
   };
 
   @override
@@ -771,6 +770,19 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
     final isPallet = location == 'Pallet Town';
     final features = isPallet ? _palletFeatures : _routeFeatures;
     final selected = _selectedFeature;
+    final availablePokemon = widget.references
+        .expand((reference) => reference.step.pokemon)
+        .toSet()
+        .toList()
+      ..sort();
+    final availableItems = widget.references
+        .expand((reference) => reference.step.items)
+        .toSet()
+        .toList()
+      ..sort();
+    final optionalSteps = widget.references
+        .where((reference) => reference.step.optional)
+        .length;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -821,6 +833,42 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
             );
           }).toList(),
         ),
+        if (availablePokemon.isNotEmpty || availableItems.isNotEmpty || optionalSteps > 0) ...[
+          const SizedBox(height: 12),
+          Text(
+            'Dane z poradnika',
+            style: Theme.of(context).textTheme.titleSmall,
+          ),
+          const SizedBox(height: 6),
+          if (availablePokemon.isNotEmpty)
+            ListTile(
+              dense: true,
+              contentPadding: EdgeInsets.zero,
+              leading: const Icon(Icons.catching_pokemon_outlined),
+              title: const Text('Pokémon wymienione w poradniku'),
+              subtitle: Text(availablePokemon.join(', ')),
+            ),
+          if (availableItems.isNotEmpty)
+            ListTile(
+              dense: true,
+              contentPadding: EdgeInsets.zero,
+              leading: const Icon(Icons.inventory_2_outlined),
+              title: const Text('Przedmioty wymienione w poradniku'),
+              subtitle: Text(availableItems.join(', ')),
+            ),
+          if (optionalSteps > 0)
+            ListTile(
+              dense: true,
+              contentPadding: EdgeInsets.zero,
+              leading: const Icon(Icons.star_border),
+              title: const Text('Kroki opcjonalne'),
+              subtitle: Text('$optionalSteps kroków oznaczono jako opcjonalne.'),
+            ),
+          const Text(
+            'Lista pokazuje tylko informacje zapisane w poradniku; nie oznacza potwierdzonego występowania wszystkich Pokémonów ani przedmiotów w każdym miejscu tej lokacji.',
+            style: TextStyle(fontSize: 12),
+          ),
+        ],
         if (selected != null) ...[
           const SizedBox(height: 8),
           Container(
@@ -1054,16 +1102,16 @@ class _KantoRegionMapState extends State<_KantoRegionMap> {
     );
     final routeX = routeOne.x * _mapSize;
     final routeY = routeOne.y * _mapSize;
-    final pokeballCenter = Offset(routeX - 12, routeY - 15);
-    final berryCenter = Offset(routeX + 13, routeY - 15);
+    final informationCenter = Offset(routeX - 12, routeY - 15);
+    final areaCenter = Offset(routeX + 13, routeY - 15);
 
-    if ((tap - pokeballCenter).distance <= 14) {
-      _showLocation('Route 1 • nagroda trenera');
+    if ((tap - informationCenter).distance <= 14) {
+      _showLocation('Route 1 • informacje z poradnika');
       widget.onLocationSelected('Route 1');
       return;
     }
-    if ((tap - berryCenter).distance <= 14) {
-      _showLocation('Route 1 • Razz Berry (obszar przybliżony)');
+    if ((tap - areaCenter).distance <= 14) {
+      _showLocation('Route 1 • obszar poglądowy');
       widget.onLocationSelected('Route 1');
       return;
     }
