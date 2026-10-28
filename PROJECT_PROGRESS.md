@@ -533,3 +533,10 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 - Dodano legendę opisującą znaczenie ikon. Tekst jasno zaznacza, że znaczniki Route 1 przypisują informacje do obszaru, a nie wskazują dokładnych współrzędnych przedmiotów.
 - To nadal mapa poglądowa z własnoręcznie rysowanym podkładem; jej układ nie jest jeszcze wierną rekonstrukcją mapy gry.
 - Nie uruchomiono `flutter analyze`, testów ani budowy APK. Ostatnie uruchomienia GitHub Actions kończą się błędem; przed uznaniem funkcji za gotową trzeba ustalić przyczynę i sprawdzić kompilację.
+
+### Mapy — osobne kliknięcia ikon przy Route 1 (2026-10-28)
+- Ikona Poké Balla na schemacie Kanto ma teraz osobny obszar kliknięcia: pokazuje etykietę „Route 1 • nagroda trenera” i wybiera Route 1 w indeksie lokacji.
+- Ikona jagody ma osobny obszar kliknięcia: pokazuje „Route 1 • Razz Berry (obszar przybliżony)” i wybiera szczegóły Route 1. Etykieta nie sugeruje dokładnych współrzędnych ukrytego przedmiotu.
+- Zmiana kodu: `de40ee6964300e10360a796220e36c3c1cd93433`.
+- Status: zapisano w GitHubie. Nie uruchomiono `flutter analyze`, testów ani kompilacji APK; działanie gestów i trafiania w ikony wymaga sprawdzenia w aplikacji.
+
