@@ -23,12 +23,10 @@ class NotificationService {
       await messaging.requestPermission(alert: true, badge: true, sound: true);
       await messaging.setAutoInitEnabled(true);
 
+      // Background notifications are displayed by Android from the FCM
+      // notification payload. Only show an in-app dialog while foregrounded,
+      // so opening a system notification does not produce a duplicate dialog.
       FirebaseMessaging.onMessage.listen(_showForegroundMessage);
-      FirebaseMessaging.onMessageOpenedApp.listen(_showForegroundMessage);
-      final initialMessage = await messaging.getInitialMessage();
-      if (initialMessage != null) {
-        _showForegroundMessage(initialMessage);
-      }
 
       isConfigured = true;
       return true;
