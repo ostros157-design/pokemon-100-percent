@@ -91,3 +91,34 @@ jobs:
             git pull --rebase origin main
             git push
           fi
+
+      - name: Set up Java for Android build
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Set up Flutter for Android build
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - name: Build APK with generated learnsets
+        working-directory: pokemon100_flutter_prototype/pokemon100
+        run: |
+          flutter pub get
+          flutter build apk --release
+
+      - name: Publish APK containing offline learnsets
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: android-learnsets-${{ github.run_number }}
+          name: Pokémon 100% — Android build with learnsets ${{ github.run_number }}
+          target_commitish: ${{ github.sha }}
+          body: |
+            Automatyczna kompilacja aplikacji Pokémon 100% z wygenerowanymi danymi ruchów.
+            To wydanie testowe.
+          files: pokemon100_flutter_prototype/pokemon100/build/app/outputs/flutter-apk/app-release.apk
+          fail_on_unmatched_files: true
+          make_latest: true
