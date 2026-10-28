@@ -63,7 +63,6 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-        with:
           tag_name: android-build-${{ github.run_number }}
           name: Pokémon 100% — Android build ${{ github.run_number }}
           target_commitish: ${{ github.sha }}
