@@ -492,3 +492,11 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 - Po zmianie publikowania wykryto, że workflow nie uruchomił zadania: blok akcji publikującej zawierał podwójne `with:`. Usunięto duplikat i pozostawiono `token` oraz wszystkie parametry publikacji w jednym bloku.
 - Commit korekty: `e0d54a228c51df3727e93cf9939b8f05ff1602f5`.
 - Status: poprawka zapisana. Trzeba sprawdzić kolejny przebieg GitHub Actions; dopiero jego wynik potwierdzi poprawność składni i publikacji APK.
+
+
+### Instalator Android — priorytet najnowszej kompilacji (2026-10-28)
+- Zaktualizowano `.github/workflows/build-android-release.yml`: ustawiono `cancel-in-progress: true`, aby nowszy commit nie czekał za przestarzałymi buildami w tej samej grupie, oraz limit czasu zadania 45 minut.
+- Zachowano automatyczne uruchamianie po pushu do `main` dla zmian aplikacji, workflow i dziennika postępu, a także ręczne `workflow_dispatch`.
+- Zachowano publikację APK w GitHub Releases i artefakt Actions jako zapasową drogę pobrania.
+- Commit workflow: `a432b4a5844c28a6bd564a9340fcb7d89aba713d`.
+- Status: zmiana zapisana na GitHubie. Trwa sprawdzenie nowego przebiegu; automatyzację uznamy za działającą dopiero po potwierdzeniu udanego builda oraz publikacji APK.
