@@ -1,3 +1,12 @@
+### Mapy — kolejny audyt spójności mapy Kanto (2026-10-29)
+
+- Po dodaniu 9 lokacji i danych spotkań jaskiń ponownie sprawdzono JSON oraz powiązania mapy.
+- Wynik statyczny: 74 lokacje w indeksie i 74 węzły rysunku; 83/83 połączenia zgodne; brak nieistniejących celów połączeń, brak brakujących nazw lokacji i brak źródeł użytych przez lokacje bez wpisu w katalogu.
+- Sprawdzono 1050 wystąpień nazw Pokémonów w danych spotkań; wszystkie dopasowują się do nazw w danych Pokédexu.
+- Panel lokacji pokazuje teraz tekstowe listy przedmiotów i liczniki trenerów/ukrytych przedmiotów tam, gdzie są zapisane. Dodano opis zakresu mapy i legendę lokacji/jaskiń.
+- Commity panelu/mapy: `051a86f3`, `b363a05c`; dziennik nie zastępuje testu uruchomionej aplikacji.
+- Nadal nie jest to pełna mapa pikselowa z gry. Węzły są poglądowe, wnętrza nie mają jeszcze szczegółowych planów, a przedmioty/trenerzy nie mają zweryfikowanych pinezek. Nie uruchomiono `flutter analyze`, testów ani APK.
+
 ### Mapy — uzupełnienie danych spotkań w pozostałych głównych jaskiniach (2026-10-29)
 
 - Dodano / zweryfikowano spotkania dla obu wersji Let’s Go w Diglett's Cave, Mt. Moon i Rock Tunnel.
