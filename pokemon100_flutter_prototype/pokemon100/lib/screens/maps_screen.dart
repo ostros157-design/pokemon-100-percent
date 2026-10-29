@@ -420,14 +420,14 @@ class _MapsScreenState extends State<MapsScreen> {
                               ?.whereType<String>()
                               .toList() ??
                           const <String>[];
-                      final connections = (location['connectsTo'] as List?)
+                      final connectedLocations = (location['connectsTo'] as List?)
                               ?.whereType<String>()
                               .map((id) => _activeMapIndexLocations.firstWhere(
                                     (candidate) => candidate['id'] == id,
-                                    orElse: () => <String, dynamic>{'name': id},
-                                  )['name'] as String? ?? id)
+                                    orElse: () => <String, dynamic>{'id': id, 'name': id},
+                                  ))
                               .toList() ??
-                          const <String>[];
+                          const <Map<String, dynamic>>[];
                       return Card(
                         child: Padding(
                           padding: const EdgeInsets.all(16),
@@ -454,10 +454,26 @@ class _MapsScreenState extends State<MapsScreen> {
                                 const SizedBox(height: 8),
                                 Text('Obszar nadrzędny: ${location['parentRegion']}'),
                               ],
-                              if (connections.isNotEmpty) ...[
+                              if (connectedLocations.isNotEmpty) ...[
                                 const SizedBox(height: 8),
                                 const Text('Połączenia / dostęp', style: TextStyle(fontWeight: FontWeight.w700)),
-                                Text(connections.join(' • ')),
+                                const SizedBox(height: 4),
+                                Wrap(
+                                  spacing: 6,
+                                  runSpacing: 4,
+                                  children: connectedLocations.map((connected) {
+                                    final connectedName =
+                                        connected['name'] as String? ?? 'Lokacja';
+                                    return ActionChip(
+                                      avatar: const Icon(Icons.place_outlined, size: 16),
+                                      label: Text(connectedName),
+                                      onPressed: () {
+                                        _locationSearchController.text = connectedName;
+                                        setState(() => _searchQuery = connectedName);
+                                      },
+                                    );
+                                  }).toList(),
+                                ),
                               ],
                               const SizedBox(height: 8),
                               const Text('Dokładne pozycje na mapie i pinezki wymagają osobnej weryfikacji dla wybranej wersji gry.'),
