@@ -93,30 +93,22 @@ class _MapsScreenState extends State<MapsScreen> {
   }
 
   String get _mapIndexRegionName {
+    final gameId = _selectedGameId;
     if (_isLetsGoKanto) return "Kanto (Let's Go)";
-    if (_selectedGameId == 'legends_arceus') return 'Hisui';
-    switch (_generation) {
-      case 1:
-        return 'Kanto';
-      case 2:
-        return 'Johto';
-      case 3:
-        return 'Hoenn';
-      case 4:
-        return 'Sinnoh';
-      case 5:
-        return 'Unova';
-      case 6:
-        return 'Kalos';
-      case 7:
-        return 'Alola';
-      case 8:
-        return 'Galar';
-      case 9:
-        return 'Paldea + DLC';
-      default:
-        return _regionName;
+    if (gameId == 'legends_arceus') return 'Hisui';
+    if ({'red', 'blue', 'yellow', 'fire_red', 'leaf_green'}
+        .contains(gameId)) return 'Kanto';
+    if ({'gold', 'silver', 'crystal'}.contains(gameId)) return 'Johto';
+    if ({'ruby', 'sapphire', 'emerald', 'omega_ruby', 'alpha_sapphire'}
+        .contains(gameId)) return 'Hoenn';
+    if ({'brilliant_diamond', 'shining_pearl'}.contains(gameId)) return 'Sinnoh';
+    if ({'x', 'y'}.contains(gameId)) return 'Kalos';
+    if ({'sun', 'moon', 'ultra_sun', 'ultra_moon'}.contains(gameId)) {
+      return 'Alola';
     }
+    if ({'sword', 'shield'}.contains(gameId)) return 'Galar';
+    if ({'scarlet', 'violet'}.contains(gameId)) return 'Paldea + DLC';
+    return _regionName;
   }
 
   Map<String, dynamic>? get _activeMapIndex =>
