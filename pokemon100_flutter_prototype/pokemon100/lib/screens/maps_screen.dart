@@ -1432,7 +1432,7 @@ class _KantoMapPainter extends CustomPainter {
     const links = <(int, int)>[
       (0, 1), (1, 2), (2, 12), (12, 13), (13, 3), (3, 14),
       (3, 4), (4, 8), (8, 5), (5, 9), (2, 7), (7, 8),
-      (8, 6), (3, 11), (5, 10),
+      (8, 6), (5, 10),
     ];
     final roadPaint = Paint()
       ..color = route.withValues(alpha: .72)
