@@ -31,6 +31,9 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
   bool _guideComplete = false;
   bool _firstBadgeStepComplete = false;
   bool _legendaryCaught = false;
+  bool _mythicalCaught = false;
+  bool _hiddenTeamRocketDefeated = false;
+  bool _hiddenCompletionReached = false;
   bool _anyGuideOpened = false;
 
   @override
@@ -82,6 +85,9 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
     final legendaryCaught = pokemonList.any((pokemon) =>
         allCaughtIds.contains(pokemon.id) &&
         (pokemon.isLegendary || pokemon.isMythical));
+    // Keep the secret mythical milestone distinct from the public legendary one.
+    final mythicalCaught = pokemonList.any((pokemon) =>
+        allCaughtIds.contains(pokemon.id) && pokemon.isMythical);
     final anyGuideOpened = preferences.getKeys().any(
       (key) => key.startsWith('guide_opened_') && preferences.getBool(key) == true,
     );
@@ -115,6 +121,7 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
     var guideStarted = false;
     var guideComplete = false;
     var firstBadgeStepComplete = false;
+    var hiddenTeamRocketDefeated = false;
     for (final guide in gameGuides) {
       totalGuideSteps += guide.steps.length;
       final completed = (preferences.getStringList(
@@ -131,8 +138,16 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
         guideComplete = true;
       }
       for (final index in completed) {
-        if (guide.steps[index].title.toLowerCase().contains('pokonaj brocka')) {
+        final step = guide.steps[index];
+        final searchableStep = '${step.title} ${step.description}'.toLowerCase();
+        if (searchableStep.contains('pokonaj brocka')) {
           firstBadgeStepComplete = true;
+        }
+        // Future guide chapters can unlock this secret by recording a completed
+        // Team Rocket/Giovanni encounter; merely visiting the location is not enough.
+        if (searchableStep.contains('team rocket') ||
+            searchableStep.contains('giovanni')) {
+          hiddenTeamRocketDefeated = true;
         }
       }
     }
@@ -155,6 +170,9 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
       _guideComplete = guideComplete;
       _firstBadgeStepComplete = firstBadgeStepComplete;
       _legendaryCaught = legendaryCaught;
+      _mythicalCaught = mythicalCaught;
+      _hiddenTeamRocketDefeated = hiddenTeamRocketDefeated;
+      _hiddenCompletionReached = gameProgressPercent >= 100 && guideComplete;
       _anyGuideOpened = anyGuideOpened;
       _loading = false;
     });
@@ -181,8 +199,13 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
       case 'shiny':
         return _globalShinyCount > 0;
       case 'legendary':
-      case 'hidden_legend':
         return _legendaryCaught;
+      case 'hidden_legend':
+        return _mythicalCaught;
+      case 'hidden_team_rocket':
+        return _hiddenTeamRocketDefeated;
+      case 'hidden_complete':
+        return _hiddenCompletionReached;
       case 'guide_start':
         return _anyGuideOpened;
       case 'full_team':
