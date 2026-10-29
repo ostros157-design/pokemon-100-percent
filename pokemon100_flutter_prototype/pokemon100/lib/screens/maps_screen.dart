@@ -734,7 +734,7 @@ class _MapsScreenState extends State<MapsScreen> {
                 ),
                 const SizedBox(height: 8),
                 const Text(
-                  'Wybierz grę i region, aby przeglądać offline indeks lokacji. Dokładne mapy, wnętrza i pinezki są uzupełniane etapami.',
+                  'Wybierz grę i region, aby przeglądać offline indeks lokacji. Kanto ma wektorową mapę regionu i schematy lokalne; dokładne współrzędne Pokémonów, trenerów i przedmiotów są oznaczane dopiero po weryfikacji.',
                 ),
                 const SizedBox(height: 16),
                 DropdownButtonFormField<int>(
@@ -1054,7 +1054,7 @@ class _MapsScreenState extends State<MapsScreen> {
                                       ),
                                       const SizedBox(height: 4),
                                       const Text(
-                                        '• Rysunki lasów, gór, budynków i jaskiń są dekoracyjną warstwą wektorową; nie oznaczają dokładnych kafelków z gry.\n• Wszystkie 76 lokacji mają własny schemat lokalny z nazwanymi strefami. Schematy są poglądowe, a nie wierne planom pięter z gry.\n• Pozycje węzłów są poglądowe. Dokładne pinezki przedmiotów, trenerów i Pokémonów wymagają osobnej weryfikacji.',
+                                        '• Mapa regionu i wszystkie 76 schematów lokalnych są autorskimi ilustracjami wektorowymi, a nie dokładnymi mapami kafelkowymi z gry.\n• Węzły i strefy pięter są poglądowe; sieć 84 połączeń odpowiada indeksowi lokacji.\n• Dane spotkań i notatki są dostępne offline, ale dokładne pinezki Pokémonów, trenerów i przedmiotów pozostają niezweryfikowane.',
                                       ),
                                       const SizedBox(height: 12),
                                       _KantoRegionMap(
@@ -1122,12 +1122,12 @@ class _MapsScreenState extends State<MapsScreen> {
                                       ),
                                       const SizedBox(height: 4),
                                       const Text(
-                                        'Miasta i trasy są pokazane schematycznie. Pokémony, przedmioty, trenerzy i znajdźki są kategoriami danych do uzupełnienia z poradników; na tej mapie nie mają jeszcze dokładnych pinezek. Nie traktuj ich położenia jako zweryfikowanego.',
+                                        'Miasta i trasy są pokazane schematycznie. Listy spotkań i notatki z poradników są informacyjne; Pokémony, przedmioty, trenerzy i znajdźki nie mają dokładnych pinezek, dopóki ich położenie nie zostanie zweryfikowane.',
                                         style: TextStyle(fontSize: 12),
                                       ),
                                       const SizedBox(height: 8),
                                       const Text(
-                                        'Mapa jest schematyczna i służy do orientacji. Dokładne lokalne mapy poszczególnych lokacji będą dodawane dopiero po weryfikacji.',
+                                        'Mapa jest schematyczna i służy do orientacji. Każda lokacja ma już własny schemat lokalny; wierne plany pięter i dokładne pinezki można uzupełnić dopiero po weryfikacji źródłowej.',
                                         style: TextStyle(fontSize: 12),
                                       ),
                                       const SizedBox(height: 8),
