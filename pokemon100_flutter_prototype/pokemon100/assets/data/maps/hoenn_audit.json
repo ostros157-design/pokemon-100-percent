@@ -1092,7 +1092,9 @@
       "id": "victory_road",
       "name": "Victory Road",
       "kind": "cave",
-      "connectsTo": [],
+      "connectsTo": [
+        "ever_grande_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -1105,7 +1107,9 @@
       "id": "abandoned_ship",
       "name": "Abandoned Ship",
       "kind": "shipwreck",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_108"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
