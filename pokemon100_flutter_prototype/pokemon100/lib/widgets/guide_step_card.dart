@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 import '../data/pokemon_data.dart';
 import '../models/guide.dart';
@@ -151,25 +152,65 @@ class GuideStepCard extends StatelessWidget {
       (pokemon) => pokemon.name.toLowerCase() == name.toLowerCase(),
     );
     final pokemon = matches.isEmpty ? null : matches.first;
+    final label = _pokemonLabel(name, encounterRate);
 
-    if (pokemon == null) {
-      return Chip(
-        avatar: const Icon(Icons.catching_pokemon, size: 18),
-        label: Text(_pokemonLabel(name, encounterRate)),
-      );
-    }
-
-    return ActionChip(
-      avatar: const Icon(Icons.catching_pokemon, size: 18),
-      label: Text(_pokemonLabel(name, encounterRate)),
-      tooltip: 'Otwórz Pokédex: $name',
-      onPressed: () {
-        Navigator.of(context).push(
-          MaterialPageRoute<void>(
-            builder: (_) => PokemonDetailsScreen(pokemon: pokemon),
+    return InkWell(
+      borderRadius: BorderRadius.circular(24),
+      onTap: pokemon == null
+          ? null
+          : () {
+              Navigator.of(context).push(
+                MaterialPageRoute<void>(
+                  builder: (_) => PokemonDetailsScreen(pokemon: pokemon),
+                ),
+              );
+            },
+      child: Container(
+        constraints: const BoxConstraints(minHeight: 42),
+        padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 5),
+        decoration: BoxDecoration(
+          color: Theme.of(context).colorScheme.surfaceContainerHighest,
+          borderRadius: BorderRadius.circular(24),
+          border: Border.all(
+            color: Theme.of(context).colorScheme.outlineVariant,
           ),
-        );
-      },
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const Icon(Icons.catching_pokemon, size: 19),
+            const SizedBox(width: 4),
+            if (pokemon != null)
+              CachedNetworkImage(
+                imageUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png',
+                width: 28,
+                height: 28,
+                fit: BoxFit.contain,
+                placeholder: (_, __) => const SizedBox(
+                  width: 28,
+                  height: 28,
+                  child: Icon(Icons.catching_pokemon, size: 18),
+                ),
+                errorWidget: (_, __, ___) => const SizedBox(
+                  width: 28,
+                  height: 28,
+                  child: Icon(Icons.image_not_supported_outlined, size: 16),
+                ),
+              )
+            else
+              const SizedBox(
+                width: 28,
+                height: 28,
+                child: Icon(Icons.catching_pokemon, size: 18),
+              ),
+            const SizedBox(width: 5),
+            Text(
+              label,
+              style: const TextStyle(fontWeight: FontWeight.w600),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
