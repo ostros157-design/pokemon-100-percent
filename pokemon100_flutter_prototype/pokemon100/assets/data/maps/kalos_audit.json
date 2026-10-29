@@ -82,7 +82,8 @@
         "route_5",
         "route_13",
         "route_14",
-        "route_16"
+        "route_16",
+        "kiloude_city"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -98,7 +99,8 @@
       "kind": "town",
       "connectsTo": [
         "route_5",
-        "route_7"
+        "route_7",
+        "shabboneau_castle"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -146,7 +148,8 @@
       "kind": "town",
       "connectsTo": [
         "route_10",
-        "route_11"
+        "route_11",
+        "team_flare_secret_hq"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -161,7 +164,8 @@
       "name": "Shalour City",
       "kind": "town",
       "connectsTo": [
-        "route_12"
+        "route_12",
+        "tower_of_mastery"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -193,7 +197,8 @@
       "kind": "town",
       "connectsTo": [
         "route_14",
-        "route_15"
+        "route_15",
+        "pok_ball_factory"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -272,10 +277,14 @@
       "id": "kiloude_city",
       "name": "Kiloude City",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "lumiose_city",
+        "friend_safari",
+        "battle_maison"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "settlement_known_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-kalos",
         "pokemony-kalos"
@@ -285,10 +294,12 @@
       "id": "pok_mon_league",
       "name": "Pokémon League",
       "kind": "league",
-      "connectsTo": [],
+      "connectsTo": [
+        "victory_road"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "settlement_known_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-kalos",
         "pokemony-kalos"
@@ -530,7 +541,8 @@
       "connectsTo": [
         "dendemille_town",
         "laverre_city",
-        "route_16"
+        "route_16",
+        "lost_hotel"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -546,7 +558,8 @@
       "kind": "route",
       "connectsTo": [
         "route_15",
-        "lumiose_city"
+        "lumiose_city",
+        "lost_hotel"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -562,7 +575,8 @@
       "kind": "route",
       "connectsTo": [
         "anistar_city",
-        "dendemille_town"
+        "dendemille_town",
+        "frost_cavern"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -578,7 +592,8 @@
       "kind": "route",
       "connectsTo": [
         "anistar_city",
-        "couriway_town"
+        "couriway_town",
+        "terminus_cave"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -736,10 +751,12 @@
       "id": "shabboneau_castle",
       "name": "Shabboneau Castle",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "camphrier_town"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-kalos",
         "pokemony-kalos"
@@ -749,10 +766,12 @@
       "id": "tower_of_mastery",
       "name": "Tower of Mastery",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "shalour_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-kalos",
         "pokemony-kalos"
@@ -762,10 +781,13 @@
       "id": "lost_hotel",
       "name": "Lost Hotel",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_15",
+        "route_16"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-kalos",
         "pokemony-kalos"
@@ -775,10 +797,12 @@
       "id": "frost_cavern",
       "name": "Frost Cavern",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_17"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-kalos",
         "pokemony-kalos"
@@ -788,10 +812,12 @@
       "id": "pok_ball_factory",
       "name": "Poké Ball Factory",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "laverre_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-kalos",
         "pokemony-kalos"
@@ -801,10 +827,12 @@
       "id": "team_flare_secret_hq",
       "name": "Team Flare Secret HQ",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "geosenge_town"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-kalos",
         "pokemony-kalos"
@@ -814,10 +842,12 @@
       "id": "terminus_cave",
       "name": "Terminus Cave",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_18"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-kalos",
         "pokemony-kalos"
@@ -827,10 +857,12 @@
       "id": "sea_spirit_s_den",
       "name": "Sea Spirit's Den",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "azure_bay"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-kalos",
         "pokemony-kalos"
@@ -843,7 +875,8 @@
       "connectsTo": [
         "route_21",
         "route_22",
-        "victory_road_gate"
+        "victory_road_gate",
+        "pok_mon_league"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -857,10 +890,12 @@
       "id": "friend_safari",
       "name": "Friend Safari",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "kiloude_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-kalos",
         "pokemony-kalos"
@@ -870,10 +905,12 @@
       "id": "battle_maison",
       "name": "Battle Maison",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "kiloude_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-kalos",
         "pokemony-kalos"
@@ -900,7 +937,7 @@
       "kind": "bay",
       "connectsTo": [
         "route_12",
-        "sea_spirits_den"
+        "sea_spirit_s_den"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -938,7 +975,7 @@
         "bulbapedia-kalos",
         "bulbapedia-route-list"
       ],
-      "dataStatus": "connection_indexed_variant_audit_pending"
+      "dataStatus": "landmark_connection_indexed_variant_audit_pending"
     },
     {
       "id": "chamber_of_emptiness",
@@ -946,21 +983,6 @@
       "kind": "cave",
       "connectsTo": [
         "route_22"
-      ],
-      "localMapAsset": null,
-      "coordinateStatus": "unverified",
-      "sourceIds": [
-        "bulbapedia-kalos",
-        "bulbapedia-route-list"
-      ],
-      "dataStatus": "connection_indexed_variant_audit_pending"
-    },
-    {
-      "id": "sea_spirits_den",
-      "name": "Sea Spirit's Den",
-      "kind": "cave",
-      "connectsTo": [
-        "azure_bay"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
