@@ -29,6 +29,11 @@
       "id": "pokedb-paldea",
       "url": "https://pokedb.org/locations/paldea",
       "scope": "Paldea provinces, areas, shrines and landmarks"
+    },
+    {
+      "id": "serebii-paldea-maps",
+      "url": "https://www.serebii.net/pokearth/paldea/",
+      "scope": "Interactive Paldea map, spawn areas, items, trainers, stakes and raids"
     }
   ],
   "locations": [
