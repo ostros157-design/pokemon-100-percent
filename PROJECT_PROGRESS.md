@@ -1314,3 +1314,8 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Wszystkie lokacje w indeksie mają teraz jawne `coordinateStatus: "unverified"`, a komunikat UI jest przygotowany na przyszłe lokacje z potwierdzonym statusem.
 - Commity: `af94e00`, `a63589a`. Bez uruchamiania testów, analyzer ani APK.
 
+### Mapy — Kanto: lepsze wykorzystanie dużych ekranów (2026-10-29)
+
+- Dopasowanie początkowe i przycisk centrowania mogą powiększyć mapę do 1,25× na dużych ekranach, jeśli viewport na to pozwala; na telefonach nadal skala jest dobierana tak, aby zmieścić cały obszar.
+- Commit: `ea01685`. Kontrola statyczna potwierdziła, że zasób JSON jest wpisany w `pubspec.yaml`, a 76 lokacji i 84 połączenia nadal pasują do indeksu. Bez uruchamiania aplikacji, testów ani APK.
+
