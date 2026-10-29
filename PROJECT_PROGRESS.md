@@ -1,8 +1,9 @@
 ### Osiągnięcia — wszystkie jawne, bez ukrytych pozycji (2026-10-29)
-- Usunięto poprzednie 47 wpisów `hidden_extra_01`–`hidden_extra_47` jako ukryte; zastąpiono je 47 zwykłymi osiągnięciami z widocznymi nazwami i opisami warunków.
-- Ustawiono istniejące osiągnięcia „Shiny”, „Mistrz serii”, „Zespół R rozbity”, „Mityczne odkrycie” i „Sekret 100%” jako jawne, aby aplikacja nie miała już osiągnięć oznaczonych `hidden: true`.
-- Warunki 47 dodatkowych osiągnięć korzystają z danych, które aplikacja już odczytuje: kolekcji, typów i generacji Pokémonów, statystyk gatunków, zapisanej drużyny, ukończonych kroków poradnika i postępu gry.
-- Zmiany zapisano na gałęzi `mystery/improvement-06`; nie scalono ich z `main`. Nie uruchomiono `flutter analyze`, testów ani kompilacji APK.
+- Ostateczna lista zawiera 75 jawnych osiągnięć: 25 wcześniejszych podstawowych, 3 dodatkowe (Zespół R, Pokémon mityczny, ukończenie poradnika) oraz 47 nowych kamieni milowych.
+- Wszystkie wpisy mają `hidden: false`; nie ma już osiągnięć wyświetlanych jako `???`.
+- Warunki 47 nowych osiągnięć są połączone z istniejącymi danymi: globalna kolekcja, typy, generacje, statystyki bazowe, drużyna, ukończone kroki poradnika i metadane gatunków.
+- Skorygowano liczenie procentu postępu osiągnięć: opiera się na odhaczonych krokach poradnika wybranej gry, a nie na całej bazie 1025 Pokémonów, dzięki czemu progi 25/50/75/90/100% można osiągnąć przez faktyczne używanie poradnika.
+- Gałąź: `mystery/improvement-06`. Nie scalono z `main`. Wykonano kontrolę statyczną plików z GitHuba: 75 wpisów, 0 flag `hidden: true`, 47 unikalnych dodatkowych ID i 47 odpowiadających im warunków oraz przypadków obsługi. Nie uruchomiono `flutter analyze`, testów ani APK.
 
 ### Mapy — poprawa czytelności i ponowny audyt (2026-10-29)
 
