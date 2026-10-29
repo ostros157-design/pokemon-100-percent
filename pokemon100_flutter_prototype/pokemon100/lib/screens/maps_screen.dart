@@ -3928,6 +3928,45 @@ class _KantoMapPainter extends CustomPainter {
     }
     canvas.restore();
 
+    // A small inland bay adds depth to the illustrated region. Its outline is
+    // decorative and is not claimed to reproduce the game's exact coastline.
+    final bay = Path()
+      ..moveTo(size.width * .42, size.height * .46)
+      ..cubicTo(size.width * .45, size.height * .42, size.width * .51, size.height * .43, size.width * .54, size.height * .46)
+      ..cubicTo(size.width * .58, size.height * .45, size.width * .61, size.height * .48, size.width * .60, size.height * .51)
+      ..cubicTo(size.width * .59, size.height * .55, size.width * .54, size.height * .56, size.width * .51, size.height * .54)
+      ..cubicTo(size.width * .47, size.height * .56, size.width * .42, size.height * .53, size.width * .41, size.height * .50)
+      ..quadraticBezierTo(size.width * .40, size.height * .48, size.width * .42, size.height * .46)
+      ..close();
+    canvas.drawPath(
+      bay,
+      Paint()
+        ..color = const Color(0xFFE8D7A0).withValues(alpha: .92)
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 7,
+    );
+    canvas.drawPath(
+      bay,
+      Paint()
+        ..shader = const LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [Color(0xFF9EDBE0), Color(0xFF6CBAC7), Color(0xFF8CCDD3)],
+        ).createShader(Rect.fromLTWH(
+          size.width * .40,
+          size.height * .42,
+          size.width * .22,
+          size.height * .15,
+        )),
+    );
+    canvas.drawPath(
+      bay,
+      Paint()
+        ..color = const Color(0xFF5A9EAB).withValues(alpha: .62)
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 1.3,
+    );
+
     // Soft terrain washes are decorative texture, not verified geographic data.
     final terrainWashes = <(double, double, double, double, Color)>[
       (.25, .28, .17, .10, Color(0xFF9EBE83)),
@@ -4120,7 +4159,7 @@ class _KantoMapPainter extends CustomPainter {
     final stream = Path()
       ..moveTo(size.width * .76, size.height * .23)
       ..cubicTo(size.width * .73, size.height * .29, size.width * .78, size.height * .34, size.width * .72, size.height * .39)
-      ..cubicTo(size.width * .69, size.height * .43, size.width * .74, size.height * .46, size.width * .68, size.height * .50);
+      ..cubicTo(size.width * .67, size.height * .43, size.width * .63, size.height * .46, size.width * .57, size.height * .48);
     canvas.drawPath(
       stream,
       Paint()
