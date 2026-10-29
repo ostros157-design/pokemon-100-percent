@@ -1139,3 +1139,9 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Ponowny audyt statyczny: 74 lokacje w danych i rysunku, 83 połączenia, 74 zestawy elementów planu lokalnego, brak brakujących nazw i duplikatów w zestawie planów. To walidacja tekstowa/strukturalna, nie kompilacja.
 - Nie uruchamiano `flutter analyze`, testów ani APK. Ostateczny wygląd, skalowanie i interakcje muszą być obejrzane po uruchomieniu aplikacji; plany są celowo oznaczone jako poglądowe, dopóki geometria pięter nie zostanie zweryfikowana z mapami źródłowymi.
 
+### Mapy — Kanto: etykiety tras i kierunków (2026-10-29)
+
+- Dla lokalnych schematów Route 3–25 oraz obu Underground Path dodano etykiety końców trasy oparte na połączeniach zapisanych w indeksie Kanto, zamiast ogólnych napisów „początek/koniec”.
+- Zachowano ostrzeżenie, że ścieżki są schematyczne, a ich kształt nie stanowi dokładnej geometrii mapy z gry. Dla tras wodnych zastosowano odrębną paletę ilustracyjną.
+- Commit: `82adfef`. Bez uruchamiania testów, Flutter analyzer i budowy APK.
+
