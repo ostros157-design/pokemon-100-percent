@@ -533,6 +533,22 @@ class _MapsScreenState extends State<MapsScreen> {
                                   setState(() => _searchQuery = 'Viridian City');
                                 },
                               ),
+                              ActionChip(
+                                avatar: const Icon(Icons.forest_outlined, size: 18),
+                                label: const Text('Viridian Forest'),
+                                onPressed: () {
+                                  _locationSearchController.text = 'Viridian Forest';
+                                  setState(() => _searchQuery = 'Viridian Forest');
+                                },
+                              ),
+                              ActionChip(
+                                avatar: const Icon(Icons.location_city_outlined, size: 18),
+                                label: const Text('Pewter City'),
+                                onPressed: () {
+                                  _locationSearchController.text = 'Pewter City';
+                                  setState(() => _searchQuery = 'Pewter City');
+                                },
+                              ),
                             ],
                           ),
                           const SizedBox(height: 10),
@@ -582,6 +598,47 @@ class _MapsScreenState extends State<MapsScreen> {
                             const SizedBox(height: 8),
                             const Text(
                               'Ukryty przedmiot: Potion w pobliżu północnego wyjścia, na zachód od małego drzewa (pojawia się jako codzienny przedmiot). Położenie opisano tekstowo — pinezka nie jest jeszcze zweryfikowana.',
+                            ),
+                          ] else if (normalizedQuery == 'viridian forest') ...[
+                            const Text(
+                              'Dzikie Pokémony w trawie (poziomy 3–6)',
+                              style: TextStyle(fontWeight: FontWeight.w700),
+                            ),
+                            Text(
+                              _selectedGameId == 'lets_go_eevee'
+                                  ? '• Weedle — 25%\\n• Caterpie — 24%\\n• Pidgey — 15%\\n• Metapod — 10%\\n• Kakuna — 10%\\n• Bellsprout — 10%\\n• Pikachu — 5%\\n• Beedrill — 1%'
+                                  : '• Caterpie — 25%\\n• Weedle — 24%\\n• Pidgey — 15%\\n• Metapod — 10%\\n• Kakuna — 10%\\n• Oddish — 10%\\n• Pikachu — 5%\\n• Butterfree — 1%',
+                            ),
+                            const SizedBox(height: 8),
+                            const Text(
+                              'Dodatkowe spotkanie rzadkie: Bulbasaur (po użyciu Lure). Poziomy spotkań: 3–6.',
+                            ),
+                            const SizedBox(height: 8),
+                            const Text(
+                              'Przedmioty opisane w poradnikach: 5 Poké Balli, Tiny Mushroom, Antidote, 3 Razz Berries, 2 Potions oraz Lure. Dokładne pozycje nie są oznaczone pinezkami.',
+                            ),
+                            const SizedBox(height: 8),
+                            const Text(
+                              'Trenerzy: Lass Joana (Rattata Lv. 4), Bug Catcher Brian (Weedle Lv. 3), Bug Catcher Rick (Caterpie Lv. 3), Lass Brittany (Nidoran♀ Lv. 4), Bug Catcher Doug (Kakuna Lv. 3), Lass Jocelyn (Pidgey Lv. 4) i Bug Catcher Sammy (Metapod Lv. 3).',
+                            ),
+                          ] else if (normalizedQuery == 'pewter city') ...[
+                            const Text(
+                              'Ważne miejsca',
+                              style: TextStyle(fontWeight: FontWeight.w700),
+                            ),
+                            const Text(
+                              '• Pokémon Center i Poké Mart.\\n'
+                              '• Pewter Museum of Science po północnej stronie miasta.\\n'
+                              '• Pewter Gym — sala Brocka.\\n'
+                              '• Miasto łączy się z Route 2 i Route 3.',
+                            ),
+                            const SizedBox(height: 8),
+                            const Text(
+                              'Po wejściu do miasta Trace daje 5 Potion. Po pokonaniu Brocka otrzymasz Boulder Badge i TM01 Headbutt; Blue przekazuje też 5 Great Balls.',
+                            ),
+                            const SizedBox(height: 8),
+                            const Text(
+                              'Drużyna Brocka: Geodude Lv. 11 i Onix Lv. 12. Za Pokémon Center znajduje się X Defense; dokładna pinezka nie jest jeszcze zweryfikowana.',
                             ),
                           ] else if (normalizedQuery == 'route 2') ...[
                             const Text(
