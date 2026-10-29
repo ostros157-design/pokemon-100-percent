@@ -1184,3 +1184,10 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Seafoam Islands otrzymały symbol jaskini/wysp zamiast ikony miasta; wyspy Cinnabar zachowują symbol zabudowy.
 - Commity: `cbe4e6b`, `0f2e274`. To poprawka warstwy ilustracyjnej; nie wykonywano testów ani kompilacji.
 
+### Mapy — Kanto: topologia i style dróg powierzchniowych/podziemnych (2026-10-29)
+
+- Dodatkowo skorygowano połączenie Route 11–Route 12, które błędnie łączyło dwie odrębne trasy. Route 11 łączy teraz Vermilion City z Diglett's Cave; Route 12 pozostaje połączony z Lavender Town i Route 13. Indeks i rysunek są zgodne na poziomie 82 połączeń.
+- Przesunięto Route 11 na wschód od Vermilion City i dopasowano Route 5/6/7/8 oraz Diglett's Cave do czytelniejszego układu regionu.
+- Powierzchniowe drogi są kremowo-złote, trasy wodne niebieskie i przerywane, a połączenia podziemne mają osobny, stonowany przerywany styl. Link Route 2–Diglett's Cave pozostaje wejściem powierzchniowym; połączenie Diglett's Cave–Route 11 oznacza przejście podziemne.
+- Commity: `77ec257`, `f0ff1c2`, `ee22d2c`, `7501fee`, `e3577e0`, `ae6d2b5`. Nie uruchamiano testów ani APK.
+
