@@ -342,6 +342,36 @@
       "id": "routepedia-cinnabar-pikachu",
       "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/cinnabar-island",
       "scope": "Cinnabar Island facilities, items and Blaine's gym"
+    },
+    {
+      "id": "bulbapedia-part6",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Appendix%3ALet%27s_Go,_Pikachu!_and_Let%27s_Go,_Eevee!/Part_6",
+      "scope": "S.S. Anne and Vermilion City progression"
+    },
+    {
+      "id": "bulbapedia-part9",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Appendix%3ALet%27s_Go,_Pikachu!_and_Let%27s_Go,_Eevee!/Part_9",
+      "scope": "Celadon City, Rocket Hideout and Pokémon Tower"
+    },
+    {
+      "id": "bulbapedia-part10",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Appendix%3ALet%27s_Go,_Pikachu!_and_Let%27s_Go,_Eevee!/Part_10",
+      "scope": "Saffron City and Silph Co."
+    },
+    {
+      "id": "bulbapedia-part11",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Appendix%3ALet%27s_Go,_Pikachu!_and_Let%27s_Go,_Eevee!/Part_11",
+      "scope": "Fuchsia City and Safari Zone"
+    },
+    {
+      "id": "bulbapedia-part13",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Appendix%3ALet%27s_Go,_Pikachu!_and_Let%27s_Go,_Eevee!/Part_13",
+      "scope": "Cinnabar Island, Pokémon Mansion and Gym"
+    },
+    {
+      "id": "bulbapedia-part14",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Appendix%3ALet%27s_Go,_Pikachu!_and_Let%27s_Go,_Eevee!/Part_14",
+      "scope": "Power Plant and Viridian Gym"
     }
   ],
   "locations": [
@@ -2642,6 +2672,189 @@
         "routepedia-cerulean-cave-pikachu"
       ],
       "dataStatus": "postgame_text_verified_positions_not_mapped"
+    },
+    {
+      "id": "ss_anne",
+      "name": "S.S. Anne",
+      "kind": "ship",
+      "connectsTo": [
+        "vermilion_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "features": [
+        "pokład",
+        "kabiny",
+        "jadalnia",
+        "mostek"
+      ],
+      "notes": "Statek w porcie Vermilion City; dostęp fabularny jest ograniczony i statek odpływa po wydarzeniach.",
+      "sourceIds": [
+        "bulbapedia-part6"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "power_plant",
+      "name": "Power Plant",
+      "kind": "facility",
+      "connectsTo": [
+        "route_10"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "notablePokemon": [
+        "Zapdos"
+      ],
+      "notes": "Elektrownia dostępna z Route 10; wymaga osobnego planu wnętrza i potwierdzenia lokalizacji przedmiotów.",
+      "sourceIds": [
+        "bulbapedia-part14"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "pokemon_tower",
+      "name": "Pokémon Tower",
+      "kind": "tower",
+      "connectsTo": [
+        "lavender_town"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "floors": [
+        "1F",
+        "2F",
+        "3F",
+        "4F",
+        "5F",
+        "6F",
+        "7F"
+      ],
+      "features": [
+        "Pokémon Tower",
+        "Mr. Fuji"
+      ],
+      "notes": "Wielo piętrowa wieża w Lavender Town; wydarzenia fabularne wymagają Silph Scope.",
+      "sourceIds": [
+        "bulbapedia-part9"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "rocket_hideout",
+      "name": "Team Rocket Hideout",
+      "kind": "hideout",
+      "connectsTo": [
+        "celadon_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "floors": [
+        "B1F",
+        "B2F",
+        "B3F",
+        "B4F"
+      ],
+      "features": [
+        "układ podziemny",
+        "walka z Giovannim"
+      ],
+      "sourceIds": [
+        "bulbapedia-part9"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "silph_co",
+      "name": "Silph Co.",
+      "kind": "building",
+      "connectsTo": [
+        "saffron_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "floors": [
+        "1F",
+        "2F",
+        "3F",
+        "4F",
+        "5F",
+        "6F",
+        "7F",
+        "8F",
+        "9F",
+        "10F",
+        "11F"
+      ],
+      "features": [
+        "teleportery",
+        "ratowanie prezesa",
+        "walka z Giovannim"
+      ],
+      "sourceIds": [
+        "bulbapedia-part10"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "pokemon_mansion",
+      "name": "Pokémon Mansion",
+      "kind": "mansion",
+      "connectsTo": [
+        "cinnabar_island"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "floors": [
+        "1F",
+        "2F",
+        "3F",
+        "B1F"
+      ],
+      "notablePokemon": [
+        "Mewtwo (odblokowanie w Cerulean Cave po ukończeniu gry; nie w Mansion)"
+      ],
+      "notes": "Opuszczona posiadłość z dziennikami o Mewtwo i kluczem do Cinnabar Gym.",
+      "sourceIds": [
+        "bulbapedia-part13"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "safari_zone",
+      "name": "Safari Zone",
+      "kind": "park",
+      "connectsTo": [
+        "fuchsia_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "features": [
+        "strefy Safari",
+        "Warden's Gold Teeth"
+      ],
+      "notes": "Obszar dostępny przez bramę Safari Zone w Fuchsia City; szczegółowe strefy i przedmioty wymagają osobnych danych.",
+      "sourceIds": [
+        "bulbapedia-part11"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "viridian_gym",
+      "name": "Viridian Gym",
+      "kind": "gym",
+      "connectsTo": [
+        "viridian_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "gymLeader": {
+        "name": "Giovanni"
+      },
+      "sourceIds": [
+        "bulbapedia-part14"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
     }
   ]
 }
