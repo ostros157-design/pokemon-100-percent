@@ -1,3 +1,9 @@
+### Mapy — automatyczny licznik trenerów z listy (2026-10-29)
+
+- Gdy lokacja nie ma osobnego pola `trainerCount`, panel wylicza teraz licznik z długości udokumentowanej listy trenerów. Jawny licznik w danych nadal ma pierwszeństwo.
+- Dzięki temu uzupełnione trasy pokazują licznik trenerów bez ręcznego powielania tej samej liczby w JSON.
+- Commit UI: `ae8c67e`. Bez testów, analyzer ani APK.
+
 ### Mapy — czytelny status aliasów (2026-10-29)
 
 - Panel danych rozpoznaje teraz `alias_of_location` po polsku, a pola `coordinateStatus: not_applicable` pokazują komunikat o wspólnym punkcie zamiast ostrzeżenia o niezweryfikowanej pinezce.
