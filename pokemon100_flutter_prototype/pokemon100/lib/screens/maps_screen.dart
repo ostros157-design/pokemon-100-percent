@@ -4257,7 +4257,7 @@ class _KantoMapPainter extends CustomPainter {
         canvas.drawPath(road, waterRouteEdge);
         for (final metric in road.computeMetrics()) {
           for (var distance = 0.0; distance < metric.length; distance += 14) {
-            final dashEnd = math.min(distance + 6, metric.length);
+            final dashEnd = math.min(distance + 6, metric.length).toDouble();
             canvas.drawPath(
               metric.extractPath(distance, dashEnd),
               waterRouteDash,
