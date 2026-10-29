@@ -1253,3 +1253,8 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Sterowanie przydaje się szczególnie na PC, gdzie gest szczypania nie zawsze jest dostępny; przesuwanie i gesty dotykowe pozostają bez zmian.
 - Commit: `e295080`. Nie uruchamiano Flutter analyzer, testów ani APK; działanie przycisków wymaga późniejszego testu na urządzeniu/PC.
 
+### Mapy — Kanto: poprawiony podpis Route 11 (2026-10-29)
+
+- Lokalny schemat Route 11 wskazuje teraz jako wschodni koniec osobne wejście Diglett's Cave od Route 11, zamiast błędnie podpisywać Route 12.
+- Commit: `e5f3ffb`. Bez testów i APK.
+
