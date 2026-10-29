@@ -1028,3 +1028,5 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Commity: `b1584f3`, `259cca1`.
 - Nie uruchamiano Flutter analyzer, testów ani APK.
 
+- Walidacja powiązań nazw z Pokédexem wykryła różnicę w apostrofie w nazwie Farfetch’d. Porównywanie nazw normalizuje teraz proste i typograficzne apostrofy, aby ten wpis również otwierał Pokédex. Commit: `e2276a4`.
+
