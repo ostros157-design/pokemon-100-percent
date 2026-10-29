@@ -156,20 +156,20 @@ hidden: false,
 // Ukryte osiągnięcia
 Achievement(
 id: 'hidden_team_rocket',
-title: '???',
-description: 'Pokonaj ukrytego przeciwnika.',
+title: 'Zespół R rozbity',
+description: 'Pokonaj członka Zespołu R lub Giovanniego w ukończonym kroku poradnika.',
 hidden: true,
 ),
 Achievement(
 id: 'hidden_legend',
-title: '???',
-description: 'Odkryj ukrytego Legendary Pokémona.',
+title: 'Mityczne odkrycie',
+description: 'Złap Pokémona oznaczonego w Pokédexie jako mityczny.',
 hidden: true,
 ),
 Achievement(
 id: 'hidden_complete',
-title: '???',
-description: 'Odkryj sekret związany z pełnym ukończeniem gry.',
+title: 'Sekret 100%',
+description: 'Osiągnij 100% postępu i ukończ poradnik wybranej gry.',
 hidden: true,
 ),
 ];
