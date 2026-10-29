@@ -179,7 +179,26 @@ class _MapsScreenState extends State<MapsScreen> {
     if (location == null) return const SizedBox.shrink();
 
     final encounters = _mapWildPokemonEntries(location['wildPokemonDetails']);
-    if (encounters.isEmpty) return const SizedBox.shrink();
+    if (encounters.isEmpty) {
+      return Card(
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Spotkania Pokémonów — $locationName',
+                style: Theme.of(context).textTheme.titleMedium,
+              ),
+              const SizedBox(height: 6),
+              const Text(
+                'Lista spotkań dla tej lokacji nie jest jeszcze kompletna w danych offline. Nie pokazujemy zgadywanych Pokémonów.',
+              ),
+            ],
+          ),
+        ),
+      );
+    }
 
     return Card(
       child: Padding(
