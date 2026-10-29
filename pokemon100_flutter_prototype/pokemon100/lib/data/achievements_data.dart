@@ -113,7 +113,7 @@ hidden: false,
 Achievement(
 id: 'game_complete',
 title: 'Gra ukończona',
-description: 'Oznacz wszystkie wymagane elementy wybranej gry jako ukończone.',
+description: 'Ukończ wszystkie kroki poradnika wybranej gry.',
 hidden: false,
 ),
 Achievement(
@@ -130,26 +130,46 @@ hidden: false,
 ),
 Achievement(
 id: 'first_100',
-title: '100%',
-description: 'Osiągnij 100% postępu w dowolnej grze.',
+title: 'Poradnik na 100%',
+description: 'Ukończ wszystkie kroki poradnika wybranej gry.',
 hidden: false,
 ),
 Achievement(
 id: 'speed_progress',
 title: 'Szybki start',
-description: 'Osiągnij co najmniej 25% postępu w wybranej grze.',
+description: 'Osiągnij co najmniej 25% postępu w poradniku wybranej gry.',
 hidden: false,
 ),
 Achievement(
 id: 'half_progress',
 title: 'Połowa drogi',
-description: 'Osiągnij co najmniej 50% postępu w wybranej grze.',
+description: 'Osiągnij co najmniej 50% postępu w poradniku wybranej gry.',
 hidden: false,
 ),
 Achievement(
 id: 'three_quarters',
 title: 'Prawie gotowe',
-description: 'Osiągnij co najmniej 75% postępu w wybranej grze.',
+description: 'Osiągnij co najmniej 75% postępu w poradniku wybranej gry.',
+hidden: false,
+),
+
+// Dodatkowe osiągnięcia jawne — bez znaków zapytania i ukrytych warunków.
+Achievement(
+id: 'hidden_team_rocket',
+title: 'Zespół R rozbity',
+description: 'Ukończ krok poradnika opisujący pokonanie Zespołu R lub Giovanniego.',
+hidden: false,
+),
+Achievement(
+id: 'hidden_legend',
+title: 'Mityczny odkrywca',
+description: 'Zarejestruj Pokémona oznaczonego jako mityczny.',
+hidden: false,
+),
+Achievement(
+id: 'hidden_complete',
+title: 'Mistrz poradnika',
+description: 'Ukończ cały poradnik i zarejestruj przynajmniej jednego Pokémona.',
 hidden: false,
 ),
 
