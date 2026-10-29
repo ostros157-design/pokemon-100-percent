@@ -2114,6 +2114,28 @@
         "bulbapedia-part12"
       ],
       "dataStatus": "connection_verified_details_pending"
+    },
+    {
+      "id": "route_15",
+      "name": "Route 15",
+      "kind": "route",
+      "connectsTo": [
+        "route_14",
+        "fuchsia_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "notes": "Zachodnie połączenie z Fuchsia City. Szczegółowe położenie przedmiotów i trenerów nie jest jeszcze odwzorowane na pinezkach.",
+      "items": [
+        "Super Potion",
+        "3 Great Balls",
+        "Rare Candy",
+        "5 Razz Berries (ukryte)"
+      ],
+      "sourceIds": [
+        "bulbapedia-part12"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
     }
   ]
 }
