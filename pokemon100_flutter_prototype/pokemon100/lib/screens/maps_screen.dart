@@ -4356,7 +4356,9 @@ class _KantoMapPainter extends CustomPainter {
         ..style = PaintingStyle.stroke
         ..strokeWidth = 2,
     );
-    final compass = p(.93, .085);
+    // Keep the compass in the open-water margin so it cannot compete
+    // with the northern route labels or Bill's House / Sea Cottage markers.
+    final compass = p(.94, .90);
     canvas.drawCircle(
       compass,
       size.width * .035,
@@ -4871,19 +4873,53 @@ class _KantoMapPainter extends CustomPainter {
       }
     }
 
+    // A small atlas cartouche anchors the composition without covering the
+    // compass or the selectable northern locations.
     final title = TextPainter(
-      text: TextSpan(
+      text: const TextSpan(
         text: 'KANTO',
         style: TextStyle(
-          color: route,
-          fontSize: 18,
+          color: Color(0xFF496E5A),
+          fontSize: 17,
           fontWeight: FontWeight.w900,
           letterSpacing: 3,
         ),
       ),
       textDirection: TextDirection.ltr,
     )..layout();
-    title.paint(canvas, Offset(size.width - title.width - 14, 12));
+    final subtitle = TextPainter(
+      text: const TextSpan(
+        text: 'REGIONAL ATLAS  •  SCHEMATIC',
+        style: TextStyle(
+          color: Color(0xFF6F8068),
+          fontSize: 6.5,
+          fontWeight: FontWeight.w800,
+          letterSpacing: .8,
+        ),
+      ),
+      textDirection: TextDirection.ltr,
+    )..layout();
+    final cartouche = RRect.fromRectAndRadius(
+      Rect.fromLTWH(10, 9, math.max(title.width, subtitle.width) + 18, 39),
+      const Radius.circular(7),
+    );
+    canvas.drawRRect(
+      cartouche.shift(const Offset(0, 2)),
+      Paint()..isAntiAlias = true..color = const Color(0xFF6E8C73).withValues(alpha: .16),
+    );
+    canvas.drawRRect(
+      cartouche,
+      Paint()..isAntiAlias = true..color = const Color(0xFFFFF8E5).withValues(alpha: .94),
+    );
+    canvas.drawRRect(
+      cartouche,
+      Paint()..isAntiAlias = true
+        ..color = const Color(0xFF78906F).withValues(alpha: .58)
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 1,
+    );
+    title.paint(canvas, const Offset(19, 10));
+    subtitle.paint(canvas, const Offset(20, 32));
   }
 
   void _drawPokeball(Canvas canvas, Offset center) {
