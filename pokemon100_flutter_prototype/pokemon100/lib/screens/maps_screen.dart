@@ -449,6 +449,15 @@ class _MapsScreenState extends State<MapsScreen> {
                                   ))
                               .toList() ??
                           const <Map<String, dynamic>>[];
+                      final sourceIds = (location['sourceIds'] as List?)
+                              ?.whereType<String>()
+                              .toSet() ??
+                          <String>{};
+                      final sourceRecords = (_activeMapIndex?['sources'] as List?)
+                              ?.whereType<Map<String, dynamic>>()
+                              .where((source) => sourceIds.contains(source['id']))
+                              .toList() ??
+                          const <Map<String, dynamic>>[];
                       return Card(
                         child: Padding(
                           padding: const EdgeInsets.all(16),
@@ -491,6 +500,31 @@ class _MapsScreenState extends State<MapsScreen> {
                                       onPressed: () {
                                         _locationSearchController.text = connectedName;
                                         setState(() => _searchQuery = connectedName);
+                                      },
+                                    );
+                                  }).toList(),
+                                ),
+                              ],
+                              if (sourceRecords.isNotEmpty) ...[
+                                const SizedBox(height: 8),
+                                const Text('Źródła do sprawdzenia', style: TextStyle(fontWeight: FontWeight.w700)),
+                                const SizedBox(height: 4),
+                                Wrap(
+                                  spacing: 6,
+                                  runSpacing: 4,
+                                  children: sourceRecords.map((source) {
+                                    final sourceId = source['id'] as String? ?? 'Źródło';
+                                    final sourceUrl = source['url'] as String? ?? '';
+                                    final sourceLabel = source['scope'] as String? ?? sourceId;
+                                    return ActionChip(
+                                      avatar: const Icon(Icons.open_in_new, size: 16),
+                                      label: Text(sourceLabel, maxLines: 2, overflow: TextOverflow.ellipsis),
+                                      onPressed: () async {
+                                        final uri = Uri.tryParse(sourceUrl);
+                                        if (uri != null &&
+                                            (uri.scheme == 'https' || uri.scheme == 'http')) {
+                                          await launchUrl(uri, mode: LaunchMode.externalApplication);
+                                        }
                                       },
                                     );
                                   }).toList(),
