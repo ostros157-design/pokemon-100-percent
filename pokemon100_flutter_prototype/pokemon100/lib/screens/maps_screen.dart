@@ -698,6 +698,28 @@ class _MapsScreenState extends State<MapsScreen> {
                             const Text(
                               'Mt. Moon łączy Route 3 z Route 4. Lista spotkań i przedmiotów jest dostępna offline, ale nie jest jeszcze odwzorowaniem korytarzy ani dokładnych pozycji na piętrach.',
                             ),
+                          ] else if (normalizedQuery == 'route 5') ...[
+                            const Text('Spotkania na Route 5 (poziomy 11–16)', style: TextStyle(fontWeight: FontWeight.w700)),
+                            Text(_selectedGameId == 'lets_go_eevee'
+                                ? '• Rattata — 30%\\n• Pidgey — 20%\\n• Vulpix — 20%\\n• Jigglypuff — 15%\\n• Pidgeotto — 10%\\n• Abra — 5%'
+                                : '• Rattata — 30%\\n• Pidgey — 20%\\n• Growlithe — 20%\\n• Jigglypuff — 15%\\n• Pidgeotto — 10%\\n• Abra — 5%'),
+                            const SizedBox(height: 8),
+                            const Text('Ważne: Day Care oraz wejście do Underground Path (Routes 5–6). Przedmioty: 3 Great Balls, Ether, 3 Nanab Berries i 3 ukryte Razz Berries. Dokładne pozycje nie są pinezkami.'),
+                          ] else if (normalizedQuery == 'underground path (routes 5–6)' || normalizedQuery == 'underground path') ...[
+                            const Text('Przejście pod Saffron City', style: TextStyle(fontWeight: FontWeight.w700)),
+                            const Text('Łączy Route 5 z Route 6. Brak dzikich Pokémonów. Przedmioty: Repel, Lure i pięć codziennych/losowych ukrytych przedmiotów. Po odblokowaniu Master Trainers: Scientist Murray (Magnemite Lv. 70) i Scientist Julian (Magneton Lv. 75).'),
+                          ] else if (normalizedQuery == 'route 6') ...[
+                            const Text('Spotkania na Route 6 (poziomy 11–16)', style: TextStyle(fontWeight: FontWeight.w700)),
+                            Text(_selectedGameId == 'lets_go_eevee'
+                                ? '• Pidgey — 20%\\n• Rattata — 20%\\n• Vulpix — 20%\\n• Jigglypuff — 15%\\n• Psyduck — 10%\\n• Pidgeotto — 10%\\n• Abra — 5%'
+                                : '• Pidgey — 20%\\n• Rattata — 20%\\n• Growlithe — 20%\\n• Jigglypuff — 15%\\n• Psyduck — 10%\\n• Pidgeotto — 10%\\n• Abra — 5%'),
+                            const SizedBox(height: 8),
+                            const Text('Trenerzy fabularni: Camper Ricky, Camper Jeff, Gentleman Edward, Picnicker Nancy, Picnicker Isabelle i Sailor Elijah. Przedmioty: Super Potion, Paralyze Heal, Guard Spec. i ukryty Rare Candy. Południowe wyjście prowadzi do Vermilion City.'),
+                          ] else if (normalizedQuery == 'vermilion city') ...[
+                            const Text('Ważne miejsca', style: TextStyle(fontWeight: FontWeight.w700)),
+                            const Text('• Pokémon Center i Poké Mart\\n• Pokémon Fan Club\\n• Vermilion Gym — Lt. Surge\\n• Port i statek S.S. Anne'),
+                            const SizedBox(height: 8),
+                            const Text('Drużyna Lt. Surge’a: Voltorb Lv. 25, Magnemite Lv. 25 i Raichu Lv. 26. Squirtle Lv. 16 może zostać podarowany. W zależności od wersji dostępny jest gift Arcanine lub Persian. Przedmioty i wejścia nie mają jeszcze zweryfikowanych pinezek.'),
                           ] else if (normalizedQuery == 'route 2') ...[
                             const Text(
                               'Dzikie Pokémony w trawie (poziomy 3–4)',
