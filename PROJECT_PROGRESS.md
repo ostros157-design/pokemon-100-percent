@@ -937,3 +937,9 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Dodano schematyczną mapę Kanto dla indeksu Kanto w Red/Blue/Yellow, FireRed/LeafGreen oraz po przełączeniu regionu Kanto w Gold/Silver/Crystal. Warianty nie pokazują paneli spotkań specyficznych dla Let’s Go.
 - Ekran wyraźnie opisuje grafikę jako schemat orientacyjny, bez dokładnych pozycji przedmiotów, trenerów i Pokémonów.
 - Commit: `b98808b`.
+
+
+### Mapy — audyt kompletności numerowanych tras (2026-10-29)
+
+- Zweryfikowano obecność wszystkich rekordów tras w indeksach: Kanto 1–25, Johto 26–48, Hoenn 101–134, Sinnoh 201–230, Unova 1–23, Kalos 1–22, Alola 1–17 i Galar 1–10. Brakujące rekordy tras: 0.
+- Dla Paldei nie dodano numerowanych tras, bo Scarlet/Violet używają otwartego świata z prowincjami i obszarami.
