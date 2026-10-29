@@ -377,6 +377,11 @@
       "id": "routepedia-viridian-pikachu",
       "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/viridian-city",
       "scope": "Viridian City facilities, items and connections"
+    },
+    {
+      "id": "bulbapedia-part5",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Appendix%3ALet%27s_Go,_Pikachu!_and_Let%27s_Go,_Eevee!/Part_5",
+      "scope": "Bill's House and S.S. Ticket progression"
     }
   ],
   "locations": [
@@ -3024,6 +3029,77 @@
         "routepedia-cinnabar-pikachu"
       ],
       "dataStatus": "leader_verified_team_needs_review"
+    },
+    {
+      "id": "bills_house",
+      "name": "Bill's House",
+      "kind": "house",
+      "connectsTo": [
+        "route_25"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "features": [
+        "Bill",
+        "S.S. Ticket"
+      ],
+      "notes": "Na końcu Route 25. Po pomocy Billowi otrzymuje się S.S. Ticket umożliwiający wejście na S.S. Anne.",
+      "sourceIds": [
+        "bulbapedia-part5"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "pewter_museum",
+      "name": "Pewter Museum of Science",
+      "kind": "museum",
+      "connectsTo": [
+        "pewter_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "features": [
+        "wystawy skamielin",
+        "laboratorium na piętrze"
+      ],
+      "notes": "Muzeum w Pewter City; zawiera elementy fabularne i możliwość ponownego odwiedzenia wystaw.",
+      "sourceIds": [
+        "bulbapedia-part3"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "pokemon_fan_club",
+      "name": "Pokémon Fan Club",
+      "kind": "building",
+      "connectsTo": [
+        "vermilion_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "features": [
+        "przewodniczący klubu",
+        "przedmiot za wysłuchanie opowieści"
+      ],
+      "sourceIds": [
+        "bulbapedia-part6"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "day_care",
+      "name": "Pokémon Day Care",
+      "kind": "facility",
+      "connectsTo": [
+        "route_5"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "notes": "Day Care przy Route 5 w Let’s Go; nie jest to system hodowli jaj.",
+      "sourceIds": [
+        "routepedia-route5-pikachu"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
     }
   ]
 }
