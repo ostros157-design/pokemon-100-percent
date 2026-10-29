@@ -1,3 +1,9 @@
+### Osiągnięcia — wszystkie jawne, bez ukrytych pozycji (2026-10-29)
+- Usunięto poprzednie 47 wpisów `hidden_extra_01`–`hidden_extra_47` jako ukryte; zastąpiono je 47 zwykłymi osiągnięciami z widocznymi nazwami i opisami warunków.
+- Ustawiono istniejące osiągnięcia „Shiny”, „Mistrz serii”, „Zespół R rozbity”, „Mityczne odkrycie” i „Sekret 100%” jako jawne, aby aplikacja nie miała już osiągnięć oznaczonych `hidden: true`.
+- Warunki 47 dodatkowych osiągnięć korzystają z danych, które aplikacja już odczytuje: kolekcji, typów i generacji Pokémonów, statystyk gatunków, zapisanej drużyny, ukończonych kroków poradnika i postępu gry.
+- Zmiany zapisano na gałęzi `mystery/improvement-06`; nie scalono ich z `main`. Nie uruchomiono `flutter analyze`, testów ani kompilacji APK.
+
 ### Mapy — poprawa czytelności i ponowny audyt (2026-10-29)
 
 - Powiększono etykiety głównych lokacji do 11.5 px (13 px dla zaznaczonej) oraz plakietki numerów tras do 10.5 px; etykiety Underground Path są teraz widoczne na mapie regionu.
