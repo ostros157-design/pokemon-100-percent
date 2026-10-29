@@ -706,3 +706,11 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 ### Mapy — dalsze Kanto (2026-10-29)
 
 Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7–8 i Diglett's Cave. Pozycje pinezek nie są zweryfikowane; mapa nie jest kompletna. Testów i kompilacji nie uruchamiano.
+
+
+### Mapy — rozszerzenie UI do Fuchsia City (2026-10-29)
+
+- Dodano Route 15 i Fuchsia City do indeksu offline Kanto; liczba rekordów lokacji wzrosła do 30.
+- Dodano szybkie przyciski wyboru lokacji do Route 12 i Fuchsia City oraz panele informacyjne dla Route 11, Diglett’s Cave, Route 12, Routes 13–15 i Fuchsia City.
+- Commity: `8e4edc5`, `4bd5b7c`, `6fff8ab`, `b985af1`.
+- To nadal mapa części Kanto, a nie ukończona mapa całego regionu. Współrzędne i pinezki szczegółowe pozostają niezweryfikowane; nie uruchamiano Flutter analyzer, testów ani APK.
