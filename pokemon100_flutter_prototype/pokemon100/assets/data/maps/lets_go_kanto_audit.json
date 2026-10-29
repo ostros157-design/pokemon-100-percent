@@ -10656,7 +10656,8 @@
       },
       "sourceIds": [
         "routepedia-route21-pikachu",
-        "serebii-route21"
+        "serebii-route21",
+        "bulbapedia-part13"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemon": {
@@ -10705,7 +10706,27 @@
           "Starmie"
         ]
       },
-      "encounterStatus": "text_verified"
+      "encounterStatus": "text_verified",
+      "trainers": [
+        "Swimmer Jerome — Slowbro Lv. 42.",
+        "Swimmer Roland — Starmie Lv. 42, Kingler Lv. 42.",
+        "Sailor Claude — Primeape Lv. 42, Machoke Lv. 42.",
+        "Fisherman Nolan — Tentacruel Lv. 42, Starmie Lv. 42.",
+        "Swimmer Jack — Tentacool Lv. 42, Golduck Lv. 42, Tentacruel Lv. 42.",
+        "Swimmer Spencer — Seel Lv. 42, Seadra Lv. 42.",
+        "Roughneck Martin — Raticate Lv. 42, Onix Lv. 42.",
+        "Coach Trainer Pam — Machoke Lv. 44, Jynx Lv. 44, Kangaskhan Lv. 45.",
+        "Fisherman Ronald — Seadra Lv. 42, Gyarados Lv. 42.",
+        "Fisherman Wade — sześć Magikarp Lv. 42."
+      ],
+      "items": [
+        "PP Up — na południowej wysepce najbliżej Cinnabar Island.",
+        "Stardust ×3 — ukryte na drugiej wysepce od Cinnabar Island (przedmiot dzienny).",
+        "Water Stone — na wysepce w środkowo-zachodniej części trasy, przy Fisherman Nolan.",
+        "Revive — ukryty na samotnej skale na południowy zachód od Coach Trainer Pam (przedmiot dzienny).",
+        "TM35 (Ice Punch) — nagroda od Coach Trainer Pam po zwycięstwie.",
+        "Hyper Potion — na północno-wschodniej wysepce najbliżej Pallet Town."
+      ]
     },
     {
       "id": "route_22",
@@ -10976,7 +10997,8 @@
       "notes": "Droga do Ligi Pokémon z bramami sprawdzającymi odznaki.",
       "sourceIds": [
         "routepedia-route23-pikachu",
-        "serebii-route23"
+        "serebii-route23",
+        "bulbapedia-part15"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemonDetails": {
@@ -11399,7 +11421,15 @@
           "Poliwhirl"
         ]
       },
-      "encounterStatus": "text_verified"
+      "encounterStatus": "text_verified",
+      "items": [
+        "Golden Razz Berry ×3 — na wschód od drugiego punktu kontroli odznak.",
+        "Golden Razz Berry ×3 — na wysepce na północ od piątego punktu kontroli; wymaga Sea Skim.",
+        "Golden Nanab Berry ×3 — na północny wschód od trzeciego punktu kontroli.",
+        "Golden Nanab Berry ×5 — w wysokiej trawie na południowy wschód od siódmego punktu kontroli; wymaga Sea Skim.",
+        "Golden Pinap Berry ×3 — na zachód od piątego punktu kontroli; wymaga Sea Skim.",
+        "Golden Pinap Berry ×5 — w wysokiej trawie na północ od siódmego punktu kontroli; wymaga Sea Skim."
+      ]
     },
     {
       "id": "victory_road",
