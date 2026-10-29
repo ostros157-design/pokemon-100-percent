@@ -1237,3 +1237,8 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Dodano literę N nad kompasem, aby ozdobny element wskazywał również orientację mapy.
 - Commit: `b13b24e`. Bez uruchamiania testów i APK.
 
+### Mapy — Kanto: aktualizacja opisu po dodaniu wejść jaskini (2026-10-29)
+
+- Ujednolicono opis mapy i planów lokalnych: liczba lokacji wynosi teraz 76 w obu miejscach UI.
+- Commit: `6193e2b`. Bez testów i APK.
+
