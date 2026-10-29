@@ -34,6 +34,16 @@
       "id": "serebii-paldea-maps",
       "url": "https://www.serebii.net/pokearth/paldea/",
       "scope": "Interactive Paldea map, spawn areas, items, trainers, stakes and raids"
+    },
+    {
+      "id": "bulbapedia-south-area-one",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/South_Province_%28Area_One%29",
+      "scope": "South Province Area One boundaries and connections"
+    },
+    {
+      "id": "bulbapedia-mesagoza",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Mesagoza",
+      "scope": "Mesagoza gates and adjacent areas"
     }
   ],
   "locations": [
@@ -41,13 +51,17 @@
       "id": "cabo_poco",
       "name": "Cabo Poco",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "south_province_area_one"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "settlement_known_connections_pending_variant_and_dlc_audit",
+      "dataStatus": "core_access_connections_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-south-area-one",
+        "bulbapedia-mesagoza"
       ],
       "province": "South Province"
     },
@@ -55,13 +69,17 @@
       "id": "los_platos",
       "name": "Los Platos",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "south_province_area_one"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "settlement_known_connections_pending_variant_and_dlc_audit",
+      "dataStatus": "core_access_connections_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-south-area-one",
+        "bulbapedia-mesagoza"
       ],
       "province": "South Province"
     },
@@ -69,13 +87,20 @@
       "id": "mesagoza",
       "name": "Mesagoza",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "south_province_area_one",
+        "south_province_area_two",
+        "south_province_area_three",
+        "pok_mon_league"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "settlement_known_connections_pending_variant_and_dlc_audit",
+      "dataStatus": "core_access_connections_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-south-area-one",
+        "bulbapedia-mesagoza"
       ],
       "province": "South Province"
     },
@@ -209,26 +234,38 @@
       "id": "pok_mon_league",
       "name": "Pokémon League",
       "kind": "league",
-      "connectsTo": [],
+      "connectsTo": [
+        "mesagoza"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "settlement_known_connections_pending_variant_and_dlc_audit",
+      "dataStatus": "core_access_connections_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-south-area-one",
+        "bulbapedia-mesagoza"
       ]
     },
     {
       "id": "south_province_area_one",
       "name": "South Province (Area One)",
       "kind": "area",
-      "connectsTo": [],
+      "connectsTo": [
+        "cabo_poco",
+        "los_platos",
+        "mesagoza",
+        "south_province_area_four",
+        "south_province_area_five"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "dataStatus": "core_access_connections_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-south-area-one",
+        "bulbapedia-mesagoza"
       ],
       "province": "South Province"
     },
@@ -236,13 +273,17 @@
       "id": "south_province_area_two",
       "name": "South Province (Area Two)",
       "kind": "area",
-      "connectsTo": [],
+      "connectsTo": [
+        "mesagoza"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "dataStatus": "core_access_connections_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-south-area-one",
+        "bulbapedia-mesagoza"
       ],
       "province": "South Province"
     },
@@ -250,13 +291,17 @@
       "id": "south_province_area_three",
       "name": "South Province (Area Three)",
       "kind": "area",
-      "connectsTo": [],
+      "connectsTo": [
+        "mesagoza"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "dataStatus": "core_access_connections_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-south-area-one",
+        "bulbapedia-mesagoza"
       ],
       "province": "South Province"
     },
@@ -264,13 +309,17 @@
       "id": "south_province_area_four",
       "name": "South Province (Area Four)",
       "kind": "area",
-      "connectsTo": [],
+      "connectsTo": [
+        "south_province_area_one"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "dataStatus": "core_access_connections_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-south-area-one",
+        "bulbapedia-mesagoza"
       ],
       "province": "South Province"
     },
@@ -278,13 +327,17 @@
       "id": "south_province_area_five",
       "name": "South Province (Area Five)",
       "kind": "area",
-      "connectsTo": [],
+      "connectsTo": [
+        "south_province_area_one"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "dataStatus": "core_access_connections_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-south-area-one",
+        "bulbapedia-mesagoza"
       ],
       "province": "South Province"
     },
