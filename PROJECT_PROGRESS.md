@@ -1021,3 +1021,10 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Commit: `d999c20`. Dane nadal nie określają dokładnych pinezek.
 - Nie uruchamiano Flutter analyzer, testów ani APK.
 
+### Mapy — ujednolicenie spotkań na Route 11 i Route 19–21 (2026-10-29)
+
+- Przeniesiono dane spotkań do wspólnego formatu dla Let’s Go Pikachu/Eevee, tak aby klikalna lista mogła pokazywać oba warianty.
+- Uzupełniono spotkania naziemne, wodne, na niebie i specjalne, zgodnie z tabelami Serebii. Route 20 pokazuje zakres 37–44 i notatkę wyjaśniającą różnice między wschodnią a zachodnią częścią.
+- Commity: `b1584f3`, `259cca1`.
+- Nie uruchamiano Flutter analyzer, testów ani APK.
+
