@@ -7391,7 +7391,25 @@
           "Seadra"
         ]
       },
-      "encounterStatus": "text_verified"
+      "encounterStatus": "text_verified",
+      "trainers": [
+        "Camper Nash — Sandshrew Lv. 37, Sandslash Lv. 37.",
+        "Picnicker Susie — Jigglypuff Lv. 37, Weepinbell Lv. 37.",
+        "Beauty Lola — Chansey Lv. 37.",
+        "Ace Trainer Kite — Graveler Lv. 39, Magneton Lv. 39, Haunter Lv. 40; wymaga Chop Down.",
+        "Bug Catcher Milo — Scyther Lv. 36, Pinsir Lv. 36.",
+        "Bird Keeper Robert — Doduo Lv. 39, Pidgeotto Lv. 39.",
+        "Picnicker Gwen — Raticate Lv. 37, Golduck Lv. 37.",
+        "Beauty Sheila — Eevee Lv. 37, Persian Lv. 37.",
+        "Camper Perry — Growlithe Lv. 37, Nidorino Lv. 37.",
+        "Punk Guy Jared — Golbat Lv. 38."
+      ],
+      "items": [
+        "PP Up — wschodni skraj kępy wysokiej trawy; wymaga Chop Down.",
+        "Golden Pinap Berry — ukryta w szczelinie ogrodzenia na południowym skraju labiryntu.",
+        "Silver Nanab Berry ×5 — ślepa ścieżka na południe od Punk Guy Jared; ukryte, dzienne.",
+        "Full Heal — północno-zachodnia część trasy, na zachód od Camper Perry."
+      ]
     },
     {
       "id": "route_14",
@@ -7749,7 +7767,25 @@
           "Moltres"
         ]
       },
-      "encounterStatus": "text_verified"
+      "encounterStatus": "text_verified",
+      "trainers": [
+        "Camper Beck — Flareon Lv. 37.",
+        "Camper Carter — Psyduck Lv. 37, Dugtrio Lv. 37.",
+        "Bird Keeper Benny — Pidgeotto Lv. 39, Fearow Lv. 39.",
+        "Bird Keeper Donald — Fearow Lv. 39, Pidgeot Lv. 39.",
+        "Ace Trainer Kindra — Vaporeon Lv. 40, Sandslash Lv. 39, Dodrio Lv. 39.",
+        "Punk Guy Harvey — dwa Raticate Lv. 38.",
+        "Punk Guy Malik — Rhyhorn Lv. 38.",
+        "Punk Guy Gerald — Magmar Lv. 38.",
+        "Punk Guy Felix — Weezing Lv. 38.",
+        "Roughneck Zeek — Machoke Lv. 38."
+      ],
+      "items": [
+        "Hyper Potion — wschodnia ścieżka, pod północno-wschodnim krzakiem przy Bird Keeper Benny.",
+        "Nugget — zachodnia ścieżka, na półce na południe od kępy wysokiej trawy.",
+        "Golden Razz Berry — ukryta przy północnej krawędzi wysokiej trawy (przedmiot dzienny).",
+        "Nanab Berry / Silver Nanab Berry / Golden Nanab Berry — środkowy krzak po wschodniej stronie; partner Pokémon może znaleźć różne warianty."
+      ]
     },
     {
       "id": "route_15",
@@ -7763,10 +7799,13 @@
       "coordinateStatus": "unverified",
       "notes": "Zachodnie połączenie z Fuchsia City. Szczegółowe położenie przedmiotów i trenerów nie jest jeszcze odwzorowane na pinezkach.",
       "items": [
-        "Super Potion",
-        "3 Great Balls",
-        "Rare Candy",
-        "5 Razz Berries (ukryte)"
+        "TM31 (Fire Punch) — nagroda od Coach Trainer Midge na północnej ścieżce; wymaga Chop Down.",
+        "TM47 (Surf) — zachodnia strona wzgórza na północnej ścieżce; wymaga Chop Down.",
+        "Golden Nanab Berry — ukryta w trzeciej kępie wysokiej trawy od wejścia Route 14 (przedmiot dzienny).",
+        "Hyper Potion — południowa ścieżka, na zachód od Punk Guy Alex.",
+        "Ultra Ball ×3 — południowa ścieżka, na wschód od Punk Guy Ernest.",
+        "Assistant Set — od pomocnika Profesora Oaka w bramie po złapaniu 50 różnych gatunków.",
+        "Pinap Berry / Silver Pinap Berry / Golden Pinap Berry — krzak na południowy wschód od Coach Trainer Midge; partner Pokémon może znaleźć wariant, wymaga Chop Down."
       ],
       "sourceIds": [
         "bulbapedia-part12",
@@ -8113,7 +8152,15 @@
           "Moltres"
         ]
       },
-      "encounterStatus": "text_verified"
+      "encounterStatus": "text_verified",
+      "trainers": [
+        "Coach Trainer Midge — Machoke Lv. 40, Magmar Lv. 41; północna ścieżka wymaga Chop Down.",
+        "Picnicker Yazmin — Tangela Lv. 37, Seaking Lv. 37.",
+        "Punk Guy Ernest — Primeape Lv. 38, Muk Lv. 38.",
+        "Punk Guy Alex — Arbok Lv. 38.",
+        "Beauty Lana — trzy Growlithe Lv. 37.",
+        "Bird Keeper Edwin — Dodrio Lv. 39."
+      ]
     },
     {
       "id": "fuchsia_city",
@@ -9582,7 +9629,22 @@
           "Moltres"
         ]
       },
-      "encounterStatus": "text_verified"
+      "encounterStatus": "text_verified",
+      "trainers": [
+        "Swimmer Reece — Dratini Lv. 38.",
+        "Swimmer Richard — Starmie Lv. 38; wymaga Sea Skim.",
+        "Beauty Alice — Golduck Lv. 41, Cloyster Lv. 41.",
+        "Swimmer Axle — Poliwhirl Lv. 42.",
+        "Swimmer David — dwa Seel Lv. 42, Seadra Lv. 42.",
+        "Beauty Connie — Vaporeon Lv. 41.",
+        "Beauty Anya — Seel Lv. 41, Seaking Lv. 41."
+      ],
+      "items": [
+        "Gold Teeth — na północnej stronie plaży, otrzymane od Jessie podczas wydarzenia fabularnego.",
+        "Full Heal — na plaży między dwiema półkami.",
+        "Revive ×2 — ukryte na skałach przy północno-zachodnim i południowo-wschodnim narożniku; dzienne, wymagają Sea Skim.",
+        "Pearl / Big Pearl — po wschodniej stronie plaży; losowy przedmiot, czasem znajdowany przez chodzącego Pokémona typu Ground."
+      ]
     },
     {
       "id": "route_20",
@@ -9865,7 +9927,20 @@
           "Moltres"
         ]
       },
-      "encounterStatus": "text_verified"
+      "encounterStatus": "text_verified",
+      "trainers": [
+        "Route 20 (wschód) — Swimmer Douglas: Gyarados Lv. 42.",
+        "Route 20 (wschód) — Swimmer Darrin: Golduck Lv. 44, Gyarados Lv. 44.",
+        "Route 20 (wschód) — Beauty Shirley: Wartortle Lv. 41, Starmie Lv. 41.",
+        "Route 20 (zachód) — Picnicker Irene: Marowak Lv. 43, Gloom Lv. 43, Wigglytuff Lv. 43.",
+        "Route 20 (zachód) — Beauty Hansol: Slowbro Lv. 43.",
+        "Route 20 (zachód) — Bird Keeper Roger: Fearow Lv. 45, Dodrio Lv. 45, Pidgeot Lv. 45.",
+        "Route 20 (zachód) — Swimmer Dean: Starmie Lv. 44, Tentacruel Lv. 44, Kingler Lv. 44.",
+        "Route 20 (zachód) — Picnicker Missy: Jolteon Lv. 41.",
+        "Route 20 (zachód) — Beauty Nora: Cloyster Lv. 41.",
+        "Route 20 (zachód) — Beauty Melissa: Seaking Lv. 43, Jynx Lv. 43.",
+        "Route 20 (zachód) — Ace Trainer Marty: Golem Lv. 45, Pinsir Lv. 46."
+      ]
     },
     {
       "id": "seafoam_islands",
