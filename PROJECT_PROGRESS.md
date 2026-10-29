@@ -747,3 +747,13 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Automatyczna kontrola JSON: poprawny format; wszystkie Route 1–25 mają rekordy; 64 lokacje, 76 źródeł; brak niedziałających odwołań `connectsTo`, brak lokacji bez drogi po grafie od Pallet Town i brak brakujących `sourceIds`.
 - Naprawiono brakujące źródło dla Fuchsia Gym (`964114a`).
 - To kontrola spójności indeksu, a nie walidacja w grze: dokładność każdego spotkania, przedmiotu i współrzędnej nadal wymaga weryfikacji źródłowej. Nie uruchamiano Flutter analyze, testów ani APK.
+
+
+### Mapy — indeksy regionów i integracja offline (2026-10-29)
+
+- Utworzono indeksy lokacji dla Johto (59), Hoenn (72), Sinnoh (71), Unovy (59), Kalos (55), Aloli (54), Galar (43), Hisui (25) i Paldei z DLC (49). Indeksy Kanto obejmują 64 lokacje.
+- Zarejestrowano wszystkie pliki JSON w `pubspec.yaml` i dodano w `maps_screen.dart` ładowanie indeksów z assetów oraz wyszukiwalną listę lokacji dla wybranego regionu. Dla regionów bez zweryfikowanej grafiki UI wyraźnie pokazuje indeks, a nie udaje gotowej mapy.
+- Poprawiono dwa problemy wykryte w audycie: połączenie S.S. Aqua do Vermilion City i duplikat Glaseado Mountain.
+- Commity: `75b2545`, `6bcce3d`, `3fa56b8`, `d91fef2`, `faa9bdd`, `ac4a981`, `594388e`, `ea00e66`, `3a5dbdd`, `8c603e0`, `41b4536`, `455810b`, `e6cb928`, `ee4eb9b`, `7f59b10`, `5df190a`, `b872c57`.
+- Weryfikacja JSON: wszystkie 10 indeksów parsują się; brak zduplikowanych ID, brak nieistniejących źródeł i brak błędnych połączeń `connectsTo` po poprawkach. Dla większości nowych regionów połączenia pozostają celowo nieuzupełnione do czasu sprawdzenia wariantu gry.
+- Nie uruchamiano Flutter analyzer, testów ani APK. Cała mapa Pokémon nie jest jeszcze ukończona: brakuje zweryfikowanych grafów tras, dokładnych map graficznych, wnętrz, pinezek przedmiotów/trenerów/Pokémonów oraz audytu różnic między wersjami.
