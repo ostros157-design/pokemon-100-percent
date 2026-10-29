@@ -135,6 +135,98 @@ pokemon: [
 'Onix',
 ],
 items: ['Boulder Badge'],
+
+GuideStep(
+title: 'Przejdź Route 3',
+description:
+'Po zdobyciu Boulder Badge wyjdź z Pewter City na wschód. Przejdź przez trawiastą Route 3 i walcz z trenerami po drodze. Pokémony na tej trasie występują na poziomach 3–8.',
+location: 'Route 3',
+pokemon: ['Spearow', 'Rattata', 'Mankey', 'Sandshrew'],
+encounterRatesPercent: {
+'Spearow': 30,
+'Rattata': 30,
+'Mankey': 20,
+'Sandshrew': 20,
+},
+),
+GuideStep(
+title: 'Przejdź przez Mt. Moon',
+description:
+'Wejdź do jaskini i eksploruj piętra 1F, B1F oraz B2F. Zbieraj przedmioty, walcz z trenerami i znajdź wyjście po wschodniej stronie. Dzikie Pokémony mają zwykle poziomy 5–10.',
+location: 'Mt. Moon',
+pokemon: ['Zubat', 'Geodude', 'Paras', 'Clefairy', 'Onix'],
+encounterRatesPercent: {
+'Zubat': 40,
+'Geodude': 40,
+'Paras': 15,
+'Clefairy': 4,
+'Onix': 1,
+},
+items: ['Moon Stone', 'Dome Fossil lub Helix Fossil'],
+),
+GuideStep(
+title: 'Opuść Mt. Moon przez Route 4',
+description:
+'Po wyjściu z jaskini zbadaj trawiasty fragment Route 4 i skorzystaj z Pokémon Center, jeśli potrzebujesz leczenia. W tej wersji gry dostępne są tu poniższe spotkania w trawie.',
+location: 'Route 4',
+pokemon: ['Spearow', 'Rattata', 'Sandshrew', 'Mankey', 'Psyduck'],
+encounterRatesPercent: {
+'Spearow': 30,
+'Rattata': 25,
+'Sandshrew': 20,
+'Mankey': 20,
+'Psyduck': 5,
+},
+),
+GuideStep(
+title: 'Przygotuj się w Cerulean City',
+description:
+'Wylecz drużynę w Pokémon Center i uzupełnij zapasy w Poké Marcie. Jeśli masz już zarejestrowanych co najmniej 30 gatunków Pokémonów, porozmawiaj z dziewczyną w domu obok Pokémon Center, aby otrzymać Bulbasaura.',
+location: 'Cerulean City',
+pokemon: ['Bulbasaur'],
+),
+GuideStep(
+title: 'Pokonaj trenerów na Nugget Bridge',
+description:
+'Wyjdź z miasta na północ i pokonaj pięciu trenerów na moście. Po serii walk otrzymasz Nugget. Przygotuj drużynę przed kolejnymi pojedynkami na Route 24.',
+location: 'Route 24 — Nugget Bridge',
+items: ['Nugget'],
+),
+GuideStep(
+title: 'Przejdź przez Route 24',
+description:
+'Po moście pokonaj kolejnych trenerów i sprawdź trawiasty teren. Spotkania w trawie w Let’s Go, Pikachu! mają następujące udokumentowane udziały.',
+location: 'Route 24',
+pokemon: ['Pidgey', 'Venonat', 'Oddish', 'Psyduck'],
+encounterRatesPercent: {
+'Pidgey': 30,
+'Venonat': 30,
+'Oddish': 20,
+'Psyduck': 20,
+},
+),
+GuideStep(
+title: 'Dokończ Route 25 i znajdź Billa',
+description:
+'Idź dalej na wschód przez Route 25. Pokonaj trenerów, zbierz przedmioty i dotrzyj do domu Billa. Pomóż mu wrócić do ludzkiej postaci, a następnie odbierz S.S. Ticket.',
+location: 'Route 25',
+pokemon: ['Pidgey', 'Venonat', 'Oddish', 'Psyduck'],
+encounterRatesPercent: {
+'Pidgey': 30,
+'Venonat': 30,
+'Oddish': 20,
+'Psyduck': 20,
+},
+items: ['S.S. Ticket'],
+),
+GuideStep(
+title: 'Zdobądź Cascade Badge',
+description:
+'Wróć do Cerulean City i wejdź do Cerulean Gym. Misty używa Pokémonów typu Water, więc najlepiej przygotować skuteczne ataki typu Electric lub Grass. Po wygranej odbierz Cascade Badge i TM nagrodę liderki.',
+location: 'Cerulean Gym',
+pokemon: ['Staryu', 'Starmie'],
+items: ['Cascade Badge'],
+),
 ),
 ],
 ),
