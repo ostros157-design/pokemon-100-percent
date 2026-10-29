@@ -1,3 +1,10 @@
+### Mapy — ochrona znaczników przed nakładaniem etykiet Kanto (2026-10-29)
+
+- Algorytm rozmieszczania etykiet rezerwuje teraz obszary wszystkich 76 punktów lokacji oraz plakietek Route jeszcze przed narysowaniem pierwszej nazwy. Dzięki temu wcześniejsza etykieta nie powinna zasłaniać markera, który zostanie narysowany później.
+- Doprecyzowano typ liczbowy szerokości kartuszy atlasowej, aby argument `Rect.fromLTWH` był jawnie typu `double`.
+- Audyt statyczny po zmianie: 76/76 lokacji i 76/76 wpisów schematów lokalnych, 84/84 połączenia zgodne z JSON, brak duplikatów nazw schematów, brak brakujących referencji źródeł i punktów poza zakresem mapy.
+- Commity grafiki: `659dc96` (typ szerokości kartuszy), `cb85e35` (rezerwacja obszarów etykiet). Nie uruchamiano Flutter analyzer, testów ani APK; efekt trzeba obejrzeć po uruchomieniu aplikacji.
+
 ### Mapy — poprawiony układ tytułu i kompasu na mapie Kanto (2026-10-29)
 
 - Przeniesiono kompas do wolnego marginesu oceanu, aby nie nakładał się na północne trasy i etykiety lokacji.
