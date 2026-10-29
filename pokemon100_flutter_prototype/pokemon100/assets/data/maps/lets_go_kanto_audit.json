@@ -242,6 +242,31 @@
       "id": "routepedia-underground78-pikachu",
       "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/underground-path-routes-7-8",
       "scope": "Underground Path 7–8 connections"
+    },
+    {
+      "id": "routepedia-route11-pikachu",
+      "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/route-11",
+      "scope": "Route 11 encounters, items, trainers and connections"
+    },
+    {
+      "id": "routepedia-route12-pikachu",
+      "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/route-12",
+      "scope": "Route 12 encounters, items, trainers and connections"
+    },
+    {
+      "id": "routepedia-diglett-cave-pikachu",
+      "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/diglett-s-cave/map",
+      "scope": "Diglett's Cave entrances and encounters"
+    },
+    {
+      "id": "bulbapedia-part7",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Appendix%3ALet%27s_Go,_Pikachu!_and_Let%27s_Go,_Eevee!/Part_7",
+      "scope": "Route 11 and Diglett's Cave walkthrough"
+    },
+    {
+      "id": "bulbapedia-part12",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Appendix%3ALet%27s_Go,_Pikachu!_and_Let%27s_Go,_Eevee!/Part_12",
+      "scope": "Routes 12–15 and Fuchsia City walkthrough"
     }
   ],
   "locations": [
@@ -1927,6 +1952,136 @@
         "bulbapedia-part8"
       ],
       "dataStatus": "connection_verified_details_pending"
+    },
+    {
+      "id": "route_11",
+      "name": "Route 11",
+      "kind": "route",
+      "connectsTo": [
+        "vermilion_city",
+        "route_12",
+        "digletts_cave"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "wildPokemonDetails": {
+        "levels": [
+          13,
+          18
+        ],
+        "lets_go_pikachu": [
+          [
+            "Pidgey",
+            25
+          ],
+          [
+            "Rattata",
+            25
+          ],
+          [
+            "Drowzee",
+            25
+          ],
+          [
+            "Pidgeotto",
+            10
+          ],
+          [
+            "Raticate",
+            10
+          ],
+          [
+            "Mr. Mime",
+            5
+          ]
+        ]
+      },
+      "items": [
+        "5 Great Balls",
+        "Super Potion",
+        "X Defense",
+        "Lure",
+        "Super Repel",
+        "Revive (ukryty)"
+      ],
+      "features": [
+        "Route 11 Gate"
+      ],
+      "sourceIds": [
+        "routepedia-route11-pikachu",
+        "bulbapedia-part7"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "digletts_cave",
+      "name": "Diglett's Cave",
+      "kind": "cave",
+      "connectsTo": [
+        "route_11",
+        "route_2"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "wildPokemonDetails": {
+        "levels": [
+          13,
+          18
+        ],
+        "lets_go_pikachu": [
+          [
+            "Diglett",
+            85
+          ],
+          [
+            "Zubat",
+            10
+          ],
+          [
+            "Dugtrio",
+            5
+          ]
+        ]
+      },
+      "rareEncounter": "Chansey",
+      "notes": "Długi tunel łączący Route 11 z wschodnią częścią Route 2.",
+      "sourceIds": [
+        "routepedia-diglett-cave-pikachu",
+        "bulbapedia-part7"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "route_12",
+      "name": "Route 12",
+      "kind": "route",
+      "connectsTo": [
+        "lavender_town",
+        "route_11",
+        "route_13",
+        "route_8"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "notes": "Długa trasa wędkarska; północny odcinek za bramą nazywany jest Silence Bridge. Snorlax blokuje przejście przed wydarzeniem fabularnym.",
+      "items": [
+        "TM24",
+        "Water Stone",
+        "3 Ultra Balls",
+        "Lure",
+        "Repel",
+        "Awakening",
+        "Max Lure",
+        "5 Silver Pinap Berries (ukryte)"
+      ],
+      "notablePokemon": [
+        "Snorlax Lv. 34"
+      ],
+      "sourceIds": [
+        "routepedia-route12-pikachu",
+        "bulbapedia-part12"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
     }
   ]
 }
