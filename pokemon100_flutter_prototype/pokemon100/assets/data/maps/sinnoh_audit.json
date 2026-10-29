@@ -266,7 +266,11 @@
       "id": "route_201",
       "name": "Route 201",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "twinleaf_town",
+        "sandgem_town",
+        "verity_lakefront"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -279,7 +283,10 @@
       "id": "route_202",
       "name": "Route 202",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "sandgem_town",
+        "jubilife_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -292,7 +299,11 @@
       "id": "route_203",
       "name": "Route 203",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "jubilife_city",
+        "oreburgh_gate",
+        "oreburgh_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -305,7 +316,11 @@
       "id": "route_204",
       "name": "Route 204",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "jubilife_city",
+        "floaroma_town",
+        "ravaged_path"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -318,7 +333,13 @@
       "id": "route_205",
       "name": "Route 205",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "floaroma_town",
+        "eterna_city",
+        "eterna_forest",
+        "fuego_ironworks",
+        "valley_windworks"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -331,7 +352,11 @@
       "id": "route_206",
       "name": "Route 206",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "eterna_city",
+        "route_207",
+        "wayward_cave"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -344,7 +369,11 @@
       "id": "route_207",
       "name": "Route 207",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_206",
+        "mount_coronet",
+        "oreburgh_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -357,7 +386,10 @@
       "id": "route_208",
       "name": "Route 208",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "hearthome_city",
+        "mount_coronet"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -370,7 +402,11 @@
       "id": "route_209",
       "name": "Route 209",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "hearthome_city",
+        "solaceon_town",
+        "lost_tower"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -383,7 +419,11 @@
       "id": "route_210",
       "name": "Route 210",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "solaceon_town",
+        "celestic_town",
+        "route_215"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -396,7 +436,11 @@
       "id": "route_211",
       "name": "Route 211",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "eterna_city",
+        "celestic_town",
+        "mount_coronet"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -409,7 +453,11 @@
       "id": "route_212",
       "name": "Route 212",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "hearthome_city",
+        "pastoria_city",
+        "pokemon_mansion"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -422,7 +470,10 @@
       "id": "route_213",
       "name": "Route 213",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "pastoria_city",
+        "valor_lakefront"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -435,7 +486,12 @@
       "id": "route_214",
       "name": "Route 214",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "veilstone_city",
+        "valor_lakefront",
+        "spring_path",
+        "maniac_tunnel"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -448,7 +504,10 @@
       "id": "route_215",
       "name": "Route 215",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_210",
+        "veilstone_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -461,7 +520,10 @@
       "id": "route_216",
       "name": "Route 216",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "mount_coronet",
+        "route_217"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -474,7 +536,10 @@
       "id": "route_217",
       "name": "Route 217",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_216",
+        "acuity_lakefront"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -487,7 +552,10 @@
       "id": "route_218",
       "name": "Route 218",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "jubilife_city",
+        "canalave_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -500,7 +568,10 @@
       "id": "route_219",
       "name": "Route 219",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "sandgem_town",
+        "route_220"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -513,7 +584,10 @@
       "id": "route_220",
       "name": "Route 220",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_219",
+        "route_221"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -526,7 +600,11 @@
       "id": "route_221",
       "name": "Route 221",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_220",
+        "pal_park",
+        "ramanas_park"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -539,7 +617,10 @@
       "id": "route_222",
       "name": "Route 222",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "valor_lakefront",
+        "sunyshore_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -552,7 +633,10 @@
       "id": "route_223",
       "name": "Route 223",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "sunyshore_city",
+        "pokemon_league"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -565,7 +649,10 @@
       "id": "route_224",
       "name": "Route 224",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "victory_road",
+        "seabreak_path"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -578,7 +665,10 @@
       "id": "route_225",
       "name": "Route 225",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "fight_area",
+        "survival_area"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -591,7 +681,11 @@
       "id": "route_226",
       "name": "Route 226",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "survival_area",
+        "route_227",
+        "route_228"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -604,7 +698,10 @@
       "id": "route_227",
       "name": "Route 227",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_226",
+        "stark_mountain"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -617,7 +714,10 @@
       "id": "route_228",
       "name": "Route 228",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_226",
+        "route_229"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -630,7 +730,10 @@
       "id": "route_229",
       "name": "Route 229",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_228",
+        "resort_area"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -643,7 +746,10 @@
       "id": "route_230",
       "name": "Route 230",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_229",
+        "fight_area"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -950,6 +1056,197 @@
         "bulbapedia-sinnoh",
         "pokemony-sinnoh"
       ]
+    },
+    {
+      "id": "verity_lakefront",
+      "name": "Verity Lakefront",
+      "kind": "lakefront",
+      "connectsTo": [
+        "route_201",
+        "lake_verity"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "connection_indexed_details_pending"
+    },
+    {
+      "id": "valor_lakefront",
+      "name": "Valor Lakefront",
+      "kind": "lakefront",
+      "connectsTo": [
+        "route_213",
+        "route_214",
+        "route_222",
+        "lake_valor"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "connection_indexed_details_pending"
+    },
+    {
+      "id": "acuity_lakefront",
+      "name": "Acuity Lakefront",
+      "kind": "lakefront",
+      "connectsTo": [
+        "route_217",
+        "lake_acuity",
+        "snowpoint_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "connection_indexed_details_pending"
+    },
+    {
+      "id": "ravaged_path",
+      "name": "Ravaged Path",
+      "kind": "cave",
+      "connectsTo": [
+        "route_204"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "connection_indexed_details_pending"
+    },
+    {
+      "id": "pal_park",
+      "name": "Pal Park",
+      "kind": "park",
+      "connectsTo": [
+        "route_221"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "connection_indexed_details_pending"
+    },
+    {
+      "id": "spring_path",
+      "name": "Spring Path",
+      "kind": "path",
+      "connectsTo": [
+        "route_214",
+        "turnback_cave"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "connection_indexed_details_pending"
+    },
+    {
+      "id": "maniac_tunnel",
+      "name": "Maniac Tunnel",
+      "kind": "tunnel",
+      "connectsTo": [
+        "route_214"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "connection_indexed_details_pending"
+    },
+    {
+      "id": "seabreak_path",
+      "name": "Seabreak Path",
+      "kind": "path",
+      "connectsTo": [
+        "route_224",
+        "flower_paradise"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "connection_indexed_details_pending"
+    },
+    {
+      "id": "flower_paradise",
+      "name": "Flower Paradise",
+      "kind": "island",
+      "connectsTo": [
+        "seabreak_path"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "connection_indexed_details_pending"
+    },
+    {
+      "id": "pokemon_league_sinnoh",
+      "name": "Pokémon League (Sinnoh)",
+      "kind": "league",
+      "connectsTo": [
+        "route_223"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "connection_indexed_details_pending"
+    },
+    {
+      "id": "mount_coronet",
+      "name": "Mt. Coronet",
+      "kind": "mountain",
+      "connectsTo": [
+        "route_207",
+        "route_208",
+        "route_211",
+        "route_216"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "connection_indexed_details_pending"
+    },
+    {
+      "id": "pokemon_mansion",
+      "name": "Pokémon Mansion",
+      "kind": "mansion",
+      "connectsTo": [
+        "route_212"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "connection_indexed_details_pending"
     }
   ]
 }
