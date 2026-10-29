@@ -2082,6 +2082,38 @@
         "bulbapedia-part12"
       ],
       "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "route_13",
+      "name": "Route 13",
+      "kind": "route",
+      "connectsTo": [
+        "route_12",
+        "route_14"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "notes": "Wąski labirynt ogrodzeń prowadzący na zachód do Route 14.",
+      "sourceIds": [
+        "bulbapedia-part12"
+      ],
+      "dataStatus": "connection_verified_details_pending"
+    },
+    {
+      "id": "route_14",
+      "name": "Route 14",
+      "kind": "route",
+      "connectsTo": [
+        "route_13",
+        "route_15"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "notes": "Trasa łącząca labirynt Route 13 z Route 15.",
+      "sourceIds": [
+        "bulbapedia-part12"
+      ],
+      "dataStatus": "connection_verified_details_pending"
     }
   ]
 }
