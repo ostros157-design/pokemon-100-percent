@@ -930,3 +930,10 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Wynik strukturalny: 0 zduplikowanych ID, 0 zduplikowanych nazw, 0 brakujących `sourceIds`, 0 niedziałających `connectsTo`, 0 lokacji bez statusu danych.
 - UI ma wyszukiwanie po nazwie/notatkach/typie/połączeniach, klikalne przejścia między lokacjami i klikalne źródła. FireRed/LeafGreen mają przełącznik Kanto ↔ Sevii Islands.
 - To nie oznacza ukończenia całej mapy: poza schematem Kanto nie ma jeszcze dokładnych map graficznych w skali, a wiele regionów wymaga dokładnych pinezek przedmiotów, trenerów, Pokémonów, znajdziek i pełnego audytu wersji. Nie uruchamiano Flutter analyzer, testów ani APK.
+
+
+### Mapy — schemat Kanto także dla klasycznych gier Kanto (2026-10-29)
+
+- Dodano schematyczną mapę Kanto dla indeksu Kanto w Red/Blue/Yellow, FireRed/LeafGreen oraz po przełączeniu regionu Kanto w Gold/Silver/Crystal. Warianty nie pokazują paneli spotkań specyficznych dla Let’s Go.
+- Ekran wyraźnie opisuje grafikę jako schemat orientacyjny, bez dokładnych pozycji przedmiotów, trenerów i Pokémonów.
+- Commit: `b98808b`.
