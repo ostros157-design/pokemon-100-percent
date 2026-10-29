@@ -1293,3 +1293,10 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Commit układu: `6914569`; commit referencji danych: `e0b1f21`.
 - Nie uruchamiano `flutter analyze`, testów ani budowania APK. Nadal nierozstrzygnięte bez oglądu aplikacji i ręcznego porównania ze źródłowymi mapami: dokładne współrzędne terenu, pięter oraz pinezek przedmiotów/trenerów/Pokémonów.
 
+### Mapy — Kanto: pełny widok mapy na telefonie i PC (2026-10-29)
+
+- Zmieniono obszar rysowania z kwadratu 900×900 na proporcje 900×660, bliższe szerokiemu układowi mapy regionu.
+- Mapa automatycznie dopasowuje teraz skalę i pozycję do widocznego obszaru przy pierwszym otwarciu oraz po użyciu przycisku centrowania; zmniejszono minimalną skalę do 0,35×, aby zmieścić cały region także na wąskich ekranach.
+- Poprawiono przeliczenia współrzędnych wybierania punktów dla nowego wymiaru mapy. Zoom dotykowy, przesuwanie i ręczne przyciski pozostają dostępne.
+- Commit: `6cf9e32`. Weryfikacja tekstowa potwierdziła 76 węzłów, 84 połączenia, brak brakujących lokacji i brak pozycji poza obszarem mapy. Nie uruchamiano aplikacji, analyzer, testów ani APK; rzeczywiste zachowanie interakcji nadal wymaga sprawdzenia na telefonie/PC.
+
