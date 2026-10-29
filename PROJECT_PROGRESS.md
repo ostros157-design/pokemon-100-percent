@@ -676,3 +676,13 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 - Źródła: https://www.serebii.net/pokearth/kanto/route2.shtml ; https://theroutepedia.com/pokemon-lets-go-pikachu/route-2 ; https://theroutepedia.com/pokemon-lets-go-eevee/route-2
 - Commity: manifest `e8f908bcb107ecfae4406baaecda4fc4021b4e23`; ekran `7c35bfafa3aae8e2466906653e3f82333c035ee0`.
 - Status: zapisano w GitHubie. `flutter analyze`, testy i build APK nie zostały uruchomione; kompilacja i zachowanie UI pozostają niezweryfikowane.
+
+
+### Mapy — Viridian Forest i Pewter City (2026-10-29)
+- Dodano do ekranu map szybkie wybieranie Viridian Forest i Pewter City oraz offlineowe panele informacyjne.
+- Viridian Forest pokazuje spotkania w trawie zależne od wersji Let’s Go Pikachu/Eevee, poziomy 3–6, rzadkie spotkanie Bulbasaur przy użyciu Lure, podstawowych trenerów i listę przedmiotów. Informacje o trainerach i itemach są tekstowe; nie umieszczono ich na mapie jako dokładnych pinezek.
+- Pewter City pokazuje Pokémon Center, Poké Mart, Pewter Museum of Science, Gym Brocka, 5 Potion od Trace przy pierwszym wejściu, nagrody po walce z Brockiem oraz jego drużynę: Geodude Lv. 11 i Onix Lv. 12.
+- Manifest `assets/data/maps/lets_go_kanto_audit.json` zawiera teraz rekordy Viridian Forest i Pewter City z połączeniami, danymi spotkań/wydarzeń i odnośnikami do źródeł. Współrzędne pozostają niezweryfikowane.
+- Źródła: https://bulbapedia.bulbagarden.net/wiki/Walkthrough:Pok%C3%A9mon:_Let%27s_Go,_Pikachu!_and_Let%27s_Go,_Eevee!/Part_3 ; https://theroutepedia.com/pokemon-lets-go-pikachu/viridian-forest ; https://theroutepedia.com/pokemon-lets-go-eevee/viridian-forest ; https://theroutepedia.com/pokemon-lets-go-pikachu/pewter-city
+- Commity: ekran `a4e778168b77cd16db1dd1607455603957f7351f`; manifest `e497f65d35c59e0a5dd7120713f3afad19bf3b13`.
+- Status: zapisano w GitHubie. Nie uruchomiono `flutter analyze`, testów ani builda APK; kompilacja i zachowanie interfejsu nadal wymagają weryfikacji.
