@@ -32,7 +32,9 @@
       "id": "littleroot_town",
       "name": "Littleroot Town",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_101"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -45,7 +47,11 @@
       "id": "oldale_town",
       "name": "Oldale Town",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_101",
+        "route_102",
+        "route_103"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -58,7 +64,10 @@
       "id": "petalburg_city",
       "name": "Petalburg City",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_102",
+        "route_104"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -71,7 +80,11 @@
       "id": "rustboro_city",
       "name": "Rustboro City",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_104",
+        "route_115",
+        "route_116"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -84,7 +97,10 @@
       "id": "dewford_town",
       "name": "Dewford Town",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_106",
+        "route_107"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -97,7 +113,11 @@
       "id": "slateport_city",
       "name": "Slateport City",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_109",
+        "route_110",
+        "route_134"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -110,7 +130,12 @@
       "id": "mauville_city",
       "name": "Mauville City",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_110",
+        "route_111",
+        "route_117",
+        "route_118"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -123,7 +148,10 @@
       "id": "verdanturf_town",
       "name": "Verdanturf Town",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_117",
+        "rusturf_tunnel"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -136,7 +164,10 @@
       "id": "fallarbor_town",
       "name": "Fallarbor Town",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_113",
+        "route_114"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -149,7 +180,9 @@
       "id": "lavaridge_town",
       "name": "Lavaridge Town",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_112"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -162,7 +195,10 @@
       "id": "fortree_city",
       "name": "Fortree City",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_119",
+        "route_120"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -175,7 +211,10 @@
       "id": "lilycove_city",
       "name": "Lilycove City",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_121",
+        "route_124"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -188,7 +227,11 @@
       "id": "mossdeep_city",
       "name": "Mossdeep City",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_124",
+        "route_125",
+        "route_127"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -201,7 +244,9 @@
       "id": "sootopolis_city",
       "name": "Sootopolis City",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_126"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -214,7 +259,10 @@
       "id": "pacifidlog_town",
       "name": "Pacifidlog Town",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_131",
+        "route_132"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -227,7 +275,10 @@
       "id": "ever_grande_city",
       "name": "Ever Grande City",
       "kind": "league",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_128",
+        "victory_road"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -240,7 +291,10 @@
       "id": "route_101",
       "name": "Route 101",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "littleroot_town",
+        "oldale_town"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -253,7 +307,10 @@
       "id": "route_102",
       "name": "Route 102",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "oldale_town",
+        "petalburg_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -266,7 +323,10 @@
       "id": "route_103",
       "name": "Route 103",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "oldale_town",
+        "route_110"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -279,7 +339,12 @@
       "id": "route_104",
       "name": "Route 104",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "rustboro_city",
+        "petalburg_city",
+        "route_105",
+        "petalburg_woods"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -292,7 +357,10 @@
       "id": "route_105",
       "name": "Route 105",
       "kind": "water_route",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_104",
+        "route_106"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -305,7 +373,11 @@
       "id": "route_106",
       "name": "Route 106",
       "kind": "water_route",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_105",
+        "dewford_town",
+        "granite_cave"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -318,7 +390,10 @@
       "id": "route_107",
       "name": "Route 107",
       "kind": "water_route",
-      "connectsTo": [],
+      "connectsTo": [
+        "dewford_town",
+        "route_108"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -331,7 +406,11 @@
       "id": "route_108",
       "name": "Route 108",
       "kind": "water_route",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_107",
+        "route_109",
+        "abandoned_ship"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -344,7 +423,10 @@
       "id": "route_109",
       "name": "Route 109",
       "kind": "water_route",
-      "connectsTo": [],
+      "connectsTo": [
+        "slateport_city",
+        "route_108"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -357,7 +439,11 @@
       "id": "route_110",
       "name": "Route 110",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "mauville_city",
+        "route_103",
+        "slateport_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -370,7 +456,11 @@
       "id": "route_111",
       "name": "Route 111",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_113",
+        "route_112",
+        "mauville_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -383,7 +473,12 @@
       "id": "route_112",
       "name": "Route 112",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_111",
+        "lavaridge_town",
+        "fiery_path",
+        "jagged_pass"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -396,7 +491,10 @@
       "id": "route_113",
       "name": "Route 113",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_111",
+        "fallarbor_town"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -409,7 +507,10 @@
       "id": "route_114",
       "name": "Route 114",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "fallarbor_town",
+        "meteor_falls"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -422,7 +523,10 @@
       "id": "route_115",
       "name": "Route 115",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "meteor_falls",
+        "rustboro_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -435,7 +539,10 @@
       "id": "route_116",
       "name": "Route 116",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "rustboro_city",
+        "rusturf_tunnel"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -448,7 +555,10 @@
       "id": "route_117",
       "name": "Route 117",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "mauville_city",
+        "verdanturf_town"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -461,7 +571,11 @@
       "id": "route_118",
       "name": "Route 118",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_119",
+        "route_123",
+        "mauville_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -474,7 +588,11 @@
       "id": "route_119",
       "name": "Route 119",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "fortree_city",
+        "route_118",
+        "weather_institute"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -487,7 +605,11 @@
       "id": "route_120",
       "name": "Route 120",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "fortree_city",
+        "route_121",
+        "scorched_slab"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -500,7 +622,12 @@
       "id": "route_121",
       "name": "Route 121",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_120",
+        "lilycove_city",
+        "route_122",
+        "safari_zone"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -513,7 +640,11 @@
       "id": "route_122",
       "name": "Route 122",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_121",
+        "route_123",
+        "mt_pyre"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -526,7 +657,10 @@
       "id": "route_123",
       "name": "Route 123",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_122",
+        "route_118"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -539,7 +673,11 @@
       "id": "route_124",
       "name": "Route 124",
       "kind": "water_route",
-      "connectsTo": [],
+      "connectsTo": [
+        "mossdeep_city",
+        "lilycove_city",
+        "route_126"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -552,7 +690,10 @@
       "id": "route_125",
       "name": "Route 125",
       "kind": "water_route",
-      "connectsTo": [],
+      "connectsTo": [
+        "shoal_cave",
+        "mossdeep_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -565,7 +706,11 @@
       "id": "route_126",
       "name": "Route 126",
       "kind": "water_route",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_124",
+        "route_127",
+        "sootopolis_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -578,7 +723,11 @@
       "id": "route_127",
       "name": "Route 127",
       "kind": "water_route",
-      "connectsTo": [],
+      "connectsTo": [
+        "mossdeep_city",
+        "route_126",
+        "route_128"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -591,7 +740,12 @@
       "id": "route_128",
       "name": "Route 128",
       "kind": "water_route",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_127",
+        "ever_grande_city",
+        "route_129",
+        "seafloor_cavern"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -604,7 +758,10 @@
       "id": "route_129",
       "name": "Route 129",
       "kind": "water_route",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_128",
+        "route_130"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -617,7 +774,10 @@
       "id": "route_130",
       "name": "Route 130",
       "kind": "water_route",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_129",
+        "route_131"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -630,7 +790,11 @@
       "id": "route_131",
       "name": "Route 131",
       "kind": "water_route",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_130",
+        "pacifidlog_town",
+        "sky_pillar"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -643,7 +807,10 @@
       "id": "route_132",
       "name": "Route 132",
       "kind": "water_route",
-      "connectsTo": [],
+      "connectsTo": [
+        "pacifidlog_town",
+        "route_133"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -656,7 +823,10 @@
       "id": "route_133",
       "name": "Route 133",
       "kind": "water_route",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_132",
+        "route_134"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -669,7 +839,10 @@
       "id": "route_134",
       "name": "Route 134",
       "kind": "water_route",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_133",
+        "slateport_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "route_known_topology_pending_game_variant_audit",
@@ -682,7 +855,9 @@
       "id": "petalburg_woods",
       "name": "Petalburg Woods",
       "kind": "forest",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_104"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -695,7 +870,10 @@
       "id": "rusturf_tunnel",
       "name": "Rusturf Tunnel",
       "kind": "tunnel",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_116",
+        "verdanturf_town"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -708,7 +886,9 @@
       "id": "granite_cave",
       "name": "Granite Cave",
       "kind": "cave",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_106"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -721,7 +901,10 @@
       "id": "meteor_falls",
       "name": "Meteor Falls",
       "kind": "cave",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_114",
+        "route_115"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -734,7 +917,9 @@
       "id": "fiery_path",
       "name": "Fiery Path",
       "kind": "cave",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_112"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -747,7 +932,10 @@
       "id": "jagged_pass",
       "name": "Jagged Pass",
       "kind": "mountain_path",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_112",
+        "mt_chimney"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -760,7 +948,9 @@
       "id": "mt_chimney",
       "name": "Mt. Chimney",
       "kind": "mountain",
-      "connectsTo": [],
+      "connectsTo": [
+        "jagged_pass"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -786,7 +976,9 @@
       "id": "safari_zone",
       "name": "Safari Zone",
       "kind": "park",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_121"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -812,7 +1004,9 @@
       "id": "weather_institute",
       "name": "Weather Institute",
       "kind": "building",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_119"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -825,7 +1019,9 @@
       "id": "mt_pyre",
       "name": "Mt. Pyre",
       "kind": "mountain",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_122"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -838,7 +1034,9 @@
       "id": "shoal_cave",
       "name": "Shoal Cave",
       "kind": "cave",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_125"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -851,7 +1049,9 @@
       "id": "seafloor_cavern",
       "name": "Seafloor Cavern",
       "kind": "cave",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_128"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -877,7 +1077,9 @@
       "id": "sky_pillar",
       "name": "Sky Pillar",
       "kind": "tower",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_131"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
