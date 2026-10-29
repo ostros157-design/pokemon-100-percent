@@ -976,3 +976,5 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Commity: `70a9a31` (panel), `300df8d` (zgodność Dart).
 - Nadal nie uruchamiano Flutter analyzer, testów ani budowy APK; proszę sprawdzić działanie po swojej stronie.
 
+- Dodatkowo: lokacje bez kompletnej listy spotkań wyświetlają teraz jawny komunikat zamiast pustej sekcji; aplikacja nie zgaduje brakujących gatunków. Commit: `aa7c7d9`.
+
