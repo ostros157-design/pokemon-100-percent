@@ -2754,6 +2754,73 @@ class _KantoLocalAreaPainter extends CustomPainter {
         canvas.drawCircle(point, 10, Paint()..color = route.withValues(alpha: .18));
         canvas.drawCircle(point, 5, Paint()..color = route.withValues(alpha: .5));
       }
+    } else if (location == 'Mt. Moon') {
+      markers.addAll([
+        ('Wejście', Offset(size.width * .18, size.height * .40)),
+        ('1F', Offset(size.width * .49, size.height * .31)),
+        ('B1F', Offset(size.width * .78, size.height * .43)),
+        ('Wyjście Route 4', Offset(size.width * .78, size.height * .54)),
+      ]);
+    } else if (location == 'Rock Tunnel') {
+      markers.addAll([
+        ('Wejście Route 10', Offset(size.width * .18, size.height * .32)),
+        ('1F', Offset(size.width * .48, size.height * .50)),
+        ('B1F', Offset(size.width * .77, size.height * .31)),
+        ('Wyjście', Offset(size.width * .79, size.height * .48)),
+      ]);
+    } else if (location == "Diglett's Cave") {
+      markers.addAll([
+        ('Route 2', Offset(size.width * .18, size.height * .47)),
+        ('Tunel', Offset(size.width * .50, size.height * .48)),
+        ('Route 11', Offset(size.width * .80, size.height * .47)),
+      ]);
+    } else if (location == 'Seafoam Islands') {
+      markers.addAll([
+        ('Wejście', Offset(size.width * .18, size.height * .30)),
+        ('B1F–B2F', Offset(size.width * .49, size.height * .49)),
+        ('B3F–B4F', Offset(size.width * .79, size.height * .30)),
+        ('Articuno', Offset(size.width * .50, size.height * .76)),
+      ]);
+    } else if (location == 'Cerulean Cave') {
+      markers.addAll([
+        ('Wejście', Offset(size.width * .18, size.height * .34)),
+        ('1F', Offset(size.width * .49, size.height * .26)),
+        ('2F–3F', Offset(size.width * .79, size.height * .36)),
+        ('Mewtwo', Offset(size.width * .50, size.height * .68)),
+      ]);
+    } else if (location == 'Victory Road') {
+      markers.addAll([
+        ('Route 23', Offset(size.width * .18, size.height * .34)),
+        ('1F', Offset(size.width * .49, size.height * .53)),
+        ('2F', Offset(size.width * .78, size.height * .32)),
+        ('3F / Liga', Offset(size.width * .82, size.height * .48)),
+      ]);
+    } else if (location == 'Pokémon Tower') {
+      markers.addAll([
+        ('3F–4F', Offset(size.width * .27, size.height * .31)),
+        ('5F–6F', Offset(size.width * .73, size.height * .31)),
+        ('5F', Offset(size.width * .27, size.height * .65)),
+        ('Szczyt', Offset(size.width * .73, size.height * .65)),
+      ]);
+    } else if (location == 'Pokémon Mansion') {
+      markers.addAll([
+        ('1F', Offset(size.width * .27, size.height * .31)),
+        ('2F', Offset(size.width * .73, size.height * .31)),
+        ('3F', Offset(size.width * .27, size.height * .65)),
+        ('B1F', Offset(size.width * .73, size.height * .65)),
+      ]);
+    } else if (location == 'Power Plant') {
+      markers.addAll([
+        ('Wejście', Offset(size.width * .18, size.height * .40)),
+        ('Generatory', Offset(size.width * .50, size.height * .40)),
+        ('Zapdos', Offset(size.width * .80, size.height * .40)),
+      ]);
+    } else if (location == 'S.S. Anne') {
+      markers.addAll([
+        ('Pokład', Offset(size.width * .50, size.height * .29)),
+        ('Kabiny', Offset(size.width * .50, size.height * .58)),
+        ('Kapitan', Offset(size.width * .50, size.height * .80)),
+      ]);
     } else if (location == 'Pewter City') {
       markers.addAll([
         ('Miasto', Offset(size.width * .28, size.height * .46)),
