@@ -1,3 +1,10 @@
+### Mapy — jedna fizyczna lokacja dla Bill's House / Sea Cottage (2026-10-29)
+
+- Usunięto drugi, mylący marker Bill's House. W Let's Go jest to ten sam domek co Sea Cottage, więc mapa pokazuje teraz jeden fizyczny punkt, a nazwa Bill's House pozostaje wyszukiwalnym aliasem w indeksie.
+- Dodano obsługę aliasów w zaznaczaniu punktu mapy; wyszukanie „Bill's House” podświetla marker Sea Cottage. Indeks zachowuje 76 nazw, lecz mapa ma 75 fizycznych punktów i 83 połączenia.
+- Status aliasu ma `coordinateStatus: not_applicable`, a opis wyjaśnia, że nie jest to osobna lokacja. Zarejestrowano też brakujące referencje Bulbapedia Part 15 i Part 18.
+- Commity: `d17c6b8` (mapa), `b24ebae` (alias w danych), `ef31561` (źródła). Statyczny audyt: 75/75 fizycznych nazw i 83/83 połączenia zgodne; brak błędnych indeksów i brakujących referencji źródeł. Nie uruchamiano testów, analyzer ani APK.
+
 ### Mapy — wydarzenia fabularne i post-game na Route 17/22 (2026-10-29)
 
 - Route 22 opisuje teraz także późniejszą walkę z Trace po zdobyciu Earth Badge, z nagrodą $8,160 i informacją, że drużyna zależy od wersji/partnera.
