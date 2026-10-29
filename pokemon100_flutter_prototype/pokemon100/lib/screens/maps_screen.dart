@@ -3400,6 +3400,23 @@ class _KantoLocalAreaPainter extends CustomPainter {
       final dy = (point.dy + 8)
           .clamp(2.0, size.height - text.height - 2)
           .toDouble();
+      final labelRect = Rect.fromLTWH(
+        dx - 3,
+        dy - 2,
+        text.width + 6,
+        text.height + 4,
+      );
+      canvas.drawRRect(
+        RRect.fromRectAndRadius(labelRect, const Radius.circular(4)),
+        Paint()..color = const Color(0xFFF8F1D9).withValues(alpha: .88),
+      );
+      canvas.drawRRect(
+        RRect.fromRectAndRadius(labelRect, const Radius.circular(4)),
+        Paint()
+          ..color = const Color(0xFF78906F).withValues(alpha: .42)
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = .8,
+      );
       text.paint(canvas, Offset(dx, dy));
     }
 
