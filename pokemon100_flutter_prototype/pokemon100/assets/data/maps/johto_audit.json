@@ -1013,6 +1013,22 @@
         "bulbapedia-route-list"
       ],
       "dataStatus": "connection_verified_details_pending"
+    },
+    {
+      "id": "vermilion_city",
+      "name": "Vermilion City",
+      "region": "Kanto",
+      "kind": "town",
+      "connectsTo": [
+        "ss_aqua"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-route-list",
+        "bulbapedia-johto-region"
+      ],
+      "dataStatus": "cross_region_connection_reference"
     }
   ]
 }
