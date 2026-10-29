@@ -783,3 +783,10 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Dodano źródła PokeDB i Routepedia dla Paldei; metadane opisują prowincję i jasno zaznaczają, że Scarlet/Violet to otwarty świat bez ponumerowanych tras.
 - Połączono podobszary Hisui z właściwymi regionami i obozami w indeksie; połączenia oznaczają obszarowe powiązania, nie dokładne współrzędne.
 - Commity: `a31138a`, `cb4fc88`.
+
+
+### Mapy — wybór Kanto/Johto w grach generacji II (2026-10-29)
+
+- Dodano wybór regionu do wyświetlenia dla Pokémon Gold/Silver/Crystal: można przełączyć indeks Johto ↔ Kanto, co odzwierciedla możliwość odwiedzenia obu regionów po postgame.
+- Wybór regionu resetuje wyszukiwanie lokacji, a zmiana gry resetuje ręczne nadpisanie regionu, aby nie pokazywać przypadkowo mapy z poprzedniej gry.
+- Commit: `d2cd817`.
