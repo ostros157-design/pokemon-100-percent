@@ -166,6 +166,23 @@ class _MapsScreenState extends State<MapsScreen> {
       .replaceAll('’', "'")
       .replaceAll('‘', "'");
 
+  String _mapDataStatusLabel(String status) {
+    switch (status) {
+      case 'text_verified_positions_not_mapped':
+        return 'Dane opisowe sprawdzone; pinezki niezweryfikowane';
+      case 'encounter_rates_verified_from_rotomlabs_positions_not_mapped':
+        return 'Szanse spotkań sprawdzone; pinezki niezweryfikowane';
+      case 'connection_verified_details_pending':
+        return 'Połączenia sprawdzone; szczegóły do uzupełnienia';
+      case 'leader_verified_team_needs_review':
+        return 'Drużyna lidera wymaga ponownego sprawdzenia';
+      case 'schematic_interior_available_exact_layout_pending':
+        return 'Schemat wnętrza dostępny; dokładny plan pięter do weryfikacji';
+      default:
+        return status.replaceAll('_', ' ');
+    }
+  }
+
   Widget _buildLetsGoEncounterPanel(
     BuildContext context,
     String locationName,
@@ -376,7 +393,7 @@ class _MapsScreenState extends State<MapsScreen> {
             if (dataStatus.isNotEmpty) ...[
               const SizedBox(height: 4),
               Text(
-                'Status danych: ' + dataStatus.replaceAll('_', ' '),
+                'Status danych: ' + _mapDataStatusLabel(dataStatus),
                 style: Theme.of(context).textTheme.labelSmall,
               ),
             ],
