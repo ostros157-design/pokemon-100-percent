@@ -893,3 +893,10 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Połączono punkty orientacyjne ze zweryfikowanymi obszarami: Colonnade Hollow, Million Volt Skyline, Leaking Tower, Fury Falls, Gracia Stones, Casseroya Falls, Paldea’s Highest Peak, Groundblight/Icerend/Firescourge/Grasswither Shrine, Poco Path Lighthouse i akademie w Mesagoza.
 - Źródło dla Ten Sights: `https://bulbapedia.bulbagarden.net/wiki/Casseroya_Falls`; pozycje pinezek pozostają niezweryfikowane.
 - Commit: `db37cc5`; indeks Paldea ma teraz 103 lokacje.
+
+
+### Mapy — korekta nazw i niezweryfikowanych placeholderów Paldei (2026-10-29)
+
+- Usunięto trzy niepotwierdzone placeholdery `Distant Rock`, `Socarrat Trail Sight` i `Tropical Biome`; ostatni nie pasował do rzeczywistej czwórki biomów Terarium, gdzie używamy `Savanna Biome`.
+- Po korekcie Paldea ma 100 rekordów, w tym wszystkie 10 nazwanych Ten Sights i cztery właściwe biomy Terarium. Nie dodajemy lokacji tylko po to, by sztucznie zwiększyć licznik.
+- Commit: `7c41d93`.
