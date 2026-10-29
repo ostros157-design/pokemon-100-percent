@@ -1,3 +1,9 @@
+### Mapy — pozostałe wydarzenia obiektów Kanto (2026-10-29)
+
+- Uzupełniono wydarzenia fabularne i warunki progresji dla S.S. Anne, Team Rocket Hideout, Silph Co., Pokémon Tower, Pokémon Mansion, Seafoam Islands, Victory Road, Cerulean Cave, Power Plant, domu gracza, laboratorium Oaka, Department Store, Condominiums, Sea Cottage, Day Care i bramy Ligi.
+- Dodano kluczowe zdarzenia: Lift Key/Silph Scope, Master Ball, Poké Flute, Secret Key, statyczne spotkania Articuno/Moltres/Mewtwo/Zapdos, S.S. Tickets i sprawdzanie odznak.
+- Opisy jawnie rozdzielają wydarzenia fabularne od dokładnych pinezek i kafelków. Commit danych: `c1d8905`. Bez testów, analyzer ani APK.
+
 ### Mapy — rozszerzenie wydarzeń w miastach Kanto (2026-10-29)
 
 - Rozbudowano panel wydarzeń Cerulean City, Vermilion City, Celadon City, Saffron City, Fuchsia City, Cinnabar Island i Indigo Plateau.
