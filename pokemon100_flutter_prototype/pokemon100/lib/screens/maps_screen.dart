@@ -2254,8 +2254,10 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
       'Kierunek Route 1': 'Route 1 prowadzi z powrotem na południe do Pallet Town.',
     },
     'Route 2': {
-      'Kierunek północny': 'Poradnik prowadzi Route 2 na północ, przed wejściem do Viridian Forest.',
-      'Kierunek Viridian Forest': 'Viridian Forest jest następną lokacją wskazaną w poradniku.',
+      'Kierunek północny': 'Północna część Route 2 prowadzi do Viridian Forest i dalej w stronę Pewter City.',
+      'Kierunek Viridian Forest': 'Viridian Forest znajduje się pomiędzy południową i północną częścią trasy.',
+      "Diglett's Cave (Route 2 entrance)": 'Boczne wejście do Diglett’s Cave; dokładna pozycja nie jest naniesiona.',
+      'Pewter City': 'Północny kierunek w stronę Pewter City.',
     },
     'Viridian Forest': {
       'Obszar leśny': 'Poradnik zaleca przejść przez las i szukać Pokémonów oraz przedmiotów. Nie oznaczamy niepotwierdzonych pozycji.',
@@ -3175,8 +3177,9 @@ class _KantoLocalAreaPainter extends CustomPainter {
     } else if (location == 'Route 2') {
       markers.addAll([
         ('Viridian City', Offset(size.width * .12, size.height * .88)),
-        ('Trasa', Offset(size.width * .48, size.height * .58)),
-        ('Viridian Forest', Offset(size.width * .88, size.height * .12)),
+        ("Diglett's Cave entrance", Offset(size.width * .39, size.height * .60)),
+        ('Viridian Forest', Offset(size.width * .60, size.height * .38)),
+        ('Pewter City', Offset(size.width * .88, size.height * .12)),
       ]);
     } else if (location == 'Viridian Forest') {
       markers.addAll([
