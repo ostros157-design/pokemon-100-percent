@@ -1204,3 +1204,8 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Statyczna walidacja: 76/76 nazw węzłów zgodnych, 84/84 połączenia zgodne z `connectsTo`, brak nieistniejących indeksów i brak brakujących identyfikatorów źródeł. Nie uruchamiano Flutter analyzer, testów ani APK.
 - Commity: `27640d7`, `e990330`, `c853e1d`, `386a06f`, `e8f7ef2`, `fa317cc`, `fff4e55`.
 
+### Mapy — Kanto: wybrzeże i ocean w stylu atlasu (2026-10-29)
+
+- Dodano jasny pas piasku przy linii brzegowej oraz delikatne, wektorowe fale rysowane wyłącznie po stronie oceanu. Fale są odcinane maską kształtu lądu, więc nie powinny nachodzić na punkty lokacji.
+- Commit: `7add644`. To dekoracyjna ilustracja, nie dokładny brzeg z gry; nie uruchamiano testów ani APK.
+
