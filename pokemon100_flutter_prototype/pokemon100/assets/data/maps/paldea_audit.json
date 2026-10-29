@@ -560,11 +560,12 @@
         "west_province_area_two",
         "casseroya_lake",
         "glaseado_mountain",
-        "dalizapa_passage"
+        "dalizapa_passage",
+        "zero_gate"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_connection_source_verified_exact_map_pins_pending",
+      "dataStatus": "area_access_source_verified_exact_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
@@ -1022,11 +1023,12 @@
       "name": "Oni Mountain",
       "kind": "natural_area",
       "connectsTo": [
-        "kitakami"
+        "kitakami",
+        "oni_mountain_cave"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "parent_access_indexed_exact_subarea_routes_pending",
+      "dataStatus": "area_access_source_verified_exact_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
@@ -1118,16 +1120,18 @@
       "name": "Zero Gate",
       "kind": "facility",
       "connectsTo": [
-        "area_zero"
+        "area_zero",
+        "west_province_area_three"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
-        "bulbapedia-area-zero"
+        "bulbapedia-area-zero",
+        "bulbapedia-west-area-three"
       ],
-      "dataStatus": "parent_access_indexed_exact_subarea_routes_pending",
+      "dataStatus": "area_access_source_verified_exact_pins_pending",
       "province": "Great Crater of Paldea",
       "parentRegion": "Area Zero / Great Crater of Paldea"
     },
@@ -1537,14 +1541,17 @@
       "id": "oni_mountain_cave",
       "name": "Oni Mountain Cave",
       "kind": "cave",
-      "connectsTo": [],
+      "connectsTo": [
+        "oni_mountain"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-kitakami"
       ],
-      "dataStatus": "named_location_known_exact_pins_pending_verification"
+      "dataStatus": "area_access_source_verified_exact_pins_pending"
     },
     {
       "id": "coastal_biome",
