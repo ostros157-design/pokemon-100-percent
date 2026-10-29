@@ -622,3 +622,11 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 - Status: zapisano bezpośrednio w GitHubie. Nie uruchomiono `flutter analyze`, testów ani builda APK w tej sesji; przewijanie należy potwierdzić po kompilacji i na urządzeniu.
 
 - Drobna korekta typowania po przeglądzie kodu: indeks kroku po ograniczeniu do zakresu jest jawnie konwertowany na `int`. Commit: `284314e0a893628a554f8dfc96b50106615d6da6`. Nadal nie uruchomiono analizy ani kompilacji.
+
+
+### Mapy — nowy kierunek graficzny: miękka ilustracja HD (2026-10-29)
+- Ustalono docelowy styl map: nowoczesna, ręcznie malowana ilustracja z płynnymi krawędziami, miękkim cieniowaniem i detalami o wysokiej czytelności; inspiracją są gładkie tekstury HD, a nie widoczne piksele.
+- Styl ma zachowywać tożsamość konkretnej gry i regionu (np. Hoenn z Emerald), zamiast nakładać jeden identyczny wygląd na wszystkie regiony.
+- Wymagane warstwy informacyjne: Pokémony, przedmioty, miasta, trasy, trenerzy i znajdźki 100%; mapa ma być dostępna offline.
+- Zasada danych: nie dodawać fikcyjnych współrzędnych ani niezweryfikowanych pinów. Dekoracyjne tekstury terenu muszą być odróżnialne od potwierdzonych danych geograficznych.
+- Status: zapis kierunku wizualnego; implementacja graficzna wymaga osobnego commita. Nie uruchomiono Flutter analyze, testów ani builda APK.
