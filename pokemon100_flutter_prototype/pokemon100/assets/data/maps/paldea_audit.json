@@ -44,6 +44,11 @@
       "id": "bulbapedia-mesagoza",
       "url": "https://bulbapedia.bulbagarden.net/wiki/Mesagoza",
       "scope": "Mesagoza gates and adjacent areas"
+    },
+    {
+      "id": "bulbapedia-cities-towns",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/List_of_cities_and_towns",
+      "scope": "Paldea settlement connections to surrounding areas"
     }
   ],
   "locations": [
@@ -52,16 +57,18 @@
       "name": "Cabo Poco",
       "kind": "town",
       "connectsTo": [
-        "south_province_area_one"
+        "south_province_area_one",
+        "poco_path"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "core_access_connections_source_verified_exact_map_pins_pending",
+      "dataStatus": "settlement_area_connections_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
         "bulbapedia-south-area-one",
-        "bulbapedia-mesagoza"
+        "bulbapedia-mesagoza",
+        "bulbapedia-cities-towns"
       ],
       "province": "South Province"
     },
@@ -74,12 +81,13 @@
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "core_access_connections_source_verified_exact_map_pins_pending",
+      "dataStatus": "settlement_area_connections_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
         "bulbapedia-south-area-one",
-        "bulbapedia-mesagoza"
+        "bulbapedia-mesagoza",
+        "bulbapedia-cities-towns"
       ],
       "province": "South Province"
     },
@@ -108,13 +116,16 @@
       "id": "cortondo",
       "name": "Cortondo",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "south_province_area_two"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "settlement_known_connections_pending_variant_and_dlc_audit",
+      "dataStatus": "settlement_area_connections_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-cities-towns"
       ],
       "province": "South Province"
     },
@@ -122,13 +133,17 @@
       "id": "artazon",
       "name": "Artazon",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "south_province_area_three",
+        "east_province_area_one"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "settlement_known_connections_pending_variant_and_dlc_audit",
+      "dataStatus": "settlement_area_connections_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-cities-towns"
       ],
       "province": "East Province"
     },
@@ -136,13 +151,16 @@
       "id": "levincia",
       "name": "Levincia",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "east_province_area_two"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "settlement_known_connections_pending_variant_and_dlc_audit",
+      "dataStatus": "settlement_area_connections_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-cities-towns"
       ],
       "province": "East Province"
     },
@@ -150,13 +168,17 @@
       "id": "cascarrafa",
       "name": "Cascarrafa",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "west_province_area_one",
+        "asado_desert"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "settlement_known_connections_pending_variant_and_dlc_audit",
+      "dataStatus": "settlement_area_connections_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-cities-towns"
       ],
       "province": "West Province"
     },
@@ -164,13 +186,17 @@
       "id": "porto_marinada",
       "name": "Porto Marinada",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "west_province_area_two",
+        "west_paldean_sea"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "settlement_known_connections_pending_variant_and_dlc_audit",
+      "dataStatus": "settlement_area_connections_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-cities-towns"
       ],
       "province": "West Province"
     },
@@ -178,13 +204,17 @@
       "id": "medali",
       "name": "Medali",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "west_province_area_three",
+        "dalizapa_passage"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "settlement_known_connections_pending_variant_and_dlc_audit",
+      "dataStatus": "settlement_area_connections_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-cities-towns"
       ],
       "province": "West Province"
     },
@@ -192,13 +222,16 @@
       "id": "montenevera",
       "name": "Montenevera",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "glaseado_mountain"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "settlement_known_connections_pending_variant_and_dlc_audit",
+      "dataStatus": "settlement_area_connections_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-cities-towns"
       ],
       "province": "North Province"
     },
@@ -206,13 +239,16 @@
       "id": "alfornada",
       "name": "Alfornada",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "south_province_area_six"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "settlement_known_connections_pending_variant_and_dlc_audit",
+      "dataStatus": "settlement_area_connections_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-cities-towns"
       ],
       "province": "South Province"
     },
@@ -220,13 +256,17 @@
       "id": "zapapico",
       "name": "Zapapico",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "east_province_area_three",
+        "dalizapa_passage"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "settlement_known_connections_pending_variant_and_dlc_audit",
+      "dataStatus": "settlement_area_connections_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-cities-towns"
       ],
       "province": "East Province"
     },
@@ -260,12 +300,13 @@
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "core_access_connections_source_verified_exact_map_pins_pending",
+      "dataStatus": "settlement_area_connections_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
         "bulbapedia-south-area-one",
-        "bulbapedia-mesagoza"
+        "bulbapedia-mesagoza",
+        "bulbapedia-cities-towns"
       ],
       "province": "South Province"
     },
@@ -274,16 +315,18 @@
       "name": "South Province (Area Two)",
       "kind": "area",
       "connectsTo": [
-        "mesagoza"
+        "mesagoza",
+        "cortondo"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "core_access_connections_source_verified_exact_map_pins_pending",
+      "dataStatus": "settlement_area_connections_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
         "bulbapedia-south-area-one",
-        "bulbapedia-mesagoza"
+        "bulbapedia-mesagoza",
+        "bulbapedia-cities-towns"
       ],
       "province": "South Province"
     },
@@ -292,16 +335,18 @@
       "name": "South Province (Area Three)",
       "kind": "area",
       "connectsTo": [
-        "mesagoza"
+        "mesagoza",
+        "artazon"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "core_access_connections_source_verified_exact_map_pins_pending",
+      "dataStatus": "settlement_area_connections_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
         "bulbapedia-south-area-one",
-        "bulbapedia-mesagoza"
+        "bulbapedia-mesagoza",
+        "bulbapedia-cities-towns"
       ],
       "province": "South Province"
     },
@@ -345,13 +390,16 @@
       "id": "south_province_area_six",
       "name": "South Province (Area Six)",
       "kind": "area",
-      "connectsTo": [],
+      "connectsTo": [
+        "alfornada"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "dataStatus": "settlement_area_connections_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-cities-towns"
       ],
       "province": "South Province"
     },
@@ -359,13 +407,16 @@
       "id": "west_province_area_one",
       "name": "West Province (Area One)",
       "kind": "area",
-      "connectsTo": [],
+      "connectsTo": [
+        "cascarrafa"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "dataStatus": "settlement_area_connections_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-cities-towns"
       ],
       "province": "West Province"
     },
@@ -373,13 +424,16 @@
       "id": "west_province_area_two",
       "name": "West Province (Area Two)",
       "kind": "area",
-      "connectsTo": [],
+      "connectsTo": [
+        "porto_marinada"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "dataStatus": "settlement_area_connections_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-cities-towns"
       ],
       "province": "West Province"
     },
@@ -387,13 +441,16 @@
       "id": "west_province_area_three",
       "name": "West Province (Area Three)",
       "kind": "area",
-      "connectsTo": [],
+      "connectsTo": [
+        "medali"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "dataStatus": "settlement_area_connections_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-cities-towns"
       ],
       "province": "West Province"
     },
@@ -401,13 +458,16 @@
       "id": "east_province_area_one",
       "name": "East Province (Area One)",
       "kind": "area",
-      "connectsTo": [],
+      "connectsTo": [
+        "artazon"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "dataStatus": "settlement_area_connections_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-cities-towns"
       ],
       "province": "East Province"
     },
@@ -415,13 +475,16 @@
       "id": "east_province_area_two",
       "name": "East Province (Area Two)",
       "kind": "area",
-      "connectsTo": [],
+      "connectsTo": [
+        "levincia"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "dataStatus": "settlement_area_connections_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-cities-towns"
       ],
       "province": "East Province"
     },
@@ -429,13 +492,16 @@
       "id": "east_province_area_three",
       "name": "East Province (Area Three)",
       "kind": "area",
-      "connectsTo": [],
+      "connectsTo": [
+        "zapapico"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "dataStatus": "settlement_area_connections_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-cities-towns"
       ],
       "province": "East Province"
     },
@@ -499,13 +565,16 @@
       "id": "asado_desert",
       "name": "Asado Desert",
       "kind": "natural_area",
-      "connectsTo": [],
+      "connectsTo": [
+        "cascarrafa"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "dataStatus": "settlement_area_connections_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-cities-towns"
       ],
       "province": "West Province"
     },
@@ -527,13 +596,16 @@
       "id": "glaseado_mountain",
       "name": "Glaseado Mountain",
       "kind": "natural_area",
-      "connectsTo": [],
+      "connectsTo": [
+        "montenevera"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "dataStatus": "settlement_area_connections_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-cities-towns"
       ],
       "province": "North Province"
     },
@@ -541,13 +613,17 @@
       "id": "dalizapa_passage",
       "name": "Dalizapa Passage",
       "kind": "natural_area",
-      "connectsTo": [],
+      "connectsTo": [
+        "medali",
+        "zapapico"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "dataStatus": "settlement_area_connections_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-cities-towns"
       ],
       "province": "North Province"
     },
@@ -636,13 +712,16 @@
       "id": "west_paldean_sea",
       "name": "West Paldean Sea",
       "kind": "water_area",
-      "connectsTo": [],
+      "connectsTo": [
+        "porto_marinada"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "dataStatus": "settlement_area_connections_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-cities-towns"
       ]
     },
     {
@@ -836,14 +915,17 @@
       "id": "poco_path",
       "name": "Poco Path",
       "kind": "path",
-      "connectsTo": [],
+      "connectsTo": [
+        "cabo_poco"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-cities-towns"
       ],
-      "dataStatus": "named_location_known_exact_pins_pending_verification",
+      "dataStatus": "settlement_area_connections_source_verified_exact_map_pins_pending",
       "province": "South Province"
     },
     {
