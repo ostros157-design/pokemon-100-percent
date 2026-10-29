@@ -13182,20 +13182,19 @@
       "id": "bills_house",
       "name": "Bill's House",
       "kind": "house",
-      "connectsTo": [
-        "route_25"
-      ],
+      "connectsTo": [],
       "localMapAsset": null,
-      "coordinateStatus": "unverified",
+      "coordinateStatus": "not_applicable",
       "features": [
         "Bill",
         "S.S. Ticket"
       ],
-      "notes": "Na końcu Route 25. Po pomocy Billowi otrzymuje się S.S. Ticket umożliwiający wejście na S.S. Anne.",
+      "notes": "Alias nazwy Sea Cottage — to ten sam fizyczny domek Billa przy Route 25, a nie osobna lokacja. Użyj punktu Sea Cottage na mapie; lokalny schemat i szczegóły są wspólne.",
       "sourceIds": [
         "bulbapedia-part5"
       ],
-      "dataStatus": "text_verified_positions_not_mapped"
+      "dataStatus": "alias_of_location",
+      "aliasOf": "sea_cottage"
     },
     {
       "id": "pewter_museum",
@@ -13384,7 +13383,7 @@
       "connectsTo": [
         "route_25"
       ],
-      "notes": "Domek Billa przy północnym wybrzeżu, osiągany z Route 25. Wnętrze i dokładne położenie drzwi nie są jeszcze odwzorowane.",
+      "notes": "Domek Billa (znany również jako Bill's House) przy Route 25. To jeden fizyczny budynek; nie należy traktować aliasu Bill's House jako osobnego punktu mapy.",
       "sourceIds": [
         "bulbapedia-sea-cottage"
       ],
