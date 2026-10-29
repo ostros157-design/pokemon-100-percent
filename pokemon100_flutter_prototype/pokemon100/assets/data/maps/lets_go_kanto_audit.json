@@ -8258,8 +8258,8 @@
         "Poké Mart",
         "Fuchsia Gym",
         "GO Park",
-        "Safari Zone Gate",
-        "pokój Warden"
+        "pokój Warden",
+        "GO Park / Playful Park"
       ],
       "items": [
         "Super Lure"
@@ -13083,8 +13083,8 @@
       "localMapAsset": null,
       "coordinateStatus": "not_applicable",
       "features": [
-        "strefy Safari",
-        "Warden's Gold Teeth"
+        "GO Park (alias historyczny)",
+        "Playful Park"
       ],
       "notes": "Alias historycznej nazwy obszaru GO Park. W Pokémon: Let's Go, Pikachu!/Eevee! klasyczna Safari Zone nie jest osobną lokacją; użyj punktu GO Park, obejmującego również Playful Park.",
       "sourceIds": [
