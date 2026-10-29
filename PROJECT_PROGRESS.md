@@ -943,3 +943,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 
 - Zweryfikowano obecność wszystkich rekordów tras w indeksach: Kanto 1–25, Johto 26–48, Hoenn 101–134, Sinnoh 201–230, Unova 1–23, Kalos 1–22, Alola 1–17 i Galar 1–10. Brakujące rekordy tras: 0.
 - Dla Paldei nie dodano numerowanych tras, bo Scarlet/Violet używają otwartego świata z prowincjami i obszarami.
+
+
+### Mapy — szczegóły lokacji z indeksu w UI (2026-10-29)
+
+- Karta wybranej lokacji wyświetla teraz dane zapisane w JSON: dzikie spotkania (z uwzględnieniem wariantu Let’s Go i pięter jaskiń), przedmioty, trenerów/drużyny oraz wydarzenia/nagrody.
+- Wpisy z niezweryfikowanymi pozycjami nadal pokazują opis tekstowy; UI nie tworzy pinezek ani współrzędnych na podstawie samego opisu.
+- Commit: `ddf6015`.
+- Nie uruchamiano Flutter analyzer/testów/APK, więc zmiana wymaga późniejszego sprawdzenia w aplikacji.
