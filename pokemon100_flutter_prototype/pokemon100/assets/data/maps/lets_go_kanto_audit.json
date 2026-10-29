@@ -497,6 +497,16 @@
       "id": "serebii-route25",
       "url": "https://www.serebii.net/pokearth/kanto/route25.shtml",
       "scope": "Route 25 Let’s Go land, water, sky and special encounters"
+    },
+    {
+      "id": "serebii-route3",
+      "url": "https://www.serebii.net/pokearth/kanto/route3.shtml",
+      "scope": "Route 3 Let’s Go ground, sky and special encounter tables"
+    },
+    {
+      "id": "serebii-route5",
+      "url": "https://www.serebii.net/pokearth/kanto/route5.shtml",
+      "scope": "Route 5 Let’s Go ground, sky and special encounter tables"
     }
   ],
   "locations": [
@@ -976,7 +986,7 @@
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "notes": "Route 2 has sections south and north of Viridian Forest. Serebii also describes an eastern path toward Diglett's Cave; exact in-app coordinates are not verified.",
+      "notes": "Route 2 has sections south and north of Viridian Forest. Serebii also describes an eastern path toward Diglett's Cave; exact in-app coordinates are not verified. Spotkania na południu występują na poziomach 3–4, a w północnej części 3–8; wpisy trasy pokazują wspólny zakres 3–8.",
       "wildPokemonDetails": {
         "lets_go_pikachu": [
           {
@@ -1023,6 +1033,73 @@
               4
             ],
             "ratePercent": 15
+          },
+          {
+            "name": "Pidgey",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 60
+          },
+          {
+            "name": "Pidgeotto",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 35
+          },
+          {
+            "name": "Pidgeot",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 5
+          },
+          {
+            "name": "Charizard",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Dragonite",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Articuno",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Zapdos",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Moltres",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
           }
         ],
         "lets_go_eevee": [
@@ -1070,7 +1147,78 @@
               4
             ],
             "ratePercent": 15
+          },
+          {
+            "name": "Pidgey",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 60
+          },
+          {
+            "name": "Pidgeotto",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 35
+          },
+          {
+            "name": "Pidgeot",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 5
+          },
+          {
+            "name": "Charizard",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Dragonite",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Articuno",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Zapdos",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Moltres",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
           }
+        ],
+        "status": "text_verified",
+        "sourceIds": [
+          "serebii-route2"
         ]
       },
       "encounterStatus": "text_verified",
@@ -1110,7 +1258,37 @@
           "status": "text_verified_position_not_mapped"
         }
       ],
-      "dataStatus": "text_verified_positions_not_mapped"
+      "dataStatus": "text_verified_positions_not_mapped",
+      "wildPokemon": {
+        "lets_go_pikachu": [
+          "Pidgey",
+          "Rattata",
+          "Oddish",
+          "Caterpie",
+          "Weedle",
+          "Pidgeotto",
+          "Pidgeot",
+          "Charizard",
+          "Dragonite",
+          "Articuno",
+          "Zapdos",
+          "Moltres"
+        ],
+        "lets_go_eevee": [
+          "Pidgey",
+          "Rattata",
+          "Bellsprout",
+          "Caterpie",
+          "Weedle",
+          "Pidgeotto",
+          "Pidgeot",
+          "Charizard",
+          "Dragonite",
+          "Articuno",
+          "Zapdos",
+          "Moltres"
+        ]
+      }
     },
     {
       "id": "viridian_forest",
@@ -1324,41 +1502,200 @@
       "coordinateStatus": "unverified",
       "notes": "Trawiasta trasa na wschód od Pewter City prowadząca do wejścia do Mt. Moon.",
       "wildPokemonDetails": {
-        "levels": [
-          3,
-          8
-        ],
         "lets_go_pikachu": [
-          [
-            "Spearow",
-            30
-          ],
-          [
-            "Rattata",
-            30
-          ],
-          [
-            "Mankey",
-            20
-          ],
-          [
-            "Sandshrew",
-            20
-          ]
+          {
+            "name": "Spearow",
+            "method": "grass",
+            "levelRange": [
+              3,
+              8
+            ],
+            "ratePercent": 30
+          },
+          {
+            "name": "Rattata",
+            "method": "grass",
+            "levelRange": [
+              3,
+              8
+            ],
+            "ratePercent": 30
+          },
+          {
+            "name": "Mankey",
+            "method": "grass",
+            "levelRange": [
+              3,
+              8
+            ],
+            "ratePercent": 20
+          },
+          {
+            "name": "Sandshrew",
+            "method": "grass",
+            "levelRange": [
+              3,
+              8
+            ],
+            "ratePercent": 20
+          },
+          {
+            "name": "Charmander",
+            "method": "special spawn",
+            "levelRange": [
+              3,
+              8
+            ]
+          },
+          {
+            "name": "Spearow",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 60
+          },
+          {
+            "name": "Fearow",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 40
+          },
+          {
+            "name": "Charizard",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Dragonite",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Articuno",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Zapdos",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Moltres",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          }
         ],
         "lets_go_eevee": [
-          [
-            "Spearow",
-            40
-          ],
-          [
-            "Rattata",
-            40
-          ],
-          [
-            "Ekans",
-            20
-          ]
+          {
+            "name": "Spearow",
+            "method": "grass",
+            "levelRange": [
+              3,
+              8
+            ],
+            "ratePercent": 40
+          },
+          {
+            "name": "Rattata",
+            "method": "grass",
+            "levelRange": [
+              3,
+              8
+            ],
+            "ratePercent": 40
+          },
+          {
+            "name": "Ekans",
+            "method": "grass",
+            "levelRange": [
+              3,
+              8
+            ],
+            "ratePercent": 20
+          },
+          {
+            "name": "Charmander",
+            "method": "special spawn",
+            "levelRange": [
+              3,
+              8
+            ]
+          },
+          {
+            "name": "Spearow",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 60
+          },
+          {
+            "name": "Fearow",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 40
+          },
+          {
+            "name": "Charizard",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Dragonite",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Articuno",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Zapdos",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          }
+        ],
+        "status": "text_verified",
+        "sourceIds": [
+          "serebii-route3"
         ]
       },
       "trainers": [
@@ -1381,9 +1718,37 @@
       "sourceIds": [
         "routepedia-route3-pikachu",
         "routepedia-route3-eevee",
-        "bulbapedia-part4"
+        "bulbapedia-part4",
+        "serebii-route3"
       ],
-      "dataStatus": "text_verified_positions_not_mapped"
+      "dataStatus": "text_verified_positions_not_mapped",
+      "wildPokemon": {
+        "lets_go_pikachu": [
+          "Spearow",
+          "Rattata",
+          "Mankey",
+          "Sandshrew",
+          "Charmander",
+          "Fearow",
+          "Charizard",
+          "Dragonite",
+          "Articuno",
+          "Zapdos",
+          "Moltres"
+        ],
+        "lets_go_eevee": [
+          "Spearow",
+          "Rattata",
+          "Ekans",
+          "Charmander",
+          "Fearow",
+          "Charizard",
+          "Dragonite",
+          "Articuno",
+          "Zapdos"
+        ]
+      },
+      "encounterStatus": "text_verified"
     },
     {
       "id": "mt_moon",
@@ -2654,61 +3019,191 @@
       "coordinateStatus": "unverified",
       "notes": "Trasa na południe od Cerulean City; znajduje się tu Day Care oraz północne wejście do Underground Path. Bramy do Saffron zależą od postępu fabuły.",
       "wildPokemonDetails": {
-        "levels": [
-          11,
-          16
-        ],
         "lets_go_pikachu": [
-          [
-            "Rattata",
-            30
-          ],
-          [
-            "Pidgey",
-            20
-          ],
-          [
-            "Growlithe",
-            20
-          ],
-          [
-            "Jigglypuff",
-            15
-          ],
-          [
-            "Pidgeotto",
-            10
-          ],
-          [
-            "Abra",
-            5
-          ]
+          {
+            "name": "Rattata",
+            "method": "grass",
+            "levelRange": [
+              11,
+              16
+            ],
+            "ratePercent": 30
+          },
+          {
+            "name": "Pidgey",
+            "method": "grass",
+            "levelRange": [
+              11,
+              16
+            ],
+            "ratePercent": 20
+          },
+          {
+            "name": "Growlithe",
+            "method": "grass",
+            "levelRange": [
+              11,
+              16
+            ],
+            "ratePercent": 20
+          },
+          {
+            "name": "Jigglypuff",
+            "method": "grass",
+            "levelRange": [
+              11,
+              16
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Pidgeotto",
+            "method": "grass",
+            "levelRange": [
+              11,
+              16
+            ],
+            "ratePercent": 10
+          },
+          {
+            "name": "Abra",
+            "method": "grass",
+            "levelRange": [
+              11,
+              16
+            ],
+            "ratePercent": 5
+          },
+          {
+            "name": "Chansey",
+            "method": "special spawn",
+            "levelRange": [
+              11,
+              16
+            ]
+          },
+          {
+            "name": "Pidgey",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 60
+          },
+          {
+            "name": "Pidgeotto",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 35
+          },
+          {
+            "name": "Pidgeot",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 5
+          }
         ],
         "lets_go_eevee": [
-          [
-            "Rattata",
-            30
-          ],
-          [
-            "Pidgey",
-            20
-          ],
-          [
-            "Vulpix",
-            20
-          ],
-          [
-            "Jigglypuff",
-            15
-          ],
-          [
-            "Pidgeotto",
-            10
-          ],
-          [
-            "Abra",
-            5
-          ]
+          {
+            "name": "Rattata",
+            "method": "grass",
+            "levelRange": [
+              11,
+              16
+            ],
+            "ratePercent": 30
+          },
+          {
+            "name": "Pidgey",
+            "method": "grass",
+            "levelRange": [
+              11,
+              16
+            ],
+            "ratePercent": 20
+          },
+          {
+            "name": "Vulpix",
+            "method": "grass",
+            "levelRange": [
+              11,
+              16
+            ],
+            "ratePercent": 20
+          },
+          {
+            "name": "Jigglypuff",
+            "method": "grass",
+            "levelRange": [
+              11,
+              16
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Pidgeotto",
+            "method": "grass",
+            "levelRange": [
+              11,
+              16
+            ],
+            "ratePercent": 10
+          },
+          {
+            "name": "Abra",
+            "method": "grass",
+            "levelRange": [
+              11,
+              16
+            ],
+            "ratePercent": 5
+          },
+          {
+            "name": "Chansey",
+            "method": "special spawn",
+            "levelRange": [
+              11,
+              16
+            ]
+          },
+          {
+            "name": "Pidgey",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 60
+          },
+          {
+            "name": "Pidgeotto",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 35
+          },
+          {
+            "name": "Pidgeot",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 5
+          }
+        ],
+        "status": "text_verified",
+        "sourceIds": [
+          "serebii-route5"
         ]
       },
       "features": [
@@ -2723,9 +3218,33 @@
       ],
       "sourceIds": [
         "routepedia-route5-pikachu",
-        "routepedia-route5-eevee"
+        "routepedia-route5-eevee",
+        "serebii-route5"
       ],
-      "dataStatus": "text_verified_positions_not_mapped"
+      "dataStatus": "text_verified_positions_not_mapped",
+      "wildPokemon": {
+        "lets_go_pikachu": [
+          "Rattata",
+          "Pidgey",
+          "Growlithe",
+          "Jigglypuff",
+          "Pidgeotto",
+          "Abra",
+          "Chansey",
+          "Pidgeot"
+        ],
+        "lets_go_eevee": [
+          "Rattata",
+          "Pidgey",
+          "Vulpix",
+          "Jigglypuff",
+          "Pidgeotto",
+          "Abra",
+          "Chansey",
+          "Pidgeot"
+        ]
+      },
+      "encounterStatus": "text_verified"
     },
     {
       "id": "underground_path_5_6",
