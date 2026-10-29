@@ -4335,23 +4335,33 @@ class _KantoMapPainter extends CustomPainter {
     drawForest(.40, .48, 11, 3); // Celadon outskirts
     drawForest(.32, .72, 12, 7); // southern central woodland
     drawForest(.18, .38, 12, 1); // western uplands
-    drawTown(.25, .82, buildings: 4);
-    drawTown(.28, .68, buildings: 5);
-    drawTown(.25, .43, buildings: 5);
-    drawTown(.63, .35, buildings: 6);
-    drawTown(.57, .65, buildings: 5);
-    drawTown(.43, .52, buildings: 7);
-    drawTown(.59, .49, buildings: 6);
-    drawTown(.65, .82, buildings: 5);
-    drawTown(.12, .94, buildings: 3);
-    drawCave(.45, .34);
-    drawCave(.86, .42);
-    drawCave(.73, .30);
-    drawCave(.27, .94);
-    drawCave(.13, .28);
-
+    // Forest patches are decorative landscape, while town/cave symbols are
+    // drawn at each actual selectable node below so they stay aligned.
+    
     for (final place in places) {
       final point = p(place.x, place.y);
+      final name = place.name;
+      final isTown = name.contains('City') ||
+          name.contains('Town') ||
+          name.contains('Island') ||
+          name == 'Indigo Plateau';
+      final isCave = name.contains('Cave') ||
+          name.contains('Tunnel') ||
+          name == 'Mt. Moon' ||
+          name == 'Victory Road' ||
+          name == 'Seafoam Islands' ||
+          name == 'Pokémon Tower' ||
+          name == 'Pokémon Mansion' ||
+          name == 'Team Rocket Hideout';
+      if (isTown) {
+        drawTown(
+          place.x,
+          place.y,
+          buildings: name == 'Celadon City' || name == 'Saffron City' ? 7 : 4,
+        );
+      } else if (isCave) {
+        drawCave(place.x, place.y);
+      }
       final isSelected = place.name.toLowerCase() == selectedLocation.toLowerCase();
       if (isSelected) {
         canvas.drawCircle(point, 13, Paint()..color = route.withValues(alpha: .24));
