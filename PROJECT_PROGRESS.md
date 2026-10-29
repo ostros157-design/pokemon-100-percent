@@ -775,3 +775,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Paldeę rozszerzono do 81 rekordów: Area Zero i obiekty wewnętrzne, cztery sanktuaria, punkty orientacyjne, bazy Team Star oraz biomy DLC; dodano metadane prowincji i źródła dla mapy otwartego świata.
 - Commity: `a395662`, `9c17f9a`, `78c2dd4`, `d0db878`.
 - Paldea nie ma ponumerowanych tras; nadal nie ma dokładnych pinezek Pokémonów, przedmiotów, stake’ów, Gimmighoul, raidów i trenerów. Hisui nadal wymaga dokładnych planów map obszarów i punktów znajdziek.
+
+
+### Mapy — rozszerzenie DLC Paldea i grafu Hisui (2026-10-29)
+
+- Paldea + DLC ma 100 rekordów lokacji: dodano kolejne obszary Kitakami, Timeless Woods, Infernal Pass, Crystal Pool oraz miejsca Blueberry Academy/Terarium.
+- Dodano źródła PokeDB i Routepedia dla Paldei; metadane opisują prowincję i jasno zaznaczają, że Scarlet/Violet to otwarty świat bez ponumerowanych tras.
+- Połączono podobszary Hisui z właściwymi regionami i obozami w indeksie; połączenia oznaczają obszarowe powiązania, nie dokładne współrzędne.
+- Commity: `a31138a`, `cb4fc88`.
