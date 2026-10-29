@@ -724,3 +724,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Źródła bazowe: Routepedia dla Let’s Go Pikachu (mapa regionu i lokacje) oraz rozdziały walkthrough Bulbapedia dla lokacji fabularnych.
 - Commity: `0ebfc74`, `55cc864`, `97e65c6`, `fbdce6a`, `5539052`, `764881b`.
 - Nadal nie jest to gotowa, dokładna graficzna mapa całego Kanto: brak zweryfikowanego podkładu w skali gry i pinezek dla większości trenerów/przedmiotów; niektóre rekordy to indeksy połączeń. Flutter analyzer, testy i APK nie zostały uruchomione.
+
+
+### Mapy — sale i źródła lokacji startowych (2026-10-29)
+
+- Uzupełniono źródła dla Pallet Town, Route 1 i Viridian City.
+- Dodano rekordy siedmiu sal Kanto: Pewter, Cerulean, Vermilion, Celadon, Saffron, Fuchsia i Cinnabar Gym; w `maps_screen.dart` dodano panele informacyjne z wyraźnym oznaczeniem danych, które wymagają dalszej weryfikacji.
+- Commity: `35b4fee`, `24945d2`, `cab524c`.
+- Mapa Kanto nadal jest indeksem i schematem, nie gotową precyzyjną mapą z pinezkami. Trzeba jeszcze uzupełnić szczegóły spotkań, przedmiotów, wnętrz i pozostałych regionów Pokémon.
