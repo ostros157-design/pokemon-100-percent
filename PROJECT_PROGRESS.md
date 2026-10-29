@@ -1,3 +1,9 @@
+### Mapy — drobne braki Route 4 i Route 9 (2026-10-29)
+
+- Dodano Coach Trainer Oberon z Route 4 wraz z TM57 (Pay Day) jako nagrodą; opis Escape Rope doprecyzowano i usunięto jego wcześniejszy ogólny duplikat.
+- Uzupełniono Route 9 o dwa Super Potions, Ether, Poké Ball ×5 oraz ukryte Pinap Berries ×5 z orientacyjnymi opisami lokalizacji.
+- Źródła Route 4/9 już istnieją w indeksie (Bulbapedia Part 4/8). Commity danych: `51bde3a`, `5968865`. Bez testów, analyzer ani APK.
+
 ### Mapy — kompletowanie trenerów i przedmiotów Route 10–12 (2026-10-29)
 
 - Uzupełniono listy trenerów Route 10 (część północna i południowa), Route 11 oraz Route 12, wraz z poziomami drużyn i warunkami dostępu tam, gdzie są istotne.
