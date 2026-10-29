@@ -1703,7 +1703,7 @@ class _MapsScreenState extends State<MapsScreen> {
                               ),
                               ActionChip(
                                 avatar: const Icon(Icons.park_outlined, size: 18),
-                                label: const Text('Safari Zone'),
+                                label: const Text('Safari Zone / GO Park'),
                                 onPressed: () {
                                   _locationSearchController.text = 'Safari Zone';
                                   setState(() => _searchQuery = 'Safari Zone');
@@ -1918,7 +1918,7 @@ class _MapsScreenState extends State<MapsScreen> {
                             const Text('Połączenie Route 14 z Fuchsia City. Lista przedmiotów obejmuje Super Potion, 3 Great Balls, Rare Candy i 5 ukrytych Razz Berries. Szczegółowe położenie przedmiotów i trenerów nie jest jeszcze odwzorowane na pinezkach.'),
                           ] else if (normalizedQuery == 'fuchsia city') ...[
                             const Text('Ważne miejsca', style: TextStyle(fontWeight: FontWeight.w700)),
-                            const Text('• Pokémon Center i Poké Mart\\n• Fuchsia Gym — Koga\\n• GO Park i brama Safari Zone\\n• Pokój Warden'),
+                            const Text('• Pokémon Center i Poké Mart\\n• Fuchsia Gym — Koga\\n• GO Park / Playful Park (obszar dawnej Safari Zone)\\n• Pokój Warden'),
                             const SizedBox(height: 8),
                             const Text('Drużyna Kogi: Weezing Lv. 43, Muk Lv. 43, Golbat Lv. 43 i Venomoth Lv. 44. Połączenia: Route 15, Route 18 i Route 19. Szczegółowe położenie przedmiotów i wejść nie jest jeszcze zweryfikowane na mapie.'),
                           ] else if (normalizedQuery == 'celadon city') ...[
@@ -1991,8 +1991,8 @@ class _MapsScreenState extends State<MapsScreen> {
                             const Text('Pokémon Mansion — Cinnabar Island', style: TextStyle(fontWeight: FontWeight.w700)),
                             const Text('Opuszczona posiadłość z piętrami 1F–3F i B1F. Dzienniki wyjaśniają historię Mewtwo; klucz do Cinnabar Gym jest związany z tą lokacją. Mewtwo znajduje się jednak w Cerulean Cave, nie w Mansion.'),
                           ] else if (normalizedQuery == 'safari zone') ...[
-                            const Text('Safari Zone — Fuchsia City', style: TextStyle(fontWeight: FontWeight.w700)),
-                            const Text('Strefa dostępna przez bramę w Fuchsia City; w środku znajduje się m.in. Gold Teeth Warden’a. Dokładne strefy, przedmioty i spotkania wymagają osobnych danych, więc nie dodano fałszywych pinezek.'),
+                            const Text('Safari Zone — alias GO Park', style: TextStyle(fontWeight: FontWeight.w700)),
+                            const Text('W Let’s Go klasyczna Safari Zone nie jest osobnym obiektem: jej obszar zastępuje kompleks GO Park, w tym Playful Park. Ten wpis jest aliasem wyszukiwania i wskazuje ten sam marker; Gold Teeth otrzymuje się w wydarzeniu z Wardenem w Fuchsia City.'),
                           ] else if (normalizedQuery == 'viridian gym') ...[
                             const Text('Viridian Gym', style: TextStyle(fontWeight: FontWeight.w700)),
                             const Text('Sala Giovanni’ego w Viridian City. W Let’s Go Pikachu/Eevee jest to ostatnia sala przed Pokémon League. Dokładny plan sali i pełna drużyna lidera wymagają dalszego sprawdzenia.'),
@@ -3360,7 +3360,7 @@ class _KantoLocalAreaPainter extends CustomPainter {
         ('Pokémon Center', Offset(size.width * .50, size.height * .28)),
         ('Victory Road', Offset(size.width * .79, size.height * .33)),
       ]);
-    } else if (location == 'Safari Zone') {
+    } else if (location == 'Safari Zone' || location == 'GO Park') {
       markers.addAll([
         ('Recepcja GO Park', Offset(size.width * .25, size.height * .32)),
         ('Playful Park', Offset(size.width * .72, size.height * .29)),
