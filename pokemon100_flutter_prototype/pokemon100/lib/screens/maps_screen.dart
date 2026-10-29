@@ -661,6 +661,198 @@ class _MapsScreenState extends State<MapsScreen> {
                                   setState(() => _searchQuery = 'Fuchsia City');
                                 },
                               ),
+                              ActionChip(
+                                avatar: const Icon(Icons.location_city_outlined, size: 18),
+                                label: const Text('Celadon City'),
+                                onPressed: () {
+                                  _locationSearchController.text = 'Celadon City';
+                                  setState(() => _searchQuery = 'Celadon City');
+                                },
+                              ),
+                              ActionChip(
+                                avatar: const Icon(Icons.location_city_outlined, size: 18),
+                                label: const Text('Saffron City'),
+                                onPressed: () {
+                                  _locationSearchController.text = 'Saffron City';
+                                  setState(() => _searchQuery = 'Saffron City');
+                                },
+                              ),
+                              ActionChip(
+                                avatar: const Icon(Icons.route_outlined, size: 18),
+                                label: const Text('Route 15'),
+                                onPressed: () {
+                                  _locationSearchController.text = 'Route 15';
+                                  setState(() => _searchQuery = 'Route 15');
+                                },
+                              ),
+                              ActionChip(
+                                avatar: const Icon(Icons.route_outlined, size: 18),
+                                label: const Text('Route 16'),
+                                onPressed: () {
+                                  _locationSearchController.text = 'Route 16';
+                                  setState(() => _searchQuery = 'Route 16');
+                                },
+                              ),
+                              ActionChip(
+                                avatar: const Icon(Icons.route_outlined, size: 18),
+                                label: const Text('Route 17'),
+                                onPressed: () {
+                                  _locationSearchController.text = 'Route 17';
+                                  setState(() => _searchQuery = 'Route 17');
+                                },
+                              ),
+                              ActionChip(
+                                avatar: const Icon(Icons.route_outlined, size: 18),
+                                label: const Text('Route 18'),
+                                onPressed: () {
+                                  _locationSearchController.text = 'Route 18';
+                                  setState(() => _searchQuery = 'Route 18');
+                                },
+                              ),
+                              ActionChip(
+                                avatar: const Icon(Icons.water, size: 18),
+                                label: const Text('Route 19'),
+                                onPressed: () {
+                                  _locationSearchController.text = 'Route 19';
+                                  setState(() => _searchQuery = 'Route 19');
+                                },
+                              ),
+                              ActionChip(
+                                avatar: const Icon(Icons.water, size: 18),
+                                label: const Text('Route 20'),
+                                onPressed: () {
+                                  _locationSearchController.text = 'Route 20';
+                                  setState(() => _searchQuery = 'Route 20');
+                                },
+                              ),
+                              ActionChip(
+                                avatar: const Icon(Icons.terrain_outlined, size: 18),
+                                label: const Text('Seafoam Islands'),
+                                onPressed: () {
+                                  _locationSearchController.text = 'Seafoam Islands';
+                                  setState(() => _searchQuery = 'Seafoam Islands');
+                                },
+                              ),
+                              ActionChip(
+                                avatar: const Icon(Icons.location_city_outlined, size: 18),
+                                label: const Text('Cinnabar Island'),
+                                onPressed: () {
+                                  _locationSearchController.text = 'Cinnabar Island';
+                                  setState(() => _searchQuery = 'Cinnabar Island');
+                                },
+                              ),
+                              ActionChip(
+                                avatar: const Icon(Icons.water, size: 18),
+                                label: const Text('Route 21'),
+                                onPressed: () {
+                                  _locationSearchController.text = 'Route 21';
+                                  setState(() => _searchQuery = 'Route 21');
+                                },
+                              ),
+                              ActionChip(
+                                avatar: const Icon(Icons.route_outlined, size: 18),
+                                label: const Text('Route 22'),
+                                onPressed: () {
+                                  _locationSearchController.text = 'Route 22';
+                                  setState(() => _searchQuery = 'Route 22');
+                                },
+                              ),
+                              ActionChip(
+                                avatar: const Icon(Icons.route_outlined, size: 18),
+                                label: const Text('Route 23'),
+                                onPressed: () {
+                                  _locationSearchController.text = 'Route 23';
+                                  setState(() => _searchQuery = 'Route 23');
+                                },
+                              ),
+                              ActionChip(
+                                avatar: const Icon(Icons.terrain_outlined, size: 18),
+                                label: const Text('Victory Road'),
+                                onPressed: () {
+                                  _locationSearchController.text = 'Victory Road';
+                                  setState(() => _searchQuery = 'Victory Road');
+                                },
+                              ),
+                              ActionChip(
+                                avatar: const Icon(Icons.emoji_events_outlined, size: 18),
+                                label: const Text('Indigo Plateau'),
+                                onPressed: () {
+                                  _locationSearchController.text = 'Indigo Plateau';
+                                  setState(() => _searchQuery = 'Indigo Plateau');
+                                },
+                              ),
+                              ActionChip(
+                                avatar: const Icon(Icons.terrain_outlined, size: 18),
+                                label: const Text('Cerulean Cave'),
+                                onPressed: () {
+                                  _locationSearchController.text = 'Cerulean Cave';
+                                  setState(() => _searchQuery = 'Cerulean Cave');
+                                },
+                              ),
+                              ActionChip(
+                                avatar: const Icon(Icons.directions_boat_outlined, size: 18),
+                                label: const Text('S.S. Anne'),
+                                onPressed: () {
+                                  _locationSearchController.text = 'S.S. Anne';
+                                  setState(() => _searchQuery = 'S.S. Anne');
+                                },
+                              ),
+                              ActionChip(
+                                avatar: const Icon(Icons.bolt_outlined, size: 18),
+                                label: const Text('Power Plant'),
+                                onPressed: () {
+                                  _locationSearchController.text = 'Power Plant';
+                                  setState(() => _searchQuery = 'Power Plant');
+                                },
+                              ),
+                              ActionChip(
+                                avatar: const Icon(Icons.domain_outlined, size: 18),
+                                label: const Text('Pokémon Tower'),
+                                onPressed: () {
+                                  _locationSearchController.text = 'Pokémon Tower';
+                                  setState(() => _searchQuery = 'Pokémon Tower');
+                                },
+                              ),
+                              ActionChip(
+                                avatar: const Icon(Icons.security_outlined, size: 18),
+                                label: const Text('Rocket Hideout'),
+                                onPressed: () {
+                                  _locationSearchController.text = 'Rocket Hideout';
+                                  setState(() => _searchQuery = 'Rocket Hideout');
+                                },
+                              ),
+                              ActionChip(
+                                avatar: const Icon(Icons.business_outlined, size: 18),
+                                label: const Text('Silph Co.'),
+                                onPressed: () {
+                                  _locationSearchController.text = 'Silph Co.';
+                                  setState(() => _searchQuery = 'Silph Co.');
+                                },
+                              ),
+                              ActionChip(
+                                avatar: const Icon(Icons.home_work_outlined, size: 18),
+                                label: const Text('Pokémon Mansion'),
+                                onPressed: () {
+                                  _locationSearchController.text = 'Pokémon Mansion';
+                                  setState(() => _searchQuery = 'Pokémon Mansion');
+                                },
+                              ),
+                              ActionChip(
+                                avatar: const Icon(Icons.park_outlined, size: 18),
+                                label: const Text('Safari Zone'),
+                                onPressed: () {
+                                  _locationSearchController.text = 'Safari Zone';
+                                  setState(() => _searchQuery = 'Safari Zone');
+                                },
+                              ),
+                              ActionChip(
+                                avatar: const Icon(Icons.sports_martial_arts_outlined, size: 18),
+                                label: const Text('Viridian Gym'),
+                                onPressed: () {
+                                  _locationSearchController.text = 'Viridian Gym';
+                                  setState(() => _searchQuery = 'Viridian Gym');
+                                },
+                              ),
                             ],
                           ),
                           const SizedBox(height: 10),
