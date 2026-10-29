@@ -11133,15 +11133,14 @@
       },
       "encounterStatus": "text_verified",
       "trainers": [
-        "Trace — pierwsza walka rywala przy pierwszej wizycie; Let's Go Pikachu: Pidgey Lv. 3 i Eevee Lv. 7; Let's Go Eevee: Pidgey Lv. 3 i Pikachu Lv. 7; nagroda $140."
+        "Trace — pierwsza walka rywala przy pierwszej wizycie; Let's Go Pikachu: Pidgey Lv. 3 i Eevee Lv. 7; Let's Go Eevee: Pidgey Lv. 3 i Pikachu Lv. 7; nagroda $140.",
+        "Trace — ponowna walka po zdobyciu Earth Badge przed Ligą Pokémon; drużyna zależy od wersji i partnera, nagroda $8,160."
       ],
       "items": [
         "Antidote — ukryty w krzaku na północ od wschodniej kępy trawy.",
         "Poké Ball ×5 — południowo-zachodni narożnik trasy."
       ],
-      "events": [
-        "Po zdobyciu Earth Badge Trace ponownie wyzywa gracza na Route 22 przed Ligą Pokémon; drużyna zależy od wersji i partnera, nagroda za zwycięstwo wynosi $8,160."
-      ]
+      "events": []
     },
     {
       "id": "route_23",
