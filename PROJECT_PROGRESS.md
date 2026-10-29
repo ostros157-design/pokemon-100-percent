@@ -1329,3 +1329,8 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Zwiększono górny limit automatycznego dopasowania do 2×, aby mapa mogła wypełniać duży obszar roboczy na szerokich monitorach; na telefonach skala nadal wynika z dostępnej szerokości i wysokości.
 - Commit: `0534fa5`. Bez uruchamiania aplikacji, testów, analyzer ani APK.
 
+### Mapy — Kanto: spójne statusy schematów wnętrz (2026-10-29)
+
+- Ujednolicono status danych dla 9 dodatkowych budynków i wnętrz: indeks informuje teraz, że schemat poglądowy jest dostępny, a dokładny układ pięter nadal czeka na weryfikację. Wcześniejszy status mógł sugerować, że nie ma żadnego schematu lokalnego.
+- Commit danych: `9bd43d5`. Bez uruchamiania testów, analyzer ani APK.
+
