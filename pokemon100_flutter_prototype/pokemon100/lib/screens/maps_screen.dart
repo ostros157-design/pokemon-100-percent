@@ -2567,6 +2567,28 @@ class _KantoLocalAreaPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     canvas.drawRect(Offset.zero & size, Paint()..color = land);
+    final zoneFill = Paint()..color = const Color(0xFFD8D9BD).withValues(alpha: .88);
+    final zoneEdge = Paint()
+      ..color = const Color(0xFF788B71).withValues(alpha: .72)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 1.4;
+    void drawZone(double x, double y, double w, double h) {
+      final rect = Rect.fromLTWH(
+        size.width * x,
+        size.height * y,
+        size.width * w,
+        size.height * h,
+      );
+      canvas.drawRRect(
+        RRect.fromRectAndRadius(rect, const Radius.circular(7)),
+        zoneFill,
+      );
+      canvas.drawRRect(
+        RRect.fromRectAndRadius(rect, const Radius.circular(7)),
+        zoneEdge,
+      );
+    }
+
     final roadPaint = Paint()
       ..color = route.withValues(alpha: 0.42)
       ..strokeWidth = 5
@@ -2592,6 +2614,97 @@ class _KantoLocalAreaPainter extends CustomPainter {
         ..moveTo(size.width * .12, size.height * .86)
         ..quadraticBezierTo(size.width * .42, size.height * .62, size.width * .32, size.height * .42)
         ..quadraticBezierTo(size.width * .50, size.height * .18, size.width * .82, size.height * .12);
+    } else if (location == 'Mt. Moon') {
+      drawZone(.08, .26, .25, .28);
+      drawZone(.38, .16, .24, .30);
+      drawZone(.67, .29, .24, .28);
+      path
+        ..moveTo(size.width * .12, size.height * .40)
+        ..quadraticBezierTo(size.width * .30, size.height * .18, size.width * .49, size.height * .31)
+        ..quadraticBezierTo(size.width * .72, size.height * .48, size.width * .87, size.height * .43);
+    } else if (location == 'Rock Tunnel') {
+      drawZone(.08, .20, .25, .24);
+      drawZone(.37, .38, .25, .25);
+      drawZone(.67, .18, .24, .25);
+      path
+        ..moveTo(size.width * .12, size.height * .32)
+        ..lineTo(size.width * .39, size.height * .50)
+        ..quadraticBezierTo(size.width * .55, size.height * .65, size.width * .73, size.height * .32)
+        ..lineTo(size.width * .87, size.height * .30);
+    } else if (location == "Diglett's Cave") {
+      drawZone(.08, .33, .23, .30);
+      drawZone(.37, .39, .27, .18);
+      drawZone(.69, .33, .23, .30);
+      path
+        ..moveTo(size.width * .14, size.height * .48)
+        ..quadraticBezierTo(size.width * .50, size.height * .22, size.width * .86, size.height * .48);
+    } else if (location == 'Seafoam Islands') {
+      drawZone(.08, .20, .24, .25);
+      drawZone(.38, .38, .24, .25);
+      drawZone(.68, .18, .24, .25);
+      drawZone(.37, .68, .26, .18);
+      path
+        ..moveTo(size.width * .19, size.height * .32)
+        ..lineTo(size.width * .47, size.height * .49)
+        ..lineTo(size.width * .78, size.height * .30)
+        ..lineTo(size.width * .50, size.height * .76);
+    } else if (location == 'Cerulean Cave') {
+      drawZone(.08, .23, .24, .25);
+      drawZone(.38, .14, .24, .25);
+      drawZone(.68, .25, .24, .25);
+      drawZone(.38, .58, .24, .22);
+      path
+        ..moveTo(size.width * .18, size.height * .35)
+        ..lineTo(size.width * .48, size.height * .26)
+        ..lineTo(size.width * .78, size.height * .37)
+        ..lineTo(size.width * .50, size.height * .68);
+    } else if (location == 'Victory Road') {
+      drawZone(.08, .22, .23, .24);
+      drawZone(.38, .42, .23, .24);
+      drawZone(.68, .20, .23, .24);
+      path
+        ..moveTo(size.width * .13, size.height * .34)
+        ..quadraticBezierTo(size.width * .34, size.height * .65, size.width * .50, size.height * .53)
+        ..quadraticBezierTo(size.width * .69, size.height * .38, size.width * .86, size.height * .32);
+    } else if (location == 'Pokémon Tower') {
+      drawZone(.12, .20, .30, .22);
+      drawZone(.58, .20, .30, .22);
+      drawZone(.12, .54, .30, .22);
+      drawZone(.58, .54, .30, .22);
+      path
+        ..moveTo(size.width * .27, size.height * .31)
+        ..lineTo(size.width * .73, size.height * .31)
+        ..lineTo(size.width * .73, size.height * .65)
+        ..lineTo(size.width * .27, size.height * .65);
+    } else if (location == 'Pokémon Mansion') {
+      drawZone(.12, .20, .30, .22);
+      drawZone(.58, .20, .30, .22);
+      drawZone(.12, .54, .30, .22);
+      drawZone(.58, .54, .30, .22);
+      path
+        ..moveTo(size.width * .27, size.height * .31)
+        ..lineTo(size.width * .73, size.height * .31)
+        ..lineTo(size.width * .73, size.height * .65)
+        ..lineTo(size.width * .27, size.height * .65);
+    } else if (location == 'Power Plant') {
+      drawZone(.08, .26, .24, .28);
+      drawZone(.38, .16, .24, .48);
+      drawZone(.68, .26, .24, .28);
+      path
+        ..moveTo(size.width * .18, size.height * .40)
+        ..lineTo(size.width * .50, size.height * .40)
+        ..lineTo(size.width * .80, size.height * .40);
+    } else if (location == 'S.S. Anne') {
+      drawZone(.12, .18, .76, .22);
+      drawZone(.12, .47, .76, .22);
+      drawZone(.37, .75, .26, .12);
+      path
+        ..moveTo(size.width * .20, size.height * .29)
+        ..lineTo(size.width * .80, size.height * .29)
+        ..moveTo(size.width * .20, size.height * .58)
+        ..lineTo(size.width * .80, size.height * .58)
+        ..moveTo(size.width * .50, size.height * .58)
+        ..lineTo(size.width * .50, size.height * .80);
     } else {
       path
         ..moveTo(size.width * .14, size.height * .72)
