@@ -4411,7 +4411,7 @@ class _KantoMapPainter extends CustomPainter {
       Offset(compass.dx - northLabel.width / 2, compass.dy - size.width * .055),
     );
 
-    // Full 76-location Kanto topology from the bundled audit index. Node positions are schematic layout coordinates, not in-game coordinates.
+    // 74 physical Kanto locations from the bundled index; two legacy names are aliases. Node positions are schematic layout coordinates, not in-game coordinates.
     const links = <(int, int)>[
       (0, 1),
       (0, 39),
