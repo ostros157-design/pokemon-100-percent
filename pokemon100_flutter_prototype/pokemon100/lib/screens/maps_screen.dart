@@ -549,6 +549,22 @@ class _MapsScreenState extends State<MapsScreen> {
                                   setState(() => _searchQuery = 'Pewter City');
                                 },
                               ),
+                              ActionChip(
+                                avatar: const Icon(Icons.route_outlined, size: 18),
+                                label: const Text('Route 3'),
+                                onPressed: () {
+                                  _locationSearchController.text = 'Route 3';
+                                  setState(() => _searchQuery = 'Route 3');
+                                },
+                              ),
+                              ActionChip(
+                                avatar: const Icon(Icons.terrain_outlined, size: 18),
+                                label: const Text('Mt. Moon'),
+                                onPressed: () {
+                                  _locationSearchController.text = 'Mt. Moon';
+                                  setState(() => _searchQuery = 'Mt. Moon');
+                                },
+                              ),
                             ],
                           ),
                           const SizedBox(height: 10),
@@ -639,6 +655,46 @@ class _MapsScreenState extends State<MapsScreen> {
                             const SizedBox(height: 8),
                             const Text(
                               'Drużyna Brocka: Geodude Lv. 11 i Onix Lv. 12. Za Pokémon Center znajduje się X Defense; dokładna pinezka nie jest jeszcze zweryfikowana.',
+                            ),
+                          ] else if (normalizedQuery == 'route 3') ...[
+                            const Text(
+                              'Dzikie Pokémony w trawie (poziomy 3–8)',
+                              style: TextStyle(fontWeight: FontWeight.w700),
+                            ),
+                            const Text(
+                              '• Spearow — 30%\\n• Rattata — 30%\\n• Mankey — 20%\\n• Sandshrew — 20%',
+                            ),
+                            const SizedBox(height: 8),
+                            const Text(
+                              'Trenerzy fabularni: Lass Janice (Oddish Lv. 6), Youngster Ben (Rattata Lv. 6), Bug Catcher Greg (Kakuna Lv. 5), Youngster Calvin (Spearow Lv. 6), Camper Victor (Nidoran♂ Lv. 7), Picnicker Robin (Nidoran♀ Lv. 7), Coach Trainer Kareem (Bulbasaur Lv. 11).',
+                            ),
+                            const SizedBox(height: 8),
+                            const Text(
+                              'Przedmioty: Potion, Revive, Lure, 3 Poké Balle, Razz Berry oraz nagrody za walki (m.in. Poké Balle, Great Balle i Revive). Część źródeł klasyfikuje nagrody trenerskie oddzielnie od przedmiotów leżących na ziemi.',
+                            ),
+                            const SizedBox(height: 8),
+                            const Text(
+                              'Połączenia: na zachód Pewter City, na wschód Route 4 przy wejściu do Mt. Moon. Pozycje przedmiotów i trenerów są opisane tekstowo — nie mają zweryfikowanych pinezek.',
+                            ),
+                          ] else if (normalizedQuery == 'mt. moon' || normalizedQuery == 'mt moon') ...[
+                            const Text(
+                              'Dzikie Pokémony — poziomy 5–10',
+                              style: TextStyle(fontWeight: FontWeight.w700),
+                            ),
+                            const Text(
+                              '• Zubat — 40%\\n• Geodude — 40% (na B2F: 34%)\\n• Paras — 15%\\n• Clefairy — 4% (na B2F: 9%)\\n• Onix — 1%\\n• Clefable — 1% na B2F',
+                            ),
+                            const SizedBox(height: 8),
+                            const Text(
+                              'Jaskinia ma trzy poziomy: 1F, B1F i B2F. Występuje 17 trenerów łącznie, w tym trenerzy fabularni oraz spotkania zależne od postępu gry; ich dokładne pozycje nie są obecnie mapowane.',
+                            ),
+                            const SizedBox(height: 8),
+                            const Text(
+                              'Przedmioty: Repel, Potion, Awakening, Pearl, Ether, 5 Great Balli, Rare Candy, Nugget, Revive (kilka), Stardust, Big Mushroom i 2 Moon Stones. Cztery przedmioty są ukryte.',
+                            ),
+                            const SizedBox(height: 8),
+                            const Text(
+                              'Mt. Moon łączy Route 3 z Route 4. Lista spotkań i przedmiotów jest dostępna offline, ale nie jest jeszcze odwzorowaniem korytarzy ani dokładnych pozycji na piętrach.',
                             ),
                           ] else if (normalizedQuery == 'route 2') ...[
                             const Text(
