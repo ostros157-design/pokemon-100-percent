@@ -220,6 +220,7 @@ class _MapsScreenState extends State<MapsScreen> {
         ? (location['hiddenItemCount'] as num).toInt()
         : int.tryParse(location['hiddenItemCount']?.toString() ?? '');
     final dataStatus = location['dataStatus']?.toString() ?? '';
+    final coordinateStatus = location['coordinateStatus']?.toString() ?? 'unverified';
     if (encounters.isEmpty &&
         notablePokemon.isEmpty &&
         notableNotes.isEmpty &&
@@ -372,6 +373,13 @@ class _MapsScreenState extends State<MapsScreen> {
                 style: Theme.of(context).textTheme.labelSmall,
               ),
             ],
+            const SizedBox(height: 4),
+            Text(
+              coordinateStatus == 'verified'
+                  ? 'Położenie pinezek: zweryfikowane dla tej lokacji.'
+                  : 'Położenie pinezek: niezweryfikowane — mapa jest poglądowa.',
+              style: Theme.of(context).textTheme.labelSmall,
+            ),
             const SizedBox(height: 8),
             const Text(
               'Dotknij nazwy Pokémona, aby otworzyć Pokédex. Listy przedmiotów i trenerów są informacyjne; pinezki pojawią się dopiero po potwierdzeniu ich pozycji na mapie.',
