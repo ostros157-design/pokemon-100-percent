@@ -1402,6 +1402,10 @@ class _KantoMapPainter extends CustomPainter {
     _MapPlace('Fuchsia City', 0.65, 0.82),
     _MapPlace('Cinnabar Island', 0.12, 0.94),
     _MapPlace('Indigo Plateau', 0.10, 0.23),
+    // Additional locations from the current Let's Go guide.
+    _MapPlace('Route 2', 0.29, 0.59),
+    _MapPlace('Viridian Forest', 0.28, 0.51),
+    _MapPlace('Pewter Gym', 0.34, 0.43),
   ];
 
   @override
@@ -1426,8 +1430,9 @@ class _KantoMapPainter extends CustomPainter {
 
     // Approximate route network for orientation, not a scale-accurate game map.
     const links = <(int, int)>[
-      (0, 1), (1, 2), (2, 3), (3, 4), (4, 8), (8, 5),
-      (5, 9), (2, 7), (7, 8), (8, 6), (3, 11), (5, 10),
+      (0, 1), (1, 2), (2, 12), (12, 13), (13, 3), (3, 14),
+      (3, 4), (4, 8), (8, 5), (5, 9), (2, 7), (7, 8),
+      (8, 6), (3, 11), (5, 10),
     ];
     final roadPaint = Paint()
       ..color = route.withValues(alpha: .72)
