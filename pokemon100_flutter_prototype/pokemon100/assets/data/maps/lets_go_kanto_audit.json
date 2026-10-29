@@ -537,6 +537,51 @@
       "id": "rotomlabs-victory-road",
       "url": "https://rotomlabs.net/locations/lets-go-pikachu-eevee/victory-road-1-kanto",
       "scope": "Let’s Go Pikachu/Eevee Victory Road encounter levels, rates and Moltres static encounter"
+    },
+    {
+      "id": "bulbapedia-player-house",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Player%27s_house_(Kanto)",
+      "scope": "Player's house in Kanto; location reference"
+    },
+    {
+      "id": "bulbapedia-oak-lab",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Professor_Oak%27s_Laboratory",
+      "scope": "Professor Oak's Laboratory location reference"
+    },
+    {
+      "id": "bulbapedia-celadon-store",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Celadon_Department_Store",
+      "scope": "Celadon Department Store location reference"
+    },
+    {
+      "id": "bulbapedia-celadon-game-corner",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Celadon_Game_Corner",
+      "scope": "Celadon Game Corner location reference"
+    },
+    {
+      "id": "bulbapedia-celadon-condominiums",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Celadon_Condominiums",
+      "scope": "Celadon Condominiums location reference"
+    },
+    {
+      "id": "bulbapedia-cinnabar-lab",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Cinnabar_Lab",
+      "scope": "Cinnabar Lab location reference"
+    },
+    {
+      "id": "bulbapedia-fighting-dojo",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Fighting_Dojo",
+      "scope": "Fighting Dojo location reference"
+    },
+    {
+      "id": "bulbapedia-go-park",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/GO_Park",
+      "scope": "GO Park in Let's Go Pikachu/Eevee location reference"
+    },
+    {
+      "id": "bulbapedia-sea-cottage",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Sea_Cottage",
+      "scope": "Sea Cottage location reference"
     }
   ],
   "locations": [
@@ -546,7 +591,9 @@
       "kind": "town",
       "connectsTo": [
         "route_1",
-        "route_21"
+        "route_21",
+        "players_house",
+        "professor_oak_lab"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -2252,7 +2299,8 @@
         "route_9",
         "route_24",
         "cerulean_gym",
-        "cerulean_cave"
+        "cerulean_cave",
+        "sea_cottage"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -7519,7 +7567,8 @@
         "route_18",
         "route_19",
         "safari_zone",
-        "fuchsia_gym"
+        "fuchsia_gym",
+        "go_park"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -7568,7 +7617,10 @@
         "route_7",
         "route_16",
         "rocket_hideout",
-        "celadon_gym"
+        "celadon_gym",
+        "celadon_department_store",
+        "celadon_game_corner",
+        "celadon_condominiums"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -7596,7 +7648,8 @@
         "route_7",
         "route_8",
         "silph_co",
-        "saffron_gym"
+        "saffron_gym",
+        "fighting_dojo"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -9548,7 +9601,8 @@
         "route_20",
         "route_21",
         "pokemon_mansion",
-        "cinnabar_gym"
+        "cinnabar_gym",
+        "cinnabar_lab"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -12428,6 +12482,123 @@
         "bulbapedia-route-list"
       ],
       "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "players_house",
+      "name": "Player's House",
+      "kind": "house",
+      "connectsTo": [
+        "pallet_town"
+      ],
+      "notes": "Dom gracza w Pallet Town. Wnętrze i interakcje nie są jeszcze odwzorowane na osobnym planie.",
+      "sourceIds": [
+        "bulbapedia-player-house"
+      ],
+      "dataStatus": "location_indexed_interior_not_mapped"
+    },
+    {
+      "id": "professor_oak_lab",
+      "name": "Professor Oak's Laboratory",
+      "kind": "facility",
+      "connectsTo": [
+        "pallet_town"
+      ],
+      "notes": "Laboratorium Profesora Oaka w Pallet Town, związane z rozpoczęciem przygody i Pokédexem. Wnętrze nie jest jeszcze odwzorowane.",
+      "sourceIds": [
+        "bulbapedia-oak-lab"
+      ],
+      "dataStatus": "location_indexed_interior_not_mapped"
+    },
+    {
+      "id": "celadon_department_store",
+      "name": "Celadon Department Store",
+      "kind": "building",
+      "connectsTo": [
+        "celadon_city"
+      ],
+      "notes": "Wielopiętrowy sklep w Celadon City. Piętra, automaty, przedmioty i układ stoisk wymagają osobnego planu wnętrza.",
+      "sourceIds": [
+        "bulbapedia-celadon-store"
+      ],
+      "dataStatus": "location_indexed_interior_not_mapped"
+    },
+    {
+      "id": "celadon_game_corner",
+      "name": "Celadon Game Corner",
+      "kind": "building",
+      "connectsTo": [
+        "celadon_city"
+      ],
+      "notes": "Salon gier w Celadon City i wejście do Team Rocket Hideout. Wnętrze oraz pozycje obiektów nie są jeszcze naniesione.",
+      "sourceIds": [
+        "bulbapedia-celadon-game-corner"
+      ],
+      "dataStatus": "location_indexed_interior_not_mapped"
+    },
+    {
+      "id": "celadon_condominiums",
+      "name": "Celadon Condominiums",
+      "kind": "building",
+      "connectsTo": [
+        "celadon_city"
+      ],
+      "notes": "Budynek mieszkalny w Celadon City. Poszczególne pomieszczenia i prezenty nie są jeszcze rozpisane na planie.",
+      "sourceIds": [
+        "bulbapedia-celadon-condominiums"
+      ],
+      "dataStatus": "location_indexed_interior_not_mapped"
+    },
+    {
+      "id": "cinnabar_lab",
+      "name": "Cinnabar Lab",
+      "kind": "facility",
+      "connectsTo": [
+        "cinnabar_island"
+      ],
+      "notes": "Laboratorium na Cinnabar Island związane z odtwarzaniem Pokémonów z fosyliów. Pomieszczenia i interakcje wymagają osobnego planu.",
+      "sourceIds": [
+        "bulbapedia-cinnabar-lab"
+      ],
+      "dataStatus": "location_indexed_interior_not_mapped"
+    },
+    {
+      "id": "fighting_dojo",
+      "name": "Fighting Dojo",
+      "kind": "dojo",
+      "connectsTo": [
+        "saffron_city"
+      ],
+      "notes": "Dōjō w Saffron City, w którym można wybrać nagrodę Hitmonlee albo Hitmonchan. Wnętrze i trenerzy nie są jeszcze naniesieni.",
+      "sourceIds": [
+        "bulbapedia-fighting-dojo"
+      ],
+      "dataStatus": "location_indexed_interior_not_mapped"
+    },
+    {
+      "id": "go_park",
+      "name": "GO Park",
+      "kind": "park",
+      "connectsTo": [
+        "fuchsia_city"
+      ],
+      "notes": "GO Park w Fuchsia City służy do przenoszenia Pokémonów z Pokémon GO; zastępuje klasyczną Safari Zone w Let’s Go. Strefy parku nie są jeszcze rozrysowane.",
+      "sourceIds": [
+        "bulbapedia-go-park"
+      ],
+      "dataStatus": "location_indexed_interior_not_mapped"
+    },
+    {
+      "id": "sea_cottage",
+      "name": "Sea Cottage",
+      "kind": "house",
+      "connectsTo": [
+        "cerulean_city"
+      ],
+      "notes": "Domek Billa przy północnym wybrzeżu, osiągany z Route 25. Wnętrze i dokładne położenie drzwi nie są jeszcze odwzorowane.",
+      "sourceIds": [
+        "bulbapedia-sea-cottage"
+      ],
+      "dataStatus": "location_indexed_interior_not_mapped"
     }
   ],
   "region": "Kanto (Let's Go)"
