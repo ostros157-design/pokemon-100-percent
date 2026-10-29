@@ -4900,7 +4900,7 @@ class _KantoMapPainter extends CustomPainter {
       textDirection: TextDirection.ltr,
     )..layout();
     final cartouche = RRect.fromRectAndRadius(
-      Rect.fromLTWH(10, 9, math.max(title.width, subtitle.width) + 18, 39),
+      Rect.fromLTWH(10, 9, math.max(title.width, subtitle.width).toDouble() + 18, 39),
       const Radius.circular(7),
     );
     canvas.drawRRect(
