@@ -8236,7 +8236,6 @@
         "route_15",
         "route_18",
         "route_19",
-        "safari_zone",
         "fuchsia_gym",
         "go_park"
       ],
@@ -13004,20 +13003,19 @@
       "id": "safari_zone",
       "name": "Safari Zone",
       "kind": "park",
-      "connectsTo": [
-        "fuchsia_city"
-      ],
+      "connectsTo": [],
       "localMapAsset": null,
-      "coordinateStatus": "unverified",
+      "coordinateStatus": "not_applicable",
       "features": [
         "strefy Safari",
         "Warden's Gold Teeth"
       ],
-      "notes": "Obszar dostępny przez bramę Safari Zone w Fuchsia City; szczegółowe strefy i przedmioty wymagają osobnych danych.",
+      "notes": "Alias historycznej nazwy obszaru GO Park. W Pokémon: Let's Go, Pikachu!/Eevee! klasyczna Safari Zone nie jest osobną lokacją; użyj punktu GO Park, obejmującego również Playful Park.",
       "sourceIds": [
         "bulbapedia-part11"
       ],
-      "dataStatus": "text_verified_positions_not_mapped"
+      "dataStatus": "alias_of_location",
+      "aliasOf": "go_park"
     },
     {
       "id": "viridian_gym",
@@ -13379,9 +13377,10 @@
       "connectsTo": [
         "fuchsia_city"
       ],
-      "notes": "GO Park w Fuchsia City służy do przenoszenia Pokémonów z Pokémon GO; zastępuje klasyczną Safari Zone w Let’s Go. Strefy parku nie są jeszcze rozrysowane.",
+      "notes": "Kompleks GO Park w Fuchsia City, obejmujący Playful Park i obszar dawnej Safari Zone. W Let’s Go to jedna fizyczna lokacja; Safari Zone pozostaje aliasem nazwy.",
       "sourceIds": [
-        "bulbapedia-go-park"
+        "bulbapedia-go-park",
+        "bulbapedia-part11"
       ],
       "dataStatus": "schematic_interior_available_exact_layout_pending",
       "coordinateStatus": "unverified"
