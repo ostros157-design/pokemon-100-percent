@@ -1221,3 +1221,9 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Dodano niewielką, nieregularną zatokę z piaskowym brzegiem, gradientem wody i obrysem; strumień jest poprowadzony w jej kierunku. To element autorskiej stylizacji, nie dokładny kształt wody z gry.
 - Commit: `2231359`. Nie uruchamiano testów, analyzer ani APK.
 
+### Mapy — Kanto: numery tras na widoku ogólnym (2026-10-29)
+
+- Dodano małe, czytelne plakietki z numerami Route 1–25 przy odpowiednich węzłach. Trasy wodne 19–21 mają osobny niebieski obrys, zgodny z ich przerywanymi liniami.
+- Dzięki temu nazwy tras nie muszą być stale wyświetlane i nie zaśmiecają widoku głównego, a numer trasy nadal jest widoczny.
+- Commit: `5dd7a40`. Nie uruchamiano testów, analyzer ani APK.
+
