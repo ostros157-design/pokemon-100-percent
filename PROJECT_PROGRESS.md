@@ -1157,3 +1157,10 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Miasta mają miniaturowe skupiska budynków; jaskinie, tunele i główne obiekty podziemne mają wektorowe wejścia. Las pozostaje miękką dekoracyjną warstwą terenu.
 - Commit: `9015515`. Nie uruchamiano kompilacji ani testów.
 
+### Mapy — Kanto: ograniczenie nakładania etykiet na mapie głównej (2026-10-29)
+
+- Etykiety głównych lokacji mają teraz kilka możliwych położeń względem punktu. Rysowanie wybiera miejsce z najmniejszą kolizją z wcześniej rozmieszczonymi etykietami.
+- Dodano delikatne tła i obrysy etykiet w stylu atlasu, aby napisy były czytelne nad terenem i drogami.
+- To heurystyka rysowania, nie gwarancja braku kolizji przy każdej wielkości ekranu; potrzebny jest ogląd mapy w działającej aplikacji.
+- Commit: `18cbd00`. Bez uruchamiania analyzer, testów i APK.
+
