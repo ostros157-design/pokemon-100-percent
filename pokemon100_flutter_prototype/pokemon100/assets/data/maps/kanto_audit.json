@@ -1,0 +1,1507 @@
+{
+  "schemaVersion": 1,
+  "title": "Let’s Go Kanto — audyt danych do mapy",
+  "status": "research_only_no_coordinates",
+  "policy": "Do not render these records as positioned map pins. Coordinates and a local map background have not been verified.",
+  "gameIds": [
+    "lets_go_pikachu",
+    "lets_go_eevee"
+  ],
+  "sources": [
+    {
+      "id": "bulbapedia-route-list",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/List_of_routes",
+      "scope": "Canonical route termini and connections across Kanto and other regions"
+    },
+    {
+      "id": "bulbapedia-kanto",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Kanto",
+      "scope": "Kanto region locations, towns and geography"
+    }
+  ],
+  "locations": [
+    {
+      "id": "pallet_town",
+      "name": "Pallet Town",
+      "kind": "town",
+      "connectsTo": [
+        "route_1",
+        "route_21"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "features": [
+        {
+          "id": "player_home",
+          "name": "Home",
+          "category": "building",
+          "status": "text_verified"
+        },
+        {
+          "id": "rival_home",
+          "name": "Rival’s House",
+          "category": "building",
+          "status": "text_verified"
+        },
+        {
+          "id": "oak_lab",
+          "name": "Oak’s Pokémon Lab",
+          "category": "building",
+          "status": "text_verified"
+        }
+      ],
+      "encounters": {
+        "lets_go_pikachu": {
+          "partner": {
+            "name": "Pikachu",
+            "level": 5
+          },
+          "rivalBattle": {
+            "name": "Eevee",
+            "level": 6
+          }
+        },
+        "lets_go_eevee": {
+          "partner": {
+            "name": "Eevee",
+            "level": 5
+          },
+          "rivalBattle": {
+            "name": "Pikachu",
+            "level": 6
+          }
+        }
+      },
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "route_1",
+      "name": "Route 1",
+      "kind": "route",
+      "connectsTo": [
+        "viridian_city",
+        "pallet_town"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "wildPokemon": {
+        "lets_go_pikachu": [
+          "Pidgey",
+          "Rattata",
+          "Oddish"
+        ],
+        "lets_go_eevee": [
+          "Pidgey",
+          "Rattata",
+          "Bellsprout"
+        ]
+      },
+      "hiddenItemsStatus": "Textual item list verified against Serebii and Neoseeker; the Razz Berry's in-game area is described, but no pixel/tile coordinates are approved.",
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "viridian_city",
+      "name": "Viridian City",
+      "kind": "town",
+      "connectsTo": [
+        "route_1",
+        "route_2",
+        "route_22",
+        "viridian_gym"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "features": [
+        {
+          "id": "pokemon_center",
+          "name": "Pokémon Center",
+          "category": "building",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-viridian-city"
+          ]
+        },
+        {
+          "id": "poke_mart",
+          "name": "Poké Mart",
+          "category": "building",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-viridian-city"
+          ]
+        },
+        {
+          "id": "north_exit_blocked_early",
+          "name": "North exit initially blocked",
+          "category": "story_gate",
+          "note": "On the first visit, two characters block the way north; continue exploring the city.",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-viridian-city"
+          ]
+        }
+      ],
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "route_2",
+      "name": "Route 2",
+      "kind": "route",
+      "connectsTo": [
+        "pewter_city",
+        "digletts_cave",
+        "viridian_city",
+        "viridian_forest"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "encounterStatus": "text_verified",
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "features": [
+        {
+          "id": "south_section",
+          "name": "Southern section",
+          "category": "route_area",
+          "note": "Connects with Viridian City.",
+          "status": "text_verified"
+        },
+        {
+          "id": "forest_passage",
+          "name": "Viridian Forest passage",
+          "category": "route_area",
+          "note": "Viridian Forest lies between the southern and northern parts of Route 2.",
+          "status": "text_verified"
+        },
+        {
+          "id": "north_section",
+          "name": "Northern section",
+          "category": "route_area",
+          "note": "Continues toward Pewter City.",
+          "status": "text_verified"
+        },
+        {
+          "id": "diglett_cave_access",
+          "name": "Eastern path toward Diglett's Cave",
+          "category": "cave_access",
+          "note": "Access is described in route references; no positioned pin is approved.",
+          "coordinateStatus": "unverified",
+          "status": "text_verified_position_not_mapped"
+        }
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "viridian_forest",
+      "name": "Viridian Forest",
+      "kind": "forest",
+      "connectsTo": [
+        "route_2"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "encounters": {
+        "lets_go_pikachu": [
+          [
+            "Caterpie",
+            25
+          ],
+          [
+            "Weedle",
+            24
+          ],
+          [
+            "Pidgey",
+            15
+          ],
+          [
+            "Metapod",
+            10
+          ],
+          [
+            "Kakuna",
+            10
+          ],
+          [
+            "Oddish",
+            10
+          ],
+          [
+            "Pikachu",
+            5
+          ],
+          [
+            "Butterfree",
+            1
+          ]
+        ],
+        "lets_go_eevee": [
+          [
+            "Weedle",
+            25
+          ],
+          [
+            "Caterpie",
+            24
+          ],
+          [
+            "Pidgey",
+            15
+          ],
+          [
+            "Metapod",
+            10
+          ],
+          [
+            "Kakuna",
+            10
+          ],
+          [
+            "Bellsprout",
+            10
+          ],
+          [
+            "Pikachu",
+            5
+          ],
+          [
+            "Beedrill",
+            1
+          ]
+        ]
+      },
+      "levelRange": [
+        3,
+        6
+      ],
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "pewter_city",
+      "name": "Pewter City",
+      "kind": "town",
+      "connectsTo": [
+        "route_2",
+        "route_3",
+        "pewter_gym",
+        "pewter_museum"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "features": [
+        {
+          "id": "pokemon_center",
+          "name": "Pokémon Center",
+          "category": "building",
+          "status": "text_verified"
+        },
+        {
+          "id": "poke_mart",
+          "name": "Poké Mart",
+          "category": "building",
+          "status": "text_verified"
+        },
+        {
+          "id": "museum",
+          "name": "Pewter Museum of Science",
+          "category": "building",
+          "status": "text_verified"
+        },
+        {
+          "id": "gym",
+          "name": "Pewter Gym",
+          "category": "gym",
+          "status": "text_verified"
+        }
+      ],
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "route_3",
+      "name": "Route 3",
+      "kind": "route",
+      "connectsTo": [
+        "mt_moon",
+        "pewter_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "mt_moon",
+      "name": "Mt. Moon",
+      "kind": "cave",
+      "connectsTo": [
+        "route_3",
+        "route_4"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "hiddenItemCount": 4,
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "route_4",
+      "name": "Route 4",
+      "kind": "route",
+      "connectsTo": [
+        "cerulean_city",
+        "mt_moon"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "cerulean_city",
+      "name": "Cerulean City",
+      "kind": "town",
+      "connectsTo": [
+        "route_4",
+        "route_5",
+        "route_9",
+        "route_24",
+        "cerulean_gym",
+        "cerulean_cave"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "features": [
+        "Pokémon Center",
+        "Poké Mart",
+        "Cerulean Gym",
+        "Bicycle Shop",
+        "Herb Shop",
+        "dom z północnym wyjściem",
+        "dom złodzieja"
+      ],
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "route_24",
+      "name": "Route 24",
+      "kind": "route",
+      "connectsTo": [
+        "cerulean_city",
+        "route_25"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "route_25",
+      "name": "Route 25",
+      "kind": "route",
+      "connectsTo": [
+        "route_24",
+        "bills_house"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "features": [
+        "Bill's House"
+      ],
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "route_5",
+      "name": "Route 5",
+      "kind": "route",
+      "connectsTo": [
+        "cerulean_city",
+        "saffron_city",
+        "underground_path_5_6",
+        "day_care"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "features": [
+        "Day Care",
+        "Underground Path entrance"
+      ],
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "underground_path_5_6",
+      "name": "Underground Path (Routes 5–6)",
+      "kind": "underground_path",
+      "connectsTo": [
+        "route_5",
+        "route_6"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "postGameTrainers": [
+        "Scientist Murray — Magnemite Lv. 70",
+        "Scientist Julian — Magneton Lv. 75"
+      ],
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "route_6",
+      "name": "Route 6",
+      "kind": "route",
+      "connectsTo": [
+        "saffron_city",
+        "vermilion_city",
+        "underground_path_5_6"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "vermilion_city",
+      "name": "Vermilion City",
+      "kind": "town",
+      "connectsTo": [
+        "route_6",
+        "route_11",
+        "ss_anne",
+        "pokemon_fan_club",
+        "vermilion_gym"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "features": [
+        "Pokémon Center",
+        "Poké Mart",
+        "Pokémon Fan Club",
+        "Vermilion Gym",
+        "port i S.S. Anne"
+      ],
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "route_7",
+      "name": "Route 7",
+      "kind": "route",
+      "connectsTo": [
+        "saffron_city",
+        "celadon_city",
+        "underground_path_7_8"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "route_8",
+      "name": "Route 8",
+      "kind": "route",
+      "connectsTo": [
+        "lavender_town",
+        "saffron_city",
+        "underground_path_7_8"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "route_9",
+      "name": "Route 9",
+      "kind": "route",
+      "connectsTo": [
+        "route_10",
+        "cerulean_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "route_10",
+      "name": "Route 10",
+      "kind": "route",
+      "connectsTo": [
+        "route_9",
+        "lavender_town",
+        "rock_tunnel",
+        "power_plant"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "features": [
+        "Pokémon Center",
+        "Power Plant",
+        "wejście do Rock Tunnel"
+      ],
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "rock_tunnel",
+      "name": "Rock Tunnel",
+      "kind": "cave",
+      "connectsTo": [
+        "route_10",
+        "lavender_town"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "lavender_town",
+      "name": "Lavender Town",
+      "kind": "town",
+      "connectsTo": [
+        "route_8",
+        "route_10",
+        "route_12",
+        "pokemon_tower",
+        "rock_tunnel"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "features": [
+        "Pokémon Center",
+        "Poké Mart",
+        "Mr. Fuji's House",
+        "Pokémon Tower"
+      ],
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "underground_path_7_8",
+      "name": "Underground Path (Routes 7–8)",
+      "kind": "underground_path",
+      "connectsTo": [
+        "route_7",
+        "route_8"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "route_11",
+      "name": "Route 11",
+      "kind": "route",
+      "connectsTo": [
+        "digletts_cave",
+        "route_12",
+        "vermilion_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "features": [
+        "Route 11 Gate"
+      ],
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "digletts_cave",
+      "name": "Diglett's Cave",
+      "kind": "cave",
+      "connectsTo": [
+        "route_11",
+        "route_2"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "route_12",
+      "name": "Route 12",
+      "kind": "route",
+      "connectsTo": [
+        "lavender_town",
+        "route_11",
+        "route_13"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "route_13",
+      "name": "Route 13",
+      "kind": "route",
+      "connectsTo": [
+        "route_12",
+        "route_14"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "route_14",
+      "name": "Route 14",
+      "kind": "route",
+      "connectsTo": [
+        "route_13",
+        "route_15"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "route_15",
+      "name": "Route 15",
+      "kind": "route",
+      "connectsTo": [
+        "route_14",
+        "fuchsia_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "fuchsia_city",
+      "name": "Fuchsia City",
+      "kind": "town",
+      "connectsTo": [
+        "route_15",
+        "route_18",
+        "route_19",
+        "safari_zone",
+        "fuchsia_gym"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "features": [
+        "Pokémon Center",
+        "Poké Mart",
+        "Fuchsia Gym",
+        "GO Park",
+        "Safari Zone Gate",
+        "pokój Warden"
+      ],
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "celadon_city",
+      "name": "Celadon City",
+      "kind": "town",
+      "connectsTo": [
+        "route_7",
+        "route_16",
+        "rocket_hideout",
+        "celadon_gym"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "features": [
+        "Pokémon Center",
+        "Poké Mart",
+        "Celadon Department Store",
+        "Celadon Game Corner",
+        "Rocket Hideout",
+        "Celadon Gym",
+        "Celadon Restaurant"
+      ],
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "saffron_city",
+      "name": "Saffron City",
+      "kind": "town",
+      "connectsTo": [
+        "route_5",
+        "route_6",
+        "route_7",
+        "route_8",
+        "silph_co",
+        "saffron_gym"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "features": [
+        "Pokémon Center",
+        "Poké Mart",
+        "Silph Co.",
+        "Saffron Gym",
+        "Fighting Dojo"
+      ],
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "route_16",
+      "name": "Route 16",
+      "kind": "route",
+      "connectsTo": [
+        "celadon_city",
+        "route_17"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "route_17",
+      "name": "Route 17",
+      "kind": "route",
+      "connectsTo": [
+        "route_16",
+        "route_18"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "route_18",
+      "name": "Route 18",
+      "kind": "route",
+      "connectsTo": [
+        "fuchsia_city",
+        "route_17"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "features": [
+        "Route 18 Gate"
+      ],
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "route_19",
+      "name": "Route 19",
+      "kind": "route",
+      "connectsTo": [
+        "fuchsia_city",
+        "route_20"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "route_20",
+      "name": "Route 20",
+      "kind": "water_route",
+      "connectsTo": [
+        "route_19",
+        "seafoam_islands",
+        "cinnabar_island"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "seafoam_islands",
+      "name": "Seafoam Islands",
+      "kind": "cave",
+      "connectsTo": [
+        "route_20"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "cinnabar_island",
+      "name": "Cinnabar Island",
+      "kind": "town",
+      "connectsTo": [
+        "route_20",
+        "route_21",
+        "pokemon_mansion",
+        "cinnabar_gym"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "features": [
+        "Pokémon Center",
+        "Poké Mart",
+        "Pokémon Lab",
+        "Pokémon Mansion",
+        "Cinnabar Gym"
+      ],
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "route_21",
+      "name": "Route 21",
+      "kind": "water_route",
+      "connectsTo": [
+        "pallet_town",
+        "cinnabar_island"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "route_22",
+      "name": "Route 22",
+      "kind": "route",
+      "connectsTo": [
+        "viridian_city",
+        "pokemon_league_reception_gate"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "route_23",
+      "name": "Route 23",
+      "kind": "route",
+      "connectsTo": [
+        "pokemon_league_reception_gate",
+        "indigo_plateau",
+        "victory_road"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "victory_road",
+      "name": "Victory Road",
+      "kind": "cave",
+      "connectsTo": [
+        "route_23",
+        "indigo_plateau"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "indigo_plateau",
+      "name": "Indigo Plateau",
+      "kind": "league",
+      "connectsTo": [
+        "route_23",
+        "victory_road",
+        "pokemon_league_reception_gate"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "features": [
+        "Pokémon League",
+        "Elite Four",
+        "Champion battle"
+      ],
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "cerulean_cave",
+      "name": "Cerulean Cave",
+      "kind": "cave",
+      "connectsTo": [
+        "cerulean_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "ss_anne",
+      "name": "S.S. Anne",
+      "kind": "ship",
+      "connectsTo": [
+        "vermilion_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "features": [
+        "pokład",
+        "kabiny",
+        "jadalnia",
+        "mostek"
+      ],
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "power_plant",
+      "name": "Power Plant",
+      "kind": "facility",
+      "connectsTo": [
+        "route_10"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "pokemon_tower",
+      "name": "Pokémon Tower",
+      "kind": "tower",
+      "connectsTo": [
+        "lavender_town"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "features": [
+        "Pokémon Tower",
+        "Mr. Fuji"
+      ],
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "rocket_hideout",
+      "name": "Team Rocket Hideout",
+      "kind": "hideout",
+      "connectsTo": [
+        "celadon_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "features": [
+        "układ podziemny",
+        "walka z Giovannim"
+      ],
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "silph_co",
+      "name": "Silph Co.",
+      "kind": "building",
+      "connectsTo": [
+        "saffron_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "features": [
+        "teleportery",
+        "ratowanie prezesa",
+        "walka z Giovannim"
+      ],
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "pokemon_mansion",
+      "name": "Pokémon Mansion",
+      "kind": "mansion",
+      "connectsTo": [
+        "cinnabar_island"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "safari_zone",
+      "name": "Safari Zone",
+      "kind": "park",
+      "connectsTo": [
+        "fuchsia_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "features": [
+        "strefy Safari",
+        "Warden's Gold Teeth"
+      ],
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "viridian_gym",
+      "name": "Viridian Gym",
+      "kind": "gym",
+      "connectsTo": [
+        "viridian_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "pewter_gym",
+      "name": "Pewter Gym",
+      "kind": "gym",
+      "connectsTo": [
+        "pewter_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "cerulean_gym",
+      "name": "Cerulean Gym",
+      "kind": "gym",
+      "connectsTo": [
+        "cerulean_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "vermilion_gym",
+      "name": "Vermilion Gym",
+      "kind": "gym",
+      "connectsTo": [
+        "vermilion_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "celadon_gym",
+      "name": "Celadon Gym",
+      "kind": "gym",
+      "connectsTo": [
+        "celadon_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "saffron_gym",
+      "name": "Saffron Gym",
+      "kind": "gym",
+      "connectsTo": [
+        "saffron_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "fuchsia_gym",
+      "name": "Fuchsia Gym",
+      "kind": "gym",
+      "connectsTo": [
+        "fuchsia_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "cinnabar_gym",
+      "name": "Cinnabar Gym",
+      "kind": "gym",
+      "connectsTo": [
+        "cinnabar_island"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "bills_house",
+      "name": "Bill's House",
+      "kind": "house",
+      "connectsTo": [
+        "route_25"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "features": [
+        "Bill",
+        "S.S. Ticket"
+      ],
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "pewter_museum",
+      "name": "Pewter Museum of Science",
+      "kind": "museum",
+      "connectsTo": [
+        "pewter_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "features": [
+        "wystawy skamielin",
+        "laboratorium na piętrze"
+      ],
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "pokemon_fan_club",
+      "name": "Pokémon Fan Club",
+      "kind": "building",
+      "connectsTo": [
+        "vermilion_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "features": [
+        "przewodniczący klubu",
+        "przedmiot za wysłuchanie opowieści"
+      ],
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "day_care",
+      "name": "Pokémon Day Care",
+      "kind": "facility",
+      "connectsTo": [
+        "route_5"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "pokemon_league_reception_gate",
+      "name": "Pokémon League Reception Gate",
+      "kind": "gate",
+      "connectsTo": [
+        "route_22",
+        "route_23",
+        "indigo_plateau"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "route_26",
+      "name": "Route 26",
+      "kind": "route",
+      "connectsTo": [
+        "pokemon_league_reception_gate",
+        "route_27",
+        "tohjo_falls"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "postgame_topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "route_27",
+      "name": "Route 27",
+      "kind": "route",
+      "connectsTo": [
+        "route_26",
+        "new_bark_town",
+        "tohjo_falls"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "postgame_topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "route_28",
+      "name": "Route 28",
+      "kind": "route",
+      "connectsTo": [
+        "pokemon_league_reception_gate",
+        "mt_silver"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "postgame_topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "tohjo_falls",
+      "name": "Tohjo Falls",
+      "kind": "cave",
+      "connectsTo": [
+        "route_26",
+        "route_27"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "postgame_topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "mt_silver",
+      "name": "Mt. Silver",
+      "kind": "mountain",
+      "connectsTo": [
+        "route_28"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "postgame_topology_indexed_variant_details_pending"
+    }
+  ],
+  "region": "Kanto",
+  "games": [
+    "Pokémon Red",
+    "Pokémon Blue",
+    "Pokémon Yellow",
+    "Pokémon FireRed",
+    "Pokémon LeafGreen",
+    "Kanto postgame in Gold/Silver/Crystal and HeartGold/SoulSilver"
+  ],
+  "purpose": "Game-agnostic Kanto location and route index. Version-specific encounters, item positions and interior layouts are intentionally omitted.",
+  "coordinatePolicy": "No exact coordinates or collectible pins until verified for the selected game version."
+}
