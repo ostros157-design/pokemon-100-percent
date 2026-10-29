@@ -12,8 +12,8 @@ import '../models/game.dart';
 import '../models/guide.dart';
 import 'guide_screen.dart';
 
-/// Offline location index built only from locations already present in guides.
-/// A decorative region image is not treated as a real map.
+/// Offline regional location indexes are loaded from bundled, source-tracked JSON.
+/// A schematic or decorative view is never presented as a scale-accurate game map.
 class MapsScreen extends StatefulWidget {
   const MapsScreen({super.key});
 
