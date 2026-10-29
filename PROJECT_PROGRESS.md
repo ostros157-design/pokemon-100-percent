@@ -691,3 +691,13 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 ### Mapy — kontynuacja Kanto (2026-10-29)
 
 - Rozszerzono dane offline do Route 25. Dokładne pinezki nadal nie są zweryfikowane; testów i kompilacji nie uruchamiano.
+
+
+### Mapy — dalsze dane Kanto i panele offline (2026-10-29)
+
+- Rozszerzono indeks danych mapy Let’s Go o Route 4, Cerulean City, Route 24, Route 25, Route 5, Underground Path (Routes 5–6), Route 6 i Vermilion City.
+- Dodano tekstowe panele offline dla Route 4, Cerulean City, Routes 24–25, Routes 5–6, Underground Path oraz Vermilion City. Panele pokazują wersjozależne spotkania, część trenerów, przedmioty i kluczowe miejsca.
+- Poprawiono spotkania Route 3 w Let's Go Eevee: Spearow 40%, Rattata 40%, Ekans 20% (różni się od Pikachu).
+- Dane i źródła: `354c6f2`, `3e05e53`; panele UI: `9a18bb7`, `ae8ee57`, `1cbf6b7`, poprawka Route 3 `c3f4fcb`.
+- Weryfikacja przez odczyt GitHub potwierdziła poprawny JSON, 16 rekordów lokacji i obecność paneli Route 3/Mt. Moon. Nie uruchamiano Flutter analyze, testów ani kompilacji APK.
+- Mapa nie jest kompletna: brakuje wielu lokacji Kanto, dokładnego podkładu z gry i zweryfikowanych pozycji pinezek. Nie należy przedstawiać jej jako gotowej mapy całego regionu.
