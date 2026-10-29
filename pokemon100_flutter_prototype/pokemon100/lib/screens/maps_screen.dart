@@ -2908,9 +2908,9 @@ class _KantoLocalAreaPainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    canvas.drawRect(Offset.zero & size, Paint()..color = land);
-    final zoneFill = Paint()..color = const Color(0xFFD8D9BD).withValues(alpha: .88);
-    final zoneEdge = Paint()
+    canvas.drawRect(Offset.zero & size, Paint()..isAntiAlias = true..color = land);
+    final zoneFill = Paint()..isAntiAlias = true..color = const Color(0xFFD8D9BD).withValues(alpha: .88);
+    final zoneEdge = Paint()..isAntiAlias = true
       ..color = const Color(0xFF788B71).withValues(alpha: .72)
       ..style = PaintingStyle.stroke
       ..strokeWidth = 1.4;
@@ -2931,7 +2931,7 @@ class _KantoLocalAreaPainter extends CustomPainter {
       );
     }
 
-    final roadPaint = Paint()
+    final roadPaint = Paint()..isAntiAlias = true
       ..color = route.withValues(alpha: 0.42)
       ..strokeWidth = 5
       ..strokeCap = StrokeCap.round;
@@ -3096,7 +3096,7 @@ class _KantoLocalAreaPainter extends CustomPainter {
     } else if (location.startsWith('Route ') ||
         location.startsWith('Underground Path')) {
       final isWaterRoute = {'Route 19', 'Route 20', 'Route 21'}.contains(location);
-      final sidePaint = Paint()
+      final sidePaint = Paint()..isAntiAlias = true
         ..color = (isWaterRoute
                 ? const Color(0xFF8BCBD2)
                 : const Color(0xFF9ABF7E))
@@ -3193,8 +3193,8 @@ class _KantoLocalAreaPainter extends CustomPainter {
         Offset(size.width * .66, size.height * .28),
         Offset(size.width * .72, size.height * .68),
       ]) {
-        canvas.drawCircle(point, 10, Paint()..color = route.withValues(alpha: .18));
-        canvas.drawCircle(point, 5, Paint()..color = route.withValues(alpha: .5));
+        canvas.drawCircle(point, 10, Paint()..isAntiAlias = true..color = route.withValues(alpha: .18));
+        canvas.drawCircle(point, 5, Paint()..isAntiAlias = true..color = route.withValues(alpha: .5));
       }
     } else if (location == 'Mt. Moon') {
       markers.addAll([
@@ -3411,16 +3411,16 @@ class _KantoLocalAreaPainter extends CustomPainter {
           marker.$1 == 'Miasto';
       if (isBuilding) {
         final rect = Rect.fromCenter(center: point, width: 18, height: 14);
-        canvas.drawRect(rect, Paint()..color = route.withValues(alpha: .65));
+        canvas.drawRect(rect, Paint()..isAntiAlias = true..color = route.withValues(alpha: .65));
         final roof = Path()
           ..moveTo(rect.left - 3, rect.top)
           ..lineTo(point.dx, rect.top - 9)
           ..lineTo(rect.right + 3, rect.top)
           ..close();
-        canvas.drawPath(roof, Paint()..color = route);
+        canvas.drawPath(roof, Paint()..isAntiAlias = true..color = route);
       } else {
-        canvas.drawCircle(point, 7, Paint()..color = route);
-        canvas.drawCircle(point, 2.5, Paint()..color = Colors.white);
+        canvas.drawCircle(point, 7, Paint()..isAntiAlias = true..color = route);
+        canvas.drawCircle(point, 2.5, Paint()..isAntiAlias = true..color = Colors.white);
       }
 
       final text = TextPainter(
@@ -3448,11 +3448,11 @@ class _KantoLocalAreaPainter extends CustomPainter {
       );
       canvas.drawRRect(
         RRect.fromRectAndRadius(labelRect, const Radius.circular(4)),
-        Paint()..color = const Color(0xFFF8F1D9).withValues(alpha: .88),
+        Paint()..isAntiAlias = true..color = const Color(0xFFF8F1D9).withValues(alpha: .88),
       );
       canvas.drawRRect(
         RRect.fromRectAndRadius(labelRect, const Radius.circular(4)),
-        Paint()
+        Paint()..isAntiAlias = true
           ..color = const Color(0xFF78906F).withValues(alpha: .42)
           ..style = PaintingStyle.stroke
           ..strokeWidth = .8,
@@ -3897,7 +3897,7 @@ class _KantoMapPainter extends CustomPainter {
     final oceanRect = Offset.zero & size;
     canvas.drawRect(
       oceanRect,
-      Paint()
+      Paint()..isAntiAlias = true
         ..shader = const LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
@@ -3921,11 +3921,11 @@ class _KantoMapPainter extends CustomPainter {
       ..close();
     canvas.drawPath(
       coast.shift(const Offset(0, 5)),
-      Paint()..color = const Color(0xFF6FAEB1).withValues(alpha: .25),
+      Paint()..isAntiAlias = true..color = const Color(0xFF6FAEB1).withValues(alpha: .25),
     );
     canvas.drawPath(
       coast,
-      Paint()
+      Paint()..isAntiAlias = true
         ..shader = const LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
@@ -3938,21 +3938,21 @@ class _KantoMapPainter extends CustomPainter {
     );
     canvas.drawPath(
       coast,
-      Paint()
+      Paint()..isAntiAlias = true
         ..color = const Color(0xFFE7D8A7).withValues(alpha: .92)
         ..style = PaintingStyle.stroke
         ..strokeWidth = 8,
     );
     canvas.drawPath(
       coast,
-      Paint()
+      Paint()..isAntiAlias = true
         ..color = const Color(0xFF719B72).withValues(alpha: .72)
         ..style = PaintingStyle.stroke
         ..strokeWidth = 3.5,
     );
     canvas.drawPath(
       coast,
-      Paint()
+      Paint()..isAntiAlias = true
         ..color = Colors.white.withValues(alpha: .58)
         ..style = PaintingStyle.stroke
         ..strokeWidth = 1,
@@ -3962,7 +3962,7 @@ class _KantoMapPainter extends CustomPainter {
     // texture without putting wave marks over selectable land locations.
     canvas.save();
     canvas.clipPath(coast, clipOp: ClipOp.difference);
-    final seaWavePaint = Paint()
+    final seaWavePaint = Paint()..isAntiAlias = true
       ..color = const Color(0xFF5CA9B5).withValues(alpha: .46)
       ..style = PaintingStyle.stroke
       ..strokeWidth = 1.5
@@ -4014,14 +4014,14 @@ class _KantoMapPainter extends CustomPainter {
       ..close();
     canvas.drawPath(
       bay,
-      Paint()
+      Paint()..isAntiAlias = true
         ..color = const Color(0xFFE8D7A0).withValues(alpha: .92)
         ..style = PaintingStyle.stroke
         ..strokeWidth = 7,
     );
     canvas.drawPath(
       bay,
-      Paint()
+      Paint()..isAntiAlias = true
         ..shader = const LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
@@ -4035,7 +4035,7 @@ class _KantoMapPainter extends CustomPainter {
     );
     canvas.drawPath(
       bay,
-      Paint()
+      Paint()..isAntiAlias = true
         ..color = const Color(0xFF5A9EAB).withValues(alpha: .62)
         ..style = PaintingStyle.stroke
         ..strokeWidth = 1.3,
@@ -4055,10 +4055,10 @@ class _KantoMapPainter extends CustomPainter {
         width: size.width * wash.$3,
         height: size.height * wash.$4,
       );
-      canvas.drawOval(rect, Paint()..color = wash.$5.withValues(alpha: .45));
+      canvas.drawOval(rect, Paint()..isAntiAlias = true..color = wash.$5.withValues(alpha: .45));
       canvas.drawOval(
         rect.deflate(5),
-        Paint()
+        Paint()..isAntiAlias = true
           ..color = Colors.white.withValues(alpha: .18)
           ..style = PaintingStyle.stroke
           ..strokeWidth = 1.2,
@@ -4077,9 +4077,9 @@ class _KantoMapPainter extends CustomPainter {
     for (final group in treeGroups) {
       final center = p(group.$1, group.$2);
       final scale = group.$3 * size.width / 900;
-      final trunkPaint = Paint()..color = const Color(0xFF987C55).withValues(alpha: .65);
-      final leafPaint = Paint()..color = const Color(0xFF6FA879).withValues(alpha: .48);
-      final leafLight = Paint()..color = const Color(0xFFB5D99B).withValues(alpha: .62);
+      final trunkPaint = Paint()..isAntiAlias = true..color = const Color(0xFF987C55).withValues(alpha: .65);
+      final leafPaint = Paint()..isAntiAlias = true..color = const Color(0xFF6FA879).withValues(alpha: .48);
+      final leafLight = Paint()..isAntiAlias = true..color = const Color(0xFFB5D99B).withValues(alpha: .62);
       for (var tree = 0; tree < 3; tree++) {
         final offset = Offset((tree - 1) * 10 * scale, (tree.isOdd ? 4 : -2) * scale);
         final base = center + offset;
@@ -4103,7 +4103,7 @@ class _KantoMapPainter extends CustomPainter {
       }
     }
 
-    final hillPaint = Paint()
+    final hillPaint = Paint()..isAntiAlias = true
       ..color = const Color(0xFF8AAE78).withValues(alpha: .36)
       ..style = PaintingStyle.stroke
       ..strokeWidth = 2
@@ -4132,7 +4132,7 @@ class _KantoMapPainter extends CustomPainter {
       canvas.drawPath(ridge, hillPaint);
       canvas.drawPath(
         ridge.shift(Offset(0, 4 * size.width / 900)),
-        Paint()
+        Paint()..isAntiAlias = true
           ..color = Colors.white.withValues(alpha: .28)
           ..style = PaintingStyle.stroke
           ..strokeWidth = 1.2,
@@ -4143,7 +4143,7 @@ class _KantoMapPainter extends CustomPainter {
     // mountain silhouettes, coves and tiny islands. All motifs are vector paths,
     // so they stay crisp when the user zooms in; they are decorative, not exact
     // in-game terrain or item/Pokémon coordinates.
-    final contourPaint = Paint()
+    final contourPaint = Paint()..isAntiAlias = true
       ..color = const Color(0xFF77966C).withValues(alpha: .30)
       ..style = PaintingStyle.stroke
       ..strokeWidth = 1.25
@@ -4178,11 +4178,11 @@ class _KantoMapPainter extends CustomPainter {
         ..close();
       canvas.drawPath(
         silhouette.shift(Offset(0, 3 * s)),
-        Paint()..color = const Color(0xFF9A9B7A).withValues(alpha: .35),
+        Paint()..isAntiAlias = true..color = const Color(0xFF9A9B7A).withValues(alpha: .35),
       );
       canvas.drawPath(
         silhouette,
-        Paint()
+        Paint()..isAntiAlias = true
           ..shader = const LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
@@ -4203,10 +4203,10 @@ class _KantoMapPainter extends CustomPainter {
         ..lineTo(center.dx + 1 * s, center.dy + 2 * s)
         ..lineTo(center.dx - 5 * s, center.dy - 2 * s)
         ..close();
-      canvas.drawPath(snow, Paint()..color = const Color(0xFFF8F4E5));
+      canvas.drawPath(snow, Paint()..isAntiAlias = true..color = const Color(0xFFF8F4E5));
       canvas.drawPath(
         silhouette,
-        Paint()
+        Paint()..isAntiAlias = true
           ..color = const Color(0xFF7D8F70).withValues(alpha: .65)
           ..style = PaintingStyle.stroke
           ..strokeWidth = 1.2 * s,
@@ -4236,7 +4236,7 @@ class _KantoMapPainter extends CustomPainter {
       ..cubicTo(size.width * .67, size.height * .43, size.width * .63, size.height * .46, size.width * .57, size.height * .48);
     canvas.drawPath(
       stream,
-      Paint()
+      Paint()..isAntiAlias = true
         ..color = const Color(0xFFF4E5B2).withValues(alpha: .82)
         ..style = PaintingStyle.stroke
         ..strokeWidth = 8 * size.width / 900
@@ -4244,7 +4244,7 @@ class _KantoMapPainter extends CustomPainter {
     );
     canvas.drawPath(
       stream,
-      Paint()
+      Paint()..isAntiAlias = true
         ..color = const Color(0xFF80C8D0).withValues(alpha: .78)
         ..style = PaintingStyle.stroke
         ..strokeWidth = 4 * size.width / 900
@@ -4267,11 +4267,11 @@ class _KantoMapPainter extends CustomPainter {
       );
       canvas.drawOval(
         rect.inflate(2 * size.width / 900),
-        Paint()..color = const Color(0xFFEADDAA).withValues(alpha: .8),
+        Paint()..isAntiAlias = true..color = const Color(0xFFEADDAA).withValues(alpha: .8),
       );
       canvas.drawOval(
         rect,
-        Paint()
+        Paint()..isAntiAlias = true
           ..shader = const LinearGradient(
             colors: [Color(0xFFB9D79A), Color(0xFF8FB87E)],
           ).createShader(rect),
@@ -4281,7 +4281,7 @@ class _KantoMapPainter extends CustomPainter {
         3.5,
         2.2,
         false,
-        Paint()
+        Paint()..isAntiAlias = true
           ..color = const Color(0xFF6D9B6F).withValues(alpha: .65)
           ..style = PaintingStyle.stroke
           ..strokeWidth = 1,
@@ -4295,7 +4295,7 @@ class _KantoMapPainter extends CustomPainter {
     );
     canvas.drawRRect(
       frame,
-      Paint()
+      Paint()..isAntiAlias = true
         ..color = const Color(0xFF6E8C73).withValues(alpha: .55)
         ..style = PaintingStyle.stroke
         ..strokeWidth = 2,
@@ -4304,7 +4304,7 @@ class _KantoMapPainter extends CustomPainter {
     canvas.drawCircle(
       compass,
       size.width * .035,
-      Paint()..color = const Color(0xFFF8F1D8).withValues(alpha: .8),
+      Paint()..isAntiAlias = true..color = const Color(0xFFF8F1D8).withValues(alpha: .8),
     );
     final compassPath = Path()
       ..moveTo(compass.dx, compass.dy - size.width * .027)
@@ -4312,11 +4312,11 @@ class _KantoMapPainter extends CustomPainter {
       ..lineTo(compass.dx, compass.dy + size.width * .027)
       ..lineTo(compass.dx - size.width * .010, compass.dy)
       ..close();
-    canvas.drawPath(compassPath, Paint()..color = const Color(0xFF577B70));
+    canvas.drawPath(compassPath, Paint()..isAntiAlias = true..color = const Color(0xFF577B70));
     canvas.drawLine(
       Offset(compass.dx, compass.dy - size.width * .022),
       Offset(compass.dx, compass.dy + size.width * .022),
-      Paint()
+      Paint()..isAntiAlias = true
         ..color = const Color(0xFF577B70)
         ..strokeWidth = 1,
     );
@@ -4423,37 +4423,37 @@ class _KantoMapPainter extends CustomPainter {
       (74,24),
       (75,24),
     ];
-    final roadShadow = Paint()
+    final roadShadow = Paint()..isAntiAlias = true
       ..color = const Color(0xFF8B9C73).withValues(alpha: .30)
       ..style = PaintingStyle.stroke
       ..strokeWidth = 11
       ..strokeCap = StrokeCap.round;
-    final roadEdge = Paint()
+    final roadEdge = Paint()..isAntiAlias = true
       ..color = const Color(0xFFFAF1CE)
       ..style = PaintingStyle.stroke
       ..strokeWidth = 8
       ..strokeCap = StrokeCap.round;
-    final roadCenter = Paint()
+    final roadCenter = Paint()..isAntiAlias = true
       ..color = const Color(0xFFE5D49B)
       ..style = PaintingStyle.stroke
       ..strokeWidth = 4.5
       ..strokeCap = StrokeCap.round;
-    final waterRouteEdge = Paint()
+    final waterRouteEdge = Paint()..isAntiAlias = true
       ..color = const Color(0xFFD6F1E9)
       ..style = PaintingStyle.stroke
       ..strokeWidth = 8
       ..strokeCap = StrokeCap.round;
-    final waterRouteDash = Paint()
+    final waterRouteDash = Paint()..isAntiAlias = true
       ..color = const Color(0xFF4F9DA8)
       ..style = PaintingStyle.stroke
       ..strokeWidth = 3.2
       ..strokeCap = StrokeCap.round;
-    final undergroundEdge = Paint()
+    final undergroundEdge = Paint()..isAntiAlias = true
       ..color = const Color(0xFFD7C8A2)
       ..style = PaintingStyle.stroke
       ..strokeWidth = 8
       ..strokeCap = StrokeCap.round;
-    final undergroundDash = Paint()
+    final undergroundDash = Paint()..isAntiAlias = true
       ..color = const Color(0xFF8C8068)
       ..style = PaintingStyle.stroke
       ..strokeWidth = 3
@@ -4520,9 +4520,9 @@ class _KantoMapPainter extends CustomPainter {
     void drawForest(double x, double y, double radius, int seed) {
       final center = p(x, y);
       final scale = size.width / 900;
-      final canopy = Paint()..color = const Color(0xFF659B72).withValues(alpha: .76);
-      final canopyLight = Paint()..color = const Color(0xFF9BC68A).withValues(alpha: .88);
-      final shadow = Paint()..color = const Color(0xFF547E63).withValues(alpha: .28);
+      final canopy = Paint()..isAntiAlias = true..color = const Color(0xFF659B72).withValues(alpha: .76);
+      final canopyLight = Paint()..isAntiAlias = true..color = const Color(0xFF9BC68A).withValues(alpha: .88);
+      final shadow = Paint()..isAntiAlias = true..color = const Color(0xFF547E63).withValues(alpha: .28);
       canvas.drawOval(
         Rect.fromCenter(
           center: center + Offset(2 * scale, 5 * scale),
@@ -4551,10 +4551,10 @@ class _KantoMapPainter extends CustomPainter {
     void drawTown(double x, double y, {int buildings = 5}) {
       final center = p(x, y);
       final scale = size.width / 900;
-      final base = Paint()..color = const Color(0xFFFAF0D0).withValues(alpha: .95);
-      final wall = Paint()..color = const Color(0xFFF4D7A0);
-      final roof = Paint()..color = const Color(0xFFB96555);
-      final outline = Paint()
+      final base = Paint()..isAntiAlias = true..color = const Color(0xFFFAF0D0).withValues(alpha: .95);
+      final wall = Paint()..isAntiAlias = true..color = const Color(0xFFF4D7A0);
+      final roof = Paint()..isAntiAlias = true..color = const Color(0xFFB96555);
+      final outline = Paint()..isAntiAlias = true
         ..color = const Color(0xFF7D7158).withValues(alpha: .78)
         ..style = PaintingStyle.stroke
         ..strokeWidth = 1 * scale;
@@ -4577,7 +4577,7 @@ class _KantoMapPainter extends CustomPainter {
         canvas.drawPath(roofPath, outline);
         canvas.drawRect(
           Rect.fromLTWH(body.center.dx - scale, body.bottom - 3 * scale, 2 * scale, 3 * scale),
-          Paint()..color = const Color(0xFF6E8B9B),
+          Paint()..isAntiAlias = true..color = const Color(0xFF6E8B9B),
         );
       }
     }
@@ -4585,12 +4585,12 @@ class _KantoMapPainter extends CustomPainter {
     void drawCave(double x, double y) {
       final center = p(x, y);
       final scale = size.width / 900;
-      final rock = Paint()..color = const Color(0xFF8B8A78);
-      final opening = Paint()
+      final rock = Paint()..isAntiAlias = true..color = const Color(0xFF8B8A78);
+      final opening = Paint()..isAntiAlias = true
         ..color = const Color(0xFF353F3D)
         ..style = PaintingStyle.stroke
         ..strokeWidth = 4 * scale;
-      final edge = Paint()
+      final edge = Paint()..isAntiAlias = true
         ..color = const Color(0xFFF2E7C6)
         ..style = PaintingStyle.stroke
         ..strokeWidth = 1.4 * scale;
@@ -4674,11 +4674,11 @@ class _KantoMapPainter extends CustomPainter {
         );
         canvas.drawRRect(
           RRect.fromRectAndRadius(badgeRect, const Radius.circular(5)),
-          Paint()..color = const Color(0xFFFFF8E2).withValues(alpha: .96),
+          Paint()..isAntiAlias = true..color = const Color(0xFFFFF8E2).withValues(alpha: .96),
         );
         canvas.drawRRect(
           RRect.fromRectAndRadius(badgeRect, const Radius.circular(5)),
-          Paint()
+          Paint()..isAntiAlias = true
             ..color = (isWaterRouteNode
                     ? const Color(0xFF4F9DA8)
                     : const Color(0xFF9A8159))
@@ -4710,7 +4710,7 @@ class _KantoMapPainter extends CustomPainter {
       }
       final isSelected = place.name.toLowerCase() == selectedLocation.toLowerCase();
       if (isSelected) {
-        canvas.drawCircle(point, 13, Paint()..color = route.withValues(alpha: .24));
+        canvas.drawCircle(point, 13, Paint()..isAntiAlias = true..color = route.withValues(alpha: .24));
       }
       if (place.name == 'Pallet Town') {
         _drawHouse(canvas, point + const Offset(0, -16), route);
@@ -4720,8 +4720,8 @@ class _KantoMapPainter extends CustomPainter {
         _drawBerry(canvas, point + const Offset(13, -15));
         _drawPokeball(canvas, point + const Offset(-12, -15));
       }
-      canvas.drawCircle(point, isSelected ? 8 : 7, Paint()..color = route);
-      canvas.drawCircle(point, 3, Paint()..color = Colors.white);
+      canvas.drawCircle(point, isSelected ? 8 : 7, Paint()..isAntiAlias = true..color = route);
+      canvas.drawCircle(point, 3, Paint()..isAntiAlias = true..color = Colors.white);
       final name = place.name;
       final isMajorPlace = name.contains('City') ||
           name.contains('Town') ||
@@ -4802,11 +4802,11 @@ class _KantoMapPainter extends CustomPainter {
         occupiedLabelRects.add(labelRect);
         canvas.drawRRect(
           RRect.fromRectAndRadius(labelRect, const Radius.circular(3)),
-          Paint()..color = const Color(0xFFF8F1D9).withValues(alpha: .88),
+          Paint()..isAntiAlias = true..color = const Color(0xFFF8F1D9).withValues(alpha: .88),
         );
         canvas.drawRRect(
           RRect.fromRectAndRadius(labelRect, const Radius.circular(3)),
-          Paint()
+          Paint()..isAntiAlias = true
             ..color = const Color(0xFF78906F).withValues(alpha: .36)
             ..style = PaintingStyle.stroke
             ..strokeWidth = .7,
@@ -4831,18 +4831,18 @@ class _KantoMapPainter extends CustomPainter {
   }
 
   void _drawPokeball(Canvas canvas, Offset center) {
-    canvas.drawCircle(center, 7, Paint()..color = Colors.white);
+    canvas.drawCircle(center, 7, Paint()..isAntiAlias = true..color = Colors.white);
     canvas.drawArc(
       Rect.fromCircle(center: center, radius: 7),
       3.14159,
       3.14159,
       true,
-      Paint()..color = Colors.red.shade600,
+      Paint()..isAntiAlias = true..color = Colors.red.shade600,
     );
     canvas.drawCircle(
       center,
       7,
-      Paint()
+      Paint()..isAntiAlias = true
         ..color = Colors.black87
         ..style = PaintingStyle.stroke
         ..strokeWidth = 1,
@@ -4850,13 +4850,13 @@ class _KantoMapPainter extends CustomPainter {
     canvas.drawLine(
       center + const Offset(-6.5, 0),
       center + const Offset(6.5, 0),
-      Paint()..color = Colors.black87..strokeWidth = 1.5,
+      Paint()..isAntiAlias = true..color = Colors.black87..strokeWidth = 1.5,
     );
-    canvas.drawCircle(center, 2.2, Paint()..color = Colors.white);
+    canvas.drawCircle(center, 2.2, Paint()..isAntiAlias = true..color = Colors.white);
     canvas.drawCircle(
       center,
       2.2,
-      Paint()
+      Paint()..isAntiAlias = true
         ..color = Colors.black87
         ..style = PaintingStyle.stroke
         ..strokeWidth = 1,
@@ -4864,19 +4864,19 @@ class _KantoMapPainter extends CustomPainter {
   }
 
   void _drawBerry(Canvas canvas, Offset center) {
-    final berryPaint = Paint()..color = Colors.pink.shade400;
+    final berryPaint = Paint()..isAntiAlias = true..color = Colors.pink.shade400;
     canvas.drawCircle(center + const Offset(-3, 1), 4, berryPaint);
     canvas.drawCircle(center + const Offset(3, 1), 4, berryPaint);
     canvas.drawCircle(center + const Offset(0, 4), 4, berryPaint);
     canvas.drawLine(
       center + const Offset(0, -1),
       center + const Offset(1, -7),
-      Paint()
+      Paint()..isAntiAlias = true
         ..color = Colors.green.shade700
         ..strokeWidth = 2
         ..strokeCap = StrokeCap.round,
     );
-    canvas.drawCircle(center, 8, Paint()..color = Colors.white.withValues(alpha: .75)..style = PaintingStyle.stroke..strokeWidth = 1);
+    canvas.drawCircle(center, 8, Paint()..isAntiAlias = true..color = Colors.white.withValues(alpha: .75)..style = PaintingStyle.stroke..strokeWidth = 1);
   }
 
   void _drawHouse(Canvas canvas, Offset center, Color color) {
@@ -4885,18 +4885,18 @@ class _KantoMapPainter extends CustomPainter {
       ..lineTo(center.dx, center.dy - 8)
       ..lineTo(center.dx + 9, center.dy)
       ..close();
-    canvas.drawPath(roof, Paint()..color = Colors.brown.shade500);
+    canvas.drawPath(roof, Paint()..isAntiAlias = true..color = Colors.brown.shade500);
     canvas.drawRect(
       Rect.fromLTWH(center.dx - 7, center.dy, 14, 10),
-      Paint()..color = Colors.orange.shade100,
+      Paint()..isAntiAlias = true..color = Colors.orange.shade100,
     );
     canvas.drawRect(
       Rect.fromLTWH(center.dx - 2, center.dy + 3, 4, 7),
-      Paint()..color = color,
+      Paint()..isAntiAlias = true..color = color,
     );
     canvas.drawPath(
       roof,
-      Paint()..color = Colors.black45..style = PaintingStyle.stroke..strokeWidth = 1,
+      Paint()..isAntiAlias = true..color = Colors.black45..style = PaintingStyle.stroke..strokeWidth = 1,
     );
   }
 
