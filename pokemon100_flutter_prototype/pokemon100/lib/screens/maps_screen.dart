@@ -2851,6 +2851,34 @@ class _KantoLocalAreaPainter extends CustomPainter {
   final Color route;
   final Color label;
 
+  static const Map<String, (String, String)> _routeEndpoints = {
+    'Route 3': ('Pewter City', 'Mt. Moon'),
+    'Route 4': ('Mt. Moon', 'Cerulean City'),
+    'Route 5': ('Cerulean City', 'Saffron City'),
+    'Route 6': ('Saffron City', 'Vermilion City'),
+    'Route 7': ('Celadon City', 'Saffron City'),
+    'Route 8': ('Saffron City', 'Lavender Town'),
+    'Route 9': ('Cerulean City', 'Route 10'),
+    'Route 10': ('Route 9', 'Lavender Town'),
+    'Route 11': ('Vermilion City', 'Route 12'),
+    'Route 12': ('Lavender Town', 'Route 13'),
+    'Route 13': ('Route 12', 'Route 14'),
+    'Route 14': ('Route 13', 'Route 15'),
+    'Route 15': ('Route 14', 'Fuchsia City'),
+    'Route 16': ('Celadon City', 'Route 17'),
+    'Route 17': ('Route 16', 'Route 18'),
+    'Route 18': ('Route 17', 'Fuchsia City'),
+    'Route 19': ('Fuchsia City', 'Route 20'),
+    'Route 20': ('Route 19', 'Cinnabar Island'),
+    'Route 21': ('Pallet Town', 'Cinnabar Island'),
+    'Route 22': ('Viridian City', 'Pokémon League Reception Gate'),
+    'Route 23': ('Pokémon League Reception Gate', 'Indigo Plateau'),
+    'Route 24': ('Cerulean City', 'Route 25'),
+    'Route 25': ('Route 24', 'Sea Cottage'),
+    'Underground Path (Routes 5–6)': ('Route 5', 'Route 6'),
+    'Underground Path (Routes 7–8)': ('Route 7', 'Route 8'),
+  };
+
   const _KantoLocalAreaPainter({
     required this.location,
     required this.land,
@@ -3277,10 +3305,11 @@ class _KantoLocalAreaPainter extends CustomPainter {
       ]);
     } else if (location.startsWith('Route ') ||
         location.startsWith('Underground Path')) {
+      final endpoints = _routeEndpoints[location];
       markers.addAll([
-        ('Początek trasy', Offset(size.width * .15, size.height * .76)),
+        (endpoints?.$1 ?? 'Początek trasy', Offset(size.width * .15, size.height * .76)),
         ('Odcinek środkowy', Offset(size.width * .52, size.height * .48)),
-        ('Koniec trasy', Offset(size.width * .85, size.height * .22)),
+        (endpoints?.$2 ?? 'Koniec trasy', Offset(size.width * .85, size.height * .22)),
       ]);
     } else if (location.endsWith('Gym')) {
       markers.addAll([
