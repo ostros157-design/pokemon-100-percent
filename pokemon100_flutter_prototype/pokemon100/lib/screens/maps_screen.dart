@@ -2752,6 +2752,28 @@ class _KantoLocalAreaPainter extends CustomPainter {
         ..lineTo(size.width * .80, size.height * .58)
         ..moveTo(size.width * .50, size.height * .58)
         ..lineTo(size.width * .50, size.height * .80);
+    } else if ({
+      'Cerulean City',
+      'Vermilion City',
+      'Celadon City',
+      'Saffron City',
+      'Lavender Town',
+      'Fuchsia City',
+      'Cinnabar Island',
+      'Indigo Plateau',
+    }.contains(location)) {
+      drawZone(.10, .20, .25, .22);
+      drawZone(.39, .16, .24, .24);
+      drawZone(.67, .22, .23, .22);
+      drawZone(.22, .55, .25, .22);
+      drawZone(.55, .55, .25, .22);
+      path
+        ..moveTo(size.width * .22, size.height * .31)
+        ..lineTo(size.width * .50, size.height * .28)
+        ..lineTo(size.width * .79, size.height * .33)
+        ..moveTo(size.width * .50, size.height * .28)
+        ..lineTo(size.width * .35, size.height * .66)
+        ..lineTo(size.width * .68, size.height * .66);
     } else {
       path
         ..moveTo(size.width * .14, size.height * .72)
@@ -2868,6 +2890,61 @@ class _KantoLocalAreaPainter extends CustomPainter {
         ('Kabiny', Offset(size.width * .50, size.height * .58)),
         ('Kapitan', Offset(size.width * .50, size.height * .80)),
       ]);
+    } else if (location == 'Cerulean City') {
+      markers.addAll([
+        ('Pokémon Center', Offset(size.width * .22, size.height * .31)),
+        ('Cerulean Gym', Offset(size.width * .50, size.height * .28)),
+        ('Route 24', Offset(size.width * .79, size.height * .33)),
+        ('Route 5', Offset(size.width * .35, size.height * .66)),
+      ]);
+    } else if (location == 'Vermilion City') {
+      markers.addAll([
+        ('Port / S.S. Anne', Offset(size.width * .22, size.height * .31)),
+        ('Fan Club', Offset(size.width * .50, size.height * .28)),
+        ('Vermilion Gym', Offset(size.width * .79, size.height * .33)),
+        ('Route 11', Offset(size.width * .68, size.height * .66)),
+      ]);
+    } else if (location == 'Celadon City') {
+      markers.addAll([
+        ('Department Store', Offset(size.width * .22, size.height * .31)),
+        ('Game Corner', Offset(size.width * .50, size.height * .28)),
+        ('Celadon Gym', Offset(size.width * .79, size.height * .33)),
+        ('Route 16', Offset(size.width * .35, size.height * .66)),
+      ]);
+    } else if (location == 'Saffron City') {
+      markers.addAll([
+        ('Silph Co.', Offset(size.width * .22, size.height * .31)),
+        ('Saffron Gym', Offset(size.width * .50, size.height * .28)),
+        ('Fighting Dojo', Offset(size.width * .79, size.height * .33)),
+        ('Route 6 / 8', Offset(size.width * .68, size.height * .66)),
+      ]);
+    } else if (location == 'Lavender Town') {
+      markers.addAll([
+        ('Pokémon Tower', Offset(size.width * .22, size.height * .31)),
+        ('Pokémon Center', Offset(size.width * .50, size.height * .28)),
+        ('Route 8', Offset(size.width * .79, size.height * .33)),
+        ('Route 12', Offset(size.width * .68, size.height * .66)),
+      ]);
+    } else if (location == 'Fuchsia City') {
+      markers.addAll([
+        ('Safari Zone', Offset(size.width * .22, size.height * .31)),
+        ('Fuchsia Gym', Offset(size.width * .50, size.height * .28)),
+        ('GO Park', Offset(size.width * .79, size.height * .33)),
+        ('Route 15 / 18', Offset(size.width * .68, size.height * .66)),
+      ]);
+    } else if (location == 'Cinnabar Island') {
+      markers.addAll([
+        ('Pokémon Mansion', Offset(size.width * .22, size.height * .31)),
+        ('Cinnabar Lab', Offset(size.width * .50, size.height * .28)),
+        ('Cinnabar Gym', Offset(size.width * .79, size.height * .33)),
+        ('Route 21', Offset(size.width * .68, size.height * .66)),
+      ]);
+    } else if (location == 'Indigo Plateau') {
+      markers.addAll([
+        ('League Gate', Offset(size.width * .22, size.height * .31)),
+        ('Pokémon Center', Offset(size.width * .50, size.height * .28)),
+        ('Victory Road', Offset(size.width * .79, size.height * .33)),
+      ]);
     } else if (location == 'Pewter City') {
       markers.addAll([
         ('Miasto', Offset(size.width * .28, size.height * .46)),
@@ -2887,6 +2964,14 @@ class _KantoLocalAreaPainter extends CustomPainter {
           marker.$1.contains('Center') ||
           marker.$1.contains('Mart') ||
           marker.$1.contains('Gym') ||
+          marker.$1.contains('Department') ||
+          marker.$1.contains('Game Corner') ||
+          marker.$1.contains('Silph') ||
+          marker.$1.contains('Dojo') ||
+          marker.$1.contains('Mansion') ||
+          marker.$1.contains('Lab') ||
+          marker.$1.contains('Tower') ||
+          marker.$1.contains('Center') ||
           marker.$1 == 'Miasto';
       if (isBuilding) {
         final rect = Rect.fromCenter(center: point, width: 18, height: 14);
