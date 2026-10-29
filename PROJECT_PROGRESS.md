@@ -1,3 +1,11 @@
+### Mapy — rozszerzenie Kanto o wnętrza i punkty specjalne (2026-10-29)
+
+- Rozszerzono indeks oraz rysowaną mapę z 65 do 74 lokacji. Dodano Player's House, Professor Oak's Laboratory, Celadon Department Store, Celadon Game Corner, Celadon Condominiums, Cinnabar Lab, Fighting Dojo, GO Park i Sea Cottage.
+- Dodano ich połączenia do właściwych lokacji nadrzędnych; Sea Cottage jest powiązany z Route 25, a nie bezpośrednio z Cerulean City.
+- Weryfikacja statyczna: 74/74 lokacje mają węzeł mapy; 83/83 połączenia zgadzają się między indeksem a rysunkiem; brak nieistniejących celów połączeń i brakujące identyfikatory źródeł zostały wyczyszczone.
+- Pliki: `lets_go_kanto_audit.json`, `maps_screen.dart`. Commity: `340e75c4`, `4a69fe86`, `ad747e84`.
+- To nadal mapa schematyczna. Dodane budynki są osobnymi wybieralnymi punktami, ale ich wnętrza, piętra, trenerzy i przedmioty nie zostały jeszcze odtworzone na dokładnych planach. Nie uruchomiono kompilacji APK, testów ani `flutter analyze`.
+
 ### Mapy — spotkania w jaskiniach i ważnych lokacjach Kanto (2026-10-29)
 
 - Rozszerzono dane offline Let’s Go Pikachu/Eevee dla Cerulean Cave, Power Plant, Pokémon Tower, Pokémon Mansion, Seafoam Islands i Victory Road.
