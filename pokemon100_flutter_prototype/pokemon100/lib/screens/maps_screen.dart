@@ -2363,6 +2363,121 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
       'Victory Road': 'Droga prowadząca do Ligi.',
       'Pokémon Center': 'Punkt przygotowania drużyny przed Ligą.',
     },
+    "Player's House": {
+      'Pokój gracza': 'Początkowy pokój gracza, pokazany symbolicznie.',
+      'Parter': 'Schematyczny obszar domu; układ mebli nie jest dokładną kopią gry.',
+      'Wyjście': 'Wyjście prowadzące do Pallet Town.',
+    },
+    "Professor Oak's Laboratory": {
+      'Laboratorium': 'Główna sala laboratorium profesora Oaka.',
+      'Stanowisko Oaka': 'Obszar rozmowy fabularnej; bez dokładnych współrzędnych.',
+      'Wyjście do Pallet Town': 'Wyjście z laboratorium na zewnątrz.',
+    },
+    'Celadon Department Store': {
+      'Parter': 'Strefa wejścia do domu towarowego.',
+      'Piętra sklepowe': 'Uproszczony układ poziomów; dokładne rozmieszczenie stoisk nie jest odwzorowane.',
+      'Dach / automat': 'Strefa dachu i automatu z napojami pokazana poglądowo.',
+    },
+    'Celadon Game Corner': {
+      'Sala automatów': 'Główna sala salonu gier.',
+      'Posterunek Rocket': 'Ukryte wejście do Team Rocket Hideout jest związane z plakatem; schemat nie podaje dokładnej kratki.',
+      'Wyjście': 'Wyjście do Celadon City.',
+    },
+    'Celadon Condominiums': {
+      'Wejście': 'Wejście do budynku mieszkalnego.',
+      'Piętra': 'Poglądowe strefy budynku; bez dokładnego planu pomieszczeń.',
+      'Pokój twórcy gry': 'W budynku znajduje się znany pokój twórcy gry; położenie jest orientacyjne.',
+    },
+    'Cinnabar Lab': {
+      'Recepcja': 'Strefa wejściowa laboratorium.',
+      'Laboratoria badawcze': 'Uproszczone strefy pomieszczeń badawczych.',
+      'Wyjście': 'Wyjście na Cinnabar Island.',
+    },
+    'Fighting Dojo': {
+      'Sala treningowa': 'Główna sala dojo.',
+      'Trenerzy': 'Obszar walk treningowych; nie oznaczono dokładnych pozycji postaci.',
+      'Nagroda': 'Po zwycięstwie można wybrać nagrodę Pokémon; schemat nie wskazuje dokładnej kratki.',
+    },
+    'GO Park': {
+      'Recepcja': 'Wejście do GO Park.',
+      'Parki Pokémonów': 'Obszary parku przedstawione symbolicznie.',
+      'Wyjście': 'Wyjście do Fuchsia City.',
+    },
+    'Sea Cottage': {
+      'Dom Billa': 'Dom Billa przy Route 25.',
+      'Komputer Billa': 'Obszar wydarzenia z teleportacją Billa; pozycja jest poglądowa.',
+      'Wyjście na Route 25': 'Droga powrotna w stronę Cerulean City.',
+    },
+    "Bill's House": {
+      'Dom Billa': 'Dom Billa na Route 25, pokazany jako schemat wnętrza.',
+      'Terminal': 'Obszar wydarzenia fabularnego; nie oznacza dokładnej kratki.',
+      'Wyjście': 'Wyjście w stronę Route 25.',
+    },
+    'Pewter Museum of Science': {
+      'Sala wystawowa': 'Poglądowa sala wystawowa muzeum.',
+      'Eksponaty': 'Obszar ekspozycji; nie oznaczono dokładnych pozycji przedmiotów.',
+      'Wyjście': 'Wyjście do Pewter City.',
+    },
+    'Pokémon Fan Club': {
+      'Sala klubu': 'Główna sala spotkań klubu.',
+      'Przewodniczący': 'Obszar rozmowy i nagrody; bez dokładnej pozycji postaci.',
+      'Wyjście': 'Wyjście do Vermilion City.',
+    },
+    'Pokémon Day Care': {
+      'Recepcja': 'Miejsce rozmowy z opiekunem Pokémonów.',
+      'Ogród': 'Poglądowy obszar zewnętrzny.',
+      'Wyjście': 'Wyjście na trasę.',
+    },
+    'Team Rocket Hideout': {
+      'Wejście w Game Corner': 'Kierunek wejścia ukrytego za plakatem w Celadon Game Corner.',
+      'Poziomy podziemne': 'Uproszczone strefy podziemnego kompleksu.',
+      'Biuro Giovanniego': 'Obszar walki z Giovannim; bez dokładnych współrzędnych.',
+    },
+    'Silph Co.': {
+      'Hol wejściowy': 'Główna strefa wejściowa budynku.',
+      'Piętra biurowe': 'Schematyczne piętra biurowe; układ teleportów i trenerów wymaga osobnej weryfikacji.',
+      'Gabinet prezesa': 'Obszar końcowego wydarzenia w budynku.',
+    },
+    'Viridian Gym': {
+      'Sala Gymu': 'Poglądowy plan sali Gymu.',
+      'Trenerzy': 'Strefa walk trenerów; bez dokładnych pozycji.',
+      'Lider Gymu': 'Obszar walki z Giovannim.',
+    },
+    'Pewter Gym': {
+      'Sala Gymu': 'Poglądowy plan sali Gymu.',
+      'Trenerzy': 'Strefa walki przed liderem.',
+      'Brock': 'Obszar walki z Brockiem; schemat nie odwzorowuje dokładnych kafelków.',
+    },
+    'Cerulean Gym': {
+      'Sala Gymu': 'Poglądowy plan sali Gymu.',
+      'Basen': 'Motyw basenu pokazany dekoracyjnie.',
+      'Misty': 'Obszar walki z Misty.',
+    },
+    'Vermilion Gym': {
+      'Sala Gymu': 'Poglądowy plan sali Gymu.',
+      'Przełączniki': 'Zagadkę przełączników należy traktować jako opis, nie dokładną mapę koszy.',
+      'Lt. Surge': 'Obszar walki z porucznikiem Surge’em.',
+    },
+    'Celadon Gym': {
+      'Sala Gymu': 'Poglądowy plan sali Gymu.',
+      'Roślinność': 'Motyw roślinny sali przedstawiony dekoracyjnie.',
+      'Erika': 'Obszar walki z Eriką.',
+    },
+    'Saffron Gym': {
+      'Sala Gymu': 'Poglądowy plan sali Gymu.',
+      'Teleporty': 'Strefa zagadki teleportów; dokładne połączenia nie są tu odwzorowane.',
+      'Sabrina': 'Obszar walki z Sabriną.',
+    },
+    'Fuchsia Gym': {
+      'Sala Gymu': 'Poglądowy plan sali Gymu.',
+      'Niewidzialne ściany': 'Motyw zagadki sali pokazany symbolicznie.',
+      'Koga': 'Obszar walki z Kogą.',
+    },
+    'Cinnabar Gym': {
+      'Sala Gymu': 'Poglądowy plan sali Gymu.',
+      'Pytania quizowe': 'Obszar automatów z pytaniami; bez dokładnych pozycji.',
+      'Blaine': 'Obszar walki z Blaine’em.',
+    },
   };
 
   @override
