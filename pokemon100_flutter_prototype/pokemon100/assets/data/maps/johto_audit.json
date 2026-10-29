@@ -33,7 +33,8 @@
       "name": "New Bark Town",
       "kind": "town",
       "connectsTo": [
-        "route_29"
+        "route_29",
+        "route_27"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -48,6 +49,7 @@
       "name": "Route 29",
       "kind": "route",
       "connectsTo": [
+        "route_46",
         "new_bark_town",
         "cherrygrove_city"
       ],
@@ -80,8 +82,8 @@
       "name": "Route 30",
       "kind": "route",
       "connectsTo": [
-        "cherrygrove_city",
-        "route_31"
+        "route_31",
+        "cherrygrove_city"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -96,6 +98,7 @@
       "name": "Route 31",
       "kind": "route",
       "connectsTo": [
+        "dark_cave",
         "route_30",
         "violet_city"
       ],
@@ -114,6 +117,7 @@
       "connectsTo": [
         "route_31",
         "route_32",
+        "route_36",
         "sprout_tower"
       ],
       "localMapAsset": null,
@@ -145,8 +149,8 @@
       "kind": "route",
       "connectsTo": [
         "violet_city",
-        "union_cave",
-        "route_33"
+        "ruins_of_alph",
+        "union_cave"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -241,8 +245,8 @@
       "name": "Route 34",
       "kind": "route",
       "connectsTo": [
-        "ilex_forest",
-        "goldenrod_city"
+        "goldenrod_city",
+        "ilex_forest"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -275,9 +279,8 @@
       "name": "Route 35",
       "kind": "route",
       "connectsTo": [
-        "goldenrod_city",
         "national_park",
-        "route_36"
+        "goldenrod_city"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -308,9 +311,10 @@
       "name": "Route 36",
       "kind": "route",
       "connectsTo": [
-        "route_35",
+        "route_37",
         "violet_city",
-        "route_37"
+        "national_park",
+        "ruins_of_alph"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -325,8 +329,8 @@
       "name": "Route 37",
       "kind": "route",
       "connectsTo": [
-        "route_36",
-        "ecruteak_city"
+        "ecruteak_city",
+        "route_36"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -343,6 +347,7 @@
       "connectsTo": [
         "route_37",
         "route_38",
+        "route_42",
         "burned_tower",
         "bell_tower"
       ],
@@ -471,8 +476,8 @@
       "kind": "water_route",
       "connectsTo": [
         "route_40",
-        "whirl_islands",
-        "cianwood_city"
+        "cianwood_city",
+        "whirl_islands"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -502,7 +507,8 @@
       "name": "Cianwood City",
       "kind": "town",
       "connectsTo": [
-        "route_41"
+        "route_41",
+        "cliff_edge_gate"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -517,9 +523,9 @@
       "name": "Route 42",
       "kind": "route",
       "connectsTo": [
-        "ecruteak_city",
         "mt_mortar",
-        "mahogany_town"
+        "mahogany_town",
+        "ecruteak_city"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -551,8 +557,9 @@
       "connectsTo": [
         "route_42",
         "route_43",
+        "route_44",
         "lake_of_rage",
-        "route_44"
+        "team_rocket_hq"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -567,8 +574,8 @@
       "name": "Route 43",
       "kind": "route",
       "connectsTo": [
-        "mahogany_town",
-        "lake_of_rage"
+        "lake_of_rage",
+        "mahogany_town"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -598,8 +605,8 @@
       "name": "Route 44",
       "kind": "route",
       "connectsTo": [
-        "mahogany_town",
-        "ice_path"
+        "ice_path",
+        "mahogany_town"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -679,7 +686,8 @@
       "kind": "route",
       "connectsTo": [
         "route_45",
-        "route_29"
+        "route_29",
+        "dark_cave"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -772,6 +780,7 @@
       "kind": "route",
       "connectsTo": [
         "route_48",
+        "cliff_edge_gate",
         "cliff_cave"
       ],
       "localMapAsset": null,
@@ -787,8 +796,9 @@
       "name": "Route 48",
       "kind": "route",
       "connectsTo": [
-        "route_47",
-        "safari_zone_gate"
+        "safari_zone",
+        "safari_zone_gate",
+        "route_47"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -896,8 +906,9 @@
       "name": "Route 26",
       "kind": "route",
       "connectsTo": [
-        "tohjo_falls",
-        "route_27"
+        "pokemon_league_reception_gate",
+        "route_27",
+        "tohjo_falls"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -913,8 +924,8 @@
       "kind": "route",
       "connectsTo": [
         "route_26",
-        "tohjo_falls",
-        "route_28"
+        "new_bark_town",
+        "tohjo_falls"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -929,9 +940,8 @@
       "name": "Route 28",
       "kind": "route",
       "connectsTo": [
-        "route_27",
-        "mt_silver",
-        "indigo_plateau"
+        "pokemon_league_reception_gate",
+        "mt_silver"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -972,6 +982,37 @@
         "bulbapedia-route-list"
       ],
       "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "cliff_edge_gate",
+      "name": "Cliff Edge Gate",
+      "kind": "gate",
+      "connectsTo": [
+        "cianwood_city",
+        "route_47"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-route-list",
+        "bulbapedia-johto-region"
+      ],
+      "dataStatus": "connection_verified_details_pending"
+    },
+    {
+      "id": "pokemon_league_reception_gate",
+      "name": "Pokémon League Reception Gate",
+      "kind": "gate",
+      "connectsTo": [
+        "route_26",
+        "route_28"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "connection_verified_details_pending"
     }
   ]
 }
