@@ -8285,7 +8285,8 @@
         ]
       },
       "sourceIds": [
-        "bulbapedia-part12"
+        "bulbapedia-part12",
+        "bulbapedia-part11"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
