@@ -1,3 +1,9 @@
+### Mapy — alias Safari Zone / GO Park w Let's Go (2026-10-29)
+
+- W indeksie Let’s Go Safari Zone jest teraz aliasem GO Park, a nie osobnym fizycznym punktem. Fuchsia City ma jedno połączenie do GO Park; mapa pokazuje 74 fizyczne punkty, 76 nazw i 82 połączenia.
+- Dodano alias do wyszukiwania i zaznaczania markeru GO Park. Lokalny schemat obu nazw korzysta z jednego planu GO Park / Playful Park, bez błędnego Secret House z klasycznej Safari Zone.
+- Zmieniono opis Fuchsia City i panel Safari Zone, aby wyjaśnić różnicę wersji. Commity: `771908b` (mapa i graf), `ddf2b03` (alias), `02e2d52` (opisy i lokalny schemat). Bez testów, analyzer ani APK.
+
 ### Mapy — jedna fizyczna lokacja dla Bill's House / Sea Cottage (2026-10-29)
 
 - Usunięto drugi, mylący marker Bill's House. W Let's Go jest to ten sam domek co Sea Cottage, więc mapa pokazuje teraz jeden fizyczny punkt, a nazwa Bill's House pozostaje wyszukiwalnym aliasem w indeksie.
