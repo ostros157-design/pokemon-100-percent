@@ -734,6 +734,35 @@ class _MapsScreenState extends State<MapsScreen> {
                   ),
                 ),
                 const SizedBox(height: 12),
+                if (_mapIndexRegionName == 'Kanto' && !_isLetsGoKanto) ...[
+                  Card(
+                    child: Padding(
+                      padding: const EdgeInsets.all(12),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Mapa offline Kanto — schemat orientacyjny',
+                            style: Theme.of(context).textTheme.titleMedium,
+                          ),
+                          const SizedBox(height: 4),
+                          const Text(
+                            'Schemat pokazuje ogólny układ Kanto. Nie jest mapą w skali i nie oznacza dokładnych pozycji przedmiotów, trenerów ani Pokémonów dla wybranej wersji.',
+                          ),
+                          const SizedBox(height: 8),
+                          _KantoRegionMap(
+                            selectedLocation: _searchQuery,
+                            onLocationSelected: (location) {
+                              _locationSearchController.text = location;
+                              setState(() => _searchQuery = location);
+                            },
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 12),
+                ],
                 TextField(
                   decoration: const InputDecoration(
                     labelText: 'Szukaj lokacji',
