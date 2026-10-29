@@ -5634,7 +5634,17 @@
           "Dragonair"
         ]
       },
-      "encounterStatus": "text_verified"
+      "encounterStatus": "text_verified",
+      "trainers": [
+        "Route 10 (północ) — Team Rocket Grunt: Raticate Lv. 22.",
+        "Route 10 (północ) — Camper Vance: Eevee Lv. 22, Psyduck Lv. 22.",
+        "Route 10 (północ) — Coach Trainer Tasha: Poliwhirl Lv. 25, Primeape Lv. 26; nagroda TM13 (Brick Break).",
+        "Route 10 (południe) — Hiker Clark: Geodude Lv. 25, Graveler Lv. 25.",
+        "Route 10 (południe) — Picnicker Carol: Pikachu Lv. 24, Pidgeotto Lv. 24.",
+        "Route 10 (południe) — Camper Trent: Krabby Lv. 24, Sandslash Lv. 24.",
+        "Route 10 (południe) — Poké Maniac Damian: Charmeleon Lv. 25.",
+        "Post-game: Poké Maniac Mark w pobliżu Power Plant jest Master Trainerem; nie należy do głównego zestawu trenerów trasy."
+      ]
     },
     {
       "id": "rock_tunnel",
@@ -6406,12 +6416,14 @@
         ]
       },
       "items": [
-        "5 Great Balls",
-        "Super Potion",
-        "X Defense",
-        "Lure",
-        "Super Repel",
-        "Revive (ukryty)"
+        "Pikachu Candy ×5 (Let's Go Pikachu) / Eevee Candy ×5 (Let's Go Eevee) — nagroda od Coach Trainer Will.",
+        "Super Potion — południowa strona trasy, między dwiema kępami trawy.",
+        "X Defense — środek trasy, między dwiema kępami trawy.",
+        "Lure — północna strona, na północny wschód od Gentleman Wilco.",
+        "Super Repel — północno-wschodni koniec ścieżki.",
+        "Revive — ukryty na skale na północ od bramy (przedmiot dzienny).",
+        "Great Ball ×5 — na południe od bramy, przed ogrodzeniem.",
+        "Razz Berry / Silver Razz Berry / Golden Razz Berry — krzak w północno-zachodnim narożniku; partner Pokémon może znaleźć różne warianty."
       ],
       "features": [
         "Route 11 Gate"
@@ -6458,7 +6470,18 @@
           "Seadra"
         ]
       },
-      "encounterStatus": "text_verified"
+      "encounterStatus": "text_verified",
+      "trainers": [
+        "Coach Trainer Will — Rattata Lv. 21; nagroda zależna od wersji: 5 Pikachu Candies w Let's Go Pikachu lub 5 Eevee Candies w Let's Go Eevee.",
+        "Sailor Dirk — Poliwag Lv. 18, Machop Lv. 18.",
+        "Youngster Eddie — Nidorino Lv. 16.",
+        "Gentleman Wilco — Vulpix Lv. 18.",
+        "Engineer Bernie — Magnemite Lv. 18, Voltorb Lv. 18.",
+        "Engineer Braxton — Voltorb Lv. 18.",
+        "Gamer Hugo — Diglett Lv. 26.",
+        "Sailor Yasu — Slowpoke Lv. 18.",
+        "Lass Tomoe — Jigglypuff Lv. 16, Nidorina Lv. 16."
+      ]
     },
     {
       "id": "digletts_cave",
@@ -6571,14 +6594,18 @@
       "coordinateStatus": "unverified",
       "notes": "Długa trasa wędkarska; północny odcinek za bramą nazywany jest Silence Bridge. Snorlax blokuje przejście przed wydarzeniem fabularnym.",
       "items": [
-        "TM24",
-        "Water Stone",
-        "3 Ultra Balls",
-        "Lure",
-        "Repel",
-        "Awakening",
-        "Max Lure",
-        "5 Silver Pinap Berries (ukryte)"
+        "TM50 (Roost) — od dziewczyny na drugim piętrze bramy Lavender Town.",
+        "TM24 (X-Scissor) — na południowy wschód od bramy Lavender Town; wymaga Sea Skim.",
+        "Lure — na południowy zachód od bramy Lavender, przy Fisherman Chip.",
+        "Repel — na platformie wysuniętej na wschód od ścieżki, na północ od Fishing Area.",
+        "Ultra Ball ×3 — na północny wschód od ścieżki do Route 11, przy Ace Trainer Zach.",
+        "Silver Pinap Berry ×5 — ukryte na płocie na wschód od Route 11, pod dużym drzewem.",
+        "TM32 (Dazzling Gleam) — od Mr. Dazzlinga po przypomnieniu mu jego imienia.",
+        "Water Stone — na południowy zachód od domu Mr. Dazzlinga; wymaga Chop Down.",
+        "Awakening — na południowy wschód od domu Mr. Dazzlinga, przy Camper Justin.",
+        "TM59 (Dream Eater) — nagroda od Coach Trainer Priya.",
+        "Max Lure — na południowym końcu trasy, w kępie wysokiej trawy; wymaga Chop Down.",
+        "Pearl / Big Pearl / Heart Scale — losowe znaleziska chodzącego Pokémona typu Water w wodzie na wschód od domu Mr. Dazzlinga."
       ],
       "notablePokemon": [
         "Snorlax Lv. 34"
@@ -7009,7 +7036,18 @@
           "Seadra"
         ]
       },
-      "encounterStatus": "text_verified"
+      "encounterStatus": "text_verified",
+      "trainers": [
+        "Fisherman Ned — Staryu Lv. 27.",
+        "Fisherman Chip — Poliwhirl Lv. 27.",
+        "Fisherman Hank — Magikarp Lv. 27, Seaking Lv. 27, Poliwag Lv. 27.",
+        "Fisherman Elliot — Gyarados Lv. 27, Magikarp Lv. 27.",
+        "Ace Trainer Zach — Tangela Lv. 28, Onix Lv. 29.",
+        "Fisherman Andrew — Tentacool Lv. 36, Kingler Lv. 36.",
+        "Rocker Luca — Electabuzz Lv. 36; wymaga Chop Down.",
+        "Camper Justin — Nidoran♂ Lv. 35, Nidorino Lv. 35.",
+        "Coach Trainer Priya — Butterfree Lv. 38, Clefable Lv. 39."
+      ]
     },
     {
       "id": "route_13",
