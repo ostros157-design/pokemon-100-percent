@@ -900,3 +900,10 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Usunięto trzy niepotwierdzone placeholdery `Distant Rock`, `Socarrat Trail Sight` i `Tropical Biome`; ostatni nie pasował do rzeczywistej czwórki biomów Terarium, gdzie używamy `Savanna Biome`.
 - Po korekcie Paldea ma 100 rekordów, w tym wszystkie 10 nazwanych Ten Sights i cztery właściwe biomy Terarium. Nie dodajemy lokacji tylko po to, by sztucznie zwiększyć licznik.
 - Commit: `7c41d93`.
+
+
+### Mapy — rozdzielenie Kanto od tras Johto (2026-10-29)
+
+- Usunięto z indeksu Kanto rekordy Route 26–28, Tohjo Falls, Mt. Silver i New Bark Town, które należą do postgame Johto, a nie do mapy Kanto w Red/Blue/Yellow/FireRed/LeafGreen.
+- Usunięto również odwołania do tych rekordów z Pokémon League Reception Gate. Indeks Kanto ma teraz 65 lokacji i nie miesza dwóch regionów.
+- Commit: `794c9eb`.
