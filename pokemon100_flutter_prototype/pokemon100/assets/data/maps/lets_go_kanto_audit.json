@@ -2872,6 +2872,158 @@
         "bulbapedia-part14"
       ],
       "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "pewter_gym",
+      "name": "Pewter Gym",
+      "kind": "gym",
+      "connectsTo": [
+        "pewter_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "gymLeader": {
+        "name": "Brock"
+      },
+      "notes": "Pierwsza sala fabularna. W Let's Go Brock używa Geodude Lv. 11 i Onix Lv. 12.",
+      "sourceIds": [
+        "routepedia-pewter-pikachu"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "cerulean_gym",
+      "name": "Cerulean Gym",
+      "kind": "gym",
+      "connectsTo": [
+        "cerulean_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "gymLeader": {
+        "name": "Misty"
+      },
+      "sourceIds": [
+        "routepedia-cerulean-pikachu"
+      ],
+      "dataStatus": "leader_verified_team_needs_review"
+    },
+    {
+      "id": "vermilion_gym",
+      "name": "Vermilion Gym",
+      "kind": "gym",
+      "connectsTo": [
+        "vermilion_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "gymLeader": {
+        "name": "Lt. Surge",
+        "team": [
+          {
+            "name": "Voltorb",
+            "level": 25
+          },
+          {
+            "name": "Magnemite",
+            "level": 25
+          },
+          {
+            "name": "Raichu",
+            "level": 26
+          }
+        ]
+      },
+      "sourceIds": [
+        "routepedia-vermilion-pikachu"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "celadon_gym",
+      "name": "Celadon Gym",
+      "kind": "gym",
+      "connectsTo": [
+        "celadon_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "gymLeader": {
+        "name": "Erika"
+      },
+      "sourceIds": [
+        "routepedia-celadon-pikachu"
+      ],
+      "dataStatus": "leader_verified_team_needs_review"
+    },
+    {
+      "id": "saffron_gym",
+      "name": "Saffron Gym",
+      "kind": "gym",
+      "connectsTo": [
+        "saffron_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "gymLeader": {
+        "name": "Sabrina"
+      },
+      "sourceIds": [
+        "routepedia-saffron-pikachu"
+      ],
+      "dataStatus": "leader_verified_team_needs_review"
+    },
+    {
+      "id": "fuchsia_gym",
+      "name": "Fuchsia Gym",
+      "kind": "gym",
+      "connectsTo": [
+        "fuchsia_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "gymLeader": {
+        "name": "Koga",
+        "team": [
+          {
+            "name": "Weezing",
+            "level": 43
+          },
+          {
+            "name": "Muk",
+            "level": 43
+          },
+          {
+            "name": "Golbat",
+            "level": 43
+          },
+          {
+            "name": "Venomoth",
+            "level": 44
+          }
+        ]
+      },
+      "sourceIds": [
+        "routepedia-fuchsia-pikachu"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "cinnabar_gym",
+      "name": "Cinnabar Gym",
+      "kind": "gym",
+      "connectsTo": [
+        "cinnabar_island"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "gymLeader": {
+        "name": "Blaine"
+      },
+      "sourceIds": [
+        "routepedia-cinnabar-pikachu"
+      ],
+      "dataStatus": "leader_verified_team_needs_review"
     }
   ]
 }
