@@ -799,3 +799,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Zaktualizowano opis map, aby nie sugerował, że wszystkie regiony mają już gotowe mapy graficzne.
 - Commit UI: `1fcd9a3`; Hisui: `818c9bf`; Paldea: `a31138a`, `d0db878`.
 - Ostatni audyt: wszystkie 11 indeksów parsuje się, wszystkie są w `pubspec.yaml` i są ładowane przez `MapsScreen`; brak duplikatów ID, brak niedziałających połączeń i brak odwołań do nieistniejących źródeł. Paldea jest otwartym światem, więc nie wymuszono fałszywej sieci tras.
+
+
+### Mapy — połączenia pobocznych lokacji i DLC (2026-10-29)
+
+- Rozbudowano połączenia pobocznych lokacji: Hoenn (ruiny, hideouty i Battle Frontier/Resort), Sinnoh (kopalnia, Stary Zamek, Great Marsh, Spear Pillar i Battle Zone), Unova (mosty, jaskinie, ruiny i lokacje B2W2), Kalos (Friend Safari, Battle Maison, Team Flare HQ i jaskinie), Alola (Poni, Ultra Space, Aether Paradise) oraz Galar (Wild Area, Galar Mine, Glimwood Tangle i DLC).
+- Uzupełniono parent-region i powiązania dla pozostałych znanych lokacji Hisui.
+- Commity: `a47b69c`, `482eae6`, `bccce66`, `66df0f2`, `57b2dfd`, `082ab96`, `5c28600`, `6386e02`.
+- Część połączeń jest oznaczona jako wymagająca audytu wariantu gry/DLC. Nadal nie ma zweryfikowanych współrzędnych ani pełnych pinów dla każdego obszaru.
