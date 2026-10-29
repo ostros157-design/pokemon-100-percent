@@ -35,6 +35,10 @@ pokemon: [
 'Pidgey',
 'Rattata',
 ],
+encounterRatesPercent: {
+'Pidgey': 40,
+'Rattata': 30,
+},
 ),
 GuideStep(
 title: 'Dotrzyj do Viridian City',
@@ -93,6 +97,11 @@ pokemon: [
 'Metapod',
 'Pikachu',
 ],
+encounterRatesPercent: {
+'Caterpie': 25,
+'Metapod': 10,
+'Pikachu': 5,
+},
 ),
 GuideStep(
 title: 'Dotrzyj do Pewter City',
