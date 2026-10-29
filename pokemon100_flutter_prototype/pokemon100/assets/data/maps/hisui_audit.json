@@ -21,6 +21,11 @@
       "id": "bulbapedia-hisui-subareas",
       "url": "https://bulbapedia.bulbagarden.net/wiki/Hisui",
       "scope": "Five Hisui subregions, base camps, settlements and named landmarks"
+    },
+    {
+      "id": "serebii-hisui-maps",
+      "url": "https://www.serebii.net/pokearth/hisui/",
+      "scope": "Interactive Hisui maps and Pokémon spawn areas"
     }
   ],
   "locations": [
