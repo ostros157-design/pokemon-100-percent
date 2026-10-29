@@ -1054,7 +1054,7 @@ class _MapsScreenState extends State<MapsScreen> {
                                       ),
                                       const SizedBox(height: 4),
                                       const Text(
-                                        '• Rysunki lasów, gór, budynków i jaskiń są dekoracyjną warstwą wektorową; nie oznaczają dokładnych kafelków z gry.\n• Po wybraniu węzła mapa pokazuje dane dostępne dla tej lokacji. Szczegółowe plany lokalne są na razie przygotowane tylko dla części miejsc.\n• Pozycje węzłów są poglądowe. Dokładne pinezki przedmiotów, trenerów i Pokémonów wymagają osobnej weryfikacji.',
+                                        '• Rysunki lasów, gór, budynków i jaskiń są dekoracyjną warstwą wektorową; nie oznaczają dokładnych kafelków z gry.\n• Wszystkie 74 lokacje mają własny schemat lokalny z nazwanymi strefami. Schematy są poglądowe, a nie wierne planom pięter z gry.\n• Pozycje węzłów są poglądowe. Dokładne pinezki przedmiotów, trenerów i Pokémonów wymagają osobnej weryfikacji.',
                                       ),
                                       const SizedBox(height: 12),
                                       _KantoRegionMap(
