@@ -24,6 +24,7 @@ class MapsScreen extends StatefulWidget {
 class _MapsScreenState extends State<MapsScreen> {
   int _generation = 1;
   String? _selectedGameId;
+  String? _selectedMapRegionOverride;
   bool _loading = true;
   String _searchQuery = '';
   final Set<String> _completedStepKeys = <String>{};
@@ -92,7 +93,7 @@ class _MapsScreenState extends State<MapsScreen> {
     });
   }
 
-  String get _mapIndexRegionName {
+  String get _defaultMapIndexRegionName {
     final gameId = _selectedGameId;
     if (_isLetsGoKanto) return "Kanto (Let's Go)";
     if (gameId == 'legends_arceus') return 'Hisui';
@@ -109,6 +110,16 @@ class _MapsScreenState extends State<MapsScreen> {
     if ({'sword', 'shield'}.contains(gameId)) return 'Galar';
     if ({'scarlet', 'violet'}.contains(gameId)) return 'Paldea + DLC';
     return _regionName;
+  }
+
+  String get _mapIndexRegionName =>
+      _selectedMapRegionOverride ?? _defaultMapIndexRegionName;
+
+  List<String> get _availableMapRegionsForSelectedGame {
+    if ({'gold', 'silver', 'crystal'}.contains(_selectedGameId)) {
+      return const <String>['Johto', 'Kanto'];
+    }
+    return <String>[_defaultMapIndexRegionName];
   }
 
   Map<String, dynamic>? get _activeMapIndex =>
@@ -239,7 +250,10 @@ class _MapsScreenState extends State<MapsScreen> {
     final preferences = await SharedPreferences.getInstance();
     await preferences.setString('selected_pokemon_game_id', gameId);
     if (!mounted) return;
-    setState(() => _selectedGameId = gameId);
+    setState(() {
+      _selectedGameId = gameId;
+      _selectedMapRegionOverride = null;
+    });
     await _loadCompletedSteps();
   }
 
@@ -342,6 +356,34 @@ class _MapsScreenState extends State<MapsScreen> {
                       .toList(),
                   onChanged: _selectGame,
                 ),
+                if (_availableMapRegionsForSelectedGame.length > 1) ...[
+                  const SizedBox(height: 12),
+                  DropdownButtonFormField<String>(
+                    value: _availableMapRegionsForSelectedGame.contains(_mapIndexRegionName)
+                        ? _mapIndexRegionName
+                        : _defaultMapIndexRegionName,
+                    isExpanded: true,
+                    decoration: const InputDecoration(
+                      labelText: 'Region do wyświetlenia',
+                      border: OutlineInputBorder(),
+                    ),
+                    items: _availableMapRegionsForSelectedGame
+                        .map((region) => DropdownMenuItem<String>(
+                              value: region,
+                              child: Text(region),
+                            ))
+                        .toList(),
+                    onChanged: (region) {
+                      if (region == null) return;
+                      setState(() {
+                        _selectedMapRegionOverride =
+                            region == _defaultMapIndexRegionName ? null : region;
+                        _searchQuery = '';
+                        _locationSearchController.clear();
+                      });
+                    },
+                  ),
+                ],
                 const SizedBox(height: 16),
                 Card(
                   child: Padding(
