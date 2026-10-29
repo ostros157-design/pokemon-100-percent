@@ -607,6 +607,16 @@
       "id": "mewmaps-lets-go-region",
       "url": "https://www.mewmaps.org/lets-go-pikachu-eevee",
       "scope": "Reference index for regional and dungeon map subjects; used for coverage checklist, not copied artwork or pixel coordinates"
+    },
+    {
+      "id": "bulbagarden-lgpe-region-map-reference",
+      "url": "https://archives.bulbagarden.net/wiki/File:PE_Kanto_Map.png",
+      "scope": "Visual reference for Kanto region coverage and broad relative layout; the image is not bundled or copied into the app."
+    },
+    {
+      "id": "bulbagarden-lgpe-location-map-index",
+      "url": "https://archives.bulbagarden.net/wiki/Category:Let's_Go,_Pikachu!_and_Let's_Go,_Eevee!_maps",
+      "scope": "Coverage checklist for route, town, building, and dungeon map subjects; screenshots are references only, not app assets."
     }
   ],
   "locations": [
