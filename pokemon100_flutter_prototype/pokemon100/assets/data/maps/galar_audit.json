@@ -798,7 +798,7 @@
     {
       "id": "white_hill_station",
       "name": "White Hill Station",
-      "kind": "station",
+      "kind": "train_station",
       "connectsTo": [
         "route_10",
         "hammerlocke",
@@ -809,9 +809,12 @@
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-galar",
-        "pokemony-galar"
+        "pokemony-galar",
+        "bulbapedia-wild-area-station",
+        "bulbapedia-transportation"
       ],
-      "dataStatus": "connection_indexed_version_and_dlc_audit_pending"
+      "dataStatus": "station_and_transit_access_source_verified_exact_pin_pending",
+      "notes": "Stacja w sieci kolejowej Galar; dostępność zależy od postępu fabuły, a stacje DLC wymagają odpowiedniego dodatku."
     },
     {
       "id": "professor_magnolia_house",
