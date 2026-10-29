@@ -4226,7 +4226,7 @@ class _KantoMapPainter extends CustomPainter {
         ..style = PaintingStyle.stroke
         ..strokeWidth = 2,
     );
-    final compass = p(.91, .12);
+    final compass = p(.93, .085);
     canvas.drawCircle(
       compass,
       size.width * .035,
