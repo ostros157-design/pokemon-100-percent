@@ -525,6 +525,14 @@ class _MapsScreenState extends State<MapsScreen> {
                                   setState(() => _searchQuery = 'Route 1');
                                 },
                               ),
+                              ActionChip(
+                                avatar: const Icon(Icons.location_city_outlined, size: 18),
+                                label: const Text('Viridian City'),
+                                onPressed: () {
+                                  _locationSearchController.text = 'Viridian City';
+                                  setState(() => _searchQuery = 'Viridian City');
+                                },
+                              ),
                             ],
                           ),
                           const SizedBox(height: 10),
@@ -550,6 +558,30 @@ class _MapsScreenState extends State<MapsScreen> {
                               _selectedGameId == 'lets_go_eevee'
                                   ? 'Partner: Eevee Lv. 5 • rywal: Pikachu Lv. 6'
                                   : 'Partner: Pikachu Lv. 5 • rywal: Eevee Lv. 6',
+                            ),
+                          ] else if (normalizedQuery == 'viridian city') ...[
+                            const Text(
+                              'Potwierdzone miejsca i wydarzenia',
+                              style: TextStyle(fontWeight: FontWeight.w700),
+                            ),
+                            const Text(
+                              '• Pokémon Center — miejsce leczenia drużyny.\n'
+                              '• Poké Mart — sprzedawca przekazuje Oak’s Parcel do dostarczenia Profesorowi Oakowi.\n'
+                              '• Podczas pierwszej wizyty droga na północ jest blokowana; najpierw zbadaj miasto.',
+                            ),
+                            const SizedBox(height: 8),
+                            const Text(
+                              'Połączenia lokacji',
+                              style: TextStyle(fontWeight: FontWeight.w700),
+                            ),
+                            const Text(
+                              '• Na południe: Route 1.\n'
+                              '• Na północ: Route 2.\n'
+                              '• Na zachód: Route 22.',
+                            ),
+                            const SizedBox(height: 8),
+                            const Text(
+                              'Ukryty przedmiot: Potion w pobliżu północnego wyjścia, na zachód od małego drzewa (pojawia się jako codzienny przedmiot). Położenie opisano tekstowo — pinezka nie jest jeszcze zweryfikowana.',
                             ),
                           ] else if (normalizedQuery == 'route 1') ...[
                             const Text(
