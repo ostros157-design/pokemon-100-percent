@@ -714,3 +714,13 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Dodano szybkie przyciski wyboru lokacji do Route 12 i Fuchsia City oraz panele informacyjne dla Route 11, Diglett’s Cave, Route 12, Routes 13–15 i Fuchsia City.
 - Commity: `8e4edc5`, `4bd5b7c`, `6fff8ab`, `b985af1`.
 - To nadal mapa części Kanto, a nie ukończona mapa całego regionu. Współrzędne i pinezki szczegółowe pozostają niezweryfikowane; nie uruchamiano Flutter analyzer, testów ani APK.
+
+
+### Mapy — rozszerzenie indeksu Kanto do lokacji pobocznych (2026-10-29)
+
+- Rozszerzono `lets_go_kanto_audit.json` z 45 do 53 lokacji: dodano S.S. Anne, Power Plant, Pokémon Tower, Team Rocket Hideout, Silph Co., Pokémon Mansion, Safari Zone i Viridian Gym. Rekordy oznaczają brak zweryfikowanych pinezek i dokładnych planów wnętrz.
+- Dodano dane dla Celadon City, Saffron City, Routes 16–23, Seafoam Islands, Cinnabar Island, Victory Road, Indigo Plateau i Cerulean Cave; UI ma panele informacyjne dla tych obszarów oraz lokacji pobocznych.
+- Dodano szybkie selektory do dalszych lokacji Kanto. Użytkownik może nadal wpisać nazwę w wyszukiwarkę lokacji.
+- Źródła bazowe: Routepedia dla Let’s Go Pikachu (mapa regionu i lokacje) oraz rozdziały walkthrough Bulbapedia dla lokacji fabularnych.
+- Commity: `0ebfc74`, `55cc864`, `97e65c6`, `fbdce6a`, `5539052`, `764881b`.
+- Nadal nie jest to gotowa, dokładna graficzna mapa całego Kanto: brak zweryfikowanego podkładu w skali gry i pinezek dla większości trenerów/przedmiotów; niektóre rekordy to indeksy połączeń. Flutter analyzer, testy i APK nie zostały uruchomione.
