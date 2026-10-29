@@ -109,6 +109,11 @@
       "id": "bulbapedia-ten-sights",
       "url": "https://bulbapedia.bulbagarden.net/wiki/Casseroya_Falls",
       "scope": "Ten Sights of Paldea and their parent regions"
+    },
+    {
+      "id": "bulbapedia-team-star",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Team_Star",
+      "scope": "Team Star squad bases and their regional locations"
     }
   ],
   "locations": [
@@ -507,18 +512,20 @@
         "west_province_area_three",
         "south_province_area_two",
         "south_province_area_four",
-        "icerend_shrine"
+        "icerend_shrine",
+        "team_star_dark_crew_base"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_area_connection_source_verified_exact_pin_pending",
+      "dataStatus": "team_star_base_location_source_verified_exact_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
         "bulbapedia-cities-towns",
         "bulbapedia-south-area-six",
         "bulbapedia-west-area-one",
-        "bulbapedia-ten-sights"
+        "bulbapedia-ten-sights",
+        "bulbapedia-team-star"
       ],
       "province": "West Province"
     },
@@ -573,16 +580,18 @@
       "kind": "area",
       "connectsTo": [
         "artazon",
-        "east_province_area_two"
+        "east_province_area_two",
+        "team_star_fire_crew_base"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_connection_source_verified_exact_map_pins_pending",
+      "dataStatus": "team_star_base_location_source_verified_exact_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
         "bulbapedia-cities-towns",
-        "bulbapedia-east-area-two"
+        "bulbapedia-east-area-two",
+        "bulbapedia-team-star"
       ],
       "province": "East Province"
     },
@@ -663,17 +672,19 @@
       "connectsTo": [
         "north_province_area_one",
         "east_province_area_three",
-        "fury_falls"
+        "fury_falls",
+        "team_star_fighting_crew_base"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_area_connection_source_verified_exact_pin_pending",
+      "dataStatus": "team_star_base_location_source_verified_exact_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
         "bulbapedia-north-area-one",
         "bulbapedia-north-area-two",
-        "bulbapedia-ten-sights"
+        "bulbapedia-ten-sights",
+        "bulbapedia-team-star"
       ],
       "province": "North Province"
     },
@@ -681,13 +692,16 @@
       "id": "north_province_area_three",
       "name": "North Province (Area Three)",
       "kind": "area",
-      "connectsTo": [],
+      "connectsTo": [
+        "team_star_fairy_crew_base"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "dataStatus": "team_star_base_location_source_verified_exact_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-team-star"
       ],
       "province": "North Province"
     },
@@ -696,15 +710,17 @@
       "name": "Tagtree Thicket",
       "kind": "natural_area",
       "connectsTo": [
-        "north_province_area_one"
+        "north_province_area_one",
+        "team_star_poison_crew_base"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_connection_source_verified_exact_map_pins_pending",
+      "dataStatus": "team_star_base_location_source_verified_exact_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
-        "bulbapedia-north-area-one"
+        "bulbapedia-north-area-one",
+        "bulbapedia-team-star"
       ],
       "province": "East Province"
     },
@@ -1451,66 +1467,81 @@
       "id": "team_star_dark_crew_base",
       "name": "Team Star Dark Crew Base",
       "kind": "base",
-      "connectsTo": [],
+      "connectsTo": [
+        "west_province_area_one"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-team-star"
       ],
-      "dataStatus": "named_location_known_exact_pins_pending_verification"
+      "dataStatus": "team_star_base_location_source_verified_exact_pins_pending"
     },
     {
       "id": "team_star_fire_crew_base",
       "name": "Team Star Fire Crew Base",
       "kind": "base",
-      "connectsTo": [],
+      "connectsTo": [
+        "east_province_area_one"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-team-star"
       ],
-      "dataStatus": "named_location_known_exact_pins_pending_verification"
+      "dataStatus": "team_star_base_location_source_verified_exact_pins_pending"
     },
     {
       "id": "team_star_poison_crew_base",
       "name": "Team Star Poison Crew Base",
       "kind": "base",
-      "connectsTo": [],
+      "connectsTo": [
+        "tagtree_thicket"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-team-star"
       ],
-      "dataStatus": "named_location_known_exact_pins_pending_verification"
+      "dataStatus": "team_star_base_location_source_verified_exact_pins_pending"
     },
     {
       "id": "team_star_fairy_crew_base",
       "name": "Team Star Fairy Crew Base",
       "kind": "base",
-      "connectsTo": [],
+      "connectsTo": [
+        "north_province_area_three"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-team-star"
       ],
-      "dataStatus": "named_location_known_exact_pins_pending_verification"
+      "dataStatus": "team_star_base_location_source_verified_exact_pins_pending"
     },
     {
       "id": "team_star_fighting_crew_base",
       "name": "Team Star Fighting Crew Base",
       "kind": "base",
-      "connectsTo": [],
+      "connectsTo": [
+        "north_province_area_two"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-team-star"
       ],
-      "dataStatus": "named_location_known_exact_pins_pending_verification"
+      "dataStatus": "team_star_base_location_source_verified_exact_pins_pending"
     },
     {
       "id": "kitakami_hall",
