@@ -2856,7 +2856,8 @@
         "X Sp. Def — na północny wschód od Nugget Bridge, po zachodniej stronie płaskowyżu dostępnego od Route 25; opis tekstowy, bez pinezki.",
         "Pinap Berry ×3 — ukryte w krzaku na wschód od Nugget Bridge, dostępne od Route 25 (przedmiot dzienny).",
         "Razz Berry / Silver Razz Berry / Golden Razz Berry — krzak na północny wschód od Nugget Bridge; partner Pokémon może znaleźć różny wariant (przedmiot dzienny).",
-        "Nugget — nagroda po pokonaniu pięciu trenerów na Nugget Bridge; wydarzenie z Team Rocket Grunt następuje przy północnym końcu mostu."
+        "Nugget — nagroda po pokonaniu pięciu trenerów na Nugget Bridge; wydarzenie z Team Rocket Grunt następuje przy północnym końcu mostu.",
+        "Razz Berry ×3 — w wysokiej trawie na zachód od Nugget Bridge."
       ],
       "notablePokemon": [
         "Charmander Lv. 14 — gift"
@@ -2864,7 +2865,8 @@
       "sourceIds": [
         "routepedia-route24-pikachu",
         "routepedia-route24-eevee",
-        "serebii-route24"
+        "serebii-route24",
+        "bulbapedia-part5"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemon": {
@@ -2904,7 +2906,10 @@
           "Tentacruel"
         ]
       },
-      "encounterStatus": "text_verified"
+      "encounterStatus": "text_verified",
+      "events": [
+        "Charmander Lv. 14 — prezent od chłopca na północno-zachodnim wzgórzu po złapaniu co najmniej 50 Pokémonów."
+      ]
     },
     {
       "id": "route_25",
@@ -3240,7 +3245,8 @@
       ],
       "sourceIds": [
         "routepedia-route25-pikachu",
-        "serebii-route25"
+        "serebii-route25",
+        "bulbapedia-part5"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemon": {
@@ -3491,12 +3497,14 @@
         "3 Great Balls",
         "Ether",
         "3 Nanab Berries",
-        "3 Razz Berries (ukryte)"
+        "3 Razz Berries (ukryte)",
+        "Revive ×3 — od Trace'a poza budynkiem Underground Path po rozmowie fabularnej."
       ],
       "sourceIds": [
         "routepedia-route5-pikachu",
         "routepedia-route5-eevee",
-        "serebii-route5"
+        "serebii-route5",
+        "bulbapedia-part5"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemon": {
