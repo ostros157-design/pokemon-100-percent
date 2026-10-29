@@ -32,7 +32,9 @@
       "id": "twinleaf_town",
       "name": "Twinleaf Town",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_201"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -45,7 +47,11 @@
       "id": "sandgem_town",
       "name": "Sandgem Town",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_201",
+        "route_202",
+        "route_219"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -58,7 +64,12 @@
       "id": "jubilife_city",
       "name": "Jubilife City",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_202",
+        "route_203",
+        "route_204",
+        "route_218"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -71,7 +82,10 @@
       "id": "oreburgh_city",
       "name": "Oreburgh City",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_203",
+        "route_207"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -84,7 +98,10 @@
       "id": "floaroma_town",
       "name": "Floaroma Town",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_204",
+        "route_205"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -97,7 +114,11 @@
       "id": "eterna_city",
       "name": "Eterna City",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_205",
+        "route_206",
+        "route_211"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -110,7 +131,11 @@
       "id": "hearthome_city",
       "name": "Hearthome City",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_208",
+        "route_209",
+        "route_212"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -123,7 +148,10 @@
       "id": "solaceon_town",
       "name": "Solaceon Town",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_209",
+        "route_210"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -136,7 +164,10 @@
       "id": "veilstone_city",
       "name": "Veilstone City",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_214",
+        "route_215"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -149,7 +180,10 @@
       "id": "pastoria_city",
       "name": "Pastoria City",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_212",
+        "route_213"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -162,7 +196,10 @@
       "id": "celestic_town",
       "name": "Celestic Town",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_210",
+        "route_211"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -175,7 +212,9 @@
       "id": "canalave_city",
       "name": "Canalave City",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_218"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -188,7 +227,9 @@
       "id": "snowpoint_city",
       "name": "Snowpoint City",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "acuity_lakefront"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -201,7 +242,10 @@
       "id": "sunyshore_city",
       "name": "Sunyshore City",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_222",
+        "route_223"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -214,7 +258,9 @@
       "id": "pok_mon_league",
       "name": "Pokémon League",
       "kind": "league",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_223"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -227,7 +273,10 @@
       "id": "fight_area",
       "name": "Fight Area",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_225",
+        "route_230"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -240,7 +289,10 @@
       "id": "survival_area",
       "name": "Survival Area",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_225",
+        "route_226"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -253,7 +305,9 @@
       "id": "resort_area",
       "name": "Resort Area",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_229"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -732,7 +786,8 @@
       "kind": "route",
       "connectsTo": [
         "route_228",
-        "resort_area"
+        "resort_area",
+        "route_230"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -762,7 +817,9 @@
       "id": "oreburgh_gate",
       "name": "Oreburgh Gate",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_203"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -788,7 +845,9 @@
       "id": "valley_windworks",
       "name": "Valley Windworks",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_205"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -801,7 +860,9 @@
       "id": "eterna_forest",
       "name": "Eterna Forest",
       "kind": "forest",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_205"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -827,7 +888,12 @@
       "id": "mt_coronet",
       "name": "Mt. Coronet",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_207",
+        "route_208",
+        "route_211",
+        "route_216"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -840,7 +906,9 @@
       "id": "wayward_cave",
       "name": "Wayward Cave",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_206"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -866,7 +934,9 @@
       "id": "lost_tower",
       "name": "Lost Tower",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_209"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -892,7 +962,9 @@
       "id": "lake_verity",
       "name": "Lake Verity",
       "kind": "lake",
-      "connectsTo": [],
+      "connectsTo": [
+        "verity_lakefront"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -905,7 +977,9 @@
       "id": "lake_valor",
       "name": "Lake Valor",
       "kind": "lake",
-      "connectsTo": [],
+      "connectsTo": [
+        "valor_lakefront"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -918,7 +992,9 @@
       "id": "lake_acuity",
       "name": "Lake Acuity",
       "kind": "lake",
-      "connectsTo": [],
+      "connectsTo": [
+        "acuity_lakefront"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -944,7 +1020,9 @@
       "id": "fuego_ironworks",
       "name": "Fuego Ironworks",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_205"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -957,7 +1035,9 @@
       "id": "turnback_cave",
       "name": "Turnback Cave",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "spring_path"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -970,7 +1050,9 @@
       "id": "victory_road",
       "name": "Victory Road",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_224"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -1009,7 +1091,9 @@
       "id": "stark_mountain",
       "name": "Stark Mountain",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_227"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -1035,7 +1119,9 @@
       "id": "ramanas_park",
       "name": "Ramanas Park",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_221"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
