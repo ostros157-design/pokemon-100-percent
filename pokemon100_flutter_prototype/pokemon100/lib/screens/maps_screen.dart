@@ -4229,6 +4229,16 @@ class _KantoMapPainter extends CustomPainter {
       ..style = PaintingStyle.stroke
       ..strokeWidth = 3.2
       ..strokeCap = StrokeCap.round;
+    final undergroundEdge = Paint()
+      ..color = const Color(0xFFD7C8A2)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 8
+      ..strokeCap = StrokeCap.round;
+    final undergroundDash = Paint()
+      ..color = const Color(0xFF8C8068)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 3
+      ..strokeCap = StrokeCap.round;
     for (var index = 0; index < links.length; index++) {
       final link = links[index];
       final a = places[link.$1];
@@ -4251,6 +4261,10 @@ class _KantoMapPainter extends CustomPainter {
         'Route 20',
         'Route 21',
       }.contains(b.name);
+      final isUndergroundLink = a.name == "Diglett's Cave" ||
+          b.name == "Diglett's Cave" ||
+          a.name.startsWith('Underground Path') ||
+          b.name.startsWith('Underground Path');
       canvas.drawPath(road, roadShadow);
       if (isWaterLink) {
         canvas.drawPath(road, waterRouteEdge);
@@ -4260,6 +4274,17 @@ class _KantoMapPainter extends CustomPainter {
             canvas.drawPath(
               metric.extractPath(distance, dashEnd),
               waterRouteDash,
+            );
+          }
+        }
+      } else if (isUndergroundLink) {
+        canvas.drawPath(road, undergroundEdge);
+        for (final metric in road.computeMetrics()) {
+          for (var distance = 0.0; distance < metric.length; distance += 12) {
+            final dashEnd = math.min(distance + 5, metric.length).toDouble();
+            canvas.drawPath(
+              metric.extractPath(distance, dashEnd),
+              undergroundDash,
             );
           }
         }
