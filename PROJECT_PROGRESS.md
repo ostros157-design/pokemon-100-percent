@@ -1,3 +1,10 @@
+### Mapy — rozszerzenie danych tras Kanto z potwierdzonych poradników (2026-10-29)
+
+- Uzupełniono tekstowe listy przedmiotów Route 2, Route 7, Route 8, Route 22 oraz Underground Path (Routes 7–8), w tym ukryte/dzienne przedmioty i nagrody.
+- Dodano zapisane w źródłach drużyny trenerów Route 7 i Route 8 oraz pierwszą walkę z Trace na Route 22 z rozróżnieniem wariantu Let’s Go Pikachu/Eevee.
+- Route 2 obejmuje oba odcinki; technika Light Up jest opisana jako nagroda od pomocnika Oaka, a nie przedmiot do podniesienia. Żadne nowe pinezki ani współrzędne nie zostały dopisane.
+- Wykorzystano istniejące referencje Bulbapedia Part 2, Part 7 i Part 8. Commit danych: `8a49b21`. Nie uruchamiano testów, Flutter analyzer ani APK.
+
 ### Mapy — uzupełnienie list przedmiotów Route 24 i Route 25 (2026-10-29)
 
 - Rozszerzono tekstowe listy przedmiotów na Route 24 i Route 25 o pozycje pominięte wcześniej: warianty dziennych jagód, ukryte Pinap/Nanab Berries, Nugget z wydarzenia Nugget Bridge, TM15 jako nagrodę Coach Trainer Amali oraz dwa S.S. Tickets od Billa.
