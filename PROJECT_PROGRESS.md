@@ -922,3 +922,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Zarejestrowano asset w `pubspec.yaml`, dodano ładowanie do `MapsScreen` i wybór `Kanto` ↔ `Sevii Islands` dla FireRed/LeafGreen. Kanto pozostaje oddzielone od wysp i nie pokazuje ich w grach, które ich nie zawierają.
 - Commity: `a97c548`, `6360a4b`, `1c95545`.
 - Pozycje pinezek pozostają niezweryfikowane; indeks opisuje nazwy i dostęp, a nie dokładną mapę w skali.
+
+
+### Mapy — pełny audyt po dodaniu Sevii Islands (2026-10-29)
+
+- Sprawdzono 12 indeksów offline: 867 rekordów lokacji. Wszystkie JSON-y parsują się, każdy plik jest wpisany w `pubspec.yaml` i ładowany przez `MapsScreen`.
+- Wynik strukturalny: 0 zduplikowanych ID, 0 zduplikowanych nazw, 0 brakujących `sourceIds`, 0 niedziałających `connectsTo`, 0 lokacji bez statusu danych.
+- UI ma wyszukiwanie po nazwie/notatkach/typie/połączeniach, klikalne przejścia między lokacjami i klikalne źródła. FireRed/LeafGreen mają przełącznik Kanto ↔ Sevii Islands.
+- To nie oznacza ukończenia całej mapy: poza schematem Kanto nie ma jeszcze dokładnych map graficznych w skali, a wiele regionów wymaga dokładnych pinezek przedmiotów, trenerów, Pokémonów, znajdziek i pełnego audytu wersji. Nie uruchamiano Flutter analyzer, testów ani APK.
