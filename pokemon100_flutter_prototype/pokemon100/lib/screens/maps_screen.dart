@@ -2261,6 +2261,61 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
       'Gym Brocka': 'To miejsce walki z Brockiem o pierwszą odznakę Gym.',
       'Brock': 'Poradnik wymienia Geodude i Onixa w kontekście walki z Brockiem. Schemat nie odwzorowuje dokładnego wnętrza Gymu.',
     },
+    'Mt. Moon': {
+      'Wejście do jaskini': 'Poglądowy punkt wejścia. Dokładne położenie drabinek i skał wymaga osobnej weryfikacji.',
+      'Poziom 1F': 'Warstwa orientacyjna pierwszego poziomu; nie jest wiernym planem kafelków.',
+      'Poziom B1F': 'Warstwa orientacyjna niższego poziomu. Nie oznaczono dokładnych pozycji przedmiotów.',
+      'Wyjście w stronę Route 4': 'Kierunek wyjścia z jaskini w stronę Route 4.',
+    },
+    'Rock Tunnel': {
+      'Wejście północne': 'Wejście od strony Route 10; symbol nie określa dokładnej kratki.',
+      'Poziom 1F': 'Poglądowa warstwa pierwszego poziomu tunelu.',
+      'Poziom B1F': 'Poglądowa warstwa podziemna; dokładne przejścia wymagają porównania ze źródłową mapą gry.',
+      'Wyjście południowe': 'Kierunek wyjścia w stronę Lavender Town.',
+    },
+    "Diglett's Cave": {
+      'Wejście od Route 2': 'Północne wejście do tunelu, przedstawione schematycznie.',
+      'Tunel': 'Długi podziemny korytarz pokazany jako ilustracja, bez dokładnych współrzędnych.',
+      'Wyjście przy Route 11': 'Drugie wyjście tunelu; położenie na rysunku jest poglądowe.',
+    },
+    'Seafoam Islands': {
+      'Wejście': 'Wejście do systemu jaskiń; bez dokładnej pinezki.',
+      'Poziomy B1F–B2F': 'Poglądowe połączenie poziomów. Nie przedstawia dokładnego układu prądów wodnych.',
+      'Poziomy B3F–B4F': 'Dolne poziomy jaskini pokazane jako orientacyjne strefy.',
+      'Komnata Articuno': 'Obszar specjalnego spotkania z Articuno; nie oznacza dokładnej kratki.',
+    },
+    'Cerulean Cave': {
+      'Wejście': 'Wejście do jaskini, pokazane schematycznie.',
+      'Poziom 1F': 'Orientacyjna strefa pierwszego poziomu.',
+      'Poziomy 2F–3F': 'Orientacyjne strefy górnych poziomów.',
+      'Komnata Mewtwo': 'Obszar specjalnego spotkania z Mewtwo; pinezka nie jest dokładną pozycją w grze.',
+    },
+    'Victory Road': {
+      'Wejście od Route 23': 'Kierunek wejścia od trasy prowadzącej do Ligi Pokémon.',
+      'Poziom 1F': 'Poglądowa strefa pierwszego poziomu.',
+      'Poziom 2F': 'Poglądowa strefa środkowego poziomu.',
+      'Poziom 3F / wyjście': 'Kierunek wyjścia w stronę Indigo Plateau.',
+    },
+    'Pokémon Tower': {
+      'Piętra 3F–4F': 'Strefa środkowych pięter wieży, pokazana orientacyjnie.',
+      'Piętra 5F–6F': 'Strefa wyższych pięter; nie oznaczono dokładnych pozycji trenerów.',
+      'Szczyt wieży': 'Obszar wydarzenia fabularnego na górnych piętrach.',
+    },
+    'Pokémon Mansion': {
+      'Parter 1F': 'Poglądowa strefa parteru rezydencji.',
+      'Piętra 2F–3F': 'Orientacyjne strefy wyższych pięter.',
+      'Piwnica B1F': 'Orientacyjna strefa piwnicy i dokumentów związanych z Mewtwo.',
+    },
+    'Power Plant': {
+      'Wejście': 'Poglądowe wejście do elektrowni.',
+      'Hala generatorów': 'Główna strefa obiektu, bez dokładnych pozycji przedmiotów.',
+      'Obszar Zapdosa': 'Obszar specjalnego spotkania z Zapdosem; nie jest dokładną pinezką.',
+    },
+    'S.S. Anne': {
+      'Pokład': 'Schematyczna strefa pokładu statku.',
+      'Korytarze i kabiny': 'Wnętrze statku przedstawione jako uproszczony układ stref.',
+      'Kabina kapitana': 'Obszar wydarzenia z HM Cut; pozycja jest poglądowa.',
+    },
   };
 
   @override
