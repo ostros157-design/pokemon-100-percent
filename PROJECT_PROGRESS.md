@@ -1,3 +1,10 @@
+### Mapy — uzupełnienie danych spotkań w pozostałych głównych jaskiniach (2026-10-29)
+
+- Dodano / zweryfikowano spotkania dla obu wersji Let’s Go w Diglett's Cave, Mt. Moon i Rock Tunnel.
+- Dane obejmują poziomy, procenty ze źródła oraz opisy odcinków/pieter, a rzadkie spotkania bez opublikowanej szansy pozostają bez wymyślonego procentu.
+- Dodano źródła RotomLabs dla tych trzech lokacji. Łącznie dane spotkań obejmują teraz trasy oraz sześć głównych jaskiń/obszarów specjalnych, w tym Cerulean Cave, Seafoam Islands i Victory Road.
+- Commit: `1a17464c`. Nie uruchomiono `flutter analyze`, testów ani APK. Plany pięter i pinezki nadal nie są dokładnym odwzorowaniem gry.
+
 ### Mapy — rozszerzenie Kanto o wnętrza i punkty specjalne (2026-10-29)
 
 - Rozszerzono indeks oraz rysowaną mapę z 65 do 74 lokacji. Dodano Player's House, Professor Oak's Laboratory, Celadon Department Store, Celadon Game Corner, Celadon Condominiums, Cinnabar Lab, Fighting Dojo, GO Park i Sea Cottage.
