@@ -3144,7 +3144,189 @@ class _KantoMapPainter extends CustomPainter {
       );
     }
 
-    // Full 65-location Kanto topology from the bundled audit index. Node positions are schematic layout coordinates, not in-game coordinates.
+    // Hand-illustrated terrain layer: soft watercolor washes, contour lines,
+    // mountain silhouettes, coves and tiny islands. All motifs are vector paths,
+    // so they stay crisp when the user zooms in; they are decorative, not exact
+    // in-game terrain or item/Pokémon coordinates.
+    final contourPaint = Paint()
+      ..color = const Color(0xFF77966C).withValues(alpha: .30)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 1.25
+      ..strokeCap = StrokeCap.round;
+    for (final contour in <(double, double, double, double)>[
+      (.18, .30, .10, .035),
+      (.21, .32, .075, .025),
+      (.70, .31, .11, .035),
+      (.73, .33, .075, .022),
+      (.34, .75, .10, .028),
+      (.37, .77, .07, .018),
+      (.63, .72, .08, .025),
+    ]) {
+      final center = p(contour.$1, contour.$2);
+      final rect = Rect.fromCenter(
+        center: center,
+        width: size.width * contour.$3,
+        height: size.height * contour.$4,
+      );
+      canvas.drawOval(rect, contourPaint);
+    }
+
+    void drawMountain(double x, double y, double scale) {
+      final center = p(x, y);
+      final s = size.width / 900 * scale;
+      final silhouette = Path()
+        ..moveTo(center.dx - 25 * s, center.dy + 15 * s)
+        ..lineTo(center.dx - 8 * s, center.dy - 15 * s)
+        ..lineTo(center.dx + 1 * s, center.dy - 2 * s)
+        ..lineTo(center.dx + 13 * s, center.dy - 25 * s)
+        ..lineTo(center.dx + 31 * s, center.dy + 15 * s)
+        ..close();
+      canvas.drawPath(
+        silhouette.shift(Offset(0, 3 * s)),
+        Paint()..color = const Color(0xFF9A9B7A).withValues(alpha: .35),
+      );
+      canvas.drawPath(
+        silhouette,
+        Paint()
+          ..shader = const LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [Color(0xFFE9E2C9), Color(0xFFB5B89A)],
+          ).createShader(Rect.fromCenter(
+            center: center,
+            width: 64 * s,
+            height: 48 * s,
+          )),
+      );
+      final snow = Path()
+        ..moveTo(center.dx - 13 * s, center.dy - 5 * s)
+        ..lineTo(center.dx - 8 * s, center.dy - 15 * s)
+        ..lineTo(center.dx - 2 * s, center.dy - 6 * s)
+        ..lineTo(center.dx + 3 * s, center.dy - 14 * s)
+        ..lineTo(center.dx + 13 * s, center.dy + 1 * s)
+        ..lineTo(center.dx + 5 * s, center.dy - 3 * s)
+        ..lineTo(center.dx + 1 * s, center.dy + 2 * s)
+        ..lineTo(center.dx - 5 * s, center.dy - 2 * s)
+        ..close();
+      canvas.drawPath(snow, Paint()..color = const Color(0xFFF8F4E5));
+      canvas.drawPath(
+        silhouette,
+        Paint()
+          ..color = const Color(0xFF7D8F70).withValues(alpha: .65)
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = 1.2 * s,
+      );
+    }
+
+    for (final mountain in <(double, double, double)>[
+      (.39, .30, .72),
+      (.43, .29, .88),
+      (.47, .30, 1.0),
+      (.51, .31, .72),
+      (.82, .35, .72),
+      (.85, .33, .88),
+      (.88, .35, .70),
+      (.15, .32, .62),
+      (.18, .30, .78),
+      (.21, .32, .60),
+    ]) {
+      drawMountain(mountain.$1, mountain.$2, mountain.$3);
+    }
+
+    // A quiet, winding stream and pale sand edges give the region a hand-painted
+    // atlas feel without asserting that these are game-accurate river pixels.
+    final stream = Path()
+      ..moveTo(size.width * .76, size.height * .23)
+      ..cubicTo(size.width * .73, size.height * .29, size.width * .78, size.height * .34, size.width * .72, size.height * .39)
+      ..cubicTo(size.width * .69, size.height * .43, size.width * .74, size.height * .46, size.width * .68, size.height * .50);
+    canvas.drawPath(
+      stream,
+      Paint()
+        ..color = const Color(0xFFF4E5B2).withValues(alpha: .82)
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 8 * size.width / 900
+        ..strokeCap = StrokeCap.round,
+    );
+    canvas.drawPath(
+      stream,
+      Paint()
+        ..color = const Color(0xFF80C8D0).withValues(alpha: .78)
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 4 * size.width / 900
+        ..strokeCap = StrokeCap.round,
+    );
+
+    // Tiny offshore islets are drawn as layered, smooth ovals (not pixel art).
+    for (final island in <(double, double, double, double)>[
+      (.23, .96, .035, .014),
+      (.30, .97, .025, .011),
+      (.36, .94, .022, .009),
+      (.09, .89, .025, .012),
+      (.12, .91, .018, .008),
+    ]) {
+      final center = p(island.$1, island.$2);
+      final rect = Rect.fromCenter(
+        center: center,
+        width: size.width * island.$3,
+        height: size.height * island.$4,
+      );
+      canvas.drawOval(
+        rect.inflate(2 * size.width / 900),
+        Paint()..color = const Color(0xFFEADDAA).withValues(alpha: .8),
+      );
+      canvas.drawOval(
+        rect,
+        Paint()
+          ..shader = const LinearGradient(
+            colors: [Color(0xFFB9D79A), Color(0xFF8FB87E)],
+          ).createShader(rect),
+      );
+      canvas.drawArc(
+        rect.deflate(2),
+        3.5,
+        2.2,
+        false,
+        Paint()
+          ..color = const Color(0xFF6D9B6F).withValues(alpha: .65)
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = 1,
+      );
+    }
+
+    // Subtle map-frame and compass ornament, all vector-drawn for clean scaling.
+    final frame = RRect.fromRectAndRadius(
+      Rect.fromLTWH(3, 3, size.width - 6, size.height - 6),
+      Radius.circular(size.width * .018),
+    );
+    canvas.drawRRect(
+      frame,
+      Paint()
+        ..color = const Color(0xFF6E8C73).withValues(alpha: .55)
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 2,
+    );
+    final compass = p(.91, .12);
+    canvas.drawCircle(
+      compass,
+      size.width * .035,
+      Paint()..color = const Color(0xFFF8F1D8).withValues(alpha: .8),
+    );
+    final compassPath = Path()
+      ..moveTo(compass.dx, compass.dy - size.width * .027)
+      ..lineTo(compass.dx + size.width * .010, compass.dy)
+      ..lineTo(compass.dx, compass.dy + size.width * .027)
+      ..lineTo(compass.dx - size.width * .010, compass.dy)
+      ..close();
+    canvas.drawPath(compassPath, Paint()..color = const Color(0xFF577B70));
+    canvas.drawLine(
+      Offset(compass.dx, compass.dy - size.width * .022),
+      Offset(compass.dx, compass.dy + size.width * .022),
+      Paint()
+        ..color = const Color(0xFF577B70)
+        ..strokeWidth = 1,
+    );
+
+    // Full 74-location Kanto topology from the bundled audit index. Node positions are schematic layout coordinates, not in-game coordinates.
     const links = <(int, int)>[
       (0,1),
       (0,39),
@@ -3229,7 +3411,7 @@ class _KantoMapPainter extends CustomPainter {
       (71,31),
       (72,29),
       (73,11),
-    ];;
+    ];
     final roadShadow = Paint()
       ..color = const Color(0xFF8B9C73).withValues(alpha: .30)
       ..style = PaintingStyle.stroke
