@@ -1164,3 +1164,9 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - To heurystyka rysowania, nie gwarancja braku kolizji przy każdej wielkości ekranu; potrzebny jest ogląd mapy w działającej aplikacji.
 - Commit: `18cbd00`. Bez uruchamiania analyzer, testów i APK.
 
+### Mapy — Kanto: dokumentacja źródeł ilustracji (2026-10-29)
+
+- Do indeksu Kanto dodano źródła pomocnicze: oficjalny opis regionu Let’s Go oraz indeks map MewMaps. Istniejące źródło Routepedia nadal służy do sprawdzania listy lokacji i połączeń.
+- Dodano jawne `illustrationPolicy`: grafika mapy i plany pięter są autorskimi ilustracjami wektorowymi; nie wolno traktować ich kształtów ani pozycji węzłów jako dokładnych współrzędnych z gry. Nie kopiowano obrazów źródłowych do zasobów aplikacji.
+- Commit danych: `f1d7e20`. JSON został zapisany w poprawnym formacie i wymaga jeszcze zwykłego testu ładowania w aplikacji, którego nie uruchamiano.
+
