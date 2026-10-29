@@ -239,10 +239,14 @@
       "id": "route_1",
       "name": "Route 1",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "accumula_town",
+        "route_17",
+        "nuvema_town"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-unova",
         "bulbapedia-route-list"
@@ -252,10 +256,13 @@
       "id": "route_2",
       "name": "Route 2",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "striaton_city",
+        "accumula_town"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-unova",
         "bulbapedia-route-list"
@@ -265,10 +272,14 @@
       "id": "route_3",
       "name": "Route 3",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "nacrene_city",
+        "striaton_city",
+        "pokemon_day_care"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-unova",
         "bulbapedia-route-list"
@@ -278,10 +289,14 @@
       "id": "route_4",
       "name": "Route 4",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "nimbasa_city",
+        "desert_resort",
+        "castelia_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-unova",
         "bulbapedia-route-list"
@@ -291,10 +306,13 @@
       "id": "route_5",
       "name": "Route 5",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "nimbasa_city",
+        "driftveil_drawbridge"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-unova",
         "bulbapedia-route-list"
@@ -304,10 +322,13 @@
       "id": "route_6",
       "name": "Route 6",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "chargedstone_cave",
+        "driftveil_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-unova",
         "bulbapedia-route-list"
@@ -317,10 +338,13 @@
       "id": "route_7",
       "name": "Route 7",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "twist_mountain",
+        "mistralton_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-unova",
         "bulbapedia-route-list"
@@ -330,10 +354,14 @@
       "id": "route_8",
       "name": "Route 8",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "moor_of_icirrus",
+        "tubeline_bridge",
+        "icirrus_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-unova",
         "bulbapedia-route-list"
@@ -343,10 +371,14 @@
       "id": "route_9",
       "name": "Route 9",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "opelucid_city",
+        "tubeline_bridge",
+        "challengers_cave"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-unova",
         "bulbapedia-route-list"
@@ -356,10 +388,13 @@
       "id": "route_10",
       "name": "Route 10",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "victory_road",
+        "opelucid_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-unova",
         "bulbapedia-route-list"
@@ -369,10 +404,13 @@
       "id": "route_11",
       "name": "Route 11",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "village_bridge",
+        "opelucid_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-unova",
         "bulbapedia-route-list"
@@ -382,10 +420,13 @@
       "id": "route_12",
       "name": "Route 12",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "lacunosa_town",
+        "village_bridge"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-unova",
         "bulbapedia-route-list"
@@ -395,10 +436,14 @@
       "id": "route_13",
       "name": "Route 13",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "giant_chasm",
+        "lacunosa_town",
+        "undella_town"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-unova",
         "bulbapedia-route-list"
@@ -408,10 +453,15 @@
       "id": "route_14",
       "name": "Route 14",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "undella_town",
+        "abundant_shrine",
+        "black_city",
+        "white_forest"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-unova",
         "bulbapedia-route-list"
@@ -421,10 +471,14 @@
       "id": "route_15",
       "name": "Route 15",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "white_forest",
+        "marvelous_bridge",
+        "black_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-unova",
         "bulbapedia-route-list"
@@ -434,10 +488,14 @@
       "id": "route_16",
       "name": "Route 16",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "lostlorn_forest",
+        "marvelous_bridge",
+        "nimbasa_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-unova",
         "bulbapedia-route-list"
@@ -447,10 +505,13 @@
       "id": "route_17",
       "name": "Route 17",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_1",
+        "route_18"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-unova",
         "bulbapedia-route-list"
@@ -460,10 +521,12 @@
       "id": "route_18",
       "name": "Route 18",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_17"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-unova",
         "bulbapedia-route-list"
@@ -473,10 +536,13 @@
       "id": "route_19",
       "name": "Route 19",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "floccesy_town",
+        "aspertia_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-unova",
         "bulbapedia-route-list"
@@ -486,10 +552,14 @@
       "id": "route_20",
       "name": "Route 20",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "floccesy_ranch",
+        "virbank_city",
+        "floccesy_town"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-unova",
         "bulbapedia-route-list"
@@ -499,10 +569,13 @@
       "id": "route_21",
       "name": "Route 21",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "humilau_city",
+        "seaside_cave"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-unova",
         "bulbapedia-route-list"
@@ -512,10 +585,13 @@
       "id": "route_22",
       "name": "Route 22",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "humilau_city",
+        "giant_chasm"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-unova",
         "bulbapedia-route-list"
@@ -525,10 +601,13 @@
       "id": "route_23",
       "name": "Route 23",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "giant_chasm",
+        "victory_road"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-unova",
         "bulbapedia-route-list"
@@ -793,6 +872,237 @@
         "bulbapedia-unova",
         "pokemony-unova"
       ]
+    },
+    {
+      "id": "desert_resort",
+      "name": "Desert Resort",
+      "kind": "desert",
+      "connectsTo": [
+        "route_4"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "connection_indexed_variant_audit_pending"
+    },
+    {
+      "id": "driftveil_drawbridge",
+      "name": "Driftveil Drawbridge",
+      "kind": "bridge",
+      "connectsTo": [
+        "route_5",
+        "driftveil_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "connection_indexed_variant_audit_pending"
+    },
+    {
+      "id": "chargedstone_cave",
+      "name": "Chargestone Cave",
+      "kind": "cave",
+      "connectsTo": [
+        "route_6",
+        "mistralton_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "connection_indexed_variant_audit_pending"
+    },
+    {
+      "id": "moor_of_icirrus",
+      "name": "Moor of Icirrus",
+      "kind": "marsh",
+      "connectsTo": [
+        "route_8"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "connection_indexed_variant_audit_pending"
+    },
+    {
+      "id": "tubeline_bridge",
+      "name": "Tubeline Bridge",
+      "kind": "bridge",
+      "connectsTo": [
+        "route_8",
+        "route_9"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "connection_indexed_variant_audit_pending"
+    },
+    {
+      "id": "challengers_cave",
+      "name": "Challenger's Cave",
+      "kind": "cave",
+      "connectsTo": [
+        "route_9"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "connection_indexed_variant_audit_pending"
+    },
+    {
+      "id": "abundant_shrine",
+      "name": "Abundant Shrine",
+      "kind": "shrine",
+      "connectsTo": [
+        "route_14"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "connection_indexed_variant_audit_pending"
+    },
+    {
+      "id": "pokemon_day_care",
+      "name": "Pokémon Day Care",
+      "kind": "facility",
+      "connectsTo": [
+        "route_3"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "connection_indexed_variant_audit_pending"
+    },
+    {
+      "id": "floccesy_town",
+      "name": "Floccesy Town",
+      "kind": "town",
+      "connectsTo": [
+        "route_19",
+        "route_20"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "connection_indexed_variant_audit_pending"
+    },
+    {
+      "id": "aspertia_city",
+      "name": "Aspertia City",
+      "kind": "town",
+      "connectsTo": [
+        "route_19"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "connection_indexed_variant_audit_pending"
+    },
+    {
+      "id": "floccesy_ranch",
+      "name": "Floccesy Ranch",
+      "kind": "ranch",
+      "connectsTo": [
+        "route_20"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "connection_indexed_variant_audit_pending"
+    },
+    {
+      "id": "virbank_city",
+      "name": "Virbank City",
+      "kind": "town",
+      "connectsTo": [
+        "route_20"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "connection_indexed_variant_audit_pending"
+    },
+    {
+      "id": "humilau_city",
+      "name": "Humilau City",
+      "kind": "town",
+      "connectsTo": [
+        "route_21",
+        "route_22"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "connection_indexed_variant_audit_pending"
+    },
+    {
+      "id": "seaside_cave",
+      "name": "Seaside Cave",
+      "kind": "cave",
+      "connectsTo": [
+        "route_21"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "connection_indexed_variant_audit_pending"
+    },
+    {
+      "id": "pokemon_league_gate",
+      "name": "Pokémon League Gate",
+      "kind": "gate",
+      "connectsTo": [
+        "route_10",
+        "victory_road"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "connection_indexed_variant_audit_pending"
     }
   ]
 }
