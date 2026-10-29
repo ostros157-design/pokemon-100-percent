@@ -1036,3 +1036,10 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Sprawdzono też nazwy wszystkich wpisów względem katalogu Pokédexu oraz to, że identyfikatory źródeł istnieją w indeksie. Walidacja tekstowych danych nie zastępuje testu w aplikacji i nie potwierdza dokładnych współrzędnych na mapie.
 - Naprawiono dopasowanie apostrofu w Farfetch’d. Commity: `e2276a4`, `78fac90`.
 
+### Mapy — pełniejsze spotkania na Route 1, 4, 6, 24 i 25 (2026-10-29)
+
+- Uzupełniono spotkania na niebie, specjalne spawny i wodne dla tras, gdzie źródła je podają.
+- Poprawiono też błąd w tabeli Route 4: wersja Pikachu ma Sandshrew i Mankey, a wersja Eevee — Ekans; teraz listy wersji są rozdzielone.
+- Route 24 i Route 25 uwzględniają Squirtle jako specjalne spotkanie, a dane wodne pozostają osobną metodą.
+- Commit: `ad2ab21`. Nie uruchamiano Flutter analyzer, testów ani APK.
+
