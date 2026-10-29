@@ -1,3 +1,8 @@
+### Mapy — czytelny status aliasów (2026-10-29)
+
+- Panel danych rozpoznaje teraz `alias_of_location` po polsku, a pola `coordinateStatus: not_applicable` pokazują komunikat o wspólnym punkcie zamiast ostrzeżenia o niezweryfikowanej pinezce.
+- Zmiana dotyczy aliasów Bill's House / Sea Cottage oraz Safari Zone / GO Park. Commit UI: `bb0df02`. Bez testów, analyzer ani APK.
+
 ### Mapy — końcowy audyt statyczny bieżącej iteracji (2026-10-29)
 
 - Audyt indeksu JSON: 76 nazw lokacji, 2 jawne aliasy, 74 fizyczne punkty mapy, 82 połączenia; wszystkie połączenia zgadzają się z grafem indeksu, brak błędnych indeksów i punktów poza zakresem.
