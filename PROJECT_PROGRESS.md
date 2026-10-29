@@ -1112,3 +1112,12 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Commit mapy: `488b736`.
 - Nie uruchamiano Flutter analyzer, testów ani APK. Kolejny etap: lepsze, ręcznie stylizowane ikony miast/lasów/jaskiń oraz dopracowanie kształtu lądu i przebiegu dróg bez fałszywego sugerowania dokładnych współrzędnych.
 
+### Mapy — Kanto: ręcznie stylizowana warstwa ilustracyjna (2026-10-29, kontynuacja)
+
+- Dodano wektorowe ilustracje lasów, skupisk małych budynków w miastach oraz wejść do jaskiń; wykorzystują krzywe, okręgi, gradienty i przezroczystość zamiast bitmap/pikselowych tekstur.
+- Ozdobna warstwa mapy obejmuje już góry, poziomice, strumień, wysepki, ramkę i kompas. Elementy mają charakter ilustracyjny i nie udają zweryfikowanych współrzędnych z gry.
+- Ograniczono kolizje napisów na widoku ogólnym: nazwy głównych miejsc są widoczne stale, a nazwy mniejszych obiektów i tras pojawiają się po wybraniu punktu. Wszystkie 74 punkty pozostają wybieralne.
+- Uaktualniono opis mapy i legendę, aby jasno rozróżniały dekoracyjną grafikę od danych lokalizacyjnych.
+- Kontrola statyczna po zmianach: 74/74 nazwy lokacji zgodne z indeksem danych; 83/83 połączenia zgodne; brak nieprawidłowych indeksów połączeń.
+- Nie uruchamiano `flutter analyze`, testów ani budowania APK. Wciąż do zrobienia przed uznaniem mapy za kompletną: szczegółowe plany wnętrz i jaskiń, weryfikacja przebiegu terenu względem wiarygodnych map źródłowych oraz dalsze sprawdzenie czytelności po uruchomieniu aplikacji.
+
