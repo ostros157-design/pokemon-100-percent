@@ -128,6 +128,17 @@ class _MapsScreenState extends State<MapsScreen> {
         .toList(growable: false);
   }
 
+  Map<String, dynamic>? get _selectedMapIndexLocation {
+    final query = _searchQuery.trim().toLowerCase();
+    if (query.isEmpty) return null;
+    for (final location in _activeMapIndexLocations) {
+      if ((location['name'] as String? ?? '').toLowerCase() == query) {
+        return location;
+      }
+    }
+    return null;
+  }
+
   Future<void> _loadSelectedGame() async {
     final preferences = await SharedPreferences.getInstance();
     final savedId = preferences.getString('selected_pokemon_game_id');
@@ -360,7 +371,59 @@ class _MapsScreenState extends State<MapsScreen> {
                               Text(selectedGame?.name ??
                                   'Brak gry z tej generacji w katalogu aplikacji.'),
                               const SizedBox(height: 8),
-                              if (_isLetsGoKanto) ...[
+                              if (!_isLetsGoKanto && _selectedMapIndexLocation != null)
+                  Builder(
+                    builder: (context) {
+                      final location = _selectedMapIndexLocation!;
+                      final locationName = location['name'] as String? ?? 'Lokacja';
+                      final kind = location['kind'] as String? ?? 'lokacja';
+                      final status = (location['dataStatus'] as String? ?? 'status nieznany')
+                          .replaceAll('_', ' ');
+                      final notes = location['notes'] as String?;
+                      final features = (location['features'] as List?)
+                              ?.whereType<String>()
+                              .toList() ??
+                          const <String>[];
+                      final connections = (location['connectsTo'] as List?)
+                              ?.whereType<String>()
+                              .map((id) => _activeMapIndexLocations.firstWhere(
+                                    (candidate) => candidate['id'] == id,
+                                    orElse: () => <String, dynamic>{'name': id},
+                                  )['name'] as String? ?? id)
+                              .toList() ??
+                          const <String>[];
+                      return Card(
+                        child: Padding(
+                          padding: const EdgeInsets.all(16),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(locationName, style: Theme.of(context).textTheme.titleLarge),
+                              const SizedBox(height: 4),
+                              Text('Typ: $kind • Status: $status'),
+                              if (notes != null && notes.isNotEmpty) ...[
+                                const SizedBox(height: 8),
+                                Text(notes),
+                              ],
+                              if (features.isNotEmpty) ...[
+                                const SizedBox(height: 8),
+                                const Text('Ważne miejsca', style: TextStyle(fontWeight: FontWeight.w700)),
+                                Text(features.join(' • ')),
+                              ],
+                              if (connections.isNotEmpty) ...[
+                                const SizedBox(height: 8),
+                                const Text('Połączenia', style: TextStyle(fontWeight: FontWeight.w700)),
+                                Text(connections.join(' • ')),
+                              ],
+                              const SizedBox(height: 8),
+                              const Text('Dokładne pozycje na mapie i pinezki wymagają osobnej weryfikacji dla wybranej wersji gry.'),
+                            ],
+                          ),
+                        ),
+                      );
+                    },
+                  ),
+                if (_isLetsGoKanto) ...[
                                 const SizedBox(height: 12),
                                 Container(
                                   width: double.infinity,
