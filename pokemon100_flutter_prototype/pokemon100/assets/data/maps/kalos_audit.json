@@ -250,10 +250,13 @@
       "id": "route_1",
       "name": "Route 1",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "vaniville_town",
+        "aquacorde_town"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-kalos",
         "bulbapedia-route-list"
@@ -263,10 +266,13 @@
       "id": "route_2",
       "name": "Route 2",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "aquacorde_town",
+        "santalune_forest"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-kalos",
         "bulbapedia-route-list"
@@ -276,10 +282,13 @@
       "id": "route_3",
       "name": "Route 3",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "santalune_forest",
+        "santalune_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-kalos",
         "bulbapedia-route-list"
@@ -289,10 +298,13 @@
       "id": "route_4",
       "name": "Route 4",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "santalune_city",
+        "lumiose_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-kalos",
         "bulbapedia-route-list"
@@ -302,10 +314,13 @@
       "id": "route_5",
       "name": "Route 5",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "camphrier_town",
+        "lumiose_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-kalos",
         "bulbapedia-route-list"
@@ -315,10 +330,13 @@
       "id": "route_6",
       "name": "Route 6",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_7",
+        "parfum_palace"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-kalos",
         "bulbapedia-route-list"
@@ -328,10 +346,15 @@
       "id": "route_7",
       "name": "Route 7",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_6",
+        "camphrier_town",
+        "connecting_cave",
+        "pokemon_day_care"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-kalos",
         "bulbapedia-route-list"
@@ -341,10 +364,14 @@
       "id": "route_8",
       "name": "Route 8",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "cyllage_city",
+        "connecting_cave",
+        "ambrette_town"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-kalos",
         "bulbapedia-route-list"
@@ -354,10 +381,13 @@
       "id": "route_9",
       "name": "Route 9",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "glittering_cave",
+        "ambrette_town"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-kalos",
         "bulbapedia-route-list"
@@ -367,10 +397,13 @@
       "id": "route_10",
       "name": "Route 10",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "geosenge_town",
+        "cyllage_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-kalos",
         "bulbapedia-route-list"
@@ -380,10 +413,13 @@
       "id": "route_11",
       "name": "Route 11",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "reflection_cave",
+        "geosenge_town"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-kalos",
         "bulbapedia-route-list"
@@ -393,10 +429,14 @@
       "id": "route_12",
       "name": "Route 12",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "azure_bay",
+        "coumarine_city",
+        "shalour_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-kalos",
         "bulbapedia-route-list"
@@ -406,10 +446,14 @@
       "id": "route_13",
       "name": "Route 13",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "coumarine_city",
+        "kalos_power_plant",
+        "lumiose_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-kalos",
         "bulbapedia-route-list"
@@ -419,10 +463,13 @@
       "id": "route_14",
       "name": "Route 14",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "laverre_city",
+        "lumiose_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-kalos",
         "bulbapedia-route-list"
@@ -432,10 +479,14 @@
       "id": "route_15",
       "name": "Route 15",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "dendemille_town",
+        "laverre_city",
+        "route_16"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-kalos",
         "bulbapedia-route-list"
@@ -445,10 +496,13 @@
       "id": "route_16",
       "name": "Route 16",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_15",
+        "lumiose_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-kalos",
         "bulbapedia-route-list"
@@ -458,10 +512,13 @@
       "id": "route_17",
       "name": "Route 17",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "anistar_city",
+        "dendemille_town"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-kalos",
         "bulbapedia-route-list"
@@ -471,10 +528,13 @@
       "id": "route_18",
       "name": "Route 18",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "anistar_city",
+        "couriway_town"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-kalos",
         "bulbapedia-route-list"
@@ -484,10 +544,13 @@
       "id": "route_19",
       "name": "Route 19",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "couriway_town",
+        "snowbelle_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-kalos",
         "bulbapedia-route-list"
@@ -497,10 +560,13 @@
       "id": "route_20",
       "name": "Route 20",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "snowbelle_city",
+        "pokemon_village"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-kalos",
         "bulbapedia-route-list"
@@ -510,10 +576,13 @@
       "id": "route_21",
       "name": "Route 21",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "snowbelle_city",
+        "victory_road"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-kalos",
         "bulbapedia-route-list"
@@ -523,10 +592,14 @@
       "id": "route_22",
       "name": "Route 22",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "victory_road",
+        "santalune_city",
+        "chamber_of_emptiness"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-kalos",
         "bulbapedia-route-list"
@@ -739,6 +812,114 @@
         "bulbapedia-kalos",
         "pokemony-kalos"
       ]
+    },
+    {
+      "id": "pokemon_day_care",
+      "name": "Pokémon Day Care",
+      "kind": "facility",
+      "connectsTo": [
+        "route_7"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "connection_indexed_variant_audit_pending"
+    },
+    {
+      "id": "azure_bay",
+      "name": "Azure Bay",
+      "kind": "bay",
+      "connectsTo": [
+        "route_12",
+        "sea_spirits_den"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "connection_indexed_variant_audit_pending"
+    },
+    {
+      "id": "kalos_power_plant",
+      "name": "Kalos Power Plant",
+      "kind": "facility",
+      "connectsTo": [
+        "route_13"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "connection_indexed_variant_audit_pending"
+    },
+    {
+      "id": "pokemon_village",
+      "name": "Pokémon Village",
+      "kind": "village",
+      "connectsTo": [
+        "route_20"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "connection_indexed_variant_audit_pending"
+    },
+    {
+      "id": "chamber_of_emptiness",
+      "name": "Chamber of Emptiness",
+      "kind": "cave",
+      "connectsTo": [
+        "route_22"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "connection_indexed_variant_audit_pending"
+    },
+    {
+      "id": "sea_spirits_den",
+      "name": "Sea Spirit's Den",
+      "kind": "cave",
+      "connectsTo": [
+        "azure_bay"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "connection_indexed_variant_audit_pending"
+    },
+    {
+      "id": "victory_road_gate",
+      "name": "Victory Road Gate",
+      "kind": "gate",
+      "connectsTo": [
+        "route_21",
+        "route_22",
+        "victory_road"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "connection_indexed_variant_audit_pending"
     }
   ]
 }
