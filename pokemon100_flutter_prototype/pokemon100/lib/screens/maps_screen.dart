@@ -4704,8 +4704,8 @@ class _KantoMapPainter extends CustomPainter {
         occupiedLabelRects.add(
           Rect.fromCenter(
             center: badgeCenter,
-            width: routeNumber.length == 1 ? 21 : 25,
-            height: 17,
+            width: routeNumber.length == 1 ? 24 : 28,
+            height: 19,
           ).inflate(1),
         );
       }
@@ -4759,8 +4759,8 @@ class _KantoMapPainter extends CustomPainter {
         final badgeCenter = point + const Offset(0, 13);
         final badgeRect = Rect.fromCenter(
           center: badgeCenter,
-          width: routeNumber.length == 1 ? 21 : 25,
-          height: 17,
+          width: routeNumber.length == 1 ? 24 : 28,
+          height: 19,
         );
         canvas.drawRRect(
           RRect.fromRectAndRadius(badgeRect, const Radius.circular(5)),
@@ -4783,7 +4783,7 @@ class _KantoMapPainter extends CustomPainter {
               color: isWaterRouteNode
                   ? const Color(0xFF347D8B)
                   : const Color(0xFF6D614A),
-              fontSize: 8.5,
+              fontSize: 10.5,
               fontWeight: FontWeight.w900,
             ),
           ),
