@@ -2316,6 +2316,53 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
       'Korytarze i kabiny': 'Wnętrze statku przedstawione jako uproszczony układ stref.',
       'Kabina kapitana': 'Obszar wydarzenia z HM Cut; pozycja jest poglądowa.',
     },
+    'Cerulean City': {
+      'Pokémon Center': 'Punkt leczenia drużyny; budynek pokazany symbolicznie.',
+      'Cerulean Gym': 'Gym Misty. Schemat nie odwzorowuje dokładnego wnętrza.',
+      'Nugget Bridge / Route 24': 'Północny kierunek wyjścia na Route 24.',
+      'Route 5': 'Południowe wyjście w stronę Saffron City przez Route 5.',
+    },
+    'Vermilion City': {
+      'Port': 'Obszar portowy i dostęp do S.S. Anne.',
+      'Pokémon Fan Club': 'Budynek klubu fanów Pokémonów.',
+      'Vermilion Gym': 'Gym porucznika Surge’a; położenie symboliczne.',
+      'Route 11': 'Wschodni kierunek wyjścia na Route 11.',
+    },
+    'Celadon City': {
+      'Department Store': 'Dom towarowy; osobny budynek w mieście.',
+      'Game Corner': 'Salon gier Team Rocket.',
+      'Celadon Gym': 'Gym Eriki.',
+      'Route 16': 'Zachodni kierunek na Route 16.',
+    },
+    'Saffron City': {
+      'Silph Co.': 'Duży budynek korporacji Silph.',
+      'Saffron Gym': 'Gym Sabriny.',
+      'Fighting Dojo': 'Dojo walki obok Gymu.',
+      'Route 6 / Route 8': 'Południowe i zachodnie kierunki wyjścia z miasta.',
+    },
+    'Lavender Town': {
+      'Pokémon Tower': 'Wieża Pokémonów; osobna lokacja z piętrami.',
+      'Pokémon Center': 'Punkt leczenia drużyny.',
+      'Route 8': 'Zachodni kierunek do Saffron City.',
+      'Route 12': 'Południowy kierunek na trasę nadmorską.',
+    },
+    'Fuchsia City': {
+      'Safari Zone': 'Wejście do Safari Zone; nie pokazujemy dokładnych stref wewnętrznych.',
+      'Fuchsia Gym': 'Gym Kogi.',
+      'GO Park': 'Obiekt Let’s Go związany z przenoszeniem Pokémonów.',
+      'Route 15 / Route 18': 'Kierunki na północ i zachód od miasta.',
+    },
+    'Cinnabar Island': {
+      'Pokémon Mansion': 'Ruiny rezydencji z dokumentami o Mewtwo.',
+      'Cinnabar Lab': 'Laboratorium na wyspie.',
+      'Cinnabar Gym': 'Gym Blaine’a.',
+      'Route 21': 'Północny kierunek wodnej trasy do Pallet Town.',
+    },
+    'Indigo Plateau': {
+      'League Reception Gate': 'Wejście do kompleksu Ligi Pokémon.',
+      'Victory Road': 'Droga prowadząca do Ligi.',
+      'Pokémon Center': 'Punkt przygotowania drużyny przed Ligą.',
+    },
   };
 
   @override
