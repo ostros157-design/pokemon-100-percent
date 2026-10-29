@@ -767,3 +767,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Commity: `b4f7655`, `986e9c6`, `8e33827`, `60af84a`, `151f41f`, `82cb120`, `c10cb32`, `c63eb83`, `b22bf45`, `478b692`, `9532707`, `eca450a`, `bbc4d3e`, `bfe1e87`, `55f68e2`, `daa4bb1`, `4535255`, `4a367a3`, `1fb5c24`, `2d1ca15`, `93d9554`, `db3cb1a`, `f27d5c8`, `b172579`.
 - Audyt danych: 11 plików JSON parsuje się; brak zduplikowanych ID, brak nieistniejących `sourceIds` i brak niedziałających `connectsTo` po poprawkach. To nie jest jeszcze walidacja kompilacji Flutter.
 - Nadal nie ma dokładnych map graficznych w skali gry dla pozostałych regionów, pełnych map wnętrz ani zweryfikowanych pinezek dla wszystkich Pokémonów, trenerów i przedmiotów. Nie uruchamiano Flutter analyzer, testów ani APK.
+
+
+### Mapy — Hisui i Paldea: rozwinięcie obszarów 100% (2026-10-29)
+
+- Hisui rozszerzono do 109 rekordów: pięć głównych obszarów, obozy bazowe, osady oraz nazwane podobszary, areny, jaskinie i ruiny. Opis wyraźnie rozróżnia wybór obszaru/fast travel od fizycznych tras.
+- Paldeę rozszerzono do 81 rekordów: Area Zero i obiekty wewnętrzne, cztery sanktuaria, punkty orientacyjne, bazy Team Star oraz biomy DLC; dodano metadane prowincji i źródła dla mapy otwartego świata.
+- Commity: `a395662`, `9c17f9a`, `78c2dd4`, `d0db878`.
+- Paldea nie ma ponumerowanych tras; nadal nie ma dokładnych pinezek Pokémonów, przedmiotów, stake’ów, Gimmighoul, raidów i trenerów. Hisui nadal wymaga dokładnych planów map obszarów i punktów znajdziek.
