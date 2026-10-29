@@ -195,9 +195,13 @@ class _MapsScreenState extends State<MapsScreen> {
         (location['rareEncounter'] as Map)['name'].toString(),
     ].where((name) => name.trim().isNotEmpty).toSet().toList();
     final notablePokemon = notableEntries.where((name) {
-      return pokemonList.any((candidate) =>
-          _normalizePokemonName(candidate.name) ==
+      final alreadyInEncounterList = encounters.any((entry) =>
+          _normalizePokemonName(entry['name'] ?? '') ==
           _normalizePokemonName(name));
+      return !alreadyInEncounterList &&
+          pokemonList.any((candidate) =>
+              _normalizePokemonName(candidate.name) ==
+              _normalizePokemonName(name));
     }).toList();
     final notableNotes = notableEntries
         .where((name) => !notablePokemon.contains(name))
