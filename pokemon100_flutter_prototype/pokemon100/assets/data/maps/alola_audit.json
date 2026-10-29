@@ -1010,22 +1010,6 @@
         "pokemony-alola"
       ],
       "dataStatus": "connection_indexed_version_audit_pending"
-    },
-    {
-      "id": "paniola_ranch",
-      "name": "Paniola Ranch",
-      "kind": "ranch",
-      "connectsTo": [
-        "route_5",
-        "route_6"
-      ],
-      "localMapAsset": null,
-      "coordinateStatus": "unverified",
-      "sourceIds": [
-        "bulbapedia-alola",
-        "pokemony-alola"
-      ],
-      "dataStatus": "connection_indexed_version_audit_pending"
     }
   ]
 }
