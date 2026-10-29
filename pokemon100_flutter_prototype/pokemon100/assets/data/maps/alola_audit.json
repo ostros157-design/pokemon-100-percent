@@ -49,6 +49,11 @@
       "id": "bulbapedia-akala-outskirts",
       "url": "https://bulbapedia.bulbagarden.net/wiki/Akala_Outskirts",
       "scope": "Akala Outskirts connection to Memorial Hill and Ruins of Life"
+    },
+    {
+      "id": "bulbapedia-poni",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Poni_Island",
+      "scope": "Poni Island named areas and route progression"
     }
   ],
   "locations": [
@@ -822,10 +827,11 @@
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_connection_indexed_version_audit_pending",
+      "dataStatus": "island_access_source_verified_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-alola",
-        "pokemony-alola"
+        "pokemony-alola",
+        "bulbapedia-poni"
       ]
     },
     {
@@ -854,10 +860,11 @@
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_connection_indexed_version_audit_pending",
+      "dataStatus": "island_access_source_verified_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-alola",
-        "pokemony-alola"
+        "pokemony-alola",
+        "bulbapedia-poni"
       ]
     },
     {
@@ -885,14 +892,16 @@
         "poni_meadow",
         "poni_gauntlet",
         "vast_poni_canyon",
-        "poni_breaker_coast"
+        "poni_breaker_coast",
+        "ancient_poni_path"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_connection_indexed_version_audit_pending",
+      "dataStatus": "island_access_source_verified_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-alola",
-        "pokemony-alola"
+        "pokemony-alola",
+        "bulbapedia-poni"
       ]
     },
     {
@@ -1183,15 +1192,17 @@
       "kind": "path",
       "connectsTo": [
         "seafolk_village",
-        "poni_wilds"
+        "poni_wilds",
+        "poni_plains"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-alola",
-        "bulbapedia-route-list"
+        "bulbapedia-route-list",
+        "bulbapedia-poni"
       ],
-      "dataStatus": "location_connection_indexed_version_audit_pending"
+      "dataStatus": "island_access_source_verified_variant_audit_pending"
     },
     {
       "id": "poni_wilds",
@@ -1205,9 +1216,10 @@
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-alola",
-        "bulbapedia-route-list"
+        "bulbapedia-route-list",
+        "bulbapedia-poni"
       ],
-      "dataStatus": "location_connection_indexed_version_audit_pending"
+      "dataStatus": "island_access_source_verified_variant_audit_pending"
     },
     {
       "id": "poni_breaker_coast",
