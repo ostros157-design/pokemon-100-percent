@@ -860,3 +860,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Dodano zweryfikowane połączenia dostępu promem między Hau’oli City, Heahea City, Malie City, Seafolk Village i Aether Paradise. Notatki zaznaczają, że są to połączenia transportowe, a nie fizyczne sąsiedztwo; część kursów zależy od postępu fabuły.
 - Dodano osobne źródła dla terminali promowych w Hau’oli, Heahea i Malie City.
 - Commit: `8c1b96f`.
+
+
+### Mapy — Galar: dostęp kolejowy i stacje DLC (2026-10-29)
+
+- Dodano węzeł sieci kolejowej oraz 9 stacji: Wedgehurst, Wild Area, Motostoke, Hulbury, Hammerlocke, White Hill, Wyndon, Armor i Crown Tundra.
+- Połączenia kolejowe są opisane jako transport, nie jako fizyczna bliskość. Węzły pomagają przechodzić między główną częścią Galar a Isle of Armor i Crown Tundra; dostęp zależy od fabuły i DLC.
+- Źródła: `https://bulbapedia.bulbagarden.net/wiki/Wild_Area_Station` oraz `https://bulbapedia.bulbagarden.net/wiki/Transportation_in_the_Pok%C3%A9mon_world`.
+- Commity: `e135641`, `87841f1`, `239173b`.
