@@ -202,6 +202,26 @@
       "id": "routepedia-vermilion-eevee",
       "url": "https://theroutepedia.com/pokemon-lets-go-eevee/vermilion-city",
       "scope": "Vermilion City Eevee version details"
+    },
+    {
+      "id": "routepedia-route7-pikachu",
+      "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/route-7",
+      "scope": "Route 7 connections"
+    },
+    {
+      "id": "routepedia-route8-pikachu",
+      "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/route-8",
+      "scope": "Route 8 connections"
+    },
+    {
+      "id": "routepedia-route9-pikachu",
+      "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/route-9",
+      "scope": "Route 9 trainers and connections"
+    },
+    {
+      "id": "bulbapedia-part8",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Appendix%3ALet%27s_Go,_Pikachu!_and_Let%27s_Go,_Eevee!/Part_8",
+      "scope": "Route 7–10, Rock Tunnel and Lavender Town walkthrough"
     }
   ],
   "locations": [
@@ -1615,6 +1635,68 @@
       "sourceIds": [
         "routepedia-vermilion-pikachu",
         "routepedia-vermilion-eevee"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "route_7",
+      "name": "Route 7",
+      "kind": "route",
+      "connectsTo": [
+        "celadon_city",
+        "saffron_city",
+        "underground_path_7_8"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "notes": "Krótka trasa łącząca Celadon City z Saffron City; zachodni wylot Underground Path (Routes 7–8).",
+      "sourceIds": [
+        "routepedia-route7-pikachu",
+        "bulbapedia-part8"
+      ],
+      "dataStatus": "connections_verified_details_pending"
+    },
+    {
+      "id": "route_8",
+      "name": "Route 8",
+      "kind": "route",
+      "connectsTo": [
+        "lavender_town",
+        "saffron_city",
+        "underground_path_7_8"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "notes": "Trasa między Lavender Town i Saffron City; wschodni wylot Underground Path (Routes 7–8).",
+      "sourceIds": [
+        "routepedia-route8-pikachu",
+        "bulbapedia-part8"
+      ],
+      "dataStatus": "connections_verified_details_pending"
+    },
+    {
+      "id": "route_9",
+      "name": "Route 9",
+      "kind": "route",
+      "connectsTo": [
+        "cerulean_city",
+        "route_10"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "notes": "Kamienista droga z Cerulean City do Route 10; część wschodnia wymaga Cut.",
+      "trainers": [
+        "Picnicker Alicia — Eevee Lv. 21 i Gloom Lv. 21",
+        "Bug Catcher Conner — Paras Lv. 19",
+        "Hiker Jeremy — Onix Lv. 22",
+        "Camper Drew — Sandshrew Lv. 21 i Raticate Lv. 21",
+        "Youngster Chris — Diglett Lv. 20 i Fearow Lv. 20",
+        "Black Belt Brice — Mankey Lv. 23",
+        "Picnicker Caitlin — Goldeen Lv. 21"
+      ],
+      "sourceIds": [
+        "routepedia-route9-pikachu",
+        "bulbapedia-part8"
       ],
       "dataStatus": "text_verified_positions_not_mapped"
     }
