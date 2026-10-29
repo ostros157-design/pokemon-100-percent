@@ -4297,8 +4297,9 @@ class _KantoMapPainter extends CustomPainter {
         'Route 20',
         'Route 21',
       }.contains(b.name);
-      final isDiglettTunnel = (a.name == "Diglett's Cave" && b.name == 'Route 11') ||
-          (b.name == "Diglett's Cave" && a.name == 'Route 11');
+      final isDiglettTunnel =
+          (a.name == "Diglett's Cave" && b.name.startsWith("Diglett's Cave (Route")) ||
+          (b.name == "Diglett's Cave" && a.name.startsWith("Diglett's Cave (Route"));
       final isUndergroundLink = isDiglettTunnel ||
           a.name.startsWith('Underground Path') ||
           b.name.startsWith('Underground Path');
