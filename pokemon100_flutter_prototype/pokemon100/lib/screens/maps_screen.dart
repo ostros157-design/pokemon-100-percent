@@ -227,7 +227,21 @@ class _MapsScreenState extends State<MapsScreen> {
         .where((name) => !notablePokemon.contains(name))
         .toList();
     final items = (location['items'] as List?)
-            ?.map((value) => value.toString())
+            ?.map((value) {
+              if (value is Map) {
+                final name = value['name']?.toString() ?? 'Przedmiot';
+                final quantity = value['quantity'];
+                final label = quantity is num && quantity > 1
+                    ? '$name ×${quantity.toInt()}'
+                    : name;
+                final locationDescription =
+                    value['locationDescription']?.toString().trim() ?? '';
+                return locationDescription.isEmpty
+                    ? label
+                    : '$label — $locationDescription';
+              }
+              return value.toString();
+            })
             .where((value) => value.trim().isNotEmpty)
             .toList() ??
         const <String>[];
