@@ -117,6 +117,16 @@
       "id": "bulbapedia-part4",
       "url": "https://bulbapedia.bulbagarden.net/wiki/Walkthrough:Pok%C3%A9mon:_Let%27s_Go,_Pikachu!_and_Let%27s_Go,_Eevee!/Part_4",
       "scope": "Route 3, Mt. Moon and Route 4 story progression"
+    },
+    {
+      "id": "routepedia-route3-eevee",
+      "url": "https://theroutepedia.com/pokemon-lets-go-eevee/route-3",
+      "scope": "Route 3 Let's Go Eevee encounters, items, trainers and connections"
+    },
+    {
+      "id": "routepedia-mt-moon-eevee",
+      "url": "https://theroutepedia.com/pokemon-lets-go-eevee/mt-moon",
+      "scope": "Mt. Moon Let's Go Eevee floors, encounter rates and hidden items"
     }
   ],
   "locations": [
