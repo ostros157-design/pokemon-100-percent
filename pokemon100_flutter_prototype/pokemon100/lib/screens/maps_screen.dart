@@ -4617,6 +4617,7 @@ class _KantoMapPainter extends CustomPainter {
             badgeCenter.dy - badgeText.height / 2,
           ),
         );
+        occupiedLabelRects.add(badgeRect.inflate(1));
       }
       final isSelected = place.name.toLowerCase() == selectedLocation.toLowerCase();
       if (isSelected) {
