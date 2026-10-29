@@ -67,6 +67,21 @@
       "id": "bulbapedia-viridian-city",
       "url": "https://bulbapedia.bulbagarden.net/wiki/Walkthrough:Pok%C3%A9mon:Let%27s_Go,_Pikachu!_and_Let%27s_Go,_Eevee!/Part_2",
       "scope": "Viridian City route connections, buildings, Oak's Parcel handoff and early-story north exit"
+    },
+    {
+      "id": "serebii-route2",
+      "url": "https://www.serebii.net/pokearth/kanto/route2.shtml",
+      "scope": "Route 2 connections and version-specific wild encounter rates for Let's Go"
+    },
+    {
+      "id": "routepedia-route2-pikachu",
+      "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/route-2",
+      "scope": "Route 2 location overview and route connections"
+    },
+    {
+      "id": "routepedia-route2-eevee",
+      "url": "https://theroutepedia.com/pokemon-lets-go-eevee/route-2",
+      "scope": "Route 2 location overview for Let's Go Eevee"
     }
   ],
   "locations": [
@@ -370,6 +385,152 @@
           "sourceIds": [
             "bulbapedia-viridian-city"
           ]
+        }
+      ]
+    },
+    {
+      "id": "route_2",
+      "name": "Route 2",
+      "kind": "route",
+      "connectsTo": [
+        "viridian_city",
+        "viridian_forest",
+        "pewter_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "notes": "Route 2 has sections south and north of Viridian Forest. Serebii also describes an eastern path toward Diglett's Cave; exact in-app coordinates are not verified.",
+      "wildPokemonDetails": {
+        "lets_go_pikachu": [
+          {
+            "name": "Pidgey",
+            "method": "grass",
+            "levelRange": [
+              3,
+              4
+            ],
+            "ratePercent": 30
+          },
+          {
+            "name": "Rattata",
+            "method": "grass",
+            "levelRange": [
+              3,
+              4
+            ],
+            "ratePercent": 20
+          },
+          {
+            "name": "Oddish",
+            "method": "grass",
+            "levelRange": [
+              3,
+              4
+            ],
+            "ratePercent": 20
+          },
+          {
+            "name": "Caterpie",
+            "method": "grass",
+            "levelRange": [
+              3,
+              4
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Weedle",
+            "method": "grass",
+            "levelRange": [
+              3,
+              4
+            ],
+            "ratePercent": 15
+          }
+        ],
+        "lets_go_eevee": [
+          {
+            "name": "Pidgey",
+            "method": "grass",
+            "levelRange": [
+              3,
+              4
+            ],
+            "ratePercent": 30
+          },
+          {
+            "name": "Rattata",
+            "method": "grass",
+            "levelRange": [
+              3,
+              4
+            ],
+            "ratePercent": 20
+          },
+          {
+            "name": "Bellsprout",
+            "method": "grass",
+            "levelRange": [
+              3,
+              4
+            ],
+            "ratePercent": 20
+          },
+          {
+            "name": "Caterpie",
+            "method": "grass",
+            "levelRange": [
+              3,
+              4
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Weedle",
+            "method": "grass",
+            "levelRange": [
+              3,
+              4
+            ],
+            "ratePercent": 15
+          }
+        ]
+      },
+      "encounterStatus": "text_verified",
+      "sourceIds": [
+        "serebii-route2",
+        "routepedia-route2-pikachu",
+        "routepedia-route2-eevee"
+      ],
+      "features": [
+        {
+          "id": "south_section",
+          "name": "Southern section",
+          "category": "route_area",
+          "note": "Connects with Viridian City.",
+          "status": "text_verified"
+        },
+        {
+          "id": "forest_passage",
+          "name": "Viridian Forest passage",
+          "category": "route_area",
+          "note": "Viridian Forest lies between the southern and northern parts of Route 2.",
+          "status": "text_verified"
+        },
+        {
+          "id": "north_section",
+          "name": "Northern section",
+          "category": "route_area",
+          "note": "Continues toward Pewter City.",
+          "status": "text_verified"
+        },
+        {
+          "id": "diglett_cave_access",
+          "name": "Eastern path toward Diglett's Cave",
+          "category": "cave_access",
+          "note": "Access is described in route references; no positioned pin is approved.",
+          "coordinateStatus": "unverified",
+          "status": "text_verified_position_not_mapped"
         }
       ]
     }
