@@ -807,3 +807,9 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Uzupełniono parent-region i powiązania dla pozostałych znanych lokacji Hisui.
 - Commity: `a47b69c`, `482eae6`, `bccce66`, `66df0f2`, `57b2dfd`, `082ab96`, `5c28600`, `6386e02`.
 - Część połączeń jest oznaczona jako wymagająca audytu wariantu gry/DLC. Nadal nie ma zweryfikowanych współrzędnych ani pełnych pinów dla każdego obszaru.
+
+
+### Mapy — korekty po audycie grafów (2026-10-29)
+
+- Usunięto duplikat Iki Town w indeksie Aloli i poprawiono połączenia Pokémon League w Galar; Galar nie jest sztucznie łączony z nieistniejącą w tej grze Victory Road.
+- Commity: `fa624a3`, `30479f5`.
