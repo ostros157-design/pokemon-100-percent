@@ -651,3 +651,10 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 - Elementy te są wyłącznie teksturą dekoracyjną: nie oznaczają zweryfikowanego lasu, gór ani konkretnej lokacji w grze. Nie dodano nowych pinezek, przedmiotów ani współrzędnych.
 - Commit kodu: `388877c7d670048f4f36fedb2edc03bd3f0dd553`.
 - Status: zapisano w GitHubie. Flutter analyze, testy i build APK nie zostały uruchomione; kompilacja i wygląd na urządzeniu nie są jeszcze zweryfikowane.
+
+
+### Mapy — pełna legenda wymaganych warstw Kanto (2026-10-29)
+- Rozszerzono legendę mapy o wszystkie wymagane kategorie: miasta, trasy, Pokémony, przedmioty, trenerzy/walki i znajdźki do 100%.
+- Dodano jawne wyjaśnienie, że obecne miasta/trasy są schematyczne, a kategorie Pokémonów, przedmiotów, trenerów i znajdziek nie mają jeszcze zweryfikowanych pinezek. To legenda planowanych warstw danych, nie deklaracja, że wszystkie znaczniki już działają.
+- Commit kodu: `e83ca503b649ec2eda793cab421ed47fba608154`.
+- Status: zapisano w GitHubie. Nie uruchomiono Flutter analyze, testów ani builda APK; poprawność kompilacji i wygląd na urządzeniu pozostają niezweryfikowane.
