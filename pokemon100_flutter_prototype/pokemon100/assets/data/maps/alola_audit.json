@@ -39,6 +39,16 @@
       "id": "bulbapedia-malie-ferry",
       "url": "https://bulbapedia.bulbagarden.net/wiki/Malie_City",
       "scope": "Ula'ula Ferry Terminal destinations and access"
+    },
+    {
+      "id": "bulbapedia-diglett-tunnel-alola",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Diglett%27s_Tunnel",
+      "scope": "Diglett's Tunnel access between Heahea City, Konikoni City and Route 9"
+    },
+    {
+      "id": "bulbapedia-akala-outskirts",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Akala_Outskirts",
+      "scope": "Akala Outskirts connection to Memorial Hill and Ruins of Life"
     }
   ],
   "locations": [
@@ -92,17 +102,20 @@
         "aether_paradise",
         "hau_oli_city",
         "malie_city",
-        "seafolk_village"
+        "seafolk_village",
+        "diglett_s_tunnel"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "ferry_access_source_verified_story_unlock_conditions_may_apply",
+      "dataStatus": "connection_source_verified_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-alola",
         "pokemony-alola",
         "bulbapedia-hauoli-ferry",
         "bulbapedia-heahea-ferry",
-        "bulbapedia-malie-ferry"
+        "bulbapedia-malie-ferry",
+        "bulbapedia-diglett-tunnel-alola",
+        "bulbapedia-akala-outskirts"
       ],
       "notes": "Dostęp promem do innych wysp/terminali Aloli; nie oznacza fizycznego sąsiedztwa na lądzie. Niektóre kursy wymagają postępu fabularnego."
     },
@@ -620,14 +633,17 @@
       "name": "Diglett's Tunnel",
       "kind": "landmark",
       "connectsTo": [
-        "route_9"
+        "route_9",
+        "heahea_city"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "connection_source_verified_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-alola",
-        "pokemony-alola"
+        "pokemony-alola",
+        "bulbapedia-diglett-tunnel-alola",
+        "bulbapedia-akala-outskirts"
       ]
     },
     {
@@ -665,14 +681,17 @@
       "name": "Akala Outskirts",
       "kind": "location",
       "connectsTo": [
-        "ruins_of_life"
+        "ruins_of_life",
+        "memorial_hill"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "connection_source_verified_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-alola",
-        "pokemony-alola"
+        "pokemony-alola",
+        "bulbapedia-diglett-tunnel-alola",
+        "bulbapedia-akala-outskirts"
       ]
     },
     {
@@ -680,14 +699,17 @@
       "name": "Memorial Hill",
       "kind": "location",
       "connectsTo": [
-        "route_9"
+        "route_9",
+        "akala_outskirts"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "connection_source_verified_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-alola",
-        "pokemony-alola"
+        "pokemony-alola",
+        "bulbapedia-diglett-tunnel-alola",
+        "bulbapedia-akala-outskirts"
       ]
     },
     {
