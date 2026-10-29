@@ -637,3 +637,10 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 - To pierwsza warstwa nowego stylu „miękka ilustracja HD”; nie dodano nowych miast, dróg ani pinezek. Dekoracyjne plamy nie są oznaczeniami biomów ani potwierdzonymi danymi geograficznymi.
 - Commit kodu: `ffda5919b5761146ed9a9379177aaf87fb383941`.
 - Status: zapisano w GitHubie. Nie uruchomiono Flutter analyze, testów ani builda APK; wygląd na urządzeniu i kompilacja pozostają niezweryfikowane.
+
+
+### Mapy — płynniejsze drogi na ilustracji Kanto (2026-10-29)
+- Połączono punkty istniejącej mapy miękkimi, zakrzywionymi ścieżkami z cieniem, jasnym obrzeżem i ciepłym środkiem zamiast pojedynczych prostych kresek.
+- Zmieniono wyłącznie sposób rysowania istniejących połączeń; nie dodano nowych relacji między lokacjami ani nowych współrzędnych. Przebieg nadal jest schematyczny, nie w skali.
+- Commit kodu: `1b462a301f717e1777f31304e68559ffb5ccb0e5`.
+- Status: zapisano w GitHubie. Nie uruchomiono Flutter analyze, testów ani builda APK.
