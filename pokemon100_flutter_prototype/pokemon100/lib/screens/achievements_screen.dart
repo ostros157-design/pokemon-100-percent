@@ -255,11 +255,11 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
         return _globalShinyCount > 0;
       case 'legendary':
         return _legendaryCaught;
-      case 'hidden_legend':
+      case 'mythical_explorer':
         return _mythicalCaught;
-      case 'hidden_team_rocket':
-        return _hiddenTeamRocketDefeated;
-      case 'hidden_complete':
+      case 'guide_first_step':
+        return _guideStarted;
+      case 'guide_master':
         return _hiddenCompletionReached && _globalCaughtCount > 0;
       case 'achievement_extra_01':
       case 'achievement_extra_02':
