@@ -1044,7 +1044,7 @@ class _MapsScreenState extends State<MapsScreen> {
                                       ),
                                       const SizedBox(height: 8),
                                       const Text(
-                                        'Poniżej znajduje się schematyczna mapa Kanto rysowana przez aplikację, więc działa bez internetu. Pokazuje główne miasta i ogólny układ regionu — nie jest mapą w skali i nie zawiera jeszcze dokładnych punktów przedmiotów, trenerów ani dzikich Pokémonów.',
+                                        'Poniżej znajduje się schematyczna mapa Kanto rysowana przez aplikację, więc działa bez internetu. Zawiera 74 wybieralne lokacje i 83 połączenia, w tym trasy, miasta, jaskinie, sale i wybrane wnętrza. To nadal nie jest mapa w skali ani dokładna kopia map z gry.',
                                       ),
                                       const SizedBox(height: 10),
                                       const Text(
@@ -1053,7 +1053,7 @@ class _MapsScreenState extends State<MapsScreen> {
                                       ),
                                       const SizedBox(height: 4),
                                       const Text(
-                                        '• Schematy lokalne są dostępne dla Pallet Town, Route 1, Viridian City, Route 2, Viridian Forest, Pewter City i Pewter Gym.\n• Symbole pokazują wyłącznie orientacyjny układ i informacje opisane w poradniku. Nie oznaczają dokładnych współrzędnych ani potwierdzonych pozycji przedmiotów.',
+                                        '• Po wybraniu węzła mapa pokazuje dane dostępne dla tej lokacji. Szczegółowe plany lokalne są na razie przygotowane tylko dla części miejsc.\n• Pozycje węzłów są poglądowe. Dokładne pinezki przedmiotów, trenerów i Pokémonów wymagają osobnej weryfikacji.',
                                       ),
                                       const SizedBox(height: 12),
                                       _KantoRegionMap(
@@ -1080,6 +1080,10 @@ class _MapsScreenState extends State<MapsScreen> {
                                           Chip(
                                             avatar: Icon(Icons.alt_route, size: 18),
                                             label: Text('Trasy'),
+                                          ),
+                                          Chip(
+                                            avatar: Icon(Icons.landscape_outlined, size: 18),
+                                            label: Text('Jaskinie / wnętrza'),
                                           ),
                                           Chip(
                                             avatar: Icon(Icons.catching_pokemon, size: 18),
