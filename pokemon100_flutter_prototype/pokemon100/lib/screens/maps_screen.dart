@@ -117,8 +117,12 @@ class _MapsScreenState extends State<MapsScreen> {
     }
   }
 
-  Map<String, dynamic>? get _activeMapIndex =>
-      _mapIndexes[_mapIndexRegionName];
+  Map<String, dynamic>? get _activeMapIndex {
+    // The current Kanto encounter/item index is specifically for Let's Go.
+    // Do not show those version-specific records as if they described RBY/FRLG.
+    if (_generation == 1 && !_isLetsGoKanto) return null;
+    return _mapIndexes[_mapIndexRegionName];
+  }
 
   List<Map<String, dynamic>> get _activeMapIndexLocations {
     final raw = _activeMapIndex?['locations'];
