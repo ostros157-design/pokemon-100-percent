@@ -347,16 +347,26 @@ class _MapsScreenState extends State<MapsScreen> {
       addEntries(selected);
       return result;
     }
+    if (selected is Map) {
+      for (final entry in selected.entries) {
+        final value = entry.value;
+        if (value is Map) {
+          addEntries([value], method: entry.key.toString());
+        }
+      }
+      return result;
+    }
 
     // Cave encounter data is grouped by floor (for example 1F/B1F/B2F),
-    // while route data is grouped by game version. Flatten floors but keep
-    // the floor label so the user knows where an encounter was documented.
+    // while route data is grouped by game version. Do not fall back to the
+    // other version's list if the selected game has no verified entry.
     for (final entry in raw.entries) {
       final key = entry.key.toString();
       if (key == 'levels' ||
           key == 'status' ||
           key == 'sourceIds' ||
-          key == 'rareEncounter') {
+          key == 'rareEncounter' ||
+          key.startsWith('lets_go_')) {
         continue;
       }
       if (entry.value is List) addEntries(entry.value, method: key);
