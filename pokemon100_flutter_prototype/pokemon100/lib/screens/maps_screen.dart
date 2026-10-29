@@ -2885,6 +2885,34 @@ class _KantoLocalAreaPainter extends CustomPainter {
         ..moveTo(size.width * .50, size.height * .28)
         ..lineTo(size.width * .35, size.height * .66)
         ..lineTo(size.width * .68, size.height * .66);
+    } else if (location.endsWith('Gym') ||
+        {
+          "Player's House",
+          "Professor Oak's Laboratory",
+          'Celadon Department Store',
+          'Celadon Game Corner',
+          'Celadon Condominiums',
+          'Cinnabar Lab',
+          'Fighting Dojo',
+          'GO Park',
+          'Sea Cottage',
+          "Bill's House",
+          'Pewter Museum of Science',
+          'Pokémon Fan Club',
+          'Pokémon Day Care',
+          'Team Rocket Hideout',
+          'Silph Co.',
+        }.contains(location)) {
+      drawZone(.12, .20, .30, .22);
+      drawZone(.58, .20, .30, .22);
+      drawZone(.12, .55, .30, .22);
+      drawZone(.58, .55, .30, .22);
+      path
+        ..moveTo(size.width * .27, size.height * .31)
+        ..lineTo(size.width * .73, size.height * .31)
+        ..lineTo(size.width * .73, size.height * .66)
+        ..lineTo(size.width * .27, size.height * .66)
+        ..close();
     } else {
       path
         ..moveTo(size.width * .14, size.height * .72)
@@ -3055,6 +3083,36 @@ class _KantoLocalAreaPainter extends CustomPainter {
         ('League Gate', Offset(size.width * .22, size.height * .31)),
         ('Pokémon Center', Offset(size.width * .50, size.height * .28)),
         ('Victory Road', Offset(size.width * .79, size.height * .33)),
+      ]);
+    } else if (location.endsWith('Gym')) {
+      markers.addAll([
+        ('Sala Gymu', Offset(size.width * .27, size.height * .31)),
+        ('Trenerzy', Offset(size.width * .73, size.height * .31)),
+        ('Lider', Offset(size.width * .27, size.height * .65)),
+        ('Wyjście', Offset(size.width * .73, size.height * .65)),
+      ]);
+    } else if ({
+      "Player's House",
+      "Professor Oak's Laboratory",
+      'Celadon Department Store',
+      'Celadon Game Corner',
+      'Celadon Condominiums',
+      'Cinnabar Lab',
+      'Fighting Dojo',
+      'GO Park',
+      'Sea Cottage',
+      "Bill's House",
+      'Pewter Museum of Science',
+      'Pokémon Fan Club',
+      'Pokémon Day Care',
+      'Team Rocket Hideout',
+      'Silph Co.',
+    }.contains(location)) {
+      markers.addAll([
+        ('Wejście', Offset(size.width * .27, size.height * .31)),
+        ('Główna sala', Offset(size.width * .73, size.height * .31)),
+        ('Strefa wewnętrzna', Offset(size.width * .27, size.height * .65)),
+        ('Wyjście', Offset(size.width * .73, size.height * .65)),
       ]);
     } else if (location == 'Pewter City') {
       markers.addAll([
