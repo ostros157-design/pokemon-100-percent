@@ -64,6 +64,26 @@
       "id": "bulbapedia-blueberry-academy",
       "url": "https://bulbapedia.bulbagarden.net/wiki/Blueberry_Academy",
       "scope": "Blueberry Academy, Terarium and biome plazas"
+    },
+    {
+      "id": "bulbapedia-south-area-six",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/South_Province_%28Area_Six%29",
+      "scope": "South Province Area Six connections and Alfornada Cavern"
+    },
+    {
+      "id": "bulbapedia-east-area-two",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Area_Two_of_the_East_Province",
+      "scope": "East Province Area Two and adjacent regions"
+    },
+    {
+      "id": "bulbapedia-north-area-one",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/North_Province_Area_One",
+      "scope": "North Province Area One connections"
+    },
+    {
+      "id": "bulbapedia-montenevera",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Montenevera",
+      "scope": "Montenevera access from Glaseado Mountain"
     }
   ],
   "locations": [
@@ -242,11 +262,12 @@
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "settlement_area_connections_source_verified_exact_map_pins_pending",
+      "dataStatus": "area_connection_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
-        "bulbapedia-cities-towns"
+        "bulbapedia-cities-towns",
+        "bulbapedia-montenevera"
       ],
       "province": "North Province"
     },
@@ -370,16 +391,18 @@
       "name": "South Province (Area Four)",
       "kind": "area",
       "connectsTo": [
-        "south_province_area_one"
+        "south_province_area_one",
+        "south_province_area_six"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "core_access_connections_source_verified_exact_map_pins_pending",
+      "dataStatus": "area_connection_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
         "bulbapedia-south-area-one",
-        "bulbapedia-mesagoza"
+        "bulbapedia-mesagoza",
+        "bulbapedia-south-area-six"
       ],
       "province": "South Province"
     },
@@ -406,15 +429,20 @@
       "name": "South Province (Area Six)",
       "kind": "area",
       "connectsTo": [
-        "alfornada"
+        "alfornada",
+        "west_province_area_one",
+        "south_province_area_four",
+        "south_paldean_sea",
+        "alfornada_cavern"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "settlement_area_connections_source_verified_exact_map_pins_pending",
+      "dataStatus": "area_connection_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
-        "bulbapedia-cities-towns"
+        "bulbapedia-cities-towns",
+        "bulbapedia-south-area-six"
       ],
       "province": "South Province"
     },
@@ -423,15 +451,17 @@
       "name": "West Province (Area One)",
       "kind": "area",
       "connectsTo": [
-        "cascarrafa"
+        "cascarrafa",
+        "south_province_area_six"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "settlement_area_connections_source_verified_exact_map_pins_pending",
+      "dataStatus": "area_connection_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
-        "bulbapedia-cities-towns"
+        "bulbapedia-cities-towns",
+        "bulbapedia-south-area-six"
       ],
       "province": "West Province"
     },
@@ -474,15 +504,17 @@
       "name": "East Province (Area One)",
       "kind": "area",
       "connectsTo": [
-        "artazon"
+        "artazon",
+        "east_province_area_two"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "settlement_area_connections_source_verified_exact_map_pins_pending",
+      "dataStatus": "area_connection_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
-        "bulbapedia-cities-towns"
+        "bulbapedia-cities-towns",
+        "bulbapedia-east-area-two"
       ],
       "province": "East Province"
     },
@@ -491,15 +523,19 @@
       "name": "East Province (Area Two)",
       "kind": "area",
       "connectsTo": [
-        "levincia"
+        "levincia",
+        "east_province_area_one",
+        "east_province_area_three",
+        "east_paldean_sea"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "settlement_area_connections_source_verified_exact_map_pins_pending",
+      "dataStatus": "area_connection_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
-        "bulbapedia-cities-towns"
+        "bulbapedia-cities-towns",
+        "bulbapedia-east-area-two"
       ],
       "province": "East Province"
     },
@@ -508,15 +544,19 @@
       "name": "East Province (Area Three)",
       "kind": "area",
       "connectsTo": [
-        "zapapico"
+        "zapapico",
+        "east_province_area_two",
+        "north_province_area_one"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "settlement_area_connections_source_verified_exact_map_pins_pending",
+      "dataStatus": "area_connection_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
-        "bulbapedia-cities-towns"
+        "bulbapedia-cities-towns",
+        "bulbapedia-east-area-two",
+        "bulbapedia-north-area-one"
       ],
       "province": "East Province"
     },
@@ -524,13 +564,19 @@
       "id": "north_province_area_one",
       "name": "North Province (Area One)",
       "kind": "area",
-      "connectsTo": [],
+      "connectsTo": [
+        "glaseado_mountain",
+        "north_province_area_two",
+        "east_province_area_three",
+        "tagtree_thicket"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "dataStatus": "area_connection_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-north-area-one"
       ],
       "province": "North Province"
     },
@@ -538,13 +584,16 @@
       "id": "north_province_area_two",
       "name": "North Province (Area Two)",
       "kind": "area",
-      "connectsTo": [],
+      "connectsTo": [
+        "north_province_area_one"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "dataStatus": "area_connection_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-north-area-one"
       ],
       "province": "North Province"
     },
@@ -566,13 +615,16 @@
       "id": "tagtree_thicket",
       "name": "Tagtree Thicket",
       "kind": "natural_area",
-      "connectsTo": [],
+      "connectsTo": [
+        "north_province_area_one"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "dataStatus": "area_connection_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-north-area-one"
       ],
       "province": "East Province"
     },
@@ -612,15 +664,19 @@
       "name": "Glaseado Mountain",
       "kind": "natural_area",
       "connectsTo": [
-        "montenevera"
+        "montenevera",
+        "north_province_area_one",
+        "dalizapa_passage"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "settlement_area_connections_source_verified_exact_map_pins_pending",
+      "dataStatus": "area_connection_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
-        "bulbapedia-cities-towns"
+        "bulbapedia-cities-towns",
+        "bulbapedia-north-area-one",
+        "bulbapedia-montenevera"
       ],
       "province": "North Province"
     },
@@ -630,15 +686,17 @@
       "kind": "natural_area",
       "connectsTo": [
         "medali",
-        "zapapico"
+        "zapapico",
+        "glaseado_mountain"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "settlement_area_connections_source_verified_exact_map_pins_pending",
+      "dataStatus": "area_connection_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
-        "bulbapedia-cities-towns"
+        "bulbapedia-cities-towns",
+        "bulbapedia-montenevera"
       ],
       "province": "North Province"
     },
@@ -711,26 +769,32 @@
       "id": "south_paldean_sea",
       "name": "South Paldean Sea",
       "kind": "water_area",
-      "connectsTo": [],
+      "connectsTo": [
+        "south_province_area_six"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "dataStatus": "area_connection_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-south-area-six"
       ]
     },
     {
       "id": "east_paldean_sea",
       "name": "East Paldean Sea",
       "kind": "water_area",
-      "connectsTo": [],
+      "connectsTo": [
+        "east_province_area_two"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "dataStatus": "area_connection_source_verified_exact_map_pins_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-east-area-two"
       ]
     },
     {
@@ -981,14 +1045,17 @@
       "id": "alfornada_cavern",
       "name": "Alfornada Cavern",
       "kind": "cave",
-      "connectsTo": [],
+      "connectsTo": [
+        "south_province_area_six"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-south-area-six"
       ],
-      "dataStatus": "named_location_known_exact_pins_pending_verification",
+      "dataStatus": "area_connection_source_verified_exact_map_pins_pending",
       "province": "South Province"
     },
     {
