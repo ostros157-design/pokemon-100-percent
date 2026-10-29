@@ -3010,6 +3010,31 @@ class _KantoLocalAreaPainter extends CustomPainter {
         ..moveTo(size.width * .50, size.height * .28)
         ..lineTo(size.width * .35, size.height * .66)
         ..lineTo(size.width * .68, size.height * .66);
+    } else if (location.startsWith('Route ') ||
+        location.startsWith('Underground Path')) {
+      final isWaterRoute = {'Route 19', 'Route 20', 'Route 21'}.contains(location);
+      final sidePaint = Paint()
+        ..color = (isWaterRoute
+                ? const Color(0xFF8BCBD2)
+                : const Color(0xFF9ABF7E))
+            .withValues(alpha: .62);
+      for (final patch in <Rect>[
+        Rect.fromLTWH(size.width * .10, size.height * .18, size.width * .20, size.height * .16),
+        Rect.fromLTWH(size.width * .39, size.height * .64, size.width * .22, size.height * .15),
+        Rect.fromLTWH(size.width * .70, size.height * .20, size.width * .18, size.height * .17),
+      ]) {
+        canvas.drawRRect(
+          RRect.fromRectAndRadius(patch, const Radius.circular(12)),
+          sidePaint,
+        );
+      }
+      path
+        ..moveTo(size.width * .10, size.height * .80)
+        ..cubicTo(size.width * .25, size.height * .62, size.width * .34, size.height * .28, size.width * .52, size.height * .48)
+        ..cubicTo(size.width * .66, size.height * .65, size.width * .73, size.height * .30, size.width * .90, size.height * .18);
+      if (location.startsWith('Underground Path')) {
+        drawZone(.12, .36, .76, .28);
+      }
     } else if (location.endsWith('Gym') ||
         {
           "Player's House",
@@ -3208,6 +3233,13 @@ class _KantoLocalAreaPainter extends CustomPainter {
         ('League Gate', Offset(size.width * .22, size.height * .31)),
         ('Pokémon Center', Offset(size.width * .50, size.height * .28)),
         ('Victory Road', Offset(size.width * .79, size.height * .33)),
+      ]);
+    } else if (location.startsWith('Route ') ||
+        location.startsWith('Underground Path')) {
+      markers.addAll([
+        ('Początek trasy', Offset(size.width * .15, size.height * .76)),
+        ('Odcinek środkowy', Offset(size.width * .52, size.height * .48)),
+        ('Koniec trasy', Offset(size.width * .85, size.height * .22)),
       ]);
     } else if (location.endsWith('Gym')) {
       markers.addAll([
