@@ -4677,7 +4677,24 @@ class _KantoMapPainter extends CustomPainter {
     // Forest patches are decorative landscape, while town/cave symbols are
     // drawn at each actual selectable node below so they stay aligned.
     
+    // Reserve every node and route badge before placing any label. Without
+    // this pre-pass, an early label could cover a marker drawn later in the loop.
     final occupiedLabelRects = <Rect>[];
+    for (final place in places) {
+      final point = p(place.x, place.y);
+      occupiedLabelRects.add(Rect.fromCircle(center: point, radius: 10));
+      if (place.name.startsWith('Route ')) {
+        final routeNumber = place.name.substring('Route '.length);
+        final badgeCenter = point + const Offset(0, 13);
+        occupiedLabelRects.add(
+          Rect.fromCenter(
+            center: badgeCenter,
+            width: routeNumber.length == 1 ? 21 : 25,
+            height: 17,
+          ).inflate(1),
+        );
+      }
+    }
     for (final place in places) {
       final point = p(place.x, place.y);
       final name = place.name;
@@ -4764,7 +4781,6 @@ class _KantoMapPainter extends CustomPainter {
             badgeCenter.dy - badgeText.height / 2,
           ),
         );
-        occupiedLabelRects.add(badgeRect.inflate(1));
       }
       final isSelected = place.name.toLowerCase() == selectedLocation.toLowerCase();
       if (isSelected) {
