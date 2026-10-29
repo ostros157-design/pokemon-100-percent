@@ -1145,3 +1145,9 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Zachowano ostrzeżenie, że ścieżki są schematyczne, a ich kształt nie stanowi dokładnej geometrii mapy z gry. Dla tras wodnych zastosowano odrębną paletę ilustracyjną.
 - Commit: `82adfef`. Bez uruchamiania testów, Flutter analyzer i budowy APK.
 
+### Mapy — Kanto: czytelność etykiet schematów lokalnych (2026-10-29)
+
+- Dodano delikatne, zaokrąglone tła i obrys etykiet na lokalnych planach, żeby napisy pozostały czytelne na tle stref i korytarzy.
+- Wektorowa grafika głównej mapy i planów lokalnych nadal skaluje się bez bitmapowego powiększania. Ostateczna czytelność na telefonie wymaga jeszcze obejrzenia w działającej aplikacji.
+- Commit: `81e2255`. Nie uruchamiano testów, analyzer ani APK.
+
