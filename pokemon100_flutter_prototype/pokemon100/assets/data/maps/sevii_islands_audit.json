@@ -1,0 +1,494 @@
+{
+  "schemaVersion": 1,
+  "region": "Sevii Islands",
+  "games": [
+    "Pokémon FireRed",
+    "Pokémon LeafGreen"
+  ],
+  "purpose": "Offline location index for the postgame island chain; not a scale-accurate map.",
+  "coordinatePolicy": "No exact coordinates or collectible pins until verified against FireRed/LeafGreen.",
+  "sources": [
+    {
+      "id": "bulbapedia-sevii-islands",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Sevii_Islands",
+      "scope": "Sevii Islands geography, islands and named landmarks"
+    },
+    {
+      "id": "bulbapedia-route-list",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/List_of_routes",
+      "scope": "Known connections for named island locations"
+    }
+  ],
+  "locations": [
+    {
+      "id": "one_island",
+      "name": "One Island",
+      "kind": "island",
+      "connectsTo": [
+        "open_ocean",
+        "treasure_beach",
+        "kindle_road"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-sevii-islands",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "named_location_and_access_indexed_exact_pins_pending"
+    },
+    {
+      "id": "treasure_beach",
+      "name": "Treasure Beach",
+      "kind": "beach",
+      "connectsTo": [
+        "one_island"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-sevii-islands",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "named_location_and_access_indexed_exact_pins_pending"
+    },
+    {
+      "id": "kindle_road",
+      "name": "Kindle Road",
+      "kind": "route",
+      "connectsTo": [
+        "one_island",
+        "ember_spa",
+        "mt_ember"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-sevii-islands",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "named_location_and_access_indexed_exact_pins_pending"
+    },
+    {
+      "id": "ember_spa",
+      "name": "Ember Spa",
+      "kind": "facility",
+      "connectsTo": [
+        "kindle_road"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-sevii-islands",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "named_location_and_access_indexed_exact_pins_pending"
+    },
+    {
+      "id": "mt_ember",
+      "name": "Mt. Ember",
+      "kind": "mountain",
+      "connectsTo": [
+        "kindle_road"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-sevii-islands",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "named_location_and_access_indexed_exact_pins_pending"
+    },
+    {
+      "id": "two_island",
+      "name": "Two Island",
+      "kind": "island",
+      "connectsTo": [
+        "open_ocean",
+        "cape_brink"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-sevii-islands",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "named_location_and_access_indexed_exact_pins_pending"
+    },
+    {
+      "id": "cape_brink",
+      "name": "Cape Brink",
+      "kind": "landmark",
+      "connectsTo": [
+        "two_island"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-sevii-islands",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "named_location_and_access_indexed_exact_pins_pending"
+    },
+    {
+      "id": "three_island",
+      "name": "Three Island",
+      "kind": "island",
+      "connectsTo": [
+        "open_ocean",
+        "three_isle_port"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-sevii-islands",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "named_location_and_access_indexed_exact_pins_pending"
+    },
+    {
+      "id": "three_isle_port",
+      "name": "Three Isle Port",
+      "kind": "port",
+      "connectsTo": [
+        "three_island",
+        "bond_bridge"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-sevii-islands",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "named_location_and_access_indexed_exact_pins_pending"
+    },
+    {
+      "id": "bond_bridge",
+      "name": "Bond Bridge",
+      "kind": "bridge",
+      "connectsTo": [
+        "three_isle_port",
+        "berry_forest"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-sevii-islands",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "named_location_and_access_indexed_exact_pins_pending"
+    },
+    {
+      "id": "berry_forest",
+      "name": "Berry Forest",
+      "kind": "forest",
+      "connectsTo": [
+        "bond_bridge"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-sevii-islands",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "named_location_and_access_indexed_exact_pins_pending"
+    },
+    {
+      "id": "four_island",
+      "name": "Four Island",
+      "kind": "island",
+      "connectsTo": [
+        "open_ocean",
+        "icefall_cave"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-sevii-islands",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "named_location_and_access_indexed_exact_pins_pending"
+    },
+    {
+      "id": "icefall_cave",
+      "name": "Icefall Cave",
+      "kind": "cave",
+      "connectsTo": [
+        "four_island"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-sevii-islands",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "named_location_and_access_indexed_exact_pins_pending"
+    },
+    {
+      "id": "five_island",
+      "name": "Five Island",
+      "kind": "island",
+      "connectsTo": [
+        "open_ocean",
+        "five_isle_meadow",
+        "water_labyrinth",
+        "resort_gorgeous",
+        "lost_cave"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-sevii-islands",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "named_location_and_access_indexed_exact_pins_pending"
+    },
+    {
+      "id": "five_isle_meadow",
+      "name": "Five Isle Meadow",
+      "kind": "meadow",
+      "connectsTo": [
+        "five_island"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-sevii-islands",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "named_location_and_access_indexed_exact_pins_pending"
+    },
+    {
+      "id": "water_labyrinth",
+      "name": "Water Labyrinth",
+      "kind": "water_area",
+      "connectsTo": [
+        "five_island"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-sevii-islands",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "named_location_and_access_indexed_exact_pins_pending"
+    },
+    {
+      "id": "resort_gorgeous",
+      "name": "Resort Gorgeous",
+      "kind": "landmark",
+      "connectsTo": [
+        "five_island",
+        "lost_cave"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-sevii-islands",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "named_location_and_access_indexed_exact_pins_pending"
+    },
+    {
+      "id": "lost_cave",
+      "name": "Lost Cave",
+      "kind": "cave",
+      "connectsTo": [
+        "five_island",
+        "resort_gorgeous"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-sevii-islands",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "named_location_and_access_indexed_exact_pins_pending"
+    },
+    {
+      "id": "six_island",
+      "name": "Six Island",
+      "kind": "island",
+      "connectsTo": [
+        "open_ocean",
+        "water_path",
+        "ruin_valley",
+        "pattern_bush",
+        "dotted_hole"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-sevii-islands",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "named_location_and_access_indexed_exact_pins_pending"
+    },
+    {
+      "id": "water_path",
+      "name": "Water Path",
+      "kind": "route",
+      "connectsTo": [
+        "six_island",
+        "ruin_valley"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-sevii-islands",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "named_location_and_access_indexed_exact_pins_pending"
+    },
+    {
+      "id": "ruin_valley",
+      "name": "Ruin Valley",
+      "kind": "ruins_area",
+      "connectsTo": [
+        "six_island",
+        "water_path",
+        "dotted_hole"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-sevii-islands",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "named_location_and_access_indexed_exact_pins_pending"
+    },
+    {
+      "id": "pattern_bush",
+      "name": "Pattern Bush",
+      "kind": "forest",
+      "connectsTo": [
+        "six_island"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-sevii-islands",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "named_location_and_access_indexed_exact_pins_pending"
+    },
+    {
+      "id": "dotted_hole",
+      "name": "Dotted Hole",
+      "kind": "cave",
+      "connectsTo": [
+        "six_island",
+        "ruin_valley"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-sevii-islands",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "named_location_and_access_indexed_exact_pins_pending"
+    },
+    {
+      "id": "seven_island",
+      "name": "Seven Island",
+      "kind": "island",
+      "connectsTo": [
+        "open_ocean",
+        "trainer_tower",
+        "sevault_canyon",
+        "tanoby_ruins"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-sevii-islands",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "named_location_and_access_indexed_exact_pins_pending"
+    },
+    {
+      "id": "trainer_tower",
+      "name": "Trainer Tower",
+      "kind": "tower",
+      "connectsTo": [
+        "seven_island"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-sevii-islands",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "named_location_and_access_indexed_exact_pins_pending"
+    },
+    {
+      "id": "sevault_canyon",
+      "name": "Sevault Canyon",
+      "kind": "canyon",
+      "connectsTo": [
+        "seven_island",
+        "tanoby_ruins"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-sevii-islands",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "named_location_and_access_indexed_exact_pins_pending"
+    },
+    {
+      "id": "tanoby_ruins",
+      "name": "Tanoby Ruins",
+      "kind": "ruins",
+      "connectsTo": [
+        "seven_island",
+        "sevault_canyon",
+        "tanoby_key"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-sevii-islands",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "named_location_and_access_indexed_exact_pins_pending"
+    },
+    {
+      "id": "tanoby_key",
+      "name": "Tanoby Key",
+      "kind": "landmark",
+      "connectsTo": [
+        "tanoby_ruins"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-sevii-islands",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "named_location_and_access_indexed_exact_pins_pending"
+    },
+    {
+      "id": "open_ocean",
+      "name": "Open ocean / inter-island travel",
+      "kind": "sea_access",
+      "connectsTo": [
+        "one_island",
+        "two_island",
+        "three_island",
+        "four_island",
+        "five_island",
+        "six_island",
+        "seven_island"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-sevii-islands",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "named_location_and_access_indexed_exact_pins_pending"
+    }
+  ]
+}
