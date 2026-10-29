@@ -1501,3 +1501,10 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - „Rozpoczynamy przygodę” korzysta teraz z osobnego zapisu otwarcia poradnika. Samo wejście do poradnika zapisuje stan, bez konieczności odhaczania kroku.
 - Nadal nie podłączono osiągnięć wymagających danych, których aplikacja nie rejestruje (m.in. odznaki poza krokiem Brocka, Elite Four, Champion, ewolucje, wymiany, ukończenie 5 gier i ukryte walki). Nie odblokowujemy ich na podstawie zgadywania.
 - Zmiany zapisano na gałęzi `mystery/improvement-03`; nie uruchomiono analizatora, testów ani budowania APK.
+
+### Osiągnięcia — warunki ukrytych osiągnięć (2026-10-29)
+
+- „Ukryta legenda” jest teraz odrębna od publicznego osiągnięcia „Legendarny”: wymaga złapania Pokémona oznaczonego w danych jako mityczny.
+- „Ukryty przeciwnik” odblokuje się po oznaczeniu jako ukończonego kroku poradnika, którego tytuł lub opis wspomina Team Rocket albo Giovanniego. Obecny poradnik Let’s Go kończy się przed tym wydarzeniem, więc osiągnięcie pozostaje zablokowane, dopóki nie będzie odpowiedniego kroku.
+- „Sekret pełnego ukończenia” wymaga 100% obecnie obliczanego postępu oraz ukończenia poradnika wybranej gry.
+- Zmiany zapisano na gałęzi `mystery/improvement-04`. Nie uruchamiano Flutter analyzer, testów ani APK; warunki sprawdzono statycznie w kodzie.
