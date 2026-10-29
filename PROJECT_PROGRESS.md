@@ -1485,3 +1485,10 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Statusy indeksu lokacji są teraz mapowane na krótkie komunikaty po polsku, np. „Szanse spotkań sprawdzone; pinezki niezweryfikowane” lub „Schemat wnętrza dostępny; dokładny plan pięter do weryfikacji”.
 - Commit UI: `03d5916`. Nie uruchamiano testów, analyzer ani APK.
 
+
+### Mapy — naprawa błędów kompilacji widoku mapy (2026-10-29)
+
+- Usunięto konflikt deklaracji lokalnej zmiennej w pętli etykiet, zmieniając drugą nazwę na `labelName`.
+- Zastąpiono nieobsługiwane `Canvas.clipPath(..., clipOp: ClipOp.difference)` operacją `Path.combine(PathOperation.difference, ...)`, aby zachować rysowanie fal wyłącznie poza kształtem lądu.
+- Zmiany zapisano na gałęzi `fix/maps-screen-build-errors`; nie scalono z `main`.
+- Nie uruchomiono `flutter analyze`, testów ani budowania APK w tym środowisku. Następny krok: użytkownik ponownie uruchamia komendę build i przekazuje ewentualne dalsze błędy.
