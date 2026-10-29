@@ -1140,15 +1140,15 @@ class _MapsScreenState extends State<MapsScreen> {
                                           ),
                                           Chip(
                                             avatar: Icon(Icons.inventory_2_outlined, size: 18),
-                                            label: Text('Przedmioty'),
+                                            label: Text('Lista przedmiotów'),
                                           ),
                                           Chip(
                                             avatar: Icon(Icons.sports_martial_arts_outlined, size: 18),
-                                            label: Text('Trenerzy / walki'),
+                                            label: Text('Lista trenerów / walki'),
                                           ),
                                           Chip(
                                             avatar: Icon(Icons.checklist_outlined, size: 18),
-                                            label: Text('Znajdźki 100%'),
+                                            label: Text('Lista znajdziek 100%'),
                                           ),
                                         ],
                                       ),
