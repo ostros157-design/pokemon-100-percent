@@ -1127,6 +1127,272 @@
         "bulbapedia-scarlet-violet"
       ],
       "dataStatus": "named_location_known_exact_pins_pending_verification"
+    },
+    {
+      "id": "kitakami_road",
+      "name": "Kitakami Road",
+      "kind": "path",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet",
+        "pokedb-paldea"
+      ],
+      "dataStatus": "dlc_named_location_pins_pending"
+    },
+    {
+      "id": "revelers_road",
+      "name": "Reveler's Road",
+      "kind": "path",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet",
+        "pokedb-paldea"
+      ],
+      "dataStatus": "dlc_named_location_pins_pending"
+    },
+    {
+      "id": "wistful_fields",
+      "name": "Wistful Fields",
+      "kind": "area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet",
+        "pokedb-paldea"
+      ],
+      "dataStatus": "dlc_named_location_pins_pending"
+    },
+    {
+      "id": "paradise_barrens",
+      "name": "Paradise Barrens",
+      "kind": "area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet",
+        "pokedb-paldea"
+      ],
+      "dataStatus": "dlc_named_location_pins_pending"
+    },
+    {
+      "id": "kitakami_wilds",
+      "name": "Kitakami Wilds",
+      "kind": "area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet",
+        "pokedb-paldea"
+      ],
+      "dataStatus": "dlc_named_location_pins_pending"
+    },
+    {
+      "id": "oni_maw",
+      "name": "Oni's Maw",
+      "kind": "cave",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet",
+        "pokedb-paldea"
+      ],
+      "dataStatus": "dlc_named_location_pins_pending"
+    },
+    {
+      "id": "dreaded_den",
+      "name": "Dreaded Den",
+      "kind": "cave",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet",
+        "pokedb-paldea"
+      ],
+      "dataStatus": "dlc_named_location_pins_pending"
+    },
+    {
+      "id": "fellhorn_gorge",
+      "name": "Fellhorn Gorge",
+      "kind": "gorge",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet",
+        "pokedb-paldea"
+      ],
+      "dataStatus": "dlc_named_location_pins_pending"
+    },
+    {
+      "id": "loyalty_plaza",
+      "name": "Loyalty Plaza",
+      "kind": "landmark",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet",
+        "pokedb-paldea"
+      ],
+      "dataStatus": "dlc_named_location_pins_pending"
+    },
+    {
+      "id": "timeless_woods",
+      "name": "Timeless Woods",
+      "kind": "forest",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet",
+        "pokedb-paldea"
+      ],
+      "dataStatus": "dlc_named_location_pins_pending"
+    },
+    {
+      "id": "blueberry_academy_central_plaza",
+      "name": "Blueberry Academy Central Plaza",
+      "kind": "building",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet",
+        "pokedb-paldea"
+      ],
+      "dataStatus": "dlc_named_location_pins_pending"
+    },
+    {
+      "id": "league_club",
+      "name": "League Club",
+      "kind": "building",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet",
+        "pokedb-paldea"
+      ],
+      "dataStatus": "dlc_named_location_pins_pending"
+    },
+    {
+      "id": "chargedstone_cavern",
+      "name": "Chargestone Cavern",
+      "kind": "cave",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet",
+        "pokedb-paldea"
+      ],
+      "dataStatus": "dlc_named_location_pins_pending"
+    },
+    {
+      "id": "coastal_plaza",
+      "name": "Coastal Plaza",
+      "kind": "plaza",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet",
+        "pokedb-paldea"
+      ],
+      "dataStatus": "dlc_named_location_pins_pending"
+    },
+    {
+      "id": "canyon_plaza",
+      "name": "Canyon Plaza",
+      "kind": "plaza",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet",
+        "pokedb-paldea"
+      ],
+      "dataStatus": "dlc_named_location_pins_pending"
+    },
+    {
+      "id": "polar_plaza",
+      "name": "Polar Plaza",
+      "kind": "plaza",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet",
+        "pokedb-paldea"
+      ],
+      "dataStatus": "dlc_named_location_pins_pending"
+    },
+    {
+      "id": "savanna_plaza",
+      "name": "Savanna Plaza",
+      "kind": "plaza",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet",
+        "pokedb-paldea"
+      ],
+      "dataStatus": "dlc_named_location_pins_pending"
+    },
+    {
+      "id": "savanna_biome",
+      "name": "Savanna Biome",
+      "kind": "area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet",
+        "pokedb-paldea"
+      ],
+      "dataStatus": "dlc_named_location_pins_pending"
+    },
+    {
+      "id": "terarium_core",
+      "name": "Terarium Core",
+      "kind": "facility",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet",
+        "pokedb-paldea"
+      ],
+      "dataStatus": "dlc_named_location_pins_pending"
     }
   ]
 }
