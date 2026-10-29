@@ -1000,3 +1000,10 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Dane nadal nie określają dokładnych pikselowych lokalizacji. Commit: `ad686dd`.
 - Nie uruchamiano Flutter analyzer, testów ani APK.
 
+### Mapy — spotkania na Route 14 i Route 15 (2026-10-29)
+
+- Dodano spotkania naziemne, standardowe spotkania na niebie i specjalne spawny dla obu wersji Let’s Go.
+- Uwzględniono różnice wersji, m.in. Oddish/Gloom i Scyther w Pikachu oraz Bellsprout/Weepinbell i Pinsir w Eevee.
+- Brakujące procenty dla rzadkich spotkań specjalnych nie zostały dopowiedziane. Commit: `53cd78e`.
+- Nie uruchamiano Flutter analyzer, testów ani APK.
+
