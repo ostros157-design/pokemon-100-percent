@@ -25,6 +25,16 @@
       "id": "pokemony-sinnoh",
       "url": "https://www.pokemony.com/en/locations?region=sinnoh",
       "scope": "Sinnoh location inventory and schematic-map conventions"
+    },
+    {
+      "id": "bulbapedia-sinnoh-victory-road",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Sinnoh_Victory_Road",
+      "scope": "Victory Road exits to Pokémon League and Route 224"
+    },
+    {
+      "id": "bulbapedia-battle-zone",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Battle_Zone",
+      "scope": "Boat access from Snowpoint City to Fight Area and Battle Zone routes"
     }
   ],
   "locations": [
@@ -234,14 +244,17 @@
       "kind": "town",
       "connectsTo": [
         "acuity_lakefront",
-        "snowpoint_temple"
+        "snowpoint_temple",
+        "fight_area"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "settlement_known_connections_pending_verification",
+      "dataStatus": "connection_verified_access_not_exact_pin",
       "sourceIds": [
         "bulbapedia-sinnoh",
-        "pokemony-sinnoh"
+        "pokemony-sinnoh",
+        "bulbapedia-sinnoh-victory-road",
+        "bulbapedia-battle-zone"
       ]
     },
     {
@@ -282,15 +295,19 @@
       "connectsTo": [
         "route_225",
         "route_230",
-        "battle_zone"
+        "battle_zone",
+        "snowpoint_city"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "settlement_known_connections_pending_verification",
+      "dataStatus": "connection_verified_access_not_exact_pin",
       "sourceIds": [
         "bulbapedia-sinnoh",
-        "pokemony-sinnoh"
-      ]
+        "pokemony-sinnoh",
+        "bulbapedia-sinnoh-victory-road",
+        "bulbapedia-battle-zone"
+      ],
+      "notes": "Punkt dostępu do Battle Zone; połączenie z Snowpoint City odbywa się statkiem, a nie przez bezpośrednią drogę lądową."
     },
     {
       "id": "survival_area",
@@ -698,14 +715,17 @@
       "kind": "route",
       "connectsTo": [
         "sunyshore_city",
-        "pok_mon_league"
+        "pok_mon_league",
+        "victory_road"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "connection_verified_access_not_exact_pin",
       "sourceIds": [
         "bulbapedia-sinnoh",
-        "bulbapedia-route-list"
+        "bulbapedia-route-list",
+        "bulbapedia-sinnoh-victory-road",
+        "bulbapedia-battle-zone"
       ]
     },
     {
@@ -1075,14 +1095,17 @@
       "name": "Victory Road",
       "kind": "dungeon",
       "connectsTo": [
-        "route_224"
+        "route_224",
+        "route_223"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "connection_verified_access_not_exact_pin",
       "sourceIds": [
         "bulbapedia-sinnoh",
-        "pokemony-sinnoh"
+        "pokemony-sinnoh",
+        "bulbapedia-sinnoh-victory-road",
+        "bulbapedia-battle-zone"
       ]
     },
     {
