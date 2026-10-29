@@ -64,7 +64,8 @@
       "kind": "town",
       "connectsTo": [
         "route_2",
-        "route_3"
+        "route_3",
+        "dreamyard"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -79,7 +80,8 @@
       "name": "Nacrene City",
       "kind": "town",
       "connectsTo": [
-        "route_3"
+        "route_3",
+        "pinwheel_forest"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -111,7 +113,8 @@
       "connectsTo": [
         "route_4",
         "route_5",
-        "route_16"
+        "route_16",
+        "anville_town"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -157,7 +160,8 @@
       "name": "Icirrus City",
       "kind": "town",
       "connectsTo": [
-        "route_8"
+        "route_8",
+        "dragonspiral_tower"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -206,7 +210,10 @@
       "kind": "town",
       "connectsTo": [
         "route_13",
-        "route_14"
+        "route_14",
+        "plasma_frigate",
+        "reversal_mountain",
+        "undella_bay"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -222,7 +229,8 @@
       "kind": "town",
       "connectsTo": [
         "route_14",
-        "route_15"
+        "route_15",
+        "black_tower"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -238,7 +246,8 @@
       "kind": "town",
       "connectsTo": [
         "route_14",
-        "route_15"
+        "route_15",
+        "white_treehollow"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -252,10 +261,12 @@
       "id": "anville_town",
       "name": "Anville Town",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "nimbasa_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "settlement_known_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-unova",
         "pokemony-unova"
@@ -265,10 +276,13 @@
       "id": "pok_mon_league",
       "name": "Pokémon League",
       "kind": "league",
-      "connectsTo": [],
+      "connectsTo": [
+        "victory_road",
+        "n_s_castle"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "settlement_known_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-unova",
         "pokemony-unova"
@@ -314,7 +328,8 @@
       "connectsTo": [
         "nacrene_city",
         "striaton_city",
-        "pokemon_day_care"
+        "pokemon_day_care",
+        "wellspring_cave"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -363,7 +378,8 @@
       "kind": "route",
       "connectsTo": [
         "chargestone_cave",
-        "driftveil_city"
+        "driftveil_city",
+        "mistralton_cave"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -379,7 +395,8 @@
       "kind": "route",
       "connectsTo": [
         "twist_mountain",
-        "mistralton_city"
+        "mistralton_city",
+        "celestial_tower"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -547,7 +564,8 @@
       "kind": "route",
       "connectsTo": [
         "route_1",
-        "route_18"
+        "route_18",
+        "p2_laboratory"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -562,7 +580,8 @@
       "name": "Route 18",
       "kind": "route",
       "connectsTo": [
-        "route_17"
+        "route_17",
+        "p2_laboratory"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -657,10 +676,12 @@
       "id": "dreamyard",
       "name": "Dreamyard",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "striaton_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-unova",
         "pokemony-unova"
@@ -670,10 +691,12 @@
       "id": "wellspring_cave",
       "name": "Wellspring Cave",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_3"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-unova",
         "pokemony-unova"
@@ -683,10 +706,12 @@
       "id": "pinwheel_forest",
       "name": "Pinwheel Forest",
       "kind": "forest",
-      "connectsTo": [],
+      "connectsTo": [
+        "nacrene_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-unova",
         "pokemony-unova"
@@ -696,10 +721,12 @@
       "id": "relic_castle",
       "name": "Relic Castle",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "desert_resort"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-unova",
         "pokemony-unova"
@@ -724,10 +751,12 @@
       "id": "mistralton_cave",
       "name": "Mistralton Cave",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_6"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-unova",
         "pokemony-unova"
@@ -752,10 +781,12 @@
       "id": "dragonspiral_tower",
       "name": "Dragonspiral Tower",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "icirrus_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-unova",
         "pokemony-unova"
@@ -765,10 +796,12 @@
       "id": "celestial_tower",
       "name": "Celestial Tower",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_7"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-unova",
         "pokemony-unova"
@@ -781,7 +814,8 @@
       "connectsTo": [
         "route_13",
         "route_22",
-        "route_23"
+        "route_23",
+        "plasma_frigate"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -798,7 +832,8 @@
       "connectsTo": [
         "route_10",
         "route_23",
-        "pokemon_league_gate"
+        "pokemon_league_gate",
+        "pok_mon_league"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -812,10 +847,12 @@
       "id": "n_s_castle",
       "name": "N's Castle",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "pok_mon_league"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-unova",
         "pokemony-unova"
@@ -825,10 +862,13 @@
       "id": "plasma_frigate",
       "name": "Plasma Frigate",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "undella_town",
+        "giant_chasm"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-unova",
         "pokemony-unova"
@@ -838,10 +878,12 @@
       "id": "abyssal_ruins",
       "name": "Abyssal Ruins",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "undella_bay"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-unova",
         "pokemony-unova"
@@ -851,10 +893,13 @@
       "id": "p2_laboratory",
       "name": "P2 Laboratory",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_17",
+        "route_18"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-unova",
         "pokemony-unova"
@@ -879,10 +924,13 @@
       "id": "reversal_mountain",
       "name": "Reversal Mountain",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "undella_town",
+        "lentimas_town"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-unova",
         "pokemony-unova"
@@ -924,10 +972,13 @@
       "id": "nature_preserve",
       "name": "Nature Preserve",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "black_tower",
+        "white_treehollow"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-unova",
         "pokemony-unova"
@@ -938,7 +989,8 @@
       "name": "Desert Resort",
       "kind": "desert",
       "connectsTo": [
-        "route_4"
+        "route_4",
+        "relic_castle"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -1147,6 +1199,69 @@
         "bulbapedia-route-list"
       ],
       "dataStatus": "connection_indexed_variant_audit_pending"
+    },
+    {
+      "id": "undella_bay",
+      "name": "Undella Bay",
+      "kind": "bay",
+      "connectsTo": [
+        "undella_town",
+        "abyssal_ruins"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "variant_specific_connection_indexed"
+    },
+    {
+      "id": "lentimas_town",
+      "name": "Lentimas Town",
+      "kind": "town",
+      "connectsTo": [
+        "reversal_mountain"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "variant_specific_connection_indexed"
+    },
+    {
+      "id": "black_tower",
+      "name": "Black Tower",
+      "kind": "facility",
+      "connectsTo": [
+        "black_city",
+        "nature_preserve"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "landmark_connection_indexed_variant_audit_pending"
+    },
+    {
+      "id": "white_treehollow",
+      "name": "White Treehollow",
+      "kind": "facility",
+      "connectsTo": [
+        "white_forest",
+        "nature_preserve"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "landmark_connection_indexed_variant_audit_pending"
     }
   ]
 }
