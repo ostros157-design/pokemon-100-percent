@@ -7,8 +7,8 @@
     "The Teal Mask",
     "The Indigo Disk"
   ],
-  "purpose": "Offline open-world area inventory; not a scale-accurate map.",
-  "coordinatePolicy": "No exact coordinates or collectible pins until verified for the selected version and DLC.",
+  "purpose": "Open-world location inventory for Paldea and DLC. Scarlet/Violet has no numbered routes; Pokémon and collectibles must be pinned to verified terrain locations, not route tables.",
+  "coordinatePolicy": "No exact coordinates or collectible pins until verified for version, DLC and terrain.",
   "sources": [
     {
       "id": "bulbapedia-paldea",
@@ -658,6 +658,422 @@
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet"
       ]
+    },
+    {
+      "id": "zero_gate",
+      "name": "Zero Gate",
+      "kind": "facility",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ],
+      "dataStatus": "named_location_known_exact_pins_pending_verification"
+    },
+    {
+      "id": "zero_lab",
+      "name": "Zero Lab",
+      "kind": "facility",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ],
+      "dataStatus": "named_location_known_exact_pins_pending_verification"
+    },
+    {
+      "id": "area_zero_underdepths",
+      "name": "Area Zero Underdepths",
+      "kind": "dungeon",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ],
+      "dataStatus": "named_location_known_exact_pins_pending_verification"
+    },
+    {
+      "id": "alfornada_cavern",
+      "name": "Alfornada Cavern",
+      "kind": "cave",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ],
+      "dataStatus": "named_location_known_exact_pins_pending_verification"
+    },
+    {
+      "id": "inlet_grotto",
+      "name": "Inlet Grotto",
+      "kind": "cave",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ],
+      "dataStatus": "named_location_known_exact_pins_pending_verification"
+    },
+    {
+      "id": "poco_path",
+      "name": "Poco Path",
+      "kind": "path",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ],
+      "dataStatus": "named_location_known_exact_pins_pending_verification"
+    },
+    {
+      "id": "groundblight_shrine",
+      "name": "Groundblight Shrine",
+      "kind": "shrine",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ],
+      "dataStatus": "named_location_known_exact_pins_pending_verification"
+    },
+    {
+      "id": "icerend_shrine",
+      "name": "Icerend Shrine",
+      "kind": "shrine",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ],
+      "dataStatus": "named_location_known_exact_pins_pending_verification"
+    },
+    {
+      "id": "firescourge_shrine",
+      "name": "Firescourge Shrine",
+      "kind": "shrine",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ],
+      "dataStatus": "named_location_known_exact_pins_pending_verification"
+    },
+    {
+      "id": "grasswither_shrine",
+      "name": "Grasswither Shrine",
+      "kind": "shrine",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ],
+      "dataStatus": "named_location_known_exact_pins_pending_verification"
+    },
+    {
+      "id": "colonnade_hollow",
+      "name": "Colonnade Hollow",
+      "kind": "landmark",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ],
+      "dataStatus": "named_location_known_exact_pins_pending_verification"
+    },
+    {
+      "id": "million_volt_skyline",
+      "name": "Million Volt Skyline",
+      "kind": "landmark",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ],
+      "dataStatus": "named_location_known_exact_pins_pending_verification"
+    },
+    {
+      "id": "fury_falls",
+      "name": "Fury Falls",
+      "kind": "landmark",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ],
+      "dataStatus": "named_location_known_exact_pins_pending_verification"
+    },
+    {
+      "id": "leaking_tower_of_paldea",
+      "name": "Leaking Tower of Paldea",
+      "kind": "landmark",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ],
+      "dataStatus": "named_location_known_exact_pins_pending_verification"
+    },
+    {
+      "id": "gracia_stones",
+      "name": "Gracia Stones",
+      "kind": "landmark",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ],
+      "dataStatus": "named_location_known_exact_pins_pending_verification"
+    },
+    {
+      "id": "distant_rock",
+      "name": "Distant Rock",
+      "kind": "landmark",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ],
+      "dataStatus": "named_location_known_exact_pins_pending_verification"
+    },
+    {
+      "id": "casseroya_falls",
+      "name": "Casseroya Falls",
+      "kind": "landmark",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ],
+      "dataStatus": "named_location_known_exact_pins_pending_verification"
+    },
+    {
+      "id": "paldeas_highest_peak",
+      "name": "Paldea's Highest Peak",
+      "kind": "landmark",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ],
+      "dataStatus": "named_location_known_exact_pins_pending_verification"
+    },
+    {
+      "id": "socarrat_trail_sight",
+      "name": "Socarrat Trail Sight",
+      "kind": "landmark",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ],
+      "dataStatus": "named_location_known_exact_pins_pending_verification"
+    },
+    {
+      "id": "naranja_academy",
+      "name": "Naranja Academy",
+      "kind": "building",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ],
+      "dataStatus": "named_location_known_exact_pins_pending_verification"
+    },
+    {
+      "id": "uva_academy",
+      "name": "Uva Academy",
+      "kind": "building",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ],
+      "dataStatus": "named_location_known_exact_pins_pending_verification"
+    },
+    {
+      "id": "team_star_dark_crew_base",
+      "name": "Team Star Dark Crew Base",
+      "kind": "base",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ],
+      "dataStatus": "named_location_known_exact_pins_pending_verification"
+    },
+    {
+      "id": "team_star_fire_crew_base",
+      "name": "Team Star Fire Crew Base",
+      "kind": "base",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ],
+      "dataStatus": "named_location_known_exact_pins_pending_verification"
+    },
+    {
+      "id": "team_star_poison_crew_base",
+      "name": "Team Star Poison Crew Base",
+      "kind": "base",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ],
+      "dataStatus": "named_location_known_exact_pins_pending_verification"
+    },
+    {
+      "id": "team_star_fairy_crew_base",
+      "name": "Team Star Fairy Crew Base",
+      "kind": "base",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ],
+      "dataStatus": "named_location_known_exact_pins_pending_verification"
+    },
+    {
+      "id": "team_star_fighting_crew_base",
+      "name": "Team Star Fighting Crew Base",
+      "kind": "base",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ],
+      "dataStatus": "named_location_known_exact_pins_pending_verification"
+    },
+    {
+      "id": "kitakami_hall",
+      "name": "Kitakami Hall",
+      "kind": "building",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ],
+      "dataStatus": "named_location_known_exact_pins_pending_verification"
+    },
+    {
+      "id": "oni_mountain_cave",
+      "name": "Oni Mountain Cave",
+      "kind": "cave",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ],
+      "dataStatus": "named_location_known_exact_pins_pending_verification"
+    },
+    {
+      "id": "coastal_biome",
+      "name": "Coastal Biome",
+      "kind": "area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ],
+      "dataStatus": "named_location_known_exact_pins_pending_verification"
+    },
+    {
+      "id": "canyon_biome",
+      "name": "Canyon Biome",
+      "kind": "area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ],
+      "dataStatus": "named_location_known_exact_pins_pending_verification"
+    },
+    {
+      "id": "polar_biome",
+      "name": "Polar Biome",
+      "kind": "area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ],
+      "dataStatus": "named_location_known_exact_pins_pending_verification"
+    },
+    {
+      "id": "tropical_biome",
+      "name": "Tropical Biome",
+      "kind": "area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ],
+      "dataStatus": "named_location_known_exact_pins_pending_verification"
     }
   ]
 }
