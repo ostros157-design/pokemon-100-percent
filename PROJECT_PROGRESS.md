@@ -1,3 +1,9 @@
+### Mapy — kontrola spójności kompletnej mapy Kanto (2026-10-29)
+
+- Dodatkowy audyt porównał graf rysowany przez `_KantoMapPainter` z połączeniami `connectsTo` w JSON: 65/65 lokacji ma węzeł na mapie, 74/74 połączenia zgadzają się, brak dodatkowych lub pominiętych krawędzi.
+- Sprawdzono 78 unikalnych nazw Pokémonów występujących w obecnych danych spotkań, prezentach i rzadkich spotkaniach; wszystkie dopasowują się do danych Pokédexu.
+- Jest to kontrola statyczna kodu i danych, a nie test uruchomionej aplikacji. Nadal trzeba zbudować APK i sprawdzić dotyk, przewijanie, czytelność po przybliżeniu oraz otwieranie szczegółów Pokédexu na urządzeniu.
+
 ### Mapy — pełna interaktywność 65 lokacji Kanto i panel spotkań (2026-10-29)
 
 - Umożliwiono wybieranie wszystkich 65 węzłów widocznych na schematycznej mapie Kanto; wcześniej panel szczegółów był powiązany tylko z pierwszymi lokacjami tutorialowymi.
