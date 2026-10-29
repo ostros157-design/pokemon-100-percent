@@ -62,6 +62,11 @@
       "id": "bulbapedia-part2",
       "url": "https://bulbapedia.bulbagarden.net/wiki/Walkthrough:Pok%C3%A9mon:_Let%27s_Go,_Pikachu!_and_Let%27s_Go,_Eevee!/Part_2",
       "scope": "Route 1 trainer and parcel-delivery event context"
+    },
+    {
+      "id": "bulbapedia-viridian-city",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Walkthrough:Pok%C3%A9mon:Let%27s_Go,_Pikachu!_and_Let%27s_Go,_Eevee!/Part_2",
+      "scope": "Viridian City route connections, buildings, Oak's Parcel handoff and early-story north exit"
     }
   ],
   "locations": [
@@ -300,6 +305,71 @@
             "bulbapedia-part2"
           ],
           "status": "text_verified"
+        }
+      ]
+    },
+    {
+      "id": "viridian_city",
+      "name": "Viridian City",
+      "kind": "town",
+      "connectsTo": [
+        "route_1",
+        "route_2",
+        "route_22"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "features": [
+        {
+          "id": "pokemon_center",
+          "name": "Pokémon Center",
+          "category": "building",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-viridian-city"
+          ]
+        },
+        {
+          "id": "poke_mart",
+          "name": "Poké Mart",
+          "category": "building",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-viridian-city"
+          ]
+        },
+        {
+          "id": "north_exit_blocked_early",
+          "name": "North exit initially blocked",
+          "category": "story_gate",
+          "note": "On the first visit, two characters block the way north; continue exploring the city.",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-viridian-city"
+          ]
+        }
+      ],
+      "events": [
+        {
+          "id": "oak_parcel_handoff",
+          "name": "Oak’s Parcel",
+          "category": "story_item",
+          "note": "The Poké Mart clerk hands over Oak’s Parcel for delivery to Professor Oak.",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-viridian-city"
+          ]
+        },
+        {
+          "id": "hidden_potion_north_exit",
+          "name": "Hidden Potion",
+          "category": "hidden_item",
+          "note": "Described near the north exit, west of the small tree; do not display as a positioned pin until coordinates are verified.",
+          "coordinateStatus": "unverified",
+          "status": "text_verified_position_not_mapped",
+          "sourceIds": [
+            "bulbapedia-viridian-city"
+          ]
         }
       ]
     }
