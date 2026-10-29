@@ -1,3 +1,10 @@
+### Poradnik — rzeczywiste procenty spotkań przy nazwach Pokémonów (2026-10-29)
+
+- Przyczyna wcześniejszego braku: model i chip UI już obsługiwały pole `encounterRatesPercent`, ale kroki poradnika nie miały wypełnionych danych, więc UI nie miało czego wyświetlić.
+- Uzupełniono poradnik Let’s Go, Pikachu!: Route 1 — Pidgey 40%, Rattata 30%; Viridian Forest — Caterpie 25%, Metapod 10%, Pikachu 5%. Wartości są przypisane do właściwej lokacji i pochodzą z danych spotkań w `assets/data/maps/lets_go_kanto_audit.json`, opartych na zapisanych źródłach Serebii/Routepedia.
+- Procenty są wyświetlane obok klikalnej nazwy Pokémonów przez istniejący `GuideStepCard`. Pokémony otrzymane fabularnie lub występujące jako drużyna trenera nie dostają fałszywego „procentu w trawie”.
+- Zmiany zapisane na gałęzi `fix/guide-encounter-percentages`. Nie uruchamiano `flutter analyze`, testów ani budowania APK; wygląd w aplikacji wymaga jeszcze sprawdzenia.
+
 ### Mapy — poprawa czytelności i ponowny audyt (2026-10-29)
 
 - Powiększono etykiety głównych lokacji do 11.5 px (13 px dla zaznaczonej) oraz plakietki numerów tras do 10.5 px; etykiety Underground Path są teraz widoczne na mapie regionu.
