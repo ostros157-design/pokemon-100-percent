@@ -710,7 +710,7 @@ class _MapsScreenState extends State<MapsScreen> {
                                 },
                               ),
                               ActionChip(
-                                avatar: const Icon(Icons.water, size: 18),
+                                avatar: const Icon(Icons.water_drop_outlined, size: 18),
                                 label: const Text('Route 19'),
                                 onPressed: () {
                                   _locationSearchController.text = 'Route 19';
