@@ -732,3 +732,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Dodano rekordy siedmiu sal Kanto: Pewter, Cerulean, Vermilion, Celadon, Saffron, Fuchsia i Cinnabar Gym; w `maps_screen.dart` dodano panele informacyjne z wyraźnym oznaczeniem danych, które wymagają dalszej weryfikacji.
 - Commity: `35b4fee`, `24945d2`, `cab524c`.
 - Mapa Kanto nadal jest indeksem i schematem, nie gotową precyzyjną mapą z pinezkami. Trzeba jeszcze uzupełnić szczegóły spotkań, przedmiotów, wnętrz i pozostałych regionów Pokémon.
+
+
+### Mapy — ważne budynki i 100% lokacji Kanto (2026-10-29)
+
+- Dodano rekordy Bill’s House, Pewter Museum of Science, Pokémon Fan Club i Pokémon Day Care oraz panele offline dla tych miejsc.
+- Indeks Let’s Go Kanto ma teraz 64 rekordy lokacji, w tym wszystkie trasy Route 1–25, miasta, główne jaskinie, Ligę, sale i wybrane budynki poboczne.
+- Commity: `bb55ebe`, `94ff883`.
+- Liczba 64 oznacza rekordy indeksu, nie 64 ukończone dokładne mapy: większość wnętrz i pozycji pinezek nadal wymaga weryfikacji. Kolejny etap to audyt grafu połączeń, kompletność przedmiotów/trenerów oraz osobne regiony z pozostałych gier.
