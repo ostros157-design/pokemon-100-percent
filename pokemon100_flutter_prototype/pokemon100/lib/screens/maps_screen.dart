@@ -332,7 +332,7 @@ class _MapsScreenState extends State<MapsScreen> {
                                       ),
                                       const SizedBox(height: 10),
                                       const Text(
-                                        'Legenda mapy',
+                                        'Legenda i warstwy danych',
                                         style: TextStyle(fontWeight: FontWeight.w700),
                                       ),
                                       const SizedBox(height: 6),
@@ -341,21 +341,34 @@ class _MapsScreenState extends State<MapsScreen> {
                                         runSpacing: 6,
                                         children: const [
                                           Chip(
-                                            avatar: Icon(Icons.home_outlined, size: 18),
-                                            label: Text('Miasto / budynki'),
+                                            avatar: Icon(Icons.location_city_outlined, size: 18),
+                                            label: Text('Miasta'),
                                           ),
                                           Chip(
-                                            avatar: Icon(Icons.info_outline, size: 18),
-                                            label: Text('Informacja z poradnika'),
+                                            avatar: Icon(Icons.alt_route, size: 18),
+                                            label: Text('Trasy'),
                                           ),
                                           Chip(
-                                            avatar: Icon(Icons.place_outlined, size: 18),
-                                            label: Text('Obszar poglądowy'),
+                                            avatar: Icon(Icons.catching_pokemon, size: 18),
+                                            label: Text('Pokémony'),
+                                          ),
+                                          Chip(
+                                            avatar: Icon(Icons.inventory_2_outlined, size: 18),
+                                            label: Text('Przedmioty'),
+                                          ),
+                                          Chip(
+                                            avatar: Icon(Icons.sports_martial_arts_outlined, size: 18),
+                                            label: Text('Trenerzy / walki'),
+                                          ),
+                                          Chip(
+                                            avatar: Icon(Icons.checklist_outlined, size: 18),
+                                            label: Text('Znajdźki 100%'),
                                           ),
                                         ],
                                       ),
+                                      const SizedBox(height: 4),
                                       const Text(
-                                        'Ikony przy Route 1 oznaczają informacje przypisane do tej lokacji, a nie dokładne współrzędne przedmiotów. Po wybraniu Route 1 sprawdź opis trasy, spotkania z Pokémonami i nagrodę trenera.',
+                                        'Miasta i trasy są pokazane schematycznie. Pokémony, przedmioty, trenerzy i znajdźki są kategoriami danych do uzupełnienia z poradników; na tej mapie nie mają jeszcze dokładnych pinezek. Nie traktuj ich położenia jako zweryfikowanego.',
                                         style: TextStyle(fontSize: 12),
                                       ),
                                       const SizedBox(height: 8),
