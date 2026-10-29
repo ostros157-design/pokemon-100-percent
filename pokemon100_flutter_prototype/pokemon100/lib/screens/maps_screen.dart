@@ -4386,10 +4386,25 @@ class _KantoMapPainter extends CustomPainter {
           name.contains('Tunnel') ||
           name == 'Mt. Moon' ||
           name == 'Victory Road' ||
-          name == 'Seafoam Islands' ||
           name == 'Pokémon Tower' ||
           name == 'Pokémon Mansion' ||
           name == 'Team Rocket Hideout';
+      final isBuilding = name.endsWith('Gym') ||
+          name.contains('Laboratory') ||
+          name.contains('Lab') ||
+          name.contains('Department Store') ||
+          name.contains('Game Corner') ||
+          name.contains('Condominiums') ||
+          name.contains('Dojo') ||
+          name.contains('Silph Co.') ||
+          name.contains('S.S. Anne') ||
+          name.contains('GO Park') ||
+          name.contains('Museum') ||
+          name.contains('Fan Club') ||
+          name.contains('Day Care') ||
+          name.contains('Reception Gate') ||
+          name.contains('House') ||
+          name.contains('Cottage');
       if (isTown) {
         drawTown(
           place.x,
@@ -4398,6 +4413,8 @@ class _KantoMapPainter extends CustomPainter {
         );
       } else if (isCave) {
         drawCave(place.x, place.y);
+      } else if (isBuilding) {
+        _drawHouse(canvas, point + const Offset(0, -13), route);
       }
       final isSelected = place.name.toLowerCase() == selectedLocation.toLowerCase();
       if (isSelected) {
