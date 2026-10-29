@@ -1,3 +1,10 @@
+### Poradnik Let’s Go, Pikachu! — miniatury Pokémonów i dalsza część fabuły (2026-10-29)
+
+- Karty Pokémonów w krokach poradnika pokazują teraz po lewej ikonę Poké Balla, obok mały sprite gatunku w rozmiarze 28×28 px, a następnie nazwę i — gdy istnieją dane — procent spotkania. Sprite jest pobierany według numeru Pokédexu; nazwa nadal otwiera szczegóły gatunku.
+- Rozszerzono istniejący poradnik o 8 kolejnych kroków: Route 3, Mt. Moon, Route 4, przygotowanie w Cerulean City, Nugget Bridge, Route 24, Route 25/Bill oraz Cerulean Gym i Cascade Badge.
+- Dodano procenty spotkań z trawy/jaskini dla wymienionych lokacji na podstawie lokalnego audytu Kanto. Nie przypisano procentów Pokémonom prezentowym ani drużynom trenerów. Wpisy opisują wersję Let’s Go, Pikachu!.
+- Zmiany zapisane na gałęzi `fix/guide-encounter-percentages`. Sprawdzono statycznie, że komponent zawiera ikonę, sprite i klikalne przejście do Pokédexu, a dane zawierają nowe kroki i stawki spotkań. Nie uruchamiano `flutter analyze`, testów ani APK; należy jeszcze potwierdzić wygląd i kompilację w aplikacji.
+
 ### Poradnik — rzeczywiste procenty spotkań przy nazwach Pokémonów (2026-10-29)
 
 - Przyczyna wcześniejszego braku: model i chip UI już obsługiwały pole `encounterRatesPercent`, ale kroki poradnika nie miały wypełnionych danych, więc UI nie miało czego wyświetlić.
