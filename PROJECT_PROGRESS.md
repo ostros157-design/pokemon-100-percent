@@ -740,3 +740,10 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Indeks Let’s Go Kanto ma teraz 64 rekordy lokacji, w tym wszystkie trasy Route 1–25, miasta, główne jaskinie, Ligę, sale i wybrane budynki poboczne.
 - Commity: `bb55ebe`, `94ff883`.
 - Liczba 64 oznacza rekordy indeksu, nie 64 ukończone dokładne mapy: większość wnętrz i pozycji pinezek nadal wymaga weryfikacji. Kolejny etap to audyt grafu połączeń, kompletność przedmiotów/trenerów oraz osobne regiony z pozostałych gier.
+
+
+### Mapy — kontrola spójności indeksu Kanto (2026-10-29)
+
+- Automatyczna kontrola JSON: poprawny format; wszystkie Route 1–25 mają rekordy; 64 lokacje, 76 źródeł; brak niedziałających odwołań `connectsTo`, brak lokacji bez drogi po grafie od Pallet Town i brak brakujących `sourceIds`.
+- Naprawiono brakujące źródło dla Fuchsia Gym (`964114a`).
+- To kontrola spójności indeksu, a nie walidacja w grze: dokładność każdego spotkania, przedmiotu i współrzędnej nadal wymaga weryfikacji źródłowej. Nie uruchamiano Flutter analyze, testów ani APK.
