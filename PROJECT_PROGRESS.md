@@ -1170,3 +1170,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Dodano jawne `illustrationPolicy`: grafika mapy i plany pięter są autorskimi ilustracjami wektorowymi; nie wolno traktować ich kształtów ani pozycji węzłów jako dokładnych współrzędnych z gry. Nie kopiowano obrazów źródłowych do zasobów aplikacji.
 - Commit danych: `f1d7e20`. JSON został zapisany w poprawnym formacie i wymaga jeszcze zwykłego testu ładowania w aplikacji, którego nie uruchamiano.
 
+### Mapy — Kanto: lepszy układ regionu i trasy wodne (2026-10-29)
+
+- Przestawiono 74 węzły w głównej ilustracji, aby lepiej wykorzystać przestrzeń mapy i czytelniej oddać ogólną relację północ–południe: Indigo Plateau/Pewter/Mt. Moon na północy, centralne miasta w środku, Fuchsia i wodne trasy na południu.
+- Zmieniono obrys lądu i położenie dekoracyjnych gór/lasów tak, aby pasowały do nowego układu. Węzły pozostają schematyczne; nie są dokładnymi współrzędnymi z gry.
+- Route 19, 20 i 21 oraz ich połączenia rysują się teraz jako niebieskie, przerywane trasy wodne; dodano odpowiednią pozycję w legendzie.
+- Statycznie sprawdzono, że nazwy i połączenia nadal zachowują indeks: 74/74 węzły, 83 połączenia, brak nieistniejących indeksów. Nie uruchamiano analyzer, testów ani APK.
+- Commity: `3d1ac9f`, `1d299db`, `4bf0423`, `e100b9a`.
+
