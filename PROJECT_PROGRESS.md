@@ -907,3 +907,10 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Usunięto z indeksu Kanto rekordy Route 26–28, Tohjo Falls, Mt. Silver i New Bark Town, które należą do postgame Johto, a nie do mapy Kanto w Red/Blue/Yellow/FireRed/LeafGreen.
 - Usunięto również odwołania do tych rekordów z Pokémon League Reception Gate. Indeks Kanto ma teraz 65 lokacji i nie miesza dwóch regionów.
 - Commit: `794c9eb`.
+
+
+### Mapy — Paldea: dostęp do Area Zero i jaskini Oni Mountain (2026-10-29)
+
+- Połączono Zero Gate z West Province (Area Three), gdzie znajduje się wejście do Great Crater of Paldea, oraz Oni Mountain Cave z Oni Mountain.
+- Te krawędzie opisują dostęp do obiektu, nie współrzędne ani dokładną geometrię mapy.
+- Commit: `daf3aa7`.
