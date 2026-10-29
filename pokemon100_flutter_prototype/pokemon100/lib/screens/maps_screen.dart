@@ -4574,6 +4574,50 @@ class _KantoMapPainter extends CustomPainter {
       } else if (isBuilding) {
         _drawHouse(canvas, point + const Offset(0, -13), route);
       }
+      if (name.startsWith('Route ')) {
+        final routeNumber = name.substring('Route '.length);
+        final isWaterRouteNode = {'19', '20', '21'}.contains(routeNumber);
+        final badgeCenter = point + const Offset(0, 13);
+        final badgeRect = Rect.fromCenter(
+          center: badgeCenter,
+          width: routeNumber.length == 1 ? 21 : 25,
+          height: 17,
+        );
+        canvas.drawRRect(
+          RRect.fromRectAndRadius(badgeRect, const Radius.circular(5)),
+          Paint()..color = const Color(0xFFFFF8E2).withValues(alpha: .96),
+        );
+        canvas.drawRRect(
+          RRect.fromRectAndRadius(badgeRect, const Radius.circular(5)),
+          Paint()
+            ..color = (isWaterRouteNode
+                    ? const Color(0xFF4F9DA8)
+                    : const Color(0xFF9A8159))
+                .withValues(alpha: .88)
+            ..style = PaintingStyle.stroke
+            ..strokeWidth = 1.2,
+        );
+        final badgeText = TextPainter(
+          text: TextSpan(
+            text: routeNumber,
+            style: TextStyle(
+              color: isWaterRouteNode
+                  ? const Color(0xFF347D8B)
+                  : const Color(0xFF6D614A),
+              fontSize: 8.5,
+              fontWeight: FontWeight.w900,
+            ),
+          ),
+          textDirection: TextDirection.ltr,
+        )..layout();
+        badgeText.paint(
+          canvas,
+          Offset(
+            badgeCenter.dx - badgeText.width / 2,
+            badgeCenter.dy - badgeText.height / 2,
+          ),
+        );
+      }
       final isSelected = place.name.toLowerCase() == selectedLocation.toLowerCase();
       if (isSelected) {
         canvas.drawCircle(point, 13, Paint()..color = route.withValues(alpha: .24));
