@@ -4034,7 +4034,13 @@ class _KantoMapPainter extends CustomPainter {
     // Fine sea strokes sit only in the ocean, giving the coast a painted atlas
     // texture without putting wave marks over selectable land locations.
     canvas.save();
-    canvas.clipPath(coast, clipOp: ClipOp.difference);
+    canvas.clipPath(
+      Path.combine(
+        PathOperation.difference,
+        Path()..addRect(Offset.zero & size),
+        coast,
+      ),
+    );
     final seaWavePaint = Paint()..isAntiAlias = true
       ..color = const Color(0xFF5CA9B5).withValues(alpha: .46)
       ..style = PaintingStyle.stroke
@@ -4813,25 +4819,25 @@ class _KantoMapPainter extends CustomPainter {
       }
       canvas.drawCircle(point, isSelected ? 8 : 7, Paint()..isAntiAlias = true..color = route);
       canvas.drawCircle(point, 3, Paint()..isAntiAlias = true..color = Colors.white);
-      final name = place.name;
-      final isMajorPlace = name.contains('City') ||
-          name.contains('Town') ||
-          name.contains('Island') ||
-          name.contains('Forest') ||
-          (name.contains('Cave') && !name.contains('entrance')) ||
-          name.contains('Moon') ||
-          name.contains('Victory Road') ||
-          name.contains('Indigo Plateau') ||
-          name.contains('Underground Path') ||
-          name.contains('Pokémon Tower') ||
-          name.contains('Pokémon Mansion') ||
-          name.contains('Power Plant') ||
-          name.contains('S.S. Anne') ||
-          name.contains('GO Park') ||
-          name.contains('Silph Co.') ||
-          name.contains('Team Rocket Hideout') ||
-          name.contains('Seafoam') ||
-          name.contains('Sea Cottage');
+      final labelName = place.name;
+      final isMajorPlace = labelName.contains('City') ||
+          labelName.contains('Town') ||
+          labelName.contains('Island') ||
+          labelName.contains('Forest') ||
+          (labelName.contains('Cave') && !labelName.contains('entrance')) ||
+          labelName.contains('Moon') ||
+          labelName.contains('Victory Road') ||
+          labelName.contains('Indigo Plateau') ||
+          labelName.contains('Underground Path') ||
+          labelName.contains('Pokémon Tower') ||
+          labelName.contains('Pokémon Mansion') ||
+          labelName.contains('Power Plant') ||
+          labelName.contains('S.S. Anne') ||
+          labelName.contains('GO Park') ||
+          labelName.contains('Silph Co.') ||
+          labelName.contains('Team Rocket Hideout') ||
+          labelName.contains('Seafoam') ||
+          labelName.contains('Sea Cottage');
       // Keep the overview legible: every point remains tappable, while small
       // buildings/gyms and route labels appear when selected instead of colliding.
       if (isMajorPlace || isSelected) {
