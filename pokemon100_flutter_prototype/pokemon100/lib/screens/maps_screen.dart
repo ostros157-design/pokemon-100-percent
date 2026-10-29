@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
+import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -3445,6 +3446,119 @@ class _KantoMapPainter extends CustomPainter {
       canvas.drawPath(road, roadCenter);
     }
 
+    // Small illustrated landmarks make the region read as a hand-drawn
+    // world map rather than a diagram. Their positions are illustrative only.
+    void drawForest(double x, double y, double radius, int seed) {
+      final center = p(x, y);
+      final scale = size.width / 900;
+      final canopy = Paint()..color = const Color(0xFF659B72).withValues(alpha: .76);
+      final canopyLight = Paint()..color = const Color(0xFF9BC68A).withValues(alpha: .88);
+      final shadow = Paint()..color = const Color(0xFF547E63).withValues(alpha: .28);
+      canvas.drawOval(
+        Rect.fromCenter(
+          center: center + Offset(2 * scale, 5 * scale),
+          width: radius * 2.4 * scale,
+          height: radius * 1.55 * scale,
+        ),
+        shadow,
+      );
+      for (var i = 0; i < 9; i++) {
+        final angle = (i * 2.399 + seed * .41);
+        final distance = (i.isEven ? .48 : .72) * radius * scale;
+        final treeCenter = center + Offset(
+          math.cos(angle) * distance,
+          math.sin(angle) * distance * .62,
+        );
+        final treeRadius = (i % 3 == 0 ? 6.5 : 5.2) * scale;
+        canvas.drawCircle(treeCenter, treeRadius, canopy);
+        canvas.drawCircle(
+          treeCenter + Offset(-1.6 * scale, -1.8 * scale),
+          treeRadius * .58,
+          canopyLight,
+        );
+      }
+    }
+
+    void drawTown(double x, double y, {int buildings = 5}) {
+      final center = p(x, y);
+      final scale = size.width / 900;
+      final base = Paint()..color = const Color(0xFFFAF0D0).withValues(alpha: .95);
+      final wall = Paint()..color = const Color(0xFFF4D7A0);
+      final roof = Paint()..color = const Color(0xFFB96555);
+      final outline = Paint()
+        ..color = const Color(0xFF7D7158).withValues(alpha: .78)
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 1 * scale;
+      for (var i = 0; i < buildings; i++) {
+        final column = i % 3;
+        final row = i ~/ 3;
+        final w = (7 + (i % 2) * 2) * scale;
+        final h = (7 + (i % 3)) * scale;
+        final origin = center + Offset((column - 1) * 11 * scale - w / 2, (row - .5) * 11 * scale);
+        final body = Rect.fromLTWH(origin.dx, origin.dy, w, h);
+        final roofPath = Path()
+          ..moveTo(body.left - 1 * scale, body.top)
+          ..lineTo(body.center.dx, body.top - 5 * scale)
+          ..lineTo(body.right + 1 * scale, body.top)
+          ..close();
+        canvas.drawRect(body, base);
+        canvas.drawRect(body, wall);
+        canvas.drawPath(roofPath, roof);
+        canvas.drawRect(body, outline);
+        canvas.drawPath(roofPath, outline);
+        canvas.drawRect(
+          Rect.fromLTWH(body.center.dx - scale, body.bottom - 3 * scale, 2 * scale, 3 * scale),
+          Paint()..color = const Color(0xFF6E8B9B),
+        );
+      }
+    }
+
+    void drawCave(double x, double y) {
+      final center = p(x, y);
+      final scale = size.width / 900;
+      final rock = Paint()..color = const Color(0xFF8B8A78);
+      final opening = Paint()..color = const Color(0xFF353F3D);
+      final edge = Paint()
+        ..color = const Color(0xFFF2E7C6)
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 1.4 * scale;
+      final mound = Path()
+        ..moveTo(center.dx - 13 * scale, center.dy + 5 * scale)
+        ..quadraticBezierTo(center.dx - 10 * scale, center.dy - 13 * scale, center.dx, center.dy - 10 * scale)
+        ..quadraticBezierTo(center.dx + 11 * scale, center.dy - 12 * scale, center.dx + 13 * scale, center.dy + 5 * scale)
+        ..close();
+      canvas.drawPath(mound, rock);
+      canvas.drawArc(
+        Rect.fromCenter(center: center + Offset(0, 2 * scale), width: 11 * scale, height: 13 * scale),
+        math.pi,
+        math.pi,
+        false,
+        opening..style = PaintingStyle.stroke..strokeWidth = 4 * scale,
+      );
+      canvas.drawPath(mound, edge);
+    }
+
+    // Broad forest clusters sit behind routes and selectable location markers.
+    drawForest(.28, .50, 18, 2); // Viridian Forest area
+    drawForest(.70, .83, 15, 5); // Safari Zone / Fuchsia area
+    drawForest(.40, .48, 11, 3); // Celadon outskirts
+    drawForest(.32, .72, 12, 7); // southern central woodland
+    drawForest(.18, .38, 12, 1); // western uplands
+    drawTown(.25, .82, buildings: 4);
+    drawTown(.28, .68, buildings: 5);
+    drawTown(.25, .43, buildings: 5);
+    drawTown(.63, .35, buildings: 6);
+    drawTown(.57, .65, buildings: 5);
+    drawTown(.43, .52, buildings: 7);
+    drawTown(.59, .49, buildings: 6);
+    drawTown(.65, .82, buildings: 5);
+    drawTown(.12, .94, buildings: 3);
+    drawCave(.45, .34);
+    drawCave(.86, .42);
+    drawCave(.73, .30);
+    drawCave(.27, .94);
+    drawCave(.13, .28);
+
     for (final place in places) {
       final point = p(place.x, place.y);
       final isSelected = place.name.toLowerCase() == selectedLocation.toLowerCase();
@@ -3461,23 +3575,59 @@ class _KantoMapPainter extends CustomPainter {
       }
       canvas.drawCircle(point, isSelected ? 8 : 7, Paint()..color = route);
       canvas.drawCircle(point, 3, Paint()..color = Colors.white);
-      final text = TextPainter(
-        text: TextSpan(
-          text: place.name,
-          style: TextStyle(
-            color: label,
-            fontSize: size.width < 360 ? 8 : 9.5,
-            fontWeight: FontWeight.w600,
+      final name = place.name;
+      final isMajorPlace = name.contains('City') ||
+          name.contains('Town') ||
+          name.contains('Island') ||
+          name.contains('Forest') ||
+          name.contains('Cave') ||
+          name.contains('Moon') ||
+          name.contains('Victory Road') ||
+          name.contains('Indigo Plateau') ||
+          name.contains('Safari Zone') ||
+          name.contains('Pokémon Tower') ||
+          name.contains('Pokémon Mansion') ||
+          name.contains('Power Plant') ||
+          name.contains('S.S. Anne') ||
+          name.contains('GO Park') ||
+          name.contains('Silph Co.') ||
+          name.contains('Team Rocket Hideout') ||
+          name.contains('Seafoam') ||
+          name.contains('Bill\'s House') ||
+          name.contains('Sea Cottage');
+      // Keep the overview legible: every point remains tappable, while small
+      // buildings/gyms and route labels appear when selected instead of colliding.
+      if (isMajorPlace || isSelected) {
+        final text = TextPainter(
+          text: TextSpan(
+            text: place.name,
+            style: TextStyle(
+              color: label,
+              fontSize: size.width < 360 ? 8 : 9.5,
+              fontWeight: isSelected ? FontWeight.w900 : FontWeight.w700,
+              shadows: [
+                Shadow(
+                  color: const Color(0xFFF5F0D8).withValues(alpha: .92),
+                  blurRadius: 3,
+                  offset: const Offset(1, 1),
+                ),
+                Shadow(
+                  color: const Color(0xFFF5F0D8).withValues(alpha: .92),
+                  blurRadius: 3,
+                  offset: const Offset(-1, -1),
+                ),
+              ],
+            ),
           ),
-        ),
-        textDirection: TextDirection.ltr,
-        maxLines: 1,
-      )..layout(maxWidth: size.width * .42);
-      var dx = point.dx + 9;
-      if (dx + text.width > size.width - 4) dx = point.dx - text.width - 9;
-      var dy = point.dy - text.height / 2;
-      dy = dy.clamp(4.0, size.height - text.height - 4);
-      text.paint(canvas, Offset(dx, dy));
+          textDirection: TextDirection.ltr,
+          maxLines: 1,
+        )..layout(maxWidth: size.width * .42);
+        var dx = point.dx + 10;
+        if (dx + text.width > size.width - 4) dx = point.dx - text.width - 10;
+        var dy = point.dy - text.height / 2;
+        dy = dy.clamp(4.0, size.height - text.height - 4);
+        text.paint(canvas, Offset(dx, dy));
+      }
     }
 
     final title = TextPainter(
