@@ -1,3 +1,11 @@
+### Mapy — końcowy audyt statyczny bieżącej iteracji (2026-10-29)
+
+- Audyt indeksu JSON: 76 nazw lokacji, 2 jawne aliasy, 74 fizyczne punkty mapy, 82 połączenia; wszystkie połączenia zgadzają się z grafem indeksu, brak błędnych indeksów i punktów poza zakresem.
+- Pokrycie schematów: 76/76 wpisów lokalnych, bez duplikatów i brakujących nazw. Wszystkie 25 tras mają dane spotkań. Wszystkie `sourceIds` mają odpowiadające rekordy źródeł (124 rekordy źródeł).
+- Rysunek: 85 konstruktorów `Paint()` sprawdzonych tekstowo; wszystkie mają jawne `isAntiAlias = true`. Etykiety rezerwują miejsca wszystkich markerów przed rozmieszczeniem; aliasy Bill's House i Safari Zone podświetlają wspólne punkty.
+- Zmieniono etykiety legendy na „Lista Pokémonów / Lista przedmiotów / Lista trenerów / walki / Lista znajdziek 100%”, żeby nie sugerowały istnienia dokładnych pinezek.
+- Commit legendy: `8940ad5`; doprecyzowanie „Lista Pokémonów”: `622d1bd`. To audyt statyczny, nie uruchomienie aplikacji. Nie wykonano testów, analyzer ani APK. Dokładne pozycje kafelków i pinezki nadal wymagają weryfikacji w grze; mapa jest oznaczona jako ilustracyjna.
+
 ### Mapy — pozostałe wydarzenia obiektów Kanto (2026-10-29)
 
 - Uzupełniono wydarzenia fabularne i warunki progresji dla S.S. Anne, Team Rocket Hideout, Silph Co., Pokémon Tower, Pokémon Mansion, Seafoam Islands, Victory Road, Cerulean Cave, Power Plant, domu gracza, laboratorium Oaka, Department Store, Condominiums, Sea Cottage, Day Care i bramy Ligi.
