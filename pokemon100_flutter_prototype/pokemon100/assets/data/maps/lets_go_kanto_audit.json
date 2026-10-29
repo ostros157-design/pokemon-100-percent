@@ -402,6 +402,16 @@
       "id": "serebii-route8",
       "url": "https://www.serebii.net/pokearth/kanto/route8.shtml",
       "scope": "Route 8 encounter tables for Let’s Go Pikachu and Let’s Go Eevee, including ground and sky encounters"
+    },
+    {
+      "id": "serebii-route9",
+      "url": "https://www.serebii.net/pokearth/kanto/route9.shtml",
+      "scope": "Route 9 wild Pokémon encounters in both Let’s Go versions"
+    },
+    {
+      "id": "serebii-route10",
+      "url": "https://www.serebii.net/pokearth/kanto/route10.shtml",
+      "scope": "Route 10 grass, water, sky and special encounters in both Let’s Go versions"
     }
   ],
   "locations": [
@@ -2629,9 +2639,331 @@
       ],
       "sourceIds": [
         "routepedia-route9-pikachu",
-        "bulbapedia-part8"
+        "bulbapedia-part8",
+        "serebii-route9"
       ],
-      "dataStatus": "text_verified_positions_not_mapped"
+      "dataStatus": "text_verified_positions_not_mapped",
+      "wildPokemonDetails": {
+        "lets_go_pikachu": [
+          {
+            "name": "Rattata",
+            "method": "grass",
+            "levelRange": [
+              17,
+              22
+            ],
+            "ratePercent": 20
+          },
+          {
+            "name": "Spearow",
+            "method": "grass",
+            "levelRange": [
+              17,
+              22
+            ],
+            "ratePercent": 20
+          },
+          {
+            "name": "Nidoran♀",
+            "method": "grass",
+            "levelRange": [
+              17,
+              22
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Nidoran♂",
+            "method": "grass",
+            "levelRange": [
+              17,
+              22
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Raticate",
+            "method": "grass",
+            "levelRange": [
+              17,
+              22
+            ],
+            "ratePercent": 10
+          },
+          {
+            "name": "Fearow",
+            "method": "grass",
+            "levelRange": [
+              17,
+              22
+            ],
+            "ratePercent": 10
+          },
+          {
+            "name": "Nidorina",
+            "method": "grass",
+            "levelRange": [
+              17,
+              22
+            ],
+            "ratePercent": 5
+          },
+          {
+            "name": "Nidorino",
+            "method": "grass",
+            "levelRange": [
+              17,
+              22
+            ],
+            "ratePercent": 5
+          },
+          {
+            "name": "Spearow",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 60
+          },
+          {
+            "name": "Fearow",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 40
+          },
+          {
+            "name": "Chansey",
+            "method": "special spawn",
+            "levelRange": [
+              17,
+              22
+            ]
+          },
+          {
+            "name": "Charizard",
+            "method": "sky special spawn",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Dragonite",
+            "method": "sky special spawn",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Articuno",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Zapdos",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Moltres",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          }
+        ],
+        "lets_go_eevee": [
+          {
+            "name": "Rattata",
+            "method": "grass",
+            "levelRange": [
+              17,
+              22
+            ],
+            "ratePercent": 20
+          },
+          {
+            "name": "Spearow",
+            "method": "grass",
+            "levelRange": [
+              17,
+              22
+            ],
+            "ratePercent": 20
+          },
+          {
+            "name": "Nidoran♀",
+            "method": "grass",
+            "levelRange": [
+              17,
+              22
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Nidoran♂",
+            "method": "grass",
+            "levelRange": [
+              17,
+              22
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Raticate",
+            "method": "grass",
+            "levelRange": [
+              17,
+              22
+            ],
+            "ratePercent": 10
+          },
+          {
+            "name": "Fearow",
+            "method": "grass",
+            "levelRange": [
+              17,
+              22
+            ],
+            "ratePercent": 10
+          },
+          {
+            "name": "Nidorina",
+            "method": "grass",
+            "levelRange": [
+              17,
+              22
+            ],
+            "ratePercent": 5
+          },
+          {
+            "name": "Nidorino",
+            "method": "grass",
+            "levelRange": [
+              17,
+              22
+            ],
+            "ratePercent": 5
+          },
+          {
+            "name": "Spearow",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 60
+          },
+          {
+            "name": "Fearow",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 40
+          },
+          {
+            "name": "Chansey",
+            "method": "special spawn",
+            "levelRange": [
+              17,
+              22
+            ]
+          },
+          {
+            "name": "Charizard",
+            "method": "sky special spawn",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Dragonite",
+            "method": "sky special spawn",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Articuno",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Zapdos",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Moltres",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          }
+        ],
+        "status": "text_verified",
+        "sourceIds": [
+          "serebii-route9"
+        ]
+      },
+      "wildPokemon": {
+        "lets_go_pikachu": [
+          "Rattata",
+          "Spearow",
+          "Nidoran♀",
+          "Nidoran♂",
+          "Raticate",
+          "Fearow",
+          "Nidorina",
+          "Nidorino",
+          "Chansey",
+          "Charizard",
+          "Dragonite",
+          "Articuno",
+          "Zapdos",
+          "Moltres"
+        ],
+        "lets_go_eevee": [
+          "Rattata",
+          "Spearow",
+          "Nidoran♀",
+          "Nidoran♂",
+          "Raticate",
+          "Fearow",
+          "Nidorina",
+          "Nidorino",
+          "Chansey",
+          "Charizard",
+          "Dragonite",
+          "Articuno",
+          "Zapdos",
+          "Moltres"
+        ]
+      },
+      "encounterStatus": "text_verified"
     },
     {
       "id": "route_10",
@@ -2666,9 +2998,451 @@
       ],
       "sourceIds": [
         "routepedia-route10-pikachu",
-        "bulbapedia-part8"
+        "bulbapedia-part8",
+        "serebii-route10"
       ],
-      "dataStatus": "text_verified_positions_not_mapped"
+      "dataStatus": "text_verified_positions_not_mapped",
+      "wildPokemonDetails": {
+        "lets_go_pikachu": [
+          {
+            "name": "Rattata",
+            "method": "grass",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Spearow",
+            "method": "grass",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Nidoran♀",
+            "method": "grass",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Nidoran♂",
+            "method": "grass",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Raticate",
+            "method": "grass",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 10
+          },
+          {
+            "name": "Fearow",
+            "method": "grass",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 10
+          },
+          {
+            "name": "Krabby",
+            "method": "grass",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 10
+          },
+          {
+            "name": "Nidorina",
+            "method": "grass",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 5
+          },
+          {
+            "name": "Nidorino",
+            "method": "grass",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 5
+          },
+          {
+            "name": "Spearow",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 60
+          },
+          {
+            "name": "Fearow",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 40
+          },
+          {
+            "name": "Chansey",
+            "method": "special spawn",
+            "levelRange": [
+              18,
+              23
+            ]
+          },
+          {
+            "name": "Charizard",
+            "method": "sky special spawn",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Dragonite",
+            "method": "sky special spawn",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Articuno",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Zapdos",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Moltres",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Tentacool",
+            "method": "surfing",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 45
+          },
+          {
+            "name": "Magikarp",
+            "method": "surfing",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 45
+          },
+          {
+            "name": "Tentacruel",
+            "method": "surfing",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 5
+          },
+          {
+            "name": "Dratini",
+            "method": "surfing",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 4
+          },
+          {
+            "name": "Dragonair",
+            "method": "surfing",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 1
+          }
+        ],
+        "lets_go_eevee": [
+          {
+            "name": "Rattata",
+            "method": "grass",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Spearow",
+            "method": "grass",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Nidoran♀",
+            "method": "grass",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Nidoran♂",
+            "method": "grass",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Raticate",
+            "method": "grass",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 10
+          },
+          {
+            "name": "Fearow",
+            "method": "grass",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 10
+          },
+          {
+            "name": "Krabby",
+            "method": "grass",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 10
+          },
+          {
+            "name": "Nidorina",
+            "method": "grass",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 5
+          },
+          {
+            "name": "Nidorino",
+            "method": "grass",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 5
+          },
+          {
+            "name": "Spearow",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 60
+          },
+          {
+            "name": "Fearow",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 40
+          },
+          {
+            "name": "Chansey",
+            "method": "special spawn",
+            "levelRange": [
+              18,
+              23
+            ]
+          },
+          {
+            "name": "Charizard",
+            "method": "sky special spawn",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Dragonite",
+            "method": "sky special spawn",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Articuno",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Zapdos",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Moltres",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Tentacool",
+            "method": "surfing",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 45
+          },
+          {
+            "name": "Magikarp",
+            "method": "surfing",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 45
+          },
+          {
+            "name": "Tentacruel",
+            "method": "surfing",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 5
+          },
+          {
+            "name": "Dratini",
+            "method": "surfing",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 4
+          },
+          {
+            "name": "Dragonair",
+            "method": "surfing",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 1
+          }
+        ],
+        "status": "text_verified",
+        "sourceIds": [
+          "serebii-route10"
+        ]
+      },
+      "wildPokemon": {
+        "lets_go_pikachu": [
+          "Rattata",
+          "Spearow",
+          "Nidoran♀",
+          "Nidoran♂",
+          "Raticate",
+          "Fearow",
+          "Krabby",
+          "Nidorina",
+          "Nidorino",
+          "Chansey",
+          "Charizard",
+          "Dragonite",
+          "Articuno",
+          "Zapdos",
+          "Moltres",
+          "Tentacool",
+          "Magikarp",
+          "Tentacruel",
+          "Dratini",
+          "Dragonair"
+        ],
+        "lets_go_eevee": [
+          "Rattata",
+          "Spearow",
+          "Nidoran♀",
+          "Nidoran♂",
+          "Raticate",
+          "Fearow",
+          "Krabby",
+          "Nidorina",
+          "Nidorino",
+          "Chansey",
+          "Charizard",
+          "Dragonite",
+          "Articuno",
+          "Zapdos",
+          "Moltres",
+          "Tentacool",
+          "Magikarp",
+          "Tentacruel",
+          "Dratini",
+          "Dragonair"
+        ]
+      },
+      "encounterStatus": "text_verified"
     },
     {
       "id": "rock_tunnel",
