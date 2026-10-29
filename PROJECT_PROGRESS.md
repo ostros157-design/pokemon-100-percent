@@ -868,3 +868,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Połączenia kolejowe są opisane jako transport, nie jako fizyczna bliskość. Węzły pomagają przechodzić między główną częścią Galar a Isle of Armor i Crown Tundra; dostęp zależy od fabuły i DLC.
 - Źródła: `https://bulbapedia.bulbagarden.net/wiki/Wild_Area_Station` oraz `https://bulbapedia.bulbagarden.net/wiki/Transportation_in_the_Pok%C3%A9mon_world`.
 - Commity: `e135641`, `87841f1`, `239173b`.
+
+
+### Mapy — audyt grafów i połączenia Paldei / regionów (2026-10-29)
+
+- Poprawiono spójność tras: Sinnoh Victory Road ma połączenie z Route 223, a Fight Area dostęp statkiem ze Snowpoint City; Unova dostała Skyarrow Bridge oraz połączenie transportowe Virbank–Castelia i brakujące przejście przy Twist Mountain; Alola dostała połączenia Diglett’s Tunnel oraz Akala Outskirts/Memorial Hill/Poni.
+- Paldea: połączono główne osady z obszarami na podstawie listy połączeń lokacji Bulbapedia, dodano relacje Area Zero, Kitakami i Blueberry Academy/Terarium oraz sąsiednie obszary południowej, wschodniej i północnej prowincji.
+- Commity: `15faa25`, `a83f43c`, `b398450`, `4085596`, `a044f05`, `3d42e3e`, `4fe2c71`, `1e9f391`.
+- Grafy są traktowane jako dostęp/transport, jeśli nie chodzi o bezpośrednie sąsiedztwo; źródła i statusy zaznaczają niezweryfikowane dokładne pinezki. Paldea nadal wymaga dalszego łączenia i weryfikacji pozostałych obszarów.
