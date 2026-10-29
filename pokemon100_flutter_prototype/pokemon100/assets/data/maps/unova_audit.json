@@ -24,6 +24,11 @@
       "id": "pokemony-unova",
       "url": "https://www.pokemony.com/en/locations?region=unova",
       "scope": "Unova location inventory and schematic-map conventions"
+    },
+    {
+      "id": "bulbapedia-skyarrow-bridge",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Skyarrow_Bridge",
+      "scope": "Skyarrow Bridge connects Pinwheel Forest and Castelia City"
     }
   ],
   "locations": [
@@ -96,14 +101,16 @@
       "name": "Castelia City",
       "kind": "town",
       "connectsTo": [
-        "route_4"
+        "route_4",
+        "skyarrow_bridge"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "settlement_known_connections_pending_verification",
+      "dataStatus": "connection_source_verified_exact_pin_pending",
       "sourceIds": [
         "bulbapedia-unova",
-        "pokemony-unova"
+        "pokemony-unova",
+        "bulbapedia-skyarrow-bridge"
       ]
     },
     {
@@ -707,14 +714,16 @@
       "name": "Pinwheel Forest",
       "kind": "forest",
       "connectsTo": [
-        "nacrene_city"
+        "nacrene_city",
+        "skyarrow_bridge"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_connection_indexed_variant_audit_pending",
+      "dataStatus": "connection_source_verified_exact_pin_pending",
       "sourceIds": [
         "bulbapedia-unova",
-        "pokemony-unova"
+        "pokemony-unova",
+        "bulbapedia-skyarrow-bridge"
       ]
     },
     {
@@ -1262,6 +1271,21 @@
         "bulbapedia-route-list"
       ],
       "dataStatus": "landmark_connection_indexed_variant_audit_pending"
+    },
+    {
+      "id": "skyarrow_bridge",
+      "name": "Skyarrow Bridge",
+      "kind": "bridge",
+      "connectsTo": [
+        "pinwheel_forest",
+        "castelia_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-skyarrow-bridge"
+      ],
+      "dataStatus": "connection_source_verified_exact_pin_pending"
     }
   ]
 }
