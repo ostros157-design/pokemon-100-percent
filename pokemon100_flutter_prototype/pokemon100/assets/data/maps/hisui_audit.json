@@ -16,6 +16,11 @@
       "id": "legends-arceus-locations",
       "url": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Legends:_Arceus",
       "scope": "Legends: Arceus field areas and major landmarks"
+    },
+    {
+      "id": "pokebulbapedia-hisui-subareas",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Hisui",
+      "scope": "Five Hisui subregions, base camps, settlements and named landmarks"
     }
   ],
   "locations": [
@@ -43,7 +48,8 @@
       "sourceIds": [
         "bulbapedia-hisui",
         "legends-arceus-locations"
-      ]
+      ],
+      "notes": "Obszar ekspedycyjny wybierany z Jubilife Village; dostęp przez system wypraw/fast travel, nie zwykłą trasę pieszą."
     },
     {
       "id": "crimson_mirelands",
@@ -56,7 +62,8 @@
       "sourceIds": [
         "bulbapedia-hisui",
         "legends-arceus-locations"
-      ]
+      ],
+      "notes": "Obszar ekspedycyjny wybierany z Jubilife Village; dostęp przez system wypraw/fast travel, nie zwykłą trasę pieszą."
     },
     {
       "id": "cobalt_coastlands",
@@ -69,7 +76,8 @@
       "sourceIds": [
         "bulbapedia-hisui",
         "legends-arceus-locations"
-      ]
+      ],
+      "notes": "Obszar ekspedycyjny wybierany z Jubilife Village; dostęp przez system wypraw/fast travel, nie zwykłą trasę pieszą."
     },
     {
       "id": "coronet_highlands",
@@ -82,7 +90,8 @@
       "sourceIds": [
         "bulbapedia-hisui",
         "legends-arceus-locations"
-      ]
+      ],
+      "notes": "Obszar ekspedycyjny wybierany z Jubilife Village; dostęp przez system wypraw/fast travel, nie zwykłą trasę pieszą."
     },
     {
       "id": "alabaster_icelands",
@@ -95,7 +104,8 @@
       "sourceIds": [
         "bulbapedia-hisui",
         "legends-arceus-locations"
-      ]
+      ],
+      "notes": "Obszar ekspedycyjny wybierany z Jubilife Village; dostęp przez system wypraw/fast travel, nie zwykłą trasę pieszą."
     },
     {
       "id": "ancient_quarry",
@@ -343,6 +353,1350 @@
         "bulbapedia-hisui",
         "legends-arceus-locations"
       ]
+    },
+    {
+      "id": "fieldlands_camp",
+      "name": "Fieldlands Camp",
+      "kind": "base_camp",
+      "parentRegion": "Obsidian Fieldlands",
+      "connectsTo": [
+        "obsidian_fieldlands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "heights_camp",
+      "name": "Heights Camp",
+      "kind": "base_camp",
+      "parentRegion": "Obsidian Fieldlands",
+      "connectsTo": [
+        "obsidian_fieldlands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "aspiration_hill",
+      "name": "Aspiration Hill",
+      "kind": "landmark",
+      "parentRegion": "Obsidian Fieldlands",
+      "connectsTo": [
+        "obsidian_fieldlands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "horseshoe_plains",
+      "name": "Horseshoe Plains",
+      "kind": "landmark",
+      "parentRegion": "Obsidian Fieldlands",
+      "connectsTo": [
+        "obsidian_fieldlands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "deertrack_heights",
+      "name": "Deertrack Heights",
+      "kind": "landmark",
+      "parentRegion": "Obsidian Fieldlands",
+      "connectsTo": [
+        "obsidian_fieldlands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "deertrack_path",
+      "name": "Deertrack Path",
+      "kind": "landmark",
+      "parentRegion": "Obsidian Fieldlands",
+      "connectsTo": [
+        "obsidian_fieldlands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "floaro_gardens",
+      "name": "Floaro Gardens",
+      "kind": "natural_area",
+      "parentRegion": "Obsidian Fieldlands",
+      "connectsTo": [
+        "obsidian_fieldlands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "grandtree_arena",
+      "name": "Grandtree Arena",
+      "kind": "arena",
+      "parentRegion": "Obsidian Fieldlands",
+      "connectsTo": [
+        "obsidian_fieldlands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "grueling_grove",
+      "name": "Grueling Grove",
+      "kind": "natural_area",
+      "parentRegion": "Obsidian Fieldlands",
+      "connectsTo": [
+        "obsidian_fieldlands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "nature_s_pantry",
+      "name": "Nature's Pantry",
+      "kind": "landmark",
+      "parentRegion": "Obsidian Fieldlands",
+      "connectsTo": [
+        "obsidian_fieldlands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "obsidian_falls",
+      "name": "Obsidian Falls",
+      "kind": "natural_area",
+      "parentRegion": "Obsidian Fieldlands",
+      "connectsTo": [
+        "obsidian_fieldlands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "ramanas_island",
+      "name": "Ramanas Island",
+      "kind": "landmark",
+      "parentRegion": "Obsidian Fieldlands",
+      "connectsTo": [
+        "obsidian_fieldlands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "sandgem_flats",
+      "name": "Sandgem Flats",
+      "kind": "landmark",
+      "parentRegion": "Obsidian Fieldlands",
+      "connectsTo": [
+        "obsidian_fieldlands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "the_heartwood",
+      "name": "The Heartwood",
+      "kind": "landmark",
+      "parentRegion": "Obsidian Fieldlands",
+      "connectsTo": [
+        "obsidian_fieldlands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "worn_bridge",
+      "name": "Worn Bridge",
+      "kind": "landmark",
+      "parentRegion": "Obsidian Fieldlands",
+      "connectsTo": [
+        "obsidian_fieldlands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "windswept_run",
+      "name": "Windswept Run",
+      "kind": "landmark",
+      "parentRegion": "Obsidian Fieldlands",
+      "connectsTo": [
+        "obsidian_fieldlands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "mirelands_camp",
+      "name": "Mirelands Camp",
+      "kind": "base_camp",
+      "parentRegion": "Crimson Mirelands",
+      "connectsTo": [
+        "crimson_mirelands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "bogbound_camp",
+      "name": "Bogbound Camp",
+      "kind": "base_camp",
+      "parentRegion": "Crimson Mirelands",
+      "connectsTo": [
+        "crimson_mirelands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "bolderoll_slope",
+      "name": "Bolderoll Slope",
+      "kind": "landmark",
+      "parentRegion": "Crimson Mirelands",
+      "connectsTo": [
+        "crimson_mirelands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "brava_arena",
+      "name": "Brava Arena",
+      "kind": "arena",
+      "parentRegion": "Crimson Mirelands",
+      "connectsTo": [
+        "crimson_mirelands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "cloudpool_ridge",
+      "name": "Cloudpool Ridge",
+      "kind": "landmark",
+      "parentRegion": "Crimson Mirelands",
+      "connectsTo": [
+        "crimson_mirelands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "cottonsedge_prairie",
+      "name": "Cottonsedge Prairie",
+      "kind": "natural_area",
+      "parentRegion": "Crimson Mirelands",
+      "connectsTo": [
+        "crimson_mirelands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "diamond_heath",
+      "name": "Diamond Heath",
+      "kind": "natural_area",
+      "parentRegion": "Crimson Mirelands",
+      "connectsTo": [
+        "crimson_mirelands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "droning_meadow",
+      "name": "Droning Meadow",
+      "kind": "natural_area",
+      "parentRegion": "Crimson Mirelands",
+      "connectsTo": [
+        "crimson_mirelands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "gapejaw_bog",
+      "name": "Gapejaw Bog",
+      "kind": "natural_area",
+      "parentRegion": "Crimson Mirelands",
+      "connectsTo": [
+        "crimson_mirelands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "golden_lowlands",
+      "name": "Golden Lowlands",
+      "kind": "natural_area",
+      "parentRegion": "Crimson Mirelands",
+      "connectsTo": [
+        "crimson_mirelands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "holm_of_trials",
+      "name": "Holm of Trials",
+      "kind": "landmark",
+      "parentRegion": "Crimson Mirelands",
+      "connectsTo": [
+        "crimson_mirelands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "scarlet_bog",
+      "name": "Scarlet Bog",
+      "kind": "natural_area",
+      "parentRegion": "Crimson Mirelands",
+      "connectsTo": [
+        "crimson_mirelands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "shrouded_ruins",
+      "name": "Shrouded Ruins",
+      "kind": "dungeon",
+      "parentRegion": "Crimson Mirelands",
+      "connectsTo": [
+        "crimson_mirelands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "sludge_mound",
+      "name": "Sludge Mound",
+      "kind": "landmark",
+      "parentRegion": "Crimson Mirelands",
+      "connectsTo": [
+        "crimson_mirelands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "ursa_s_ring",
+      "name": "Ursa's Ring",
+      "kind": "landmark",
+      "parentRegion": "Crimson Mirelands",
+      "connectsTo": [
+        "crimson_mirelands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "beachside_camp",
+      "name": "Beachside Camp",
+      "kind": "base_camp",
+      "parentRegion": "Cobalt Coastlands",
+      "connectsTo": [
+        "cobalt_coastlands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "coastlands_camp",
+      "name": "Coastlands Camp",
+      "kind": "base_camp",
+      "parentRegion": "Cobalt Coastlands",
+      "connectsTo": [
+        "cobalt_coastlands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "castaway_shore",
+      "name": "Castaway Shore",
+      "kind": "natural_area",
+      "parentRegion": "Cobalt Coastlands",
+      "connectsTo": [
+        "cobalt_coastlands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "deadwood_haunt",
+      "name": "Deadwood Haunt",
+      "kind": "landmark",
+      "parentRegion": "Cobalt Coastlands",
+      "connectsTo": [
+        "cobalt_coastlands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "islespy_shore",
+      "name": "Islespy Shore",
+      "kind": "natural_area",
+      "parentRegion": "Cobalt Coastlands",
+      "connectsTo": [
+        "cobalt_coastlands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "lunker_s_lair",
+      "name": "Lunker’s Lair",
+      "kind": "landmark",
+      "parentRegion": "Cobalt Coastlands",
+      "connectsTo": [
+        "cobalt_coastlands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "molten_arena",
+      "name": "Molten Arena",
+      "kind": "arena",
+      "parentRegion": "Cobalt Coastlands",
+      "connectsTo": [
+        "cobalt_coastlands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "seagrass_haven",
+      "name": "Seagrass Haven",
+      "kind": "natural_area",
+      "parentRegion": "Cobalt Coastlands",
+      "connectsTo": [
+        "cobalt_coastlands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "spring_path",
+      "name": "Spring Path",
+      "kind": "landmark",
+      "parentRegion": "Cobalt Coastlands",
+      "connectsTo": [
+        "cobalt_coastlands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "veilstone_cape",
+      "name": "Veilstone Cape",
+      "kind": "landmark",
+      "parentRegion": "Cobalt Coastlands",
+      "connectsTo": [
+        "cobalt_coastlands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "windbreak_stand",
+      "name": "Windbreak Stand",
+      "kind": "natural_area",
+      "parentRegion": "Cobalt Coastlands",
+      "connectsTo": [
+        "cobalt_coastlands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "sand_s_reach",
+      "name": "Sand's Reach",
+      "kind": "landmark",
+      "parentRegion": "Cobalt Coastlands",
+      "connectsTo": [
+        "cobalt_coastlands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "tombolo_walk",
+      "name": "Tombolo Walk",
+      "kind": "natural_area",
+      "parentRegion": "Cobalt Coastlands",
+      "connectsTo": [
+        "cobalt_coastlands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "tranquility_cove",
+      "name": "Tranquility Cove",
+      "kind": "natural_area",
+      "parentRegion": "Cobalt Coastlands",
+      "connectsTo": [
+        "cobalt_coastlands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "highlands_camp",
+      "name": "Highlands Camp",
+      "kind": "base_camp",
+      "parentRegion": "Coronet Highlands",
+      "connectsTo": [
+        "coronet_highlands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "mountain_camp",
+      "name": "Mountain Camp",
+      "kind": "base_camp",
+      "parentRegion": "Coronet Highlands",
+      "connectsTo": [
+        "coronet_highlands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "summit_camp",
+      "name": "Summit Camp",
+      "kind": "base_camp",
+      "parentRegion": "Coronet Highlands",
+      "connectsTo": [
+        "coronet_highlands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "clamberclaw_cliffs",
+      "name": "Clamberclaw Cliffs",
+      "kind": "natural_area",
+      "parentRegion": "Coronet Highlands",
+      "connectsTo": [
+        "coronet_highlands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "cloudcap_pass",
+      "name": "Cloudcap Pass",
+      "kind": "natural_area",
+      "parentRegion": "Coronet Highlands",
+      "connectsTo": [
+        "coronet_highlands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "fabled_spring",
+      "name": "Fabled Spring",
+      "kind": "landmark",
+      "parentRegion": "Coronet Highlands",
+      "connectsTo": [
+        "coronet_highlands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "sonorous_path",
+      "name": "Sonorous Path",
+      "kind": "landmark",
+      "parentRegion": "Coronet Highlands",
+      "connectsTo": [
+        "coronet_highlands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "stonetooth_rows",
+      "name": "Stonetooth Rows",
+      "kind": "natural_area",
+      "parentRegion": "Coronet Highlands",
+      "connectsTo": [
+        "coronet_highlands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "wayward_cave",
+      "name": "Wayward Cave",
+      "kind": "dungeon",
+      "parentRegion": "Coronet Highlands",
+      "connectsTo": [
+        "coronet_highlands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "snowfields_camp",
+      "name": "Snowfields Camp",
+      "kind": "base_camp",
+      "parentRegion": "Alabaster Icelands",
+      "connectsTo": [
+        "alabaster_icelands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "icepeak_camp",
+      "name": "Icepeak Camp",
+      "kind": "base_camp",
+      "parentRegion": "Alabaster Icelands",
+      "connectsTo": [
+        "alabaster_icelands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "avalugg_s_legacy",
+      "name": "Avalugg's Legacy",
+      "kind": "landmark",
+      "parentRegion": "Alabaster Icelands",
+      "connectsTo": [
+        "alabaster_icelands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "avalanche_slopes",
+      "name": "Avalanche Slopes",
+      "kind": "natural_area",
+      "parentRegion": "Alabaster Icelands",
+      "connectsTo": [
+        "alabaster_icelands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "bonechill_wastes",
+      "name": "Bonechill Wastes",
+      "kind": "landmark",
+      "parentRegion": "Alabaster Icelands",
+      "connectsTo": [
+        "alabaster_icelands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "icepeak_arena",
+      "name": "Icepeak Arena",
+      "kind": "arena",
+      "parentRegion": "Alabaster Icelands",
+      "connectsTo": [
+        "alabaster_icelands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "pearl_settlement",
+      "name": "Pearl Settlement",
+      "kind": "settlement",
+      "parentRegion": "Alabaster Icelands",
+      "connectsTo": [
+        "alabaster_icelands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "whiteout_valley",
+      "name": "Whiteout Valley",
+      "kind": "natural_area",
+      "parentRegion": "Alabaster Icelands",
+      "connectsTo": [
+        "alabaster_icelands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "heart_s_crag",
+      "name": "Heart's Crag",
+      "kind": "natural_area",
+      "parentRegion": "Alabaster Icelands",
+      "connectsTo": [
+        "alabaster_icelands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "arena_s_approach",
+      "name": "Arena's Approach",
+      "kind": "landmark",
+      "parentRegion": "Alabaster Icelands",
+      "connectsTo": [
+        "alabaster_icelands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "icebound_falls",
+      "name": "Icebound Falls",
+      "kind": "natural_area",
+      "parentRegion": "Alabaster Icelands",
+      "connectsTo": [
+        "alabaster_icelands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "glacier_terrace",
+      "name": "Glacier Terrace",
+      "kind": "natural_area",
+      "parentRegion": "Alabaster Icelands",
+      "connectsTo": [
+        "alabaster_icelands"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "prelude_beach",
+      "name": "Prelude Beach",
+      "kind": "natural_area",
+      "parentRegion": "Jubilife Village",
+      "connectsTo": [
+        "jubilife_village"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "galaxy_hall",
+      "name": "Galaxy Hall",
+      "kind": "landmark",
+      "parentRegion": "Jubilife Village",
+      "connectsTo": [
+        "jubilife_village"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "general_store",
+      "name": "General Store",
+      "kind": "landmark",
+      "parentRegion": "Jubilife Village",
+      "connectsTo": [
+        "jubilife_village"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "craftworks",
+      "name": "Craftworks",
+      "kind": "landmark",
+      "parentRegion": "Jubilife Village",
+      "connectsTo": [
+        "jubilife_village"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "pastures",
+      "name": "Pastures",
+      "kind": "landmark",
+      "parentRegion": "Jubilife Village",
+      "connectsTo": [
+        "jubilife_village"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "training_grounds",
+      "name": "Training Grounds",
+      "kind": "landmark",
+      "parentRegion": "Jubilife Village",
+      "connectsTo": [
+        "jubilife_village"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "ginkgo_guild_cart",
+      "name": "Ginkgo Guild Cart",
+      "kind": "landmark",
+      "parentRegion": "Jubilife Village",
+      "connectsTo": [
+        "jubilife_village"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "trading_post",
+      "name": "Trading Post",
+      "kind": "landmark",
+      "parentRegion": "Jubilife Village",
+      "connectsTo": [
+        "jubilife_village"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "photography_studio",
+      "name": "Photography Studio",
+      "kind": "landmark",
+      "parentRegion": "Jubilife Village",
+      "connectsTo": [
+        "jubilife_village"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "farm",
+      "name": "Farm",
+      "kind": "landmark",
+      "parentRegion": "Jubilife Village",
+      "connectsTo": [
+        "jubilife_village"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "clothier",
+      "name": "Clothier",
+      "kind": "landmark",
+      "parentRegion": "Jubilife Village",
+      "connectsTo": [
+        "jubilife_village"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "hairdresser",
+      "name": "Hairdresser",
+      "kind": "landmark",
+      "parentRegion": "Jubilife Village",
+      "connectsTo": [
+        "jubilife_village"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "practice_field",
+      "name": "Practice Field",
+      "kind": "landmark",
+      "parentRegion": "Jubilife Village",
+      "connectsTo": [
+        "jubilife_village"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "seaside_gate",
+      "name": "Seaside Gate",
+      "kind": "landmark",
+      "parentRegion": "Jubilife Village",
+      "connectsTo": [
+        "jubilife_village"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "front_gate",
+      "name": "Front Gate",
+      "kind": "landmark",
+      "parentRegion": "Jubilife Village",
+      "connectsTo": [
+        "jubilife_village"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "canala_avenue",
+      "name": "Canala Avenue",
+      "kind": "landmark",
+      "parentRegion": "Jubilife Village",
+      "connectsTo": [
+        "jubilife_village"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "floaro_main_street",
+      "name": "Floaro Main Street",
+      "kind": "landmark",
+      "parentRegion": "Jubilife Village",
+      "connectsTo": [
+        "jubilife_village"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
+    },
+    {
+      "id": "your_quarters",
+      "name": "Your Quarters",
+      "kind": "landmark",
+      "parentRegion": "Jubilife Village",
+      "connectsTo": [
+        "jubilife_village"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hisui",
+        "pokebulbapedia-hisui-subareas"
+      ],
+      "dataStatus": "subarea_named_location_pins_pending"
     }
   ]
 }
