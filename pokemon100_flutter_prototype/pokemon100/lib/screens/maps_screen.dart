@@ -3731,7 +3731,7 @@ class _KantoMapPainter extends CustomPainter {
     _MapPlace('Lavender Town', 0.84, 0.43),
     _MapPlace('Underground Path (Routes 7–8)', 0.65, 0.38),
     _MapPlace('Route 11', 0.76, 0.56),
-    _MapPlace('Diglett\'s Cave', 0.32, 0.43),
+    _MapPlace('Diglett\'s Cave', 0.5, 0.49),
     _MapPlace('Route 12', 0.91, 0.49),
     _MapPlace('Route 13', 0.91, 0.6),
     _MapPlace('Route 14', 0.86, 0.68),
@@ -3781,6 +3781,8 @@ class _KantoMapPainter extends CustomPainter {
     _MapPlace('Fighting Dojo', 0.65, 0.36),
     _MapPlace('GO Park', 0.7, 0.78),
     _MapPlace('Sea Cottage', 0.86, 0.1),
+    _MapPlace("Diglett's Cave (Route 2 entrance)", 0.29, 0.43),
+    _MapPlace("Diglett's Cave (Route 11 entrance)", 0.72, 0.55),
   ];
 
   @override
@@ -4131,7 +4133,6 @@ class _KantoMapPainter extends CustomPainter {
       (2,40),
       (2,52),
       (3,5),
-      (3,24),
       (3,4),
       (5,6),
       (5,53),
@@ -4169,7 +4170,6 @@ class _KantoMapPainter extends CustomPainter {
       (20,21),
       (21,25),
       (21,47),
-      (23,24),
       (25,26),
       (26,27),
       (27,28),
@@ -4206,6 +4206,10 @@ class _KantoMapPainter extends CustomPainter {
       (71,31),
       (72,29),
       (73,11),
+      (3,74),
+      (23,75),
+      (74,24),
+      (75,24),
     ];
     final roadShadow = Paint()
       ..color = const Color(0xFF8B9C73).withValues(alpha: .30)
