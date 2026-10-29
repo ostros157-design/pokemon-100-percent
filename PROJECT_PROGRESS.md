@@ -1049,3 +1049,9 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Route 3 uwzględnia Charmandera jako specjalne spotkanie. Route 2 wyjaśnia różnicę poziomów między częścią południową (3–4) i północną (3–8).
 - Commit: `cc77bd8`. Nie uruchamiano Flutter analyzer, testów ani APK.
 
+### Końcowa walidacja danych tras przed testem użytkownika (2026-10-29)
+
+- Po kolejnych uzupełnieniach ponownie sprawdzono JSON: 25/25 tras ma osobne tablice spotkań dla Let’s Go Pikachu i Let’s Go Eevee.
+- Nazwy z tabel spotkań dopasowują się do wpisów Pokédexu po normalizacji apostrofów; wszystkie identyfikatory źródeł użyte przez tabele istnieją w katalogu źródeł.
+- To kontrola struktury i spójności tekstowych danych, nie test uruchomieniowy. Nadal nie uruchamiano `flutter analyze`, testów ani `flutter build apk`.
+
