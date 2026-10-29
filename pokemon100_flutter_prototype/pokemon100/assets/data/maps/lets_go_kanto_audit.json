@@ -102,6 +102,21 @@
       "id": "routepedia-pewter-pikachu",
       "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/pewter-city",
       "scope": "Pewter City landmarks, connections and Brock's team"
+    },
+    {
+      "id": "routepedia-route3-pikachu",
+      "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/route-3",
+      "scope": "Route 3 Let's Go Pikachu wild encounters, items, trainers and connections"
+    },
+    {
+      "id": "routepedia-mt-moon-pikachu",
+      "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/mt-moon",
+      "scope": "Mt. Moon floors, encounter rates, item list and trainer count"
+    },
+    {
+      "id": "bulbapedia-part4",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Walkthrough:Pok%C3%A9mon:_Let%27s_Go,_Pikachu!_and_Let%27s_Go,_Eevee!/Part_4",
+      "scope": "Route 3, Mt. Moon and Route 4 story progression"
     }
   ],
   "locations": [
@@ -751,6 +766,216 @@
         "routepedia-pewter-pikachu"
       ],
       "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "route_3",
+      "name": "Route 3",
+      "kind": "route",
+      "connectsTo": [
+        "pewter_city",
+        "mt_moon"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "notes": "Trawiasta trasa na wschód od Pewter City prowadząca do wejścia do Mt. Moon.",
+      "wildPokemonDetails": {
+        "levels": [
+          3,
+          8
+        ],
+        "lets_go_pikachu": [
+          [
+            "Spearow",
+            30
+          ],
+          [
+            "Rattata",
+            30
+          ],
+          [
+            "Mankey",
+            20
+          ],
+          [
+            "Sandshrew",
+            20
+          ]
+        ],
+        "lets_go_eevee": [
+          [
+            "Spearow",
+            30
+          ],
+          [
+            "Rattata",
+            30
+          ],
+          [
+            "Mankey",
+            20
+          ],
+          [
+            "Sandshrew",
+            20
+          ]
+        ]
+      },
+      "trainers": [
+        "Lass Janice — Oddish Lv. 6",
+        "Youngster Ben — Rattata Lv. 6",
+        "Bug Catcher Greg — Kakuna Lv. 5",
+        "Youngster Calvin — Spearow Lv. 6",
+        "Camper Victor — Nidoran♂ Lv. 7",
+        "Picnicker Robin — Nidoran♀ Lv. 7",
+        "Coach Trainer Kareem — Bulbasaur Lv. 11"
+      ],
+      "items": [
+        "Potion",
+        "Revive",
+        "Lure",
+        "3 Poké Balls",
+        "Razz Berry (ukryta)",
+        "nagrody za walki: Poké Balls, Great Balls i Revive"
+      ],
+      "sourceIds": [
+        "routepedia-route3-pikachu",
+        "routepedia-route3-eevee",
+        "bulbapedia-part4"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "mt_moon",
+      "name": "Mt. Moon",
+      "kind": "cave",
+      "connectsTo": [
+        "route_3",
+        "route_4"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "notes": "Jaskinia z trzema poziomami: 1F, B1F i B2F. Połączenia wewnątrz jaskini i pozycje przedmiotów nie są jeszcze odwzorowane.",
+      "floors": [
+        "1F",
+        "B1F",
+        "B2F"
+      ],
+      "wildPokemonDetails": {
+        "levels": [
+          5,
+          10
+        ],
+        "1F": [
+          [
+            "Zubat",
+            40
+          ],
+          [
+            "Geodude",
+            40
+          ],
+          [
+            "Paras",
+            15
+          ],
+          [
+            "Clefairy",
+            4
+          ],
+          [
+            "Onix",
+            1
+          ]
+        ],
+        "B1F": [
+          [
+            "Zubat",
+            40
+          ],
+          [
+            "Geodude",
+            40
+          ],
+          [
+            "Paras",
+            15
+          ],
+          [
+            "Clefairy",
+            4
+          ],
+          [
+            "Onix",
+            1
+          ]
+        ],
+        "B2F": [
+          [
+            "Zubat",
+            40
+          ],
+          [
+            "Geodude",
+            34
+          ],
+          [
+            "Paras",
+            15
+          ],
+          [
+            "Clefairy",
+            9
+          ],
+          [
+            "Onix",
+            1
+          ],
+          [
+            "Clefable",
+            1
+          ]
+        ]
+      },
+      "items": [
+        "Repel",
+        "Potion",
+        "Awakening",
+        "Pearl",
+        "Ether",
+        "5 Great Balls",
+        "Rare Candy",
+        "Nugget",
+        "Revive",
+        "Potion",
+        "Revive",
+        "Stardust (ukryty)",
+        "Big Mushroom (ukryty)",
+        "Moon Stone (ukryty)",
+        "Moon Stone (ukryty)"
+      ],
+      "hiddenItemCount": 4,
+      "trainerCount": 17,
+      "sourceIds": [
+        "routepedia-mt-moon-pikachu",
+        "routepedia-mt-moon-eevee",
+        "bulbapedia-part4"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "route_4",
+      "name": "Route 4",
+      "kind": "route",
+      "connectsTo": [
+        "mt_moon"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "notes": "Zachodnia i wschodnia część Route 4 są rozdzielone przejściem przez Mt. Moon; szczegółowe dane tej trasy pozostają do opracowania.",
+      "sourceIds": [
+        "bulbapedia-part4"
+      ],
+      "dataStatus": "connection_verified_details_pending"
     }
   ]
 }
