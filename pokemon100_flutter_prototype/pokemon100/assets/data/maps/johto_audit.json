@@ -118,7 +118,8 @@
         "route_31",
         "route_32",
         "route_36",
-        "sprout_tower"
+        "sprout_tower",
+        "ruins_of_alph"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -590,7 +591,8 @@
       "name": "Lake of Rage",
       "kind": "lake",
       "connectsTo": [
-        "route_43"
+        "route_43",
+        "mahogany_town"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -719,7 +721,8 @@
       "kind": "ruins",
       "connectsTo": [
         "route_32",
-        "violet_city"
+        "violet_city",
+        "route_36"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -844,7 +847,8 @@
       "name": "Safari Zone",
       "kind": "park",
       "connectsTo": [
-        "safari_zone_gate"
+        "safari_zone_gate",
+        "route_48"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -908,7 +912,8 @@
       "connectsTo": [
         "pokemon_league_reception_gate",
         "route_27",
-        "tohjo_falls"
+        "tohjo_falls",
+        "victory_road"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -941,7 +946,8 @@
       "kind": "route",
       "connectsTo": [
         "pokemon_league_reception_gate",
-        "mt_silver"
+        "mt_silver",
+        "indigo_plateau"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
