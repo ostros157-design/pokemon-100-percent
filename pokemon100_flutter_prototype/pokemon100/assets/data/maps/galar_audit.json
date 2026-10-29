@@ -549,13 +549,16 @@
       "id": "giant_s_bed",
       "name": "Giant's Bed",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "crown_tundra"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "connection_indexed_version_and_dlc_audit_pending",
       "sourceIds": [
         "bulbapedia-galar",
-        "pokemony-galar"
+        "pokemony-galar",
+        "bulbapedia-route-list"
       ]
     },
     {
@@ -803,21 +806,6 @@
       "sourceIds": [
         "bulbapedia-galar",
         "pokemony-galar"
-      ],
-      "dataStatus": "connection_indexed_version_and_dlc_audit_pending"
-    },
-    {
-      "id": "giants_bed",
-      "name": "Giant's Bed",
-      "kind": "area",
-      "connectsTo": [
-        "crown_tundra"
-      ],
-      "localMapAsset": null,
-      "coordinateStatus": "unverified",
-      "sourceIds": [
-        "bulbapedia-galar",
-        "bulbapedia-route-list"
       ],
       "dataStatus": "connection_indexed_version_and_dlc_audit_pending"
     }
