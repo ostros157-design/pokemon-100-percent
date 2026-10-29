@@ -1712,8 +1712,8 @@ class _MapsScreenState extends State<MapsScreen> {
                                 avatar: const Icon(Icons.park_outlined, size: 18),
                                 label: const Text('Safari Zone / GO Park'),
                                 onPressed: () {
-                                  _locationSearchController.text = 'Safari Zone';
-                                  setState(() => _searchQuery = 'Safari Zone');
+                                  _locationSearchController.text = 'GO Park';
+                                  setState(() => _searchQuery = 'GO Park');
                                 },
                               ),
                               ActionChip(
