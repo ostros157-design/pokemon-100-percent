@@ -853,3 +853,10 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Połączenia oparto na opisach lokacji Bulbapedia: `South Province (Area One)` i `Mesagoza`; rekordy mają jawny status, że zweryfikowano dostęp, ale nie pinezki na mapie.
 - Commit: `c11c806`.
 - Paldea pozostaje otwartym światem: pozostałe obszary trzeba łączyć na podstawie stron poszczególnych lokacji, bez udawania ponumerowanych tras.
+
+
+### Mapy — Alola: połączenia promowe między wyspami (2026-10-29)
+
+- Dodano zweryfikowane połączenia dostępu promem między Hau’oli City, Heahea City, Malie City, Seafolk Village i Aether Paradise. Notatki zaznaczają, że są to połączenia transportowe, a nie fizyczne sąsiedztwo; część kursów zależy od postępu fabuły.
+- Dodano osobne źródła dla terminali promowych w Hau’oli, Heahea i Malie City.
+- Commit: `8c1b96f`.
