@@ -183,8 +183,15 @@ class _MapsScreenState extends State<MapsScreen> {
     }
     if (location == null) return const SizedBox.shrink();
 
-    final encounters = _mapWildPokemonEntries(location['wildPokemonDetails']);
-    if (encounters.isEmpty) {
+    final encounterSource =
+        location['wildPokemonDetails'] ?? location['encounters'];
+    final encounters = _mapWildPokemonEntries(encounterSource);
+    final notablePokemon = (location['notablePokemon'] as List?)
+            ?.map((value) => value.toString())
+            .where((name) => name.trim().isNotEmpty)
+            .toList() ??
+        const <String>[];
+    if (encounters.isEmpty && notablePokemon.isEmpty) {
       return Card(
         child: Padding(
           padding: const EdgeInsets.all(16),
@@ -192,16 +199,41 @@ class _MapsScreenState extends State<MapsScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Spotkania Pokémonów — $locationName',
+                'Pokémony i spotkania — $locationName',
                 style: Theme.of(context).textTheme.titleMedium,
               ),
               const SizedBox(height: 6),
               const Text(
-                'Lista spotkań dla tej lokacji nie jest jeszcze kompletna w danych offline. Nie pokazujemy zgadywanych Pokémonów.',
+                'Dane spotkań dla tej lokacji nie są jeszcze kompletne w indeksie offline. Nie pokazujemy zgadywanych Pokémonów.',
               ),
             ],
           ),
         ),
+      );
+    }
+
+    Widget pokemonChip(String name, {String? details}) {
+      final matches = pokemonList.where(
+        (candidate) =>
+            _normalizePokemonName(candidate.name) ==
+            _normalizePokemonName(name),
+      );
+      final pokemon = matches.isEmpty ? null : matches.first;
+      return ActionChip(
+        avatar: const Icon(Icons.catching_pokemon, size: 18),
+        label: Text(details == null || details.isEmpty
+            ? name
+            : '$name • $details'),
+        onPressed: pokemon == null
+            ? null
+            : () => Navigator.of(context).push(
+                  MaterialPageRoute<void>(
+                    builder: (_) => PokemonDetailsScreen(
+                      pokemon: pokemon,
+                      gameId: _selectedGameId,
+                    ),
+                  ),
+                ),
       );
     }
 
@@ -212,45 +244,45 @@ class _MapsScreenState extends State<MapsScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Pokémony do złapania — $locationName',
+              'Pokémony i spotkania — $locationName',
               style: Theme.of(context).textTheme.titleMedium,
             ),
+            if (encounters.isNotEmpty) ...[
+              const SizedBox(height: 8),
+              Wrap(
+                spacing: 6,
+                runSpacing: 6,
+                children: encounters.map((entry) {
+                  final details = <String>[
+                    if (entry['levels'] != null) 'Lv. ${entry['levels']}',
+                    if (entry['rate'] != null) '${entry['rate']}%',
+                    if (entry['method'] != null) entry['method']!,
+                  ];
+                  return pokemonChip(
+                    entry['name']!,
+                    details: details.join(' • '),
+                  );
+                }).toList(),
+              ),
+            ],
+            if (notablePokemon.isNotEmpty) ...[
+              const SizedBox(height: 12),
+              Text(
+                'Ważne / specjalne Pokémony',
+                style: Theme.of(context).textTheme.labelLarge,
+              ),
+              const SizedBox(height: 6),
+              Wrap(
+                spacing: 6,
+                runSpacing: 6,
+                children: notablePokemon.map((name) {
+                  return pokemonChip(name, details: 'specjalny');
+                }).toList(),
+              ),
+            ],
             const SizedBox(height: 8),
-            Wrap(
-              spacing: 6,
-              runSpacing: 6,
-              children: encounters.map((entry) {
-                final name = entry['name']!;
-                final matches = pokemonList.where(
-                  (candidate) => _normalizePokemonName(candidate.name) == _normalizePokemonName(name),
-                );
-                final pokemon = matches.isEmpty ? null : matches.first;
-                final details = <String>[
-                  if (entry['levels'] != null) 'Lv. ${entry['levels']}',
-                  if (entry['rate'] != null) '${entry['rate']}%',
-                  if (entry['method'] != null) entry['method']!,
-                ];
-                return ActionChip(
-                  avatar: const Icon(Icons.catching_pokemon, size: 18),
-                  label: Text(
-                    details.isEmpty ? name : '$name • ${details.join(' • ')}',
-                  ),
-                  onPressed: pokemon == null
-                      ? null
-                      : () => Navigator.of(context).push(
-                            MaterialPageRoute<void>(
-                              builder: (_) => PokemonDetailsScreen(
-                                pokemon: pokemon,
-                                gameId: _selectedGameId,
-                              ),
-                            ),
-                          ),
-                );
-              }).toList(),
-            ),
-            const SizedBox(height: 4),
             const Text(
-              'Dotknij nazwy, aby otworzyć Pokédex. Pozycje spotkań nie oznaczają dokładnych współrzędnych na mapie.',
+              'Dotknij nazwy, aby otworzyć Pokédex. Dane pokazują znane spotkania dla wybranej gry; nie oznaczają dokładnych współrzędnych na mapie.',
               style: TextStyle(fontSize: 12),
             ),
           ],
@@ -268,33 +300,66 @@ class _MapsScreenState extends State<MapsScreen> {
     final globalLevels = globalRange is List && globalRange.length >= 2
         ? '${globalRange[0]}–${globalRange[1]}'
         : '';
-    final selected = raw[variantKey];
-    if (selected is! List) return const <Map<String, String>>[];
-
     final result = <Map<String, String>>[];
-    for (final entry in selected) {
-      if (entry is Map) {
-        final name = entry['name']?.toString() ?? '';
-        if (name.isEmpty) continue;
-        final range = entry['levelRange'];
-        final levels = range is List && range.length >= 2
-            ? '${range[0]}–${range[1]}'
-            : globalLevels;
-        result.add(<String, String>{
-          'name': name,
-          if (levels.isNotEmpty) 'levels': levels,
-          if (entry['ratePercent'] != null) 'rate': entry['ratePercent'].toString(),
-          if (entry['method'] != null) 'method': entry['method'].toString(),
-        });
-      } else if (entry is List && entry.isNotEmpty) {
-        final name = entry[0].toString();
-        if (name.isEmpty) continue;
-        result.add(<String, String>{
-          'name': name,
-          if (globalLevels.isNotEmpty) 'levels': globalLevels,
-          if (entry.length > 1 && entry[1] != null) 'rate': entry[1].toString(),
-        });
+
+    void addEntries(dynamic entries, {String? method}) {
+      if (entries is! List) return;
+      for (final entry in entries) {
+        if (entry is Map) {
+          final name = entry['name']?.toString() ?? '';
+          if (name.isEmpty) continue;
+          final range = entry['levelRange'];
+          final levels = range is List && range.length >= 2
+              ? '${range[0]}–${range[1]}'
+              : (entry['level'] != null
+                  ? entry['level'].toString()
+                  : globalLevels);
+          result.add(<String, String>{
+            'name': name,
+            if (levels.isNotEmpty) 'levels': levels,
+            if (entry['ratePercent'] != null)
+              'rate': entry['ratePercent'].toString(),
+            if ((entry['method'] ?? method) != null)
+              'method': (entry['method'] ?? method).toString(),
+          });
+        } else if (entry is List && entry.isNotEmpty) {
+          final name = entry[0].toString();
+          if (name.isEmpty) continue;
+          result.add(<String, String>{
+            'name': name,
+            if (globalLevels.isNotEmpty) 'levels': globalLevels,
+            if (entry.length > 1 && entry[1] != null)
+              'rate': entry[1].toString(),
+            if (method != null) 'method': method,
+          });
+        } else if (entry is String && entry.isNotEmpty) {
+          result.add(<String, String>{
+            'name': entry,
+            if (globalLevels.isNotEmpty) 'levels': globalLevels,
+            if (method != null) 'method': method,
+          });
+        }
       }
+    }
+
+    final selected = raw[variantKey];
+    if (selected is List) {
+      addEntries(selected);
+      return result;
+    }
+
+    // Cave encounter data is grouped by floor (for example 1F/B1F/B2F),
+    // while route data is grouped by game version. Flatten floors but keep
+    // the floor label so the user knows where an encounter was documented.
+    for (final entry in raw.entries) {
+      final key = entry.key.toString();
+      if (key == 'levels' ||
+          key == 'status' ||
+          key == 'sourceIds' ||
+          key == 'rareEncounter') {
+        continue;
+      }
+      if (entry.value is List) addEntries(entry.value, method: key);
     }
     return result;
   }
