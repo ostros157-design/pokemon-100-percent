@@ -1,3 +1,9 @@
+### Mapy — rozszerzenie wydarzeń w miastach Kanto (2026-10-29)
+
+- Rozbudowano panel wydarzeń Cerulean City, Vermilion City, Celadon City, Saffron City, Fuchsia City, Cinnabar Island i Indigo Plateau.
+- Dodano warunki prezentów (Bulbasaur/Squirtle), wymianę Alolan Rattata, TM10, Heart Scales, wydarzenia S.S. Anne, GO Park/Playful Park, Gold Teeth, techniki partnera, nagrody Gymów, Silph Co. i Ligi Pokémon.
+- Informacje są tekstowe i wyraźnie nie oznaczają dokładnych pinezek ani rozrysowania wszystkich pięter. Commit danych: `01fc02b`. Bez testów, analyzer ani APK.
+
 ### Mapy — wydarzenia Gymów i kluczowych budynków (2026-10-29)
 
 - Dodano tekstowe drużyny liderów i nagrody ośmiu Gymów Kanto: Brock, Misty, Lt. Surge, Erika, Sabrina, Koga, Blaine i Giovanni.
