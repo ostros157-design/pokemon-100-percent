@@ -13006,7 +13006,7 @@
       "sourceIds": [
         "bulbapedia-player-house"
       ],
-      "dataStatus": "location_indexed_interior_not_mapped",
+      "dataStatus": "schematic_interior_available_exact_layout_pending",
       "coordinateStatus": "unverified"
     },
     {
@@ -13020,7 +13020,7 @@
       "sourceIds": [
         "bulbapedia-oak-lab"
       ],
-      "dataStatus": "location_indexed_interior_not_mapped",
+      "dataStatus": "schematic_interior_available_exact_layout_pending",
       "coordinateStatus": "unverified"
     },
     {
@@ -13034,7 +13034,7 @@
       "sourceIds": [
         "bulbapedia-celadon-store"
       ],
-      "dataStatus": "location_indexed_interior_not_mapped",
+      "dataStatus": "schematic_interior_available_exact_layout_pending",
       "coordinateStatus": "unverified"
     },
     {
@@ -13048,7 +13048,7 @@
       "sourceIds": [
         "bulbapedia-celadon-game-corner"
       ],
-      "dataStatus": "location_indexed_interior_not_mapped",
+      "dataStatus": "schematic_interior_available_exact_layout_pending",
       "coordinateStatus": "unverified"
     },
     {
@@ -13062,7 +13062,7 @@
       "sourceIds": [
         "bulbapedia-celadon-condominiums"
       ],
-      "dataStatus": "location_indexed_interior_not_mapped",
+      "dataStatus": "schematic_interior_available_exact_layout_pending",
       "coordinateStatus": "unverified"
     },
     {
@@ -13076,7 +13076,7 @@
       "sourceIds": [
         "bulbapedia-cinnabar-lab"
       ],
-      "dataStatus": "location_indexed_interior_not_mapped",
+      "dataStatus": "schematic_interior_available_exact_layout_pending",
       "coordinateStatus": "unverified"
     },
     {
@@ -13090,7 +13090,7 @@
       "sourceIds": [
         "bulbapedia-fighting-dojo"
       ],
-      "dataStatus": "location_indexed_interior_not_mapped",
+      "dataStatus": "schematic_interior_available_exact_layout_pending",
       "coordinateStatus": "unverified"
     },
     {
@@ -13104,7 +13104,7 @@
       "sourceIds": [
         "bulbapedia-go-park"
       ],
-      "dataStatus": "location_indexed_interior_not_mapped",
+      "dataStatus": "schematic_interior_available_exact_layout_pending",
       "coordinateStatus": "unverified"
     },
     {
@@ -13118,7 +13118,7 @@
       "sourceIds": [
         "bulbapedia-sea-cottage"
       ],
-      "dataStatus": "location_indexed_interior_not_mapped",
+      "dataStatus": "schematic_interior_available_exact_layout_pending",
       "coordinateStatus": "unverified"
     },
     {
