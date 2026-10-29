@@ -790,3 +790,12 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Dodano wybór regionu do wyświetlenia dla Pokémon Gold/Silver/Crystal: można przełączyć indeks Johto ↔ Kanto, co odzwierciedla możliwość odwiedzenia obu regionów po postgame.
 - Wybór regionu resetuje wyszukiwanie lokacji, a zmiana gry resetuje ręczne nadpisanie regionu, aby nie pokazywać przypadkowo mapy z poprzedniej gry.
 - Commit: `d2cd817`.
+
+
+### Mapy — audyt indeksów i obsługa wyboru regionu (2026-10-29)
+
+- Rozbudowano Hisui do 109 rekordów i Paldeę + DLC do 100 rekordów; dodano dostęp do obszarów Hisui przez Jubilife Village jako fast travel oraz metadane prowincji Paldei.
+- Dodano przełącznik regionu Johto/Kanto dla Gold, Silver i Crystal. Wybór gry mapuje się na rzeczywisty region (np. FireRed → Kanto, Omega Ruby → Hoenn, Legends: Arceus → Hisui).
+- Zaktualizowano opis map, aby nie sugerował, że wszystkie regiony mają już gotowe mapy graficzne.
+- Commit UI: `1fcd9a3`; Hisui: `818c9bf`; Paldea: `a31138a`, `d0db878`.
+- Ostatni audyt: wszystkie 11 indeksów parsuje się, wszystkie są w `pubspec.yaml` i są ładowane przez `MapsScreen`; brak duplikatów ID, brak niedziałających połączeń i brak odwołań do nieistniejących źródeł. Paldea jest otwartym światem, więc nie wymuszono fałszywej sieci tras.
