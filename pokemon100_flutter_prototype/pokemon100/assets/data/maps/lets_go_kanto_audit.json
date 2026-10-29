@@ -1098,7 +1098,7 @@
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "notes": "Route 2 has sections south and north of Viridian Forest. Serebii also describes an eastern path toward Diglett's Cave; exact in-app coordinates are not verified. Spotkania na południu występują na poziomach 3–4, a w północnej części 3–8; wpisy trasy pokazują wspólny zakres 3–8.",
+      "notes": "Route 2 obejmuje zachodni odcinek przy Viridian Forest oraz wschodni odcinek odblokowywany przez Chop Down. Lista łączy przedmioty z obu odcinków; dokładne pinezki pozostają niezweryfikowane.",
       "wildPokemonDetails": {
         "lets_go_pikachu": [
           {
@@ -1337,7 +1337,8 @@
       "sourceIds": [
         "serebii-route2",
         "routepedia-route2-pikachu",
-        "routepedia-route2-eevee"
+        "routepedia-route2-eevee",
+        "bulbapedia-part7"
       ],
       "features": [
         {
@@ -1400,7 +1401,13 @@
           "Zapdos",
           "Moltres"
         ]
-      }
+      },
+      "items": [
+        "Great Ball ×5 — na północ od wejścia do Diglett's Cave po wschodniej stronie Route 2; pozycja opisana tekstowo, bez pinezki.",
+        "Leaf Stone — na południe od bramy i pierwszej półki skalnej; wymaga Chop Down.",
+        "Super Potion — na południe od drugiej półki skalnej; wymaga Chop Down.",
+        "Light Up — nagroda od pomocnika Profesora Oaka w domu na południe od Diglett's Cave po złapaniu co najmniej 10 różnych gatunków; to technika partnera, nie przedmiot do podniesienia."
+      ]
     },
     {
       "id": "viridian_forest",
@@ -4392,7 +4399,16 @@
           "Moltres"
         ]
       },
-      "encounterStatus": "text_verified"
+      "encounterStatus": "text_verified",
+      "trainers": [
+        "Ace Trainer Yvette — Raichu Lv. 28, Dugtrio Lv. 29, Seel Lv. 28; nagroda $2,800 i 5 Ultra Balls.",
+        "Coach Trainer Alpesh — Farfetch'd Lv. 29, Wigglytuff Lv. 30; nagroda $3,000 i TM12 (Facade)."
+      ],
+      "items": [
+        "Elixir — na południe od bramy Saffron City.",
+        "TM12 (Facade) — nagroda od Coach Trainer Alpesh po zwycięstwie.",
+        "Nanab Berry / Silver Nanab Berry / Golden Nanab Berry — krzak po wschodniej stronie wejścia do Underground Path; partner Pokémon może znaleźć wariant zależny od dnia."
+      ]
     },
     {
       "id": "route_8",
@@ -4773,7 +4789,25 @@
           "Moltres"
         ]
       },
-      "encounterStatus": "text_verified"
+      "encounterStatus": "text_verified",
+      "trainers": [
+        "Beauty Aubrey — Clefairy Lv. 26; nagroda $1,560 i 3 Poké Balls.",
+        "Gamer Rich — Seaking Lv. 35; nagroda $4,200 i 3 Poké Balls.",
+        "Ace Trainer Kyla — Kadabra Lv. 28 i Machoke Lv. 29; wymaga Chop Down; nagroda $2,900 i 5 Ultra Balls.",
+        "Super Nerd Aidan — Koffing Lv. 27; nagroda $1,080 i 3 Poké Balls.",
+        "Rocker Glenn — Jolteon Lv. 27; nagroda $756 i 3 Poké Balls.",
+        "Gamer Stan — Rhyhorn Lv. 35; nagroda $4,200 i 3 Poké Balls.",
+        "Lass Andrea — trzy Meowth Lv. 25; nagroda $500 i 3 Poké Balls.",
+        "Lass Megan — Pikachu Lv. 25; nagroda $500 i 3 Poké Balls.",
+        "Super Nerd Leslie — Magnemite Lv. 27; nagroda $1,080 i 3 Poké Balls."
+      ],
+      "items": [
+        "Fire Stone — środek ogrodzonego obszaru traw; wymaga Chop Down.",
+        "Silver Pinap Berry ×3 — ukryte w krzaku na północ od ogrodzonego obszaru (przedmiot dzienny).",
+        "X Speed — na wschód od wejścia do Underground Path, przy krzaku po wschodniej stronie ogrodzenia.",
+        "Big Mushroom — na południowy wschód od wejścia do Underground Path, między dwiema półkami.",
+        "Pinap Berry / Silver Pinap Berry / Golden Pinap Berry — krzak na zachód od wejścia do Underground Path; partner Pokémon może znaleźć różne warianty."
+      ]
     },
     {
       "id": "route_9",
@@ -6037,12 +6071,19 @@
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "notes": "Przejście pod Saffron City łączące Route 7 i Route 8. Nie dodano pinezek przedmiotów.",
+      "notes": "Przejście pod Saffron City łączy Route 7 i Route 8. Poza X Accuracy i X Defense występują tu ukryte, losowe przedmioty dzienne; dokładne kafelki nie są pinezkami na tej mapie.",
       "sourceIds": [
         "routepedia-underground78-pikachu",
         "bulbapedia-part8"
       ],
-      "dataStatus": "connection_verified_details_pending"
+      "dataStatus": "connection_verified_details_pending",
+      "items": [
+        "X Accuracy — środkowa część przejścia, przy północnej ścianie.",
+        "X Defense — przy wejściu od Route 7, przy południowej ścianie.",
+        "Ukryty losowy przedmiot dzienny przy wejściu od Route 8: Pretty Wing albo Pearl / Big Pearl / Nugget; Fresh Water, Potion, Super Potion lub Hyper Potion.",
+        "Ukryty losowy przedmiot dzienny przy południowej ścianie bliżej wejścia od Route 7: Repel, Super Repel, Max Repel, Lure, Super Lure lub Max Lure.",
+        "Pretty Wing albo Pearl / Big Pearl / Nugget — drugi losowy ukryty przedmiot przy wejściu od Route 7."
+      ]
     },
     {
       "id": "route_11",
@@ -10603,7 +10644,8 @@
       "coordinateStatus": "unverified",
       "sourceIds": [
         "routepedia-route22-pikachu",
-        "serebii-route22"
+        "serebii-route22",
+        "bulbapedia-part2"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemonDetails": {
@@ -10836,7 +10878,14 @@
           "Poliwhirl"
         ]
       },
-      "encounterStatus": "text_verified"
+      "encounterStatus": "text_verified",
+      "trainers": [
+        "Trace — pierwsza walka rywala przy pierwszej wizycie; Let's Go Pikachu: Pidgey Lv. 3 i Eevee Lv. 7; Let's Go Eevee: Pidgey Lv. 3 i Pikachu Lv. 7; nagroda $140."
+      ],
+      "items": [
+        "Antidote — ukryty w krzaku na północ od wschodniej kępy trawy.",
+        "Poké Ball ×5 — południowo-zachodni narożnik trasy."
+      ]
     },
     {
       "id": "route_23",
