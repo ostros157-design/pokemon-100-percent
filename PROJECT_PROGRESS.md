@@ -1268,3 +1268,8 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Lokalny plan Route 2 pokazuje teraz kierunek do Viridian City, Viridian Forest i Pewter City oraz boczne wejście Diglett's Cave od Route 2.
 - Commit: `02005cf`. Bez testów i APK.
 
+### Mapy — Kanto: audyt nazw końców tras (2026-10-29)
+
+- Sprawdzono 25 definicji końców dla Route 3–25 i obu Underground Path: każda nazwa końcowa wskazuje istniejący węzeł mapy, w tym nową lokację „Diglett's Cave (Route 11 entrance)”.
+- Commity po tej korekcie: `e5f3ffb`, `68879d0`, `02005cf`. To audyt statyczny nazw, nie test aplikacji.
+
