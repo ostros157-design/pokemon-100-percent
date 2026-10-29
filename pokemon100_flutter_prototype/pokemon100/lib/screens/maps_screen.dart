@@ -720,6 +720,25 @@ class _MapsScreenState extends State<MapsScreen> {
                             const Text('• Pokémon Center i Poké Mart\\n• Pokémon Fan Club\\n• Vermilion Gym — Lt. Surge\\n• Port i statek S.S. Anne'),
                             const SizedBox(height: 8),
                             const Text('Drużyna Lt. Surge’a: Voltorb Lv. 25, Magnemite Lv. 25 i Raichu Lv. 26. Squirtle Lv. 16 może zostać podarowany. W zależności od wersji dostępny jest gift Arcanine lub Persian. Przedmioty i wejścia nie mają jeszcze zweryfikowanych pinezek.'),
+                          ] else if (normalizedQuery == 'cerulean city') ...[
+                            const Text('Ważne miejsca', style: TextStyle(fontWeight: FontWeight.w700)),
+                            const Text('• Pokémon Center i Poké Mart\\n• Cerulean Gym\\n• Bicycle Shop i Herb Shop\\n• Dom z północnym wyjściem oraz dom złodzieja'),
+                            const SizedBox(height: 8),
+                            const Text('Połączenia: Route 4, Route 5, Route 9 i Route 24. Przedmioty: Rare Candy i Burn Heal. Bulbasaur Lv. 12 może zostać podarowany; możliwa jest też wymiana Rattata na Alolan Rattata. Dokładne pozycje nie są zweryfikowanymi pinezkami.'),
+                          ] else if (normalizedQuery == 'route 24') ...[
+                            const Text('Dzikie Pokémony (poziomy 7–12)', style: TextStyle(fontWeight: FontWeight.w700)),
+                            Text(_selectedGameId == 'lets_go_eevee'
+                                ? '• Pidgey — 20%\\n• Venonat — 20%\\n• Bellsprout — 20%\\n• Meowth — 20%\\n• Psyduck — 20%'
+                                : '• Pidgey — 30%\\n• Venonat — 30%\\n• Oddish — 20%\\n• Psyduck — 20%'),
+                            const SizedBox(height: 8),
+                            const Text('Nugget Bridge i trenerzy: Bug Catcher Cale, Lass Ali, Youngster Timmy, Lass Reli, Camper Kevin, Team Rocket Grunt i Camper Shane. Przedmioty: X Sp. Def, 3 Razz Berries i 3 ukryte Pinap Berries. Charmander Lv. 14 jako gift. Trasa łączy Cerulean City z Route 25.'),
+                          ] else if (normalizedQuery == 'route 25') ...[
+                            const Text('Dzikie Pokémony (poziomy 9–14)', style: TextStyle(fontWeight: FontWeight.w700)),
+                            Text(_selectedGameId == 'lets_go_eevee'
+                                ? '• Pidgey — 20%\\n• Venonat — 20%\\n• Bellsprout — 20%\\n• Meowth — 20%\\n• Psyduck — 20%'
+                                : '• Pidgey — 30%\\n• Venonat — 30%\\n• Oddish — 20%\\n• Psyduck — 20%'),
+                            const SizedBox(height: 8),
+                            const Text('Trenerzy fabularni: Hiker Franklin, Fisherman Wayne, Bird Keeper Joey, Youngster Dan, Picnicker Kelsey, Camper Dustin, Hiker Nob, Youngster Chad, Lass Haley i Coach Trainer Amala. Przedmioty: TM16, Lure, Super Potion, Ether i ukryta Nanab Berry. Na końcu trasy znajduje się Bill’s House.'),
                           ] else if (normalizedQuery == 'route 2') ...[
                             const Text(
                               'Dzikie Pokémony w trawie (poziomy 3–4)',
