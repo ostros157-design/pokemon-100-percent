@@ -59,6 +59,7 @@ class _MapsScreenState extends State<MapsScreen> {
   Future<void> _loadMapIndexes() async {
     const assets = <String>[
       'assets/data/maps/lets_go_kanto_audit.json',
+      'assets/data/maps/kanto_audit.json',
       'assets/data/maps/johto_audit.json',
       'assets/data/maps/hoenn_audit.json',
       'assets/data/maps/sinnoh_audit.json',
