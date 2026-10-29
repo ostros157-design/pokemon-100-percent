@@ -1,3 +1,10 @@
+### Mapy — pełniejsze dane Route 16–18 Kanto (2026-10-29)
+
+- Dodano trenerów i przedmioty Route 16, w tym TM14 (Fly), Ultra Ball ×30 od pomocnika Oaka po złapaniu 40 gatunków oraz warunki Chop Down.
+- Uzupełniono Route 17 o 10 trenerów, nagrody, stałe przedmioty i kategorie ukrytych/dziennych jagód oraz nagrodę post-game Blast-Off Set.
+- Uzupełniono Route 18 o trzy drużyny trenerów, Elixir, ukryte jagody i znaleziska partnera Pokémon.
+- Dane tekstowe oparto na Bulbapedia Part 11; nie dodano pinezek bez potwierdzonych współrzędnych. Commit danych: `afc2b7e`. Bez testów, analyzer ani APK.
+
 ### Mapy — przedmioty i trenerzy Route 21 oraz przedmioty Route 23 (2026-10-29)
 
 - Dodano 10 wpisów trenerów Route 21, w tym drużyny, poziomy i specjalny zestaw sześciu Magikarpów Fisherman Wade.
