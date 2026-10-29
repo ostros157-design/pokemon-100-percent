@@ -1153,6 +1153,18 @@ class _MapsScreenState extends State<MapsScreen> {
                           ] else if (normalizedQuery == 'cinnabar gym') ...[
                             const Text('Cinnabar Gym — Blaine', style: TextStyle(fontWeight: FontWeight.w700)),
                             const Text('Sala z pytaniami i przełącznikami na Cinnabar Island. Dokładna drużyna Blaine’a oraz układ sali wymagają weryfikacji przed dodaniem pinezek.'),
+                          ] else if (normalizedQuery == "bill's house" || normalizedQuery == 'bills house') ...[
+                            const Text('Bill’s House — Route 25', style: TextStyle(fontWeight: FontWeight.w700)),
+                            const Text('Dom Billa znajduje się na końcu Route 25. Po wydarzeniu z Billem otrzymuje się S.S. Ticket, potrzebny do wejścia na S.S. Anne. Dokładne wnętrze domu nie ma jeszcze pinezek.'),
+                          ] else if (normalizedQuery == 'pewter museum' || normalizedQuery == 'pewter museum of science') ...[
+                            const Text('Pewter Museum of Science', style: TextStyle(fontWeight: FontWeight.w700)),
+                            const Text('Muzeum w Pewter City z wystawami skamielin i piętrem laboratoryjnym. Szczegółowy układ eksponatów i wejść nie jest jeszcze odwzorowany.'),
+                          ] else if (normalizedQuery == 'pokemon fan club' || normalizedQuery == 'pokémon fan club') ...[
+                            const Text('Pokémon Fan Club — Vermilion City', style: TextStyle(fontWeight: FontWeight.w700)),
+                            const Text('Budynek w Vermilion City. Po wysłuchaniu przewodniczącego klubu można odebrać nagrodę fabularną. Dokładne wnętrze nie ma jeszcze pinezek.'),
+                          ] else if (normalizedQuery == 'day care' || normalizedQuery == 'pokémon day care' || normalizedQuery == 'pokemon day care') ...[
+                            const Text('Pokémon Day Care — Route 5', style: TextStyle(fontWeight: FontWeight.w700)),
+                            const Text('Placówka przy Route 5. W Let’s Go nie ma standardowej hodowli jaj; miejsce służy przede wszystkim do pozostawienia Pokémonów i podniesienia ich poziomu.'),
                           ] else if (normalizedQuery == 'route 2') ...[
                             const Text(
                               'Dzikie Pokémony w trawie (poziomy 3–4)',
