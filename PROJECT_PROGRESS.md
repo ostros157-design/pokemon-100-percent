@@ -701,3 +701,8 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 - Dane i źródła: `354c6f2`, `3e05e53`; panele UI: `9a18bb7`, `ae8ee57`, `1cbf6b7`, poprawka Route 3 `c3f4fcb`.
 - Weryfikacja przez odczyt GitHub potwierdziła poprawny JSON, 16 rekordów lokacji i obecność paneli Route 3/Mt. Moon. Nie uruchamiano Flutter analyze, testów ani kompilacji APK.
 - Mapa nie jest kompletna: brakuje wielu lokacji Kanto, dokładnego podkładu z gry i zweryfikowanych pozycji pinezek. Nie należy przedstawiać jej jako gotowej mapy całego regionu.
+
+
+### Mapy — dalsze Kanto (2026-10-29)
+
+Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7–8 i Diglett's Cave. Pozycje pinezek nie są zweryfikowane; mapa nie jest kompletna. Testów i kompilacji nie uruchamiano.
