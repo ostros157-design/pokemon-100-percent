@@ -959,3 +959,12 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Wpisy z niezweryfikowanymi pozycjami nadal pokazują opis tekstowy; UI nie tworzy pinezek ani współrzędnych na podstawie samego opisu.
 - Commit: `ddf6015`.
 - Nie uruchamiano Flutter analyzer/testów/APK, więc zmiana wymaga późniejszego sprawdzenia w aplikacji.
+
+### Mapy — Pokémony na trasach otwierają Pokédex (2026-10-29)
+
+- W karcie lokacji sekcja spotkań została zmieniona na klikalne znaczniki Pokémonów z poziomami, metodą i procentową szansą, jeśli takie dane znajdują się w indeksie.
+- Kliknięcie Pokémonа prowadzi do jego szczegółów w Pokédexie; obsługuje zarówno rekordy ze szczegółowymi obiektami (np. Route 1–2), jak i starszy format list (np. Route 3).
+- Lista nadal zależy od wybranej wersji Let’s Go Pikachu / Let’s Go Eevee. Niezweryfikowane pozycje na mapie pozostają opisowe — nie dodano fałszywych pinezek.
+- Commit UI: `7b52d8c`.
+- Nie uruchamiano Flutter analyzer, testów ani APK. Zmiana wymaga późniejszego testu w aplikacji.
+
