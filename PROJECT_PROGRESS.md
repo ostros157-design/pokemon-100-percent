@@ -1,7 +1,7 @@
 ### Osiągnięcia — wszystkie jawne, bez ukrytych pozycji (2026-10-29)
-- Ostateczna lista zawiera 75 jawnych osiągnięć: 25 wcześniejszych podstawowych, 3 dodatkowe (Zespół R, Pokémon mityczny, ukończenie poradnika) oraz 47 nowych kamieni milowych.
+- Ostateczna lista zawiera 75 jawnych osiągnięć: 25 wcześniejszych podstawowych, 3 dodatkowe (pierwszy krok poradnika, Pokémon mityczny, ukończenie poradnika) oraz 47 nowych kamieni milowych.
 - Wszystkie wpisy mają `hidden: false`; nie ma już osiągnięć wyświetlanych jako `???`.
-- Warunki 47 nowych osiągnięć są połączone z istniejącymi danymi: globalna kolekcja, typy, generacje, statystyki bazowe, drużyna, ukończone kroki poradnika i metadane gatunków.
+- Warunki dodatkowych osiągnięć są połączone z istniejącymi danymi: globalna kolekcja, typy, generacje, statystyki bazowe, drużyna, ukończone kroki poradnika i metadane gatunków.
 - Skorygowano liczenie procentu postępu osiągnięć: opiera się na odhaczonych krokach poradnika wybranej gry, a nie na całej bazie 1025 Pokémonów, dzięki czemu progi 25/50/75/90/100% można osiągnąć przez faktyczne używanie poradnika.
 - Gałąź: `mystery/improvement-06`. Nie scalono z `main`. Wykonano kontrolę statyczną plików z GitHuba: 75 wpisów, 0 flag `hidden: true`, 47 unikalnych dodatkowych ID i 47 odpowiadających im warunków oraz przypadków obsługi. Nie uruchomiono `flutter analyze`, testów ani APK.
 
