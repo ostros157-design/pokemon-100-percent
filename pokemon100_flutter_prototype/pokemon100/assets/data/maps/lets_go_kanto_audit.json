@@ -13032,7 +13032,11 @@
       "sourceIds": [
         "bulbapedia-part14"
       ],
-      "dataStatus": "text_verified_positions_not_mapped"
+      "dataStatus": "text_verified_positions_not_mapped",
+      "events": [
+        "Lider Giovanni — Dugtrio Lv. 49, Persian Lv. 49, Nidoqueen Lv. 49, Nidoking Lv. 49 i Rhydon Lv. 50.",
+        "Nagroda po zwycięstwie: Earth Badge oraz TM41 (Earthquake)."
+      ]
     },
     {
       "id": "pewter_gym",
@@ -13050,7 +13054,11 @@
       "sourceIds": [
         "routepedia-pewter-pikachu"
       ],
-      "dataStatus": "text_verified_positions_not_mapped"
+      "dataStatus": "text_verified_positions_not_mapped",
+      "events": [
+        "Lider Brock — Geodude Lv. 11 i Onix Lv. 12.",
+        "Nagroda po zwycięstwie: Boulder Badge oraz TM01 (Headbutt)."
+      ]
     },
     {
       "id": "cerulean_gym",
@@ -13067,7 +13075,11 @@
       "sourceIds": [
         "routepedia-cerulean-pikachu"
       ],
-      "dataStatus": "leader_verified_team_needs_review"
+      "dataStatus": "leader_verified_team_needs_review",
+      "events": [
+        "Lider Misty — Psyduck Lv. 18 i Starmie Lv. 19.",
+        "Nagroda po zwycięstwie: Cascade Badge oraz TM29 (Scald)."
+      ]
     },
     {
       "id": "vermilion_gym",
@@ -13098,7 +13110,11 @@
       "sourceIds": [
         "routepedia-vermilion-pikachu"
       ],
-      "dataStatus": "text_verified_positions_not_mapped"
+      "dataStatus": "text_verified_positions_not_mapped",
+      "events": [
+        "Lider Lt. Surge — Voltorb Lv. 25, Magnemite Lv. 25 i Raichu Lv. 26.",
+        "Nagroda po zwycięstwie: Thunder Badge oraz TM36 (Thunderbolt)."
+      ]
     },
     {
       "id": "celadon_gym",
@@ -13115,7 +13131,11 @@
       "sourceIds": [
         "routepedia-celadon-pikachu"
       ],
-      "dataStatus": "leader_verified_team_needs_review"
+      "dataStatus": "leader_verified_team_needs_review",
+      "events": [
+        "Lider Erika — Tangela Lv. 33, Weepinbell Lv. 33 i Vileplume Lv. 34.",
+        "Nagroda po zwycięstwie: Rainbow Badge oraz TM53 (Mega Drain)."
+      ]
     },
     {
       "id": "saffron_gym",
@@ -13132,7 +13152,11 @@
       "sourceIds": [
         "routepedia-saffron-pikachu"
       ],
-      "dataStatus": "leader_verified_team_needs_review"
+      "dataStatus": "leader_verified_team_needs_review",
+      "events": [
+        "Lider Sabrina — Mr. Mime Lv. 38, Slowbro Lv. 38, Jynx Lv. 38 i Alakazam Lv. 39.",
+        "Nagroda po zwycięstwie: Marsh Badge oraz TM33 (Calm Mind)."
+      ]
     },
     {
       "id": "fuchsia_gym",
@@ -13167,7 +13191,11 @@
       "sourceIds": [
         "routepedia-fuchsia-pikachu"
       ],
-      "dataStatus": "text_verified_positions_not_mapped"
+      "dataStatus": "text_verified_positions_not_mapped",
+      "events": [
+        "Lider Koga — Weezing Lv. 43, Muk Lv. 43, Golbat Lv. 43 i Venomoth Lv. 44.",
+        "Nagroda po zwycięstwie: Soul Badge oraz TM27 (Toxic)."
+      ]
     },
     {
       "id": "cinnabar_gym",
@@ -13184,7 +13212,11 @@
       "sourceIds": [
         "routepedia-cinnabar-pikachu"
       ],
-      "dataStatus": "leader_verified_team_needs_review"
+      "dataStatus": "leader_verified_team_needs_review",
+      "events": [
+        "Lider Blaine — Magmar Lv. 47, Rapidash Lv. 47, Ninetales Lv. 47 i Arcanine Lv. 48.",
+        "Nagroda po zwycięstwie: Volcano Badge oraz TM46 (Fire Blast)."
+      ]
     },
     {
       "id": "bills_house",
@@ -13221,7 +13253,10 @@
       "sourceIds": [
         "bulbapedia-part3"
       ],
-      "dataStatus": "text_verified_positions_not_mapped"
+      "dataStatus": "text_verified_positions_not_mapped",
+      "events": [
+        "Old Amber — od naukowca w części pracowniczej muzeum podczas ponownej wizyty; dostęp wymaga Chop Down."
+      ]
     },
     {
       "id": "pokemon_fan_club",
@@ -13326,7 +13361,10 @@
         "bulbapedia-celadon-game-corner"
       ],
       "dataStatus": "schematic_interior_available_exact_layout_pending",
-      "coordinateStatus": "unverified"
+      "coordinateStatus": "unverified",
+      "events": [
+        "Wejście do Team Rocket Hideout znajduje się w salonie gier; szczegółowe pozycje ukrytych obiektów nie są naniesione."
+      ]
     },
     {
       "id": "celadon_condominiums",
@@ -13354,7 +13392,10 @@
         "bulbapedia-cinnabar-lab"
       ],
       "dataStatus": "schematic_interior_available_exact_layout_pending",
-      "coordinateStatus": "unverified"
+      "coordinateStatus": "unverified",
+      "events": [
+        "Fossil restoration — naukowcy w laboratorium mogą odtworzyć Pokémony z Helix Fossil, Dome Fossil i Old Amber (Omanyte, Kabuto, Aerodactyl)."
+      ]
     },
     {
       "id": "fighting_dojo",
@@ -13368,7 +13409,10 @@
         "bulbapedia-fighting-dojo"
       ],
       "dataStatus": "schematic_interior_available_exact_layout_pending",
-      "coordinateStatus": "unverified"
+      "coordinateStatus": "unverified",
+      "events": [
+        "Po pokonaniu lidera dojo można wybrać jednego z dwóch Pokémonów: Hitmonlee albo Hitmonchan."
+      ]
     },
     {
       "id": "go_park",
@@ -13383,7 +13427,10 @@
         "bulbapedia-part11"
       ],
       "dataStatus": "schematic_interior_available_exact_layout_pending",
-      "coordinateStatus": "unverified"
+      "coordinateStatus": "unverified",
+      "events": [
+        "Transfer Pokémonów z Pokémon GO do Let’s Go odbywa się przez kompleks GO Park; Playful Park jest częścią tej samej lokacji."
+      ]
     },
     {
       "id": "sea_cottage",
