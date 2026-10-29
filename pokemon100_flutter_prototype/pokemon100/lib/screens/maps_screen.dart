@@ -3810,8 +3810,8 @@ class _KantoMapPainter extends CustomPainter {
     _MapPlace('Fighting Dojo', 0.65, 0.36),
     _MapPlace('GO Park', 0.7, 0.78),
     _MapPlace('Sea Cottage', 0.86, 0.1),
-    _MapPlace("Diglett's Cave (Route 2 entrance)", 0.29, 0.43),
-    _MapPlace("Diglett's Cave (Route 11 entrance)", 0.72, 0.55),
+    _MapPlace("Diglett's Cave (Route 2 entrance)", 0.35, 0.44),
+    _MapPlace("Diglett's Cave (Route 11 entrance)", 0.65, 0.53),
   ];
 
   @override
