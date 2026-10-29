@@ -1,3 +1,9 @@
+### Mapy — uzupełnienie Route 5 i Route 24 (2026-10-29)
+
+- Route 5 dostała wpis o trzech Revive przekazanych przez Trace'a po rozmowie przy Underground Path.
+- Route 24 uzupełniono o Razz Berry ×3 na zachód od Nugget Bridge oraz wydarzenie z prezentem Charmander Lv. 14 po złapaniu 50 Pokémonów.
+- Do Route 24/25 i Route 5 podpięto referencję Bulbapedia Part 5; nie dodano pinezek bez zweryfikowanych współrzędnych. Commit danych: `834c40b`. Bez testów, analyzer ani APK.
+
 ### Mapy — drobne braki Route 4 i Route 9 (2026-10-29)
 
 - Dodano Coach Trainer Oberon z Route 4 wraz z TM57 (Pay Day) jako nagrodą; opis Escape Rope doprecyzowano i usunięto jego wcześniejszy ogólny duplikat.
