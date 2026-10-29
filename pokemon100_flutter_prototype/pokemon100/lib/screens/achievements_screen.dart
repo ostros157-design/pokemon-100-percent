@@ -30,6 +30,8 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
   bool _guideStarted = false;
   bool _guideComplete = false;
   bool _firstBadgeStepComplete = false;
+  bool _legendaryCaught = false;
+  bool _anyGuideOpened = false;
 
   @override
   void initState() {
@@ -77,6 +79,12 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
     final validPokemonIds = pokemonList.map((pokemon) => pokemon.id).toSet();
     allCaughtIds.retainAll(validPokemonIds);
     selectedGameIds.retainAll(validPokemonIds);
+    final legendaryCaught = pokemonList.any((pokemon) =>
+        allCaughtIds.contains(pokemon.id) &&
+        (pokemon.isLegendary || pokemon.isMythical));
+    final anyGuideOpened = preferences.getKeys().any(
+      (key) => key.startsWith('guide_opened_') && preferences.getBool(key) == true,
+    );
 
     final shinyIds = <int>{};
     for (final key in preferences.getKeys()) {
@@ -146,6 +154,8 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
       _guideStarted = guideStarted;
       _guideComplete = guideComplete;
       _firstBadgeStepComplete = firstBadgeStepComplete;
+      _legendaryCaught = legendaryCaught;
+      _anyGuideOpened = anyGuideOpened;
       _loading = false;
     });
   }
@@ -170,12 +180,15 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
         return _firstBadgeStepComplete;
       case 'shiny':
         return _globalShinyCount > 0;
+      case 'legendary':
+      case 'hidden_legend':
+        return _legendaryCaught;
+      case 'guide_start':
+        return _anyGuideOpened;
       case 'full_team':
         return _savedTeamIds.length == 6;
       case 'team_types':
         return _teamTypeCount >= 6;
-      case 'guide_start':
-        return _guideStarted;
       case 'guide_complete':
         return _guideComplete;
       case 'game_complete':
