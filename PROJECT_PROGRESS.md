@@ -1007,3 +1007,10 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Brakujące procenty dla rzadkich spotkań specjalnych nie zostały dopowiedziane. Commit: `53cd78e`.
 - Nie uruchamiano Flutter analyzer, testów ani APK.
 
+### Mapy — spotkania na Route 16–18 (2026-10-29)
+
+- Uzupełniono tabele spotkań dla obu wersji Let’s Go: Pokémony na ziemi, standardowe spotkania na niebie i rzadkie spawny specjalne.
+- Dodano także spotkanie fabularne ze Snorlaxem na Route 16.
+- Dane nie zawierają zmyślonych szans dla specjalnych spawnow. Nie są to pinezki dokładnych pozycji. Commit: `5aa911f`.
+- Nie uruchamiano Flutter analyzer, testów ani APK.
+
