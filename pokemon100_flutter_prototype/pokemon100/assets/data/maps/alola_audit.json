@@ -19,6 +19,11 @@
       "id": "pokemony-alola",
       "url": "https://www.pokemony.com/en/locations?region=alola",
       "scope": "Alola location inventory and schematic-map conventions"
+    },
+    {
+      "id": "bulbapedia-route-list",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/List_of_routes",
+      "scope": "Numbered route termini and region connections"
     }
   ],
   "locations": [
@@ -26,7 +31,10 @@
       "id": "iki_town",
       "name": "Iki Town",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_1",
+        "mahalo_trail"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_game_variant_audit",
@@ -39,7 +47,10 @@
       "id": "hau_oli_city",
       "name": "Hau'oli City",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_1",
+        "route_2"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_game_variant_audit",
@@ -52,7 +63,10 @@
       "id": "heahea_city",
       "name": "Heahea City",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_4",
+        "route_6"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_game_variant_audit",
@@ -65,7 +79,10 @@
       "id": "paniola_town",
       "name": "Paniola Town",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_4",
+        "route_6"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_game_variant_audit",
@@ -78,7 +95,9 @@
       "id": "konikoni_city",
       "name": "Konikoni City",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_9"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_game_variant_audit",
@@ -91,7 +110,10 @@
       "id": "malie_city",
       "name": "Malie City",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_10",
+        "route_11"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_game_variant_audit",
@@ -104,7 +126,9 @@
       "id": "po_town",
       "name": "Po Town",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_17"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_game_variant_audit",
@@ -130,7 +154,11 @@
       "id": "tapu_village",
       "name": "Tapu Village",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_13",
+        "route_14",
+        "route_15"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_game_variant_audit",
@@ -447,7 +475,10 @@
       "id": "melemele_meadow",
       "name": "Melemele Meadow",
       "kind": "natural_area",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_3",
+        "seaward_cave"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -460,7 +491,9 @@
       "id": "verdant_cavern",
       "name": "Verdant Cavern",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_2"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -473,7 +506,9 @@
       "id": "ten_carat_hill",
       "name": "Ten Carat Hill",
       "kind": "location",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_1"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -486,7 +521,9 @@
       "id": "hau_oli_cemetery",
       "name": "Hau'oli Cemetery",
       "kind": "location",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_2"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -499,7 +536,9 @@
       "id": "brooklet_hill",
       "name": "Brooklet Hill",
       "kind": "location",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_5"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -512,7 +551,9 @@
       "id": "wela_volcano_park",
       "name": "Wela Volcano Park",
       "kind": "location",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_7"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -525,7 +566,9 @@
       "id": "lush_jungle",
       "name": "Lush Jungle",
       "kind": "natural_area",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_5"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -538,7 +581,9 @@
       "id": "diglett_s_tunnel",
       "name": "Diglett's Tunnel",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_9"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -551,7 +596,9 @@
       "id": "haina_desert",
       "name": "Haina Desert",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_13"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -564,7 +611,9 @@
       "id": "melemele_sea",
       "name": "Melemele Sea",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_1"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -577,7 +626,9 @@
       "id": "akala_outskirts",
       "name": "Akala Outskirts",
       "kind": "location",
-      "connectsTo": [],
+      "connectsTo": [
+        "ruins_of_life"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -590,7 +641,9 @@
       "id": "memorial_hill",
       "name": "Memorial Hill",
       "kind": "location",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_9"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -616,7 +669,9 @@
       "id": "thrifty_megamart",
       "name": "Thrifty Megamart",
       "kind": "location",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_14"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -629,7 +684,9 @@
       "id": "mount_hokulani",
       "name": "Mount Hokulani",
       "kind": "location",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_10"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
