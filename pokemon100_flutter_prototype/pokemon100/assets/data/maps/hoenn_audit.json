@@ -1165,6 +1165,21 @@
         "bulbapedia-hoenn-region",
         "pokemony-hoenn"
       ]
+    },
+    {
+      "id": "scorched_slab",
+      "name": "Scorched Slab",
+      "kind": "cave",
+      "connectsTo": [
+        "route_120"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "pokemony-hoenn"
+      ],
+      "dataStatus": "landmark_known_entrance_connections_pending_verification"
     }
   ]
 }
