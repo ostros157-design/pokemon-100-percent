@@ -876,3 +876,12 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Paldea: połączono główne osady z obszarami na podstawie listy połączeń lokacji Bulbapedia, dodano relacje Area Zero, Kitakami i Blueberry Academy/Terarium oraz sąsiednie obszary południowej, wschodniej i północnej prowincji.
 - Commity: `15faa25`, `a83f43c`, `b398450`, `4085596`, `a044f05`, `3d42e3e`, `4fe2c71`, `1e9f391`.
 - Grafy są traktowane jako dostęp/transport, jeśli nie chodzi o bezpośrednie sąsiedztwo; źródła i statusy zaznaczają niezweryfikowane dokładne pinezki. Paldea nadal wymaga dalszego łączenia i weryfikacji pozostałych obszarów.
+
+
+### Mapy — kontrola połączeń między regionami i indeksów po rozbudowie (2026-10-29)
+
+- Połączono wszystkie rekordy w grafie Sinnoh, Unovy, Aloli i Galar poprzez źródłowo opisane przejścia, promy lub kolej. Takie połączenia są opisane jako dostęp/transport, nie jako bezpośrednie sąsiedztwo.
+- Paldea ma teraz źródłowo połączone główne osady, część prowincji, Area Zero, Kitakami i Blueberry Academy/Terarium. Pozostałe lokacje nadal mają nieuzupełnione połączenia, bo nie dodajemy ich na chybił trafił.
+- Ostatni audyt wszystkich 11 indeksów: 844 rekordy; wszystkie pliki parsują się, są zarejestrowane i ładowane, brak duplikatów ID/nazw, brak brakujących źródeł/statusów i brak niedziałających `connectsTo`.
+- Commity z tej partii: `15faa25`, `a83f43c`, `b398450`, `4085596`, `a044f05`, `3d42e3e`, `4fe2c71`, `1e9f391`, `8c1b96f`, `a6806ea`.
+- Nie uruchamiano Flutter analyzer, testów ani APK. Audyt dotyczy struktury danych, nie testu działania aplikacji.
