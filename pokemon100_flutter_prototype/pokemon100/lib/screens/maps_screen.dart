@@ -3574,7 +3574,7 @@ class _KantoRegionMapState extends State<_KantoRegionMap> {
   double _fitScale(Size viewport) {
     final horizontalFit = (viewport.width - 20) / _mapWidth;
     final verticalFit = (viewport.height - 20) / _mapHeight;
-    return math.min(horizontalFit, verticalFit).clamp(0.35, 1.0).toDouble();
+    return math.min(horizontalFit, verticalFit).clamp(0.35, 1.25).toDouble();
   }
 
   void _resetMap(Size viewport) {
