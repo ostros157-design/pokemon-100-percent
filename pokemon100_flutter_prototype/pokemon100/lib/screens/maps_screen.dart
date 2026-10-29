@@ -4840,7 +4840,7 @@ class _KantoMapPainter extends CustomPainter {
             text: place.name,
             style: TextStyle(
               color: label,
-              fontSize: size.width < 360 ? 8 : 9.5,
+              fontSize: isSelected ? 13 : 11.5,
               fontWeight: isSelected ? FontWeight.w900 : FontWeight.w700,
               shadows: [
                 Shadow(
