@@ -2545,7 +2545,14 @@
         "routepedia-cerulean-pikachu",
         "routepedia-cerulean-eevee"
       ],
-      "dataStatus": "text_verified_positions_not_mapped"
+      "dataStatus": "text_verified_positions_not_mapped",
+      "events": [
+        "Bulbasaur Lv. 12 — prezent od dziewczyny w domu obok Pokémon Center po złapaniu co najmniej 30 Pokémonów.",
+        "Wymiana: Alolan Rattata za zwykłego Rattata w Pokémon Center; wymiana może być powtarzana.",
+        "TM10 (Dig) — po pokonaniu Team Rocket Grunt, który włamał się do domu na południowym zachodzie miasta.",
+        "Heart Scale ×5 — od Bike Maniaca po wysłuchaniu opisów wszystkich rowerów.",
+        "Post-game: TM60 (Megahorn) — nagroda od Coach Trainer Harjit po zostaniu Championem."
+      ]
     },
     {
       "id": "route_24",
@@ -4040,7 +4047,12 @@
         "routepedia-vermilion-pikachu",
         "routepedia-vermilion-eevee"
       ],
-      "dataStatus": "text_verified_positions_not_mapped"
+      "dataStatus": "text_verified_positions_not_mapped",
+      "events": [
+        "S.S. Anne — kapitan statku uczy partnera techniki Chop Down po wydarzeniu fabularnym.",
+        "Squirtle — prezent od Officer Jenny po złapaniu co najmniej 60 Pokémonów.",
+        "Pokémon Fan Club — budynek z wydarzeniem fanowskim; dokładne położenie NPC nie jest naniesione."
+      ]
     },
     {
       "id": "route_7",
@@ -8276,7 +8288,14 @@
       "sourceIds": [
         "bulbapedia-part12"
       ],
-      "dataStatus": "text_verified_positions_not_mapped"
+      "dataStatus": "text_verified_positions_not_mapped",
+      "events": [
+        "Gold Teeth — przedmiot fabularny zwracany Wardenowi w jego domu.",
+        "Strong Push — Secret Technique uczona przez Warden'a po oddaniu Gold Teeth.",
+        "Safari Set — otrzymywany od Warden'a po oddaniu Gold Teeth; w Let’s Go klasyczna Safari Zone jest zastąpiona kompleksem GO Park.",
+        "Sea Skim — technika partnera uczona w Playful Park przez mężczyznę przy eksponacie Laprasa.",
+        "Fuchsia Gym — zwycięstwo z Kogą daje Soul Badge i TM27 (Toxic)."
+      ]
     },
     {
       "id": "celadon_city",
@@ -8305,7 +8324,13 @@
       "sourceIds": [
         "routepedia-celadon-pikachu"
       ],
-      "dataStatus": "text_verified_positions_not_mapped"
+      "dataStatus": "text_verified_positions_not_mapped",
+      "events": [
+        "Celadon Department Store — wielopiętrowy sklep z przedmiotami, TM i automatami; szczegółowe półki i piętra wymagają osobnego planu.",
+        "Celadon Game Corner — wejście do Team Rocket Hideout znajduje się w salonie gier.",
+        "Celadon Gym — sala Eriki; zwycięstwo daje Rainbow Badge i TM53 (Mega Drain).",
+        "Celadon Condominiums — budynek mieszkalny z prezentami i interakcjami; rozmieszczenie pomieszczeń jest schematyczne."
+      ]
     },
     {
       "id": "saffron_city",
@@ -8332,7 +8357,12 @@
       "sourceIds": [
         "routepedia-saffron-pikachu"
       ],
-      "dataStatus": "text_verified_positions_not_mapped"
+      "dataStatus": "text_verified_positions_not_mapped",
+      "events": [
+        "Silph Co. — wydarzenie fabularne z Team Rocket obejmuje wiele pięter i teleportów; dokładna trasa po teleportach nie jest naniesiona.",
+        "Fighting Dojo — po pokonaniu lidera można wybrać Hitmonlee albo Hitmonchan.",
+        "Saffron Gym — sala Sabriny; zwycięstwo daje Marsh Badge i TM33 (Calm Mind)."
+      ]
     },
     {
       "id": "route_16",
@@ -10365,7 +10395,12 @@
       "sourceIds": [
         "routepedia-cinnabar-pikachu"
       ],
-      "dataStatus": "text_verified_positions_not_mapped"
+      "dataStatus": "text_verified_positions_not_mapped",
+      "events": [
+        "Cinnabar Lab — odtwarzanie Pokémonów z Helix Fossil, Dome Fossil i Old Amber.",
+        "Pokémon Mansion — klucz do Cinnabar Gym jest związany z eksploracją rezydencji; dokumenty opisują historię Mewtwo.",
+        "Cinnabar Gym — zwycięstwo z Blaine’em daje Volcano Badge i TM46 (Fire Blast)."
+      ]
     },
     {
       "id": "route_21",
@@ -11832,7 +11867,12 @@
       "sourceIds": [
         "routepedia-indigo-pikachu"
       ],
-      "dataStatus": "text_verified_positions_not_mapped"
+      "dataStatus": "text_verified_positions_not_mapped",
+      "events": [
+        "Pokémon League — czterech członków Elite Four: Lorelei, Bruno, Agatha i Lance; po ich pokonaniu następuje walka z Championem.",
+        "Przed wejściem do Victory Road i Ligi trzeba mieć komplet ośmiu odznak Gymów.",
+        "Dokładne rozmieszczenie NPC i pełne drużyny walk ligowych wymagają osobnej weryfikacji; mapa nie oznacza ich pinezkami."
+      ]
     },
     {
       "id": "cerulean_cave",
