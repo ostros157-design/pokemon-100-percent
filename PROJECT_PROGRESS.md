@@ -630,3 +630,10 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 - Wymagane warstwy informacyjne: Pokémony, przedmioty, miasta, trasy, trenerzy i znajdźki 100%; mapa ma być dostępna offline.
 - Zasada danych: nie dodawać fikcyjnych współrzędnych ani niezweryfikowanych pinów. Dekoracyjne tekstury terenu muszą być odróżnialne od potwierdzonych danych geograficznych.
 - Status: zapis kierunku wizualnego; implementacja graficzna wymaga osobnego commita. Nie uruchomiono Flutter analyze, testów ani builda APK.
+
+
+### Mapy — pierwsze wygładzenie ilustracji Kanto (2026-10-29)
+- W `lib/screens/maps_screen.dart` zmieniono paletę tła mapy Kanto: woda i ląd używają teraz łagodnych gradientów, brzeg ma subtelny cień i jasny kontur, a na lądzie dodano miękkie plamy kolorystyczne.
+- To pierwsza warstwa nowego stylu „miękka ilustracja HD”; nie dodano nowych miast, dróg ani pinezek. Dekoracyjne plamy nie są oznaczeniami biomów ani potwierdzonymi danymi geograficznymi.
+- Commit kodu: `ffda5919b5761146ed9a9379177aaf87fb383941`.
+- Status: zapisano w GitHubie. Nie uruchomiono Flutter analyze, testów ani builda APK; wygląd na urządzeniu i kompilacja pozostają niezweryfikowane.
