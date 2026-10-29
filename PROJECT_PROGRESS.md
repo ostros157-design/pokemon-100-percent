@@ -644,3 +644,10 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 - Zmieniono wyłącznie sposób rysowania istniejących połączeń; nie dodano nowych relacji między lokacjami ani nowych współrzędnych. Przebieg nadal jest schematyczny, nie w skali.
 - Commit kodu: `1b462a301f717e1777f31304e68559ffb5ccb0e5`.
 - Status: zapisano w GitHubie. Nie uruchomiono Flutter analyze, testów ani builda APK.
+
+
+### Mapy — dekoracyjne drzewa i wzgórza na ilustracji Kanto (2026-10-29)
+- Dodano miękkie, półprzezroczyste grupy drzew oraz delikatne linie wzgórz, aby mapa wyglądała bardziej jak ilustracja malowana, a mniej jak płaski diagram.
+- Elementy te są wyłącznie teksturą dekoracyjną: nie oznaczają zweryfikowanego lasu, gór ani konkretnej lokacji w grze. Nie dodano nowych pinezek, przedmiotów ani współrzędnych.
+- Commit kodu: `388877c7d670048f4f36fedb2edc03bd3f0dd553`.
+- Status: zapisano w GitHubie. Flutter analyze, testy i build APK nie zostały uruchomione; kompilacja i wygląd na urządzeniu nie są jeszcze zweryfikowane.
