@@ -158,6 +158,113 @@ class _MapsScreenState extends State<MapsScreen> {
     return searchable.any((value) => value.toLowerCase().contains(query));
   }
 
+  String _mapWildPokemonSummary(dynamic raw) {
+    if (raw is! Map) return '';
+    final variantKey = _selectedGameId == 'lets_go_eevee'
+        ? 'lets_go_eevee'
+        : 'lets_go_pikachu';
+    final levelRange = raw['levels'];
+    final globalLevels = levelRange is List && levelRange.length >= 2
+        ? '${levelRange[0]}–${levelRange[1]}'
+        : '';
+
+    String formatEntry(dynamic entry) {
+      if (entry is Map) {
+        final name = entry['name']?.toString() ?? '';
+        if (name.isEmpty) return '';
+        final range = entry['levelRange'];
+        final levels = range is List && range.length >= 2
+            ? ' Lv. ${range[0]}–${range[1]}'
+            : globalLevels.isNotEmpty
+                ? ' Lv. $globalLevels'
+                : '';
+        final rate = entry['ratePercent'];
+        final rateText = rate == null ? '' : ' • $rate%';
+        final method = entry['method'] as String?;
+        final methodText = method == null ? '' : ' • $method';
+        return '$name$levels$rateText$methodText';
+      }
+      if (entry is List && entry.isNotEmpty) {
+        final name = entry[0].toString();
+        final rate = entry.length > 1 ? entry[1] : null;
+        final levels = globalLevels.isEmpty ? '' : ' Lv. $globalLevels';
+        return '$name$levels${rate == null ? '' : ' • $rate%'}';
+      }
+      return '';
+    }
+
+    final selected = raw[variantKey];
+    final lines = <String>[];
+    if (selected is List) {
+      lines.addAll(selected.map(formatEntry).where((line) => line.isNotEmpty));
+    } else {
+      for (final key in raw.keys) {
+        if (key == 'levels' || key == 'status' || key == 'sourceIds') continue;
+        final entries = raw[key];
+        if (entries is! List) continue;
+        final formatted = entries.map(formatEntry).where((line) => line.isNotEmpty).toList();
+        if (formatted.isNotEmpty) {
+          lines.add('${key.toString()}: ${formatted.join(' • ')}');
+        }
+      }
+    }
+    return lines.join('\n');
+  }
+
+  String _mapItemsSummary(dynamic raw) {
+    if (raw is! List) return '';
+    final lines = <String>[];
+    for (final item in raw) {
+      if (item is String) {
+        lines.add(item);
+      } else if (item is Map) {
+        final name = item['name']?.toString() ?? '';
+        if (name.isEmpty) continue;
+        final quantity = item['quantity'];
+        final amount = quantity is num && quantity > 1 ? ' ×$quantity' : '';
+        final location = item['locationDescription'] as String?;
+        lines.add('$name$amount${location == null ? '' : ' — $location'}');
+      }
+    }
+    return lines.take(20).join('\n');
+  }
+
+  String _mapTrainersSummary(dynamic raw) {
+    if (raw is! List) return '';
+    final lines = <String>[];
+    for (final trainer in raw) {
+      if (trainer is String) {
+        lines.add(trainer);
+      } else if (trainer is Map) {
+        final name = trainer['name']?.toString() ?? 'Trener';
+        final team = trainer['team'];
+        final teamSummary = team is List
+            ? team.whereType<Map>().map((member) {
+                final pokemon = member['name']?.toString() ?? '';
+                final level = member['level'];
+                return pokemon.isEmpty ? '' : '$pokemon${level == null ? '' : ' Lv. $level'}';
+              }).where((line) => line.isNotEmpty).join(', ')
+            : '';
+        final reward = trainer['reward'];
+        final rewardSummary = reward is Map
+            ? reward.entries.map((entry) => '${entry.key}: ${entry.value}').join(', ')
+            : '';
+        lines.add('$name${teamSummary.isEmpty ? '' : ' — $teamSummary'}${rewardSummary.isEmpty ? '' : ' • $rewardSummary'}');
+      }
+    }
+    return lines.take(20).join('\n');
+  }
+
+  String _mapEventsSummary(dynamic raw) {
+    if (raw is! List) return '';
+    return raw.whereType<Map>().map((event) {
+      final name = event['name']?.toString() ?? '';
+      final note = event['note']?.toString() ?? '';
+      if (name.isEmpty) return '';
+      return '$name${note.isEmpty ? '' : ' — $note'}';
+    }).where((line) => line.isNotEmpty).take(12).join('\n');
+  }
+
   Map<String, dynamic>? get _selectedMapIndexLocation {
     final query = _searchQuery.trim().toLowerCase();
     if (query.isEmpty) return null;
@@ -445,6 +552,11 @@ class _MapsScreenState extends State<MapsScreen> {
                               ?.whereType<String>()
                               .toList() ??
                           const <String>[];
+                      final wildSummary =
+                          _mapWildPokemonSummary(location['wildPokemonDetails']);
+                      final itemsSummary = _mapItemsSummary(location['items']);
+                      final trainersSummary = _mapTrainersSummary(location['trainers']);
+                      final eventsSummary = _mapEventsSummary(location['events']);
                       final connectedLocations = (location['connectsTo'] as List?)
                               ?.whereType<String>()
                               .map((id) => _activeMapIndexLocations.firstWhere(
@@ -479,6 +591,26 @@ class _MapsScreenState extends State<MapsScreen> {
                                 const SizedBox(height: 8),
                                 const Text('Ważne miejsca', style: TextStyle(fontWeight: FontWeight.w700)),
                                 Text(features.join(' • ')),
+                              ],
+                              if (wildSummary.isNotEmpty) ...[
+                                const SizedBox(height: 8),
+                                const Text('Dzikie Pokémony', style: TextStyle(fontWeight: FontWeight.w700)),
+                                Text(wildSummary),
+                              ],
+                              if (itemsSummary.isNotEmpty) ...[
+                                const SizedBox(height: 8),
+                                const Text('Przedmioty', style: TextStyle(fontWeight: FontWeight.w700)),
+                                Text(itemsSummary),
+                              ],
+                              if (trainersSummary.isNotEmpty) ...[
+                                const SizedBox(height: 8),
+                                const Text('Trenerzy i walki', style: TextStyle(fontWeight: FontWeight.w700)),
+                                Text(trainersSummary),
+                              ],
+                              if (eventsSummary.isNotEmpty) ...[
+                                const SizedBox(height: 8),
+                                const Text('Wydarzenia i nagrody', style: TextStyle(fontWeight: FontWeight.w700)),
+                                Text(eventsSummary),
                               ],
                               if (location['province'] is String) ...[
                                 const SizedBox(height: 8),
