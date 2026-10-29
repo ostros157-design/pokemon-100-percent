@@ -845,3 +845,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Połączono je z rekordem Wild Area oraz dodano potwierdzone punkty dostępu od Motostoke i Hammerlocke. Źródło: Bulbapedia — Wild Area (`https://bulbapedia.bulbagarden.net/wiki/Wild_Area`).
 - Indeks Galar wzrósł z 48 do 66 lokacji. Nazwy podobszarów są indeksowane, ale dokładne pinezki, granice podobszarów i warunki pogodowe nadal wymagają osobnej weryfikacji.
 - Commit: `05f2299`.
+
+
+### Mapy — Paldea: zweryfikowane połączenia w części południowej (2026-10-29)
+
+- Dodano połączenia między Cabo Poco, South Province (Area One), Los Platos i Mesagoza oraz sąsiednimi obszarami południowej prowincji i wejściem do Pokémon League.
+- Połączenia oparto na opisach lokacji Bulbapedia: `South Province (Area One)` i `Mesagoza`; rekordy mają jawny status, że zweryfikowano dostęp, ale nie pinezki na mapie.
+- Commit: `c11c806`.
+- Paldea pozostaje otwartym światem: pozostałe obszary trzeba łączyć na podstawie stron poszczególnych lokacji, bez udawania ponumerowanych tras.
