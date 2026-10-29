@@ -32,7 +32,8 @@
       "name": "Postwick",
       "kind": "town",
       "connectsTo": [
-        "route_1"
+        "route_1",
+        "slumbering_weald"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -63,7 +64,8 @@
       "name": "Motostoke",
       "kind": "town",
       "connectsTo": [
-        "route_3"
+        "route_3",
+        "galar_mine_no_2"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -94,7 +96,8 @@
       "name": "Hulbury",
       "kind": "town",
       "connectsTo": [
-        "route_5"
+        "route_5",
+        "galar_mine_no_2"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -127,7 +130,8 @@
       "name": "Stow-on-Side",
       "kind": "town",
       "connectsTo": [
-        "route_6"
+        "route_6",
+        "glimwood_tangle"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -141,10 +145,12 @@
       "id": "ballonlea",
       "name": "Ballonlea",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "glimwood_tangle"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "settlement_known_connections_pending_game_variant_audit",
+      "dataStatus": "connection_indexed_version_and_dlc_audit_pending",
       "sourceIds": [
         "bulbapedia-galar",
         "pokemony-galar"
@@ -187,7 +193,9 @@
       "kind": "town",
       "connectsTo": [
         "route_10",
-        "white_hill_station"
+        "white_hill_station",
+        "pok_mon_league",
+        "pokémon_league_galar"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -201,10 +209,12 @@
       "id": "freezington",
       "name": "Freezington",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "crown_tundra"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "settlement_known_connections_pending_game_variant_audit",
+      "dataStatus": "connection_indexed_version_and_dlc_audit_pending",
       "sourceIds": [
         "bulbapedia-galar",
         "pokemony-galar"
@@ -214,10 +224,13 @@
       "id": "pok_mon_league",
       "name": "Pokémon League",
       "kind": "league",
-      "connectsTo": [],
+      "connectsTo": [
+        "wyndon",
+        "victory_road"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "settlement_known_connections_pending_game_variant_audit",
+      "dataStatus": "connection_indexed_version_and_dlc_audit_pending",
       "sourceIds": [
         "bulbapedia-galar",
         "pokemony-galar"
@@ -422,10 +435,12 @@
       "id": "slumbering_weald",
       "name": "Slumbering Weald",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "postwick"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "connection_indexed_version_and_dlc_audit_pending",
       "sourceIds": [
         "bulbapedia-galar",
         "pokemony-galar"
@@ -451,10 +466,13 @@
       "id": "galar_mine_no_2",
       "name": "Galar Mine No. 2",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "motostoke",
+        "hulbury"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "connection_indexed_version_and_dlc_audit_pending",
       "sourceIds": [
         "bulbapedia-galar",
         "pokemony-galar"
@@ -464,10 +482,13 @@
       "id": "glimwood_tangle",
       "name": "Glimwood Tangle",
       "kind": "forest",
-      "connectsTo": [],
+      "connectsTo": [
+        "stow_on_side",
+        "ballonlea"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "connection_indexed_version_and_dlc_audit_pending",
       "sourceIds": [
         "bulbapedia-galar",
         "pokemony-galar"
@@ -477,10 +498,19 @@
       "id": "crown_tundra",
       "name": "Crown Tundra",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "freezington",
+        "max_lair",
+        "dyna_tree_hill",
+        "giants_bed",
+        "three_point_pass",
+        "roaring_sea_caves",
+        "frigid_sea",
+        "tunnel_to_the_top"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "connection_indexed_version_and_dlc_audit_pending",
       "sourceIds": [
         "bulbapedia-galar",
         "pokemony-galar"
@@ -490,7 +520,9 @@
       "id": "max_lair",
       "name": "Max Lair",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "crown_tundra"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -503,7 +535,9 @@
       "id": "dyna_tree_hill",
       "name": "Dyna Tree Hill",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "crown_tundra"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -529,7 +563,9 @@
       "id": "three_point_pass",
       "name": "Three-Point Pass",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "crown_tundra"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -542,7 +578,9 @@
       "id": "roaring_sea_caves",
       "name": "Roaring-Sea Caves",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "crown_tundra"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -555,7 +593,9 @@
       "id": "frigid_sea",
       "name": "Frigid Sea",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "crown_tundra"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -568,7 +608,9 @@
       "id": "tunnel_to_the_top",
       "name": "Tunnel to the Top",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "crown_tundra"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -581,10 +623,17 @@
       "id": "isle_of_armor",
       "name": "Isle of Armor",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "master_dojo",
+        "forest_of_focus",
+        "warm_up_tunnel",
+        "challenge_beach",
+        "workout_sea",
+        "honeycalm_island"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "connection_indexed_version_and_dlc_audit_pending",
       "sourceIds": [
         "bulbapedia-galar",
         "pokemony-galar"
@@ -594,7 +643,9 @@
       "id": "master_dojo",
       "name": "Master Dojo",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "isle_of_armor"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -607,7 +658,9 @@
       "id": "forest_of_focus",
       "name": "Forest of Focus",
       "kind": "forest",
-      "connectsTo": [],
+      "connectsTo": [
+        "isle_of_armor"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -620,7 +673,9 @@
       "id": "warm_up_tunnel",
       "name": "Warm-Up Tunnel",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "isle_of_armor"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -633,7 +688,9 @@
       "id": "challenge_beach",
       "name": "Challenge Beach",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "isle_of_armor"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -646,7 +703,9 @@
       "id": "workout_sea",
       "name": "Workout Sea",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "isle_of_armor"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -659,7 +718,9 @@
       "id": "honeycalm_island",
       "name": "Honeycalm Island",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "isle_of_armor"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -743,6 +804,36 @@
       "sourceIds": [
         "bulbapedia-galar",
         "pokemony-galar"
+      ],
+      "dataStatus": "connection_indexed_version_and_dlc_audit_pending"
+    },
+    {
+      "id": "pokémon_league_galar",
+      "name": "Pokémon League",
+      "kind": "league",
+      "connectsTo": [
+        "wyndon"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-galar",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "connection_indexed_version_and_dlc_audit_pending"
+    },
+    {
+      "id": "giants_bed",
+      "name": "Giant's Bed",
+      "kind": "area",
+      "connectsTo": [
+        "crown_tundra"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-galar",
+        "bulbapedia-route-list"
       ],
       "dataStatus": "connection_indexed_version_and_dlc_audit_pending"
     }
