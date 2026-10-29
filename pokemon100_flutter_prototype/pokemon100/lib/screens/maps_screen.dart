@@ -3700,80 +3700,80 @@ class _KantoMapPainter extends CustomPainter {
   });
 
   static const places = <_MapPlace>[
-    _MapPlace('Pallet Town', 0.22, 0.82),
-    _MapPlace('Route 1', 0.25, 0.75),
-    _MapPlace('Viridian City', 0.28, 0.68),
-    _MapPlace('Route 2', 0.29, 0.59),
-    _MapPlace('Viridian Forest', 0.28, 0.51),
-    _MapPlace('Pewter City', 0.25, 0.43),
-    _MapPlace('Route 3', 0.35, 0.39),
-    _MapPlace('Mt. Moon', 0.45, 0.34),
-    _MapPlace('Route 4', 0.54, 0.33),
-    _MapPlace('Cerulean City', 0.63, 0.35),
-    _MapPlace('Route 24', 0.68, 0.27),
-    _MapPlace('Route 25', 0.73, 0.22),
-    _MapPlace('Route 5', 0.64, 0.47),
-    _MapPlace('Underground Path (Routes 5–6)', 0.68, 0.57),
-    _MapPlace('Route 6', 0.61, 0.62),
-    _MapPlace('Vermilion City', 0.57, 0.65),
-    _MapPlace('Route 7', 0.48, 0.49),
-    _MapPlace('Route 8', 0.7, 0.48),
-    _MapPlace('Route 9', 0.74, 0.39),
-    _MapPlace('Route 10', 0.79, 0.43),
-    _MapPlace('Rock Tunnel', 0.86, 0.42),
-    _MapPlace('Lavender Town', 0.78, 0.49),
-    _MapPlace('Underground Path (Routes 7–8)', 0.57, 0.52),
-    _MapPlace('Route 11', 0.43, 0.63),
-    _MapPlace('Diglett\'s Cave', 0.34, 0.58),
-    _MapPlace('Route 12', 0.8, 0.56),
-    _MapPlace('Route 13', 0.82, 0.64),
-    _MapPlace('Route 14', 0.79, 0.71),
-    _MapPlace('Route 15', 0.73, 0.77),
-    _MapPlace('Fuchsia City', 0.65, 0.82),
-    _MapPlace('Celadon City', 0.43, 0.52),
-    _MapPlace('Saffron City', 0.59, 0.49),
-    _MapPlace('Route 16', 0.34, 0.49),
-    _MapPlace('Route 17', 0.46, 0.82),
-    _MapPlace('Route 18', 0.56, 0.81),
-    _MapPlace('Route 19', 0.57, 0.88),
-    _MapPlace('Route 20', 0.4, 0.92),
-    _MapPlace('Seafoam Islands', 0.27, 0.94),
-    _MapPlace('Cinnabar Island', 0.12, 0.94),
-    _MapPlace('Route 21', 0.17, 0.87),
-    _MapPlace('Route 22', 0.19, 0.61),
-    _MapPlace('Route 23', 0.1, 0.34),
-    _MapPlace('Victory Road', 0.13, 0.28),
-    _MapPlace('Indigo Plateau', 0.1, 0.22),
-    _MapPlace('Cerulean Cave', 0.73, 0.3),
-    _MapPlace('S.S. Anne', 0.52, 0.72),
-    _MapPlace('Power Plant', 0.87, 0.36),
-    _MapPlace('Pokémon Tower', 0.82, 0.51),
-    _MapPlace('Team Rocket Hideout', 0.4, 0.55),
-    _MapPlace('Silph Co.', 0.61, 0.46),
-    _MapPlace('Pokémon Mansion', 0.12, 0.88),
-    _MapPlace('Safari Zone', 0.68, 0.86),
-    _MapPlace('Viridian Gym', 0.24, 0.66),
-    _MapPlace('Pewter Gym', 0.31, 0.43),
-    _MapPlace('Cerulean Gym', 0.66, 0.38),
-    _MapPlace('Vermilion Gym', 0.61, 0.67),
-    _MapPlace('Celadon Gym', 0.4, 0.49),
-    _MapPlace('Saffron Gym', 0.62, 0.51),
-    _MapPlace('Fuchsia Gym', 0.69, 0.81),
-    _MapPlace('Cinnabar Gym', 0.1, 0.91),
-    _MapPlace('Bill\'s House', 0.81, 0.19),
-    _MapPlace('Pewter Museum of Science', 0.2, 0.4),
-    _MapPlace('Pokémon Fan Club', 0.54, 0.68),
-    _MapPlace('Pokémon Day Care', 0.66, 0.44),
-    _MapPlace('Pokémon League Reception Gate', 0.12, 0.25),
-    _MapPlace("Player's House", 0.18, 0.85),
-    _MapPlace("Professor Oak's Laboratory", 0.26, 0.84),
-    _MapPlace('Celadon Department Store', 0.45, 0.46),
-    _MapPlace('Celadon Game Corner', 0.46, 0.56),
-    _MapPlace('Celadon Condominiums', 0.37, 0.46),
-    _MapPlace('Cinnabar Lab', 0.16, 0.97),
-    _MapPlace('Fighting Dojo', 0.64, 0.54),
-    _MapPlace('GO Park', 0.72, 0.86),
-    _MapPlace('Sea Cottage', 0.78, 0.16),
+    _MapPlace('Pallet Town', 0.2, 0.72),
+    _MapPlace('Route 1', 0.21, 0.63),
+    _MapPlace('Viridian City', 0.22, 0.54),
+    _MapPlace('Route 2', 0.22, 0.43),
+    _MapPlace('Viridian Forest', 0.22, 0.35),
+    _MapPlace('Pewter City', 0.22, 0.24),
+    _MapPlace('Route 3', 0.34, 0.2),
+    _MapPlace('Mt. Moon', 0.43, 0.14),
+    _MapPlace('Route 4', 0.56, 0.13),
+    _MapPlace('Cerulean City', 0.68, 0.14),
+    _MapPlace('Route 24', 0.74, 0.08),
+    _MapPlace('Route 25', 0.84, 0.09),
+    _MapPlace('Route 5', 0.64, 0.32),
+    _MapPlace('Underground Path (Routes 5–6)', 0.65, 0.42),
+    _MapPlace('Route 6', 0.63, 0.5),
+    _MapPlace('Vermilion City', 0.62, 0.57),
+    _MapPlace('Route 7', 0.48, 0.32),
+    _MapPlace('Route 8', 0.82, 0.34),
+    _MapPlace('Route 9', 0.82, 0.18),
+    _MapPlace('Route 10', 0.89, 0.24),
+    _MapPlace('Rock Tunnel', 0.91, 0.27),
+    _MapPlace('Lavender Town', 0.84, 0.43),
+    _MapPlace('Underground Path (Routes 7–8)', 0.65, 0.38),
+    _MapPlace('Route 11', 0.42, 0.56),
+    _MapPlace('Diglett\'s Cave', 0.31, 0.4),
+    _MapPlace('Route 12', 0.91, 0.49),
+    _MapPlace('Route 13', 0.91, 0.6),
+    _MapPlace('Route 14', 0.86, 0.68),
+    _MapPlace('Route 15', 0.78, 0.74),
+    _MapPlace('Fuchsia City', 0.62, 0.75),
+    _MapPlace('Celadon City', 0.46, 0.32),
+    _MapPlace('Saffron City', 0.63, 0.32),
+    _MapPlace('Route 16', 0.36, 0.33),
+    _MapPlace('Route 17', 0.38, 0.56),
+    _MapPlace('Route 18', 0.5, 0.72),
+    _MapPlace('Route 19', 0.5, 0.83),
+    _MapPlace('Route 20', 0.36, 0.9),
+    _MapPlace('Seafoam Islands', 0.28, 0.86),
+    _MapPlace('Cinnabar Island', 0.16, 0.91),
+    _MapPlace('Route 21', 0.19, 0.81),
+    _MapPlace('Route 22', 0.1, 0.53),
+    _MapPlace('Route 23', 0.1, 0.35),
+    _MapPlace('Victory Road', 0.12, 0.3),
+    _MapPlace('Indigo Plateau', 0.1, 0.23),
+    _MapPlace('Cerulean Cave', 0.76, 0.17),
+    _MapPlace('S.S. Anne', 0.56, 0.58),
+    _MapPlace('Power Plant', 0.93, 0.3),
+    _MapPlace('Pokémon Tower', 0.84, 0.44),
+    _MapPlace('Team Rocket Hideout', 0.46, 0.35),
+    _MapPlace('Silph Co.', 0.63, 0.29),
+    _MapPlace('Pokémon Mansion', 0.16, 0.88),
+    _MapPlace('Safari Zone', 0.64, 0.79),
+    _MapPlace('Viridian Gym', 0.22, 0.56),
+    _MapPlace('Pewter Gym', 0.25, 0.24),
+    _MapPlace('Cerulean Gym', 0.71, 0.15),
+    _MapPlace('Vermilion Gym', 0.65, 0.59),
+    _MapPlace('Celadon Gym', 0.43, 0.3),
+    _MapPlace('Saffron Gym', 0.66, 0.34),
+    _MapPlace('Fuchsia Gym', 0.66, 0.75),
+    _MapPlace('Cinnabar Gym', 0.14, 0.93),
+    _MapPlace('Bill\'s House', 0.83, 0.12),
+    _MapPlace('Pewter Museum of Science', 0.18, 0.23),
+    _MapPlace('Pokémon Fan Club', 0.58, 0.6),
+    _MapPlace('Pokémon Day Care', 0.65, 0.27),
+    _MapPlace('Pokémon League Reception Gate', 0.1, 0.27),
+    _MapPlace("Player's House", 0.18, 0.73),
+    _MapPlace("Professor Oak's Laboratory", 0.23, 0.76),
+    _MapPlace('Celadon Department Store', 0.45, 0.29),
+    _MapPlace('Celadon Game Corner', 0.48, 0.35),
+    _MapPlace('Celadon Condominiums', 0.4, 0.29),
+    _MapPlace('Cinnabar Lab', 0.18, 0.95),
+    _MapPlace('Fighting Dojo', 0.65, 0.36),
+    _MapPlace('GO Park', 0.7, 0.78),
+    _MapPlace('Sea Cottage', 0.86, 0.1),
   ];
 
   @override
@@ -3795,13 +3795,13 @@ class _KantoMapPainter extends CustomPainter {
     final p = (double x, double y) => Offset(x * size.width, y * size.height);
 
     final coast = Path()
-      ..moveTo(size.width * .08, size.height * .18)
-      ..cubicTo(size.width * .18, size.height * .06, size.width * .42, size.height * .08, size.width * .53, size.height * .16)
-      ..cubicTo(size.width * .69, size.height * .12, size.width * .87, size.height * .24, size.width * .87, size.height * .39)
-      ..cubicTo(size.width * .96, size.height * .52, size.width * .83, size.height * .67, size.width * .79, size.height * .78)
-      ..cubicTo(size.width * .74, size.height * .92, size.width * .51, size.height * .91, size.width * .42, size.height * .84)
-      ..cubicTo(size.width * .29, size.height * .91, size.width * .16, size.height * .83, size.width * .18, size.height * .70)
-      ..cubicTo(size.width * .08, size.height * .57, size.width * .12, size.height * .40, size.width * .08, size.height * .18)
+      ..moveTo(size.width * .06, size.height * .20)
+      ..cubicTo(size.width * .12, size.height * .05, size.width * .39, size.height * .035, size.width * .55, size.height * .09)
+      ..cubicTo(size.width * .69, size.height * .035, size.width * .89, size.height * .08, size.width * .93, size.height * .22)
+      ..cubicTo(size.width * .98, size.height * .38, size.width * .88, size.height * .56, size.width * .86, size.height * .70)
+      ..cubicTo(size.width * .81, size.height * .88, size.width * .62, size.height * .91, size.width * .48, size.height * .85)
+      ..cubicTo(size.width * .36, size.height * .94, size.width * .18, size.height * .86, size.width * .18, size.height * .72)
+      ..cubicTo(size.width * .06, size.height * .60, size.width * .09, size.height * .39, size.width * .06, size.height * .20)
       ..close();
     canvas.drawPath(
       coast.shift(const Offset(0, 5)),
@@ -4008,16 +4008,16 @@ class _KantoMapPainter extends CustomPainter {
     }
 
     for (final mountain in <(double, double, double)>[
-      (.39, .30, .72),
-      (.43, .29, .88),
-      (.47, .30, 1.0),
-      (.51, .31, .72),
-      (.82, .35, .72),
-      (.85, .33, .88),
-      (.88, .35, .70),
-      (.15, .32, .62),
-      (.18, .30, .78),
-      (.21, .32, .60),
+      (.35, .15, .72),
+      (.40, .13, .88),
+      (.44, .14, 1.0),
+      (.48, .16, .72),
+      (.86, .26, .72),
+      (.89, .24, .88),
+      (.92, .27, .70),
+      (.14, .25, .62),
+      (.17, .23, .78),
+      (.20, .25, .60),
     ]) {
       drawMountain(mountain.$1, mountain.$2, mountain.$3);
     }
@@ -4330,11 +4330,11 @@ class _KantoMapPainter extends CustomPainter {
     }
 
     // Broad forest clusters sit behind routes and selectable location markers.
-    drawForest(.28, .50, 18, 2); // Viridian Forest area
-    drawForest(.70, .83, 15, 5); // Safari Zone / Fuchsia area
-    drawForest(.40, .48, 11, 3); // Celadon outskirts
-    drawForest(.32, .72, 12, 7); // southern central woodland
-    drawForest(.18, .38, 12, 1); // western uplands
+    drawForest(.22, .35, 18, 2); // Viridian Forest area
+    drawForest(.64, .79, 15, 5); // Safari Zone / Fuchsia area
+    drawForest(.42, .31, 11, 3); // Celadon outskirts
+    drawForest(.36, .55, 12, 7); // southern central woodland
+    drawForest(.15, .30, 12, 1); // western uplands
     // Forest patches are decorative landscape, while town/cave symbols are
     // drawn at each actual selectable node below so they stay aligned.
     
