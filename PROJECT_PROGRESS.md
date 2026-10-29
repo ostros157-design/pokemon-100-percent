@@ -1,3 +1,9 @@
+### Mapy — usunięcie niepotwierdzonego skrótu na mapie Kanto (2026-10-29)
+
+- Usunięto bezpośrednią linię Pewter City–Indigo Plateau, która mogła sugerować trasę bez pokazania lokacji pośrednich.
+- Nie dodano zastępczej trasy, ponieważ brakowało w tym module zweryfikowanych danych o jej przebiegu.
+- Commit kodu: `00a0c3b`. Kompilacja i test ręczny nadal nie zostały wykonane.
+
 ### Mapy — nowe punkty z poradnika na mapie Kanto (2026-10-29)
 
 - Dodano do przeglądu regionu klikalne punkty Route 2, Viridian Forest i Pewter Gym, których wcześniej brakowało na mapie mimo obecności tych lokacji w poradniku.
