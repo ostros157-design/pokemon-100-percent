@@ -162,6 +162,46 @@
       "id": "routepedia-route25-pikachu",
       "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/route-25",
       "scope": "Route 25 encounters, items, trainers and Bill's House"
+    },
+    {
+      "id": "routepedia-route5-pikachu",
+      "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/route-5",
+      "scope": "Route 5 Pikachu version encounters, items, Day Care and connections"
+    },
+    {
+      "id": "routepedia-route5-eevee",
+      "url": "https://theroutepedia.com/pokemon-lets-go-eevee/route-5",
+      "scope": "Route 5 Eevee version encounters and items"
+    },
+    {
+      "id": "routepedia-route6-pikachu",
+      "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/route-6",
+      "scope": "Route 6 encounters, items, trainers and links"
+    },
+    {
+      "id": "routepedia-route6-eevee",
+      "url": "https://theroutepedia.com/pokemon-lets-go-eevee/route-6",
+      "scope": "Route 6 Eevee version encounters and items"
+    },
+    {
+      "id": "routepedia-underground56-eevee",
+      "url": "https://theroutepedia.com/pokemon-lets-go-eevee/underground-path-routes-5-6",
+      "scope": "Underground Path 5–6 items and postgame Master Trainers"
+    },
+    {
+      "id": "serebii-underground56",
+      "url": "https://www.serebii.net/pokearth/kanto/undergroundpath5-6.shtml",
+      "scope": "Underground Path exits, dropped items and Master Trainers"
+    },
+    {
+      "id": "routepedia-vermilion-pikachu",
+      "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/vermilion-city",
+      "scope": "Vermilion City facilities, items, gifts and Lt. Surge"
+    },
+    {
+      "id": "routepedia-vermilion-eevee",
+      "url": "https://theroutepedia.com/pokemon-lets-go-eevee/vermilion-city",
+      "scope": "Vermilion City Eevee version details"
     }
   ],
   "locations": [
@@ -1294,6 +1334,287 @@
       ],
       "sourceIds": [
         "routepedia-route25-pikachu"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "route_5",
+      "name": "Route 5",
+      "kind": "route",
+      "connectsTo": [
+        "cerulean_city",
+        "underground_path_5_6"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "notes": "Trasa na południe od Cerulean City; znajduje się tu Day Care oraz północne wejście do Underground Path. Bramy do Saffron zależą od postępu fabuły.",
+      "wildPokemonDetails": {
+        "levels": [
+          11,
+          16
+        ],
+        "lets_go_pikachu": [
+          [
+            "Rattata",
+            30
+          ],
+          [
+            "Pidgey",
+            20
+          ],
+          [
+            "Growlithe",
+            20
+          ],
+          [
+            "Jigglypuff",
+            15
+          ],
+          [
+            "Pidgeotto",
+            10
+          ],
+          [
+            "Abra",
+            5
+          ]
+        ],
+        "lets_go_eevee": [
+          [
+            "Rattata",
+            30
+          ],
+          [
+            "Pidgey",
+            20
+          ],
+          [
+            "Vulpix",
+            20
+          ],
+          [
+            "Jigglypuff",
+            15
+          ],
+          [
+            "Pidgeotto",
+            10
+          ],
+          [
+            "Abra",
+            5
+          ]
+        ]
+      },
+      "features": [
+        "Day Care",
+        "Underground Path entrance"
+      ],
+      "items": [
+        "3 Great Balls",
+        "Ether",
+        "3 Nanab Berries",
+        "3 Razz Berries (ukryte)"
+      ],
+      "sourceIds": [
+        "routepedia-route5-pikachu",
+        "routepedia-route5-eevee"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "underground_path_5_6",
+      "name": "Underground Path (Routes 5–6)",
+      "kind": "underground_path",
+      "connectsTo": [
+        "route_5",
+        "route_6"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "notes": "Tunel łączący Route 5 i Route 6 pod Saffron City; brak dzikich spotkań. Część przedmiotów jest losowa/codzienna.",
+      "items": [
+        "Repel",
+        "Lure",
+        "5 ukrytych przedmiotów z losowej puli m.in. Lure/Repel, Fresh Water/Potions, Pearl/Big Pearl/Nugget, Nugget"
+      ],
+      "trainerCount": 2,
+      "postGameTrainers": [
+        "Scientist Murray — Magnemite Lv. 70",
+        "Scientist Julian — Magneton Lv. 75"
+      ],
+      "sourceIds": [
+        "routepedia-underground56-eevee",
+        "serebii-underground56"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "route_6",
+      "name": "Route 6",
+      "kind": "route",
+      "connectsTo": [
+        "underground_path_5_6",
+        "vermilion_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "wildPokemonDetails": {
+        "levels": [
+          11,
+          16
+        ],
+        "lets_go_pikachu": [
+          [
+            "Pidgey",
+            20
+          ],
+          [
+            "Rattata",
+            20
+          ],
+          [
+            "Growlithe",
+            20
+          ],
+          [
+            "Jigglypuff",
+            15
+          ],
+          [
+            "Psyduck",
+            10
+          ],
+          [
+            "Pidgeotto",
+            10
+          ],
+          [
+            "Abra",
+            5
+          ]
+        ],
+        "lets_go_eevee": [
+          [
+            "Pidgey",
+            20
+          ],
+          [
+            "Rattata",
+            20
+          ],
+          [
+            "Vulpix",
+            20
+          ],
+          [
+            "Jigglypuff",
+            15
+          ],
+          [
+            "Psyduck",
+            10
+          ],
+          [
+            "Pidgeotto",
+            10
+          ],
+          [
+            "Abra",
+            5
+          ]
+        ],
+        "surfing": [
+          [
+            "Magikarp",
+            45
+          ],
+          [
+            "Goldeen",
+            45
+          ],
+          [
+            "Seaking",
+            10
+          ]
+        ]
+      },
+      "trainers": [
+        "Camper Ricky — Sandshrew Lv. 15 i Nidoran♂ Lv. 15",
+        "Camper Jeff — Bellsprout Lv. 15",
+        "Gentleman Edward — Eevee Lv. 16",
+        "Picnicker Nancy — Nidoran♀ Lv. 15 i Jigglypuff Lv. 15",
+        "Picnicker Isabelle — Charmander Lv. 15",
+        "Sailor Elijah — Tentacool Lv. 16"
+      ],
+      "items": [
+        "Super Potion",
+        "Paralyze Heal",
+        "Guard Spec.",
+        "Rare Candy (ukryty)"
+      ],
+      "sourceIds": [
+        "routepedia-route6-pikachu",
+        "routepedia-route6-eevee"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "vermilion_city",
+      "name": "Vermilion City",
+      "kind": "town",
+      "connectsTo": [
+        "route_6",
+        "route_11",
+        "ss_anne"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "features": [
+        "Pokémon Center",
+        "Poké Mart",
+        "Pokémon Fan Club",
+        "Vermilion Gym",
+        "port i S.S. Anne"
+      ],
+      "items": [
+        "Super Repel",
+        "Paralyze Heal",
+        "Revive",
+        "Nugget",
+        "Super Potion",
+        "Full Heal",
+        "Elixir",
+        "Big Pearl (ukryty)",
+        "Full Heal (ukryty)",
+        "3 Pinap Berries (ukryte)",
+        "Tiny Mushroom (ukryty)"
+      ],
+      "notablePokemon": [
+        "Squirtle Lv. 16 — gift",
+        "Arcanine Lv. 16 — gift w Let's Go Pikachu",
+        "Persian Lv. 16 — gift w Let's Go Eevee"
+      ],
+      "gymLeader": {
+        "name": "Lt. Surge",
+        "team": [
+          {
+            "name": "Voltorb",
+            "level": 25
+          },
+          {
+            "name": "Magnemite",
+            "level": 25
+          },
+          {
+            "name": "Raichu",
+            "level": 26
+          }
+        ]
+      },
+      "sourceIds": [
+        "routepedia-vermilion-pikachu",
+        "routepedia-vermilion-eevee"
       ],
       "dataStatus": "text_verified_positions_not_mapped"
     }
