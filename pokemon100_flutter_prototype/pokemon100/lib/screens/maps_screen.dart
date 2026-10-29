@@ -4216,6 +4216,16 @@ class _KantoMapPainter extends CustomPainter {
       ..style = PaintingStyle.stroke
       ..strokeWidth = 4.5
       ..strokeCap = StrokeCap.round;
+    final waterRouteEdge = Paint()
+      ..color = const Color(0xFFD6F1E9)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 8
+      ..strokeCap = StrokeCap.round;
+    final waterRouteDash = Paint()
+      ..color = const Color(0xFF4F9DA8)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 3.2
+      ..strokeCap = StrokeCap.round;
     for (var index = 0; index < links.length; index++) {
       final link = links[index];
       final a = places[link.$1];
@@ -4229,9 +4239,31 @@ class _KantoMapPainter extends CustomPainter {
       final road = Path()
         ..moveTo(start.dx, start.dy)
         ..quadraticBezierTo(midpoint.dx, midpoint.dy, end.dx, end.dy);
+      final isWaterLink = <String>{
+        'Route 19',
+        'Route 20',
+        'Route 21',
+      }.contains(a.name) || <String>{
+        'Route 19',
+        'Route 20',
+        'Route 21',
+      }.contains(b.name);
       canvas.drawPath(road, roadShadow);
-      canvas.drawPath(road, roadEdge);
-      canvas.drawPath(road, roadCenter);
+      if (isWaterLink) {
+        canvas.drawPath(road, waterRouteEdge);
+        for (final metric in road.computeMetrics()) {
+          for (var distance = 0.0; distance < metric.length; distance += 14) {
+            final dashEnd = math.min(distance + 6, metric.length);
+            canvas.drawPath(
+              metric.extractPath(distance, dashEnd),
+              waterRouteDash,
+            );
+          }
+        }
+      } else {
+        canvas.drawPath(road, roadEdge);
+        canvas.drawPath(road, roadCenter);
+      }
     }
 
     // Small illustrated landmarks make the region read as a hand-drawn
