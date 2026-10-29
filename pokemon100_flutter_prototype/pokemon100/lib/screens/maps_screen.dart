@@ -1045,7 +1045,7 @@ class _MapsScreenState extends State<MapsScreen> {
                                       ),
                                       const SizedBox(height: 8),
                                       const Text(
-                                        'Poniżej znajduje się offline’owa, wektorowo rysowana ilustracja Kanto. Zawiera 74 wybieralne lokacje i 83 połączenia, z malowanymi lasami, górami, miasteczkami, wybrzeżem i wejściami do jaskiń. Kształty terenu i pozycje węzłów są artystycznym schematem, nie mapą w skali ani dokładną kopią map z gry. Wektorowe elementy pozostają gładkie przy powiększaniu.',
+                                        'Poniżej znajduje się offline’owa, wektorowo rysowana ilustracja Kanto. Zawiera 76 wybieralnych lokacji i 84 połączenia, z malowanymi lasami, górami, miasteczkami, wybrzeżem i wejściami do jaskiń. Kształty terenu i pozycje węzłów są artystycznym schematem, nie mapą w skali ani dokładną kopią map z gry. Wektorowe elementy pozostają gładkie przy powiększaniu.',
                                       ),
                                       const SizedBox(height: 10),
                                       const Text(
@@ -4153,7 +4153,7 @@ class _KantoMapPainter extends CustomPainter {
         ..strokeWidth = 1,
     );
 
-    // Full 74-location Kanto topology from the bundled audit index. Node positions are schematic layout coordinates, not in-game coordinates.
+    // Full 76-location Kanto topology from the bundled audit index. Node positions are schematic layout coordinates, not in-game coordinates.
     const links = <(int, int)>[
       (0,1),
       (0,39),
@@ -4498,7 +4498,7 @@ class _KantoMapPainter extends CustomPainter {
           name.contains('Town') ||
           name.contains('Island') ||
           name.contains('Forest') ||
-          name.contains('Cave') ||
+          (name.contains('Cave') && !name.contains('entrance')) ||
           name.contains('Moon') ||
           name.contains('Victory Road') ||
           name.contains('Indigo Plateau') ||
