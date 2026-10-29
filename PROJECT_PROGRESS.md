@@ -1485,3 +1485,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Statusy indeksu lokacji są teraz mapowane na krótkie komunikaty po polsku, np. „Szanse spotkań sprawdzone; pinezki niezweryfikowane” lub „Schemat wnętrza dostępny; dokładny plan pięter do weryfikacji”.
 - Commit UI: `03d5916`. Nie uruchamiano testów, analyzer ani APK.
 
+
+
+### Osiągnięcia — podłączenie kolejnych warunków (2026-10-29)
+
+- Podłączono istniejące osiągnięcia do danych zapisywanych już przez aplikację: Shiny, pełna sześcioosobowa drużyna, sześć różnych typów, rozpoczęcie/ukończenie poradnika oraz progi postępu 25%, 50%, 75% i 100%.
+- „Pierwsza odznaka” odblokowuje się po oznaczeniu kroku walki z Brockiem jako ukończonego w poradniku Let’s Go, Pikachu!. „Gra ukończona” używa obecnie 100% obliczanego z kroków poradnika i złapanych Pokémonów dla wybranej gry.
+- Osiągnięcia wymagające danych, których aplikacja jeszcze nie zapisuje (m.in. 8 odznak, Elite Four, Champion, ewolucje, wymiany i ukończenie wielu gier), pozostają zablokowane — nie są odblokowywane na podstawie domysłów.
+- Commit: `a9fc0a3`. Zmiany zapisane na gałęzi `mystery/improvement-02`; nie uruchamiano Flutter analyzer, testów ani budowania APK.
