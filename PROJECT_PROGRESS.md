@@ -1,3 +1,11 @@
+### Mapy — najnowszy audyt statyczny po rozszerzeniu danych (2026-10-29)
+
+- Graf: 74 fizyczne węzły, 76 nazw w indeksie (dwa aliasy), 82 połączenia. Wszystkie nazwy i krawędzie zgadzają się z JSON; brak nieistniejących indeksów, brak punktów poza zakresem i brak brakujących referencji źródeł.
+- Schematy lokalne: 76/76 wpisów, bez duplikatów i braków. Wszystkie 25 tras mają dane spotkań.
+- Zawartość indeksu: 157 wpisów trenerów/walk, 208 wpisów przedmiotów i 85 wydarzeń; wartości są tekstowe tam, gdzie dokładne pinezki nie zostały potwierdzone.
+- Rysunek: wszystkie 85 konstruktorów `Paint()` mają jawne wygładzanie antyaliasingowe. Underground Path są widoczne na mapie, a aliasy wskazują wspólne fizyczne punkty.
+- Najnowsze commity UI: `d8fa88f` (skrót GO Park), `a963da4` (etykiety Underground Path), `a046c6d` (formatowanie obiektów przedmiotów), `ae8c67e` (licznik trenerów). Nie uruchamiano Flutter analyzer, testów ani APK; dokładne kafelki i pinezki nadal nie są zweryfikowane w grze.
+
 ### Mapy — korekta opisu liczby połączeń i aliasów (2026-10-29)
 
 - Zaktualizowano opis pod mapą po scaleniu aliasów: teraz poprawnie podaje 74 fizyczne punkty, 76 nazw i 82 połączenia (zamiast starej liczby 84).
