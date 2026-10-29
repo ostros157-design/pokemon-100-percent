@@ -1308,3 +1308,9 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Commity: `6cf9e32` (dopasowanie mapy), `af94e00` i `a63589a` (status pinezek w panelu).
 - Nie uruchamiano testów, analyzer ani APK. Dopasowanie skali i interakcje wymagają późniejszego sprawdzenia na rzeczywistym ekranie; nie potwierdzono jeszcze dokładnych współrzędnych gry.
 
+### Mapy — Kanto: status współrzędnych widoczny w panelu lokacji (2026-10-29)
+
+- Panel danych Let’s Go pokazuje status weryfikacji pinezek także dla lokacji bez kompletnej listy spotkań; nie sugeruje, że brakujące pozycje są już znane.
+- Wszystkie lokacje w indeksie mają teraz jawne `coordinateStatus: "unverified"`, a komunikat UI jest przygotowany na przyszłe lokacje z potwierdzonym statusem.
+- Commity: `af94e00`, `a63589a`. Bez uruchamiania testów, analyzer ani APK.
+
