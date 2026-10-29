@@ -320,7 +320,7 @@ class _MapsScreenState extends State<MapsScreen> {
                                       ),
                                       const SizedBox(height: 4),
                                       const Text(
-                                        '• Schematy lokalne są dostępne dla Pallet Town, Route 1, Viridian City, Route 2, Viridian Forest, Pewter City i Pewter Gym.\\n• Symbole pokazują wyłącznie orientacyjny układ i informacje opisane w poradniku. Nie oznaczają dokładnych współrzędnych ani potwierdzonych pozycji przedmiotów.',
+                                        '• Schematy lokalne są dostępne dla Pallet Town, Route 1, Viridian City, Route 2, Viridian Forest, Pewter City i Pewter Gym.\n• Symbole pokazują wyłącznie orientacyjny układ i informacje opisane w poradniku. Nie oznaczają dokładnych współrzędnych ani potwierdzonych pozycji przedmiotów.',
                                       ),
                                       const SizedBox(height: 12),
                                       _KantoRegionMap(
@@ -558,7 +558,7 @@ class _MapsScreenState extends State<MapsScreen> {
                             ),
                           ] else
                             const Text(
-                              'Dane obejmują początek przygody: budynki i wydarzenia w Pallet Town oraz spotkania, trenera i przedmiot na Route 1. Nie pokazujemy pinezek przedmiotów, dopóki ich pozycje nie zostaną potwierdzone na podkładzie mapy.',
+                              'Wybierz lokację z mapy albo wpisz jej dokładną nazwę, aby zobaczyć schemat lokalny i informacje powiązane z poradnikiem. Nie pokazujemy dokładnych pinezek przedmiotów bez zweryfikowanych współrzędnych.',
                             ),
                           const SizedBox(height: 12),
                           _KantoLocalAreaPanel(
