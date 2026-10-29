@@ -6036,7 +6036,6 @@
       "kind": "route",
       "connectsTo": [
         "digletts_cave",
-        "route_12",
         "vermilion_city"
       ],
       "localMapAsset": null,
@@ -6511,7 +6510,6 @@
       "kind": "route",
       "connectsTo": [
         "lavender_town",
-        "route_11",
         "route_13"
       ],
       "localMapAsset": null,
