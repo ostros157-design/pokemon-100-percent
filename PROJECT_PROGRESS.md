@@ -1258,3 +1258,8 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Lokalny schemat Route 11 wskazuje teraz jako wschodni koniec osobne wejście Diglett's Cave od Route 11, zamiast błędnie podpisywać Route 12.
 - Commit: `e5f3ffb`. Bez testów i APK.
 
+### Mapy — Kanto: ujednolicenie nazwy wejścia w Route 11 (2026-10-29)
+
+- Ujednolicono podpis końca Route 11 i nazwę punktu w panelu lokalnym: oba wskazują teraz „Diglett's Cave (Route 11 entrance)”.
+- Commit: `68879d0`. Bez testów i APK.
+
