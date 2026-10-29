@@ -986,3 +986,10 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Commity danych: `d4d329e`, `a88a8bb`.
 - Nie uruchamiano Flutter analyzer, testów ani APK.
 
+### Mapy — spotkania na Route 9 i Route 10 (2026-10-29)
+
+- Uzupełniono tabele spotkań dla obu wersji Let’s Go: trawa, niebo i specjalne spotkania, a dla Route 10 również Pokémony podczas surfowania.
+- Poziomy i szanse są oparte na tabelach Serebii; specjalne spotkania bez podanej szansy nie otrzymały zmyślonego procentu.
+- Dane pozostają tekstowe, bez fałszywych pinezek. Commit: `4b46751`.
+- Nie uruchamiano Flutter analyzer, testów ani APK.
+
