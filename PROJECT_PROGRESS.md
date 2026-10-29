@@ -1131,3 +1131,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Commity tej serii obejmują m.in. `76f4461`, `911a263`, `f4bd042`, `f798ec7`, `b538ccd`, `e66d851`, `04be4d5`, `dd0fddc` i `1d6fc3f`.
 - Nie uruchamiano `flutter analyze`, testów ani APK zgodnie z dotychczasowym sposobem pracy. Przed określeniem mapy jako gotowej nadal potrzebne są: przegląd wizualny po uruchomieniu aplikacji oraz weryfikacja geometrii i pięter z wiarygodnymi mapami źródłowymi.
 
+### Mapy — Kanto: pokrycie wszystkich lokacji planem lokalnym (2026-10-29, audyt po rozszerzeniu)
+
+- Uzupełniono brakujące plany lokalne dla Safari Zone i Pokémon League Reception Gate. Indeks 74 lokacji ma teraz 74 odpowiadające wpisy w `_featuresByLocation`; nie wykryto duplikatów ani dodatkowych nazw.
+- Dodano własne schematy korytarzy dla tras 1–25 i obu Underground Path, plany stref dla głównych jaskiń, pięter budynków, Gymów, miast, Safari Zone i bramy Ligi.
+- Uporządkowano rysowanie wejścia do jaskini: osobny pędzel obrysu nie modyfikuje już stylu w trakcie wywołania `drawArc`.
+- Ponowny audyt statyczny: 74 lokacje w danych i rysunku, 83 połączenia, 74 zestawy elementów planu lokalnego, brak brakujących nazw i duplikatów w zestawie planów. To walidacja tekstowa/strukturalna, nie kompilacja.
+- Nie uruchamiano `flutter analyze`, testów ani APK. Ostateczny wygląd, skalowanie i interakcje muszą być obejrzane po uruchomieniu aplikacji; plany są celowo oznaczone jako poglądowe, dopóki geometria pięter nie zostanie zweryfikowana z mapami źródłowymi.
+
