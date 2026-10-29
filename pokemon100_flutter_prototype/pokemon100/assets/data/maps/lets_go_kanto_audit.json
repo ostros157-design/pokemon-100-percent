@@ -8690,7 +8690,8 @@
       "sourceIds": [
         "routepedia-route17-pikachu",
         "serebii-route17",
-        "bulbapedia-part11"
+        "bulbapedia-part11",
+        "bulbapedia-part18"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemonDetails": {
@@ -9100,6 +9101,9 @@
         "Super Repel — za dwiema południowo-zachodnimi ławkami.",
         "Blast-Off Set — po zostaniu Championem, nagroda od Jessie i Jamesa po ponownej walce.",
         "Ukryte losowe jagody w żółtych krzakach: Razz / Nanab / Pinap oraz warianty Silver/Golden w różnych częściach trasy; opis tekstowy, bez pinezek."
+      ],
+      "events": [
+        "Po zostaniu Championem Jessie i James wracają na wschodnią część Route 17 i wyzywają gracza na ostatnią walkę; po zwycięstwie otrzymuje się Blast-Off Set."
       ]
     },
     {
@@ -10845,7 +10849,8 @@
       "sourceIds": [
         "routepedia-route22-pikachu",
         "serebii-route22",
-        "bulbapedia-part2"
+        "bulbapedia-part2",
+        "bulbapedia-part15"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemonDetails": {
@@ -11085,6 +11090,9 @@
       "items": [
         "Antidote — ukryty w krzaku na północ od wschodniej kępy trawy.",
         "Poké Ball ×5 — południowo-zachodni narożnik trasy."
+      ],
+      "events": [
+        "Po zdobyciu Earth Badge Trace ponownie wyzywa gracza na Route 22 przed Ligą Pokémon; drużyna zależy od wersji i partnera, nagroda za zwycięstwo wynosi $8,160."
       ]
     },
     {
