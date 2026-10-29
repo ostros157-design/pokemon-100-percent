@@ -856,7 +856,8 @@
           "coordinateStatus": "unverified",
           "status": "text_verified_position_not_mapped"
         }
-      ]
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
     },
     {
       "id": "viridian_forest",
