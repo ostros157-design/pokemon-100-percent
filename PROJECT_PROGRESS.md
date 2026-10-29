@@ -1,3 +1,10 @@
+### Mapy — poprawa czytelności i ponowny audyt (2026-10-29)
+
+- Powiększono etykiety głównych lokacji do 11.5 px (13 px dla zaznaczonej) oraz plakietki numerów tras do 10.5 px; etykiety Underground Path są teraz widoczne na mapie regionu.
+- Licznik trenerów uwzględnia udokumentowane listy, w tym późniejsze walki Trace i Jessie/James; obiekty przedmiotów JSON są formatowane na czytelną nazwę, ilość i opis.
+- Ponowny audyt po zmianach: 74 fizyczne punkty, 76 nazw (2 aliasy), 82 połączenia; 76/76 schematów lokalnych; 25/25 tras ma dane spotkań; 124 źródła bez brakujących referencji; 157 wpisów trenerów, 208 wpisów przedmiotów, 85 wydarzeń. Brak błędnych indeksów i pozycji poza zakresem; 85/85 konstruktorów Paint ma wygładzanie.
+- Commity wizualne: `9acac05` (etykiety), `3713de8` (numery tras), `9d04799` (komentarz topologii). Audyt jest statyczny; aplikacja nie była uruchamiana, a dokładne pinezki nadal nie są zweryfikowane w grze.
+
 ### Mapy — najnowszy audyt statyczny po rozszerzeniu danych (2026-10-29)
 
 - Graf: 74 fizyczne węzły, 76 nazw w indeksie (dwa aliasy), 82 połączenia. Wszystkie nazwy i krawędzie zgadzają się z JSON; brak nieistniejących indeksów, brak punktów poza zakresem i brak brakujących referencji źródeł.
