@@ -617,6 +617,16 @@
       "id": "bulbagarden-lgpe-location-map-index",
       "url": "https://archives.bulbagarden.net/wiki/Category:Let's_Go,_Pikachu!_and_Let's_Go,_Eevee!_maps",
       "scope": "Coverage checklist for route, town, building, and dungeon map subjects; screenshots are references only, not app assets."
+    },
+    {
+      "id": "bulbapedia-part15",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Appendix%3ALet%27s_Go,_Pikachu!_and_Let%27s_Go,_Eevee!/Part_15",
+      "scope": "Route 22, Route 23 and Victory Road walkthrough"
+    },
+    {
+      "id": "bulbapedia-part18",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Appendix%3ALet%27s_Go,_Pikachu!_and_Let%27s_Go,_Eevee!/Part_18",
+      "scope": "Post-game events and rematches in Let's Go Pikachu/Eevee"
     }
   ],
   "locations": [
