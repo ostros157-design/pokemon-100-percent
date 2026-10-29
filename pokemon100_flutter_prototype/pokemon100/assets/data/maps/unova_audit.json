@@ -1,0 +1,798 @@
+{
+  "schemaVersion": 1,
+  "region": "Unova",
+  "games": [
+    "Pokémon Black",
+    "Pokémon White",
+    "Pokémon Black 2",
+    "Pokémon White 2"
+  ],
+  "purpose": "Offline location inventory for later verified schematic map work; not a scale-accurate map.",
+  "coordinatePolicy": "No exact coordinates or collectible pins until verified for the selected game.",
+  "sources": [
+    {
+      "id": "bulbapedia-unova",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Unova",
+      "scope": "Unova settlements, routes and landmarks"
+    },
+    {
+      "id": "bulbapedia-route-list",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/List_of_routes",
+      "scope": "Numbered route inventory and connections"
+    },
+    {
+      "id": "pokemony-unova",
+      "url": "https://www.pokemony.com/en/locations?region=unova",
+      "scope": "Unova location inventory and schematic-map conventions"
+    }
+  ],
+  "locations": [
+    {
+      "id": "nuvema_town",
+      "name": "Nuvema Town",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "pokemony-unova"
+      ]
+    },
+    {
+      "id": "accumula_town",
+      "name": "Accumula Town",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "pokemony-unova"
+      ]
+    },
+    {
+      "id": "striaton_city",
+      "name": "Striaton City",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "pokemony-unova"
+      ]
+    },
+    {
+      "id": "nacrene_city",
+      "name": "Nacrene City",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "pokemony-unova"
+      ]
+    },
+    {
+      "id": "castelia_city",
+      "name": "Castelia City",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "pokemony-unova"
+      ]
+    },
+    {
+      "id": "nimbasa_city",
+      "name": "Nimbasa City",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "pokemony-unova"
+      ]
+    },
+    {
+      "id": "driftveil_city",
+      "name": "Driftveil City",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "pokemony-unova"
+      ]
+    },
+    {
+      "id": "mistralton_city",
+      "name": "Mistralton City",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "pokemony-unova"
+      ]
+    },
+    {
+      "id": "icirrus_city",
+      "name": "Icirrus City",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "pokemony-unova"
+      ]
+    },
+    {
+      "id": "opelucid_city",
+      "name": "Opelucid City",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "pokemony-unova"
+      ]
+    },
+    {
+      "id": "lacunosa_town",
+      "name": "Lacunosa Town",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "pokemony-unova"
+      ]
+    },
+    {
+      "id": "undella_town",
+      "name": "Undella Town",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "pokemony-unova"
+      ]
+    },
+    {
+      "id": "black_city",
+      "name": "Black City",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "pokemony-unova"
+      ]
+    },
+    {
+      "id": "white_forest",
+      "name": "White Forest",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "pokemony-unova"
+      ]
+    },
+    {
+      "id": "anville_town",
+      "name": "Anville Town",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "pokemony-unova"
+      ]
+    },
+    {
+      "id": "pok_mon_league",
+      "name": "Pokémon League",
+      "kind": "league",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "pokemony-unova"
+      ]
+    },
+    {
+      "id": "route_1",
+      "name": "Route 1",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_2",
+      "name": "Route 2",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_3",
+      "name": "Route 3",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_4",
+      "name": "Route 4",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_5",
+      "name": "Route 5",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_6",
+      "name": "Route 6",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_7",
+      "name": "Route 7",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_8",
+      "name": "Route 8",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_9",
+      "name": "Route 9",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_10",
+      "name": "Route 10",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_11",
+      "name": "Route 11",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_12",
+      "name": "Route 12",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_13",
+      "name": "Route 13",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_14",
+      "name": "Route 14",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_15",
+      "name": "Route 15",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_16",
+      "name": "Route 16",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_17",
+      "name": "Route 17",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_18",
+      "name": "Route 18",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_19",
+      "name": "Route 19",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_20",
+      "name": "Route 20",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_21",
+      "name": "Route 21",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_22",
+      "name": "Route 22",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_23",
+      "name": "Route 23",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "dreamyard",
+      "name": "Dreamyard",
+      "kind": "landmark",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "pokemony-unova"
+      ]
+    },
+    {
+      "id": "wellspring_cave",
+      "name": "Wellspring Cave",
+      "kind": "dungeon",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "pokemony-unova"
+      ]
+    },
+    {
+      "id": "pinwheel_forest",
+      "name": "Pinwheel Forest",
+      "kind": "forest",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "pokemony-unova"
+      ]
+    },
+    {
+      "id": "relic_castle",
+      "name": "Relic Castle",
+      "kind": "dungeon",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "pokemony-unova"
+      ]
+    },
+    {
+      "id": "chargestone_cave",
+      "name": "Chargestone Cave",
+      "kind": "dungeon",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "pokemony-unova"
+      ]
+    },
+    {
+      "id": "mistralton_cave",
+      "name": "Mistralton Cave",
+      "kind": "dungeon",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "pokemony-unova"
+      ]
+    },
+    {
+      "id": "twist_mountain",
+      "name": "Twist Mountain",
+      "kind": "dungeon",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "pokemony-unova"
+      ]
+    },
+    {
+      "id": "dragonspiral_tower",
+      "name": "Dragonspiral Tower",
+      "kind": "dungeon",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "pokemony-unova"
+      ]
+    },
+    {
+      "id": "celestial_tower",
+      "name": "Celestial Tower",
+      "kind": "dungeon",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "pokemony-unova"
+      ]
+    },
+    {
+      "id": "giant_chasm",
+      "name": "Giant Chasm",
+      "kind": "landmark",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "pokemony-unova"
+      ]
+    },
+    {
+      "id": "victory_road",
+      "name": "Victory Road",
+      "kind": "dungeon",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "pokemony-unova"
+      ]
+    },
+    {
+      "id": "n_s_castle",
+      "name": "N's Castle",
+      "kind": "dungeon",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "pokemony-unova"
+      ]
+    },
+    {
+      "id": "plasma_frigate",
+      "name": "Plasma Frigate",
+      "kind": "dungeon",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "pokemony-unova"
+      ]
+    },
+    {
+      "id": "abyssal_ruins",
+      "name": "Abyssal Ruins",
+      "kind": "dungeon",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "pokemony-unova"
+      ]
+    },
+    {
+      "id": "p2_laboratory",
+      "name": "P2 Laboratory",
+      "kind": "dungeon",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "pokemony-unova"
+      ]
+    },
+    {
+      "id": "lostlorn_forest",
+      "name": "Lostlorn Forest",
+      "kind": "forest",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "pokemony-unova"
+      ]
+    },
+    {
+      "id": "reversal_mountain",
+      "name": "Reversal Mountain",
+      "kind": "dungeon",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "pokemony-unova"
+      ]
+    },
+    {
+      "id": "village_bridge",
+      "name": "Village Bridge",
+      "kind": "landmark",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "pokemony-unova"
+      ]
+    },
+    {
+      "id": "marvelous_bridge",
+      "name": "Marvelous Bridge",
+      "kind": "landmark",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "pokemony-unova"
+      ]
+    },
+    {
+      "id": "nature_preserve",
+      "name": "Nature Preserve",
+      "kind": "landmark",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-unova",
+        "pokemony-unova"
+      ]
+    }
+  ]
+}
