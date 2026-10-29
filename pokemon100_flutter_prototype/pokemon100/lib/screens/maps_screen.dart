@@ -3520,6 +3520,8 @@ class _KantoRegionMapState extends State<_KantoRegionMap> {
   Timer? _hideLocationTimer;
   String? _visibleLocation;
   bool _initialPositionSet = false;
+  Size? _lastViewportSize;
+  bool _hasUserInteracted = false;
 
   @override
   void dispose() {
@@ -3558,6 +3560,7 @@ class _KantoRegionMapState extends State<_KantoRegionMap> {
   }
 
   void _zoomBy(double factor, Size viewport) {
+    _hasUserInteracted = true;
     final current = _transformController.value;
     final currentScale = current.getMaxScaleOnAxis().clamp(0.35, 4.0).toDouble();
     final nextScale = (currentScale * factor).clamp(0.35, 4.0).toDouble();
@@ -3578,6 +3581,8 @@ class _KantoRegionMapState extends State<_KantoRegionMap> {
   }
 
   void _resetMap(Size viewport) {
+    _hasUserInteracted = false;
+    _lastViewportSize = viewport;
     final scale = _fitScale(viewport);
     _transformController.value = Matrix4.identity()
       ..translate(
@@ -3646,18 +3651,24 @@ class _KantoRegionMapState extends State<_KantoRegionMap> {
         aspectRatio: screenWidth < 500 ? 1.18 : 1.35,
         child: LayoutBuilder(
           builder: (context, constraints) {
-            if (!_initialPositionSet) {
+            final viewportSize = constraints.biggest;
+            final viewportChanged = _lastViewportSize != viewportSize;
+            if (!_initialPositionSet ||
+                (viewportChanged && !_hasUserInteracted)) {
               _initialPositionSet = true;
+              _lastViewportSize = viewportSize;
               WidgetsBinding.instance.addPostFrameCallback((_) {
                 if (!mounted) return;
-                final scale = _fitScale(constraints.biggest);
+                final scale = _fitScale(viewportSize);
                 _transformController.value = Matrix4.identity()
                   ..translate(
-                    (constraints.maxWidth - _mapWidth * scale) / 2,
-                    (constraints.maxHeight - _mapHeight * scale) / 2,
+                    (viewportSize.width - _mapWidth * scale) / 2,
+                    (viewportSize.height - _mapHeight * scale) / 2,
                   )
                   ..scale(scale);
               });
+            } else if (viewportChanged) {
+              _lastViewportSize = viewportSize;
             }
             return Stack(
               children: [
@@ -3668,8 +3679,10 @@ class _KantoRegionMapState extends State<_KantoRegionMap> {
                     minScale: 0.35,
                     maxScale: 4,
                     boundaryMargin: const EdgeInsets.all(160),
-                    onInteractionUpdate: (_) =>
-                        _centeredLocation(constraints.biggest),
+                    onInteractionUpdate: (_) {
+                      _hasUserInteracted = true;
+                      _centeredLocation(constraints.biggest);
+                    },
                     onInteractionEnd: (_) =>
                         _centeredLocation(constraints.biggest),
                     child: SizedBox(
