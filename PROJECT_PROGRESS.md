@@ -1247,3 +1247,9 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Przesunięto kompas do wolniejszego obszaru przy górnej krawędzi, aby nie nachodził na Route 25, Bill's House ani Sea Cottage.
 - Commit: `c1308b2`. Nie uruchamiano testów ani APK.
 
+### Mapy — Kanto: ręczne przyciski zoomu i centrowania (2026-10-29)
+
+- Dodano przyciski „+”, „−” i „Wyśrodkuj mapę” na samym widoku mapy. Powiększanie odbywa się względem środka widoku i respektuje zakres skali 0,55–4×.
+- Sterowanie przydaje się szczególnie na PC, gdzie gest szczypania nie zawsze jest dostępny; przesuwanie i gesty dotykowe pozostają bez zmian.
+- Commit: `e295080`. Nie uruchamiano Flutter analyzer, testów ani APK; działanie przycisków wymaga późniejszego testu na urządzeniu/PC.
+
