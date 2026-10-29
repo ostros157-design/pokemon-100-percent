@@ -4378,14 +4378,16 @@ class _KantoMapPainter extends CustomPainter {
     for (final place in places) {
       final point = p(place.x, place.y);
       final name = place.name;
-      final isTown = name.contains('City') ||
+      final isTown = (name.contains('City') ||
           name.contains('Town') ||
           name.contains('Island') ||
-          name == 'Indigo Plateau';
+          name == 'Indigo Plateau') &&
+          name != 'Seafoam Islands';
       final isCave = name.contains('Cave') ||
           name.contains('Tunnel') ||
           name == 'Mt. Moon' ||
           name == 'Victory Road' ||
+          name == 'Seafoam Islands' ||
           name == 'Pokémon Tower' ||
           name == 'Pokémon Mansion' ||
           name == 'Team Rocket Hideout';
