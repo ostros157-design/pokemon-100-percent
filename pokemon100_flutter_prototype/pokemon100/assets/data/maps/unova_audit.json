@@ -29,6 +29,16 @@
       "id": "bulbapedia-skyarrow-bridge",
       "url": "https://bulbapedia.bulbagarden.net/wiki/Skyarrow_Bridge",
       "scope": "Skyarrow Bridge connects Pinwheel Forest and Castelia City"
+    },
+    {
+      "id": "bulbapedia-twist-mountain",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Twist_Mountain",
+      "scope": "Twist Mountain connection to Route 7 and Icirrus City"
+    },
+    {
+      "id": "bulbapedia-virbank-city",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Virbank_City",
+      "scope": "Virbank City harbor and boat access to Castelia City in Black 2/White 2"
     }
   ],
   "locations": [
@@ -102,15 +112,17 @@
       "kind": "town",
       "connectsTo": [
         "route_4",
-        "skyarrow_bridge"
+        "skyarrow_bridge",
+        "virbank_city"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "connection_source_verified_exact_pin_pending",
+      "dataStatus": "connection_source_verified_variant_access_not_exact_pin",
       "sourceIds": [
         "bulbapedia-unova",
         "pokemony-unova",
-        "bulbapedia-skyarrow-bridge"
+        "bulbapedia-skyarrow-bridge",
+        "bulbapedia-virbank-city"
       ]
     },
     {
@@ -168,14 +180,16 @@
       "kind": "town",
       "connectsTo": [
         "route_8",
-        "dragonspiral_tower"
+        "dragonspiral_tower",
+        "twist_mountain"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "settlement_known_connections_pending_verification",
+      "dataStatus": "connection_source_verified_variant_access_not_exact_pin",
       "sourceIds": [
         "bulbapedia-unova",
-        "pokemony-unova"
+        "pokemony-unova",
+        "bulbapedia-twist-mountain"
       ]
     },
     {
@@ -776,14 +790,16 @@
       "name": "Twist Mountain",
       "kind": "dungeon",
       "connectsTo": [
-        "route_7"
+        "route_7",
+        "icirrus_city"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "connection_source_verified_variant_access_not_exact_pin",
       "sourceIds": [
         "bulbapedia-unova",
-        "pokemony-unova"
+        "pokemony-unova",
+        "bulbapedia-twist-mountain"
       ]
     },
     {
@@ -1152,15 +1168,18 @@
       "name": "Virbank City",
       "kind": "town",
       "connectsTo": [
-        "route_20"
+        "route_20",
+        "castelia_city"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-unova",
-        "bulbapedia-route-list"
+        "bulbapedia-route-list",
+        "bulbapedia-virbank-city"
       ],
-      "dataStatus": "connection_indexed_variant_audit_pending"
+      "dataStatus": "connection_source_verified_variant_access_not_exact_pin",
+      "notes": "W Black 2/White 2 dostęp do Castelia City obejmuje transport statkiem z portu; to połączenie transportowe, nie sąsiedztwo lądowe."
     },
     {
       "id": "humilau_city",
