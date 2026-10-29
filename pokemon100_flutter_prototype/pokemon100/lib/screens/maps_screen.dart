@@ -1547,6 +1547,80 @@ class _KantoMapPainter extends CustomPainter {
       );
     }
 
+    // Decorative illustrated details only. These tree and hill motifs are
+    // intentionally not data markers and do not identify real in-game biomes.
+    final treeGroups = <(double, double, double)>[
+      (.17, .36, 1.0),
+      (.36, .22, .8),
+      (.73, .34, .9),
+      (.73, .70, 1.0),
+      (.49, .83, .75),
+    ];
+    for (final group in treeGroups) {
+      final center = p(group.$1, group.$2);
+      final scale = group.$3 * size.width / 900;
+      final trunkPaint = Paint()..color = const Color(0xFF987C55).withValues(alpha: .65);
+      final leafPaint = Paint()..color = const Color(0xFF6FA879).withValues(alpha: .48);
+      final leafLight = Paint()..color = const Color(0xFFB5D99B).withValues(alpha: .62);
+      for (var tree = 0; tree < 3; tree++) {
+        final offset = Offset((tree - 1) * 10 * scale, (tree.isOdd ? 4 : -2) * scale);
+        final base = center + offset;
+        canvas.drawRRect(
+          RRect.fromRectAndRadius(
+            Rect.fromCenter(
+              center: base + Offset(0, 5 * scale),
+              width: 3.5 * scale,
+              height: 10 * scale,
+            ),
+            Radius.circular(2 * scale),
+          ),
+          trunkPaint,
+        );
+        canvas.drawCircle(base, 7 * scale, leafPaint);
+        canvas.drawCircle(
+          base + Offset(-2 * scale, -2 * scale),
+          4 * scale,
+          leafLight,
+        );
+      }
+    }
+
+    final hillPaint = Paint()
+      ..color = const Color(0xFF8AAE78).withValues(alpha: .36)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 2
+      ..strokeCap = StrokeCap.round;
+    for (final hill in <(double, double, double)>[
+      (.44, .26, .055),
+      (.64, .70, .065),
+      (.30, .78, .045),
+    ]) {
+      final center = p(hill.$1, hill.$2);
+      final width = size.width * hill.$3;
+      final ridge = Path()
+        ..moveTo(center.dx - width, center.dy + width * .24)
+        ..quadraticBezierTo(
+          center.dx - width * .25,
+          center.dy - width * .65,
+          center.dx + width * .18,
+          center.dy - width * .08,
+        )
+        ..quadraticBezierTo(
+          center.dx + width * .62,
+          center.dy - width * .34,
+          center.dx + width,
+          center.dy + width * .22,
+        );
+      canvas.drawPath(ridge, hillPaint);
+      canvas.drawPath(
+        ridge.shift(Offset(0, 4 * size.width / 900)),
+        Paint()
+          ..color = Colors.white.withValues(alpha: .28)
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = 1.2,
+      );
+    }
+
     // Approximate route network for orientation, not a scale-accurate game map.
     const links = <(int, int)>[
       (0, 1), (1, 2), (2, 12), (12, 13), (13, 3), (3, 14),
