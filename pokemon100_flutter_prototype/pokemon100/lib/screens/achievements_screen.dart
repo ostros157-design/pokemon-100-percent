@@ -35,6 +35,7 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
   bool _hiddenTeamRocketDefeated = false;
   bool _hiddenCompletionReached = false;
   bool _anyGuideOpened = false;
+  Map<String, bool> _hiddenAchievementUnlocks = <String, bool>{};
 
   @override
   void initState() {
@@ -82,6 +83,11 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
     final validPokemonIds = pokemonList.map((pokemon) => pokemon.id).toSet();
     allCaughtIds.retainAll(validPokemonIds);
     selectedGameIds.retainAll(validPokemonIds);
+    final caughtPokemon = pokemonList.where((pokemon) => allCaughtIds.contains(pokemon.id)).toList();
+    final caughtTypes = caughtPokemon.expand((pokemon) => pokemon.types).toSet();
+    final caughtBabies = caughtPokemon.where((pokemon) => pokemon.isBaby).length;
+    final caughtHighStats = caughtPokemon.where((pokemon) => (pokemon.baseStatTotal ?? 0) >= 600).length;
+    final caughtCompleteStats = caughtPokemon.where((pokemon) => pokemon.hasCompleteBaseStats).length;
     final legendaryCaught = pokemonList.any((pokemon) =>
         allCaughtIds.contains(pokemon.id) &&
         (pokemon.isLegendary || pokemon.isMythical));
@@ -122,6 +128,7 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
     var guideComplete = false;
     var firstBadgeStepComplete = false;
     var hiddenTeamRocketDefeated = false;
+    final completedGuideText = <String>[];
     for (final guide in gameGuides) {
       totalGuideSteps += guide.steps.length;
       final completed = (preferences.getStringList(
@@ -140,6 +147,7 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
       for (final index in completed) {
         final step = guide.steps[index];
         final searchableStep = '${step.title} ${step.description}'.toLowerCase();
+        completedGuideText.add(searchableStep);
         if (searchableStep.contains('pokonaj brocka')) {
           firstBadgeStepComplete = true;
         }
@@ -156,6 +164,55 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
     final gameProgressPercent = totalObjectives == 0
         ? 0
         : (completedObjectives * 100 / totalObjectives).round();
+    final hiddenAchievementUnlocks = <String, bool>{
+      'hidden_extra_01': allCaughtIds.length >= 5,
+      'hidden_extra_02': allCaughtIds.length >= 10,
+      'hidden_extra_03': allCaughtIds.length >= 20,
+      'hidden_extra_04': allCaughtIds.length >= 30,
+      'hidden_extra_05': allCaughtIds.length >= 40,
+      'hidden_extra_06': allCaughtIds.length >= 75,
+      'hidden_extra_07': allCaughtIds.length >= 150,
+      'hidden_extra_08': caughtTypes.length >= 3,
+      'hidden_extra_09': caughtTypes.length >= 6,
+      'hidden_extra_10': caughtTypes.length >= 10,
+      'hidden_extra_11': caughtTypes.length >= 15,
+      'hidden_extra_12': caughtPokemon.any((pokemon) => pokemon.types.contains('Fire')),
+      'hidden_extra_13': caughtPokemon.any((pokemon) => pokemon.types.contains('Water')),
+      'hidden_extra_14': caughtPokemon.any((pokemon) => pokemon.types.contains('Grass')),
+      'hidden_extra_15': caughtPokemon.any((pokemon) => pokemon.types.contains('Electric')),
+      'hidden_extra_16': caughtPokemon.any((pokemon) => pokemon.types.contains('Psychic')),
+      'hidden_extra_17': caughtPokemon.any((pokemon) => pokemon.types.contains('Dragon')),
+      'hidden_extra_18': caughtPokemon.any((pokemon) => pokemon.types.contains('Ghost')),
+      'hidden_extra_19': caughtPokemon.any((pokemon) => pokemon.types.contains('Steel')),
+      'hidden_extra_20': caughtPokemon.any((pokemon) => pokemon.types.contains('Fairy')),
+      'hidden_extra_21': caughtBabies >= 1,
+      'hidden_extra_22': caughtBabies >= 3,
+      'hidden_extra_23': caughtPokemon.any((pokemon) => pokemon.generation == 1),
+      'hidden_extra_24': caughtPokemon.any((pokemon) => pokemon.generation == 2),
+      'hidden_extra_25': caughtPokemon.any((pokemon) => pokemon.generation == 3),
+      'hidden_extra_26': caughtPokemon.any((pokemon) => pokemon.generation == 4),
+      'hidden_extra_27': caughtPokemon.any((pokemon) => pokemon.generation == 5),
+      'hidden_extra_28': caughtPokemon.any((pokemon) => pokemon.generation == 6),
+      'hidden_extra_29': caughtPokemon.any((pokemon) => pokemon.generation == 7),
+      'hidden_extra_30': caughtPokemon.any((pokemon) => pokemon.generation == 8),
+      'hidden_extra_31': caughtPokemon.any((pokemon) => pokemon.generation == 9),
+      'hidden_extra_32': caughtHighStats >= 1,
+      'hidden_extra_33': caughtHighStats >= 3,
+      'hidden_extra_34': caughtCompleteStats >= 10,
+      'hidden_extra_35': teamTypes.length >= 3,
+      'hidden_extra_36': teamTypes.length >= 6,
+      'hidden_extra_37': completedGuideSteps >= 3,
+      'hidden_extra_38': completedGuideSteps >= 6,
+      'hidden_extra_39': completedGuideText.any((step) => step.contains('forest') || step.contains('las')),
+      'hidden_extra_40': completedGuideText.any((step) => step.contains('gym')),
+      'hidden_extra_41': completedGuideText.any((step) => step.contains('route')),
+      'hidden_extra_42': completedGuideText.any((step) => step.contains('profesor') || step.contains('professor')),
+      'hidden_extra_43': gameProgressPercent >= 10,
+      'hidden_extra_44': gameProgressPercent >= 90,
+      'hidden_extra_45': caughtPokemon.any((pokemon) => pokemon.isLegendary) && caughtPokemon.any((pokemon) => pokemon.isMythical),
+      'hidden_extra_46': caughtPokemon.any((pokemon) => pokemon.hiddenAbilities.isNotEmpty),
+      'hidden_extra_47': caughtPokemon.any((pokemon) => pokemon.captureRate != null && pokemon.captureRate! <= 45),
+    };
 
     if (!mounted) return;
     setState(() {
@@ -174,6 +231,7 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
       _hiddenTeamRocketDefeated = hiddenTeamRocketDefeated;
       _hiddenCompletionReached = gameProgressPercent >= 100 && guideComplete;
       _anyGuideOpened = anyGuideOpened;
+      _hiddenAchievementUnlocks = hiddenAchievementUnlocks;
       _loading = false;
     });
   }
@@ -206,6 +264,54 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
         return _hiddenTeamRocketDefeated;
       case 'hidden_complete':
         return _hiddenCompletionReached;
+      case 'hidden_extra_01':
+      case 'hidden_extra_02':
+      case 'hidden_extra_03':
+      case 'hidden_extra_04':
+      case 'hidden_extra_05':
+      case 'hidden_extra_06':
+      case 'hidden_extra_07':
+      case 'hidden_extra_08':
+      case 'hidden_extra_09':
+      case 'hidden_extra_10':
+      case 'hidden_extra_11':
+      case 'hidden_extra_12':
+      case 'hidden_extra_13':
+      case 'hidden_extra_14':
+      case 'hidden_extra_15':
+      case 'hidden_extra_16':
+      case 'hidden_extra_17':
+      case 'hidden_extra_18':
+      case 'hidden_extra_19':
+      case 'hidden_extra_20':
+      case 'hidden_extra_21':
+      case 'hidden_extra_22':
+      case 'hidden_extra_23':
+      case 'hidden_extra_24':
+      case 'hidden_extra_25':
+      case 'hidden_extra_26':
+      case 'hidden_extra_27':
+      case 'hidden_extra_28':
+      case 'hidden_extra_29':
+      case 'hidden_extra_30':
+      case 'hidden_extra_31':
+      case 'hidden_extra_32':
+      case 'hidden_extra_33':
+      case 'hidden_extra_34':
+      case 'hidden_extra_35':
+      case 'hidden_extra_36':
+      case 'hidden_extra_37':
+      case 'hidden_extra_38':
+      case 'hidden_extra_39':
+      case 'hidden_extra_40':
+      case 'hidden_extra_41':
+      case 'hidden_extra_42':
+      case 'hidden_extra_43':
+      case 'hidden_extra_44':
+      case 'hidden_extra_45':
+      case 'hidden_extra_46':
+      case 'hidden_extra_47':
+        return _hiddenAchievementUnlocks[achievement.id] ?? false;
       case 'guide_start':
         return _anyGuideOpened;
       case 'full_team':
