@@ -127,6 +127,41 @@
       "id": "routepedia-mt-moon-eevee",
       "url": "https://theroutepedia.com/pokemon-lets-go-eevee/mt-moon",
       "scope": "Mt. Moon Let's Go Eevee floors, encounter rates and hidden items"
+    },
+    {
+      "id": "routepedia-route4-pikachu",
+      "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/route-4",
+      "scope": "Route 4 sections, encounters, items, trainers and links"
+    },
+    {
+      "id": "routepedia-route4-eevee",
+      "url": "https://theroutepedia.com/pokemon-lets-go-eevee/route-4",
+      "scope": "Let's Go Eevee Route 4 version-specific encounters and items"
+    },
+    {
+      "id": "routepedia-cerulean-pikachu",
+      "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/cerulean-city",
+      "scope": "Cerulean City facilities, gifts, items and connections"
+    },
+    {
+      "id": "routepedia-cerulean-eevee",
+      "url": "https://theroutepedia.com/pokemon-lets-go-eevee/cerulean-city",
+      "scope": "Cerulean City version differences"
+    },
+    {
+      "id": "routepedia-route24-pikachu",
+      "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/route-24",
+      "scope": "Route 24 encounters, items, trainers and connections"
+    },
+    {
+      "id": "routepedia-route24-eevee",
+      "url": "https://theroutepedia.com/pokemon-lets-go-eevee/route-24",
+      "scope": "Route 24 Let's Go Eevee version-specific encounters"
+    },
+    {
+      "id": "routepedia-route25-pikachu",
+      "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/route-25",
+      "scope": "Route 25 encounters, items, trainers and Bill's House"
     }
   ],
   "locations": [
@@ -977,15 +1012,294 @@
       "name": "Route 4",
       "kind": "route",
       "connectsTo": [
-        "mt_moon"
+        "mt_moon",
+        "cerulean_city"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "notes": "Zachodnia i wschodnia część Route 4 są rozdzielone przejściem przez Mt. Moon; szczegółowe dane tej trasy pozostają do opracowania.",
+      "notes": "Dwie części trasy po przeciwnych stronach Mt. Moon; zachodnia część zawiera Pokémon Center i wejście do jaskini.",
+      "wildPokemonDetails": {
+        "levels": [
+          7,
+          12
+        ],
+        "lets_go_pikachu": [
+          [
+            "Rattata",
+            25
+          ],
+          [
+            "Spearow",
+            30
+          ],
+          [
+            "Ekans",
+            20
+          ],
+          [
+            "Sandshrew",
+            20
+          ],
+          [
+            "Psyduck",
+            5
+          ]
+        ],
+        "lets_go_eevee": [
+          [
+            "Rattata",
+            35
+          ],
+          [
+            "Spearow",
+            40
+          ],
+          [
+            "Ekans",
+            20
+          ],
+          [
+            "Sandshrew",
+            20
+          ],
+          [
+            "Psyduck",
+            5
+          ]
+        ]
+      },
+      "items": [
+        "Escape Rope",
+        "5 Poké Balls",
+        "Paralyze Heal",
+        "PP Max",
+        "3 Great Balls",
+        "Repel",
+        "PP Up (ukryty)"
+      ],
+      "notablePokemon": [
+        "Magikarp Lv. 5 — kupowany w Pokémon Center za 500"
+      ],
       "sourceIds": [
+        "routepedia-route4-pikachu",
+        "routepedia-route4-eevee",
         "bulbapedia-part4"
       ],
-      "dataStatus": "connection_verified_details_pending"
+      "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "cerulean_city",
+      "name": "Cerulean City",
+      "kind": "town",
+      "connectsTo": [
+        "route_4",
+        "route_5",
+        "route_9",
+        "route_24"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "features": [
+        "Pokémon Center",
+        "Poké Mart",
+        "Cerulean Gym",
+        "Bicycle Shop",
+        "Herb Shop",
+        "dom z północnym wyjściem",
+        "dom złodzieja"
+      ],
+      "wildPokemonDetails": {
+        "sky": [
+          [
+            "Pidgey",
+            60
+          ],
+          [
+            "Pidgeotto",
+            35
+          ],
+          [
+            "Pidgeot",
+            5
+          ]
+        ]
+      },
+      "items": [
+        "Rare Candy",
+        "Burn Heal"
+      ],
+      "notablePokemon": [
+        "Bulbasaur Lv. 12 — gift",
+        "wymiana Rattata na Alolan Rattata"
+      ],
+      "sourceIds": [
+        "routepedia-cerulean-pikachu",
+        "routepedia-cerulean-eevee"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "route_24",
+      "name": "Route 24",
+      "kind": "route",
+      "connectsTo": [
+        "cerulean_city",
+        "route_25"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "notes": "Północna trasa z Nugget Bridge; prowadzi do Route 25.",
+      "wildPokemonDetails": {
+        "levels": [
+          7,
+          12
+        ],
+        "lets_go_pikachu": [
+          [
+            "Pidgey",
+            30
+          ],
+          [
+            "Venonat",
+            30
+          ],
+          [
+            "Oddish",
+            20
+          ],
+          [
+            "Psyduck",
+            20
+          ]
+        ],
+        "lets_go_eevee": [
+          [
+            "Pidgey",
+            20
+          ],
+          [
+            "Venonat",
+            20
+          ],
+          [
+            "Bellsprout",
+            20
+          ],
+          [
+            "Meowth",
+            20
+          ],
+          [
+            "Psyduck",
+            20
+          ]
+        ]
+      },
+      "trainers": [
+        "Bug Catcher Cale — Venonat Lv. 9",
+        "Lass Ali — Psyduck Lv. 10",
+        "Youngster Timmy — Sandshrew Lv. 10",
+        "Lass Reli — Meowth Lv. 10",
+        "Camper Kevin — Growlithe Lv. 11",
+        "Team Rocket Grunt — Zubat Lv. 11 i Koffing Lv. 11",
+        "Camper Shane — Spearow Lv. 11"
+      ],
+      "items": [
+        "X Sp. Def",
+        "3 Razz Berries",
+        "3 Pinap Berries (ukryte)"
+      ],
+      "notablePokemon": [
+        "Charmander Lv. 14 — gift"
+      ],
+      "sourceIds": [
+        "routepedia-route24-pikachu",
+        "routepedia-route24-eevee"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "route_25",
+      "name": "Route 25",
+      "kind": "route",
+      "connectsTo": [
+        "route_24"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "notes": "Trasa na wschód od Nugget Bridge prowadząca do Bill's House.",
+      "wildPokemonDetails": {
+        "levels": [
+          9,
+          14
+        ],
+        "lets_go_pikachu": [
+          [
+            "Pidgey",
+            30
+          ],
+          [
+            "Venonat",
+            30
+          ],
+          [
+            "Oddish",
+            20
+          ],
+          [
+            "Psyduck",
+            20
+          ]
+        ],
+        "lets_go_eevee": [
+          [
+            "Pidgey",
+            20
+          ],
+          [
+            "Venonat",
+            20
+          ],
+          [
+            "Bellsprout",
+            20
+          ],
+          [
+            "Meowth",
+            20
+          ],
+          [
+            "Psyduck",
+            20
+          ]
+        ]
+      },
+      "trainers": [
+        "Hiker Franklin — Onix Lv. 14",
+        "Fisherman Wayne — Magikarp Lv. 14 i Krabby Lv. 14",
+        "Bird Keeper Joey — Pidgeotto Lv. 15",
+        "Youngster Dan — Ekans Lv. 12 i Rattata Lv. 12",
+        "Picnicker Kelsey — Goldeen Lv. 13",
+        "Camper Dustin — Squirtle Lv. 13",
+        "Hiker Nob — Geodude Lv. 14 i Machop Lv. 14",
+        "Youngster Chad — Diglett Lv. 12",
+        "Lass Haley — Oddish Lv. 12 i Pidgey Lv. 12",
+        "Coach Trainer Amala — Machop Lv. 16"
+      ],
+      "items": [
+        "TM16",
+        "Lure",
+        "Super Potion",
+        "Ether",
+        "Nanab Berry (ukryta)"
+      ],
+      "features": [
+        "Bill's House"
+      ],
+      "sourceIds": [
+        "routepedia-route25-pikachu"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
     }
   ]
 }
