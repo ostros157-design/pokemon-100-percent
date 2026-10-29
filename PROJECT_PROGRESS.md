@@ -1,3 +1,12 @@
+### Mapy — pełna interaktywność 65 lokacji Kanto i panel spotkań (2026-10-29)
+
+- Umożliwiono wybieranie wszystkich 65 węzłów widocznych na schematycznej mapie Kanto; wcześniej panel szczegółów był powiązany tylko z pierwszymi lokacjami tutorialowymi.
+- Panel Pokémonów obsługuje dane tras obu wersji Let’s Go, spotkania pogrupowane według pięter jaskiń, prezenty/specjalne spotkania oraz zweryfikowane ważne Pokémony. Nazwy rozpoznane w Pokédexie są klikalne i prowadzą do szczegółów Pokémona.
+- Dane wariantów nie są zastępowane listą z drugiej gry, gdy brakuje wpisów dla wybranej wersji. Notatki opisowe nie są błędnie prezentowane jako Pokémony do kliknięcia.
+- Statyczny audyt: 65 lokacji w indeksie i 65 węzłów mapy; brak brakujących/dodatkowych nazw; wszystkie trasy 1–25 (w tym wodne 20–21) mają wpisy spotkań dla Let’s Go Pikachu i Let’s Go Eevee; połączenia w indeksie nie odwołują się do brakujących lokacji.
+- Zmiany kodu zapisane w commitach: `29de3f8c`, `895f9701`, `03fe3949`, `9251263d`.
+- Ograniczenia: układ graficzny pozostaje mapą poglądową, a nie odwzorowaniem piksel po pikselu map z gry. Nie dodano niezweryfikowanych współrzędnych przedmiotów, trenerów ani dzikich Pokémonów. Nie uruchomiono `flutter analyze`, testów ani kompilacji APK — potrzebny jest test po stronie użytkownika.
+
 ### Mapy — rozszerzenie schematu Kanto do pełnego indeksu lokacji (2026-10-29)
 
 - Rozszerzono rysowaną offline mapę regionu Kanto z 15 punktów do wszystkich 65 lokacji znajdujących się w istniejącym indeksie `kanto_audit.json`, w tym tras, miast, jaskiń, Gymów, budynków i obiektów pobocznych.
