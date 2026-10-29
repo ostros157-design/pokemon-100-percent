@@ -2525,7 +2525,7 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
     'Route 11': {
       'Vermilion City': 'Zachodni koniec trasy.',
       "Diglett's Cave": 'Wejście do Diglett’s Cave znajduje się przy trasie.',
-      "Diglett's Cave": 'Wejście do tunelu znajduje się przy tej trasie.',
+      "Diglett's Cave (Route 11 entrance)": 'Wejście do tunelu znajduje się przy tej trasie.',
     },
     'Route 12': {
       'Lavender Town': 'Północny koniec trasy.',
