@@ -822,3 +822,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Ponowny audyt: 0 zduplikowanych ID, 0 zduplikowanych nazw, 0 brakujących `sourceIds`, 0 niedziałających `connectsTo`, 0 lokacji bez `dataStatus`.
 - Commity napraw: `9ee9216`, `2670d41`, `6c67404`, `afb57f5`, `70d4eaa`.
 - To jest kontrola struktury i odwołań plików, nie test uruchomienia Flutter. Nie uruchamiano analyzer, testów ani APK. Mapa jako całość nie jest ukończona: nadal potrzebuje dokładnych ilustracji map, zweryfikowanych pinezek 100% i kontroli wariantów gry.
+
+
+### Mapy — wygodniejsze przechodzenie między lokacjami (2026-10-29)
+
+- Połączenia w szczegółach lokacji są teraz klikalnymi chipami: wybranie połączonego miejsca ustawia je w wyszukiwarce i pokazuje jego kartę.
+- Wyszukiwanie indeksu offline obejmuje teraz nazwę, ID, typ, notatki, status, obszar nadrzędny, prowincję i identyfikatory połączeń, a nie tylko nazwę lokacji.
+- Commity: `6a9c61e`, `5862715`, `f91bbab`.
+- Po audycie danych i naprawach: 11 indeksów, 816 rekordów; brak duplikatów ID/nazw, brak brakujących źródeł, brak niedziałających połączeń i brak brakujących statusów. Nie uruchamiano Flutter analyzer/testów/APK.
