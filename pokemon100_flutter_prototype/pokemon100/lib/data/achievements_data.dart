@@ -155,19 +155,19 @@ hidden: false,
 
 // Dodatkowe osiągnięcia jawne — bez znaków zapytania i ukrytych warunków.
 Achievement(
-id: 'hidden_team_rocket',
-title: 'Zespół R rozbity',
-description: 'Ukończ krok poradnika opisujący pokonanie Zespołu R lub Giovanniego.',
+id: 'guide_first_step',
+title: 'Pierwszy krok naprzód',
+description: 'Ukończ co najmniej jeden krok poradnika wybranej gry.',
 hidden: false,
 ),
 Achievement(
-id: 'hidden_legend',
+id: 'mythical_explorer',
 title: 'Mityczny odkrywca',
 description: 'Zarejestruj Pokémona oznaczonego jako mityczny.',
 hidden: false,
 ),
 Achievement(
-id: 'hidden_complete',
+id: 'guide_master',
 title: 'Mistrz poradnika',
 description: 'Ukończ cały poradnik i zarejestruj przynajmniej jednego Pokémona.',
 hidden: false,
