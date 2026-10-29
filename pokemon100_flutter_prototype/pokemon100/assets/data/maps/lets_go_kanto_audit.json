@@ -422,6 +422,16 @@
       "id": "serebii-route13",
       "url": "https://www.serebii.net/pokearth/kanto/route13.shtml",
       "scope": "Route 13 Let’s Go encounter tables including land, water and special encounters"
+    },
+    {
+      "id": "serebii-route14",
+      "url": "https://www.serebii.net/pokearth/kanto/route14.shtml",
+      "scope": "Route 14 Let’s Go ground, sky and special encounter tables"
+    },
+    {
+      "id": "serebii-route15",
+      "url": "https://www.serebii.net/pokearth/kanto/route15.shtml",
+      "scope": "Route 15 Let’s Go ground, sky and special encounter tables"
     }
   ],
   "locations": [
@@ -4572,9 +4582,351 @@
       "coordinateStatus": "unverified",
       "notes": "Trasa łącząca labirynt Route 13 z Route 15.",
       "sourceIds": [
-        "bulbapedia-part12"
+        "bulbapedia-part12",
+        "serebii-route14"
       ],
-      "dataStatus": "connection_verified_details_pending"
+      "dataStatus": "text_verified_positions_not_mapped",
+      "wildPokemonDetails": {
+        "lets_go_pikachu": [
+          {
+            "name": "Pidgey",
+            "method": "grass",
+            "levelRange": [
+              33,
+              38
+            ],
+            "ratePercent": 20
+          },
+          {
+            "name": "Pidgeotto",
+            "method": "grass",
+            "levelRange": [
+              33,
+              38
+            ],
+            "ratePercent": 20
+          },
+          {
+            "name": "Oddish",
+            "method": "grass",
+            "levelRange": [
+              33,
+              38
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Gloom",
+            "method": "grass",
+            "levelRange": [
+              33,
+              38
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Venonat",
+            "method": "grass",
+            "levelRange": [
+              33,
+              38
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Venomoth",
+            "method": "grass",
+            "levelRange": [
+              33,
+              38
+            ],
+            "ratePercent": 9
+          },
+          {
+            "name": "Tauros",
+            "method": "grass",
+            "levelRange": [
+              33,
+              38
+            ],
+            "ratePercent": 5
+          },
+          {
+            "name": "Scyther",
+            "method": "grass",
+            "levelRange": [
+              33,
+              38
+            ],
+            "ratePercent": 1
+          },
+          {
+            "name": "Pidgey",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 60
+          },
+          {
+            "name": "Pidgeotto",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 35
+          },
+          {
+            "name": "Pidgeot",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 5
+          },
+          {
+            "name": "Chansey",
+            "method": "special spawn",
+            "levelRange": [
+              33,
+              38
+            ]
+          },
+          {
+            "name": "Dragonite",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Charizard",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Articuno",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Zapdos",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Moltres",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          }
+        ],
+        "lets_go_eevee": [
+          {
+            "name": "Pidgey",
+            "method": "grass",
+            "levelRange": [
+              33,
+              38
+            ],
+            "ratePercent": 20
+          },
+          {
+            "name": "Pidgeotto",
+            "method": "grass",
+            "levelRange": [
+              33,
+              38
+            ],
+            "ratePercent": 20
+          },
+          {
+            "name": "Venonat",
+            "method": "grass",
+            "levelRange": [
+              33,
+              38
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Bellsprout",
+            "method": "grass",
+            "levelRange": [
+              33,
+              38
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Weepinbell",
+            "method": "grass",
+            "levelRange": [
+              33,
+              38
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Venomoth",
+            "method": "grass",
+            "levelRange": [
+              33,
+              38
+            ],
+            "ratePercent": 9
+          },
+          {
+            "name": "Tauros",
+            "method": "grass",
+            "levelRange": [
+              33,
+              38
+            ],
+            "ratePercent": 5
+          },
+          {
+            "name": "Pinsir",
+            "method": "grass",
+            "levelRange": [
+              33,
+              38
+            ],
+            "ratePercent": 1
+          },
+          {
+            "name": "Pidgey",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 60
+          },
+          {
+            "name": "Pidgeotto",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 35
+          },
+          {
+            "name": "Pidgeot",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 5
+          },
+          {
+            "name": "Chansey",
+            "method": "special spawn",
+            "levelRange": [
+              33,
+              38
+            ]
+          },
+          {
+            "name": "Dragonite",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Charizard",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Articuno",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Zapdos",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Moltres",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          }
+        ],
+        "status": "text_verified",
+        "sourceIds": [
+          "serebii-route14"
+        ]
+      },
+      "wildPokemon": {
+        "lets_go_pikachu": [
+          "Pidgey",
+          "Pidgeotto",
+          "Oddish",
+          "Gloom",
+          "Venonat",
+          "Venomoth",
+          "Tauros",
+          "Scyther",
+          "Pidgeot",
+          "Chansey",
+          "Dragonite",
+          "Charizard",
+          "Articuno",
+          "Zapdos",
+          "Moltres"
+        ],
+        "lets_go_eevee": [
+          "Pidgey",
+          "Pidgeotto",
+          "Venonat",
+          "Bellsprout",
+          "Weepinbell",
+          "Venomoth",
+          "Tauros",
+          "Pinsir",
+          "Pidgeot",
+          "Chansey",
+          "Dragonite",
+          "Charizard",
+          "Articuno",
+          "Zapdos",
+          "Moltres"
+        ]
+      },
+      "encounterStatus": "text_verified"
     },
     {
       "id": "route_15",
@@ -4594,9 +4946,351 @@
         "5 Razz Berries (ukryte)"
       ],
       "sourceIds": [
-        "bulbapedia-part12"
+        "bulbapedia-part12",
+        "serebii-route15"
       ],
-      "dataStatus": "text_verified_positions_not_mapped"
+      "dataStatus": "text_verified_positions_not_mapped",
+      "wildPokemonDetails": {
+        "lets_go_pikachu": [
+          {
+            "name": "Pidgey",
+            "method": "grass",
+            "levelRange": [
+              33,
+              38
+            ],
+            "ratePercent": 20
+          },
+          {
+            "name": "Pidgeotto",
+            "method": "grass",
+            "levelRange": [
+              33,
+              38
+            ],
+            "ratePercent": 20
+          },
+          {
+            "name": "Oddish",
+            "method": "grass",
+            "levelRange": [
+              33,
+              38
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Gloom",
+            "method": "grass",
+            "levelRange": [
+              33,
+              38
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Venonat",
+            "method": "grass",
+            "levelRange": [
+              33,
+              38
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Venomoth",
+            "method": "grass",
+            "levelRange": [
+              33,
+              38
+            ],
+            "ratePercent": 9
+          },
+          {
+            "name": "Tauros",
+            "method": "grass",
+            "levelRange": [
+              33,
+              38
+            ],
+            "ratePercent": 5
+          },
+          {
+            "name": "Scyther",
+            "method": "grass",
+            "levelRange": [
+              33,
+              38
+            ],
+            "ratePercent": 1
+          },
+          {
+            "name": "Pidgey",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 60
+          },
+          {
+            "name": "Pidgeotto",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 35
+          },
+          {
+            "name": "Pidgeot",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 5
+          },
+          {
+            "name": "Chansey",
+            "method": "special spawn",
+            "levelRange": [
+              33,
+              38
+            ]
+          },
+          {
+            "name": "Dragonite",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Charizard",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Articuno",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Zapdos",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Moltres",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          }
+        ],
+        "lets_go_eevee": [
+          {
+            "name": "Pidgey",
+            "method": "grass",
+            "levelRange": [
+              33,
+              38
+            ],
+            "ratePercent": 20
+          },
+          {
+            "name": "Pidgeotto",
+            "method": "grass",
+            "levelRange": [
+              33,
+              38
+            ],
+            "ratePercent": 20
+          },
+          {
+            "name": "Venonat",
+            "method": "grass",
+            "levelRange": [
+              33,
+              38
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Bellsprout",
+            "method": "grass",
+            "levelRange": [
+              33,
+              38
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Weepinbell",
+            "method": "grass",
+            "levelRange": [
+              33,
+              38
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Venomoth",
+            "method": "grass",
+            "levelRange": [
+              33,
+              38
+            ],
+            "ratePercent": 9
+          },
+          {
+            "name": "Tauros",
+            "method": "grass",
+            "levelRange": [
+              33,
+              38
+            ],
+            "ratePercent": 5
+          },
+          {
+            "name": "Pinsir",
+            "method": "grass",
+            "levelRange": [
+              33,
+              38
+            ],
+            "ratePercent": 1
+          },
+          {
+            "name": "Pidgey",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 60
+          },
+          {
+            "name": "Pidgeotto",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 35
+          },
+          {
+            "name": "Pidgeot",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 5
+          },
+          {
+            "name": "Chansey",
+            "method": "special spawn",
+            "levelRange": [
+              33,
+              38
+            ]
+          },
+          {
+            "name": "Dragonite",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Charizard",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Articuno",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Zapdos",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Moltres",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          }
+        ],
+        "status": "text_verified",
+        "sourceIds": [
+          "serebii-route15"
+        ]
+      },
+      "wildPokemon": {
+        "lets_go_pikachu": [
+          "Pidgey",
+          "Pidgeotto",
+          "Oddish",
+          "Gloom",
+          "Venonat",
+          "Venomoth",
+          "Tauros",
+          "Scyther",
+          "Pidgeot",
+          "Chansey",
+          "Dragonite",
+          "Charizard",
+          "Articuno",
+          "Zapdos",
+          "Moltres"
+        ],
+        "lets_go_eevee": [
+          "Pidgey",
+          "Pidgeotto",
+          "Venonat",
+          "Bellsprout",
+          "Weepinbell",
+          "Venomoth",
+          "Tauros",
+          "Pinsir",
+          "Pidgeot",
+          "Chansey",
+          "Dragonite",
+          "Charizard",
+          "Articuno",
+          "Zapdos",
+          "Moltres"
+        ]
+      },
+      "encounterStatus": "text_verified"
     },
     {
       "id": "fuchsia_city",
