@@ -885,3 +885,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Ostatni audyt wszystkich 11 indeksów: 844 rekordy; wszystkie pliki parsują się, są zarejestrowane i ładowane, brak duplikatów ID/nazw, brak brakujących źródeł/statusów i brak niedziałających `connectsTo`.
 - Commity z tej partii: `15faa25`, `a83f43c`, `b398450`, `4085596`, `a044f05`, `3d42e3e`, `4fe2c71`, `1e9f391`, `8c1b96f`, `a6806ea`.
 - Nie uruchamiano Flutter analyzer, testów ani APK. Audyt dotyczy struktury danych, nie testu działania aplikacji.
+
+
+### Mapy — Paldea: komplet 10 Sights i punkty orientacyjne (2026-10-29)
+
+- Uzupełniono brakujące rekordy Grand Olive Orchard, Secluded Beach i Glaseado’s Grasp; wszystkie 10 Ten Sights ma teraz reprezentację w indeksie.
+- Połączono punkty orientacyjne ze zweryfikowanymi obszarami: Colonnade Hollow, Million Volt Skyline, Leaking Tower, Fury Falls, Gracia Stones, Casseroya Falls, Paldea’s Highest Peak, Groundblight/Icerend/Firescourge/Grasswither Shrine, Poco Path Lighthouse i akademie w Mesagoza.
+- Źródło dla Ten Sights: `https://bulbapedia.bulbagarden.net/wiki/Casseroya_Falls`; pozycje pinezek pozostają niezweryfikowane.
+- Commit: `db37cc5`; indeks Paldea ma teraz 103 lokacje.
