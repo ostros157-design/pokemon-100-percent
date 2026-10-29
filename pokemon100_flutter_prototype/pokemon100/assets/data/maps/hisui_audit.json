@@ -87,7 +87,11 @@
         "the_heartwood",
         "worn_bridge",
         "windswept_run",
-        "jubilife_village"
+        "jubilife_village",
+        "oreburrow_tunnel",
+        "tidewater_dam",
+        "lake_verity",
+        "space_time_distortions"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -118,7 +122,10 @@
         "shrouded_ruins",
         "sludge_mound",
         "ursa_s_ring",
-        "jubilife_village"
+        "jubilife_village",
+        "solaceon_ruins",
+        "lake_valor",
+        "space_time_distortions"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -148,7 +155,11 @@
         "sand_s_reach",
         "tombolo_walk",
         "tranquility_cove",
-        "jubilife_village"
+        "jubilife_village",
+        "turnback_cave",
+        "firespit_island",
+        "ancient_retreat",
+        "space_time_distortions"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -173,7 +184,15 @@
         "sonorous_path",
         "stonetooth_rows",
         "wayward_cave",
-        "jubilife_village"
+        "jubilife_village",
+        "ancient_quarry",
+        "moonview_arena",
+        "temple_of_sinnoh",
+        "celestica_ruins",
+        "primeval_grotto",
+        "wayward_wood",
+        "sacred_plaza",
+        "space_time_distortions"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -201,7 +220,11 @@
         "arena_s_approach",
         "icebound_falls",
         "glacier_terrace",
-        "jubilife_village"
+        "jubilife_village",
+        "snowpoint_temple",
+        "arena_approach",
+        "lake_acuity",
+        "space_time_distortions"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -216,248 +239,309 @@
       "id": "ancient_quarry",
       "name": "Ancient Quarry",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "coronet_highlands"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
       "sourceIds": [
         "bulbapedia-hisui",
         "legends-arceus-locations"
-      ]
+      ],
+      "parentRegion": "Coronet Highlands"
     },
     {
       "id": "oreburrow_tunnel",
       "name": "Oreburrow Tunnel",
       "kind": "cave",
-      "connectsTo": [],
+      "connectsTo": [
+        "obsidian_fieldlands"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
       "sourceIds": [
         "bulbapedia-hisui",
         "legends-arceus-locations"
-      ]
+      ],
+      "parentRegion": "Obsidian Fieldlands"
     },
     {
       "id": "tidewater_dam",
       "name": "Tidewater Dam",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "obsidian_fieldlands"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
       "sourceIds": [
         "bulbapedia-hisui",
         "legends-arceus-locations"
-      ]
+      ],
+      "parentRegion": "Obsidian Fieldlands"
     },
     {
       "id": "solaceon_ruins",
       "name": "Solaceon Ruins",
       "kind": "ruins",
-      "connectsTo": [],
+      "connectsTo": [
+        "crimson_mirelands"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
       "sourceIds": [
         "bulbapedia-hisui",
         "legends-arceus-locations"
-      ]
+      ],
+      "parentRegion": "Crimson Mirelands"
     },
     {
       "id": "turnback_cave",
       "name": "Turnback Cave",
       "kind": "cave",
-      "connectsTo": [],
+      "connectsTo": [
+        "cobalt_coastlands"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
       "sourceIds": [
         "bulbapedia-hisui",
         "legends-arceus-locations"
-      ]
+      ],
+      "parentRegion": "Cobalt Coastlands"
     },
     {
       "id": "firespit_island",
       "name": "Firespit Island",
       "kind": "island",
-      "connectsTo": [],
+      "connectsTo": [
+        "cobalt_coastlands"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
       "sourceIds": [
         "bulbapedia-hisui",
         "legends-arceus-locations"
-      ]
+      ],
+      "parentRegion": "Cobalt Coastlands"
     },
     {
       "id": "moonview_arena",
       "name": "Moonview Arena",
       "kind": "arena",
-      "connectsTo": [],
+      "connectsTo": [
+        "coronet_highlands"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
       "sourceIds": [
         "bulbapedia-hisui",
         "legends-arceus-locations"
-      ]
+      ],
+      "parentRegion": "Coronet Highlands"
     },
     {
       "id": "temple_of_sinnoh",
       "name": "Temple of Sinnoh",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "coronet_highlands"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
       "sourceIds": [
         "bulbapedia-hisui",
         "legends-arceus-locations"
-      ]
+      ],
+      "parentRegion": "Coronet Highlands"
     },
     {
       "id": "celestica_ruins",
       "name": "Celestica Ruins",
       "kind": "ruins",
-      "connectsTo": [],
+      "connectsTo": [
+        "coronet_highlands"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
       "sourceIds": [
         "bulbapedia-hisui",
         "legends-arceus-locations"
-      ]
+      ],
+      "parentRegion": "Coronet Highlands"
     },
     {
       "id": "snowpoint_temple",
       "name": "Snowpoint Temple",
       "kind": "temple",
-      "connectsTo": [],
+      "connectsTo": [
+        "alabaster_icelands"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
       "sourceIds": [
         "bulbapedia-hisui",
         "legends-arceus-locations"
-      ]
+      ],
+      "parentRegion": "Alabaster Icelands"
     },
     {
       "id": "ancient_retreat",
       "name": "Ancient Retreat",
       "kind": "settlement",
-      "connectsTo": [],
+      "connectsTo": [
+        "cobalt_coastlands"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
       "sourceIds": [
         "bulbapedia-hisui",
         "legends-arceus-locations"
-      ]
+      ],
+      "parentRegion": "Cobalt Coastlands"
     },
     {
       "id": "arena_approach",
       "name": "Arena's Approach",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "alabaster_icelands"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
       "sourceIds": [
         "bulbapedia-hisui",
         "legends-arceus-locations"
-      ]
+      ],
+      "parentRegion": "Alabaster Icelands"
     },
     {
       "id": "primeval_grotto",
       "name": "Primeval Grotto",
       "kind": "cave",
-      "connectsTo": [],
+      "connectsTo": [
+        "coronet_highlands"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
       "sourceIds": [
         "bulbapedia-hisui",
         "legends-arceus-locations"
-      ]
+      ],
+      "parentRegion": "Coronet Highlands"
     },
     {
       "id": "wayward_wood",
       "name": "Wayward Wood",
       "kind": "forest",
-      "connectsTo": [],
+      "connectsTo": [
+        "coronet_highlands"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
       "sourceIds": [
         "bulbapedia-hisui",
         "legends-arceus-locations"
-      ]
+      ],
+      "parentRegion": "Coronet Highlands"
     },
     {
       "id": "sacred_plaza",
       "name": "Sacred Plaza",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "coronet_highlands"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
       "sourceIds": [
         "bulbapedia-hisui",
         "legends-arceus-locations"
-      ]
+      ],
+      "parentRegion": "Coronet Highlands"
     },
     {
       "id": "lake_verity",
       "name": "Lake Verity",
       "kind": "lake",
-      "connectsTo": [],
+      "connectsTo": [
+        "obsidian_fieldlands"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
       "sourceIds": [
         "bulbapedia-hisui",
         "legends-arceus-locations"
-      ]
+      ],
+      "parentRegion": "Obsidian Fieldlands"
     },
     {
       "id": "lake_acuity",
       "name": "Lake Acuity",
       "kind": "lake",
-      "connectsTo": [],
+      "connectsTo": [
+        "alabaster_icelands"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
       "sourceIds": [
         "bulbapedia-hisui",
         "legends-arceus-locations"
-      ]
+      ],
+      "parentRegion": "Alabaster Icelands"
     },
     {
       "id": "lake_valor",
       "name": "Lake Valor",
       "kind": "lake",
-      "connectsTo": [],
+      "connectsTo": [
+        "crimson_mirelands"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
       "sourceIds": [
         "bulbapedia-hisui",
         "legends-arceus-locations"
-      ]
+      ],
+      "parentRegion": "Crimson Mirelands"
     },
     {
       "id": "space_time_distortions",
       "name": "Space-Time Distortions",
       "kind": "event_area",
-      "connectsTo": [],
+      "connectsTo": [
+        "obsidian_fieldlands",
+        "crimson_mirelands",
+        "cobalt_coastlands",
+        "coronet_highlands",
+        "alabaster_icelands"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
       "sourceIds": [
         "bulbapedia-hisui",
         "legends-arceus-locations"
-      ]
+      ],
+      "parentRegion": "All five expedition regions"
     },
     {
       "id": "fieldlands_camp",
