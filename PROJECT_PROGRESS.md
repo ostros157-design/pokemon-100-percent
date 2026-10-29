@@ -1319,3 +1319,8 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Dopasowanie początkowe i przycisk centrowania mogą powiększyć mapę do 1,25× na dużych ekranach, jeśli viewport na to pozwala; na telefonach nadal skala jest dobierana tak, aby zmieścić cały obszar.
 - Commit: `ea01685`. Kontrola statyczna potwierdziła, że zasób JSON jest wpisany w `pubspec.yaml`, a 76 lokacji i 84 połączenia nadal pasują do indeksu. Bez uruchamiania aplikacji, testów ani APK.
 
+### Mapy — Kanto: dopasowanie po zmianie rozmiaru okna (2026-10-29)
+
+- Dodano śledzenie rozmiaru widocznego obszaru mapy. Jeśli ekran/okno zmieni rozmiar, mapa dopasowuje się ponownie, o ile użytkownik nie zaczął jej ręcznie przesuwać lub powiększać; ręczne centrowanie przywraca automatyczne dopasowanie.
+- Commit: `e82de78`. Zmiana została sprawdzona statycznie w kodzie, bez uruchamiania aplikacji, testów, analyzer ani APK.
+
