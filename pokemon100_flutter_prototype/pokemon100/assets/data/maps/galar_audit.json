@@ -1162,7 +1162,7 @@
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "parentRegion": "wedgehurst",
+      "parentRegion": "Wedgehurst",
       "notes": "Stacja w sieci kolejowej Galar; dostępność zależy od postępu fabuły, a stacje DLC wymagają odpowiedniego dodatku.",
       "sourceIds": [
         "bulbapedia-wild-area-station",
@@ -1182,7 +1182,7 @@
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "parentRegion": "wild_area",
+      "parentRegion": "Wild Area",
       "notes": "Stacja w sieci kolejowej Galar; dostępność zależy od postępu fabuły, a stacje DLC wymagają odpowiedniego dodatku.",
       "sourceIds": [
         "bulbapedia-wild-area-station",
@@ -1202,7 +1202,7 @@
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "parentRegion": "motostoke",
+      "parentRegion": "Motostoke",
       "notes": "Stacja w sieci kolejowej Galar; dostępność zależy od postępu fabuły, a stacje DLC wymagają odpowiedniego dodatku.",
       "sourceIds": [
         "bulbapedia-wild-area-station",
@@ -1223,7 +1223,7 @@
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "parentRegion": "hulbury",
+      "parentRegion": "Hulbury",
       "notes": "Stacja w sieci kolejowej Galar; dostępność zależy od postępu fabuły, a stacje DLC wymagają odpowiedniego dodatku.",
       "sourceIds": [
         "bulbapedia-wild-area-station",
@@ -1243,7 +1243,7 @@
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "parentRegion": "hammerlocke",
+      "parentRegion": "Hammerlocke",
       "notes": "Stacja w sieci kolejowej Galar; dostępność zależy od postępu fabuły, a stacje DLC wymagają odpowiedniego dodatku.",
       "sourceIds": [
         "bulbapedia-wild-area-station",
@@ -1264,7 +1264,7 @@
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "parentRegion": "wyndon",
+      "parentRegion": "Wyndon",
       "notes": "Stacja w sieci kolejowej Galar; dostępność zależy od postępu fabuły, a stacje DLC wymagają odpowiedniego dodatku.",
       "sourceIds": [
         "bulbapedia-wild-area-station",
@@ -1284,7 +1284,7 @@
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "parentRegion": "isle_of_armor",
+      "parentRegion": "Isle of Armor",
       "notes": "Stacja w sieci kolejowej Galar; dostępność zależy od postępu fabuły, a stacje DLC wymagają odpowiedniego dodatku.",
       "sourceIds": [
         "bulbapedia-wild-area-station",
@@ -1304,7 +1304,7 @@
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "parentRegion": "crown_tundra",
+      "parentRegion": "Crown Tundra",
       "notes": "Stacja w sieci kolejowej Galar; dostępność zależy od postępu fabuły, a stacje DLC wymagają odpowiedniego dodatku.",
       "sourceIds": [
         "bulbapedia-wild-area-station",
