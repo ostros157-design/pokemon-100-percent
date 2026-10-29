@@ -79,6 +79,10 @@ pokemon: [
 'Pidgey',
 'Rattata',
 ],
+encounterRatesPercent: {
+'Pidgey': 40,
+'Rattata': 30,
+},
 ),
 GuideStep(
 title: 'Przejdź przez Route 2',
