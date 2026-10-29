@@ -169,6 +169,22 @@ class _MapsScreenState extends State<MapsScreen> {
     // route progression better than alphabetical sorting.
     final allLocationEntries = _locations.entries.toList();
     final normalizedQuery = _searchQuery.trim().toLowerCase();
+    const localSchematicLocations = <String>[
+      'Pallet Town',
+      'Route 1',
+      'Viridian City',
+      'Route 2',
+      'Viridian Forest',
+      'Pewter City',
+      'Pewter Gym',
+    ];
+    String? selectedLocalLocation;
+    for (final location in localSchematicLocations) {
+      if (location.toLowerCase() == normalizedQuery) {
+        selectedLocalLocation = location;
+        break;
+      }
+    }
     final locationEntries = allLocationEntries
         .where((entry) => entry.key.toLowerCase().contains(normalizedQuery))
         .toList();
@@ -304,7 +320,7 @@ class _MapsScreenState extends State<MapsScreen> {
                                       ),
                                       const SizedBox(height: 4),
                                       const Text(
-                                        '• Pallet Town: dom gracza, dom rywala, laboratorium Oaka, Town Map i prezenty fabularne.\n• Route 1: układ trasy, trener Youngster Ronny i dzikie Pokémony.\n• Pozycje na mapie pozostają niezatwierdzone, dopóki nie zostaną przypisane do zweryfikowanego podkładu.',
+                                        '• Schematy lokalne są dostępne dla Pallet Town, Route 1, Viridian City, Route 2, Viridian Forest, Pewter City i Pewter Gym.\\n• Symbole pokazują wyłącznie orientacyjny układ i informacje opisane w poradniku. Nie oznaczają dokładnych współrzędnych ani potwierdzonych pozycji przedmiotów.',
                                       ),
                                       const SizedBox(height: 12),
                                       _KantoRegionMap(
@@ -546,16 +562,11 @@ class _MapsScreenState extends State<MapsScreen> {
                             ),
                           const SizedBox(height: 12),
                           _KantoLocalAreaPanel(
-                            location: normalizedQuery == 'pallet town'
-                                ? 'Pallet Town'
-                                : normalizedQuery == 'route 1'
-                                    ? 'Route 1'
-                                    : null,
-                            references: _locations[
-                                    normalizedQuery == 'pallet town'
-                                        ? 'Pallet Town'
-                                        : 'Route 1'] ??
-                                const <_LocationReference>[],
+                            location: selectedLocalLocation,
+                            references: selectedLocalLocation == null
+                                ? const <_LocationReference>[]
+                                : _locations[selectedLocalLocation] ??
+                                    const <_LocationReference>[],
                           ),
                           const SizedBox(height: 8),
                           const Text(
@@ -744,16 +755,38 @@ class _KantoLocalAreaPanel extends StatefulWidget {
 class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
   String? _selectedFeature;
 
-  static const _palletFeatures = <String, String>{
-    'Dom gracza': 'Dom gracza — miejsce rozpoczęcia przygody.',
-    'Dom rywala': 'Dom rywala — punkt związany z początkiem historii.',
-    'Laboratorium Oaka': 'Laboratorium Profesora Oaka — ważne wydarzenia fabularne i Pokédex.',
-  };
-
-  static const _routeFeatures = <String, String>{
-    'Kierunek Pallet Town': 'Południowy koniec Route 1 prowadzi w stronę Pallet Town. Schemat nie przedstawia dokładnego przebiegu drogi.',
-    'Obszar trawiasty': 'Symbol obszaru spotkań z dzikimi Pokémonami. Dokładne pola trawy i miejsca spotkań nie są tu odwzorowane.',
-    'Kierunek Viridian City': 'Route 1 łączy Pallet Town z Viridian City. To oznaczenie kierunku, a nie współrzędne wejścia.',
+  static const _featuresByLocation = <String, Map<String, String>>{
+    'Pallet Town': {
+      'Dom gracza': 'Dom gracza — miejsce rozpoczęcia przygody.',
+      'Dom rywala': 'Dom rywala — punkt związany z początkiem historii.',
+      'Laboratorium Oaka': 'Laboratorium Profesora Oaka — wydarzenia fabularne i otrzymanie Pokédexu.',
+    },
+    'Route 1': {
+      'Kierunek Pallet Town': 'Południowy koniec Route 1 prowadzi w stronę Pallet Town. Schemat nie pokazuje dokładnego przebiegu drogi.',
+      'Obszar spotkań': 'Poradnik wymienia Pidgey i Rattata jako Pokémony możliwe do złapania na Route 1. Obszar na rysunku jest poglądowy.',
+      'Kierunek Viridian City': 'Route 1 łączy Pallet Town z Viridian City. Symbol wskazuje kierunek, nie współrzędne wejścia.',
+    },
+    'Viridian City': {
+      'Pokémon Center': 'Poradnik zaleca odwiedzić Pokémon Center w Viridian City, aby przygotować drużynę.',
+      'Poké Mart': 'W poradniku pracownik Poké Martu przekazuje przesyłkę dla Profesora Oaka.',
+      'Kierunek Route 1': 'Route 1 prowadzi z powrotem na południe do Pallet Town.',
+    },
+    'Route 2': {
+      'Kierunek północny': 'Poradnik prowadzi Route 2 na północ, przed wejściem do Viridian Forest.',
+      'Kierunek Viridian Forest': 'Viridian Forest jest następną lokacją wskazaną w poradniku.',
+    },
+    'Viridian Forest': {
+      'Obszar leśny': 'Poradnik zaleca przejść przez las i szukać Pokémonów oraz przedmiotów. Nie oznaczamy niepotwierdzonych pozycji.',
+      'Kierunek Pewter City': 'Po wyjściu z Viridian Forest poradnik prowadzi dalej do Pewter City.',
+    },
+    'Pewter City': {
+      'Miasto Pewter': 'Pewter City jest lokacją po wyjściu z Viridian Forest.',
+      'Kierunek Pewter Gym': 'Poradnik wskazuje przygotowanie drużyny przed pierwszym Gymem.',
+    },
+    'Pewter Gym': {
+      'Gym Brocka': 'To miejsce walki z Brockiem o pierwszą odznakę Gym.',
+      'Brock': 'Poradnik wymienia Geodude i Onixa w kontekście walki z Brockiem. Schemat nie odwzorowuje dokładnego wnętrza Gymu.',
+    },
   };
 
   @override
@@ -762,13 +795,29 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
     if (oldWidget.location != widget.location) _selectedFeature = null;
   }
 
+  IconData _featureIcon(String feature) {
+    final normalized = feature.toLowerCase();
+    if (normalized.contains('dom') ||
+        normalized.contains('laboratorium') ||
+        normalized.contains('center') ||
+        normalized.contains('mart') ||
+        normalized.contains('gym')) {
+      return Icons.home_work_outlined;
+    }
+    if (normalized.contains('spotkań') || normalized.contains('leśny')) {
+      return Icons.grass;
+    }
+    if (normalized.contains('brock')) return Icons.person_outline;
+    return Icons.route_outlined;
+  }
+
   @override
   Widget build(BuildContext context) {
     final location = widget.location;
     if (location == null) return const SizedBox.shrink();
+    final features = _featuresByLocation[location];
+    if (features == null) return const SizedBox.shrink();
 
-    final isPallet = location == 'Pallet Town';
-    final features = isPallet ? _palletFeatures : _routeFeatures;
     final selected = _selectedFeature;
     final availablePokemon = widget.references
         .expand((reference) => reference.step.pokemon)
@@ -783,6 +832,7 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
     final optionalSteps = widget.references
         .where((reference) => reference.step.optional)
         .length;
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -792,7 +842,7 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
         ),
         const SizedBox(height: 4),
         const Text(
-          'Widok poglądowy. Rozmieszczenie symboli nie oznacza dokładnych współrzędnych ani skali mapy z gry.',
+          'Widok poglądowy offline. Rozmieszczenie symboli nie przedstawia dokładnych współrzędnych, skali ani wiernej mapy z gry.',
           style: TextStyle(fontSize: 12),
         ),
         const SizedBox(height: 8),
@@ -802,7 +852,7 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
             aspectRatio: 1.5,
             child: CustomPaint(
               painter: _KantoLocalAreaPainter(
-                isPallet: isPallet,
+                location: location,
                 land: Theme.of(context).colorScheme.surfaceContainerHighest,
                 route: Theme.of(context).colorScheme.primary,
                 label: Theme.of(context).colorScheme.onSurface,
@@ -816,24 +866,17 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
           spacing: 6,
           runSpacing: 6,
           children: features.keys.map((feature) {
-            final icon = feature.contains('Dom') || feature.contains('Laboratorium')
-                ? Icons.home_outlined
-                : feature == 'Trawa'
-                    ? Icons.grass
-                    : feature == 'Razz Berry'
-                        ? Icons.spa_outlined
-                        : feature == 'Youngster Ronny'
-                            ? Icons.person_outline
-                            : Icons.route_outlined;
             return ChoiceChip(
-              avatar: Icon(icon, size: 16),
+              avatar: Icon(_featureIcon(feature), size: 16),
               label: Text(feature),
               selected: selected == feature,
               onSelected: (_) => setState(() => _selectedFeature = feature),
             );
           }).toList(),
         ),
-        if (availablePokemon.isNotEmpty || availableItems.isNotEmpty || optionalSteps > 0) ...[
+        if (availablePokemon.isNotEmpty ||
+            availableItems.isNotEmpty ||
+            optionalSteps > 0) ...[
           const SizedBox(height: 12),
           Text(
             'Dane z poradnika',
@@ -865,7 +908,7 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
               subtitle: Text('$optionalSteps kroków oznaczono jako opcjonalne.'),
             ),
           const Text(
-            'Lista pokazuje tylko informacje zapisane w poradniku; nie oznacza potwierdzonego występowania wszystkich Pokémonów ani przedmiotów w każdym miejscu tej lokacji.',
+            'Lista pokazuje wpisy z poradnika dla tej lokacji. Nie potwierdza dokładnego miejsca spotkania Pokémonów ani położenia przedmiotów.',
             style: TextStyle(fontSize: 12),
           ),
         ],
@@ -888,7 +931,7 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
           const SizedBox(height: 4),
           if (widget.references.isEmpty)
             const Text(
-              'Brak kroków poradnika przypisanych do tej lokacji. Możesz nadal korzystać z opisu mapy.',
+              'Brak kroków poradnika przypisanych do tej lokacji. Możesz nadal korzystać z opisu schematu.',
               style: TextStyle(fontSize: 12),
             )
           else
@@ -924,13 +967,13 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
 }
 
 class _KantoLocalAreaPainter extends CustomPainter {
-  final bool isPallet;
+  final String location;
   final Color land;
   final Color route;
   final Color label;
 
   const _KantoLocalAreaPainter({
-    required this.isPallet,
+    required this.location,
     required this.land,
     required this.route,
     required this.label,
@@ -944,53 +987,109 @@ class _KantoLocalAreaPainter extends CustomPainter {
       ..strokeWidth = 5
       ..strokeCap = StrokeCap.round;
     final path = Path();
-    if (isPallet) {
+
+    if (location == 'Pallet Town') {
       path
         ..moveTo(size.width * .12, size.height * .78)
         ..lineTo(size.width * .42, size.height * .78)
         ..lineTo(size.width * .42, size.height * .52)
         ..lineTo(size.width * .72, size.height * .52)
         ..lineTo(size.width * .88, size.height * .25);
-    } else {
+    } else if (location == 'Route 1' || location == 'Route 2') {
       path
         ..moveTo(size.width * .12, size.height * .88)
+        ..lineTo(size.width * .34, size.height * .72)
         ..lineTo(size.width * .48, size.height * .58)
         ..lineTo(size.width * .62, size.height * .34)
         ..lineTo(size.width * .88, size.height * .12);
+    } else if (location == 'Viridian Forest') {
+      path
+        ..moveTo(size.width * .12, size.height * .86)
+        ..quadraticBezierTo(size.width * .42, size.height * .62, size.width * .32, size.height * .42)
+        ..quadraticBezierTo(size.width * .50, size.height * .18, size.width * .82, size.height * .12);
+    } else {
+      path
+        ..moveTo(size.width * .14, size.height * .72)
+        ..lineTo(size.width * .38, size.height * .72)
+        ..lineTo(size.width * .62, size.height * .46)
+        ..lineTo(size.width * .86, size.height * .46);
     }
     canvas.drawPath(path, roadPaint);
 
-    final markerPaint = Paint()..color = route;
-    final markers = isPallet
-        ? <(String, Offset)>[
-            ('Dom gracza', Offset(size.width * .22, size.height * .52)),
-            ('Dom rywala', Offset(size.width * .58, size.height * .72)),
-            ('Laboratorium Oaka', Offset(size.width * .72, size.height * .28)),
-          ]
-        : <(String, Offset)>[
-            ('Wyjście z Pallet Town', Offset(size.width * .12, size.height * .88)),
-            ('Trawa', Offset(size.width * .48, size.height * .58)),
-            ('Youngster Ronny', Offset(size.width * .62, size.height * .34)),
-            ('Razz Berry', Offset(size.width * .82, size.height * .20)),
-          ];
+    final markers = <(String, Offset)>[];
+    if (location == 'Pallet Town') {
+      markers.addAll([
+        ('Dom gracza', Offset(size.width * .22, size.height * .52)),
+        ('Dom rywala', Offset(size.width * .58, size.height * .72)),
+        ('Laboratorium Oaka', Offset(size.width * .72, size.height * .28)),
+      ]);
+    } else if (location == 'Route 1') {
+      markers.addAll([
+        ('Pallet Town', Offset(size.width * .12, size.height * .88)),
+        ('Obszar spotkań', Offset(size.width * .48, size.height * .58)),
+        ('Viridian City', Offset(size.width * .88, size.height * .12)),
+      ]);
+    } else if (location == 'Viridian City') {
+      markers.addAll([
+        ('Pokémon Center', Offset(size.width * .30, size.height * .46)),
+        ('Poké Mart', Offset(size.width * .66, size.height * .46)),
+        ('Route 1', Offset(size.width * .50, size.height * .80)),
+      ]);
+    } else if (location == 'Route 2') {
+      markers.addAll([
+        ('Viridian City', Offset(size.width * .12, size.height * .88)),
+        ('Trasa', Offset(size.width * .48, size.height * .58)),
+        ('Viridian Forest', Offset(size.width * .88, size.height * .12)),
+      ]);
+    } else if (location == 'Viridian Forest') {
+      markers.addAll([
+        ('Wejście', Offset(size.width * .12, size.height * .86)),
+        ('Obszar leśny', Offset(size.width * .48, size.height * .48)),
+        ('Wyjście', Offset(size.width * .82, size.height * .12)),
+      ]);
+      for (final point in <Offset>[
+        Offset(size.width * .20, size.height * .28),
+        Offset(size.width * .38, size.height * .20),
+        Offset(size.width * .66, size.height * .28),
+        Offset(size.width * .72, size.height * .68),
+      ]) {
+        canvas.drawCircle(point, 10, Paint()..color = route.withValues(alpha: .18));
+        canvas.drawCircle(point, 5, Paint()..color = route.withValues(alpha: .5));
+      }
+    } else if (location == 'Pewter City') {
+      markers.addAll([
+        ('Miasto', Offset(size.width * .28, size.height * .46)),
+        ('Pewter Gym', Offset(size.width * .68, size.height * .46)),
+      ]);
+    } else {
+      markers.addAll([
+        ('Gym', Offset(size.width * .50, size.height * .44)),
+        ('Brock', Offset(size.width * .50, size.height * .72)),
+      ]);
+    }
 
     for (final marker in markers) {
       final point = marker.$2;
-      if (isPallet && marker.$1.startsWith('Dom')) {
-        final house = Path()
-          ..moveTo(point.dx - 10, point.dy)
-          ..lineTo(point.dx, point.dy - 9)
-          ..lineTo(point.dx + 10, point.dy)
+      final isBuilding = marker.$1.contains('Dom') ||
+          marker.$1.contains('Laboratorium') ||
+          marker.$1.contains('Center') ||
+          marker.$1.contains('Mart') ||
+          marker.$1.contains('Gym') ||
+          marker.$1 == 'Miasto';
+      if (isBuilding) {
+        final rect = Rect.fromCenter(center: point, width: 18, height: 14);
+        canvas.drawRect(rect, Paint()..color = route.withValues(alpha: .65));
+        final roof = Path()
+          ..moveTo(rect.left - 3, rect.top)
+          ..lineTo(point.dx, rect.top - 9)
+          ..lineTo(rect.right + 3, rect.top)
           ..close();
-        canvas.drawPath(house, Paint()..color = Colors.brown.shade500);
-        canvas.drawRect(
-          Rect.fromLTWH(point.dx - 7, point.dy, 14, 10),
-          Paint()..color = Colors.orange.shade100,
-        );
+        canvas.drawPath(roof, Paint()..color = route);
       } else {
-        canvas.drawCircle(point, 7, markerPaint);
+        canvas.drawCircle(point, 7, Paint()..color = route);
         canvas.drawCircle(point, 2.5, Paint()..color = Colors.white);
       }
+
       final text = TextPainter(
         text: TextSpan(
           text: marker.$1,
@@ -1013,7 +1112,7 @@ class _KantoLocalAreaPainter extends CustomPainter {
 
     final title = TextPainter(
       text: TextSpan(
-        text: isPallet ? 'PALLET TOWN' : 'ROUTE 1',
+        text: location.toUpperCase(),
         style: TextStyle(
           color: route,
           fontSize: 13,
@@ -1028,14 +1127,12 @@ class _KantoLocalAreaPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(covariant _KantoLocalAreaPainter oldDelegate) =>
-      isPallet != oldDelegate.isPallet ||
+      location != oldDelegate.location ||
       land != oldDelegate.land ||
       route != oldDelegate.route ||
       label != oldDelegate.label;
 }
 
-/// Pierwsza offline mapa poglądowa Kanto. Położenia są schematyczne;
-/// nie udają dokładnej mapy gry ani nie wyznaczają niepotwierdzonych tras.
 class _KantoRegionMap extends StatefulWidget {
   final String selectedLocation;
   final ValueChanged<String> onLocationSelected;
