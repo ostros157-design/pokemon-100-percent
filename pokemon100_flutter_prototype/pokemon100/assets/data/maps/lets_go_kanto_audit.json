@@ -10370,7 +10370,11 @@
           }
         ]
       },
-      "notes": "Spotkania na lądzie i podczas Surfowania mają zakres poziomów 39–44. Articuno jest statycznym spotkaniem na poziomie 50; wewnętrzne piętra i przesuwane głazy nie są jeszcze odwzorowane."
+      "notes": "Spotkania na lądzie i podczas Surfowania mają zakres poziomów 39–44. Articuno jest statycznym spotkaniem na poziomie 50; wewnętrzne piętra i przesuwane głazy nie są jeszcze odwzorowane.",
+      "events": [
+        "Articuno — statyczne spotkanie na poziomie 50.",
+        "Zagadki z głazami zmieniają przepływ wody i otwierają przejścia między piętrami; dokładne kafelki nie są naniesione."
+      ]
     },
     {
       "id": "cinnabar_island",
@@ -11846,7 +11850,11 @@
           }
         ]
       },
-      "notes": "Moltres jest statycznym spotkaniem na poziomie 50. Wnętrze z przesuwanymi głazami, trenerami i przedmiotami wymaga osobnej mapy pięter."
+      "notes": "Moltres jest statycznym spotkaniem na poziomie 50. Wnętrze z przesuwanymi głazami, trenerami i przedmiotami wymaga osobnej mapy pięter.",
+      "events": [
+        "Moltres — statyczne spotkanie na poziomie 50.",
+        "Głazy i przełączniki otwierają przejścia między piętrami; trenerzy i przedmioty nie mają jeszcze zweryfikowanych pinezek."
+      ]
     },
     {
       "id": "indigo_plateau",
@@ -12190,7 +12198,11 @@
           }
         ]
       },
-      "notes": "Podane są spotkania standardowe i wodne; Mewtwo to statyczne spotkanie na poziomie 70. Wewnętrzne piętra i pozycje przedmiotów nie są jeszcze odwzorowane."
+      "notes": "Podane są spotkania standardowe i wodne; Mewtwo to statyczne spotkanie na poziomie 70. Wewnętrzne piętra i pozycje przedmiotów nie są jeszcze odwzorowane.",
+      "events": [
+        "Mewtwo — statyczne spotkanie na poziomie 70; lokacja staje się dostępna po zostaniu Championem.",
+        "Jaskinia ma wiele pięter i rzadkie przedmioty; dokładny układ komnat i pinezki wymagają dalszej weryfikacji."
+      ]
     },
     {
       "id": "ss_anne",
@@ -12211,7 +12223,11 @@
       "sourceIds": [
         "bulbapedia-part6"
       ],
-      "dataStatus": "text_verified_positions_not_mapped"
+      "dataStatus": "text_verified_positions_not_mapped",
+      "events": [
+        "Kapitan statku uczy partnera Secret Technique Chop Down po zakończeniu wydarzenia fabularnego.",
+        "Po opuszczeniu statku po wydarzeniu statek odpływa; dostęp do pokładu nie pozostaje otwarty na stałe."
+      ]
     },
     {
       "id": "power_plant",
@@ -12389,7 +12405,11 @@
             "method": "Static encounter"
           }
         ]
-      }
+      },
+      "events": [
+        "Zapdos — statyczne spotkanie na poziomie 50.",
+        "Elektrownia zawiera przedmioty i trenerów, ale ich dokładne położenie nie jest jeszcze naniesione na plan."
+      ]
     },
     {
       "id": "pokemon_tower",
@@ -12714,7 +12734,11 @@
             "method": "5F–6F"
           }
         ]
-      }
+      },
+      "events": [
+        "Silph Scope pozwala rozpoznawać duchy i kontynuować wspinaczkę po wieży.",
+        "Po uratowaniu Mr. Fuji gracz otrzymuje Poké Flute, potrzebną do obudzenia Snorlax na Route 12 i Route 16."
+      ]
     },
     {
       "id": "rocket_hideout",
@@ -12738,7 +12762,11 @@
       "sourceIds": [
         "bulbapedia-part9"
       ],
-      "dataStatus": "text_verified_positions_not_mapped"
+      "dataStatus": "text_verified_positions_not_mapped",
+      "events": [
+        "Lift Key — klucz do windy zdobywany podczas eksploracji kryjówki Team Rocket.",
+        "Po pokonaniu Giovanniego gracz otrzymuje Silph Scope, który pozwala rozpoznawać duchy w Pokémon Tower."
+      ]
     },
     {
       "id": "silph_co",
@@ -12770,7 +12798,11 @@
       "sourceIds": [
         "bulbapedia-part10"
       ],
-      "dataStatus": "text_verified_positions_not_mapped"
+      "dataStatus": "text_verified_positions_not_mapped",
+      "events": [
+        "Po pokonaniu Giovanniego i uwolnieniu budynku prezes Silph Co. wręcza Master Ball.",
+        "Budynek ma 11 pięter i teleporty; trasa przez teleporty jest informacyjna, nie dokładnie odwzorowana."
+      ]
     },
     {
       "id": "pokemon_mansion",
@@ -13037,7 +13069,11 @@
             "method": "Pokémon Mansion — table 2"
           }
         ]
-      }
+      },
+      "events": [
+        "Secret Key — klucz do Cinnabar Gym znajdowany podczas eksploracji rezydencji.",
+        "Dzienniki naukowców opisują badania nad Mewtwo; Mewtwo nie występuje jako dzikie spotkanie w Mansion."
+      ]
     },
     {
       "id": "safari_zone",
@@ -13329,7 +13365,10 @@
       "sourceIds": [
         "routepedia-route5-pikachu"
       ],
-      "dataStatus": "text_verified_positions_not_mapped"
+      "dataStatus": "text_verified_positions_not_mapped",
+      "events": [
+        "Day Care w Let’s Go podnosi poziom jednego pozostawionego Pokémona podczas chodzenia; nie jest to system hodowli jaj."
+      ]
     },
     {
       "id": "pokemon_league_reception_gate",
@@ -13345,7 +13384,10 @@
       "sourceIds": [
         "bulbapedia-route-list"
       ],
-      "dataStatus": "text_verified_positions_not_mapped"
+      "dataStatus": "text_verified_positions_not_mapped",
+      "events": [
+        "Strażnicy sprawdzają odznaki Gymów; po potwierdzeniu kompletu ośmiu odznak można przejść w stronę Victory Road."
+      ]
     },
     {
       "id": "players_house",
@@ -13359,7 +13401,10 @@
         "bulbapedia-player-house"
       ],
       "dataStatus": "schematic_interior_available_exact_layout_pending",
-      "coordinateStatus": "unverified"
+      "coordinateStatus": "unverified",
+      "events": [
+        "Początek przygody odbywa się w domu gracza w Pallet Town; wnętrze jest schematyczne, a nie odwzorowane kafelek po kafelku."
+      ]
     },
     {
       "id": "professor_oak_lab",
@@ -13373,7 +13418,10 @@
         "bulbapedia-oak-lab"
       ],
       "dataStatus": "schematic_interior_available_exact_layout_pending",
-      "coordinateStatus": "unverified"
+      "coordinateStatus": "unverified",
+      "events": [
+        "Po dostarczeniu Oak's Parcel z Viridian City gracz otrzymuje Pokédex od Profesora Oaka."
+      ]
     },
     {
       "id": "celadon_department_store",
@@ -13387,7 +13435,10 @@
         "bulbapedia-celadon-store"
       ],
       "dataStatus": "schematic_interior_available_exact_layout_pending",
-      "coordinateStatus": "unverified"
+      "coordinateStatus": "unverified",
+      "events": [
+        "Wielopiętrowy sklep oferuje przedmioty, kamienie ewolucyjne i TM; lista stoisk i półek wymaga osobnego planu pięter."
+      ]
     },
     {
       "id": "celadon_game_corner",
@@ -13418,7 +13469,10 @@
         "bulbapedia-celadon-condominiums"
       ],
       "dataStatus": "schematic_interior_available_exact_layout_pending",
-      "coordinateStatus": "unverified"
+      "coordinateStatus": "unverified",
+      "events": [
+        "Budynek mieszkalny obejmuje mieszkania i pomieszczenia związane z ekipą Game Freak; dokładny układ pięter i interakcje nie są odwzorowane."
+      ]
     },
     {
       "id": "cinnabar_lab",
@@ -13484,7 +13538,11 @@
         "bulbapedia-sea-cottage"
       ],
       "dataStatus": "schematic_interior_available_exact_layout_pending",
-      "coordinateStatus": "unverified"
+      "coordinateStatus": "unverified",
+      "events": [
+        "Po pomocy Billowi gracz otrzymuje dwa S.S. Tickets.",
+        "Na komputerze Billa można odczytać raporty o lokalizacjach legendarnych ptaków; domek jest tym samym miejscem co alias Bill's House."
+      ]
     },
     {
       "id": "digletts_cave_route2_entrance",
