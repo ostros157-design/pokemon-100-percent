@@ -298,7 +298,7 @@ class _MapsScreenState extends State<MapsScreen> {
                 ),
                 const SizedBox(height: 8),
                 const Text(
-                  'Wybierz generację i grę, aby zobaczyć lokacje znalezione w dostępnych poradnikach. Dane działają offline.',
+                  'Wybierz grę i region, aby przeglądać offline indeks lokacji. Dokładne mapy, wnętrza i pinezki są uzupełniane etapami.',
                 ),
                 const SizedBox(height: 16),
                 DropdownButtonFormField<int>(
