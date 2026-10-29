@@ -195,10 +195,13 @@
       "id": "route_1",
       "name": "Route 1",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "postwick",
+        "wedgehurst"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_version_and_dlc_audit_pending",
       "sourceIds": [
         "bulbapedia-galar",
         "pokemony-galar"
@@ -208,10 +211,13 @@
       "id": "route_2",
       "name": "Route 2",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "wedgehurst",
+        "professor_magnolia_house"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_version_and_dlc_audit_pending",
       "sourceIds": [
         "bulbapedia-galar",
         "pokemony-galar"
@@ -221,10 +227,13 @@
       "id": "route_3",
       "name": "Route 3",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "galar_mine",
+        "motostoke"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_version_and_dlc_audit_pending",
       "sourceIds": [
         "bulbapedia-galar",
         "pokemony-galar"
@@ -234,10 +243,13 @@
       "id": "route_4",
       "name": "Route 4",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "turffield",
+        "galar_mine"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_version_and_dlc_audit_pending",
       "sourceIds": [
         "bulbapedia-galar",
         "pokemony-galar"
@@ -247,10 +259,14 @@
       "id": "route_5",
       "name": "Route 5",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "turffield",
+        "hulbury",
+        "pokemon_nursery"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_version_and_dlc_audit_pending",
       "sourceIds": [
         "bulbapedia-galar",
         "pokemony-galar"
@@ -260,10 +276,14 @@
       "id": "route_6",
       "name": "Route 6",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "hammerlocke",
+        "stow_on_side",
+        "cara_liss"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_version_and_dlc_audit_pending",
       "sourceIds": [
         "bulbapedia-galar",
         "pokemony-galar"
@@ -273,10 +293,14 @@
       "id": "route_7",
       "name": "Route 7",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_8",
+        "route_9_tunnel",
+        "hammerlocke"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_version_and_dlc_audit_pending",
       "sourceIds": [
         "bulbapedia-galar",
         "pokemony-galar"
@@ -286,10 +310,13 @@
       "id": "route_8",
       "name": "Route 8",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "circhester",
+        "route_7"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_version_and_dlc_audit_pending",
       "sourceIds": [
         "bulbapedia-galar",
         "pokemony-galar"
@@ -299,10 +326,14 @@
       "id": "route_9",
       "name": "Route 9",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "circhester",
+        "spikemuth",
+        "route_9_tunnel"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_version_and_dlc_audit_pending",
       "sourceIds": [
         "bulbapedia-galar",
         "pokemony-galar"
@@ -312,10 +343,14 @@
       "id": "route_10",
       "name": "Route 10",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "wyndon",
+        "white_hill_station",
+        "hammerlocke"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_version_and_dlc_audit_pending",
       "sourceIds": [
         "bulbapedia-galar",
         "pokemony-galar"
@@ -597,6 +632,84 @@
         "bulbapedia-galar",
         "pokemony-galar"
       ]
+    },
+    {
+      "id": "route_9_tunnel",
+      "name": "Route 9 Tunnel",
+      "kind": "tunnel",
+      "connectsTo": [
+        "route_7",
+        "route_9"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-galar",
+        "pokemony-galar"
+      ],
+      "dataStatus": "connection_indexed_version_and_dlc_audit_pending"
+    },
+    {
+      "id": "white_hill_station",
+      "name": "White Hill Station",
+      "kind": "station",
+      "connectsTo": [
+        "route_10",
+        "hammerlocke",
+        "wyndon"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-galar",
+        "pokemony-galar"
+      ],
+      "dataStatus": "connection_indexed_version_and_dlc_audit_pending"
+    },
+    {
+      "id": "professor_magnolia_house",
+      "name": "Professor Magnolia's House",
+      "kind": "house",
+      "connectsTo": [
+        "route_2"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-galar",
+        "pokemony-galar"
+      ],
+      "dataStatus": "connection_indexed_version_and_dlc_audit_pending"
+    },
+    {
+      "id": "pokemon_nursery",
+      "name": "Pokémon Nursery",
+      "kind": "facility",
+      "connectsTo": [
+        "route_5"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-galar",
+        "pokemony-galar"
+      ],
+      "dataStatus": "connection_indexed_version_and_dlc_audit_pending"
+    },
+    {
+      "id": "cara_liss",
+      "name": "Cara Liss's Fossil Restoration Site",
+      "kind": "facility",
+      "connectsTo": [
+        "route_6"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-galar",
+        "pokemony-galar"
+      ],
+      "dataStatus": "connection_indexed_version_and_dlc_audit_pending"
     }
   ]
 }
