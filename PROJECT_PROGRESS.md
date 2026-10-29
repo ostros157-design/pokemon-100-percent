@@ -667,3 +667,12 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 - Źródło: https://bulbapedia.bulbagarden.net/wiki/Walkthrough:Pok%C3%A9mon:Let%27s_Go,_Pikachu!_and_Let%27s_Go,_Eevee!/Part_2
 - Commity: dane `5c735e4204f631b25ed8ccfd160ac459f6eea0e4`; ekran `e204da2c24009463b0aa2b7bdae5665fb273d4f1`.
 - Status: zapisano w GitHubie. Nie uruchomiono `flutter analyze`, testów ani builda APK; kompilacja i zachowanie interfejsu nie są jeszcze zweryfikowane.
+
+
+### Mapy — spotkania i układ Route 2 (2026-10-29)
+- Rozszerzono manifest `lets_go_kanto_audit.json` o Route 2: połączenia z Viridian City, Viridian Forest i Pewter City, rozdzielenie trasy przez las oraz opis wschodniej ścieżki w stronę Diglett’s Cave.
+- Dodano tekstowe spotkania w trawie dla obu wersji Let’s Go. Pikachu: Pidgey 30%, Rattata 20%, Oddish 20%, Caterpie 15%, Weedle 15%; Eevee zamiast Oddish ma Bellsprout 20%. Wszystkie wymienione spotkania mają poziomy 3–4 według Pokéarth/Serebii.
+- Ekran map pokazuje te spotkania offline po wybraniu Route 2. Nie dodano współrzędnych ani pinezek dla trawy, trenerów czy przedmiotów; szczegóły mapy pozostają tekstowe.
+- Źródła: https://www.serebii.net/pokearth/kanto/route2.shtml ; https://theroutepedia.com/pokemon-lets-go-pikachu/route-2 ; https://theroutepedia.com/pokemon-lets-go-eevee/route-2
+- Commity: manifest `e8f908bcb107ecfae4406baaecda4fc4021b4e23`; ekran `7c35bfafa3aae8e2466906653e3f82333c035ee0`.
+- Status: zapisano w GitHubie. `flutter analyze`, testy i build APK nie zostały uruchomione; kompilacja i zachowanie UI pozostają niezweryfikowane.
