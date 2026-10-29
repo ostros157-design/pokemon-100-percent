@@ -372,6 +372,11 @@
       "id": "bulbapedia-part14",
       "url": "https://bulbapedia.bulbagarden.net/wiki/Appendix%3ALet%27s_Go,_Pikachu!_and_Let%27s_Go,_Eevee!/Part_14",
       "scope": "Power Plant and Viridian Gym"
+    },
+    {
+      "id": "routepedia-viridian-pikachu",
+      "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/viridian-city",
+      "scope": "Viridian City facilities, items and connections"
     }
   ],
   "locations": [
@@ -456,7 +461,11 @@
             "level": 6
           }
         }
-      }
+      },
+      "sourceIds": [
+        "routepedia-pallet-pikachu"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
     },
     {
       "id": "route_1",
@@ -611,7 +620,11 @@
           ],
           "status": "text_verified"
         }
-      ]
+      ],
+      "sourceIds": [
+        "routepedia-route1-pikachu"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
     },
     {
       "id": "viridian_city",
@@ -676,7 +689,11 @@
             "bulbapedia-viridian-city"
           ]
         }
-      ]
+      ],
+      "sourceIds": [
+        "routepedia-viridian-pikachu"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
     },
     {
       "id": "route_2",
