@@ -840,6 +840,31 @@ class _MapsScreenState extends State<MapsScreen> {
                                 : '• Pidgey — 30%\\n• Venonat — 30%\\n• Oddish — 20%\\n• Psyduck — 20%'),
                             const SizedBox(height: 8),
                             const Text('Trenerzy fabularni: Hiker Franklin, Fisherman Wayne, Bird Keeper Joey, Youngster Dan, Picnicker Kelsey, Camper Dustin, Hiker Nob, Youngster Chad, Lass Haley i Coach Trainer Amala. Przedmioty: TM16, Lure, Super Potion, Ether i ukryta Nanab Berry. Na końcu trasy znajduje się Bill’s House.'),
+                          ] else if (normalizedQuery == 'route 11') ...[
+                            const Text('Route 11 — spotkania i przedmioty', style: TextStyle(fontWeight: FontWeight.w700)),
+                            const Text('Spotkania w Let’s Go Pikachu (poziomy 13–18): Pidgey 25%, Rattata 25%, Drowzee 25%, Pidgeotto 10%, Raticate 10% i Mr. Mime 5%. Przy trasie znajduje się Route 11 Gate. Źródła wymieniają 5 Great Balls, Super Potion, X Defense, Lure, Super Repel i ukryty Revive.'),
+                            const SizedBox(height: 8),
+                            const Text('Trasa prowadzi od Vermilion City w stronę wschodniego wejścia do Diglett’s Cave. Spotkania i przedmioty nie mają jeszcze zweryfikowanych pinezek.'),
+                          ] else if (normalizedQuery == 'digletts cave' || normalizedQuery == "diglett's cave") ...[
+                            const Text('Diglett’s Cave', style: TextStyle(fontWeight: FontWeight.w700)),
+                            const Text('Tunel łączy okolice Route 11 z wschodnią częścią Route 2. W Let’s Go Pikachu występują Diglett (85%), Zubat (10%) i Dugtrio (5%); rzadszym spotkaniem może być Chansey. Pozycje wyjść i spotkań nie są naniesione na dokładny plan jaskini.'),
+                          ] else if (normalizedQuery == 'route 12') ...[
+                            const Text('Route 12 — Silence Bridge i Snorlax', style: TextStyle(fontWeight: FontWeight.w700)),
+                            const Text('Długa trasa wędkarska na południe od Lavender Town. Snorlax Lv. 34 blokuje przejście do czasu wydarzenia fabularnego. Przedmioty z listy źródłowej: TM24, Water Stone, 3 Ultra Balls, Lure, Repel, Awakening, Max Lure i 5 ukrytych Silver Pinap Berries. Dokładne pozycje nie są jeszcze pinezkami.'),
+                          ] else if (normalizedQuery == 'route 13') ...[
+                            const Text('Route 13 — labirynt ogrodzeń', style: TextStyle(fontWeight: FontWeight.w700)),
+                            const Text('Wąska trasa z licznymi ogrodzeniami łącząca Route 12 z Route 14. Układ przejść, trenerzy i przedmioty wymagają jeszcze osobnej weryfikacji przed dodaniem pinezek.'),
+                          ] else if (normalizedQuery == 'route 14') ...[
+                            const Text('Route 14', style: TextStyle(fontWeight: FontWeight.w700)),
+                            const Text('Trasa łączy Route 13 z Route 15. Szczegóły trenerów, przedmiotów i spotkań zostaną pokazane po ich weryfikacji; obecnie nie ma dokładnych pinezek.'),
+                          ] else if (normalizedQuery == 'route 15') ...[
+                            const Text('Route 15 — zachodnie wejście do Fuchsia City', style: TextStyle(fontWeight: FontWeight.w700)),
+                            const Text('Połączenie Route 14 z Fuchsia City. Lista przedmiotów obejmuje Super Potion, 3 Great Balls, Rare Candy i 5 ukrytych Razz Berries. Szczegółowe położenie przedmiotów i trenerów nie jest jeszcze odwzorowane na pinezkach.'),
+                          ] else if (normalizedQuery == 'fuchsia city') ...[
+                            const Text('Ważne miejsca', style: TextStyle(fontWeight: FontWeight.w700)),
+                            const Text('• Pokémon Center i Poké Mart\\n• Fuchsia Gym — Koga\\n• GO Park i brama Safari Zone\\n• Pokój Warden'),
+                            const SizedBox(height: 8),
+                            const Text('Drużyna Kogi: Weezing Lv. 43, Muk Lv. 43, Golbat Lv. 43 i Venomoth Lv. 44. Połączenia: Route 15, Route 18 i Route 19. Szczegółowe położenie przedmiotów i wejść nie jest jeszcze zweryfikowane na mapie.'),
                           ] else if (normalizedQuery == 'route 2') ...[
                             const Text(
                               'Dzikie Pokémony w trawie (poziomy 3–4)',
