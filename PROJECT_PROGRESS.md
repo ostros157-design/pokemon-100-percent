@@ -1,3 +1,17 @@
+### Audyt zakresu aplikacji i dalszy rozwój map (2026-10-29)
+
+- Przejrzano bieżące pliki repozytorium, w tym ekran główny, poradniki, Pokédex, szczegóły Pokémonów, profil, osiągnięcia, Team, ustawienia, usługi zapisu i ekran map. To audyt kodu w repozytorium, a nie potwierdzenie poprawnego działania na urządzeniu.
+- Potwierdzone w kodzie: katalog Pokédexu zawiera dane National Dex #001–#1025; adresy sprite'ów korzystają z numeru Pokédexu; karty Pokémonów w poradniku otwierają szczegóły Pokémonów; postęp poradników i złapane Pokémony są zapisywane w SharedPreferences; osiągnięcia Pokédexu 1/25/50/100 liczą globalnie unikalne gatunki.
+- Potwierdzone ograniczenia: w `guides_data.dart` znajduje się obecnie jeden poradnik — Let’s Go, Pikachu! (początek przygody do pierwszego Gymu). Sam katalog 28 gier nie oznacza, że istnieją poradniki dla pozostałych gier.
+- Osiągnięcia: aktualny plik zawiera 28 wpisów, z czego 5 jest ukrytych. Działają progi związane z liczbą złapanych Pokémonów i ukończeniem dostępnego Pokédexu; osiągnięcia zależne od odznak, walk, ewolucji, drużyny i ukończenia gier nie są jeszcze odblokowywane na podstawie śledzonych zdarzeń.
+- Team: istnieje zapis drużyny i rekomendacje, ale dane dostępności oraz rekomendacje są obsługiwane tylko dla części gier. Preferencja pozostawienia Hauntera zamiast proponowania Gengara ma testy. Nie znaleziono dedykowanej reguły ograniczającej skład do maksymalnie trzech starterów.
+- Ustawienia: są opcje ciemnego tła, koloru tekstu i znaczków, spoilerów oraz animacji. Nie znaleziono osobnego trybu dla daltonistów.
+- AYN Thor: w bieżącym kodzie nie znaleziono implementacji Game Assist, wyboru ekranu startowego ani zapamiętywania preferencji dwóch ekranów per gra.
+- Aktualizacje i powiadomienia: są szkielety integracji Google Play In-App Updates i Firebase Messaging, ale ich działanie zależy od konfiguracji dystrybucji/ Firebase; nie należy traktować ich jako zweryfikowanych.
+- Mapy: ekran i schemat regionu Kanto istnieją i działają koncepcyjnie offline. Pozostałe regiony nie mają jeszcze przygotowanych map. Dokładne współrzędne przedmiotów i spotkań nie są potwierdzone.
+- Zmiana map z tego audytu: dodano lokalne schematy poglądowe dla wszystkich siedmiu lokacji zapisanych w poradniku Let’s Go, Pikachu!: Pallet Town, Route 1, Viridian City, Route 2, Viridian Forest, Pewter City i Pewter Gym. Każdy schemat ma osobne etykiety i opisy; dane Pokémonów/przedmiotów pochodzą z kroków poradnika, a nie z domyślonych współrzędnych. Zmiany zapisane w commitach `7e36319` i `5d66b1a`.
+- Weryfikacja: nie uruchomiono w tym audycie `flutter analyze`, testów ani budowy APK. Nowe schematy są zapisane w GitHubie, ale nadal wymagają sprawdzenia kompilacji i działania na urządzeniu.
+
 ### Mapy — informacje lokacji oparte na poradniku (2026-10-28)
 - Rozszerzono panel lokalnej mapy o sekcję „Dane z poradnika”: Pokémony i przedmioty są zbierane z rzeczywistych pól kroków poradnika dla wybranej lokacji, a kroki opcjonalne są liczone na podstawie oznaczeń w danych.
 - Dodano informację wyjaśniającą, że lista jest oparta na poradniku i nie gwarantuje występowania każdego wpisu w każdym miejscu lokacji.
