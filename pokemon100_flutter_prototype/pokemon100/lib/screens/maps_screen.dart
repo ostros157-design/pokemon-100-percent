@@ -583,6 +583,24 @@ class _MapsScreenState extends State<MapsScreen> {
                             const Text(
                               'Ukryty przedmiot: Potion w pobliżu północnego wyjścia, na zachód od małego drzewa (pojawia się jako codzienny przedmiot). Położenie opisano tekstowo — pinezka nie jest jeszcze zweryfikowana.',
                             ),
+                          ] else if (normalizedQuery == 'route 2') ...[
+                            const Text(
+                              'Dzikie Pokémony w trawie (poziomy 3–4)',
+                              style: TextStyle(fontWeight: FontWeight.w700),
+                            ),
+                            Text(
+                              _selectedGameId == 'lets_go_eevee'
+                                  ? '• Pidgey — 30%\n• Rattata — 20%\n• Bellsprout — 20%\n• Caterpie — 15%\n• Weedle — 15%'
+                                  : '• Pidgey — 30%\n• Rattata — 20%\n• Oddish — 20%\n• Caterpie — 15%\n• Weedle — 15%',
+                            ),
+                            const SizedBox(height: 8),
+                            const Text(
+                              'Poziomy spotkań: 3–4. Route 2 ma część południową i północną, a Viridian Forest znajduje się pomiędzy nimi. Źródła opisują też wschodnią ścieżkę w stronę Diglett’s Cave.',
+                            ),
+                            const SizedBox(height: 8),
+                            const Text(
+                              'Dokładne pozycje trawy, przejść, przedmiotów i trenerów nie są jeszcze odwzorowane pinezkami. Dane spotkań są tekstowe i nie określają współrzędnych.',
+                            ),
                           ] else if (normalizedQuery == 'route 1') ...[
                             const Text(
                               'Dzikie Pokémony w trawie (poziomy 3–4)',
