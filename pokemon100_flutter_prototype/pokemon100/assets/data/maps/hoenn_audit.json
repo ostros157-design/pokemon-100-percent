@@ -116,7 +116,9 @@
       "connectsTo": [
         "route_109",
         "route_110",
-        "route_134"
+        "route_134",
+        "battle_frontier",
+        "battle_resort"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -134,7 +136,8 @@
         "route_110",
         "route_111",
         "route_117",
-        "route_118"
+        "route_118",
+        "new_mauville"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -213,7 +216,10 @@
       "kind": "town",
       "connectsTo": [
         "route_121",
-        "route_124"
+        "route_124",
+        "team_aqua_hideout",
+        "battle_frontier",
+        "battle_resort"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -245,7 +251,8 @@
       "name": "Sootopolis City",
       "kind": "town",
       "connectsTo": [
-        "route_126"
+        "route_126",
+        "cave_of_origin"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -442,7 +449,8 @@
       "connectsTo": [
         "mauville_city",
         "route_103",
-        "slateport_city"
+        "slateport_city",
+        "new_mauville"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -459,7 +467,8 @@
       "connectsTo": [
         "route_113",
         "route_112",
-        "mauville_city"
+        "mauville_city",
+        "desert_ruins"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -934,7 +943,8 @@
       "kind": "mountain_path",
       "connectsTo": [
         "route_112",
-        "mt_chimney"
+        "mt_chimney",
+        "team_magma_hideout"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -949,7 +959,8 @@
       "name": "Mt. Chimney",
       "kind": "mountain",
       "connectsTo": [
-        "jagged_pass"
+        "jagged_pass",
+        "team_magma_hideout"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -963,10 +974,12 @@
       "id": "desert_ruins",
       "name": "Desert Ruins",
       "kind": "ruins",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_111"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_version_audit_pending",
       "sourceIds": [
         "bulbapedia-hoenn-region",
         "pokemony-hoenn"
@@ -991,10 +1004,13 @@
       "id": "new_mauville",
       "name": "New Mauville",
       "kind": "facility",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_110",
+        "mauville_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_version_audit_pending",
       "sourceIds": [
         "bulbapedia-hoenn-region",
         "pokemony-hoenn"
@@ -1064,10 +1080,12 @@
       "id": "cave_of_origin",
       "name": "Cave of Origin",
       "kind": "cave",
-      "connectsTo": [],
+      "connectsTo": [
+        "sootopolis_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_version_audit_pending",
       "sourceIds": [
         "bulbapedia-hoenn-region",
         "pokemony-hoenn"
@@ -1122,10 +1140,12 @@
       "id": "team_aqua_hideout",
       "name": "Team Aqua Hideout",
       "kind": "hideout",
-      "connectsTo": [],
+      "connectsTo": [
+        "lilycove_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_version_audit_pending",
       "sourceIds": [
         "bulbapedia-hoenn-region",
         "pokemony-hoenn"
@@ -1135,10 +1155,13 @@
       "id": "team_magma_hideout",
       "name": "Team Magma Hideout",
       "kind": "hideout",
-      "connectsTo": [],
+      "connectsTo": [
+        "mt_chimney",
+        "jagged_pass"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_version_audit_pending",
       "sourceIds": [
         "bulbapedia-hoenn-region",
         "pokemony-hoenn"
@@ -1148,10 +1171,13 @@
       "id": "battle_frontier",
       "name": "Battle Frontier",
       "kind": "facility",
-      "connectsTo": [],
+      "connectsTo": [
+        "slateport_city",
+        "lilycove_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_version_audit_pending",
       "sourceIds": [
         "bulbapedia-hoenn-region",
         "pokemony-hoenn"
@@ -1161,10 +1187,13 @@
       "id": "battle_resort",
       "name": "Battle Resort",
       "kind": "facility",
-      "connectsTo": [],
+      "connectsTo": [
+        "slateport_city",
+        "lilycove_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_version_audit_pending",
       "sourceIds": [
         "bulbapedia-hoenn-region",
         "pokemony-hoenn"
