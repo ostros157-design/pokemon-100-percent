@@ -1,0 +1,728 @@
+{
+  "schemaVersion": 1,
+  "region": "Alola",
+  "games": [
+    "Pokémon Sun",
+    "Pokémon Moon",
+    "Pokémon Ultra Sun",
+    "Pokémon Ultra Moon"
+  ],
+  "purpose": "Offline location inventory for later verified schematic map work; not a scale-accurate map.",
+  "coordinatePolicy": "No exact coordinates or collectible pins until verified for the selected game.",
+  "sources": [
+    {
+      "id": "bulbapedia-alola",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Alola",
+      "scope": "Alola islands, settlements, routes and landmarks"
+    },
+    {
+      "id": "pokemony-alola",
+      "url": "https://www.pokemony.com/en/locations?region=alola",
+      "scope": "Alola location inventory and schematic-map conventions"
+    }
+  ],
+  "locations": [
+    {
+      "id": "iki_town",
+      "name": "Iki Town",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "hau_oli_city",
+      "name": "Hau'oli City",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "heahea_city",
+      "name": "Heahea City",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "paniola_town",
+      "name": "Paniola Town",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "konikoni_city",
+      "name": "Konikoni City",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "malie_city",
+      "name": "Malie City",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "po_town",
+      "name": "Po Town",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "seafolk_village",
+      "name": "Seafolk Village",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "tapu_village",
+      "name": "Tapu Village",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "iki_town_melemele",
+      "name": "Iki Town (Melemele)",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "route_1",
+      "name": "Route 1",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "route_2",
+      "name": "Route 2",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "route_3",
+      "name": "Route 3",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "route_4",
+      "name": "Route 4",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "route_5",
+      "name": "Route 5",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "route_6",
+      "name": "Route 6",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "route_7",
+      "name": "Route 7",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "route_8",
+      "name": "Route 8",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "route_9",
+      "name": "Route 9",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "route_10",
+      "name": "Route 10",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "route_11",
+      "name": "Route 11",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "route_12",
+      "name": "Route 12",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "route_13",
+      "name": "Route 13",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "route_14",
+      "name": "Route 14",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "route_15",
+      "name": "Route 15",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "route_16",
+      "name": "Route 16",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "route_17",
+      "name": "Route 17",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "melemele_meadow",
+      "name": "Melemele Meadow",
+      "kind": "natural_area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "verdant_cavern",
+      "name": "Verdant Cavern",
+      "kind": "landmark",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "ten_carat_hill",
+      "name": "Ten Carat Hill",
+      "kind": "location",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "hau_oli_cemetery",
+      "name": "Hau'oli Cemetery",
+      "kind": "location",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "brooklet_hill",
+      "name": "Brooklet Hill",
+      "kind": "location",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "wela_volcano_park",
+      "name": "Wela Volcano Park",
+      "kind": "location",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "lush_jungle",
+      "name": "Lush Jungle",
+      "kind": "natural_area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "diglett_s_tunnel",
+      "name": "Diglett's Tunnel",
+      "kind": "landmark",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "haina_desert",
+      "name": "Haina Desert",
+      "kind": "landmark",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "melemele_sea",
+      "name": "Melemele Sea",
+      "kind": "landmark",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "akala_outskirts",
+      "name": "Akala Outskirts",
+      "kind": "location",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "memorial_hill",
+      "name": "Memorial Hill",
+      "kind": "location",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "aether_paradise",
+      "name": "Aether Paradise",
+      "kind": "landmark",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "thrifty_megamart",
+      "name": "Thrifty Megamart",
+      "kind": "location",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "mount_hokulani",
+      "name": "Mount Hokulani",
+      "kind": "location",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "hokulani_observatory",
+      "name": "Hokulani Observatory",
+      "kind": "landmark",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "lake_of_the_sunne",
+      "name": "Lake of the Sunne",
+      "kind": "location",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "lake_of_the_moone",
+      "name": "Lake of the Moone",
+      "kind": "location",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "vast_poni_canyon",
+      "name": "Vast Poni Canyon",
+      "kind": "landmark",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "resolution_cave",
+      "name": "Resolution Cave",
+      "kind": "landmark",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "poni_grove",
+      "name": "Poni Grove",
+      "kind": "natural_area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "poni_meadow",
+      "name": "Poni Meadow",
+      "kind": "natural_area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "poni_plains",
+      "name": "Poni Plains",
+      "kind": "natural_area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "poni_gauntlet",
+      "name": "Poni Gauntlet",
+      "kind": "location",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "altar_of_the_sunne",
+      "name": "Altar of the Sunne",
+      "kind": "landmark",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "altar_of_the_moone",
+      "name": "Altar of the Moone",
+      "kind": "landmark",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    },
+    {
+      "id": "ultra_space",
+      "name": "Ultra Space",
+      "kind": "landmark",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ]
+    }
+  ]
+}
