@@ -661,8 +661,10 @@ class _MapsScreenState extends State<MapsScreen> {
                               'Dzikie Pokémony w trawie (poziomy 3–8)',
                               style: TextStyle(fontWeight: FontWeight.w700),
                             ),
-                            const Text(
-                              '• Spearow — 30%\\n• Rattata — 30%\\n• Mankey — 20%\\n• Sandshrew — 20%',
+                            Text(
+                              _selectedGameId == 'lets_go_eevee'
+                                  ? '• Spearow — 40%\\n• Rattata — 40%\\n• Ekans — 20%'
+                                  : '• Spearow — 30%\\n• Rattata — 30%\\n• Mankey — 20%\\n• Sandshrew — 20%',
                             ),
                             const SizedBox(height: 8),
                             const Text(
