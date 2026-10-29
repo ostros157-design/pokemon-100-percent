@@ -1,3 +1,10 @@
+### Mapy — poprawiony układ tytułu i kompasu na mapie Kanto (2026-10-29)
+
+- Przeniesiono kompas do wolnego marginesu oceanu, aby nie nakładał się na północne trasy i etykiety lokacji.
+- Zastąpiono sam napis „KANTO” niewielką kartuszą atlasową z podpisem „REGIONAL ATLAS • SCHEMATIC”, z kremowym tłem, obrysem i subtelnym cieniem. Tytuł jest teraz po lewej u góry, a kompas po prawej na dole.
+- Statyczny audyt po zmianie: 76/76 lokacji ma odpowiadające węzły; 84/84 połączenia odpowiadają indeksowi; brak brakujących/nadmiarowych nazw, błędnych indeksów i punktów poza zakresem mapy. Indeks JSON poprawnie się parsuje, wszystkie lokacje mają status współrzędnych i status danych.
+- Commit grafiki: `4fe728e`. Nie uruchamiano Flutter analyzer, testów ani APK; układ wizualny wymaga potwierdzenia po uruchomieniu aplikacji na telefonie/PC.
+
 ### Mapy — kolejny audyt spójności mapy Kanto (2026-10-29)
 
 - Po dodaniu 9 lokacji i danych spotkań jaskiń ponownie sprawdzono JSON oraz powiązania mapy.
