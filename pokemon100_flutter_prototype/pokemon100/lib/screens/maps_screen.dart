@@ -241,6 +241,13 @@ class _MapsScreenState extends State<MapsScreen> {
               const Text(
                 'Dane spotkań dla tej lokacji nie są jeszcze kompletne w indeksie offline. Nie pokazujemy zgadywanych Pokémonów.',
               ),
+              const SizedBox(height: 6),
+              Text(
+                coordinateStatus == 'verified'
+                    ? 'Położenie pinezek: zweryfikowane dla tej lokacji.'
+                    : 'Położenie pinezek: niezweryfikowane — mapa jest poglądowa.',
+                style: Theme.of(context).textTheme.labelSmall,
+              ),
             ],
           ),
         ),
