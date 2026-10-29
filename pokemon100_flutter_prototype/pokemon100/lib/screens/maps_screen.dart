@@ -202,9 +202,25 @@ class _MapsScreenState extends State<MapsScreen> {
     final notableNotes = notableEntries
         .where((name) => !notablePokemon.contains(name))
         .toList();
+    final items = (location['items'] as List?)
+            ?.map((value) => value.toString())
+            .where((value) => value.trim().isNotEmpty)
+            .toList() ??
+        const <String>[];
+    final locationNotes = location['notes']?.toString().trim() ?? '';
+    final trainerCount = location['trainerCount'] is num
+        ? (location['trainerCount'] as num).toInt()
+        : int.tryParse(location['trainerCount']?.toString() ?? '');
+    final hiddenItemCount = location['hiddenItemCount'] is num
+        ? (location['hiddenItemCount'] as num).toInt()
+        : int.tryParse(location['hiddenItemCount']?.toString() ?? '');
+    final dataStatus = location['dataStatus']?.toString() ?? '';
     if (encounters.isEmpty &&
         notablePokemon.isEmpty &&
-        notableNotes.isEmpty) {
+        notableNotes.isEmpty &&
+        items.isEmpty &&
+        locationNotes.isEmpty &&
+        trainerCount == null) {
       return Card(
         child: Padding(
           padding: const EdgeInsets.all(16),
@@ -300,9 +316,60 @@ class _MapsScreenState extends State<MapsScreen> {
                 style: Theme.of(context).textTheme.bodySmall,
               ),
             ],
+            if (locationNotes.isNotEmpty) ...[
+              const SizedBox(height: 8),
+              Text(
+                locationNotes,
+                style: Theme.of(context).textTheme.bodySmall,
+              ),
+            ],
+            if (trainerCount != null || hiddenItemCount != null) ...[
+              const SizedBox(height: 8),
+              Wrap(
+                spacing: 8,
+                runSpacing: 4,
+                children: [
+                  if (trainerCount != null)
+                    Chip(
+                      avatar: const Icon(Icons.sports_martial_arts, size: 16),
+                      label: Text('Trenerzy: $trainerCount'),
+                      visualDensity: VisualDensity.compact,
+                    ),
+                  if (hiddenItemCount != null)
+                    Chip(
+                      avatar: const Icon(Icons.search, size: 16),
+                      label: Text('Ukryte przedmioty: $hiddenItemCount'),
+                      visualDensity: VisualDensity.compact,
+                    ),
+                ],
+              ),
+            ],
+            if (items.isNotEmpty)
+              ExpansionTile(
+                tilePadding: EdgeInsets.zero,
+                childrenPadding: const EdgeInsets.only(bottom: 8),
+                leading: const Icon(Icons.inventory_2_outlined),
+                title: Text('Przedmioty (' + items.length.toString() + ')'),
+                subtitle: const Text(
+                  'Lista tekstowa — bez niepotwierdzonych pinezek',
+                ),
+                children: [
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(items.map((item) => '• $item').join('\n')),
+                  ),
+                ],
+              ),
+            if (dataStatus.isNotEmpty) ...[
+              const SizedBox(height: 4),
+              Text(
+                'Status danych: ' + dataStatus.replaceAll('_', ' '),
+                style: Theme.of(context).textTheme.labelSmall,
+              ),
+            ],
             const SizedBox(height: 8),
             const Text(
-              'Dotknij nazwy, aby otworzyć Pokédex. Dane pokazują znane spotkania dla wybranej gry; nie oznaczają dokładnych współrzędnych na mapie.',
+              'Dotknij nazwy Pokémona, aby otworzyć Pokédex. Listy przedmiotów i trenerów są informacyjne; pinezki pojawią się dopiero po potwierdzeniu ich pozycji na mapie.',
               style: TextStyle(fontSize: 12),
             ),
           ],
