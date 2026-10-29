@@ -234,7 +234,8 @@ class _MapsScreenState extends State<MapsScreen> {
     final locationNotes = location['notes']?.toString().trim() ?? '';
     final trainerCount = location['trainerCount'] is num
         ? (location['trainerCount'] as num).toInt()
-        : int.tryParse(location['trainerCount']?.toString() ?? '');
+        : (int.tryParse(location['trainerCount']?.toString() ?? '') ??
+            (location['trainers'] as List?)?.length);
     final hiddenItemCount = location['hiddenItemCount'] is num
         ? (location['hiddenItemCount'] as num).toInt()
         : int.tryParse(location['hiddenItemCount']?.toString() ?? '');
