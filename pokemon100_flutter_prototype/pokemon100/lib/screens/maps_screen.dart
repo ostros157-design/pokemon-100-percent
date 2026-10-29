@@ -4246,6 +4246,21 @@ class _KantoMapPainter extends CustomPainter {
         ..color = const Color(0xFF577B70)
         ..strokeWidth = 1,
     );
+    final northLabel = TextPainter(
+      text: const TextSpan(
+        text: 'N',
+        style: TextStyle(
+          color: Color(0xFF577B70),
+          fontSize: 10,
+          fontWeight: FontWeight.w900,
+        ),
+      ),
+      textDirection: TextDirection.ltr,
+    )..layout();
+    northLabel.paint(
+      canvas,
+      Offset(compass.dx - northLabel.width / 2, compass.dy - size.width * .055),
+    );
 
     // Full 76-location Kanto topology from the bundled audit index. Node positions are schematic layout coordinates, not in-game coordinates.
     const links = <(int, int)>[
