@@ -138,6 +138,8 @@ class _MapsScreenState extends State<MapsScreen> {
     String query,
   ) {
     if (query.isEmpty) return true;
+    final features = location['features'] as List?;
+    final connections = location['connectsTo'] as List?;
     final searchable = <String>[
       location['name'] as String? ?? '',
       location['id'] as String? ?? '',
@@ -146,8 +148,8 @@ class _MapsScreenState extends State<MapsScreen> {
       location['dataStatus'] as String? ?? '',
       location['parentRegion'] as String? ?? '',
       location['province'] as String? ?? '',
-      ...(location['features'] as List?)?.whereType<String>() ?? const <String>[],
-      ...(location['connectsTo'] as List?)?.whereType<String>() ?? const <String>[],
+      if (features != null) ...features.whereType<String>(),
+      if (connections != null) ...connections.whereType<String>(),
     ];
     return searchable.any((value) => value.toLowerCase().contains(query));
   }
