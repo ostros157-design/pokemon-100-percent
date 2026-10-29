@@ -387,6 +387,11 @@
       "id": "routepedia-fuchsia-pikachu",
       "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/fuchsia-city",
       "scope": "Fuchsia City, Fuchsia Gym and Koga encounter details"
+    },
+    {
+      "id": "bulbapedia-route-list",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/List_of_routes",
+      "scope": "Canonical route termini and connections across Kanto and other regions"
     }
   ],
   "locations": [
@@ -482,8 +487,8 @@
       "name": "Route 1",
       "kind": "route",
       "connectsTo": [
-        "pallet_town",
-        "viridian_city"
+        "viridian_city",
+        "pallet_town"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -643,7 +648,8 @@
       "connectsTo": [
         "route_1",
         "route_2",
-        "route_22"
+        "route_22",
+        "viridian_gym"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -710,9 +716,9 @@
       "name": "Route 2",
       "kind": "route",
       "connectsTo": [
-        "viridian_city",
-        "viridian_forest",
-        "pewter_city"
+        "pewter_city",
+        "digletts_cave",
+        "viridian_city"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -970,7 +976,9 @@
       "kind": "town",
       "connectsTo": [
         "route_2",
-        "route_3"
+        "route_3",
+        "pewter_gym",
+        "pewter_museum"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -1054,8 +1062,8 @@
       "name": "Route 3",
       "kind": "route",
       "connectsTo": [
-        "pewter_city",
-        "mt_moon"
+        "mt_moon",
+        "pewter_city"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -1245,8 +1253,8 @@
       "name": "Route 4",
       "kind": "route",
       "connectsTo": [
-        "mt_moon",
-        "cerulean_city"
+        "cerulean_city",
+        "mt_moon"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -1328,7 +1336,9 @@
         "route_4",
         "route_5",
         "route_9",
-        "route_24"
+        "route_24",
+        "cerulean_gym",
+        "cerulean_cave"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -1456,7 +1466,9 @@
       "name": "Route 25",
       "kind": "route",
       "connectsTo": [
-        "route_24"
+        "cerulean_city",
+        "route_24",
+        "bills_house"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -1540,7 +1552,9 @@
       "kind": "route",
       "connectsTo": [
         "cerulean_city",
-        "underground_path_5_6"
+        "saffron_city",
+        "underground_path_5_6",
+        "day_care"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -1651,8 +1665,9 @@
       "name": "Route 6",
       "kind": "route",
       "connectsTo": [
-        "underground_path_5_6",
-        "vermilion_city"
+        "saffron_city",
+        "vermilion_city",
+        "underground_path_5_6"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -1763,7 +1778,9 @@
       "connectsTo": [
         "route_6",
         "route_11",
-        "ss_anne"
+        "ss_anne",
+        "pokemon_fan_club",
+        "vermilion_gym"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -1820,8 +1837,8 @@
       "name": "Route 7",
       "kind": "route",
       "connectsTo": [
-        "celadon_city",
         "saffron_city",
+        "celadon_city",
         "underground_path_7_8"
       ],
       "localMapAsset": null,
@@ -1856,8 +1873,8 @@
       "name": "Route 9",
       "kind": "route",
       "connectsTo": [
-        "cerulean_city",
-        "route_10"
+        "route_10",
+        "cerulean_city"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -1883,9 +1900,9 @@
       "kind": "route",
       "connectsTo": [
         "route_9",
-        "rock_tunnel",
         "lavender_town",
-        "route_8"
+        "rock_tunnel",
+        "power_plant"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -2034,9 +2051,10 @@
       "name": "Lavender Town",
       "kind": "town",
       "connectsTo": [
+        "route_8",
         "route_10",
         "route_12",
-        "route_8"
+        "pokemon_tower"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -2090,9 +2108,9 @@
       "name": "Route 11",
       "kind": "route",
       "connectsTo": [
-        "vermilion_city",
+        "digletts_cave",
         "route_12",
-        "digletts_cave"
+        "vermilion_city"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -2190,8 +2208,7 @@
       "connectsTo": [
         "lavender_town",
         "route_11",
-        "route_13",
-        "route_8"
+        "route_13"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -2276,7 +2293,9 @@
       "connectsTo": [
         "route_15",
         "route_18",
-        "route_19"
+        "route_19",
+        "safari_zone",
+        "fuchsia_gym"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -2323,7 +2342,9 @@
       "kind": "town",
       "connectsTo": [
         "route_7",
-        "route_16"
+        "route_16",
+        "rocket_hideout",
+        "celadon_gym"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -2346,9 +2367,12 @@
       "name": "Saffron City",
       "kind": "town",
       "connectsTo": [
+        "route_5",
+        "route_6",
         "route_7",
         "route_8",
-        "silph_co"
+        "silph_co",
+        "saffron_gym"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -2407,8 +2431,8 @@
       "name": "Route 18",
       "kind": "route",
       "connectsTo": [
-        "route_17",
-        "fuchsia_city"
+        "fuchsia_city",
+        "route_17"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -2467,8 +2491,7 @@
       "connectsTo": [
         "route_19",
         "seafoam_islands",
-        "cinnabar_island",
-        "route_21"
+        "cinnabar_island"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -2531,7 +2554,9 @@
       "kind": "town",
       "connectsTo": [
         "route_20",
-        "route_21"
+        "route_21",
+        "pokemon_mansion",
+        "cinnabar_gym"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -2552,9 +2577,8 @@
       "name": "Route 21",
       "kind": "water_route",
       "connectsTo": [
-        "cinnabar_island",
         "pallet_town",
-        "route_20"
+        "cinnabar_island"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -2609,7 +2633,7 @@
       "kind": "route",
       "connectsTo": [
         "viridian_city",
-        "route_23"
+        "pokemon_league_reception_gate"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -2623,9 +2647,9 @@
       "name": "Route 23",
       "kind": "route",
       "connectsTo": [
-        "route_22",
-        "victory_road",
-        "indigo_plateau"
+        "pokemon_league_reception_gate",
+        "indigo_plateau",
+        "victory_road"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -2664,7 +2688,8 @@
       "kind": "league",
       "connectsTo": [
         "route_23",
-        "victory_road"
+        "victory_road",
+        "pokemon_league_reception_gate"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -3103,6 +3128,22 @@
       "notes": "Day Care przy Route 5 w Let’s Go; nie jest to system hodowli jaj.",
       "sourceIds": [
         "routepedia-route5-pikachu"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "pokemon_league_reception_gate",
+      "name": "Pokémon League Reception Gate",
+      "kind": "gate",
+      "connectsTo": [
+        "route_22",
+        "route_23",
+        "indigo_plateau"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-route-list"
       ],
       "dataStatus": "text_verified_positions_not_mapped"
     }
