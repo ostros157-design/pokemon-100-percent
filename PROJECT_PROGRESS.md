@@ -1,3 +1,9 @@
+### Mapy — wydarzenia fabularne i post-game na Route 17/22 (2026-10-29)
+
+- Route 22 opisuje teraz także późniejszą walkę z Trace po zdobyciu Earth Badge, z nagrodą $8,160 i informacją, że drużyna zależy od wersji/partnera.
+- Route 17 ma oddzielne wydarzenie post-game z Jessie i Jamesem po zostaniu Championem oraz nagrodą Blast-Off Set.
+- Podpięto referencje Bulbapedia Part 15 i Part 18; nie dodano dokładnych pinezek. Commit danych: `e71e618`. Bez testów, analyzer ani APK.
+
 ### Mapy — uzupełnienie Route 5 i Route 24 (2026-10-29)
 
 - Route 5 dostała wpis o trzech Revive przekazanych przez Trace'a po rozmowie przy Underground Path.
