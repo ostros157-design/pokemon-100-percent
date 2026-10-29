@@ -133,6 +133,25 @@ class _MapsScreenState extends State<MapsScreen> {
         .toList(growable: false);
   }
 
+  bool _matchesMapLocation(
+    Map<String, dynamic> location,
+    String query,
+  ) {
+    if (query.isEmpty) return true;
+    final searchable = <String>[
+      location['name'] as String? ?? '',
+      location['id'] as String? ?? '',
+      location['kind'] as String? ?? '',
+      location['notes'] as String? ?? '',
+      location['dataStatus'] as String? ?? '',
+      location['parentRegion'] as String? ?? '',
+      location['province'] as String? ?? '',
+      ...(location['features'] as List?)?.whereType<String>() ?? const <String>[],
+      ...(location['connectsTo'] as List?)?.whereType<String>() ?? const <String>[],
+    ];
+    return searchable.any((value) => value.toLowerCase().contains(query));
+  }
+
   Map<String, dynamic>? get _selectedMapIndexLocation {
     final query = _searchQuery.trim().toLowerCase();
     if (query.isEmpty) return null;
@@ -707,9 +726,7 @@ class _MapsScreenState extends State<MapsScreen> {
                           ),
                           const SizedBox(height: 8),
                           ..._activeMapIndexLocations
-                              .where((location) => (location['name'] as String? ?? '')
-                                  .toLowerCase()
-                                  .contains(normalizedQuery))
+                              .where((location) => _matchesMapLocation(location, normalizedQuery))
                               .take(normalizedQuery.isEmpty ? 8 : 15)
                               .map((location) {
                             final name = location['name'] as String? ?? 'Lokacja';
@@ -728,10 +745,9 @@ class _MapsScreenState extends State<MapsScreen> {
                               },
                             );
                           }),
-                          if (_activeMapIndexLocations.where((location) =>
-                              (location['name'] as String? ?? '')
-                                  .toLowerCase()
-                                  .contains(normalizedQuery)).isEmpty)
+                          if (_activeMapIndexLocations
+                              .where((location) => _matchesMapLocation(location, normalizedQuery))
+                              .isEmpty)
                             const Text('Brak lokacji o tej nazwie w indeksie regionu.'),
                         ],
                       ),
