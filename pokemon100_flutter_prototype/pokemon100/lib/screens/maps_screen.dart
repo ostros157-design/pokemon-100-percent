@@ -2614,6 +2614,16 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
       'Punkty kontroli': 'Strefa kontroli odznak; układ jest schematyczny.',
       'Wyjście do Indigo Plateau': 'Kierunek wejścia do kompleksu Ligi Pokémon.',
     },
+    "Diglett's Cave (Route 2 entrance)": {
+      'Wejście od Route 2': 'Północne wejście do jaskini; dokładne współrzędne nie są potwierdzone.',
+      'Korytarz': 'Schematyczny korytarz łączący wejście z systemem jaskini.',
+      "Diglett's Cave": 'Dalsza część systemu jaskini.',
+    },
+    "Diglett's Cave (Route 11 entrance)": {
+      'Wejście od Route 11': 'Wschodnie wejście do jaskini; dokładne współrzędne nie są potwierdzone.',
+      'Korytarz': 'Schematyczny korytarz podziemny w stronę głównej jaskini.',
+      "Diglett's Cave": 'Dalsza część systemu jaskini.',
+    },
   };
 
   @override
@@ -2964,6 +2974,13 @@ class _KantoLocalAreaPainter extends CustomPainter {
       path
         ..moveTo(size.width * .14, size.height * .48)
         ..quadraticBezierTo(size.width * .50, size.height * .22, size.width * .86, size.height * .48);
+    } else if (location == "Diglett's Cave (Route 2 entrance)" ||
+        location == "Diglett's Cave (Route 11 entrance)") {
+      drawZone(.12, .30, .28, .34);
+      drawZone(.48, .38, .38, .20);
+      path
+        ..moveTo(size.width * .22, size.height * .47)
+        ..quadraticBezierTo(size.width * .45, size.height * .27, size.width * .70, size.height * .48);
     } else if (location == 'Seafoam Islands') {
       drawZone(.08, .20, .24, .25);
       drawZone(.38, .38, .24, .25);
@@ -3191,6 +3208,18 @@ class _KantoLocalAreaPainter extends CustomPainter {
         ('Route 2', Offset(size.width * .18, size.height * .47)),
         ('Tunel', Offset(size.width * .50, size.height * .48)),
         ('Route 11', Offset(size.width * .80, size.height * .47)),
+      ]);
+    } else if (location == "Diglett's Cave (Route 2 entrance)") {
+      markers.addAll([
+        ('Route 2', Offset(size.width * .22, size.height * .47)),
+        ('Wejście', Offset(size.width * .38, size.height * .46)),
+        ("Diglett's Cave", Offset(size.width * .70, size.height * .48)),
+      ]);
+    } else if (location == "Diglett's Cave (Route 11 entrance)") {
+      markers.addAll([
+        ('Route 11', Offset(size.width * .22, size.height * .47)),
+        ('Wejście', Offset(size.width * .38, size.height * .46)),
+        ("Diglett's Cave", Offset(size.width * .70, size.height * .48)),
       ]);
     } else if (location == 'Seafoam Islands') {
       markers.addAll([
