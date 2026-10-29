@@ -160,6 +160,11 @@ class _MapsScreenState extends State<MapsScreen> {
     return searchable.any((value) => value.toLowerCase().contains(query));
   }
 
+  String _normalizePokemonName(String name) => name
+      .toLowerCase()
+      .replaceAll('’', "'")
+      .replaceAll('‘', "'");
+
   Widget _buildLetsGoEncounterPanel(
     BuildContext context,
     String locationName,
@@ -217,7 +222,7 @@ class _MapsScreenState extends State<MapsScreen> {
               children: encounters.map((entry) {
                 final name = entry['name']!;
                 final matches = pokemonList.where(
-                  (candidate) => candidate.name.toLowerCase() == name.toLowerCase(),
+                  (candidate) => _normalizePokemonName(candidate.name) == _normalizePokemonName(name),
                 );
                 final pokemon = matches.isEmpty ? null : matches.first;
                 final details = <String>[
@@ -740,7 +745,7 @@ class _MapsScreenState extends State<MapsScreen> {
                                   ).map((entry) {
                                     final name = entry['name']!;
                                     final pokemon = pokemonList.cast<dynamic>().firstWhere(
-                                      (candidate) => candidate.name.toLowerCase() == name.toLowerCase(),
+                                      (candidate) => _normalizePokemonName(candidate.name) == _normalizePokemonName(name),
                                       orElse: () => null,
                                     );
                                     final details = <String>[
