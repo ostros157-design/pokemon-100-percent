@@ -978,3 +978,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 
 - Dodatkowo: lokacje bez kompletnej listy spotkań wyświetlają teraz jawny komunikat zamiast pustej sekcji; aplikacja nie zgaduje brakujących gatunków. Commit: `aa7c7d9`.
 
+### Mapy — spotkania na Route 7 i Route 8 (2026-10-29)
+
+- Uzupełniono dane Let’s Go Pikachu/Eevee o spotkania naziemne, Pokémony pojawiające się na niebie oraz spotkania specjalne dla Route 7 i Route 8.
+- Poziomy i procenty zapisano tylko tam, gdzie źródło je podaje; dla spotkań specjalnych bez wiarygodnego procentu nie wymyślono szansy.
+- Dodano i poprawiono identyfikatory źródeł Serebii oraz Routepedia. Dane nadal są tekstowe — nie są dokładnymi pinezkami na mapie.
+- Commity danych: `d4d329e`, `a88a8bb`.
+- Nie uruchamiano Flutter analyzer, testów ani APK.
+
