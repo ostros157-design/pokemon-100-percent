@@ -1508,3 +1508,10 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - „Ukryty przeciwnik” odblokuje się po oznaczeniu jako ukończonego kroku poradnika, którego tytuł lub opis wspomina Team Rocket albo Giovanniego. Obecny poradnik Let’s Go kończy się przed tym wydarzeniem, więc osiągnięcie pozostaje zablokowane, dopóki nie będzie odpowiedniego kroku.
 - „Sekret pełnego ukończenia” wymaga 100% obecnie obliczanego postępu oraz ukończenia poradnika wybranej gry.
 - Zmiany zapisano na gałęzi `mystery/improvement-04`. Nie uruchamiano Flutter analyzer, testów ani APK; warunki sprawdzono statycznie w kodzie.
+
+### Osiągnięcia — dodano 47 nowych ukrytych osiągnięć (2026-10-29)
+
+- Dodano 47 nowych pozycji hidden_extra_01–hidden_extra_47; razem z wcześniejszymi ukrytymi pozycjami katalog zawiera teraz 52 ukryte osiągnięcia (wliczając Shiny i Mistrza serii).
+- Sekrety obejmują progi kolekcji, typy, generacje, Pokémony baby, statystyki bazowe, umiejętności ukryte, rzadkość spotkania, skład drużyny, kroki poradnika i progi postępu.
+- Warunki korzystają z zapisanej kolekcji, danych Pokédexu, drużyny oraz ukończonych kroków poradnika. Zablokowane pozycje nadal pokazują ??? dzięki istniejącemu widżetowi.
+- Zmiany zapisano na gałęzi mystery/improvement-05. Nie uruchamiano Flutter analyzer, testów ani budowania APK.
