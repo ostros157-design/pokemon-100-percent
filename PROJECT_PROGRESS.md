@@ -1014,3 +1014,10 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Dane nie zawierają zmyślonych szans dla specjalnych spawnow. Nie są to pinezki dokładnych pozycji. Commit: `5aa911f`.
 - Nie uruchamiano Flutter analyzer, testów ani APK.
 
+### Mapy — spotkania na Route 22 i Route 23 (2026-10-29)
+
+- Dodano dane o spotkaniach naziemnych, wodnych i na niebie dla obu wersji Let’s Go; uwzględniono również rzadkie spawny specjalne, gdy źródła je wymieniają.
+- W Route 22 poziomy odpowiadają wczesnej części gry, a Route 23 ma zakres poziomów 41–46. Specjalnym spawnow bez podanej szansy nie przypisano procentów.
+- Commit: `d999c20`. Dane nadal nie określają dokładnych pinezek.
+- Nie uruchamiano Flutter analyzer, testów ani APK.
+
