@@ -1,0 +1,977 @@
+{
+  "schemaVersion": 1,
+  "region": "Johto",
+  "games": [
+    "Pokémon Gold",
+    "Pokémon Silver",
+    "Pokémon Crystal",
+    "Pokémon HeartGold",
+    "Pokémon SoulSilver"
+  ],
+  "purpose": "Offline regional location index; not a scale-accurate map.",
+  "coordinatePolicy": "No coordinates or exact item/trainer pins are supplied until verified against the selected game.",
+  "sources": [
+    {
+      "id": "bulbapedia-johto-region",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Johto",
+      "scope": "Johto settlements, routes 29–48 and regional landmarks"
+    },
+    {
+      "id": "bulbapedia-route-list",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/List_of_routes",
+      "scope": "Route termini and connections across Pokémon regions"
+    },
+    {
+      "id": "pokedb-johto",
+      "url": "https://pokedb.org/locations/johto",
+      "scope": "Johto settlements, landmarks and route list"
+    }
+  ],
+  "locations": [
+    {
+      "id": "new_bark_town",
+      "name": "New Bark Town",
+      "kind": "town",
+      "connectsTo": [
+        "route_29"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "route_29",
+      "name": "Route 29",
+      "kind": "route",
+      "connectsTo": [
+        "new_bark_town",
+        "cherrygrove_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "cherrygrove_city",
+      "name": "Cherrygrove City",
+      "kind": "town",
+      "connectsTo": [
+        "route_29",
+        "route_30"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "route_30",
+      "name": "Route 30",
+      "kind": "route",
+      "connectsTo": [
+        "cherrygrove_city",
+        "route_31"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "route_31",
+      "name": "Route 31",
+      "kind": "route",
+      "connectsTo": [
+        "route_30",
+        "violet_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "violet_city",
+      "name": "Violet City",
+      "kind": "town",
+      "connectsTo": [
+        "route_31",
+        "route_32",
+        "sprout_tower"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "sprout_tower",
+      "name": "Sprout Tower",
+      "kind": "tower",
+      "connectsTo": [
+        "violet_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "route_32",
+      "name": "Route 32",
+      "kind": "route",
+      "connectsTo": [
+        "violet_city",
+        "union_cave",
+        "route_33"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "union_cave",
+      "name": "Union Cave",
+      "kind": "cave",
+      "connectsTo": [
+        "route_32",
+        "route_33"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "route_33",
+      "name": "Route 33",
+      "kind": "route",
+      "connectsTo": [
+        "union_cave",
+        "azalea_town"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "azalea_town",
+      "name": "Azalea Town",
+      "kind": "town",
+      "connectsTo": [
+        "route_33",
+        "slowpoke_well",
+        "ilex_forest"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "slowpoke_well",
+      "name": "Slowpoke Well",
+      "kind": "cave",
+      "connectsTo": [
+        "azalea_town"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "ilex_forest",
+      "name": "Ilex Forest",
+      "kind": "forest",
+      "connectsTo": [
+        "azalea_town",
+        "route_34"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "route_34",
+      "name": "Route 34",
+      "kind": "route",
+      "connectsTo": [
+        "ilex_forest",
+        "goldenrod_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "goldenrod_city",
+      "name": "Goldenrod City",
+      "kind": "town",
+      "connectsTo": [
+        "route_34",
+        "route_35",
+        "radio_tower",
+        "goldenrod_tunnel"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "route_35",
+      "name": "Route 35",
+      "kind": "route",
+      "connectsTo": [
+        "goldenrod_city",
+        "national_park",
+        "route_36"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "national_park",
+      "name": "National Park",
+      "kind": "park",
+      "connectsTo": [
+        "route_35",
+        "route_36"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "route_36",
+      "name": "Route 36",
+      "kind": "route",
+      "connectsTo": [
+        "route_35",
+        "violet_city",
+        "route_37"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "route_37",
+      "name": "Route 37",
+      "kind": "route",
+      "connectsTo": [
+        "route_36",
+        "ecruteak_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "ecruteak_city",
+      "name": "Ecruteak City",
+      "kind": "town",
+      "connectsTo": [
+        "route_37",
+        "route_38",
+        "burned_tower",
+        "bell_tower"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "burned_tower",
+      "name": "Burned Tower",
+      "kind": "tower",
+      "connectsTo": [
+        "ecruteak_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "bell_tower",
+      "name": "Bell Tower",
+      "kind": "tower",
+      "connectsTo": [
+        "ecruteak_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "route_38",
+      "name": "Route 38",
+      "kind": "route",
+      "connectsTo": [
+        "ecruteak_city",
+        "route_39"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "route_39",
+      "name": "Route 39",
+      "kind": "route",
+      "connectsTo": [
+        "route_38",
+        "olivine_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "olivine_city",
+      "name": "Olivine City",
+      "kind": "town",
+      "connectsTo": [
+        "route_39",
+        "route_40",
+        "olivine_lighthouse",
+        "ss_aqua"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "olivine_lighthouse",
+      "name": "Olivine Lighthouse",
+      "kind": "tower",
+      "connectsTo": [
+        "olivine_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "route_40",
+      "name": "Route 40",
+      "kind": "water_route",
+      "connectsTo": [
+        "olivine_city",
+        "route_41"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "route_41",
+      "name": "Route 41",
+      "kind": "water_route",
+      "connectsTo": [
+        "route_40",
+        "whirl_islands",
+        "cianwood_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "whirl_islands",
+      "name": "Whirl Islands",
+      "kind": "cave",
+      "connectsTo": [
+        "route_41"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "cianwood_city",
+      "name": "Cianwood City",
+      "kind": "town",
+      "connectsTo": [
+        "route_41"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "route_42",
+      "name": "Route 42",
+      "kind": "route",
+      "connectsTo": [
+        "ecruteak_city",
+        "mt_mortar",
+        "mahogany_town"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "mt_mortar",
+      "name": "Mt. Mortar",
+      "kind": "cave",
+      "connectsTo": [
+        "route_42"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "mahogany_town",
+      "name": "Mahogany Town",
+      "kind": "town",
+      "connectsTo": [
+        "route_42",
+        "route_43",
+        "lake_of_rage",
+        "route_44"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "route_43",
+      "name": "Route 43",
+      "kind": "route",
+      "connectsTo": [
+        "mahogany_town",
+        "lake_of_rage"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "lake_of_rage",
+      "name": "Lake of Rage",
+      "kind": "lake",
+      "connectsTo": [
+        "route_43"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "route_44",
+      "name": "Route 44",
+      "kind": "route",
+      "connectsTo": [
+        "mahogany_town",
+        "ice_path"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "ice_path",
+      "name": "Ice Path",
+      "kind": "cave",
+      "connectsTo": [
+        "route_44",
+        "blackthorn_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "blackthorn_city",
+      "name": "Blackthorn City",
+      "kind": "town",
+      "connectsTo": [
+        "ice_path",
+        "route_45",
+        "dragons_den"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "dragons_den",
+      "name": "Dragon's Den",
+      "kind": "cave",
+      "connectsTo": [
+        "blackthorn_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "route_45",
+      "name": "Route 45",
+      "kind": "route",
+      "connectsTo": [
+        "blackthorn_city",
+        "route_46"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "route_46",
+      "name": "Route 46",
+      "kind": "route",
+      "connectsTo": [
+        "route_45",
+        "route_29"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "dark_cave",
+      "name": "Dark Cave",
+      "kind": "cave",
+      "connectsTo": [
+        "route_31",
+        "route_46"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "ruins_of_alph",
+      "name": "Ruins of Alph",
+      "kind": "ruins",
+      "connectsTo": [
+        "route_32",
+        "violet_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "radio_tower",
+      "name": "Radio Tower",
+      "kind": "building",
+      "connectsTo": [
+        "goldenrod_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "goldenrod_tunnel",
+      "name": "Goldenrod Tunnel",
+      "kind": "tunnel",
+      "connectsTo": [
+        "goldenrod_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "team_rocket_hq",
+      "name": "Team Rocket HQ",
+      "kind": "hideout",
+      "connectsTo": [
+        "mahogany_town"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "route_47",
+      "name": "Route 47",
+      "kind": "route",
+      "connectsTo": [
+        "route_48",
+        "cliff_cave"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "route_48",
+      "name": "Route 48",
+      "kind": "route",
+      "connectsTo": [
+        "route_47",
+        "safari_zone_gate"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "cliff_cave",
+      "name": "Cliff Cave",
+      "kind": "cave",
+      "connectsTo": [
+        "route_47"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "safari_zone_gate",
+      "name": "Safari Zone Gate",
+      "kind": "facility",
+      "connectsTo": [
+        "route_48",
+        "safari_zone"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "safari_zone",
+      "name": "Safari Zone",
+      "kind": "park",
+      "connectsTo": [
+        "safari_zone_gate"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "mt_silver",
+      "name": "Mt. Silver",
+      "kind": "mountain",
+      "connectsTo": [
+        "route_28"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "tohjo_falls",
+      "name": "Tohjo Falls",
+      "kind": "cave",
+      "connectsTo": [
+        "route_27",
+        "route_26"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "ss_aqua",
+      "name": "S.S. Aqua",
+      "kind": "ship",
+      "connectsTo": [
+        "olivine_city",
+        "vermillion_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "route_26",
+      "name": "Route 26",
+      "kind": "route",
+      "connectsTo": [
+        "tohjo_falls",
+        "route_27"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "route_27",
+      "name": "Route 27",
+      "kind": "route",
+      "connectsTo": [
+        "route_26",
+        "tohjo_falls",
+        "route_28"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "route_28",
+      "name": "Route 28",
+      "kind": "route",
+      "connectsTo": [
+        "route_27",
+        "mt_silver",
+        "indigo_plateau"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "indigo_plateau",
+      "name": "Indigo Plateau",
+      "kind": "league",
+      "connectsTo": [
+        "route_28",
+        "victory_road"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    },
+    {
+      "id": "victory_road",
+      "name": "Victory Road",
+      "kind": "cave",
+      "connectsTo": [
+        "route_26",
+        "indigo_plateau"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-johto-region",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "topology_index_needs_game_variant_audit"
+    }
+  ]
+}
