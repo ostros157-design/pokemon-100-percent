@@ -84,7 +84,8 @@
       "kind": "town",
       "connectsTo": [
         "route_203",
-        "route_207"
+        "route_207",
+        "oreburgh_mine"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -100,7 +101,8 @@
       "kind": "town",
       "connectsTo": [
         "route_204",
-        "route_205"
+        "route_205",
+        "fuego_ironworks"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -150,7 +152,8 @@
       "kind": "town",
       "connectsTo": [
         "route_209",
-        "route_210"
+        "route_210",
+        "solaceon_ruins"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -182,7 +185,8 @@
       "kind": "town",
       "connectsTo": [
         "route_212",
-        "route_213"
+        "route_213",
+        "great_marsh"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -213,7 +217,8 @@
       "name": "Canalave City",
       "kind": "town",
       "connectsTo": [
-        "route_218"
+        "route_218",
+        "iron_island"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -228,7 +233,8 @@
       "name": "Snowpoint City",
       "kind": "town",
       "connectsTo": [
-        "acuity_lakefront"
+        "acuity_lakefront",
+        "snowpoint_temple"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -275,7 +281,8 @@
       "kind": "town",
       "connectsTo": [
         "route_225",
-        "route_230"
+        "route_230",
+        "battle_zone"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -291,7 +298,8 @@
       "kind": "town",
       "connectsTo": [
         "route_225",
-        "route_226"
+        "route_226",
+        "battle_zone"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -306,7 +314,8 @@
       "name": "Resort Area",
       "kind": "town",
       "connectsTo": [
-        "route_229"
+        "route_229",
+        "battle_zone"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -832,10 +841,12 @@
       "id": "oreburgh_mine",
       "name": "Oreburgh Mine",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "oreburgh_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-sinnoh",
         "pokemony-sinnoh"
@@ -850,7 +861,7 @@
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-sinnoh",
         "pokemony-sinnoh"
@@ -861,7 +872,8 @@
       "name": "Eterna Forest",
       "kind": "forest",
       "connectsTo": [
-        "route_205"
+        "route_205",
+        "old_chateau"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -875,10 +887,12 @@
       "id": "old_chateau",
       "name": "Old Chateau",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "eterna_forest"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-sinnoh",
         "pokemony-sinnoh"
@@ -892,7 +906,9 @@
         "route_207",
         "route_208",
         "route_211",
-        "route_216"
+        "route_216",
+        "spear_pillar",
+        "distortion_world"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -921,10 +937,12 @@
       "id": "solaceon_ruins",
       "name": "Solaceon Ruins",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "solaceon_town"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-sinnoh",
         "pokemony-sinnoh"
@@ -949,10 +967,12 @@
       "id": "iron_island",
       "name": "Iron Island",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "canalave_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-sinnoh",
         "pokemony-sinnoh"
@@ -1007,10 +1027,12 @@
       "id": "great_marsh",
       "name": "Great Marsh",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "pastoria_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-sinnoh",
         "pokemony-sinnoh"
@@ -1021,11 +1043,12 @@
       "name": "Fuego Ironworks",
       "kind": "dungeon",
       "connectsTo": [
-        "route_205"
+        "route_205",
+        "floaroma_town"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-sinnoh",
         "pokemony-sinnoh"
@@ -1036,7 +1059,8 @@
       "name": "Turnback Cave",
       "kind": "dungeon",
       "connectsTo": [
-        "spring_path"
+        "spring_path",
+        "distortion_world"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -1065,10 +1089,12 @@
       "id": "spear_pillar",
       "name": "Spear Pillar",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "mt_coronet"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-sinnoh",
         "pokemony-sinnoh"
@@ -1078,10 +1104,13 @@
       "id": "distortion_world",
       "name": "Distortion World",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "mt_coronet",
+        "turnback_cave"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-sinnoh",
         "pokemony-sinnoh"
@@ -1106,10 +1135,12 @@
       "id": "snowpoint_temple",
       "name": "Snowpoint Temple",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "snowpoint_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-sinnoh",
         "pokemony-sinnoh"
@@ -1134,10 +1165,14 @@
       "id": "battle_zone",
       "name": "Battle Zone",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "fight_area",
+        "survival_area",
+        "resort_area"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_variant_audit_pending",
       "sourceIds": [
         "bulbapedia-sinnoh",
         "pokemony-sinnoh"
