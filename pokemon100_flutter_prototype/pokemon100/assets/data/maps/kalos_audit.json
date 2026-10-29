@@ -29,7 +29,9 @@
       "id": "vaniville_town",
       "name": "Vaniville Town",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_1"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -42,7 +44,10 @@
       "id": "aquacorde_town",
       "name": "Aquacorde Town",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_1",
+        "route_2"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -55,7 +60,11 @@
       "id": "santalune_city",
       "name": "Santalune City",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_3",
+        "route_4",
+        "route_22"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -68,7 +77,13 @@
       "id": "lumiose_city",
       "name": "Lumiose City",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_4",
+        "route_5",
+        "route_13",
+        "route_14",
+        "route_16"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -81,7 +96,10 @@
       "id": "camphrier_town",
       "name": "Camphrier Town",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_5",
+        "route_7"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -94,7 +112,10 @@
       "id": "ambrette_town",
       "name": "Ambrette Town",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_8",
+        "route_9"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -107,7 +128,10 @@
       "id": "cyllage_city",
       "name": "Cyllage City",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_8",
+        "route_10"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -120,7 +144,10 @@
       "id": "geosenge_town",
       "name": "Geosenge Town",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_10",
+        "route_11"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -133,7 +160,9 @@
       "id": "shalour_city",
       "name": "Shalour City",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_12"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -146,7 +175,10 @@
       "id": "coumarine_city",
       "name": "Coumarine City",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_12",
+        "route_13"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -159,7 +191,10 @@
       "id": "laverre_city",
       "name": "Laverre City",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_14",
+        "route_15"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -172,7 +207,10 @@
       "id": "dendemille_town",
       "name": "Dendemille Town",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_15",
+        "route_17"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -185,7 +223,10 @@
       "id": "anistar_city",
       "name": "Anistar City",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_17",
+        "route_18"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -198,7 +239,10 @@
       "id": "couriway_town",
       "name": "Couriway Town",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_18",
+        "route_19"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -211,7 +255,11 @@
       "id": "snowbelle_city",
       "name": "Snowbelle City",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_19",
+        "route_20",
+        "route_21"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -578,7 +626,8 @@
       "kind": "route",
       "connectsTo": [
         "snowbelle_city",
-        "victory_road"
+        "victory_road",
+        "victory_road_gate"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -595,7 +644,8 @@
       "connectsTo": [
         "victory_road",
         "santalune_city",
-        "chamber_of_emptiness"
+        "chamber_of_emptiness",
+        "victory_road_gate"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -609,7 +659,10 @@
       "id": "santalune_forest",
       "name": "Santalune Forest",
       "kind": "forest",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_2",
+        "route_3"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -622,7 +675,10 @@
       "id": "connecting_cave",
       "name": "Connecting Cave",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_7",
+        "route_8"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -635,7 +691,9 @@
       "id": "glittering_cave",
       "name": "Glittering Cave",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_9"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -648,7 +706,9 @@
       "id": "parfum_palace",
       "name": "Parfum Palace",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_6"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -661,7 +721,9 @@
       "id": "reflection_cave",
       "name": "Reflection Cave",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_11"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -778,7 +840,11 @@
       "id": "victory_road",
       "name": "Victory Road",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_21",
+        "route_22",
+        "victory_road_gate"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
