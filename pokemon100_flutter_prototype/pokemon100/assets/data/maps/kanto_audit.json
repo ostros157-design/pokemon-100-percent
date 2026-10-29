@@ -1401,7 +1401,9 @@
       "connectsTo": [
         "route_22",
         "route_23",
-        "indigo_plateau"
+        "indigo_plateau",
+        "route_26",
+        "route_28"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -1491,6 +1493,22 @@
         "bulbapedia-route-list"
       ],
       "dataStatus": "postgame_topology_indexed_variant_details_pending"
+    },
+    {
+      "id": "new_bark_town",
+      "name": "New Bark Town (Johto)",
+      "region": "Johto",
+      "kind": "town",
+      "connectsTo": [
+        "route_27"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-kanto",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "cross_region_reference"
     }
   ],
   "region": "Kanto",
