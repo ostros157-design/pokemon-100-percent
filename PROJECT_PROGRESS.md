@@ -914,3 +914,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Połączono Zero Gate z West Province (Area Three), gdzie znajduje się wejście do Great Crater of Paldea, oraz Oni Mountain Cave z Oni Mountain.
 - Te krawędzie opisują dostęp do obiektu, nie współrzędne ani dokładną geometrię mapy.
 - Commit: `daf3aa7`.
+
+
+### Mapy — FireRed/LeafGreen: osobny indeks Sevii Islands (2026-10-29)
+
+- Dodano osobny indeks offline Sevii Islands z 7 wyspami i 22 nazwanymi lokacjami/obszarami, w tym Mt. Ember, Icefall Cave, Lost Cave, Dotted Hole, Trainer Tower i Tanoby Ruins.
+- Zarejestrowano asset w `pubspec.yaml`, dodano ładowanie do `MapsScreen` i wybór `Kanto` ↔ `Sevii Islands` dla FireRed/LeafGreen. Kanto pozostaje oddzielone od wysp i nie pokazuje ich w grach, które ich nie zawierają.
+- Commity: `a97c548`, `6360a4b`, `1c95545`.
+- Pozycje pinezek pozostają niezweryfikowane; indeks opisuje nazwy i dostęp, a nie dokładną mapę w skali.
