@@ -1,0 +1,744 @@
+{
+  "schemaVersion": 1,
+  "region": "Kalos",
+  "games": [
+    "Pokémon X",
+    "Pokémon Y"
+  ],
+  "purpose": "Offline location inventory for later verified schematic map work; not a scale-accurate map.",
+  "coordinatePolicy": "No exact coordinates or collectible pins until verified for the selected game.",
+  "sources": [
+    {
+      "id": "bulbapedia-kalos",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Kalos",
+      "scope": "Kalos settlements, routes and landmarks"
+    },
+    {
+      "id": "bulbapedia-route-list",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/List_of_routes",
+      "scope": "Numbered route inventory and connections"
+    },
+    {
+      "id": "pokemony-kalos",
+      "url": "https://www.pokemony.com/en/locations?region=kalos",
+      "scope": "Kalos location inventory and schematic-map conventions"
+    }
+  ],
+  "locations": [
+    {
+      "id": "vaniville_town",
+      "name": "Vaniville Town",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "pokemony-kalos"
+      ]
+    },
+    {
+      "id": "aquacorde_town",
+      "name": "Aquacorde Town",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "pokemony-kalos"
+      ]
+    },
+    {
+      "id": "santalune_city",
+      "name": "Santalune City",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "pokemony-kalos"
+      ]
+    },
+    {
+      "id": "lumiose_city",
+      "name": "Lumiose City",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "pokemony-kalos"
+      ]
+    },
+    {
+      "id": "camphrier_town",
+      "name": "Camphrier Town",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "pokemony-kalos"
+      ]
+    },
+    {
+      "id": "ambrette_town",
+      "name": "Ambrette Town",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "pokemony-kalos"
+      ]
+    },
+    {
+      "id": "cyllage_city",
+      "name": "Cyllage City",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "pokemony-kalos"
+      ]
+    },
+    {
+      "id": "geosenge_town",
+      "name": "Geosenge Town",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "pokemony-kalos"
+      ]
+    },
+    {
+      "id": "shalour_city",
+      "name": "Shalour City",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "pokemony-kalos"
+      ]
+    },
+    {
+      "id": "coumarine_city",
+      "name": "Coumarine City",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "pokemony-kalos"
+      ]
+    },
+    {
+      "id": "laverre_city",
+      "name": "Laverre City",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "pokemony-kalos"
+      ]
+    },
+    {
+      "id": "dendemille_town",
+      "name": "Dendemille Town",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "pokemony-kalos"
+      ]
+    },
+    {
+      "id": "anistar_city",
+      "name": "Anistar City",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "pokemony-kalos"
+      ]
+    },
+    {
+      "id": "couriway_town",
+      "name": "Couriway Town",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "pokemony-kalos"
+      ]
+    },
+    {
+      "id": "snowbelle_city",
+      "name": "Snowbelle City",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "pokemony-kalos"
+      ]
+    },
+    {
+      "id": "kiloude_city",
+      "name": "Kiloude City",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "pokemony-kalos"
+      ]
+    },
+    {
+      "id": "pok_mon_league",
+      "name": "Pokémon League",
+      "kind": "league",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "pokemony-kalos"
+      ]
+    },
+    {
+      "id": "route_1",
+      "name": "Route 1",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_2",
+      "name": "Route 2",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_3",
+      "name": "Route 3",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_4",
+      "name": "Route 4",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_5",
+      "name": "Route 5",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_6",
+      "name": "Route 6",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_7",
+      "name": "Route 7",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_8",
+      "name": "Route 8",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_9",
+      "name": "Route 9",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_10",
+      "name": "Route 10",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_11",
+      "name": "Route 11",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_12",
+      "name": "Route 12",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_13",
+      "name": "Route 13",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_14",
+      "name": "Route 14",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_15",
+      "name": "Route 15",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_16",
+      "name": "Route 16",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_17",
+      "name": "Route 17",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_18",
+      "name": "Route 18",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_19",
+      "name": "Route 19",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_20",
+      "name": "Route 20",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_21",
+      "name": "Route 21",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_22",
+      "name": "Route 22",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "santalune_forest",
+      "name": "Santalune Forest",
+      "kind": "forest",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "pokemony-kalos"
+      ]
+    },
+    {
+      "id": "connecting_cave",
+      "name": "Connecting Cave",
+      "kind": "dungeon",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "pokemony-kalos"
+      ]
+    },
+    {
+      "id": "glittering_cave",
+      "name": "Glittering Cave",
+      "kind": "dungeon",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "pokemony-kalos"
+      ]
+    },
+    {
+      "id": "parfum_palace",
+      "name": "Parfum Palace",
+      "kind": "dungeon",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "pokemony-kalos"
+      ]
+    },
+    {
+      "id": "reflection_cave",
+      "name": "Reflection Cave",
+      "kind": "dungeon",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "pokemony-kalos"
+      ]
+    },
+    {
+      "id": "shabboneau_castle",
+      "name": "Shabboneau Castle",
+      "kind": "dungeon",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "pokemony-kalos"
+      ]
+    },
+    {
+      "id": "tower_of_mastery",
+      "name": "Tower of Mastery",
+      "kind": "dungeon",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "pokemony-kalos"
+      ]
+    },
+    {
+      "id": "lost_hotel",
+      "name": "Lost Hotel",
+      "kind": "dungeon",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "pokemony-kalos"
+      ]
+    },
+    {
+      "id": "frost_cavern",
+      "name": "Frost Cavern",
+      "kind": "dungeon",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "pokemony-kalos"
+      ]
+    },
+    {
+      "id": "pok_ball_factory",
+      "name": "Poké Ball Factory",
+      "kind": "dungeon",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "pokemony-kalos"
+      ]
+    },
+    {
+      "id": "team_flare_secret_hq",
+      "name": "Team Flare Secret HQ",
+      "kind": "dungeon",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "pokemony-kalos"
+      ]
+    },
+    {
+      "id": "terminus_cave",
+      "name": "Terminus Cave",
+      "kind": "dungeon",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "pokemony-kalos"
+      ]
+    },
+    {
+      "id": "sea_spirit_s_den",
+      "name": "Sea Spirit's Den",
+      "kind": "dungeon",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "pokemony-kalos"
+      ]
+    },
+    {
+      "id": "victory_road",
+      "name": "Victory Road",
+      "kind": "dungeon",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "pokemony-kalos"
+      ]
+    },
+    {
+      "id": "friend_safari",
+      "name": "Friend Safari",
+      "kind": "landmark",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "pokemony-kalos"
+      ]
+    },
+    {
+      "id": "battle_maison",
+      "name": "Battle Maison",
+      "kind": "landmark",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-kalos",
+        "pokemony-kalos"
+      ]
+    }
+  ]
+}
