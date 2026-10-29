@@ -2968,6 +2968,15 @@ class _KantoMapPainter extends CustomPainter {
     _MapPlace('Pokémon Fan Club', 0.54, 0.68),
     _MapPlace('Pokémon Day Care', 0.66, 0.44),
     _MapPlace('Pokémon League Reception Gate', 0.12, 0.25),
+    _MapPlace("Player's House", 0.18, 0.85),
+    _MapPlace("Professor Oak's Laboratory", 0.26, 0.84),
+    _MapPlace('Celadon Department Store', 0.45, 0.46),
+    _MapPlace('Celadon Game Corner', 0.46, 0.56),
+    _MapPlace('Celadon Condominiums', 0.37, 0.46),
+    _MapPlace('Cinnabar Lab', 0.16, 0.97),
+    _MapPlace('Fighting Dojo', 0.64, 0.54),
+    _MapPlace('GO Park', 0.72, 0.86),
+    _MapPlace('Sea Cottage', 0.78, 0.16),
   ];
 
   @override
@@ -3203,6 +3212,15 @@ class _KantoMapPainter extends CustomPainter {
       (41,42),
       (42,43),
       (43,64),
+      (65,0),
+      (66,0),
+      (67,30),
+      (68,30),
+      (69,30),
+      (70,38),
+      (71,31),
+      (72,29),
+      (73,11),
     ];;
     final roadShadow = Paint()
       ..color = const Color(0xFF8B9C73).withValues(alpha: .30)
