@@ -172,19 +172,6 @@
       ]
     },
     {
-      "id": "iki_town_melemele",
-      "name": "Iki Town (Melemele)",
-      "kind": "town",
-      "connectsTo": [],
-      "localMapAsset": null,
-      "coordinateStatus": "unverified",
-      "dataStatus": "settlement_known_connections_pending_game_variant_audit",
-      "sourceIds": [
-        "bulbapedia-alola",
-        "pokemony-alola"
-      ]
-    },
-    {
       "id": "route_1",
       "name": "Route 1",
       "kind": "route",
