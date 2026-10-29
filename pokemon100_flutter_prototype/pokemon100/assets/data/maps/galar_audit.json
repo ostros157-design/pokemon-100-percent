@@ -24,6 +24,11 @@
       "id": "bulbapedia-route-list",
       "url": "https://bulbapedia.bulbagarden.net/wiki/List_of_routes",
       "scope": "Numbered route termini and region connections"
+    },
+    {
+      "id": "bulbapedia-wild-area",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Wild_Area",
+      "scope": "Wild Area boundaries, subareas and access from Motostoke/Hammerlocke"
     }
   ],
   "locations": [
@@ -65,14 +70,16 @@
       "kind": "town",
       "connectsTo": [
         "route_3",
-        "galar_mine_no_2"
+        "galar_mine_no_2",
+        "wild_area"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_game_variant_audit",
       "sourceIds": [
         "bulbapedia-galar",
-        "pokemony-galar"
+        "pokemony-galar",
+        "bulbapedia-wild-area"
       ]
     },
     {
@@ -115,14 +122,16 @@
         "route_6",
         "route_7",
         "route_10",
-        "white_hill_station"
+        "white_hill_station",
+        "wild_area"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_game_variant_audit",
       "sourceIds": [
         "bulbapedia-galar",
-        "pokemony-galar"
+        "pokemony-galar",
+        "bulbapedia-wild-area"
       ]
     },
     {
@@ -404,7 +413,28 @@
       "id": "wild_area",
       "name": "Wild Area",
       "kind": "region_area",
-      "connectsTo": [],
+      "connectsTo": [
+        "meetup_spot",
+        "rolling_fields",
+        "dappled_grove",
+        "west_lake_axewell",
+        "watchtower_ruins",
+        "east_lake_axewell",
+        "axews_eye",
+        "north_lake_miloch",
+        "giants_seat",
+        "south_lake_miloch",
+        "motostoke_riverbank",
+        "bridge_field",
+        "stony_wilderness",
+        "giants_cap",
+        "dusty_bowl",
+        "giants_mirror",
+        "lake_of_outrage",
+        "hammerlocke_hills",
+        "motostoke",
+        "hammerlocke"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "subareas": [
@@ -426,9 +456,10 @@
         "Axew's Eye"
       ],
       "sourceIds": [
-        "bulbapedia-galar"
+        "bulbapedia-galar",
+        "bulbapedia-wild-area"
       ],
-      "dataStatus": "subarea_index_needs_weather_and_game_variant_audit"
+      "dataStatus": "subareas_indexed_weather_and_exact_subarea_pins_pending"
     },
     {
       "id": "slumbering_weald",
@@ -808,6 +839,276 @@
         "pokemony-galar"
       ],
       "dataStatus": "connection_indexed_version_and_dlc_audit_pending"
+    },
+    {
+      "id": "meetup_spot",
+      "name": "Meetup Spot",
+      "kind": "wild_area_subarea",
+      "connectsTo": [
+        "wild_area"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "parentRegion": "Wild Area",
+      "sourceIds": [
+        "bulbapedia-wild-area"
+      ],
+      "dataStatus": "subarea_name_and_parent_verified_exact_subarea_pins_pending"
+    },
+    {
+      "id": "rolling_fields",
+      "name": "Rolling Fields",
+      "kind": "wild_area_subarea",
+      "connectsTo": [
+        "wild_area"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "parentRegion": "Wild Area",
+      "sourceIds": [
+        "bulbapedia-wild-area"
+      ],
+      "dataStatus": "subarea_name_and_parent_verified_exact_subarea_pins_pending"
+    },
+    {
+      "id": "dappled_grove",
+      "name": "Dappled Grove",
+      "kind": "wild_area_subarea",
+      "connectsTo": [
+        "wild_area"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "parentRegion": "Wild Area",
+      "sourceIds": [
+        "bulbapedia-wild-area"
+      ],
+      "dataStatus": "subarea_name_and_parent_verified_exact_subarea_pins_pending"
+    },
+    {
+      "id": "west_lake_axewell",
+      "name": "West Lake Axewell",
+      "kind": "wild_area_subarea",
+      "connectsTo": [
+        "wild_area"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "parentRegion": "Wild Area",
+      "sourceIds": [
+        "bulbapedia-wild-area"
+      ],
+      "dataStatus": "subarea_name_and_parent_verified_exact_subarea_pins_pending"
+    },
+    {
+      "id": "watchtower_ruins",
+      "name": "Watchtower Ruins",
+      "kind": "wild_area_subarea",
+      "connectsTo": [
+        "wild_area"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "parentRegion": "Wild Area",
+      "sourceIds": [
+        "bulbapedia-wild-area"
+      ],
+      "dataStatus": "subarea_name_and_parent_verified_exact_subarea_pins_pending"
+    },
+    {
+      "id": "east_lake_axewell",
+      "name": "East Lake Axewell",
+      "kind": "wild_area_subarea",
+      "connectsTo": [
+        "wild_area"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "parentRegion": "Wild Area",
+      "sourceIds": [
+        "bulbapedia-wild-area"
+      ],
+      "dataStatus": "subarea_name_and_parent_verified_exact_subarea_pins_pending"
+    },
+    {
+      "id": "axews_eye",
+      "name": "Axew's Eye",
+      "kind": "wild_area_subarea",
+      "connectsTo": [
+        "wild_area"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "parentRegion": "Wild Area",
+      "sourceIds": [
+        "bulbapedia-wild-area"
+      ],
+      "dataStatus": "subarea_name_and_parent_verified_exact_subarea_pins_pending"
+    },
+    {
+      "id": "north_lake_miloch",
+      "name": "North Lake Miloch",
+      "kind": "wild_area_subarea",
+      "connectsTo": [
+        "wild_area"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "parentRegion": "Wild Area",
+      "sourceIds": [
+        "bulbapedia-wild-area"
+      ],
+      "dataStatus": "subarea_name_and_parent_verified_exact_subarea_pins_pending"
+    },
+    {
+      "id": "giants_seat",
+      "name": "Giant's Seat",
+      "kind": "wild_area_subarea",
+      "connectsTo": [
+        "wild_area"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "parentRegion": "Wild Area",
+      "sourceIds": [
+        "bulbapedia-wild-area"
+      ],
+      "dataStatus": "subarea_name_and_parent_verified_exact_subarea_pins_pending"
+    },
+    {
+      "id": "south_lake_miloch",
+      "name": "South Lake Miloch",
+      "kind": "wild_area_subarea",
+      "connectsTo": [
+        "wild_area"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "parentRegion": "Wild Area",
+      "sourceIds": [
+        "bulbapedia-wild-area"
+      ],
+      "dataStatus": "subarea_name_and_parent_verified_exact_subarea_pins_pending"
+    },
+    {
+      "id": "motostoke_riverbank",
+      "name": "Motostoke Riverbank",
+      "kind": "wild_area_subarea",
+      "connectsTo": [
+        "wild_area"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "parentRegion": "Wild Area",
+      "sourceIds": [
+        "bulbapedia-wild-area"
+      ],
+      "dataStatus": "subarea_name_and_parent_verified_exact_subarea_pins_pending"
+    },
+    {
+      "id": "bridge_field",
+      "name": "Bridge Field",
+      "kind": "wild_area_subarea",
+      "connectsTo": [
+        "wild_area"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "parentRegion": "Wild Area",
+      "sourceIds": [
+        "bulbapedia-wild-area"
+      ],
+      "dataStatus": "subarea_name_and_parent_verified_exact_subarea_pins_pending"
+    },
+    {
+      "id": "stony_wilderness",
+      "name": "Stony Wilderness",
+      "kind": "wild_area_subarea",
+      "connectsTo": [
+        "wild_area"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "parentRegion": "Wild Area",
+      "sourceIds": [
+        "bulbapedia-wild-area"
+      ],
+      "dataStatus": "subarea_name_and_parent_verified_exact_subarea_pins_pending"
+    },
+    {
+      "id": "giants_cap",
+      "name": "Giant's Cap",
+      "kind": "wild_area_subarea",
+      "connectsTo": [
+        "wild_area"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "parentRegion": "Wild Area",
+      "sourceIds": [
+        "bulbapedia-wild-area"
+      ],
+      "dataStatus": "subarea_name_and_parent_verified_exact_subarea_pins_pending"
+    },
+    {
+      "id": "dusty_bowl",
+      "name": "Dusty Bowl",
+      "kind": "wild_area_subarea",
+      "connectsTo": [
+        "wild_area"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "parentRegion": "Wild Area",
+      "sourceIds": [
+        "bulbapedia-wild-area"
+      ],
+      "dataStatus": "subarea_name_and_parent_verified_exact_subarea_pins_pending"
+    },
+    {
+      "id": "giants_mirror",
+      "name": "Giant's Mirror",
+      "kind": "wild_area_subarea",
+      "connectsTo": [
+        "wild_area"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "parentRegion": "Wild Area",
+      "sourceIds": [
+        "bulbapedia-wild-area"
+      ],
+      "dataStatus": "subarea_name_and_parent_verified_exact_subarea_pins_pending"
+    },
+    {
+      "id": "lake_of_outrage",
+      "name": "Lake of Outrage",
+      "kind": "wild_area_subarea",
+      "connectsTo": [
+        "wild_area"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "parentRegion": "Wild Area",
+      "sourceIds": [
+        "bulbapedia-wild-area"
+      ],
+      "dataStatus": "subarea_name_and_parent_verified_exact_subarea_pins_pending"
+    },
+    {
+      "id": "hammerlocke_hills",
+      "name": "Hammerlocke Hills",
+      "kind": "wild_area_subarea",
+      "connectsTo": [
+        "wild_area"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "parentRegion": "Wild Area",
+      "sourceIds": [
+        "bulbapedia-wild-area"
+      ],
+      "dataStatus": "subarea_name_and_parent_verified_exact_subarea_pins_pending"
     }
   ]
 }
