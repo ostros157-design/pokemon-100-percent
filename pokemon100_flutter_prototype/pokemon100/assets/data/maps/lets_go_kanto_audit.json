@@ -2136,6 +2136,54 @@
         "bulbapedia-part12"
       ],
       "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "fuchsia_city",
+      "name": "Fuchsia City",
+      "kind": "town",
+      "connectsTo": [
+        "route_15",
+        "route_18",
+        "route_19"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "features": [
+        "Pokémon Center",
+        "Poké Mart",
+        "Fuchsia Gym",
+        "GO Park",
+        "Safari Zone Gate",
+        "pokój Warden"
+      ],
+      "items": [
+        "Super Lure"
+      ],
+      "gymLeader": {
+        "name": "Koga",
+        "team": [
+          {
+            "name": "Weezing",
+            "level": 43
+          },
+          {
+            "name": "Muk",
+            "level": 43
+          },
+          {
+            "name": "Golbat",
+            "level": 43
+          },
+          {
+            "name": "Venomoth",
+            "level": 44
+          }
+        ]
+      },
+      "sourceIds": [
+        "bulbapedia-part12"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
     }
   ]
 }
