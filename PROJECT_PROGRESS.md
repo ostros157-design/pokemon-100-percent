@@ -968,3 +968,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Commit UI: `7b52d8c`.
 - Nie uruchamiano Flutter analyzer, testów ani APK. Zmiana wymaga późniejszego testu w aplikacji.
 
+### Mapy — klikalne spotkania również w widoku Let’s Go (2026-10-29)
+
+- Dodano panel spotkań dla wybranej lokacji w widoku Kanto dla Let’s Go, Pikachu! i Let’s Go, Eevee!, korzystający z danych indeksu `lets_go_kanto_audit.json`.
+- Panel wyświetla Pokémony, poziomy, procenty i metodę spotkania, jeśli pola są dostępne. Nazwa prowadzi do szczegółów Pokédexu.
+- Poprawiono wyszukiwanie gatunku tak, aby nie wymagało rozszerzenia `firstOrNull`.
+- Commity: `70a9a31` (panel), `300df8d` (zgodność Dart).
+- Nadal nie uruchamiano Flutter analyzer, testów ani budowy APK; proszę sprawdzić działanie po swojej stronie.
+
