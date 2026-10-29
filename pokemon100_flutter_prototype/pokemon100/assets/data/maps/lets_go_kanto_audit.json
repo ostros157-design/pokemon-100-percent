@@ -718,7 +718,8 @@
       "connectsTo": [
         "pewter_city",
         "digletts_cave",
-        "viridian_city"
+        "viridian_city",
+        "viridian_forest"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -2053,7 +2054,8 @@
         "route_8",
         "route_10",
         "route_12",
-        "pokemon_tower"
+        "pokemon_tower",
+        "rock_tunnel"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
