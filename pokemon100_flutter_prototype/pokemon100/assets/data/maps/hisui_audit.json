@@ -420,10 +420,11 @@
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "dataStatus": "subarea_named_location_pins_pending",
       "sourceIds": [
         "bulbapedia-hisui",
-        "legends-arceus-locations"
+        "legends-arceus-locations",
+        "bulbapedia-hisui-subareas"
       ],
       "parentRegion": "Alabaster Icelands"
     },
@@ -1539,22 +1540,6 @@
       "id": "heart_s_crag",
       "name": "Heart's Crag",
       "kind": "natural_area",
-      "parentRegion": "Alabaster Icelands",
-      "connectsTo": [
-        "alabaster_icelands"
-      ],
-      "localMapAsset": null,
-      "coordinateStatus": "unverified",
-      "sourceIds": [
-        "bulbapedia-hisui",
-        "bulbapedia-hisui-subareas"
-      ],
-      "dataStatus": "subarea_named_location_pins_pending"
-    },
-    {
-      "id": "arena_s_approach",
-      "name": "Arena's Approach",
-      "kind": "landmark",
       "parentRegion": "Alabaster Icelands",
       "connectsTo": [
         "alabaster_icelands"
