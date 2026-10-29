@@ -2878,7 +2878,7 @@ class _KantoLocalAreaPainter extends CustomPainter {
     'Route 8': ('Saffron City', 'Lavender Town'),
     'Route 9': ('Cerulean City', 'Route 10'),
     'Route 10': ('Route 9', 'Lavender Town'),
-    'Route 11': ('Vermilion City', 'Route 12'),
+    'Route 11': ('Vermilion City', "Diglett's Cave (Route 11 entrance)"),
     'Route 12': ('Lavender Town', 'Route 13'),
     'Route 13': ('Route 12', 'Route 14'),
     'Route 14': ('Route 13', 'Route 15'),
