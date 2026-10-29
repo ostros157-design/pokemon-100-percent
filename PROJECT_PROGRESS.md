@@ -1300,3 +1300,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Poprawiono przeliczenia współrzędnych wybierania punktów dla nowego wymiaru mapy. Zoom dotykowy, przesuwanie i ręczne przyciski pozostają dostępne.
 - Commit: `6cf9e32`. Weryfikacja tekstowa potwierdziła 76 węzłów, 84 połączenia, brak brakujących lokacji i brak pozycji poza obszarem mapy. Nie uruchamiano aplikacji, analyzer, testów ani APK; rzeczywiste zachowanie interakcji nadal wymaga sprawdzenia na telefonie/PC.
 
+### Mapy — Kanto: dopasowanie widoku i status pinezek w szczegółach (2026-10-29)
+
+- Główny widok Kanto ma teraz proporcje 900×660 i dopasowuje skalę do widocznego obszaru przy otwarciu oraz centrowaniu; dzięki temu pełna mapa mieści się od razu w widoku telefonu i komputera zamiast zaczynać od przyciętego kwadratu.
+- Zmieniono przeliczenia współrzędnych dotyku dla nowego wymiaru mapy i obniżono minimalny zoom do 0,35×.
+- Panel lokacji Let’s Go pokazuje jawny status pozycji pinezek. Przy `coordinateStatus: "unverified"` użytkownik widzi informację, że położenie jest poglądowe — również gdy dana lokacja nie ma jeszcze listy spotkań.
+- Commity: `6cf9e32` (dopasowanie mapy), `af94e00` i `a63589a` (status pinezek w panelu).
+- Nie uruchamiano testów, analyzer ani APK. Dopasowanie skali i interakcje wymagają późniejszego sprawdzenia na rzeczywistym ekranie; nie potwierdzono jeszcze dokładnych współrzędnych gry.
+
