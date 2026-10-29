@@ -1334,3 +1334,8 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Ujednolicono status danych dla 9 dodatkowych budynków i wnętrz: indeks informuje teraz, że schemat poglądowy jest dostępny, a dokładny układ pięter nadal czeka na weryfikację. Wcześniejszy status mógł sugerować, że nie ma żadnego schematu lokalnego.
 - Commit danych: `9bd43d5`. Bez uruchamiania testów, analyzer ani APK.
 
+### Mapy — Kanto: czytelne statusy danych po polsku (2026-10-29)
+
+- Statusy indeksu lokacji są teraz mapowane na krótkie komunikaty po polsku, np. „Szanse spotkań sprawdzone; pinezki niezweryfikowane” lub „Schemat wnętrza dostępny; dokładny plan pięter do weryfikacji”.
+- Commit UI: `03d5916`. Nie uruchamiano testów, analyzer ani APK.
+
