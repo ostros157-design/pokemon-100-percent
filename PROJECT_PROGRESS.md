@@ -1232,3 +1232,8 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Do algorytmu rozmieszczania etykiet dodano prostokąty plakietek tras jako zajęte obszary, aby nazwy lokacji nie były celowo układane na numerach Route.
 - Commit: `ce47527`. To poprawka układu graficznego; bez testów i APK.
 
+### Mapy — Kanto: kompas z oznaczeniem północy (2026-10-29)
+
+- Dodano literę N nad kompasem, aby ozdobny element wskazywał również orientację mapy.
+- Commit: `b13b24e`. Bez uruchamiania testów i APK.
+
