@@ -1273,3 +1273,13 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Sprawdzono 25 definicji końców dla Route 3–25 i obu Underground Path: każda nazwa końcowa wskazuje istniejący węzeł mapy, w tym nową lokację „Diglett's Cave (Route 11 entrance)”.
 - Commity po tej korekcie: `e5f3ffb`, `68879d0`, `02005cf`. To audyt statyczny nazw, nie test aplikacji.
 
+### Mapy — Kanto: wygładzenie grafiki i porządek w punktach lokacji (2026-10-29)
+
+- Włączono antyaliasing dla wszystkich 82 pędzli używanych przez główny rysunek Kanto i lokalne schematy, aby krawędzie krzywych, ikon, tras i etykiet były gładsze przy skalowaniu.
+- Rozsunięto 26 punktów budynków, Gymów i innych obiektów w zatłoczonych skupiskach. Statyczny pomiar układu wykazał spadek par węzłów oddalonych od siebie o mniej niż 3,5% rozmiaru mapy z 22 do 4; nie zmienia to topologii połączeń.
+- Doprecyzowano tekst w UI: 76 lokacji ma schematy lokalne, 84 połączenia odpowiadają indeksowi, a dostępne listy spotkań/notatki nie oznaczają dokładnych pinezek.
+- Wszystkim 76 lokacjom jawnie ustawiono `coordinateStatus: "unverified"`, ponieważ ich pozycje na ilustracji są poglądowe i nie wolno przedstawiać ich jako zweryfikowanych współrzędnych gry.
+- Audyt statyczny: 76/76 nazw lokacji znajduje się na mapie; 84/84 połączenia są zgodne z indeksem; 76/76 lokacji ma własny zestaw schematu lokalnego; brak duplikatów nazw schematów i brak błędnych identyfikatorów źródeł. 121 rozpoznanych nazw spotkań Pokémonów pasuje do katalogu Pokédexu.
+- Commity: `35e9e7a` (antyaliasing), `fff5166` (rozsunięcie punktów), `51b6ece` (status współrzędnych), `5966b82` (opisy UI).
+- Nie uruchamiano `flutter analyze`, testów ani budowania APK. Grafika pozostaje autorską mapą poglądową; dokładna geometria terenu, pięter i pozycje pinezek wymagają osobnej weryfikacji ze źródłowymi mapami gry oraz oglądu w działającej aplikacji.
+
