@@ -1553,14 +1553,37 @@ class _KantoMapPainter extends CustomPainter {
       (3, 4), (4, 8), (8, 5), (5, 9), (2, 7), (7, 8),
       (8, 6), (5, 10),
     ];
-    final roadPaint = Paint()
-      ..color = route.withValues(alpha: .72)
-      ..strokeWidth = 2.4
+    final roadShadow = Paint()
+      ..color = const Color(0xFF8B9C73).withValues(alpha: .30)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 11
       ..strokeCap = StrokeCap.round;
-    for (final link in links) {
+    final roadEdge = Paint()
+      ..color = const Color(0xFFFAF1CE)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 8
+      ..strokeCap = StrokeCap.round;
+    final roadCenter = Paint()
+      ..color = const Color(0xFFE5D49B)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 4.5
+      ..strokeCap = StrokeCap.round;
+    for (var index = 0; index < links.length; index++) {
+      final link = links[index];
       final a = places[link.$1];
       final b = places[link.$2];
-      canvas.drawLine(p(a.x, a.y), p(b.x, b.y), roadPaint);
+      final start = p(a.x, a.y);
+      final end = p(b.x, b.y);
+      final midpoint = Offset(
+        (start.dx + end.dx) / 2 + (index.isEven ? 9 : -9),
+        (start.dy + end.dy) / 2 + (index % 3 == 0 ? -8 : 7),
+      );
+      final road = Path()
+        ..moveTo(start.dx, start.dy)
+        ..quadraticBezierTo(midpoint.dx, midpoint.dy, end.dx, end.dy);
+      canvas.drawPath(road, roadShadow);
+      canvas.drawPath(road, roadEdge);
+      canvas.drawPath(road, roadCenter);
     }
 
     for (final place in places) {
