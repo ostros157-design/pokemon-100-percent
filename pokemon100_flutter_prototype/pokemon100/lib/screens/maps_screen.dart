@@ -4338,6 +4338,7 @@ class _KantoMapPainter extends CustomPainter {
     // Forest patches are decorative landscape, while town/cave symbols are
     // drawn at each actual selectable node below so they stay aligned.
     
+    final occupiedLabelRects = <Rect>[];
     for (final place in places) {
       final point = p(place.x, place.y);
       final name = place.name;
@@ -4423,11 +4424,49 @@ class _KantoMapPainter extends CustomPainter {
           textDirection: TextDirection.ltr,
           maxLines: 1,
         )..layout(maxWidth: size.width * .42);
-        var dx = point.dx + 10;
-        if (dx + text.width > size.width - 4) dx = point.dx - text.width - 10;
-        var dy = point.dy - text.height / 2;
-        dy = dy.clamp(4.0, size.height - text.height - 4);
-        text.paint(canvas, Offset(dx, dy));
+        final candidates = <Offset>[
+          Offset(point.dx + 10, point.dy - text.height / 2),
+          Offset(point.dx - text.width - 10, point.dy - text.height / 2),
+          Offset(point.dx - text.width / 2, point.dy - text.height - 10),
+          Offset(point.dx - text.width / 2, point.dy + 10),
+        ];
+        Offset? bestOffset;
+        Rect? bestRect;
+        var bestOverlap = double.infinity;
+        for (final candidate in candidates) {
+          final dx = candidate.dx.clamp(4.0, size.width - text.width - 4).toDouble();
+          final dy = candidate.dy.clamp(4.0, size.height - text.height - 4).toDouble();
+          final rect = Rect.fromLTWH(dx - 2, dy - 2, text.width + 4, text.height + 4);
+          var overlap = 0.0;
+          for (final occupied in occupiedLabelRects) {
+            final intersection = rect.intersect(occupied);
+            if (!intersection.isEmpty) {
+              overlap += intersection.width * intersection.height;
+            }
+          }
+          if (overlap < bestOverlap) {
+            bestOverlap = overlap;
+            bestOffset = Offset(dx, dy);
+            bestRect = rect;
+          }
+          if (overlap == 0) break;
+        }
+        final labelOffset = bestOffset ?? candidates.first;
+        final labelRect = bestRect ??
+            Rect.fromLTWH(labelOffset.dx, labelOffset.dy, text.width, text.height);
+        occupiedLabelRects.add(labelRect);
+        canvas.drawRRect(
+          RRect.fromRectAndRadius(labelRect, const Radius.circular(3)),
+          Paint()..color = const Color(0xFFF8F1D9).withValues(alpha: .88),
+        );
+        canvas.drawRRect(
+          RRect.fromRectAndRadius(labelRect, const Radius.circular(3)),
+          Paint()
+            ..color = const Color(0xFF78906F).withValues(alpha: .36)
+            ..style = PaintingStyle.stroke
+            ..strokeWidth = .7,
+        );
+        text.paint(canvas, labelOffset);
       }
     }
 
