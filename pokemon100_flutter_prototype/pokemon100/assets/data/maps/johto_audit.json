@@ -881,7 +881,7 @@
       "kind": "ship",
       "connectsTo": [
         "olivine_city",
-        "vermillion_city"
+        "vermilion_city"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
