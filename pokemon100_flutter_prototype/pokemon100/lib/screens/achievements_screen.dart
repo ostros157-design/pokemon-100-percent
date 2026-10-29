@@ -158,11 +158,9 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
         }
       }
     }
-    final totalObjectives = totalGuideSteps + pokemonList.length;
-    final completedObjectives = completedGuideSteps + selectedGameIds.length;
-    final gameProgressPercent = totalObjectives == 0
+    final gameProgressPercent = totalGuideSteps == 0
         ? 0
-        : (completedObjectives * 100 / totalObjectives).round();
+        : (completedGuideSteps * 100 / totalGuideSteps).round();
     final additionalAchievementUnlocks = <String, bool>{
       'achievement_extra_01': allCaughtIds.length >= 5,
       'achievement_extra_02': allCaughtIds.length >= 10,
@@ -262,7 +260,7 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
       case 'hidden_team_rocket':
         return _hiddenTeamRocketDefeated;
       case 'hidden_complete':
-        return _hiddenCompletionReached;
+        return _hiddenCompletionReached && _globalCaughtCount > 0;
       case 'achievement_extra_01':
       case 'achievement_extra_02':
       case 'achievement_extra_03':
