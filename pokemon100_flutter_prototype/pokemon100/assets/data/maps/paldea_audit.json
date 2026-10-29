@@ -104,6 +104,11 @@
       "id": "bulbapedia-east-area-three",
       "url": "https://bulbapedia.bulbagarden.net/wiki/Area_Three_of_the_East_Province",
       "scope": "East Province Area Three connections"
+    },
+    {
+      "id": "bulbapedia-ten-sights",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Casseroya_Falls",
+      "scope": "Ten Sights of Paldea and their parent regions"
     }
   ],
   "locations": [
@@ -113,17 +118,19 @@
       "kind": "town",
       "connectsTo": [
         "south_province_area_one",
-        "poco_path"
+        "poco_path",
+        "poco_path_lighthouse"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "settlement_area_connections_source_verified_exact_map_pins_pending",
+      "dataStatus": "landmark_area_connection_source_verified_exact_pin_pending",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
         "bulbapedia-south-area-one",
         "bulbapedia-mesagoza",
-        "bulbapedia-cities-towns"
+        "bulbapedia-cities-towns",
+        "bulbapedia-ten-sights"
       ],
       "province": "South Province"
     },
@@ -154,16 +161,19 @@
         "south_province_area_one",
         "south_province_area_two",
         "south_province_area_three",
-        "pok_mon_league"
+        "pok_mon_league",
+        "naranja_academy",
+        "uva_academy"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "core_access_connections_source_verified_exact_map_pins_pending",
+      "dataStatus": "landmark_area_connection_source_verified_exact_pin_pending",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
         "bulbapedia-south-area-one",
-        "bulbapedia-mesagoza"
+        "bulbapedia-mesagoza",
+        "bulbapedia-ten-sights"
       ],
       "province": "South Province"
     },
@@ -172,15 +182,17 @@
       "name": "Cortondo",
       "kind": "town",
       "connectsTo": [
-        "south_province_area_two"
+        "south_province_area_two",
+        "grand_olive_orchard"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "settlement_area_connections_source_verified_exact_map_pins_pending",
+      "dataStatus": "landmark_area_connection_source_verified_exact_pin_pending",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
-        "bulbapedia-cities-towns"
+        "bulbapedia-cities-towns",
+        "bulbapedia-ten-sights"
       ],
       "province": "South Province"
     },
@@ -207,15 +219,17 @@
       "name": "Levincia",
       "kind": "town",
       "connectsTo": [
-        "east_province_area_two"
+        "east_province_area_two",
+        "million_volt_skyline"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "settlement_area_connections_source_verified_exact_map_pins_pending",
+      "dataStatus": "landmark_area_connection_source_verified_exact_pin_pending",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
-        "bulbapedia-cities-towns"
+        "bulbapedia-cities-towns",
+        "bulbapedia-ten-sights"
       ],
       "province": "East Province"
     },
@@ -243,15 +257,17 @@
       "kind": "town",
       "connectsTo": [
         "west_province_area_two",
-        "west_paldean_sea"
+        "west_paldean_sea",
+        "colonnade_hollow"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "settlement_area_connections_source_verified_exact_map_pins_pending",
+      "dataStatus": "landmark_area_connection_source_verified_exact_pin_pending",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
-        "bulbapedia-cities-towns"
+        "bulbapedia-cities-towns",
+        "bulbapedia-ten-sights"
       ],
       "province": "West Province"
     },
@@ -353,17 +369,19 @@
         "los_platos",
         "mesagoza",
         "south_province_area_four",
-        "south_province_area_five"
+        "south_province_area_five",
+        "grasswither_shrine"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "settlement_area_connections_source_verified_exact_map_pins_pending",
+      "dataStatus": "landmark_area_connection_source_verified_exact_pin_pending",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
         "bulbapedia-south-area-one",
         "bulbapedia-mesagoza",
-        "bulbapedia-cities-towns"
+        "bulbapedia-cities-towns",
+        "bulbapedia-ten-sights"
       ],
       "province": "South Province"
     },
@@ -374,18 +392,20 @@
       "connectsTo": [
         "mesagoza",
         "cortondo",
-        "west_province_area_one"
+        "west_province_area_one",
+        "grand_olive_orchard"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_connection_source_verified_exact_map_pins_pending",
+      "dataStatus": "landmark_area_connection_source_verified_exact_pin_pending",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
         "bulbapedia-south-area-one",
         "bulbapedia-mesagoza",
         "bulbapedia-cities-towns",
-        "bulbapedia-west-area-one"
+        "bulbapedia-west-area-one",
+        "bulbapedia-ten-sights"
       ],
       "province": "South Province"
     },
@@ -436,16 +456,18 @@
       "name": "South Province (Area Five)",
       "kind": "area",
       "connectsTo": [
-        "south_province_area_one"
+        "south_province_area_one",
+        "secluded_beach"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "core_access_connections_source_verified_exact_map_pins_pending",
+      "dataStatus": "landmark_area_connection_source_verified_exact_pin_pending",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
         "bulbapedia-south-area-one",
-        "bulbapedia-mesagoza"
+        "bulbapedia-mesagoza",
+        "bulbapedia-ten-sights"
       ],
       "province": "South Province"
     },
@@ -458,17 +480,19 @@
         "west_province_area_one",
         "south_province_area_four",
         "south_paldean_sea",
-        "alfornada_cavern"
+        "alfornada_cavern",
+        "leaking_tower_of_paldea"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_connection_source_verified_exact_map_pins_pending",
+      "dataStatus": "landmark_area_connection_source_verified_exact_pin_pending",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
         "bulbapedia-cities-towns",
         "bulbapedia-south-area-six",
-        "bulbapedia-west-area-one"
+        "bulbapedia-west-area-one",
+        "bulbapedia-ten-sights"
       ],
       "province": "South Province"
     },
@@ -482,17 +506,19 @@
         "asado_desert",
         "west_province_area_three",
         "south_province_area_two",
-        "south_province_area_four"
+        "south_province_area_four",
+        "icerend_shrine"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_connection_source_verified_exact_map_pins_pending",
+      "dataStatus": "landmark_area_connection_source_verified_exact_pin_pending",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
         "bulbapedia-cities-towns",
         "bulbapedia-south-area-six",
-        "bulbapedia-west-area-one"
+        "bulbapedia-west-area-one",
+        "bulbapedia-ten-sights"
       ],
       "province": "West Province"
     },
@@ -502,16 +528,18 @@
       "kind": "area",
       "connectsTo": [
         "porto_marinada",
-        "west_province_area_three"
+        "west_province_area_three",
+        "colonnade_hollow"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_connection_source_verified_exact_map_pins_pending",
+      "dataStatus": "landmark_area_connection_source_verified_exact_pin_pending",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
         "bulbapedia-cities-towns",
-        "bulbapedia-west-area-three"
+        "bulbapedia-west-area-three",
+        "bulbapedia-ten-sights"
       ],
       "province": "West Province"
     },
@@ -588,11 +616,12 @@
         "zapapico",
         "east_province_area_two",
         "north_province_area_one",
-        "north_province_area_two"
+        "north_province_area_two",
+        "million_volt_skyline"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_connection_source_verified_exact_map_pins_pending",
+      "dataStatus": "landmark_area_connection_source_verified_exact_pin_pending",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
@@ -600,7 +629,8 @@
         "bulbapedia-east-area-two",
         "bulbapedia-north-area-one",
         "bulbapedia-north-area-two",
-        "bulbapedia-east-area-three"
+        "bulbapedia-east-area-three",
+        "bulbapedia-ten-sights"
       ],
       "province": "East Province"
     },
@@ -632,16 +662,18 @@
       "kind": "area",
       "connectsTo": [
         "north_province_area_one",
-        "east_province_area_three"
+        "east_province_area_three",
+        "fury_falls"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_connection_source_verified_exact_map_pins_pending",
+      "dataStatus": "landmark_area_connection_source_verified_exact_pin_pending",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
         "bulbapedia-north-area-one",
-        "bulbapedia-north-area-two"
+        "bulbapedia-north-area-two",
+        "bulbapedia-ten-sights"
       ],
       "province": "North Province"
     },
@@ -700,15 +732,19 @@
       "name": "Casseroya Lake",
       "kind": "area",
       "connectsTo": [
-        "west_province_area_three"
+        "west_province_area_three",
+        "glaseados_grasp",
+        "gracia_stones",
+        "casseroya_falls"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_connection_source_verified_exact_map_pins_pending",
+      "dataStatus": "landmark_area_connection_source_verified_exact_pin_pending",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
-        "bulbapedia-west-area-three"
+        "bulbapedia-west-area-three",
+        "bulbapedia-ten-sights"
       ],
       "province": "North Province"
     },
@@ -720,18 +756,22 @@
         "montenevera",
         "north_province_area_one",
         "dalizapa_passage",
-        "west_province_area_three"
+        "west_province_area_three",
+        "glaseados_grasp",
+        "casseroya_falls",
+        "paldeas_highest_peak"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_connection_source_verified_exact_map_pins_pending",
+      "dataStatus": "landmark_area_connection_source_verified_exact_pin_pending",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
         "bulbapedia-cities-towns",
         "bulbapedia-north-area-one",
         "bulbapedia-montenevera",
-        "bulbapedia-west-area-three"
+        "bulbapedia-west-area-three",
+        "bulbapedia-ten-sights"
       ],
       "province": "North Province"
     },
@@ -761,13 +801,17 @@
       "id": "socarrat_trail",
       "name": "Socarrat Trail",
       "kind": "natural_area",
-      "connectsTo": [],
+      "connectsTo": [
+        "gracia_stones",
+        "groundblight_shrine"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "dataStatus": "landmark_area_connection_source_verified_exact_pin_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-ten-sights"
       ],
       "province": "North Province"
     },
@@ -812,13 +856,17 @@
       "id": "poco_path_lighthouse",
       "name": "Poco Path Lighthouse",
       "kind": "area",
-      "connectsTo": [],
+      "connectsTo": [
+        "poco_path",
+        "cabo_poco"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "dataStatus": "landmark_area_connection_source_verified_exact_pin_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-ten-sights"
       ],
       "province": "South Province"
     },
@@ -827,15 +875,17 @@
       "name": "South Paldean Sea",
       "kind": "water_area",
       "connectsTo": [
-        "south_province_area_six"
+        "south_province_area_six",
+        "secluded_beach"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_connection_source_verified_exact_map_pins_pending",
+      "dataStatus": "landmark_area_connection_source_verified_exact_pin_pending",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
-        "bulbapedia-south-area-six"
+        "bulbapedia-south-area-six",
+        "bulbapedia-ten-sights"
       ]
     },
     {
@@ -874,13 +924,16 @@
       "id": "north_paldean_sea",
       "name": "North Paldean Sea",
       "kind": "water_area",
-      "connectsTo": [],
+      "connectsTo": [
+        "gracia_stones"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "dataStatus": "landmark_area_connection_source_verified_exact_pin_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-ten-sights"
       ]
     },
     {
@@ -1119,14 +1172,17 @@
       "id": "inlet_grotto",
       "name": "Inlet Grotto",
       "kind": "cave",
-      "connectsTo": [],
+      "connectsTo": [
+        "poco_path"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-ten-sights"
       ],
-      "dataStatus": "named_location_known_exact_pins_pending_verification",
+      "dataStatus": "landmark_area_connection_source_verified_exact_pin_pending",
       "province": "South Province"
     },
     {
@@ -1134,134 +1190,169 @@
       "name": "Poco Path",
       "kind": "path",
       "connectsTo": [
-        "cabo_poco"
+        "cabo_poco",
+        "poco_path_lighthouse",
+        "inlet_grotto"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
-        "bulbapedia-cities-towns"
+        "bulbapedia-cities-towns",
+        "bulbapedia-ten-sights"
       ],
-      "dataStatus": "settlement_area_connections_source_verified_exact_map_pins_pending",
+      "dataStatus": "landmark_area_connection_source_verified_exact_pin_pending",
       "province": "South Province"
     },
     {
       "id": "groundblight_shrine",
       "name": "Groundblight Shrine",
       "kind": "shrine",
-      "connectsTo": [],
+      "connectsTo": [
+        "socarrat_trail"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-ten-sights"
       ],
-      "dataStatus": "named_location_known_exact_pins_pending_verification"
+      "dataStatus": "landmark_area_connection_source_verified_exact_pin_pending"
     },
     {
       "id": "icerend_shrine",
       "name": "Icerend Shrine",
       "kind": "shrine",
-      "connectsTo": [],
+      "connectsTo": [
+        "west_province_area_one"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-ten-sights"
       ],
-      "dataStatus": "named_location_known_exact_pins_pending_verification"
+      "dataStatus": "landmark_area_connection_source_verified_exact_pin_pending"
     },
     {
       "id": "firescourge_shrine",
       "name": "Firescourge Shrine",
       "kind": "shrine",
-      "connectsTo": [],
+      "connectsTo": [
+        "fury_falls"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-ten-sights"
       ],
-      "dataStatus": "named_location_known_exact_pins_pending_verification"
+      "dataStatus": "landmark_area_connection_source_verified_exact_pin_pending"
     },
     {
       "id": "grasswither_shrine",
       "name": "Grasswither Shrine",
       "kind": "shrine",
-      "connectsTo": [],
+      "connectsTo": [
+        "south_province_area_one"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-ten-sights"
       ],
-      "dataStatus": "named_location_known_exact_pins_pending_verification"
+      "dataStatus": "landmark_area_connection_source_verified_exact_pin_pending"
     },
     {
       "id": "colonnade_hollow",
       "name": "Colonnade Hollow",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "west_province_area_two",
+        "porto_marinada"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-ten-sights"
       ],
-      "dataStatus": "named_location_known_exact_pins_pending_verification"
+      "dataStatus": "landmark_area_connection_source_verified_exact_pin_pending"
     },
     {
       "id": "million_volt_skyline",
       "name": "Million Volt Skyline",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "east_province_area_three",
+        "levincia"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-ten-sights"
       ],
-      "dataStatus": "named_location_known_exact_pins_pending_verification"
+      "dataStatus": "landmark_area_connection_source_verified_exact_pin_pending"
     },
     {
       "id": "fury_falls",
       "name": "Fury Falls",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "north_province_area_two",
+        "firescourge_shrine"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-ten-sights"
       ],
-      "dataStatus": "named_location_known_exact_pins_pending_verification"
+      "dataStatus": "landmark_area_connection_source_verified_exact_pin_pending"
     },
     {
       "id": "leaking_tower_of_paldea",
       "name": "Leaking Tower of Paldea",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "south_province_area_six"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-ten-sights"
       ],
-      "dataStatus": "named_location_known_exact_pins_pending_verification"
+      "dataStatus": "landmark_area_connection_source_verified_exact_pin_pending"
     },
     {
       "id": "gracia_stones",
       "name": "Gracia Stones",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "north_paldean_sea",
+        "casseroya_lake",
+        "socarrat_trail"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-ten-sights"
       ],
-      "dataStatus": "named_location_known_exact_pins_pending_verification"
+      "dataStatus": "landmark_area_connection_source_verified_exact_pin_pending"
     },
     {
       "id": "distant_rock",
@@ -1280,28 +1371,35 @@
       "id": "casseroya_falls",
       "name": "Casseroya Falls",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "casseroya_lake",
+        "glaseado_mountain"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-ten-sights"
       ],
-      "dataStatus": "named_location_known_exact_pins_pending_verification",
+      "dataStatus": "landmark_area_connection_source_verified_exact_pin_pending",
       "province": "North Province"
     },
     {
       "id": "paldeas_highest_peak",
       "name": "Paldea's Highest Peak",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "glaseado_mountain"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-ten-sights"
       ],
-      "dataStatus": "named_location_known_exact_pins_pending_verification"
+      "dataStatus": "landmark_area_connection_source_verified_exact_pin_pending"
     },
     {
       "id": "socarrat_trail_sight",
@@ -1321,27 +1419,33 @@
       "id": "naranja_academy",
       "name": "Naranja Academy",
       "kind": "building",
-      "connectsTo": [],
+      "connectsTo": [
+        "mesagoza"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-ten-sights"
       ],
-      "dataStatus": "named_location_known_exact_pins_pending_verification"
+      "dataStatus": "landmark_area_connection_source_verified_exact_pin_pending"
     },
     {
       "id": "uva_academy",
       "name": "Uva Academy",
       "kind": "building",
-      "connectsTo": [],
+      "connectsTo": [
+        "mesagoza"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-ten-sights"
       ],
-      "dataStatus": "named_location_known_exact_pins_pending_verification"
+      "dataStatus": "landmark_area_connection_source_verified_exact_pin_pending"
     },
     {
       "id": "team_star_dark_crew_base",
@@ -1843,6 +1947,51 @@
       ],
       "dataStatus": "parent_access_indexed_exact_subarea_routes_pending",
       "parentRegion": "Terarium"
+    },
+    {
+      "id": "grand_olive_orchard",
+      "name": "Grand Olive Orchard",
+      "kind": "landmark",
+      "connectsTo": [
+        "south_province_area_two",
+        "cortondo"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-ten-sights"
+      ],
+      "dataStatus": "landmark_area_connection_source_verified_exact_pin_pending"
+    },
+    {
+      "id": "secluded_beach",
+      "name": "Secluded Beach",
+      "kind": "beach",
+      "connectsTo": [
+        "south_province_area_five",
+        "south_paldean_sea"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-ten-sights"
+      ],
+      "dataStatus": "landmark_area_connection_source_verified_exact_pin_pending"
+    },
+    {
+      "id": "glaseados_grasp",
+      "name": "Glaseado's Grasp",
+      "kind": "landmark",
+      "connectsTo": [
+        "glaseado_mountain",
+        "casseroya_lake"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-ten-sights"
+      ],
+      "dataStatus": "landmark_area_connection_source_verified_exact_pin_pending"
     }
   ]
 }
