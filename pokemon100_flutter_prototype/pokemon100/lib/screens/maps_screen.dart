@@ -865,6 +865,57 @@ class _MapsScreenState extends State<MapsScreen> {
                             const Text('• Pokémon Center i Poké Mart\\n• Fuchsia Gym — Koga\\n• GO Park i brama Safari Zone\\n• Pokój Warden'),
                             const SizedBox(height: 8),
                             const Text('Drużyna Kogi: Weezing Lv. 43, Muk Lv. 43, Golbat Lv. 43 i Venomoth Lv. 44. Połączenia: Route 15, Route 18 i Route 19. Szczegółowe położenie przedmiotów i wejść nie jest jeszcze zweryfikowane na mapie.'),
+                          ] else if (normalizedQuery == 'celadon city') ...[
+                            const Text('Ważne miejsca w Celadon City', style: TextStyle(fontWeight: FontWeight.w700)),
+                            const Text('• Celadon Department Store\\n• Celadon Game Corner i Rocket Hideout\\n• Celadon Gym\\n• Pokémon Center i Poké Mart\\n• Celadon Restaurant'),
+                            const SizedBox(height: 8),
+                            const Text('Połączenia: Route 7 i Route 16. Budynki mają wiele pięter i osobne wnętrza — obecny widok pokazuje tylko indeks lokacji, nie ich dokładne plany.'),
+                          ] else if (normalizedQuery == 'saffron city') ...[
+                            const Text('Ważne miejsca w Saffron City', style: TextStyle(fontWeight: FontWeight.w700)),
+                            const Text('• Silph Co.\\n• Saffron Gym\\n• Fighting Dojo\\n• Pokémon Center i Poké Mart'),
+                            const SizedBox(height: 8),
+                            const Text('Połączenia drogowe: Route 7 i Route 8. Silph Co. oraz sale walk wymagają osobnych map wnętrz; nie przedstawiamy ich jeszcze jako gotowych planów.'),
+                          ] else if (normalizedQuery == 'route 16') ...[
+                            const Text('Route 16 — zachodnia trasa rowerowa', style: TextStyle(fontWeight: FontWeight.w700)),
+                            const Text('Łączy Celadon City z Route 17. Północny odcinek wymaga Chop Down. Przedmioty opisane w źródle: 3 Poké Balls, Super Potion, Lure i ukryty Rare Candy.'),
+                          ] else if (normalizedQuery == 'route 17') ...[
+                            const Text('Route 17 — Pokémon Road', style: TextStyle(fontWeight: FontWeight.w700)),
+                            const Text('Długa trasa rowerowa między Route 16 i Route 18. Dokładny układ trenerów, przedmiotów i dzikich spotkań nie jest jeszcze odwzorowany w pinezkach.'),
+                          ] else if (normalizedQuery == 'route 18') ...[
+                            const Text('Route 18', style: TextStyle(fontWeight: FontWeight.w700)),
+                            const Text('Połączenie Route 17 z Fuchsia City; przy trasie znajduje się Route 18 Gate. Szczegółowe wnętrza bramy nie są jeszcze mapowane.'),
+                          ] else if (normalizedQuery == 'route 19') ...[
+                            const Text('Route 19 — morska trasa', style: TextStyle(fontWeight: FontWeight.w700)),
+                            const Text('Wymaga Sea Skim. Spotkania na wodzie, poziomy 37–42: Tentacool 45%, Magikarp 45%, Tentacruel 5% i Gyarados 5%. Łączy Fuchsia City z Route 20.'),
+                          ] else if (normalizedQuery == 'route 20') ...[
+                            const Text('Route 20 — morze i Seafoam Islands', style: TextStyle(fontWeight: FontWeight.w700)),
+                            const Text('Wymaga Sea Skim. Spotkania na wodzie, poziomy 37–42: Magikarp 45%, Tentacool 45%, Tentacruel 5% i Gyarados 5%. Seafoam Islands dzielą trasę na część wschodnią i zachodnią.'),
+                          ] else if (normalizedQuery == 'seafoam islands') ...[
+                            const Text('Seafoam Islands', style: TextStyle(fontWeight: FontWeight.w700)),
+                            const Text('Jaskinia ma piętra B1F–B4F i znajduje się na Route 20. Wewnątrz można rozwiązać zagadkę z głazami; legendarne Pokémony: Articuno. Dokładny plan pięter i pozycje przedmiotów wymagają osobnego odwzorowania.'),
+                          ] else if (normalizedQuery == 'cinnabar island') ...[
+                            const Text('Ważne miejsca na Cinnabar Island', style: TextStyle(fontWeight: FontWeight.w700)),
+                            const Text('• Pokémon Center i Poké Mart\\n• Pokémon Lab — wskrzeszanie skamielin\\n• Pokémon Mansion\\n• Cinnabar Gym — Blaine'),
+                            const SizedBox(height: 8),
+                            const Text('Połączenia: Route 20 i Route 21. Pokémon Mansion ma własny wielopoziomowy układ; nie jest jeszcze dostępny jako dokładna mapa wnętrza.'),
+                          ] else if (normalizedQuery == 'route 21') ...[
+                            const Text('Route 21 — południowe wybrzeże Kanto', style: TextStyle(fontWeight: FontWeight.w700)),
+                            const Text('Łączy Pallet Town z Cinnabar Island. Spotkania w trawie na poziomach 37–42 obejmują Raticate 20%, Pidgeotto 20%, Tangela 15%, Gloom 14%, Rattata 10%, Pidgey 10%, Oddish 10% i Vileplume 1%.'),
+                          ] else if (normalizedQuery == 'route 22') ...[
+                            const Text('Route 22 — droga do Ligi', style: TextStyle(fontWeight: FontWeight.w700)),
+                            const Text('Trasa od Viridian City w kierunku Route 23 i Pokémon League. To także miejsce pierwszej walki z rywalem. Pełna lista spotkań i przedmiotów wymaga dalszego uzupełnienia.'),
+                          ] else if (normalizedQuery == 'route 23') ...[
+                            const Text('Route 23 — bramy odznak', style: TextStyle(fontWeight: FontWeight.w700)),
+                            const Text('Droga do Indigo Plateau z kontrolami odznak. Połączenie z Route 22 i Victory Road. Przedmioty i spotkania nie są jeszcze odwzorowane na pinezkach.'),
+                          ] else if (normalizedQuery == 'victory road') ...[
+                            const Text('Victory Road', style: TextStyle(fontWeight: FontWeight.w700)),
+                            const Text('Jaskinia prowadząca z Route 23 do Indigo Plateau; trzy piętra. W tej lokacji znajduje się Moltres. Dokładny plan przejść, głazów, trenerów i przedmiotów wymaga osobnego opracowania.'),
+                          ] else if (normalizedQuery == 'indigo plateau') ...[
+                            const Text('Indigo Plateau — Pokémon League', style: TextStyle(fontWeight: FontWeight.w700)),
+                            const Text('Kompleks Ligi Pokémon: Elite Four i walka z Championem. Jest końcem głównej trasy przez Victory Road; dokładne wnętrza nie są jeszcze mapowane.'),
+                          ] else if (normalizedQuery == 'cerulean cave') ...[
+                            const Text('Cerulean Cave — lokacja postgame', style: TextStyle(fontWeight: FontWeight.w700)),
+                            const Text('Jaskinia odblokowywana po ukończeniu głównej historii, dostępna z okolic Cerulean City. Ma piętra 1F, 2F i B1F; Mewtwo znajduje się w jej głębi. Dokładne piętra i pinezki wymagają osobnego opracowania.'),
                           ] else if (normalizedQuery == 'route 2') ...[
                             const Text(
                               'Dzikie Pokémony w trawie (poziomy 3–4)',
