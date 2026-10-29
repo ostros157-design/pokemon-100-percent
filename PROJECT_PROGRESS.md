@@ -993,3 +993,10 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Dane pozostają tekstowe, bez fałszywych pinezek. Commit: `4b46751`.
 - Nie uruchamiano Flutter analyzer, testów ani APK.
 
+### Mapy — spotkania na Route 12 i Route 13 (2026-10-29)
+
+- Dodano spotkania naziemne i wodne dla obu wersji Let’s Go, a dla Route 12 również standardowe spotkania na niebie oraz spotkanie fabularne ze Snorlaxem w wersji Pikachu.
+- Dodano poziomy i procenty z tabel źródłowych; rzadkie spotkania specjalne bez podanej szansy pozostają bez procentu.
+- Dane nadal nie określają dokładnych pikselowych lokalizacji. Commit: `ad686dd`.
+- Nie uruchamiano Flutter analyzer, testów ani APK.
+
