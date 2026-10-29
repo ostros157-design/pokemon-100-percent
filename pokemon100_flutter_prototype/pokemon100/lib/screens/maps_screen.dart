@@ -186,12 +186,25 @@ class _MapsScreenState extends State<MapsScreen> {
     final encounterSource =
         location['wildPokemonDetails'] ?? location['encounters'];
     final encounters = _mapWildPokemonEntries(encounterSource);
-    final notablePokemon = (location['notablePokemon'] as List?)
-            ?.map((value) => value.toString())
-            .where((name) => name.trim().isNotEmpty)
-            .toList() ??
-        const <String>[];
-    if (encounters.isEmpty && notablePokemon.isEmpty) {
+    final notableEntries = <String>[
+      ...((location['notablePokemon'] as List?)
+              ?.map((value) => value.toString()) ??
+          const <String>[]),
+      if (location['rareEncounter'] is Map &&
+          (location['rareEncounter'] as Map)['name'] != null)
+        (location['rareEncounter'] as Map)['name'].toString(),
+    ].where((name) => name.trim().isNotEmpty).toSet().toList();
+    final notablePokemon = notableEntries.where((name) {
+      return pokemonList.any((candidate) =>
+          _normalizePokemonName(candidate.name) ==
+          _normalizePokemonName(name));
+    }).toList();
+    final notableNotes = notableEntries
+        .where((name) => !notablePokemon.contains(name))
+        .toList();
+    if (encounters.isEmpty &&
+        notablePokemon.isEmpty &&
+        notableNotes.isEmpty) {
       return Card(
         child: Padding(
           padding: const EdgeInsets.all(16),
@@ -278,6 +291,13 @@ class _MapsScreenState extends State<MapsScreen> {
                 children: notablePokemon.map((name) {
                   return pokemonChip(name, details: 'specjalny');
                 }).toList(),
+              ),
+            ],
+            if (notableNotes.isNotEmpty) ...[
+              const SizedBox(height: 8),
+              Text(
+                notableNotes.join('\n'),
+                style: Theme.of(context).textTheme.bodySmall,
               ),
             ],
             const SizedBox(height: 8),
