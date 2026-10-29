@@ -4822,7 +4822,7 @@ class _KantoMapPainter extends CustomPainter {
           name.contains('Moon') ||
           name.contains('Victory Road') ||
           name.contains('Indigo Plateau') ||
-          name.contains('Safari Zone') ||
+          name.contains('Underground Path') ||
           name.contains('Pokémon Tower') ||
           name.contains('Pokémon Mansion') ||
           name.contains('Power Plant') ||
@@ -4831,7 +4831,6 @@ class _KantoMapPainter extends CustomPainter {
           name.contains('Silph Co.') ||
           name.contains('Team Rocket Hideout') ||
           name.contains('Seafoam') ||
-          name.contains('Bill\'s House') ||
           name.contains('Sea Cottage');
       // Keep the overview legible: every point remains tappable, while small
       // buildings/gyms and route labels appear when selected instead of colliding.
