@@ -658,3 +658,12 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 - Dodano jawne wyjaśnienie, że obecne miasta/trasy są schematyczne, a kategorie Pokémonów, przedmiotów, trenerów i znajdziek nie mają jeszcze zweryfikowanych pinezek. To legenda planowanych warstw danych, nie deklaracja, że wszystkie znaczniki już działają.
 - Commit kodu: `e83ca503b649ec2eda793cab421ed47fba608154`.
 - Status: zapisano w GitHubie. Nie uruchomiono Flutter analyze, testów ani builda APK; poprawność kompilacji i wygląd na urządzeniu pozostają niezweryfikowane.
+
+
+### Mapy — zweryfikowane dane Viridian City (2026-10-29)
+- Dodano do manifestu badawczego `assets/data/maps/lets_go_kanto_audit.json` wpis Viridian City: Pokémon Center, Poké Mart, przekazanie Oak’s Parcel, zablokowane północne wyjście podczas pierwszej wizyty oraz tekstowy opis ukrytej Potion.
+- Połączenia Route 1 (południe), Route 2 (północ) i Route 22 (zachód) opisano na podstawie źródła poradnikowego. Wszystkie współrzędne pozostają niezweryfikowane; ukryta Potion nie jest rysowana jako pinezka.
+- Ekran map otrzymał przycisk szybkiego wyboru Viridian City i offlineowy panel tych informacji. Panel wyraźnie odróżnia opis tekstowy od dokładnej pozycji na mapie.
+- Źródło: https://bulbapedia.bulbagarden.net/wiki/Walkthrough:Pok%C3%A9mon:Let%27s_Go,_Pikachu!_and_Let%27s_Go,_Eevee!/Part_2
+- Commity: dane `5c735e4204f631b25ed8ccfd160ac459f6eea0e4`; ekran `e204da2c24009463b0aa2b7bdae5665fb273d4f1`.
+- Status: zapisano w GitHubie. Nie uruchomiono `flutter analyze`, testów ani builda APK; kompilacja i zachowanie interfejsu nie są jeszcze zweryfikowane.
