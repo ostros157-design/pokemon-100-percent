@@ -382,6 +382,11 @@
       "id": "bulbapedia-part5",
       "url": "https://bulbapedia.bulbagarden.net/wiki/Appendix%3ALet%27s_Go,_Pikachu!_and_Let%27s_Go,_Eevee!/Part_5",
       "scope": "Bill's House and S.S. Ticket progression"
+    },
+    {
+      "id": "routepedia-fuchsia-pikachu",
+      "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/fuchsia-city",
+      "scope": "Fuchsia City, Fuchsia Gym and Koga encounter details"
     }
   ],
   "locations": [
