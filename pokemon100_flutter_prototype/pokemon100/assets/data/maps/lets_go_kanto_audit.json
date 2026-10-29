@@ -3792,7 +3792,6 @@
       "sourceIds": [
         "routepedia-route7-pikachu",
         "bulbapedia-part8",
-        "serebii-route_",
         "serebii-route7"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
@@ -4174,7 +4173,6 @@
       "sourceIds": [
         "routepedia-route8-pikachu",
         "bulbapedia-part8",
-        "serebii-route_",
         "serebii-route8"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
