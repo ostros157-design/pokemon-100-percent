@@ -178,6 +178,8 @@ class _MapsScreenState extends State<MapsScreen> {
         return 'Drużyna lidera wymaga ponownego sprawdzenia';
       case 'schematic_interior_available_exact_layout_pending':
         return 'Schemat wnętrza dostępny; dokładny plan pięter do weryfikacji';
+      case 'alias_of_location':
+        return 'Alias nazwy — wspólny punkt mapy';
       default:
         return status.replaceAll('_', ' ');
     }
@@ -260,9 +262,11 @@ class _MapsScreenState extends State<MapsScreen> {
               ),
               const SizedBox(height: 6),
               Text(
-                coordinateStatus == 'verified'
-                    ? 'Położenie pinezek: zweryfikowane dla tej lokacji.'
-                    : 'Położenie pinezek: niezweryfikowane — mapa jest poglądowa.',
+                coordinateStatus == 'not_applicable'
+                    ? 'Alias nazwy — korzysta ze wspólnego punktu mapy.'
+                    : coordinateStatus == 'verified'
+                        ? 'Położenie pinezek: zweryfikowane dla tej lokacji.'
+                        : 'Położenie pinezek: niezweryfikowane — mapa jest poglądowa.',
                 style: Theme.of(context).textTheme.labelSmall,
               ),
             ],
@@ -399,9 +403,11 @@ class _MapsScreenState extends State<MapsScreen> {
             ],
             const SizedBox(height: 4),
             Text(
-              coordinateStatus == 'verified'
-                  ? 'Położenie pinezek: zweryfikowane dla tej lokacji.'
-                  : 'Położenie pinezek: niezweryfikowane — mapa jest poglądowa.',
+              coordinateStatus == 'not_applicable'
+                  ? 'Alias nazwy — korzysta ze wspólnego punktu mapy.'
+                  : coordinateStatus == 'verified'
+                      ? 'Położenie pinezek: zweryfikowane dla tej lokacji.'
+                      : 'Położenie pinezek: niezweryfikowane — mapa jest poglądowa.',
               style: Theme.of(context).textTheme.labelSmall,
             ),
             const SizedBox(height: 8),
