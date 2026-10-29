@@ -19,6 +19,11 @@
       "id": "pokemony-galar",
       "url": "https://www.pokemony.com/en/locations?region=galar",
       "scope": "Galar location inventory and schematic-map conventions"
+    },
+    {
+      "id": "bulbapedia-route-list",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/List_of_routes",
+      "scope": "Numbered route termini and region connections"
     }
   ],
   "locations": [
@@ -26,7 +31,9 @@
       "id": "postwick",
       "name": "Postwick",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_1"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_game_variant_audit",
@@ -39,7 +46,10 @@
       "id": "wedgehurst",
       "name": "Wedgehurst",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_1",
+        "route_2"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_game_variant_audit",
@@ -52,7 +62,9 @@
       "id": "motostoke",
       "name": "Motostoke",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_3"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_game_variant_audit",
@@ -65,7 +77,10 @@
       "id": "turffield",
       "name": "Turffield",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_4",
+        "route_5"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_game_variant_audit",
@@ -78,7 +93,9 @@
       "id": "hulbury",
       "name": "Hulbury",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_5"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_game_variant_audit",
@@ -91,7 +108,12 @@
       "id": "hammerlocke",
       "name": "Hammerlocke",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_6",
+        "route_7",
+        "route_10",
+        "white_hill_station"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_game_variant_audit",
@@ -104,7 +126,9 @@
       "id": "stow_on_side",
       "name": "Stow-on-Side",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_6"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_game_variant_audit",
@@ -130,7 +154,10 @@
       "id": "circhester",
       "name": "Circhester",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_8",
+        "route_9"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_game_variant_audit",
@@ -143,7 +170,9 @@
       "id": "spikemuth",
       "name": "Spikemuth",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_9"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_game_variant_audit",
@@ -156,7 +185,10 @@
       "id": "wyndon",
       "name": "Wyndon",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_10",
+        "white_hill_station"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_game_variant_audit",
@@ -403,7 +435,10 @@
       "id": "galar_mine",
       "name": "Galar Mine",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_3",
+        "route_4"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
