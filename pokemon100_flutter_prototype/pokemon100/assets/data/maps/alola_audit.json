@@ -24,6 +24,21 @@
       "id": "bulbapedia-route-list",
       "url": "https://bulbapedia.bulbagarden.net/wiki/List_of_routes",
       "scope": "Numbered route termini and region connections"
+    },
+    {
+      "id": "bulbapedia-hauoli-ferry",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Hau%27oli_City",
+      "scope": "Melemele Ferry Terminal and inter-island access"
+    },
+    {
+      "id": "bulbapedia-heahea-ferry",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Heahea_City",
+      "scope": "Akala Ferry Terminal destinations and unlock conditions"
+    },
+    {
+      "id": "bulbapedia-malie-ferry",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Malie_City",
+      "scope": "Ula'ula Ferry Terminal destinations and access"
     }
   ],
   "locations": [
@@ -49,15 +64,23 @@
       "kind": "town",
       "connectsTo": [
         "route_1",
-        "route_2"
+        "route_2",
+        "heahea_city",
+        "malie_city",
+        "seafolk_village",
+        "aether_paradise"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "settlement_known_connections_pending_game_variant_audit",
+      "dataStatus": "ferry_access_source_verified_story_unlock_conditions_may_apply",
       "sourceIds": [
         "bulbapedia-alola",
-        "pokemony-alola"
-      ]
+        "pokemony-alola",
+        "bulbapedia-hauoli-ferry",
+        "bulbapedia-heahea-ferry",
+        "bulbapedia-malie-ferry"
+      ],
+      "notes": "Dostęp promem do innych wysp/terminali Aloli; nie oznacza fizycznego sąsiedztwa na lądzie. Niektóre kursy wymagają postępu fabularnego."
     },
     {
       "id": "heahea_city",
@@ -66,15 +89,22 @@
       "connectsTo": [
         "route_4",
         "route_6",
-        "aether_paradise"
+        "aether_paradise",
+        "hau_oli_city",
+        "malie_city",
+        "seafolk_village"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "settlement_known_connections_pending_game_variant_audit",
+      "dataStatus": "ferry_access_source_verified_story_unlock_conditions_may_apply",
       "sourceIds": [
         "bulbapedia-alola",
-        "pokemony-alola"
-      ]
+        "pokemony-alola",
+        "bulbapedia-hauoli-ferry",
+        "bulbapedia-heahea-ferry",
+        "bulbapedia-malie-ferry"
+      ],
+      "notes": "Dostęp promem do innych wysp/terminali Aloli; nie oznacza fizycznego sąsiedztwa na lądzie. Niektóre kursy wymagają postępu fabularnego."
     },
     {
       "id": "paniola_town",
@@ -113,15 +143,23 @@
       "kind": "town",
       "connectsTo": [
         "route_10",
-        "route_11"
+        "route_11",
+        "hau_oli_city",
+        "heahea_city",
+        "seafolk_village",
+        "aether_paradise"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "settlement_known_connections_pending_game_variant_audit",
+      "dataStatus": "ferry_access_source_verified_story_unlock_conditions_may_apply",
       "sourceIds": [
         "bulbapedia-alola",
-        "pokemony-alola"
-      ]
+        "pokemony-alola",
+        "bulbapedia-hauoli-ferry",
+        "bulbapedia-heahea-ferry",
+        "bulbapedia-malie-ferry"
+      ],
+      "notes": "Dostęp promem do innych wysp/terminali Aloli; nie oznacza fizycznego sąsiedztwa na lądzie. Niektóre kursy wymagają postępu fabularnego."
     },
     {
       "id": "po_town",
@@ -144,15 +182,23 @@
       "kind": "town",
       "connectsTo": [
         "ancient_poni_path",
-        "poni_wilds"
+        "poni_wilds",
+        "hau_oli_city",
+        "heahea_city",
+        "malie_city",
+        "aether_paradise"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_connection_indexed_version_audit_pending",
+      "dataStatus": "ferry_access_source_verified_story_unlock_conditions_may_apply",
       "sourceIds": [
         "bulbapedia-alola",
-        "pokemony-alola"
-      ]
+        "pokemony-alola",
+        "bulbapedia-hauoli-ferry",
+        "bulbapedia-heahea-ferry",
+        "bulbapedia-malie-ferry"
+      ],
+      "notes": "Dostęp promem do innych wysp/terminali Aloli; nie oznacza fizycznego sąsiedztwa na lądzie. Niektóre kursy wymagają postępu fabularnego."
     },
     {
       "id": "tapu_village",
@@ -649,15 +695,22 @@
       "name": "Aether Paradise",
       "kind": "landmark",
       "connectsTo": [
-        "heahea_city"
+        "heahea_city",
+        "hau_oli_city",
+        "malie_city",
+        "seafolk_village"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_connection_indexed_version_audit_pending",
+      "dataStatus": "ferry_access_source_verified_story_unlock_conditions_may_apply",
       "sourceIds": [
         "bulbapedia-alola",
-        "pokemony-alola"
-      ]
+        "pokemony-alola",
+        "bulbapedia-hauoli-ferry",
+        "bulbapedia-heahea-ferry",
+        "bulbapedia-malie-ferry"
+      ],
+      "notes": "Dostęp promem do innych wysp/terminali Aloli; nie oznacza fizycznego sąsiedztwa na lądzie. Niektóre kursy wymagają postępu fabularnego."
     },
     {
       "id": "thrifty_megamart",
