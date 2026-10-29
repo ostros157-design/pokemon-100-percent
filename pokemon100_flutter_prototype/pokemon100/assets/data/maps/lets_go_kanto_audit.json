@@ -267,6 +267,81 @@
       "id": "bulbapedia-part12",
       "url": "https://bulbapedia.bulbagarden.net/wiki/Appendix%3ALet%27s_Go,_Pikachu!_and_Let%27s_Go,_Eevee!/Part_12",
       "scope": "Routes 12–15 and Fuchsia City walkthrough"
+    },
+    {
+      "id": "routepedia-celadon-pikachu",
+      "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/celadon-city",
+      "scope": "Celadon City facilities, connections, items and gym"
+    },
+    {
+      "id": "routepedia-saffron-pikachu",
+      "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/saffron-city",
+      "scope": "Saffron City facilities, Silph Co. and gym"
+    },
+    {
+      "id": "routepedia-route16-pikachu",
+      "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/route-16",
+      "scope": "Route 16 connections, encounters, trainers and items"
+    },
+    {
+      "id": "routepedia-route17-pikachu",
+      "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/route-17",
+      "scope": "Route 17 connections, encounters, trainers and items"
+    },
+    {
+      "id": "routepedia-route18-pikachu",
+      "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/route-18",
+      "scope": "Route 18 connections, encounters, trainers and items"
+    },
+    {
+      "id": "routepedia-route19-pikachu",
+      "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/route-19",
+      "scope": "Route 19 encounters, trainers, items and connections"
+    },
+    {
+      "id": "routepedia-route20-pikachu",
+      "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/route-20",
+      "scope": "Route 20 encounters, trainers, items and Seafoam connection"
+    },
+    {
+      "id": "routepedia-seafoam-pikachu",
+      "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/seafoam-islands",
+      "scope": "Seafoam Islands floors, encounters, items and Articuno"
+    },
+    {
+      "id": "routepedia-route21-pikachu",
+      "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/route-21",
+      "scope": "Route 21 encounters, trainers, items and connections"
+    },
+    {
+      "id": "routepedia-route22-pikachu",
+      "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/route-22",
+      "scope": "Route 22 encounters, trainers, items and connections"
+    },
+    {
+      "id": "routepedia-route23-pikachu",
+      "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/route-23",
+      "scope": "Route 23 gates, encounters, items and connections"
+    },
+    {
+      "id": "routepedia-victory-road-pikachu",
+      "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/victory-road",
+      "scope": "Victory Road floors, trainers, items and Moltres"
+    },
+    {
+      "id": "routepedia-indigo-pikachu",
+      "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/indigo-plateau",
+      "scope": "Pokémon League facilities and Elite Four"
+    },
+    {
+      "id": "routepedia-cerulean-cave-pikachu",
+      "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/cerulean-cave",
+      "scope": "Cerulean Cave floors, encounters, items and Mewtwo"
+    },
+    {
+      "id": "routepedia-cinnabar-pikachu",
+      "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/cinnabar-island",
+      "scope": "Cinnabar Island facilities, items and Blaine's gym"
     }
   ],
   "locations": [
@@ -2184,6 +2259,389 @@
         "bulbapedia-part12"
       ],
       "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "celadon_city",
+      "name": "Celadon City",
+      "kind": "town",
+      "connectsTo": [
+        "route_7",
+        "route_16"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "features": [
+        "Pokémon Center",
+        "Poké Mart",
+        "Celadon Department Store",
+        "Celadon Game Corner",
+        "Rocket Hideout",
+        "Celadon Gym",
+        "Celadon Restaurant"
+      ],
+      "sourceIds": [
+        "routepedia-celadon-pikachu"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "saffron_city",
+      "name": "Saffron City",
+      "kind": "town",
+      "connectsTo": [
+        "route_7",
+        "route_8",
+        "silph_co"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "features": [
+        "Pokémon Center",
+        "Poké Mart",
+        "Silph Co.",
+        "Saffron Gym",
+        "Fighting Dojo"
+      ],
+      "sourceIds": [
+        "routepedia-saffron-pikachu"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "route_16",
+      "name": "Route 16",
+      "kind": "route",
+      "connectsTo": [
+        "celadon_city",
+        "route_17"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "notes": "Połączenie Celadon City z Route 17; północna część wymaga Chop Down.",
+      "items": [
+        "3 Poké Balls",
+        "Super Potion",
+        "Lure",
+        "ukryty Rare Candy"
+      ],
+      "sourceIds": [
+        "routepedia-route16-pikachu"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "route_17",
+      "name": "Route 17",
+      "kind": "route",
+      "connectsTo": [
+        "route_16",
+        "route_18"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "notes": "Pokémon Road — długa trasa rowerowa między Route 16 i Route 18.",
+      "sourceIds": [
+        "routepedia-route17-pikachu"
+      ],
+      "dataStatus": "connection_verified_details_pending"
+    },
+    {
+      "id": "route_18",
+      "name": "Route 18",
+      "kind": "route",
+      "connectsTo": [
+        "route_17",
+        "fuchsia_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "features": [
+        "Route 18 Gate"
+      ],
+      "sourceIds": [
+        "routepedia-route18-pikachu"
+      ],
+      "dataStatus": "connection_verified_details_pending"
+    },
+    {
+      "id": "route_19",
+      "name": "Route 19",
+      "kind": "route",
+      "connectsTo": [
+        "fuchsia_city",
+        "route_20"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "notes": "Morska trasa na południe od Fuchsia City; wymaga Sea Skim.",
+      "wildPokemonDetails": {
+        "levels": [
+          37,
+          42
+        ],
+        "surfing": [
+          [
+            "Tentacool",
+            45
+          ],
+          [
+            "Magikarp",
+            45
+          ],
+          [
+            "Tentacruel",
+            5
+          ],
+          [
+            "Gyarados",
+            5
+          ]
+        ]
+      },
+      "sourceIds": [
+        "routepedia-route19-pikachu"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "route_20",
+      "name": "Route 20",
+      "kind": "water_route",
+      "connectsTo": [
+        "route_19",
+        "seafoam_islands",
+        "cinnabar_island",
+        "route_21"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "notes": "Morska trasa rozdzielona przez Seafoam Islands; wymaga Sea Skim.",
+      "wildPokemonDetails": {
+        "levels": [
+          37,
+          42
+        ],
+        "surfing": [
+          [
+            "Magikarp",
+            45
+          ],
+          [
+            "Tentacool",
+            45
+          ],
+          [
+            "Tentacruel",
+            5
+          ],
+          [
+            "Gyarados",
+            5
+          ]
+        ]
+      },
+      "sourceIds": [
+        "routepedia-route20-pikachu"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "seafoam_islands",
+      "name": "Seafoam Islands",
+      "kind": "cave",
+      "connectsTo": [
+        "route_20"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "floors": [
+        "B1F",
+        "B2F",
+        "B3F",
+        "B4F"
+      ],
+      "notablePokemon": [
+        "Articuno"
+      ],
+      "sourceIds": [
+        "routepedia-seafoam-pikachu"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "cinnabar_island",
+      "name": "Cinnabar Island",
+      "kind": "town",
+      "connectsTo": [
+        "route_20",
+        "route_21"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "features": [
+        "Pokémon Center",
+        "Poké Mart",
+        "Pokémon Lab",
+        "Pokémon Mansion",
+        "Cinnabar Gym"
+      ],
+      "sourceIds": [
+        "routepedia-cinnabar-pikachu"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "route_21",
+      "name": "Route 21",
+      "kind": "water_route",
+      "connectsTo": [
+        "cinnabar_island",
+        "pallet_town",
+        "route_20"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "wildPokemonDetails": {
+        "levels": [
+          37,
+          42
+        ],
+        "grass": [
+          [
+            "Raticate",
+            20
+          ],
+          [
+            "Pidgeotto",
+            20
+          ],
+          [
+            "Tangela",
+            15
+          ],
+          [
+            "Gloom",
+            14
+          ],
+          [
+            "Rattata",
+            10
+          ],
+          [
+            "Pidgey",
+            10
+          ],
+          [
+            "Oddish",
+            10
+          ],
+          [
+            "Vileplume",
+            1
+          ]
+        ]
+      },
+      "sourceIds": [
+        "routepedia-route21-pikachu"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "route_22",
+      "name": "Route 22",
+      "kind": "route",
+      "connectsTo": [
+        "viridian_city",
+        "route_23"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "routepedia-route22-pikachu"
+      ],
+      "dataStatus": "connection_verified_details_pending"
+    },
+    {
+      "id": "route_23",
+      "name": "Route 23",
+      "kind": "route",
+      "connectsTo": [
+        "route_22",
+        "victory_road",
+        "indigo_plateau"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "notes": "Droga do Ligi Pokémon z bramami sprawdzającymi odznaki.",
+      "sourceIds": [
+        "routepedia-route23-pikachu"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "victory_road",
+      "name": "Victory Road",
+      "kind": "cave",
+      "connectsTo": [
+        "route_23",
+        "indigo_plateau"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "floors": [
+        "1F",
+        "2F",
+        "3F"
+      ],
+      "notablePokemon": [
+        "Moltres"
+      ],
+      "sourceIds": [
+        "routepedia-victory-road-pikachu"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "indigo_plateau",
+      "name": "Indigo Plateau",
+      "kind": "league",
+      "connectsTo": [
+        "route_23",
+        "victory_road"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "features": [
+        "Pokémon League",
+        "Elite Four",
+        "Champion battle"
+      ],
+      "sourceIds": [
+        "routepedia-indigo-pikachu"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "cerulean_cave",
+      "name": "Cerulean Cave",
+      "kind": "cave",
+      "connectsTo": [
+        "cerulean_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "floors": [
+        "1F",
+        "2F",
+        "B1F"
+      ],
+      "notablePokemon": [
+        "Mewtwo"
+      ],
+      "sourceIds": [
+        "routepedia-cerulean-cave-pikachu"
+      ],
+      "dataStatus": "postgame_text_verified_positions_not_mapped"
     }
   ]
 }
