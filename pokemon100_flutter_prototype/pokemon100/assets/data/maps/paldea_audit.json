@@ -1,0 +1,676 @@
+{
+  "schemaVersion": 1,
+  "region": "Paldea + DLC",
+  "games": [
+    "Pokémon Scarlet",
+    "Pokémon Violet",
+    "The Teal Mask",
+    "The Indigo Disk"
+  ],
+  "purpose": "Offline open-world area inventory; not a scale-accurate map.",
+  "coordinatePolicy": "No exact coordinates or collectible pins until verified for the selected version and DLC.",
+  "sources": [
+    {
+      "id": "bulbapedia-paldea",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Paldea",
+      "scope": "Paldea settlements, provinces, areas and landmarks"
+    },
+    {
+      "id": "bulbapedia-scarlet-violet",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Scarlet_and_Violet",
+      "scope": "Scarlet/Violet open-world regions and DLC locations"
+    }
+  ],
+  "locations": [
+    {
+      "id": "cabo_poco",
+      "name": "Cabo Poco",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_variant_and_dlc_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "los_platos",
+      "name": "Los Platos",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_variant_and_dlc_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "mesagoza",
+      "name": "Mesagoza",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_variant_and_dlc_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "cortondo",
+      "name": "Cortondo",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_variant_and_dlc_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "artazon",
+      "name": "Artazon",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_variant_and_dlc_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "levincia",
+      "name": "Levincia",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_variant_and_dlc_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "cascarrafa",
+      "name": "Cascarrafa",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_variant_and_dlc_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "porto_marinada",
+      "name": "Porto Marinada",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_variant_and_dlc_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "medali",
+      "name": "Medali",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_variant_and_dlc_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "montenevera",
+      "name": "Montenevera",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_variant_and_dlc_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "alfornada",
+      "name": "Alfornada",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_variant_and_dlc_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "zapapico",
+      "name": "Zapapico",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_variant_and_dlc_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "glaseado_mountain",
+      "name": "Glaseado Mountain",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_variant_and_dlc_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "pok_mon_league",
+      "name": "Pokémon League",
+      "kind": "league",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_variant_and_dlc_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "south_province_area_one",
+      "name": "South Province (Area One)",
+      "kind": "area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "south_province_area_two",
+      "name": "South Province (Area Two)",
+      "kind": "area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "south_province_area_three",
+      "name": "South Province (Area Three)",
+      "kind": "area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "south_province_area_four",
+      "name": "South Province (Area Four)",
+      "kind": "area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "south_province_area_five",
+      "name": "South Province (Area Five)",
+      "kind": "area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "south_province_area_six",
+      "name": "South Province (Area Six)",
+      "kind": "area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "west_province_area_one",
+      "name": "West Province (Area One)",
+      "kind": "area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "west_province_area_two",
+      "name": "West Province (Area Two)",
+      "kind": "area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "west_province_area_three",
+      "name": "West Province (Area Three)",
+      "kind": "area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "east_province_area_one",
+      "name": "East Province (Area One)",
+      "kind": "area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "east_province_area_two",
+      "name": "East Province (Area Two)",
+      "kind": "area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "east_province_area_three",
+      "name": "East Province (Area Three)",
+      "kind": "area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "north_province_area_one",
+      "name": "North Province (Area One)",
+      "kind": "area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "north_province_area_two",
+      "name": "North Province (Area Two)",
+      "kind": "area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "north_province_area_three",
+      "name": "North Province (Area Three)",
+      "kind": "area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "tagtree_thicket",
+      "name": "Tagtree Thicket",
+      "kind": "natural_area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "asado_desert",
+      "name": "Asado Desert",
+      "kind": "natural_area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "casseroya_lake",
+      "name": "Casseroya Lake",
+      "kind": "area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "glaseado_mountain",
+      "name": "Glaseado Mountain",
+      "kind": "natural_area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "dalizapa_passage",
+      "name": "Dalizapa Passage",
+      "kind": "natural_area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "socarrat_trail",
+      "name": "Socarrat Trail",
+      "kind": "natural_area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "area_zero",
+      "name": "Area Zero",
+      "kind": "special_area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "great_crater_of_paldea",
+      "name": "Great Crater of Paldea",
+      "kind": "special_area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "poco_path_lighthouse",
+      "name": "Poco Path Lighthouse",
+      "kind": "area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "south_paldean_sea",
+      "name": "South Paldean Sea",
+      "kind": "water_area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "east_paldean_sea",
+      "name": "East Paldean Sea",
+      "kind": "water_area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "west_paldean_sea",
+      "name": "West Paldean Sea",
+      "kind": "water_area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "north_paldean_sea",
+      "name": "North Paldean Sea",
+      "kind": "water_area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "kitakami",
+      "name": "Kitakami",
+      "kind": "area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "mossui_town",
+      "name": "Mossui Town",
+      "kind": "area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "apple_hills",
+      "name": "Apple Hills",
+      "kind": "natural_area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "oni_mountain",
+      "name": "Oni Mountain",
+      "kind": "natural_area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "infernal_pass",
+      "name": "Infernal Pass",
+      "kind": "natural_area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "crystal_pool",
+      "name": "Crystal Pool",
+      "kind": "area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "blueberry_academy",
+      "name": "Blueberry Academy",
+      "kind": "area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    },
+    {
+      "id": "terarium",
+      "name": "Terarium",
+      "kind": "special_area",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "sourceIds": [
+        "bulbapedia-paldea",
+        "bulbapedia-scarlet-violet"
+      ]
+    }
+  ]
+}
