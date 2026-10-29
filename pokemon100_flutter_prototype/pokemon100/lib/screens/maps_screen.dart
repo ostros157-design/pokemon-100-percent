@@ -1466,7 +1466,20 @@ class _KantoMapPainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    canvas.drawRect(Offset.zero & size, Paint()..color = water);
+    final oceanRect = Offset.zero & size;
+    canvas.drawRect(
+      oceanRect,
+      Paint()
+        ..shader = const LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [
+            Color(0xFFB9E4E7),
+            Color(0xFF8FCBD5),
+            Color(0xFFA9DDE0),
+          ],
+        ).createShader(oceanRect),
+    );
     final p = (double x, double y) => Offset(x * size.width, y * size.height);
 
     final coast = Path()
@@ -1478,11 +1491,61 @@ class _KantoMapPainter extends CustomPainter {
       ..cubicTo(size.width * .29, size.height * .91, size.width * .16, size.height * .83, size.width * .18, size.height * .70)
       ..cubicTo(size.width * .08, size.height * .57, size.width * .12, size.height * .40, size.width * .08, size.height * .18)
       ..close();
-    canvas.drawPath(coast, Paint()..color = land);
-    canvas.drawPath(coast, Paint()
-      ..color = route.withValues(alpha: .45)
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = 2);
+    canvas.drawPath(
+      coast.shift(const Offset(0, 5)),
+      Paint()..color = const Color(0xFF6FAEB1).withValues(alpha: .25),
+    );
+    canvas.drawPath(
+      coast,
+      Paint()
+        ..shader = const LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [
+            Color(0xFFE4E9BD),
+            Color(0xFFC9DCA2),
+            Color(0xFFB9D38F),
+          ],
+        ).createShader(Rect.fromLTWH(0, 0, size.width, size.height)),
+    );
+    canvas.drawPath(
+      coast,
+      Paint()
+        ..color = const Color(0xFF719B72).withValues(alpha: .62)
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 3.5,
+    );
+    canvas.drawPath(
+      coast,
+      Paint()
+        ..color = Colors.white.withValues(alpha: .55)
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 1,
+    );
+
+    // Soft terrain washes are decorative texture, not verified geographic data.
+    final terrainWashes = <(double, double, double, double, Color)>[
+      (.25, .28, .17, .10, Color(0xFF9EBE83)),
+      (.47, .34, .20, .12, Color(0xFFE8DDA7)),
+      (.68, .59, .16, .13, Color(0xFF9FC68F)),
+      (.34, .72, .17, .09, Color(0xFFB7D18E)),
+      (.59, .78, .12, .07, Color(0xFFE4D8A1)),
+    ];
+    for (final wash in terrainWashes) {
+      final rect = Rect.fromCenter(
+        center: p(wash.$1, wash.$2),
+        width: size.width * wash.$3,
+        height: size.height * wash.$4,
+      );
+      canvas.drawOval(rect, Paint()..color = wash.$5.withValues(alpha: .45));
+      canvas.drawOval(
+        rect.deflate(5),
+        Paint()
+          ..color = Colors.white.withValues(alpha: .18)
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = 1.2,
+      );
+    }
 
     // Approximate route network for orientation, not a scale-accurate game map.
     const links = <(int, int)>[
