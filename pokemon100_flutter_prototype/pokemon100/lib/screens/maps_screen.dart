@@ -3538,6 +3538,28 @@ class _KantoRegionMapState extends State<_KantoRegionMap> {
     }
   }
 
+  void _zoomBy(double factor, Size viewport) {
+    final current = _transformController.value;
+    final currentScale = current.getMaxScaleOnAxis().clamp(0.55, 4.0).toDouble();
+    final nextScale = (currentScale * factor).clamp(0.55, 4.0).toDouble();
+    if ((nextScale - currentScale).abs() < 0.001) return;
+    final actualFactor = nextScale / currentScale;
+    final center = Offset(viewport.width / 2, viewport.height / 2);
+    final zoomAtCenter = Matrix4.identity()
+      ..translate(center.dx, center.dy)
+      ..scale(actualFactor)
+      ..translate(-center.dx, -center.dy);
+    _transformController.value = zoomAtCenter * current;
+  }
+
+  void _resetMap(Size viewport) {
+    _transformController.value = Matrix4.identity()
+      ..translate(
+        (viewport.width - _mapSize) / 2,
+        (viewport.height - _mapSize) / 2,
+      );
+  }
+
   void _selectTappedPlace(Offset tap) {
     final scale = _transformController.value.getMaxScaleOnAxis().clamp(0.55, 4.0).toDouble();
     final symbolHitRadius = 14 / scale;
@@ -3689,6 +3711,55 @@ class _KantoRegionMapState extends State<_KantoRegionMap> {
                                 ),
                               ),
                             ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 8,
+                  bottom: 8,
+                  child: DecoratedBox(
+                    decoration: BoxDecoration(
+                      color: Theme.of(context)
+                          .colorScheme
+                          .surface
+                          .withValues(alpha: .92),
+                      borderRadius: BorderRadius.circular(18),
+                      boxShadow: const [
+                        BoxShadow(
+                          blurRadius: 8,
+                          color: Colors.black12,
+                          offset: Offset(0, 2),
+                        ),
+                      ],
+                    ),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        IconButton(
+                          tooltip: 'Powiększ mapę',
+                          visualDensity: VisualDensity.compact,
+                          constraints: const BoxConstraints.tightFor(width: 40, height: 40),
+                          padding: EdgeInsets.zero,
+                          onPressed: () => _zoomBy(1.25, constraints.biggest),
+                          icon: const Icon(Icons.add),
+                        ),
+                        IconButton(
+                          tooltip: 'Pomniejsz mapę',
+                          visualDensity: VisualDensity.compact,
+                          constraints: const BoxConstraints.tightFor(width: 40, height: 40),
+                          padding: EdgeInsets.zero,
+                          onPressed: () => _zoomBy(0.8, constraints.biggest),
+                          icon: const Icon(Icons.remove),
+                        ),
+                        IconButton(
+                          tooltip: 'Wyśrodkuj mapę',
+                          visualDensity: VisualDensity.compact,
+                          constraints: const BoxConstraints.tightFor(width: 40, height: 40),
+                          padding: EdgeInsets.zero,
+                          onPressed: () => _resetMap(constraints.biggest),
+                          icon: const Icon(Icons.refresh),
+                        ),
+                      ],
                     ),
                   ),
                 ),
