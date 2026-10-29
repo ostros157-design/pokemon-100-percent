@@ -635,7 +635,7 @@
       "kind": "route",
       "connectsTo": [
         "sunyshore_city",
-        "pokemon_league"
+        "pok_mon_league"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
