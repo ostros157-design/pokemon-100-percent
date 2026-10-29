@@ -1132,6 +1132,27 @@ class _MapsScreenState extends State<MapsScreen> {
                           ] else if (normalizedQuery == 'viridian gym') ...[
                             const Text('Viridian Gym', style: TextStyle(fontWeight: FontWeight.w700)),
                             const Text('Sala Giovanni’ego w Viridian City. W Let’s Go Pikachu/Eevee jest to ostatnia sala przed Pokémon League. Dokładny plan sali i pełna drużyna lidera wymagają dalszego sprawdzenia.'),
+                          ] else if (normalizedQuery == 'pewter gym') ...[
+                            const Text('Pewter Gym — Brock', style: TextStyle(fontWeight: FontWeight.w700)),
+                            const Text('Drużyna Brock’a: Geodude Lv. 11 i Onix Lv. 12. Nagroda za zwycięstwo: Boulder Badge i TM01 Headbutt. Dokładny układ sali nie jest jeszcze odwzorowany na pinezkach.'),
+                          ] else if (normalizedQuery == 'cerulean gym') ...[
+                            const Text('Cerulean Gym — Misty', style: TextStyle(fontWeight: FontWeight.w700)),
+                            const Text('Sala wodna w Cerulean City. Dokładna drużyna liderki oraz układ przeszkód wymagają weryfikacji przed pokazaniem szczegółów; nie dodano niepotwierdzonych pinezek.'),
+                          ] else if (normalizedQuery == 'vermilion gym') ...[
+                            const Text('Vermilion Gym — Lt. Surge', style: TextStyle(fontWeight: FontWeight.w700)),
+                            const Text('Drużyna: Voltorb Lv. 25, Magnemite Lv. 25 i Raichu Lv. 26. Sala ma zagadkę z przełącznikami; ich dokładne pozycje nie są jeszcze odwzorowane.'),
+                          ] else if (normalizedQuery == 'celadon gym') ...[
+                            const Text('Celadon Gym — Erika', style: TextStyle(fontWeight: FontWeight.w700)),
+                            const Text('Sala trawiasta w Celadon City. Dokładny skład drużyny Eriki i układ przeszkód wymagają jeszcze weryfikacji; brak zweryfikowanych pinezek.'),
+                          ] else if (normalizedQuery == 'saffron gym') ...[
+                            const Text('Saffron Gym — Sabrina', style: TextStyle(fontWeight: FontWeight.w700)),
+                            const Text('Sala psychiczna w Saffron City. Dokładny układ teleportów i drużyna liderki wymagają osobnego sprawdzenia; nie dodano niepotwierdzonych pinezek.'),
+                          ] else if (normalizedQuery == 'fuchsia gym') ...[
+                            const Text('Fuchsia Gym — Koga', style: TextStyle(fontWeight: FontWeight.w700)),
+                            const Text('Drużyna Kogi: Weezing Lv. 43, Muk Lv. 43, Golbat Lv. 43 i Venomoth Lv. 44. Sala wykorzystuje niewidzialne ściany; ich plan nie jest jeszcze odwzorowany.'),
+                          ] else if (normalizedQuery == 'cinnabar gym') ...[
+                            const Text('Cinnabar Gym — Blaine', style: TextStyle(fontWeight: FontWeight.w700)),
+                            const Text('Sala z pytaniami i przełącznikami na Cinnabar Island. Dokładna drużyna Blaine’a oraz układ sali wymagają weryfikacji przed dodaniem pinezek.'),
                           ] else if (normalizedQuery == 'route 2') ...[
                             const Text(
                               'Dzikie Pokémony w trawie (poziomy 3–4)',
