@@ -562,6 +562,58 @@ class _MapsScreenState extends State<MapsScreen> {
                   controller: _locationSearchController,
                   onChanged: (value) => setState(() => _searchQuery = value),
                 ),
+                if (_mapIndexesLoading)
+                  const Padding(
+                    padding: EdgeInsets.symmetric(vertical: 12),
+                    child: LinearProgressIndicator(),
+                  )
+                else if (_activeMapIndex != null)
+                  Card(
+                    child: Padding(
+                      padding: const EdgeInsets.all(12),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Indeks mapy offline — ${_activeMapIndex!['region']}',
+                            style: Theme.of(context).textTheme.titleMedium,
+                          ),
+                          const SizedBox(height: 4),
+                          Text(
+                            '${_activeMapIndexLocations.length} lokacji w katalogu. To indeks źródłowy, nie gotowa mapa w skali; pozycje pinezek wymagają dalszej weryfikacji.',
+                          ),
+                          const SizedBox(height: 8),
+                          ..._activeMapIndexLocations
+                              .where((location) => (location['name'] as String? ?? '')
+                                  .toLowerCase()
+                                  .contains(normalizedQuery))
+                              .take(normalizedQuery.isEmpty ? 8 : 15)
+                              .map((location) {
+                            final name = location['name'] as String? ?? 'Lokacja';
+                            final kind = location['kind'] as String? ?? 'lokacja';
+                            final status = (location['dataStatus'] as String? ?? 'status nieznany')
+                                .replaceAll('_', ' ');
+                            return ListTile(
+                              dense: true,
+                              contentPadding: EdgeInsets.zero,
+                              leading: const Icon(Icons.place_outlined),
+                              title: Text(name),
+                              subtitle: Text('$kind • $status'),
+                              onTap: () {
+                                _locationSearchController.text = name;
+                                setState(() => _searchQuery = name);
+                              },
+                            );
+                          }),
+                          if (_activeMapIndexLocations.where((location) =>
+                              (location['name'] as String? ?? '')
+                                  .toLowerCase()
+                                  .contains(normalizedQuery)).isEmpty)
+                            const Text('Brak lokacji o tej nazwie w indeksie regionu.'),
+                        ],
+                      ),
+                    ),
+                  ),
                 if (_isLetsGoKanto) ...[
                   Card(
                     child: Padding(
