@@ -1,3 +1,10 @@
+### Mapy — przedmioty i trenerzy Route 21 oraz przedmioty Route 23 (2026-10-29)
+
+- Dodano 10 wpisów trenerów Route 21, w tym drużyny, poziomy i specjalny zestaw sześciu Magikarpów Fisherman Wade.
+- Uzupełniono sześć opisów przedmiotów Route 21 oraz sześć pozycji Golden Razz/Nanab/Pinap Berries Route 23, z wymaganiami Sea Skim i punktami kontroli odznak.
+- Dane oparto na zapisanych referencjach Bulbapedia Part 13 i Part 15; wpisy są tekstowe i nie tworzą niezweryfikowanych pinezek.
+- Commit danych: `01acb84`. Bez uruchamiania testów, Flutter analyzer i APK.
+
 ### Mapy — uzupełnienie trenerów i przedmiotów tras południowego Kanto (2026-10-29)
 
 - Dodano listy trenerów i opisy nagród/przedmiotów dla Route 13, Route 14, Route 15 i Route 19; Route 20 rozbito tekstowo na trenerów odcinka wschodniego i zachodniego oddzielonych Seafoam Islands.
