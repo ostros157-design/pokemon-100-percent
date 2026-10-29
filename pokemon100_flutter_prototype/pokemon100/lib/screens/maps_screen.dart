@@ -613,15 +613,11 @@ class _MapsScreenState extends State<MapsScreen> {
     // route progression better than alphabetical sorting.
     final allLocationEntries = _locations.entries.toList();
     final normalizedQuery = _searchQuery.trim().toLowerCase();
-    const localSchematicLocations = <String>[
-      'Pallet Town',
-      'Route 1',
-      'Viridian City',
-      'Route 2',
-      'Viridian Forest',
-      'Pewter City',
-      'Pewter Gym',
-    ];
+    // Every named node on the full Kanto schematic can be selected, not
+    // only the first few tutorial locations.
+    final localSchematicLocations = _KantoMapPainter.places
+        .map((place) => place.name)
+        .toList(growable: false);
     String? selectedLocalLocation;
     for (final location in localSchematicLocations) {
       if (location.toLowerCase() == normalizedQuery) {
