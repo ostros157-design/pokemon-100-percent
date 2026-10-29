@@ -1,3 +1,9 @@
+### Mapy — wydarzenia Gymów i kluczowych budynków (2026-10-29)
+
+- Dodano tekstowe drużyny liderów i nagrody ośmiu Gymów Kanto: Brock, Misty, Lt. Surge, Erika, Sabrina, Koga, Blaine i Giovanni.
+- Dodano wydarzenia/znajdźki dla Pewter Museum (Old Amber), Cinnabar Lab (odtwarzanie skamielin), Fighting Dojo (wybór Hitmonlee/Hitmonchan), GO Park (transfer z Pokémon GO) oraz Celadon Game Corner (wejście do Rocket Hideout).
+- Dane są informacyjne; nie oznaczają dokładnych pozycji postaci ani przedmiotów na planach. Commit danych: `1398dcc`. Bez testów, analyzer ani APK.
+
 ### Mapy — alias Safari Zone / GO Park w Let's Go (2026-10-29)
 
 - W indeksie Let’s Go Safari Zone jest teraz aliasem GO Park, a nie osobnym fizycznym punktem. Fuchsia City ma jedno połączenie do GO Park; mapa pokazuje 74 fizyczne punkty, 76 nazw i 82 połączenia.
