@@ -565,6 +565,102 @@ class _MapsScreenState extends State<MapsScreen> {
                                   setState(() => _searchQuery = 'Mt. Moon');
                                 },
                               ),
+                              ActionChip(
+                                avatar: const Icon(Icons.route_outlined, size: 18),
+                                label: const Text('Route 4'),
+                                onPressed: () {
+                                  _locationSearchController.text = 'Route 4';
+                                  setState(() => _searchQuery = 'Route 4');
+                                },
+                              ),
+                              ActionChip(
+                                avatar: const Icon(Icons.location_city_outlined, size: 18),
+                                label: const Text('Cerulean City'),
+                                onPressed: () {
+                                  _locationSearchController.text = 'Cerulean City';
+                                  setState(() => _searchQuery = 'Cerulean City');
+                                },
+                              ),
+                              ActionChip(
+                                avatar: const Icon(Icons.route_outlined, size: 18),
+                                label: const Text('Route 5'),
+                                onPressed: () {
+                                  _locationSearchController.text = 'Route 5';
+                                  setState(() => _searchQuery = 'Route 5');
+                                },
+                              ),
+                              ActionChip(
+                                avatar: const Icon(Icons.route_outlined, size: 18),
+                                label: const Text('Route 6'),
+                                onPressed: () {
+                                  _locationSearchController.text = 'Route 6';
+                                  setState(() => _searchQuery = 'Route 6');
+                                },
+                              ),
+                              ActionChip(
+                                avatar: const Icon(Icons.route_outlined, size: 18),
+                                label: const Text('Route 7'),
+                                onPressed: () {
+                                  _locationSearchController.text = 'Route 7';
+                                  setState(() => _searchQuery = 'Route 7');
+                                },
+                              ),
+                              ActionChip(
+                                avatar: const Icon(Icons.route_outlined, size: 18),
+                                label: const Text('Route 8'),
+                                onPressed: () {
+                                  _locationSearchController.text = 'Route 8';
+                                  setState(() => _searchQuery = 'Route 8');
+                                },
+                              ),
+                              ActionChip(
+                                avatar: const Icon(Icons.route_outlined, size: 18),
+                                label: const Text('Route 9'),
+                                onPressed: () {
+                                  _locationSearchController.text = 'Route 9';
+                                  setState(() => _searchQuery = 'Route 9');
+                                },
+                              ),
+                              ActionChip(
+                                avatar: const Icon(Icons.route_outlined, size: 18),
+                                label: const Text('Route 10'),
+                                onPressed: () {
+                                  _locationSearchController.text = 'Route 10';
+                                  setState(() => _searchQuery = 'Route 10');
+                                },
+                              ),
+                              ActionChip(
+                                avatar: const Icon(Icons.location_city_outlined, size: 18),
+                                label: const Text('Lavender Town'),
+                                onPressed: () {
+                                  _locationSearchController.text = 'Lavender Town';
+                                  setState(() => _searchQuery = 'Lavender Town');
+                                },
+                              ),
+                              ActionChip(
+                                avatar: const Icon(Icons.route_outlined, size: 18),
+                                label: const Text('Route 11'),
+                                onPressed: () {
+                                  _locationSearchController.text = 'Route 11';
+                                  setState(() => _searchQuery = 'Route 11');
+                                },
+                              ),
+                              ActionChip(
+                                avatar: const Icon(Icons.route_outlined, size: 18),
+                                label: const Text('Route 12'),
+                                onPressed: () {
+                                  _locationSearchController.text = 'Route 12';
+                                  setState(() => _searchQuery = 'Route 12');
+                                },
+                              ),
+                              ActionChip(
+                                avatar: const Icon(Icons.location_city_outlined, size: 18),
+                                label: const Text('Fuchsia City'),
+                                onPressed: () {
+                                  _locationSearchController.text = 'Fuchsia City';
+                                  setState(() => _searchQuery = 'Fuchsia City');
+                                },
+                              ),
                             ],
                           ),
                           const SizedBox(height: 10),
