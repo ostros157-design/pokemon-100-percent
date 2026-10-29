@@ -49,6 +49,21 @@
       "id": "bulbapedia-cities-towns",
       "url": "https://bulbapedia.bulbagarden.net/wiki/List_of_cities_and_towns",
       "scope": "Paldea settlement connections to surrounding areas"
+    },
+    {
+      "id": "bulbapedia-area-zero",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Area_Zero",
+      "scope": "Area Zero, Zero Gate, research stations and Underdepths"
+    },
+    {
+      "id": "bulbapedia-kitakami",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Kitakami",
+      "scope": "Kitakami region and named locations"
+    },
+    {
+      "id": "bulbapedia-blueberry-academy",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Blueberry_Academy",
+      "scope": "Blueberry Academy, Terarium and biome plazas"
     }
   ],
   "locations": [
@@ -645,13 +660,19 @@
       "id": "area_zero",
       "name": "Area Zero",
       "kind": "special_area",
-      "connectsTo": [],
+      "connectsTo": [
+        "great_crater_of_paldea",
+        "zero_gate",
+        "zero_lab",
+        "area_zero_underdepths"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "dataStatus": "parent_access_indexed_exact_subarea_routes_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-area-zero"
       ],
       "province": "Great Crater of Paldea"
     },
@@ -659,14 +680,18 @@
       "id": "great_crater_of_paldea",
       "name": "Great Crater of Paldea",
       "kind": "special_area",
-      "connectsTo": [],
+      "connectsTo": [
+        "area_zero"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "dataStatus": "parent_access_indexed_exact_subarea_routes_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
-      ]
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-area-zero"
+      ],
+      "parentRegion": "Area Zero / Great Crater of Paldea"
     },
     {
       "id": "poco_path_lighthouse",
@@ -741,147 +766,216 @@
       "id": "kitakami",
       "name": "Kitakami",
       "kind": "area",
-      "connectsTo": [],
+      "connectsTo": [
+        "mossui_town",
+        "apple_hills",
+        "oni_mountain",
+        "infernal_pass",
+        "crystal_pool",
+        "kitakami_hall",
+        "kitakami_road",
+        "revelers_road",
+        "wistful_fields",
+        "paradise_barrens",
+        "kitakami_wilds",
+        "oni_maw",
+        "dreaded_den",
+        "fellhorn_gorge",
+        "loyalty_plaza",
+        "timeless_woods"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "dataStatus": "parent_access_indexed_exact_subarea_routes_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-kitakami"
       ]
     },
     {
       "id": "mossui_town",
       "name": "Mossui Town",
       "kind": "area",
-      "connectsTo": [],
+      "connectsTo": [
+        "kitakami"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "dataStatus": "parent_access_indexed_exact_subarea_routes_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
-      ]
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-kitakami"
+      ],
+      "parentRegion": "Kitakami"
     },
     {
       "id": "apple_hills",
       "name": "Apple Hills",
       "kind": "natural_area",
-      "connectsTo": [],
+      "connectsTo": [
+        "kitakami"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "dataStatus": "parent_access_indexed_exact_subarea_routes_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
-      ]
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-kitakami"
+      ],
+      "parentRegion": "Kitakami"
     },
     {
       "id": "oni_mountain",
       "name": "Oni Mountain",
       "kind": "natural_area",
-      "connectsTo": [],
+      "connectsTo": [
+        "kitakami"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "dataStatus": "parent_access_indexed_exact_subarea_routes_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
-      ]
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-kitakami"
+      ],
+      "parentRegion": "Kitakami"
     },
     {
       "id": "infernal_pass",
       "name": "Infernal Pass",
       "kind": "natural_area",
-      "connectsTo": [],
+      "connectsTo": [
+        "kitakami"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "dataStatus": "parent_access_indexed_exact_subarea_routes_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
-      ]
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-kitakami"
+      ],
+      "parentRegion": "Kitakami"
     },
     {
       "id": "crystal_pool",
       "name": "Crystal Pool",
       "kind": "area",
-      "connectsTo": [],
+      "connectsTo": [
+        "kitakami"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "dataStatus": "parent_access_indexed_exact_subarea_routes_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
-      ]
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-kitakami"
+      ],
+      "parentRegion": "Kitakami"
     },
     {
       "id": "blueberry_academy",
       "name": "Blueberry Academy",
       "kind": "area",
-      "connectsTo": [],
+      "connectsTo": [
+        "terarium",
+        "league_club"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "dataStatus": "parent_access_indexed_exact_subarea_routes_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-blueberry-academy"
       ]
     },
     {
       "id": "terarium",
       "name": "Terarium",
       "kind": "special_area",
-      "connectsTo": [],
+      "connectsTo": [
+        "blueberry_academy",
+        "blueberry_academy_central_plaza",
+        "coastal_biome",
+        "canyon_biome",
+        "polar_biome",
+        "savanna_biome",
+        "coastal_plaza",
+        "canyon_plaza",
+        "polar_plaza",
+        "savanna_plaza",
+        "chargedstone_cavern",
+        "terarium_core"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "area_inventory_needs_subarea_and_spawn_audit",
+      "dataStatus": "parent_access_indexed_exact_subarea_routes_pending",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
-      ]
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-blueberry-academy"
+      ],
+      "parentRegion": "Blueberry Academy"
     },
     {
       "id": "zero_gate",
       "name": "Zero Gate",
       "kind": "facility",
-      "connectsTo": [],
+      "connectsTo": [
+        "area_zero"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-area-zero"
       ],
-      "dataStatus": "named_location_known_exact_pins_pending_verification",
-      "province": "Great Crater of Paldea"
+      "dataStatus": "parent_access_indexed_exact_subarea_routes_pending",
+      "province": "Great Crater of Paldea",
+      "parentRegion": "Area Zero / Great Crater of Paldea"
     },
     {
       "id": "zero_lab",
       "name": "Zero Lab",
       "kind": "facility",
-      "connectsTo": [],
+      "connectsTo": [
+        "area_zero"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-area-zero"
       ],
-      "dataStatus": "named_location_known_exact_pins_pending_verification",
-      "province": "Great Crater of Paldea"
+      "dataStatus": "parent_access_indexed_exact_subarea_routes_pending",
+      "province": "Great Crater of Paldea",
+      "parentRegion": "Area Zero / Great Crater of Paldea"
     },
     {
       "id": "area_zero_underdepths",
       "name": "Area Zero Underdepths",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "area_zero"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-area-zero"
       ],
-      "dataStatus": "named_location_known_exact_pins_pending_verification",
-      "province": "Great Crater of Paldea"
+      "dataStatus": "parent_access_indexed_exact_subarea_routes_pending",
+      "province": "Great Crater of Paldea",
+      "parentRegion": "Area Zero / Great Crater of Paldea"
     },
     {
       "id": "alfornada_cavern",
@@ -1194,14 +1288,18 @@
       "id": "kitakami_hall",
       "name": "Kitakami Hall",
       "kind": "building",
-      "connectsTo": [],
+      "connectsTo": [
+        "kitakami"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-kitakami"
       ],
-      "dataStatus": "named_location_known_exact_pins_pending_verification"
+      "dataStatus": "parent_access_indexed_exact_subarea_routes_pending",
+      "parentRegion": "Kitakami"
     },
     {
       "id": "oni_mountain_cave",
@@ -1220,40 +1318,52 @@
       "id": "coastal_biome",
       "name": "Coastal Biome",
       "kind": "area",
-      "connectsTo": [],
+      "connectsTo": [
+        "terarium"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-blueberry-academy"
       ],
-      "dataStatus": "named_location_known_exact_pins_pending_verification"
+      "dataStatus": "parent_access_indexed_exact_subarea_routes_pending",
+      "parentRegion": "Terarium"
     },
     {
       "id": "canyon_biome",
       "name": "Canyon Biome",
       "kind": "area",
-      "connectsTo": [],
+      "connectsTo": [
+        "terarium"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-blueberry-academy"
       ],
-      "dataStatus": "named_location_known_exact_pins_pending_verification"
+      "dataStatus": "parent_access_indexed_exact_subarea_routes_pending",
+      "parentRegion": "Terarium"
     },
     {
       "id": "polar_biome",
       "name": "Polar Biome",
       "kind": "area",
-      "connectsTo": [],
+      "connectsTo": [
+        "terarium"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
+        "bulbapedia-scarlet-violet",
+        "bulbapedia-blueberry-academy"
       ],
-      "dataStatus": "named_location_known_exact_pins_pending_verification"
+      "dataStatus": "parent_access_indexed_exact_subarea_routes_pending",
+      "parentRegion": "Terarium"
     },
     {
       "id": "tropical_biome",
@@ -1272,267 +1382,343 @@
       "id": "kitakami_road",
       "name": "Kitakami Road",
       "kind": "path",
-      "connectsTo": [],
+      "connectsTo": [
+        "kitakami"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
-        "pokedb-paldea"
+        "pokedb-paldea",
+        "bulbapedia-kitakami"
       ],
-      "dataStatus": "dlc_named_location_pins_pending"
+      "dataStatus": "parent_access_indexed_exact_subarea_routes_pending",
+      "parentRegion": "Kitakami"
     },
     {
       "id": "revelers_road",
       "name": "Reveler's Road",
       "kind": "path",
-      "connectsTo": [],
+      "connectsTo": [
+        "kitakami"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
-        "pokedb-paldea"
+        "pokedb-paldea",
+        "bulbapedia-kitakami"
       ],
-      "dataStatus": "dlc_named_location_pins_pending"
+      "dataStatus": "parent_access_indexed_exact_subarea_routes_pending",
+      "parentRegion": "Kitakami"
     },
     {
       "id": "wistful_fields",
       "name": "Wistful Fields",
       "kind": "area",
-      "connectsTo": [],
+      "connectsTo": [
+        "kitakami"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
-        "pokedb-paldea"
+        "pokedb-paldea",
+        "bulbapedia-kitakami"
       ],
-      "dataStatus": "dlc_named_location_pins_pending"
+      "dataStatus": "parent_access_indexed_exact_subarea_routes_pending",
+      "parentRegion": "Kitakami"
     },
     {
       "id": "paradise_barrens",
       "name": "Paradise Barrens",
       "kind": "area",
-      "connectsTo": [],
+      "connectsTo": [
+        "kitakami"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
-        "pokedb-paldea"
+        "pokedb-paldea",
+        "bulbapedia-kitakami"
       ],
-      "dataStatus": "dlc_named_location_pins_pending"
+      "dataStatus": "parent_access_indexed_exact_subarea_routes_pending",
+      "parentRegion": "Kitakami"
     },
     {
       "id": "kitakami_wilds",
       "name": "Kitakami Wilds",
       "kind": "area",
-      "connectsTo": [],
+      "connectsTo": [
+        "kitakami"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
-        "pokedb-paldea"
+        "pokedb-paldea",
+        "bulbapedia-kitakami"
       ],
-      "dataStatus": "dlc_named_location_pins_pending"
+      "dataStatus": "parent_access_indexed_exact_subarea_routes_pending",
+      "parentRegion": "Kitakami"
     },
     {
       "id": "oni_maw",
       "name": "Oni's Maw",
       "kind": "cave",
-      "connectsTo": [],
+      "connectsTo": [
+        "kitakami"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
-        "pokedb-paldea"
+        "pokedb-paldea",
+        "bulbapedia-kitakami"
       ],
-      "dataStatus": "dlc_named_location_pins_pending"
+      "dataStatus": "parent_access_indexed_exact_subarea_routes_pending",
+      "parentRegion": "Kitakami"
     },
     {
       "id": "dreaded_den",
       "name": "Dreaded Den",
       "kind": "cave",
-      "connectsTo": [],
+      "connectsTo": [
+        "kitakami"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
-        "pokedb-paldea"
+        "pokedb-paldea",
+        "bulbapedia-kitakami"
       ],
-      "dataStatus": "dlc_named_location_pins_pending"
+      "dataStatus": "parent_access_indexed_exact_subarea_routes_pending",
+      "parentRegion": "Kitakami"
     },
     {
       "id": "fellhorn_gorge",
       "name": "Fellhorn Gorge",
       "kind": "gorge",
-      "connectsTo": [],
+      "connectsTo": [
+        "kitakami"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
-        "pokedb-paldea"
+        "pokedb-paldea",
+        "bulbapedia-kitakami"
       ],
-      "dataStatus": "dlc_named_location_pins_pending"
+      "dataStatus": "parent_access_indexed_exact_subarea_routes_pending",
+      "parentRegion": "Kitakami"
     },
     {
       "id": "loyalty_plaza",
       "name": "Loyalty Plaza",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "kitakami"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
-        "pokedb-paldea"
+        "pokedb-paldea",
+        "bulbapedia-kitakami"
       ],
-      "dataStatus": "dlc_named_location_pins_pending"
+      "dataStatus": "parent_access_indexed_exact_subarea_routes_pending",
+      "parentRegion": "Kitakami"
     },
     {
       "id": "timeless_woods",
       "name": "Timeless Woods",
       "kind": "forest",
-      "connectsTo": [],
+      "connectsTo": [
+        "kitakami"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
-        "pokedb-paldea"
+        "pokedb-paldea",
+        "bulbapedia-kitakami"
       ],
-      "dataStatus": "dlc_named_location_pins_pending"
+      "dataStatus": "parent_access_indexed_exact_subarea_routes_pending",
+      "parentRegion": "Kitakami"
     },
     {
       "id": "blueberry_academy_central_plaza",
       "name": "Blueberry Academy Central Plaza",
       "kind": "building",
-      "connectsTo": [],
+      "connectsTo": [
+        "terarium"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
-        "pokedb-paldea"
+        "pokedb-paldea",
+        "bulbapedia-blueberry-academy"
       ],
-      "dataStatus": "dlc_named_location_pins_pending"
+      "dataStatus": "parent_access_indexed_exact_subarea_routes_pending",
+      "parentRegion": "Terarium"
     },
     {
       "id": "league_club",
       "name": "League Club",
       "kind": "building",
-      "connectsTo": [],
+      "connectsTo": [
+        "blueberry_academy"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
-        "pokedb-paldea"
+        "pokedb-paldea",
+        "bulbapedia-blueberry-academy"
       ],
-      "dataStatus": "dlc_named_location_pins_pending"
+      "dataStatus": "parent_access_indexed_exact_subarea_routes_pending",
+      "parentRegion": "Blueberry Academy"
     },
     {
       "id": "chargedstone_cavern",
       "name": "Chargestone Cavern",
       "kind": "cave",
-      "connectsTo": [],
+      "connectsTo": [
+        "terarium"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
-        "pokedb-paldea"
+        "pokedb-paldea",
+        "bulbapedia-blueberry-academy"
       ],
-      "dataStatus": "dlc_named_location_pins_pending"
+      "dataStatus": "parent_access_indexed_exact_subarea_routes_pending",
+      "parentRegion": "Terarium"
     },
     {
       "id": "coastal_plaza",
       "name": "Coastal Plaza",
       "kind": "plaza",
-      "connectsTo": [],
+      "connectsTo": [
+        "terarium"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
-        "pokedb-paldea"
+        "pokedb-paldea",
+        "bulbapedia-blueberry-academy"
       ],
-      "dataStatus": "dlc_named_location_pins_pending"
+      "dataStatus": "parent_access_indexed_exact_subarea_routes_pending",
+      "parentRegion": "Terarium"
     },
     {
       "id": "canyon_plaza",
       "name": "Canyon Plaza",
       "kind": "plaza",
-      "connectsTo": [],
+      "connectsTo": [
+        "terarium"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
-        "pokedb-paldea"
+        "pokedb-paldea",
+        "bulbapedia-blueberry-academy"
       ],
-      "dataStatus": "dlc_named_location_pins_pending"
+      "dataStatus": "parent_access_indexed_exact_subarea_routes_pending",
+      "parentRegion": "Terarium"
     },
     {
       "id": "polar_plaza",
       "name": "Polar Plaza",
       "kind": "plaza",
-      "connectsTo": [],
+      "connectsTo": [
+        "terarium"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
-        "pokedb-paldea"
+        "pokedb-paldea",
+        "bulbapedia-blueberry-academy"
       ],
-      "dataStatus": "dlc_named_location_pins_pending"
+      "dataStatus": "parent_access_indexed_exact_subarea_routes_pending",
+      "parentRegion": "Terarium"
     },
     {
       "id": "savanna_plaza",
       "name": "Savanna Plaza",
       "kind": "plaza",
-      "connectsTo": [],
+      "connectsTo": [
+        "terarium"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
-        "pokedb-paldea"
+        "pokedb-paldea",
+        "bulbapedia-blueberry-academy"
       ],
-      "dataStatus": "dlc_named_location_pins_pending"
+      "dataStatus": "parent_access_indexed_exact_subarea_routes_pending",
+      "parentRegion": "Terarium"
     },
     {
       "id": "savanna_biome",
       "name": "Savanna Biome",
       "kind": "area",
-      "connectsTo": [],
+      "connectsTo": [
+        "terarium"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
-        "pokedb-paldea"
+        "pokedb-paldea",
+        "bulbapedia-blueberry-academy"
       ],
-      "dataStatus": "dlc_named_location_pins_pending"
+      "dataStatus": "parent_access_indexed_exact_subarea_routes_pending",
+      "parentRegion": "Terarium"
     },
     {
       "id": "terarium_core",
       "name": "Terarium Core",
       "kind": "facility",
-      "connectsTo": [],
+      "connectsTo": [
+        "terarium"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet",
-        "pokedb-paldea"
+        "pokedb-paldea",
+        "bulbapedia-blueberry-academy"
       ],
-      "dataStatus": "dlc_named_location_pins_pending"
+      "dataStatus": "parent_access_indexed_exact_subarea_routes_pending",
+      "parentRegion": "Terarium"
     }
   ]
 }
