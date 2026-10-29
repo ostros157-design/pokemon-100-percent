@@ -323,7 +323,7 @@
       "name": "Route 6",
       "kind": "route",
       "connectsTo": [
-        "chargedstone_cave",
+        "chargestone_cave",
         "driftveil_city"
       ],
       "localMapAsset": null,
@@ -895,22 +895,6 @@
       "connectsTo": [
         "route_5",
         "driftveil_city"
-      ],
-      "localMapAsset": null,
-      "coordinateStatus": "unverified",
-      "sourceIds": [
-        "bulbapedia-unova",
-        "bulbapedia-route-list"
-      ],
-      "dataStatus": "connection_indexed_variant_audit_pending"
-    },
-    {
-      "id": "chargedstone_cave",
-      "name": "Chargestone Cave",
-      "kind": "cave",
-      "connectsTo": [
-        "route_6",
-        "mistralton_city"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
