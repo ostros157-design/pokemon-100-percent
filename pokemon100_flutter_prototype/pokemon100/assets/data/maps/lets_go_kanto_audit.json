@@ -8281,14 +8281,17 @@
       "coordinateStatus": "unverified",
       "notes": "Połączenie Celadon City z Route 17; północna część wymaga Chop Down.",
       "items": [
-        "3 Poké Balls",
-        "Super Potion",
-        "Lure",
-        "ukryty Rare Candy"
+        "PP Up — północna strona kępy wysokiej trawy; wymaga Chop Down.",
+        "TM14 (Fly) — od samotniczki w domu na północnym odcinku; wymaga Chop Down.",
+        "Ultra Ball ×30 — od pomocnika Profesora Oaka przy południowej bramie po złapaniu co najmniej 40 różnych gatunków.",
+        "Awakening — ukryty na północ od południowej bramy (przedmiot dzienny).",
+        "Super Potion — na południowy zachód od południowej bramy, na ścieżce ziemnej.",
+        "Great Ball ×3 — na zachód od południowej bramy, przy brzegu wody."
       ],
       "sourceIds": [
         "routepedia-route16-pikachu",
-        "serebii-route16"
+        "serebii-route16",
+        "bulbapedia-part11"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemonDetails": {
@@ -8609,7 +8612,13 @@
           "Snorlax"
         ]
       },
-      "encounterStatus": "text_verified"
+      "encounterStatus": "text_verified",
+      "trainers": [
+        "Punk Guy Lao — Onix Lv. 36, Muk Lv. 36; północna część wymaga Chop Down.",
+        "Roughneck Koji — Raticate Lv. 36, Rhyhorn Lv. 36, Koffing Lv. 36; północna część wymaga Chop Down.",
+        "Punk Guy Hideo — Arbok Lv. 36, Fearow Lv. 36; północna część wymaga Chop Down.",
+        "Camper Ruben — dwa Psyduck Lv. 35."
+      ]
     },
     {
       "id": "route_17",
@@ -8624,7 +8633,8 @@
       "notes": "Pokémon Road — długa trasa rowerowa między Route 16 i Route 18.",
       "sourceIds": [
         "routepedia-route17-pikachu",
-        "serebii-route17"
+        "serebii-route17",
+        "bulbapedia-part11"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemonDetails": {
@@ -9007,7 +9017,34 @@
           "Moltres"
         ]
       },
-      "encounterStatus": "text_verified"
+      "encounterStatus": "text_verified",
+      "trainers": [
+        "Picnicker Dalia — Vaporeon Lv. 37.",
+        "Beauty Alexis — Jolteon Lv. 37.",
+        "Lass Mila — Flareon Lv. 36.",
+        "Ace Trainer Johnson — Wartortle Lv. 40, Magneton Lv. 39, Marowak Lv. 39.",
+        "Punk Guy Corey — Primeape Lv. 38, Graveler Lv. 38.",
+        "Coach Trainer Grantley — Fearow Lv. 40, Beedrill Lv. 40, Sandslash Lv. 41.",
+        "Beauty Samantha — Weepinbell Lv. 37.",
+        "Gentleman Orson — Persian Lv. 38.",
+        "Ace Trainer Maria — Exeggutor Lv. 40, Ninetales Lv. 39, Starmie Lv. 39.",
+        "Picnicker Misaki — Vulpix Lv. 37, Ivysaur Lv. 37, Wigglytuff Lv. 37."
+      ],
+      "items": [
+        "Super Potion — przed dwiema północno-wschodnimi ławkami.",
+        "Super Lure — w wysokiej trawie na zachód od Ace Trainer Johnson.",
+        "Great Ball ×3 — w wysokiej trawie na południowy zachód od Ace Trainer Johnson.",
+        "Elixir — w wysokiej trawie na południowy zachód od znaku Trainer Tips.",
+        "TM58 (Drill Run) — nagroda od Coach Trainer Grantley po zwycięstwie.",
+        "Rare Candy — w wysokiej trawie na południe od Coach Trainer Grantley.",
+        "Silver Razz Berry ×3 — ukryte w żółtych kwiatach przy północno-wschodnim narożniku najbardziej południowego pola trawy.",
+        "Silver Pinap Berry ×8 — pięć w najbardziej południowej kępie trawy i trzy ukryte w żółtych kwiatach przy jej południowo-wschodnim narożniku.",
+        "Silver Nanab Berry ×3 — ukryte na południowy wschód od dwóch południowych ławek, w małym żółtym krzaku przy Gentleman Orson.",
+        "Nugget — w żółtych kwiatach przy Beauty Samantha i Weepinbell.",
+        "Super Repel — za dwiema południowo-zachodnimi ławkami.",
+        "Blast-Off Set — po zostaniu Championem, nagroda od Jessie i Jamesa po ponownej walce.",
+        "Ukryte losowe jagody w żółtych krzakach: Razz / Nanab / Pinap oraz warianty Silver/Golden w różnych częściach trasy; opis tekstowy, bez pinezek."
+      ]
     },
     {
       "id": "route_18",
@@ -9024,7 +9061,8 @@
       ],
       "sourceIds": [
         "routepedia-route18-pikachu",
-        "serebii-route18"
+        "serebii-route18",
+        "bulbapedia-part11"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemonDetails": {
@@ -9327,7 +9365,17 @@
           "Moltres"
         ]
       },
-      "encounterStatus": "text_verified"
+      "encounterStatus": "text_verified",
+      "trainers": [
+        "Bird Keeper Wilton — Fearow Lv. 39, Dodrio Lv. 39.",
+        "Bird Keeper Ramiro — Pidgeot Lv. 39.",
+        "Bird Keeper Jacob — trzy Farfetch'd Lv. 39."
+      ],
+      "items": [
+        "Silver Razz Berry ×3 — ukryte w żółtych kwiatach przy wejściu od Route 17 (przedmiot dzienny).",
+        "Elixir — na południe od bramy.",
+        "Razz Berry / Silver Razz Berry / Golden Razz Berry — z krzaka przy wschodnim końcu trasy; wariant może zależeć od znaleziska partnera Pokémon."
+      ]
     },
     {
       "id": "route_19",
