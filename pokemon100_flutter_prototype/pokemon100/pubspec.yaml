@@ -29,6 +29,7 @@ flutter:
   assets:
     - assets/data/pokemon_learnsets.json
     - assets/data/maps/lets_go_kanto_audit.json
+    - assets/data/maps/kanto_audit.json
     - assets/data/maps/paldea_audit.json
     - assets/data/maps/hisui_audit.json
     - assets/data/maps/galar_audit.json
