@@ -446,9 +446,17 @@ class _MapsScreenState extends State<MapsScreen> {
                                 const Text('Ważne miejsca', style: TextStyle(fontWeight: FontWeight.w700)),
                                 Text(features.join(' • ')),
                               ],
+                              if (location['province'] is String) ...[
+                                const SizedBox(height: 8),
+                                Text('Prowincja: ${location['province']}'),
+                              ],
+                              if (location['parentRegion'] is String) ...[
+                                const SizedBox(height: 8),
+                                Text('Obszar nadrzędny: ${location['parentRegion']}'),
+                              ],
                               if (connections.isNotEmpty) ...[
                                 const SizedBox(height: 8),
-                                const Text('Połączenia', style: TextStyle(fontWeight: FontWeight.w700)),
+                                const Text('Połączenia / dostęp', style: TextStyle(fontWeight: FontWeight.w700)),
                                 Text(connections.join(' • ')),
                               ],
                               const SizedBox(height: 8),
