@@ -757,3 +757,13 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Commity: `75b2545`, `6bcce3d`, `3fa56b8`, `d91fef2`, `faa9bdd`, `ac4a981`, `594388e`, `ea00e66`, `3a5dbdd`, `8c603e0`, `41b4536`, `455810b`, `e6cb928`, `ee4eb9b`, `7f59b10`, `5df190a`, `b872c57`.
 - Weryfikacja JSON: wszystkie 10 indeksów parsują się; brak zduplikowanych ID, brak nieistniejących źródeł i brak błędnych połączeń `connectsTo` po poprawkach. Dla większości nowych regionów połączenia pozostają celowo nieuzupełnione do czasu sprawdzenia wariantu gry.
 - Nie uruchamiano Flutter analyzer, testów ani APK. Cała mapa Pokémon nie jest jeszcze ukończona: brakuje zweryfikowanych grafów tras, dokładnych map graficznych, wnętrz, pinezek przedmiotów/trenerów/Pokémonów oraz audytu różnic między wersjami.
+
+
+### Mapy — grafy tras i dobór regionu według gry (2026-10-29)
+
+- Dodano ogólny indeks Kanto (71 lokacji) oddzielny od indeksu Let’s Go (65 lokacji). Dzięki temu Red/Blue/Yellow oraz FireRed/LeafGreen nie pokazują spotkań i przedmiotów specyficznych dla Let’s Go.
+- Uzupełniono graf połączeń tras dla Kanto, Johto, Hoenn, Sinnoh, Unovy, Kalos, Aloli i Galar na podstawie tabeli końców tras Bulbapedia; dodano brakujące węzły pośrednie i znormalizowano połączenia dwukierunkowe.
+- `maps_screen.dart` ładuje 11 indeksów z assetów offline, wybiera region według ID gry (ważne dla FireRed/LeafGreen, Omega Ruby/Alpha Sapphire, Sword/Shield i Legends: Arceus), umożliwia wyszukiwanie lokacji i pokazuje jej status, notatki oraz połączenia.
+- Commity: `b4f7655`, `986e9c6`, `8e33827`, `60af84a`, `151f41f`, `82cb120`, `c10cb32`, `c63eb83`, `b22bf45`, `478b692`, `9532707`, `eca450a`, `bbc4d3e`, `bfe1e87`, `55f68e2`, `daa4bb1`, `4535255`, `4a367a3`, `1fb5c24`, `2d1ca15`, `93d9554`, `db3cb1a`, `f27d5c8`, `b172579`.
+- Audyt danych: 11 plików JSON parsuje się; brak zduplikowanych ID, brak nieistniejących `sourceIds` i brak niedziałających `connectsTo` po poprawkach. To nie jest jeszcze walidacja kompilacji Flutter.
+- Nadal nie ma dokładnych map graficznych w skali gry dla pozostałych regionów, pełnych map wnętrz ani zweryfikowanych pinezek dla wszystkich Pokémonów, trenerów i przedmiotów. Nie uruchamiano Flutter analyzer, testów ani APK.
