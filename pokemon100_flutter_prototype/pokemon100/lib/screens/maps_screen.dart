@@ -2599,6 +2599,17 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
       'Tunel': 'Schematyczny tunel pod powierzchnią.',
       'Wyjście Route 8': 'Drugie wejście/wyjście przejścia.',
     },
+    'Safari Zone': {
+      'Wejście / recepcja': 'Punkt wejścia do Safari Zone.',
+      'Obszary safari': 'Kilka stref pokazanych jako uproszczony plan; nie odwzorowuje dokładnych ścieżek i przedmiotów.',
+      'Secret House': 'Obszar nagrody HM Surf; dokładna pozycja nie jest pinezką.',
+      'Wyjście do Fuchsia City': 'Powrót do miasta.',
+    },
+    'Pokémon League Reception Gate': {
+      'Wejście od Route 23': 'Południowy kierunek wejścia do bramy Ligi.',
+      'Punkty kontroli': 'Strefa kontroli odznak; układ jest schematyczny.',
+      'Wyjście do Indigo Plateau': 'Kierunek wejścia do kompleksu Ligi Pokémon.',
+    },
   };
 
   @override
@@ -3010,6 +3021,23 @@ class _KantoLocalAreaPainter extends CustomPainter {
         ..moveTo(size.width * .50, size.height * .28)
         ..lineTo(size.width * .35, size.height * .66)
         ..lineTo(size.width * .68, size.height * .66);
+    } else if (location == 'Safari Zone') {
+      drawZone(.08, .20, .34, .25);
+      drawZone(.56, .16, .34, .25);
+      drawZone(.12, .57, .30, .23);
+      drawZone(.58, .55, .30, .25);
+      path
+        ..moveTo(size.width * .24, size.height * .32)
+        ..quadraticBezierTo(size.width * .52, size.height * .44, size.width * .72, size.height * .29)
+        ..lineTo(size.width * .73, size.height * .66)
+        ..lineTo(size.width * .28, size.height * .68);
+    } else if (location == 'Pokémon League Reception Gate') {
+      drawZone(.10, .25, .25, .30);
+      drawZone(.39, .25, .22, .30);
+      drawZone(.66, .25, .25, .30);
+      path
+        ..moveTo(size.width * .12, size.height * .40)
+        ..lineTo(size.width * .88, size.height * .40);
     } else if (location.startsWith('Route ') ||
         location.startsWith('Underground Path')) {
       final isWaterRoute = {'Route 19', 'Route 20', 'Route 21'}.contains(location);
@@ -3233,6 +3261,19 @@ class _KantoLocalAreaPainter extends CustomPainter {
         ('League Gate', Offset(size.width * .22, size.height * .31)),
         ('Pokémon Center', Offset(size.width * .50, size.height * .28)),
         ('Victory Road', Offset(size.width * .79, size.height * .33)),
+      ]);
+    } else if (location == 'Safari Zone') {
+      markers.addAll([
+        ('Wejście', Offset(size.width * .25, size.height * .32)),
+        ('Strefa safari', Offset(size.width * .72, size.height * .29)),
+        ('Secret House', Offset(size.width * .27, size.height * .68)),
+        ('Wyjście', Offset(size.width * .73, size.height * .67)),
+      ]);
+    } else if (location == 'Pokémon League Reception Gate') {
+      markers.addAll([
+        ('Route 23', Offset(size.width * .22, size.height * .40)),
+        ('Kontrola odznak', Offset(size.width * .50, size.height * .40)),
+        ('Indigo Plateau', Offset(size.width * .78, size.height * .40)),
       ]);
     } else if (location.startsWith('Route ') ||
         location.startsWith('Underground Path')) {
