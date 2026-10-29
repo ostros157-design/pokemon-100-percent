@@ -3506,6 +3506,9 @@ class _KantoRegionMapState extends State<_KantoRegionMap> {
   }
 
   void _selectTappedPlace(Offset tap) {
+    final scale = _transformController.value.getMaxScaleOnAxis().clamp(0.55, 4.0).toDouble();
+    final symbolHitRadius = 14 / scale;
+    final locationHitRadius = 38 / scale;
     // These two symbols sit beside the Route 1 node. Treat them as separate
     // targets so tapping a symbol explains its meaning, not just the town.
     final routeOne = _KantoMapPainter.places.firstWhere(
@@ -3516,12 +3519,12 @@ class _KantoRegionMapState extends State<_KantoRegionMap> {
     final informationCenter = Offset(routeX - 12, routeY - 15);
     final areaCenter = Offset(routeX + 13, routeY - 15);
 
-    if ((tap - informationCenter).distance <= 14) {
+    if ((tap - informationCenter).distance <= symbolHitRadius) {
       _showLocation('Route 1 • informacje z poradnika');
       widget.onLocationSelected('Route 1');
       return;
     }
-    if ((tap - areaCenter).distance <= 14) {
+    if ((tap - areaCenter).distance <= symbolHitRadius) {
       _showLocation('Route 1 • obszar poglądowy');
       widget.onLocationSelected('Route 1');
       return;
@@ -3538,7 +3541,7 @@ class _KantoRegionMapState extends State<_KantoRegionMap> {
         nearest = place;
       }
     }
-    if (nearest != null && nearestDistance < 38 * 38) {
+    if (nearest != null && nearestDistance < locationHitRadius * locationHitRadius) {
       _showLocation(nearest.name);
       widget.onLocationSelected(nearest.name);
     }
