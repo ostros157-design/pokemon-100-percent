@@ -597,6 +597,16 @@
       "id": "rotomlabs-rock-tunnel",
       "url": "https://rotomlabs.net/locations/lets-go-pikachu-eevee/rock-tunnel",
       "scope": "Let’s Go Rock Tunnel encounter levels and rates by floor"
+    },
+    {
+      "id": "official-lets-go-kanto-region",
+      "url": "https://pokemonletsgo.pokemon.com/en-us/kanto-region/",
+      "scope": "Official descriptions of Kanto towns, terrain and landmarks; not a coordinate source"
+    },
+    {
+      "id": "mewmaps-lets-go-region",
+      "url": "https://www.mewmaps.org/lets-go-pikachu-eevee",
+      "scope": "Reference index for regional and dungeon map subjects; used for coverage checklist, not copied artwork or pixel coordinates"
     }
   ],
   "locations": [
@@ -13095,5 +13105,6 @@
       "dataStatus": "location_indexed_interior_not_mapped"
     }
   ],
-  "region": "Kanto (Let's Go)"
+  "region": "Kanto (Let's Go)",
+  "illustrationPolicy": "The overview and local floor diagrams are original stylized vector illustrations. Route topology is cross-checked against the indexed connections and public map references, but node positions, terrain silhouettes, room geometry, item pins, and trainer pins are not exact game coordinates unless explicitly marked verified."
 }
