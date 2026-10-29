@@ -82,6 +82,26 @@
       "id": "routepedia-route2-eevee",
       "url": "https://theroutepedia.com/pokemon-lets-go-eevee/route-2",
       "scope": "Route 2 location overview for Let's Go Eevee"
+    },
+    {
+      "id": "bulbapedia-part3",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Walkthrough:Pok%C3%A9mon:_Let%27s_Go,_Pikachu!_and_Let%27s_Go,_Eevee!/Part_3",
+      "scope": "Viridian Forest, trainers, items, Pewter City and Pewter Gym"
+    },
+    {
+      "id": "routepedia-forest-pikachu",
+      "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/viridian-forest",
+      "scope": "Let's Go Pikachu Viridian Forest encounters, items and trainers"
+    },
+    {
+      "id": "routepedia-forest-eevee",
+      "url": "https://theroutepedia.com/pokemon-lets-go-eevee/viridian-forest",
+      "scope": "Let's Go Eevee Viridian Forest encounters and items"
+    },
+    {
+      "id": "routepedia-pewter-pikachu",
+      "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/pewter-city",
+      "scope": "Pewter City landmarks, connections and Brock's team"
     }
   ],
   "locations": [
@@ -533,6 +553,204 @@
           "status": "text_verified_position_not_mapped"
         }
       ]
+    },
+    {
+      "id": "viridian_forest",
+      "name": "Viridian Forest",
+      "kind": "forest",
+      "connectsTo": [
+        "route_2"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "notes": "Leśny labirynt na Route 2; pozycje elementów nie są przypisane do współrzędnych.",
+      "encounters": {
+        "lets_go_pikachu": [
+          [
+            "Caterpie",
+            25
+          ],
+          [
+            "Weedle",
+            24
+          ],
+          [
+            "Pidgey",
+            15
+          ],
+          [
+            "Metapod",
+            10
+          ],
+          [
+            "Kakuna",
+            10
+          ],
+          [
+            "Oddish",
+            10
+          ],
+          [
+            "Pikachu",
+            5
+          ],
+          [
+            "Butterfree",
+            1
+          ]
+        ],
+        "lets_go_eevee": [
+          [
+            "Weedle",
+            25
+          ],
+          [
+            "Caterpie",
+            24
+          ],
+          [
+            "Pidgey",
+            15
+          ],
+          [
+            "Metapod",
+            10
+          ],
+          [
+            "Kakuna",
+            10
+          ],
+          [
+            "Bellsprout",
+            10
+          ],
+          [
+            "Pikachu",
+            5
+          ],
+          [
+            "Beedrill",
+            1
+          ]
+        ]
+      },
+      "levelRange": [
+        3,
+        6
+      ],
+      "rareEncounter": {
+        "name": "Bulbasaur",
+        "method": "Lure",
+        "status": "text_verified"
+      },
+      "trainers": [
+        "Lass Joana — Rattata Lv. 4",
+        "Bug Catcher Brian — Weedle Lv. 3",
+        "Bug Catcher Rick — Caterpie Lv. 3",
+        "Lass Brittany — Nidoran♀ Lv. 4",
+        "Bug Catcher Doug — Kakuna Lv. 3",
+        "Lass Jocelyn — Pidgey Lv. 4",
+        "Bug Catcher Sammy — Metapod Lv. 3"
+      ],
+      "items": [
+        "5 Poké Balls",
+        "Tiny Mushroom",
+        "Antidote",
+        "3 Razz Berries",
+        "2 Potions (one hidden)",
+        "Lure"
+      ],
+      "sourceIds": [
+        "bulbapedia-part3",
+        "routepedia-forest-pikachu",
+        "routepedia-forest-eevee"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "pewter_city",
+      "name": "Pewter City",
+      "kind": "town",
+      "connectsTo": [
+        "route_2",
+        "route_3"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "features": [
+        {
+          "id": "pokemon_center",
+          "name": "Pokémon Center",
+          "category": "building",
+          "status": "text_verified"
+        },
+        {
+          "id": "poke_mart",
+          "name": "Poké Mart",
+          "category": "building",
+          "status": "text_verified"
+        },
+        {
+          "id": "museum",
+          "name": "Pewter Museum of Science",
+          "category": "building",
+          "status": "text_verified"
+        },
+        {
+          "id": "gym",
+          "name": "Pewter Gym",
+          "category": "gym",
+          "status": "text_verified"
+        }
+      ],
+      "events": [
+        {
+          "id": "trace_potions",
+          "name": "5 Potions",
+          "category": "story_gift",
+          "note": "Given by Trace when first entering the city.",
+          "status": "text_verified"
+        },
+        {
+          "id": "brock_reward",
+          "name": "Boulder Badge and TM01 Headbutt",
+          "category": "gym_reward",
+          "status": "text_verified"
+        },
+        {
+          "id": "blue_reward",
+          "name": "5 Great Balls",
+          "category": "story_reward",
+          "note": "Given by Blue after defeating Brock.",
+          "status": "text_verified"
+        },
+        {
+          "id": "x_defense",
+          "name": "X Defense",
+          "category": "item",
+          "note": "Behind the Pokémon Center; exact coordinates not verified.",
+          "coordinateStatus": "unverified",
+          "status": "text_verified_position_not_mapped"
+        }
+      ],
+      "gymLeader": {
+        "name": "Brock",
+        "team": [
+          {
+            "name": "Geodude",
+            "level": 11
+          },
+          {
+            "name": "Onix",
+            "level": 12
+          }
+        ]
+      },
+      "sourceIds": [
+        "bulbapedia-part3",
+        "routepedia-pewter-pikachu"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
     }
   ]
 }
