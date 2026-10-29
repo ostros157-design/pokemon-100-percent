@@ -1,3 +1,9 @@
+### Mapy — kompletowanie trenerów i przedmiotów Route 10–12 (2026-10-29)
+
+- Uzupełniono listy trenerów Route 10 (część północna i południowa), Route 11 oraz Route 12, wraz z poziomami drużyn i warunkami dostępu tam, gdzie są istotne.
+- Rozbudowano listy Route 11 i Route 12 o stałe przedmioty, nagrody, ukryte/dzienne jagody i znaleziska partnera Pokémon; wersjozależne nagrody Coach Trainer Will są wyraźnie rozdzielone.
+- Źródła: Bulbapedia Part 7 i Part 12, już zarejestrowane w indeksie. Wpisy pozostają opisami tekstowymi, bez niezweryfikowanych pinezek. Commit danych: `17aa15a`. Bez testów, analyzer ani APK.
+
 ### Mapy — pełniejsze dane Route 16–18 Kanto (2026-10-29)
 
 - Dodano trenerów i przedmioty Route 16, w tym TM14 (Fly), Ultra Ball ×30 od pomocnika Oaka po złapaniu 40 gatunków oraz warunki Chop Down.
