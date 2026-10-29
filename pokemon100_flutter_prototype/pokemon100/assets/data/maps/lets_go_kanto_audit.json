@@ -2431,7 +2431,9 @@
         "PP Max",
         "3 Great Balls",
         "Repel",
-        "PP Up (ukryty)"
+        "PP Up (ukryty)",
+        "TM57 (Pay Day) — nagroda od Coach Trainer Oberon po zwycięstwie na zachodnim odcinku.",
+        "Escape Rope — między skałami na zachód od Pokémon Center."
       ],
       "notablePokemon": [
         "Magikarp Lv. 5 — kupowany w Pokémon Center za 500"
@@ -2478,7 +2480,10 @@
           "Tentacruel"
         ]
       },
-      "encounterStatus": "text_verified"
+      "encounterStatus": "text_verified",
+      "trainers": [
+        "Coach Trainer Oberon — Meowth Lv. 13; nagroda $1,300."
+      ]
     },
     {
       "id": "cerulean_city",
@@ -5155,7 +5160,13 @@
           "Moltres"
         ]
       },
-      "encounterStatus": "text_verified"
+      "encounterStatus": "text_verified",
+      "items": [
+        "Super Potion ×2 — jedna w południowo-zachodnim narożniku trasy, druga w północno-wschodniej części na północ od Camper Drew.",
+        "Ether — północno-zachodni narożnik trasy.",
+        "Poké Ball ×5 — środkowa część trasy, na południe od Youngster Chris.",
+        "Pinap Berry ×5 — ukryte w południowo-wschodnim narożniku, na wschód od Hiker Alan."
+      ]
     },
     {
       "id": "route_10",
