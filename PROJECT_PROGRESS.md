@@ -1,3 +1,11 @@
+### Mapy — rozszerzenie schematu Kanto do pełnego indeksu lokacji (2026-10-29)
+
+- Rozszerzono rysowaną offline mapę regionu Kanto z 15 punktów do wszystkich 65 lokacji znajdujących się w istniejącym indeksie `kanto_audit.json`, w tym tras, miast, jaskiń, Gymów, budynków i obiektów pobocznych.
+- Dodano 74 połączenia oparte na polach `connectsTo` w indeksie audytowym. Klikalne punkty korzystają z istniejącego mechanizmu wyboru lokacji; mapa nadal obsługuje przesuwanie i przybliżanie.
+- Współrzędne w schemacie są układem poglądowym do rozmieszczenia węzłów, a nie zweryfikowanymi współrzędnymi z gry. To znaczące rozszerzenie mapy regionu, ale nie oznacza jeszcze ukończonej mapy HD ani dokładnych pinezek Pokémonów, przedmiotów i trenerów.
+- Commit: `08030de0ba73e0a8d280ca5e59f515f54b387ed1`.
+- Weryfikacja: nie uruchomiono `flutter analyze`, testów ani kompilacji APK. Po zmianie należy sprawdzić kompilację i czytelność etykiet po przybliżeniu.
+
 ### Mapy — powiększanie schematu lokacji (2026-10-29)
 
 - Dodano możliwość dotknięcia lokalnego schematu, aby otworzyć jego większy widok w oknie dialogowym.
