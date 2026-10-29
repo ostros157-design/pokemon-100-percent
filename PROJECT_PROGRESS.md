@@ -813,3 +813,12 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 
 - Usunięto duplikat Iki Town w indeksie Aloli i poprawiono połączenia Pokémon League w Galar; Galar nie jest sztucznie łączony z nieistniejącą w tej grze Victory Road.
 - Commity: `fa624a3`, `30479f5`.
+
+
+### Mapy — końcowy audyt spójności indeksów i naprawa odwołań (2026-10-29)
+
+- Przeaudytowano wszystkie 11 indeksów offline: 816 rekordów lokacji łącznie. Każdy plik parsuje się jako JSON, jest zarejestrowany w `pubspec.yaml` i ładowany przez `MapsScreen`.
+- Naprawiono duplikaty nazw `Giant's Bed` i `Arena's Approach`, zachowując powiązane dane; naprawiono też odwołania `connectsTo` do scalonych rekordów. Uzupełniono jawny status danych Route 2 w indeksie Let’s Go.
+- Ponowny audyt: 0 zduplikowanych ID, 0 zduplikowanych nazw, 0 brakujących `sourceIds`, 0 niedziałających `connectsTo`, 0 lokacji bez `dataStatus`.
+- Commity napraw: `9ee9216`, `2670d41`, `6c67404`, `afb57f5`, `70d4eaa`.
+- To jest kontrola struktury i odwołań plików, nie test uruchomienia Flutter. Nie uruchamiano analyzer, testów ani APK. Mapa jako całość nie jest ukończona: nadal potrzebuje dokładnych ilustracji map, zweryfikowanych pinezek 100% i kontroli wariantów gry.
