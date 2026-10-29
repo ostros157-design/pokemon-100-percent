@@ -3865,17 +3865,68 @@ class _KantoMapPainter extends CustomPainter {
     canvas.drawPath(
       coast,
       Paint()
-        ..color = const Color(0xFF719B72).withValues(alpha: .62)
+        ..color = const Color(0xFFE7D8A7).withValues(alpha: .92)
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 8,
+    );
+    canvas.drawPath(
+      coast,
+      Paint()
+        ..color = const Color(0xFF719B72).withValues(alpha: .72)
         ..style = PaintingStyle.stroke
         ..strokeWidth = 3.5,
     );
     canvas.drawPath(
       coast,
       Paint()
-        ..color = Colors.white.withValues(alpha: .55)
+        ..color = Colors.white.withValues(alpha: .58)
         ..style = PaintingStyle.stroke
         ..strokeWidth = 1,
     );
+
+    // Fine sea strokes sit only in the ocean, giving the coast a painted atlas
+    // texture without putting wave marks over selectable land locations.
+    canvas.save();
+    canvas.clipPath(coast, clipOp: ClipOp.difference);
+    final seaWavePaint = Paint()
+      ..color = const Color(0xFF5CA9B5).withValues(alpha: .46)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 1.5
+      ..strokeCap = StrokeCap.round;
+    for (final wave in <(double, double, double)>[
+      (.04, .30, .025),
+      (.05, .48, .022),
+      (.04, .68, .026),
+      (.15, .96, .025),
+      (.31, .98, .022),
+      (.48, .96, .025),
+      (.72, .94, .022),
+      (.94, .78, .024),
+      (.96, .59, .022),
+      (.96, .43, .026),
+      (.94, .13, .022),
+      (.65, .035, .025),
+      (.80, .035, .020),
+    ]) {
+      final center = p(wave.$1, wave.$2);
+      final width = size.width * wave.$3;
+      final line = Path()
+        ..moveTo(center.dx - width, center.dy)
+        ..quadraticBezierTo(
+          center.dx - width * .35,
+          center.dy - 3.5 * size.width / 900,
+          center.dx,
+          center.dy,
+        )
+        ..quadraticBezierTo(
+          center.dx + width * .55,
+          center.dy + 3.5 * size.width / 900,
+          center.dx + width,
+          center.dy,
+        );
+      canvas.drawPath(line, seaWavePaint);
+    }
+    canvas.restore();
 
     // Soft terrain washes are decorative texture, not verified geographic data.
     final terrainWashes = <(double, double, double, double, Color)>[
