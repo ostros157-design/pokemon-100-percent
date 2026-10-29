@@ -7128,7 +7128,7 @@
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "notes": "Morska trasa rozdzielona przez Seafoam Islands; wymaga Sea Skim. Spotkania wodne mają różne poziomy po wschodniej i zachodniej stronie Seafoam Islands; w tej tabeli podano zakres wschodniej części, a poziomy zachodniej wymagają osobnego pola.",
+      "notes": "Morska trasa rozdzielona przez Seafoam Islands; wymaga Sea Skim. Zakres 37–44 obejmuje poziomy spotkań wodnych z obu stron Seafoam Islands: 37–42 na wschodzie i 39–44 na zachodzie.",
       "wildPokemonDetails": {
         "lets_go_pikachu": [
           {
@@ -7136,7 +7136,7 @@
             "method": "surfing",
             "levelRange": [
               37,
-              42
+              44
             ],
             "ratePercent": 45
           },
@@ -7145,7 +7145,7 @@
             "method": "surfing",
             "levelRange": [
               37,
-              42
+              44
             ],
             "ratePercent": 45
           },
@@ -7154,7 +7154,7 @@
             "method": "surfing",
             "levelRange": [
               37,
-              42
+              44
             ],
             "ratePercent": 5
           },
@@ -7163,7 +7163,7 @@
             "method": "surfing",
             "levelRange": [
               37,
-              42
+              44
             ],
             "ratePercent": 5
           },
@@ -7172,7 +7172,7 @@
             "method": "special water spawn",
             "levelRange": [
               37,
-              42
+              44
             ]
           },
           {
@@ -7249,7 +7249,7 @@
             "method": "surfing",
             "levelRange": [
               37,
-              42
+              44
             ],
             "ratePercent": 45
           },
@@ -7258,7 +7258,7 @@
             "method": "surfing",
             "levelRange": [
               37,
-              42
+              44
             ],
             "ratePercent": 45
           },
@@ -7267,7 +7267,7 @@
             "method": "surfing",
             "levelRange": [
               37,
-              42
+              44
             ],
             "ratePercent": 5
           },
@@ -7276,7 +7276,7 @@
             "method": "surfing",
             "levelRange": [
               37,
-              42
+              44
             ],
             "ratePercent": 5
           },
@@ -7285,7 +7285,7 @@
             "method": "special water spawn",
             "levelRange": [
               37,
-              42
+              44
             ]
           },
           {
