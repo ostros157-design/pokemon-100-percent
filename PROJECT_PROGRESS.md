@@ -1104,3 +1104,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Nazwy z tabel spotkań dopasowują się do wpisów Pokédexu po normalizacji apostrofów; wszystkie identyfikatory źródeł użyte przez tabele istnieją w katalogu źródeł.
 - To kontrola struktury i spójności tekstowych danych, nie test uruchomieniowy. Nadal nie uruchamiano `flutter analyze`, testów ani `flutter build apk`.
 
+### Mapy — Kanto: ilustracyjna warstwa wysokiej jakości (2026-10-29)
+
+- Rozbudowano rysowanie mapy Kanto o wektorowe pasma górskie, delikatne linie poziomic, strumień, małe wysepki, miękkie cieniowanie terenu i ozdobną ramkę z kompasem.
+- Elementy są rysowane ścieżkami i gradientami Flutter Canvas, więc pozostają gładkie przy powiększaniu zamiast wyglądać jak rozciągnięte piksele. To autorska, stylizowana warstwa ilustracyjna — nie kopia oficjalnej mapy ani potwierdzenie dokładnych kształtów terenu.
+- Zachowano istniejące wybieranie lokacji, sieć 74 punktów i powiększanie/przesuwanie mapy. Poprawiono też komentarz liczby lokacji i składnię zamknięcia listy połączeń.
+- Commit mapy: `488b736`.
+- Nie uruchamiano Flutter analyzer, testów ani APK. Kolejny etap: lepsze, ręcznie stylizowane ikony miast/lasów/jaskiń oraz dopracowanie kształtu lądu i przebiegu dróg bez fałszywego sugerowania dokładnych współrzędnych.
+
