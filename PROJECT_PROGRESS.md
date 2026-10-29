@@ -1242,3 +1242,8 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Ujednolicono opis mapy i planów lokalnych: liczba lokacji wynosi teraz 76 w obu miejscach UI.
 - Commit: `6193e2b`. Bez testów i APK.
 
+### Mapy — Kanto: odsunięcie kompasu od północno-wschodnich lokacji (2026-10-29)
+
+- Przesunięto kompas do wolniejszego obszaru przy górnej krawędzi, aby nie nachodził na Route 25, Bill's House ani Sea Cottage.
+- Commit: `c1308b2`. Nie uruchamiano testów ani APK.
+
