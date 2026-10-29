@@ -1,3 +1,9 @@
+### Mapy — uzupełnienie list przedmiotów Route 24 i Route 25 (2026-10-29)
+
+- Rozszerzono tekstowe listy przedmiotów na Route 24 i Route 25 o pozycje pominięte wcześniej: warianty dziennych jagód, ukryte Pinap/Nanab Berries, Nugget z wydarzenia Nugget Bridge, TM15 jako nagrodę Coach Trainer Amali oraz dwa S.S. Tickets od Billa.
+- Dodano krótkie opisy orientacyjne na podstawie zapisanych źródeł Routepedia/Serebii/Bulbapedia. Nie dodawano pinezek ani współrzędnych, ponieważ nie zostały zweryfikowane.
+- Commit danych: `e92aaf5`. Statycznie zapis JSON pozostaje poprawny; nie uruchamiano aplikacji, testów, analyzer ani APK.
+
 ### Mapy — ochrona znaczników przed nakładaniem etykiet Kanto (2026-10-29)
 
 - Algorytm rozmieszczania etykiet rezerwuje teraz obszary wszystkich 76 punktów lokacji oraz plakietek Route jeszcze przed narysowaniem pierwszej nazwy. Dzięki temu wcześniejsza etykieta nie powinna zasłaniać markera, który zostanie narysowany później.
