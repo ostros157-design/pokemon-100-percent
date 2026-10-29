@@ -1,0 +1,955 @@
+{
+  "schemaVersion": 1,
+  "region": "Sinnoh",
+  "games": [
+    "Pokémon Diamond",
+    "Pokémon Pearl",
+    "Pokémon Platinum",
+    "Pokémon Brilliant Diamond",
+    "Pokémon Shining Pearl"
+  ],
+  "purpose": "Offline location inventory for later verified schematic map work; not a scale-accurate map.",
+  "coordinatePolicy": "No exact coordinates or collectible pins until verified for the selected game.",
+  "sources": [
+    {
+      "id": "bulbapedia-sinnoh",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Sinnoh",
+      "scope": "Sinnoh towns, routes and landmarks"
+    },
+    {
+      "id": "bulbapedia-route-list",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/List_of_routes",
+      "scope": "Numbered route inventory and connections"
+    },
+    {
+      "id": "pokemony-sinnoh",
+      "url": "https://www.pokemony.com/en/locations?region=sinnoh",
+      "scope": "Sinnoh location inventory and schematic-map conventions"
+    }
+  ],
+  "locations": [
+    {
+      "id": "twinleaf_town",
+      "name": "Twinleaf Town",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "pokemony-sinnoh"
+      ]
+    },
+    {
+      "id": "sandgem_town",
+      "name": "Sandgem Town",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "pokemony-sinnoh"
+      ]
+    },
+    {
+      "id": "jubilife_city",
+      "name": "Jubilife City",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "pokemony-sinnoh"
+      ]
+    },
+    {
+      "id": "oreburgh_city",
+      "name": "Oreburgh City",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "pokemony-sinnoh"
+      ]
+    },
+    {
+      "id": "floaroma_town",
+      "name": "Floaroma Town",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "pokemony-sinnoh"
+      ]
+    },
+    {
+      "id": "eterna_city",
+      "name": "Eterna City",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "pokemony-sinnoh"
+      ]
+    },
+    {
+      "id": "hearthome_city",
+      "name": "Hearthome City",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "pokemony-sinnoh"
+      ]
+    },
+    {
+      "id": "solaceon_town",
+      "name": "Solaceon Town",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "pokemony-sinnoh"
+      ]
+    },
+    {
+      "id": "veilstone_city",
+      "name": "Veilstone City",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "pokemony-sinnoh"
+      ]
+    },
+    {
+      "id": "pastoria_city",
+      "name": "Pastoria City",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "pokemony-sinnoh"
+      ]
+    },
+    {
+      "id": "celestic_town",
+      "name": "Celestic Town",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "pokemony-sinnoh"
+      ]
+    },
+    {
+      "id": "canalave_city",
+      "name": "Canalave City",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "pokemony-sinnoh"
+      ]
+    },
+    {
+      "id": "snowpoint_city",
+      "name": "Snowpoint City",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "pokemony-sinnoh"
+      ]
+    },
+    {
+      "id": "sunyshore_city",
+      "name": "Sunyshore City",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "pokemony-sinnoh"
+      ]
+    },
+    {
+      "id": "pok_mon_league",
+      "name": "Pokémon League",
+      "kind": "league",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "pokemony-sinnoh"
+      ]
+    },
+    {
+      "id": "fight_area",
+      "name": "Fight Area",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "pokemony-sinnoh"
+      ]
+    },
+    {
+      "id": "survival_area",
+      "name": "Survival Area",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "pokemony-sinnoh"
+      ]
+    },
+    {
+      "id": "resort_area",
+      "name": "Resort Area",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "pokemony-sinnoh"
+      ]
+    },
+    {
+      "id": "route_201",
+      "name": "Route 201",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_202",
+      "name": "Route 202",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_203",
+      "name": "Route 203",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_204",
+      "name": "Route 204",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_205",
+      "name": "Route 205",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_206",
+      "name": "Route 206",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_207",
+      "name": "Route 207",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_208",
+      "name": "Route 208",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_209",
+      "name": "Route 209",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_210",
+      "name": "Route 210",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_211",
+      "name": "Route 211",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_212",
+      "name": "Route 212",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_213",
+      "name": "Route 213",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_214",
+      "name": "Route 214",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_215",
+      "name": "Route 215",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_216",
+      "name": "Route 216",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_217",
+      "name": "Route 217",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_218",
+      "name": "Route 218",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_219",
+      "name": "Route 219",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_220",
+      "name": "Route 220",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_221",
+      "name": "Route 221",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_222",
+      "name": "Route 222",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_223",
+      "name": "Route 223",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_224",
+      "name": "Route 224",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_225",
+      "name": "Route 225",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_226",
+      "name": "Route 226",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_227",
+      "name": "Route 227",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_228",
+      "name": "Route 228",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_229",
+      "name": "Route 229",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_230",
+      "name": "Route 230",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "oreburgh_gate",
+      "name": "Oreburgh Gate",
+      "kind": "dungeon",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "pokemony-sinnoh"
+      ]
+    },
+    {
+      "id": "oreburgh_mine",
+      "name": "Oreburgh Mine",
+      "kind": "dungeon",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "pokemony-sinnoh"
+      ]
+    },
+    {
+      "id": "valley_windworks",
+      "name": "Valley Windworks",
+      "kind": "landmark",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "pokemony-sinnoh"
+      ]
+    },
+    {
+      "id": "eterna_forest",
+      "name": "Eterna Forest",
+      "kind": "forest",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "pokemony-sinnoh"
+      ]
+    },
+    {
+      "id": "old_chateau",
+      "name": "Old Chateau",
+      "kind": "dungeon",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "pokemony-sinnoh"
+      ]
+    },
+    {
+      "id": "mt_coronet",
+      "name": "Mt. Coronet",
+      "kind": "landmark",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "pokemony-sinnoh"
+      ]
+    },
+    {
+      "id": "wayward_cave",
+      "name": "Wayward Cave",
+      "kind": "dungeon",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "pokemony-sinnoh"
+      ]
+    },
+    {
+      "id": "solaceon_ruins",
+      "name": "Solaceon Ruins",
+      "kind": "dungeon",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "pokemony-sinnoh"
+      ]
+    },
+    {
+      "id": "lost_tower",
+      "name": "Lost Tower",
+      "kind": "dungeon",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "pokemony-sinnoh"
+      ]
+    },
+    {
+      "id": "iron_island",
+      "name": "Iron Island",
+      "kind": "landmark",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "pokemony-sinnoh"
+      ]
+    },
+    {
+      "id": "lake_verity",
+      "name": "Lake Verity",
+      "kind": "lake",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "pokemony-sinnoh"
+      ]
+    },
+    {
+      "id": "lake_valor",
+      "name": "Lake Valor",
+      "kind": "lake",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "pokemony-sinnoh"
+      ]
+    },
+    {
+      "id": "lake_acuity",
+      "name": "Lake Acuity",
+      "kind": "lake",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "pokemony-sinnoh"
+      ]
+    },
+    {
+      "id": "great_marsh",
+      "name": "Great Marsh",
+      "kind": "landmark",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "pokemony-sinnoh"
+      ]
+    },
+    {
+      "id": "fuego_ironworks",
+      "name": "Fuego Ironworks",
+      "kind": "dungeon",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "pokemony-sinnoh"
+      ]
+    },
+    {
+      "id": "turnback_cave",
+      "name": "Turnback Cave",
+      "kind": "dungeon",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "pokemony-sinnoh"
+      ]
+    },
+    {
+      "id": "victory_road",
+      "name": "Victory Road",
+      "kind": "dungeon",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "pokemony-sinnoh"
+      ]
+    },
+    {
+      "id": "spear_pillar",
+      "name": "Spear Pillar",
+      "kind": "dungeon",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "pokemony-sinnoh"
+      ]
+    },
+    {
+      "id": "distortion_world",
+      "name": "Distortion World",
+      "kind": "dungeon",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "pokemony-sinnoh"
+      ]
+    },
+    {
+      "id": "stark_mountain",
+      "name": "Stark Mountain",
+      "kind": "dungeon",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "pokemony-sinnoh"
+      ]
+    },
+    {
+      "id": "snowpoint_temple",
+      "name": "Snowpoint Temple",
+      "kind": "dungeon",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "pokemony-sinnoh"
+      ]
+    },
+    {
+      "id": "ramanas_park",
+      "name": "Ramanas Park",
+      "kind": "landmark",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "pokemony-sinnoh"
+      ]
+    },
+    {
+      "id": "battle_zone",
+      "name": "Battle Zone",
+      "kind": "landmark",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-sinnoh",
+        "pokemony-sinnoh"
+      ]
+    }
+  ]
+}
