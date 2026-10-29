@@ -2257,10 +2257,6 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
       'Miasto Pewter': 'Pewter City jest lokacją po wyjściu z Viridian Forest.',
       'Kierunek Pewter Gym': 'Poradnik wskazuje przygotowanie drużyny przed pierwszym Gymem.',
     },
-    'Pewter Gym': {
-      'Gym Brocka': 'To miejsce walki z Brockiem o pierwszą odznakę Gym.',
-      'Brock': 'Poradnik wymienia Geodude i Onixa w kontekście walki z Brockiem. Schemat nie odwzorowuje dokładnego wnętrza Gymu.',
-    },
     'Mt. Moon': {
       'Wejście do jaskini': 'Poglądowy punkt wejścia. Dokładne położenie drabinek i skał wymaga osobnej weryfikacji.',
       'Poziom 1F': 'Warstwa orientacyjna pierwszego poziomu; nie jest wiernym planem kafelków.',
