@@ -457,6 +457,26 @@
       "id": "serebii-route23",
       "url": "https://www.serebii.net/pokearth/kanto/route23.shtml",
       "scope": "Route 23 Let’s Go grass, water, sky and special encounter tables"
+    },
+    {
+      "id": "serebii-route11",
+      "url": "https://www.serebii.net/pokearth/kanto/route11.shtml",
+      "scope": "Route 11 Let’s Go land, water, sky and special encounter tables"
+    },
+    {
+      "id": "serebii-route19",
+      "url": "https://www.serebii.net/pokearth/kanto/route19.shtml",
+      "scope": "Route 19 Let’s Go land, water, sky and special encounter tables"
+    },
+    {
+      "id": "serebii-route20",
+      "url": "https://www.serebii.net/pokearth/kanto/route20.shtml",
+      "scope": "Route 20 Let’s Go land, water, sky and special encounter tables"
+    },
+    {
+      "id": "serebii-route21",
+      "url": "https://www.serebii.net/pokearth/kanto/route21.shtml",
+      "scope": "Route 21 Let’s Go land, water, sky and special encounter tables"
     }
   ],
   "locations": [
@@ -3674,35 +3694,313 @@
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "wildPokemonDetails": {
-        "levels": [
-          13,
-          18
-        ],
         "lets_go_pikachu": [
-          [
-            "Pidgey",
-            25
-          ],
-          [
-            "Rattata",
-            25
-          ],
-          [
-            "Drowzee",
-            25
-          ],
-          [
-            "Pidgeotto",
-            10
-          ],
-          [
-            "Raticate",
-            10
-          ],
-          [
-            "Mr. Mime",
-            5
-          ]
+          {
+            "name": "Pidgey",
+            "method": "grass",
+            "levelRange": [
+              13,
+              18
+            ],
+            "ratePercent": 25
+          },
+          {
+            "name": "Rattata",
+            "method": "grass",
+            "levelRange": [
+              13,
+              18
+            ],
+            "ratePercent": 25
+          },
+          {
+            "name": "Drowzee",
+            "method": "grass",
+            "levelRange": [
+              13,
+              18
+            ],
+            "ratePercent": 25
+          },
+          {
+            "name": "Pidgeotto",
+            "method": "grass",
+            "levelRange": [
+              13,
+              18
+            ],
+            "ratePercent": 10
+          },
+          {
+            "name": "Raticate",
+            "method": "grass",
+            "levelRange": [
+              13,
+              18
+            ],
+            "ratePercent": 10
+          },
+          {
+            "name": "Mr. Mime",
+            "method": "grass",
+            "levelRange": [
+              13,
+              18
+            ],
+            "ratePercent": 5
+          },
+          {
+            "name": "Chansey",
+            "method": "special spawn",
+            "levelRange": [
+              13,
+              18
+            ]
+          },
+          {
+            "name": "Pidgey",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 60
+          },
+          {
+            "name": "Pidgeotto",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 35
+          },
+          {
+            "name": "Pidgeot",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 5
+          },
+          {
+            "name": "Dragonite",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Charizard",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Tentacool",
+            "method": "surfing",
+            "levelRange": [
+              31,
+              36
+            ],
+            "ratePercent": 30
+          },
+          {
+            "name": "Horsea",
+            "method": "surfing",
+            "levelRange": [
+              31,
+              36
+            ],
+            "ratePercent": 30
+          },
+          {
+            "name": "Magikarp",
+            "method": "surfing",
+            "levelRange": [
+              31,
+              36
+            ],
+            "ratePercent": 30
+          },
+          {
+            "name": "Tentacruel",
+            "method": "surfing",
+            "levelRange": [
+              31,
+              36
+            ],
+            "ratePercent": 5
+          },
+          {
+            "name": "Seadra",
+            "method": "surfing",
+            "levelRange": [
+              31,
+              36
+            ],
+            "ratePercent": 5
+          }
+        ],
+        "lets_go_eevee": [
+          {
+            "name": "Pidgey",
+            "method": "grass",
+            "levelRange": [
+              13,
+              18
+            ],
+            "ratePercent": 25
+          },
+          {
+            "name": "Rattata",
+            "method": "grass",
+            "levelRange": [
+              13,
+              18
+            ],
+            "ratePercent": 25
+          },
+          {
+            "name": "Drowzee",
+            "method": "grass",
+            "levelRange": [
+              13,
+              18
+            ],
+            "ratePercent": 25
+          },
+          {
+            "name": "Pidgeotto",
+            "method": "grass",
+            "levelRange": [
+              13,
+              18
+            ],
+            "ratePercent": 10
+          },
+          {
+            "name": "Raticate",
+            "method": "grass",
+            "levelRange": [
+              13,
+              18
+            ],
+            "ratePercent": 10
+          },
+          {
+            "name": "Mr. Mime",
+            "method": "grass",
+            "levelRange": [
+              13,
+              18
+            ],
+            "ratePercent": 5
+          },
+          {
+            "name": "Chansey",
+            "method": "special spawn",
+            "levelRange": [
+              13,
+              18
+            ]
+          },
+          {
+            "name": "Pidgey",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 60
+          },
+          {
+            "name": "Pidgeotto",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 35
+          },
+          {
+            "name": "Pidgeot",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 5
+          },
+          {
+            "name": "Dragonite",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Charizard",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Tentacool",
+            "method": "surfing",
+            "levelRange": [
+              31,
+              36
+            ],
+            "ratePercent": 30
+          },
+          {
+            "name": "Horsea",
+            "method": "surfing",
+            "levelRange": [
+              31,
+              36
+            ],
+            "ratePercent": 30
+          },
+          {
+            "name": "Magikarp",
+            "method": "surfing",
+            "levelRange": [
+              31,
+              36
+            ],
+            "ratePercent": 30
+          },
+          {
+            "name": "Tentacruel",
+            "method": "surfing",
+            "levelRange": [
+              31,
+              36
+            ],
+            "ratePercent": 5
+          },
+          {
+            "name": "Seadra",
+            "method": "surfing",
+            "levelRange": [
+              31,
+              36
+            ],
+            "ratePercent": 5
+          }
+        ],
+        "status": "text_verified",
+        "sourceIds": [
+          "serebii-route11"
         ]
       },
       "items": [
@@ -3718,9 +4016,47 @@
       ],
       "sourceIds": [
         "routepedia-route11-pikachu",
-        "bulbapedia-part7"
+        "bulbapedia-part7",
+        "serebii-route11"
       ],
-      "dataStatus": "text_verified_positions_not_mapped"
+      "dataStatus": "text_verified_positions_not_mapped",
+      "wildPokemon": {
+        "lets_go_pikachu": [
+          "Pidgey",
+          "Rattata",
+          "Drowzee",
+          "Pidgeotto",
+          "Raticate",
+          "Mr. Mime",
+          "Chansey",
+          "Pidgeot",
+          "Dragonite",
+          "Charizard",
+          "Tentacool",
+          "Horsea",
+          "Magikarp",
+          "Tentacruel",
+          "Seadra"
+        ],
+        "lets_go_eevee": [
+          "Pidgey",
+          "Rattata",
+          "Drowzee",
+          "Pidgeotto",
+          "Raticate",
+          "Mr. Mime",
+          "Chansey",
+          "Pidgeot",
+          "Dragonite",
+          "Charizard",
+          "Tentacool",
+          "Horsea",
+          "Magikarp",
+          "Tentacruel",
+          "Seadra"
+        ]
+      },
+      "encounterStatus": "text_verified"
     },
     {
       "id": "digletts_cave",
@@ -6491,33 +6827,295 @@
       "coordinateStatus": "unverified",
       "notes": "Morska trasa na południe od Fuchsia City; wymaga Sea Skim.",
       "wildPokemonDetails": {
-        "levels": [
-          37,
-          42
+        "lets_go_pikachu": [
+          {
+            "name": "Tentacool",
+            "method": "surfing",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 30
+          },
+          {
+            "name": "Staryu",
+            "method": "surfing",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 30
+          },
+          {
+            "name": "Magikarp",
+            "method": "surfing",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 30
+          },
+          {
+            "name": "Tentacruel",
+            "method": "surfing",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 9
+          },
+          {
+            "name": "Starmie",
+            "method": "surfing",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 1
+          },
+          {
+            "name": "Lapras",
+            "method": "special water spawn",
+            "levelRange": [
+              37,
+              42
+            ]
+          },
+          {
+            "name": "Pidgey",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 60
+          },
+          {
+            "name": "Pidgeotto",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 35
+          },
+          {
+            "name": "Pidgeot",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 5
+          },
+          {
+            "name": "Dragonite",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Charizard",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Articuno",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Zapdos",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Moltres",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          }
         ],
-        "surfing": [
-          [
-            "Tentacool",
-            45
-          ],
-          [
-            "Magikarp",
-            45
-          ],
-          [
-            "Tentacruel",
-            5
-          ],
-          [
-            "Gyarados",
-            5
-          ]
+        "lets_go_eevee": [
+          {
+            "name": "Tentacool",
+            "method": "surfing",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 30
+          },
+          {
+            "name": "Staryu",
+            "method": "surfing",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 30
+          },
+          {
+            "name": "Magikarp",
+            "method": "surfing",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 30
+          },
+          {
+            "name": "Tentacruel",
+            "method": "surfing",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 9
+          },
+          {
+            "name": "Starmie",
+            "method": "surfing",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 1
+          },
+          {
+            "name": "Lapras",
+            "method": "special water spawn",
+            "levelRange": [
+              37,
+              42
+            ]
+          },
+          {
+            "name": "Pidgey",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 60
+          },
+          {
+            "name": "Pidgeotto",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 35
+          },
+          {
+            "name": "Pidgeot",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 5
+          },
+          {
+            "name": "Dragonite",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Charizard",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Articuno",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Zapdos",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Moltres",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          }
+        ],
+        "status": "text_verified",
+        "sourceIds": [
+          "serebii-route19"
         ]
       },
       "sourceIds": [
-        "routepedia-route19-pikachu"
+        "routepedia-route19-pikachu",
+        "serebii-route19"
       ],
-      "dataStatus": "text_verified_positions_not_mapped"
+      "dataStatus": "text_verified_positions_not_mapped",
+      "wildPokemon": {
+        "lets_go_pikachu": [
+          "Tentacool",
+          "Staryu",
+          "Magikarp",
+          "Tentacruel",
+          "Starmie",
+          "Lapras",
+          "Pidgey",
+          "Pidgeotto",
+          "Pidgeot",
+          "Dragonite",
+          "Charizard",
+          "Articuno",
+          "Zapdos",
+          "Moltres"
+        ],
+        "lets_go_eevee": [
+          "Tentacool",
+          "Staryu",
+          "Magikarp",
+          "Tentacruel",
+          "Starmie",
+          "Lapras",
+          "Pidgey",
+          "Pidgeotto",
+          "Pidgeot",
+          "Dragonite",
+          "Charizard",
+          "Articuno",
+          "Zapdos",
+          "Moltres"
+        ]
+      },
+      "encounterStatus": "text_verified"
     },
     {
       "id": "route_20",
@@ -6530,35 +7128,277 @@
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "notes": "Morska trasa rozdzielona przez Seafoam Islands; wymaga Sea Skim.",
+      "notes": "Morska trasa rozdzielona przez Seafoam Islands; wymaga Sea Skim. Spotkania wodne mają różne poziomy po wschodniej i zachodniej stronie Seafoam Islands; w tej tabeli podano zakres wschodniej części, a poziomy zachodniej wymagają osobnego pola.",
       "wildPokemonDetails": {
-        "levels": [
-          37,
-          42
+        "lets_go_pikachu": [
+          {
+            "name": "Tentacool",
+            "method": "surfing",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 45
+          },
+          {
+            "name": "Magikarp",
+            "method": "surfing",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 45
+          },
+          {
+            "name": "Tentacruel",
+            "method": "surfing",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 5
+          },
+          {
+            "name": "Gyarados",
+            "method": "surfing",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 5
+          },
+          {
+            "name": "Lapras",
+            "method": "special water spawn",
+            "levelRange": [
+              37,
+              42
+            ]
+          },
+          {
+            "name": "Pidgey",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 60
+          },
+          {
+            "name": "Pidgeotto",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 35
+          },
+          {
+            "name": "Pidgeot",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 5
+          },
+          {
+            "name": "Dragonite",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Charizard",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Articuno",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Zapdos",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Moltres",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          }
         ],
-        "surfing": [
-          [
-            "Magikarp",
-            45
-          ],
-          [
-            "Tentacool",
-            45
-          ],
-          [
-            "Tentacruel",
-            5
-          ],
-          [
-            "Gyarados",
-            5
-          ]
+        "lets_go_eevee": [
+          {
+            "name": "Tentacool",
+            "method": "surfing",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 45
+          },
+          {
+            "name": "Magikarp",
+            "method": "surfing",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 45
+          },
+          {
+            "name": "Tentacruel",
+            "method": "surfing",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 5
+          },
+          {
+            "name": "Gyarados",
+            "method": "surfing",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 5
+          },
+          {
+            "name": "Lapras",
+            "method": "special water spawn",
+            "levelRange": [
+              37,
+              42
+            ]
+          },
+          {
+            "name": "Pidgey",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 60
+          },
+          {
+            "name": "Pidgeotto",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 35
+          },
+          {
+            "name": "Pidgeot",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 5
+          },
+          {
+            "name": "Dragonite",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Charizard",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Articuno",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Zapdos",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Moltres",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          }
+        ],
+        "status": "text_verified",
+        "sourceIds": [
+          "serebii-route20"
         ]
       },
       "sourceIds": [
-        "routepedia-route20-pikachu"
+        "routepedia-route20-pikachu",
+        "serebii-route20"
       ],
-      "dataStatus": "text_verified_positions_not_mapped"
+      "dataStatus": "text_verified_positions_not_mapped",
+      "wildPokemon": {
+        "lets_go_pikachu": [
+          "Tentacool",
+          "Magikarp",
+          "Tentacruel",
+          "Gyarados",
+          "Lapras",
+          "Pidgey",
+          "Pidgeotto",
+          "Pidgeot",
+          "Dragonite",
+          "Charizard",
+          "Articuno",
+          "Zapdos",
+          "Moltres"
+        ],
+        "lets_go_eevee": [
+          "Tentacool",
+          "Magikarp",
+          "Tentacruel",
+          "Gyarados",
+          "Lapras",
+          "Pidgey",
+          "Pidgeotto",
+          "Pidgeot",
+          "Dragonite",
+          "Charizard",
+          "Articuno",
+          "Zapdos",
+          "Moltres"
+        ]
+      },
+      "encounterStatus": "text_verified"
     },
     {
       "id": "seafoam_islands",
@@ -6618,49 +7458,451 @@
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "wildPokemonDetails": {
-        "levels": [
-          37,
-          42
+        "lets_go_pikachu": [
+          {
+            "name": "Pidgeotto",
+            "method": "grass",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 20
+          },
+          {
+            "name": "Raticate",
+            "method": "grass",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 20
+          },
+          {
+            "name": "Tangela",
+            "method": "grass",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Gloom",
+            "method": "grass",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 14
+          },
+          {
+            "name": "Pidgey",
+            "method": "grass",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 10
+          },
+          {
+            "name": "Rattata",
+            "method": "grass",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 10
+          },
+          {
+            "name": "Oddish",
+            "method": "grass",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 10
+          },
+          {
+            "name": "Vileplume",
+            "method": "grass",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 1
+          },
+          {
+            "name": "Chansey",
+            "method": "special spawn",
+            "levelRange": [
+              37,
+              42
+            ]
+          },
+          {
+            "name": "Pidgey",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 60
+          },
+          {
+            "name": "Pidgeotto",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 35
+          },
+          {
+            "name": "Pidgeot",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 5
+          },
+          {
+            "name": "Dragonite",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Charizard",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Articuno",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Zapdos",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Moltres",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Tentacool",
+            "method": "surfing",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 30
+          },
+          {
+            "name": "Staryu",
+            "method": "surfing",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 30
+          },
+          {
+            "name": "Magikarp",
+            "method": "surfing",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 30
+          },
+          {
+            "name": "Tentacruel",
+            "method": "surfing",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 9
+          },
+          {
+            "name": "Starmie",
+            "method": "surfing",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 1
+          }
         ],
-        "grass": [
-          [
-            "Raticate",
-            20
-          ],
-          [
-            "Pidgeotto",
-            20
-          ],
-          [
-            "Tangela",
-            15
-          ],
-          [
-            "Gloom",
-            14
-          ],
-          [
-            "Rattata",
-            10
-          ],
-          [
-            "Pidgey",
-            10
-          ],
-          [
-            "Oddish",
-            10
-          ],
-          [
-            "Vileplume",
-            1
-          ]
+        "lets_go_eevee": [
+          {
+            "name": "Pidgeotto",
+            "method": "grass",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 20
+          },
+          {
+            "name": "Raticate",
+            "method": "grass",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 20
+          },
+          {
+            "name": "Tangela",
+            "method": "grass",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Weepinbell",
+            "method": "grass",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 14
+          },
+          {
+            "name": "Pidgey",
+            "method": "grass",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 10
+          },
+          {
+            "name": "Rattata",
+            "method": "grass",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 10
+          },
+          {
+            "name": "Bellsprout",
+            "method": "grass",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 10
+          },
+          {
+            "name": "Victreebel",
+            "method": "grass",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 1
+          },
+          {
+            "name": "Chansey",
+            "method": "special spawn",
+            "levelRange": [
+              37,
+              42
+            ]
+          },
+          {
+            "name": "Pidgey",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 60
+          },
+          {
+            "name": "Pidgeotto",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 35
+          },
+          {
+            "name": "Pidgeot",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 5
+          },
+          {
+            "name": "Dragonite",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Charizard",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Articuno",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Zapdos",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Moltres",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Tentacool",
+            "method": "surfing",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 30
+          },
+          {
+            "name": "Staryu",
+            "method": "surfing",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 30
+          },
+          {
+            "name": "Magikarp",
+            "method": "surfing",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 30
+          },
+          {
+            "name": "Tentacruel",
+            "method": "surfing",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 9
+          },
+          {
+            "name": "Starmie",
+            "method": "surfing",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 1
+          }
+        ],
+        "status": "text_verified",
+        "sourceIds": [
+          "serebii-route21"
         ]
       },
       "sourceIds": [
-        "routepedia-route21-pikachu"
+        "routepedia-route21-pikachu",
+        "serebii-route21"
       ],
-      "dataStatus": "text_verified_positions_not_mapped"
+      "dataStatus": "text_verified_positions_not_mapped",
+      "wildPokemon": {
+        "lets_go_pikachu": [
+          "Pidgeotto",
+          "Raticate",
+          "Tangela",
+          "Gloom",
+          "Pidgey",
+          "Rattata",
+          "Oddish",
+          "Vileplume",
+          "Chansey",
+          "Pidgeot",
+          "Dragonite",
+          "Charizard",
+          "Articuno",
+          "Zapdos",
+          "Moltres",
+          "Tentacool",
+          "Staryu",
+          "Magikarp",
+          "Tentacruel",
+          "Starmie"
+        ],
+        "lets_go_eevee": [
+          "Pidgeotto",
+          "Raticate",
+          "Tangela",
+          "Weepinbell",
+          "Pidgey",
+          "Rattata",
+          "Bellsprout",
+          "Victreebel",
+          "Chansey",
+          "Pidgeot",
+          "Dragonite",
+          "Charizard",
+          "Articuno",
+          "Zapdos",
+          "Moltres",
+          "Tentacool",
+          "Staryu",
+          "Magikarp",
+          "Tentacruel",
+          "Starmie"
+        ]
+      },
+      "encounterStatus": "text_verified"
     },
     {
       "id": "route_22",
