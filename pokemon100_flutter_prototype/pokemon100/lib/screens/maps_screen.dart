@@ -2474,6 +2474,131 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
       'Pytania quizowe': 'Obszar automatów z pytaniami; bez dokładnych pozycji.',
       'Blaine': 'Obszar walki z Blaine’em.',
     },
+    'Route 3': {
+      'Pewter City': 'Zachodni koniec trasy przy Pewter City.',
+      'Obszar spotkań': 'Poglądowy pas trawy i drogi; nie oznacza dokładnych spawnów.',
+      'Mt. Moon': 'Wschodni koniec trasy prowadzi do wejścia Mt. Moon.',
+    },
+    'Route 4': {
+      'Mt. Moon': 'Zachodni koniec przy wyjściu z Mt. Moon.',
+      'Odcinek trasy': 'Schematyczny pas drogi; bez dokładnych pozycji przedmiotów.',
+      'Cerulean City': 'Wschodni koniec trasy przy Cerulean City.',
+    },
+    'Route 5': {
+      'Cerulean City': 'Północny kierunek trasy.',
+      'Pokémon Day Care': 'Obiekt przy trasie; nie pokazujemy dokładnych współrzędnych.',
+      'Saffron City': 'Południowy kierunek w stronę Saffron City.',
+    },
+    'Route 6': {
+      'Saffron City': 'Północny koniec trasy.',
+      'Obszar spotkań': 'Poglądowy odcinek drogi.',
+      'Vermilion City': 'Południowy koniec trasy przy Vermilion City.',
+    },
+    'Route 7': {
+      'Celadon City': 'Zachodni koniec trasy.',
+      'Odcinek trasy': 'Krótki korytarz drogowy przedstawiony schematycznie.',
+      'Saffron City': 'Wschodni koniec trasy.',
+    },
+    'Route 8': {
+      'Saffron City': 'Wschodni koniec trasy.',
+      'Odcinek trasy': 'Poglądowy pas drogi i trawy.',
+      'Lavender Town': 'Zachodni koniec trasy.',
+    },
+    'Route 9': {
+      'Cerulean City': 'Zachodni koniec trasy.',
+      'Odcinek trasy': 'Poglądowy korytarz drogi w stronę Rock Tunnel.',
+      'Route 10': 'Wschodni koniec trasy.',
+    },
+    'Route 10': {
+      'Route 9': 'Północny kierunek trasy.',
+      'Power Plant': 'Odgałęzienie prowadzące do elektrowni.',
+      'Rock Tunnel / Lavender Town': 'Odcinek przy wejściu do Rock Tunnel i kierunku Lavender Town.',
+    },
+    'Route 11': {
+      'Vermilion City': 'Zachodni koniec trasy.',
+      "Diglett's Cave": 'Wejście do Diglett’s Cave znajduje się przy trasie.',
+      'Route 12': 'Wschodni kierunek w stronę nadmorskiej trasy.',
+    },
+    'Route 12': {
+      'Lavender Town': 'Północny koniec trasy.',
+      'Obszar spotkań': 'Poglądowy długi odcinek przy wodzie; bez dokładnych pinezek.',
+      'Route 13': 'Południowy kierunek trasy.',
+    },
+    'Route 13': {
+      'Route 12': 'Północny koniec trasy.',
+      'Obszar spotkań': 'Schematyczny odcinek nadmorski.',
+      'Route 14': 'Południowy kierunek trasy.',
+    },
+    'Route 14': {
+      'Route 13': 'Północny koniec trasy.',
+      'Obszar spotkań': 'Schematyczny odcinek drogi i trawy.',
+      'Route 15': 'Południowy kierunek trasy.',
+    },
+    'Route 15': {
+      'Route 14': 'Północny koniec trasy.',
+      'Obszar spotkań': 'Schematyczny odcinek w stronę Fuchsia City.',
+      'Fuchsia City': 'Południowy koniec trasy.',
+    },
+    'Route 16': {
+      'Celadon City': 'Wschodni kierunek trasy.',
+      'Snorlax area': 'Obszar specjalnego spotkania; położenie nie jest pinezką.',
+      'Route 17': 'Zachodni kierunek prowadzący do Cycling Road.',
+    },
+    'Route 17': {
+      'Route 16': 'Północny koniec Cycling Road.',
+      'Cycling Road': 'Długi korytarz trasy pokazany poglądowo.',
+      'Route 18': 'Południowy koniec trasy.',
+    },
+    'Route 18': {
+      'Route 17': 'Północny kierunek Cycling Road.',
+      'Fuchsia City': 'Wschodni koniec trasy przy Fuchsia City.',
+      'Odcinek trasy': 'Poglądowy korytarz drogi.',
+    },
+    'Route 19': {
+      'Fuchsia City': 'Północny koniec wodnej trasy.',
+      'Wodny korytarz': 'Schematyczny przebieg drogi wodnej, nie mapa kafelków.',
+      'Route 20': 'Południowy kierunek do Route 20.',
+    },
+    'Route 20': {
+      'Route 19': 'Wschodni koniec trasy wodnej.',
+      'Seafoam Islands': 'Wyspy leżą przy trasie wodnej.',
+      'Cinnabar Island': 'Zachodni kierunek w stronę Cinnabar Island.',
+    },
+    'Route 21': {
+      'Pallet Town': 'Północny koniec wodnej trasy.',
+      'Wodny korytarz': 'Schematyczna trasa wodna bez dokładnych pinezek.',
+      'Cinnabar Island': 'Południowy koniec trasy przy wyspie.',
+    },
+    'Route 22': {
+      'Viridian City': 'Wschodni początek trasy.',
+      'Obszar spotkań': 'Poglądowy odcinek przed wejściem do Ligi.',
+      'Pokémon League Reception Gate': 'Zachodni kierunek w stronę bramy Ligi.',
+    },
+    'Route 23': {
+      'Pokémon League Reception Gate': 'Północny początek trasy.',
+      'Victory Road': 'Wejście do Victory Road znajduje się na trasie.',
+      'Indigo Plateau': 'Południowy koniec prowadzi do Ligi Pokémon.',
+    },
+    'Route 24': {
+      'Cerulean City': 'Południowy początek trasy i Nugget Bridge.',
+      'Most / trenerzy': 'Poglądowy obszar mostu i walk trenerów.',
+      'Route 25': 'Północny koniec prowadzący do domu Billa.',
+    },
+    'Route 25': {
+      'Route 24': 'Południowy koniec trasy.',
+      'Sea Cottage / Bill’s House': 'Obszar domu Billa; pozycja na schemacie jest orientacyjna.',
+      'Ślepy koniec trasy': 'Północno-wschodni koniec drogi.',
+    },
+    'Underground Path (Routes 5–6)': {
+      'Wejście Route 5': 'Jedno z wejść podziemnego przejścia.',
+      'Tunel': 'Schematyczny tunel pod powierzchnią.',
+      'Wyjście Route 6': 'Drugie wejście/wyjście przejścia.',
+    },
+    'Underground Path (Routes 7–8)': {
+      'Wejście Route 7': 'Jedno z wejść podziemnego przejścia.',
+      'Tunel': 'Schematyczny tunel pod powierzchnią.',
+      'Wyjście Route 8': 'Drugie wejście/wyjście przejścia.',
+    },
   };
 
   @override
