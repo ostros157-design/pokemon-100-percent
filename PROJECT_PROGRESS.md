@@ -1196,3 +1196,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Promień dotknięcia punktów mapy i symboli Route 1 jest teraz przeliczany względem aktualnej skali powiększenia. Po mocnym zoomie dotknięcie nie powinno wybierać odległego punktu tylko dlatego, że dawny promień był liczony w jednostkach mapy.
 - Commit: `20e1c71`. Zmiana wymaga sprawdzenia dotykiem na urządzeniu; nie uruchamiano testów ani APK.
 
+### Mapy — Kanto: dwa wejścia Diglett's Cave i pełny indeks 76 lokacji (2026-10-29)
+
+- Rozdzielono wejście Diglett's Cave od Route 2 i wejście od Route 11 na osobne wybieralne punkty. Główna lokacja jaskini leży teraz między nimi, a połączenia do niej są rysowane jako podziemny przerywany korytarz; wejścia łączą się z trasami drogami powierzchniowymi.
+- Indeks i rysunek mają teraz 76 lokacji oraz 84 połączenia. Każda lokacja ma lokalny schemat, a źródła nowych wejść korzystają z już istniejących referencji Routepedia/RotomLabs.
+- Legenda rozróżnia drogi lądowe, wodne i przejścia podziemne.
+- Statyczna walidacja: 76/76 nazw węzłów zgodnych, 84/84 połączenia zgodne z `connectsTo`, brak nieistniejących indeksów i brak brakujących identyfikatorów źródeł. Nie uruchamiano Flutter analyzer, testów ani APK.
+- Commity: `27640d7`, `e990330`, `c853e1d`, `386a06f`, `e8f7ef2`, `fa317cc`, `fff4e55`.
+
