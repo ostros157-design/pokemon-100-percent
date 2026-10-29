@@ -4259,7 +4259,10 @@ class _KantoMapPainter extends CustomPainter {
       final center = p(x, y);
       final scale = size.width / 900;
       final rock = Paint()..color = const Color(0xFF8B8A78);
-      final opening = Paint()..color = const Color(0xFF353F3D);
+      final opening = Paint()
+        ..color = const Color(0xFF353F3D)
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 4 * scale;
       final edge = Paint()
         ..color = const Color(0xFFF2E7C6)
         ..style = PaintingStyle.stroke
@@ -4275,7 +4278,7 @@ class _KantoMapPainter extends CustomPainter {
         math.pi,
         math.pi,
         false,
-        opening..style = PaintingStyle.stroke..strokeWidth = 4 * scale,
+        opening,
       );
       canvas.drawPath(mound, edge);
     }
