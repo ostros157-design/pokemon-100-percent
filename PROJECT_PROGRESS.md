@@ -1,3 +1,9 @@
+### Mapy — uzupełnienie trenerów i przedmiotów tras południowego Kanto (2026-10-29)
+
+- Dodano listy trenerów i opisy nagród/przedmiotów dla Route 13, Route 14, Route 15 i Route 19; Route 20 rozbito tekstowo na trenerów odcinka wschodniego i zachodniego oddzielonych Seafoam Islands.
+- Wprowadzono opisy lokalizacji przedmiotów, ukrytych/dziennych jagód, nagród od trenerów i wymagań Chop Down / Sea Skim na podstawie Bulbapedia Part 12, już podpiętej w źródłach indeksu.
+- Wszystkie pozycje pozostają opisami tekstowymi bez dokładnych pinezek. Commit danych: `8bb21ca`. Nie uruchamiano testów, analyzer ani APK.
+
 ### Mapy — rozszerzenie danych tras Kanto z potwierdzonych poradników (2026-10-29)
 
 - Uzupełniono tekstowe listy przedmiotów Route 2, Route 7, Route 8, Route 22 oraz Underground Path (Routes 7–8), w tym ukryte/dzienne przedmioty i nagrody.
