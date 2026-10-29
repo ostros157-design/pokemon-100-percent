@@ -1209,3 +1209,10 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Dodano jasny pas piasku przy linii brzegowej oraz delikatne, wektorowe fale rysowane wyłącznie po stronie oceanu. Fale są odcinane maską kształtu lądu, więc nie powinny nachodzić na punkty lokacji.
 - Commit: `7add644`. To dekoracyjna ilustracja, nie dokładny brzeg z gry; nie uruchamiano testów ani APK.
 
+### Mapy — Kanto: osobne pinezki obu wejść Diglett's Cave (2026-10-29)
+
+- Rozszerzono indeks z 74 do 76 lokacji przez dodanie dwóch wyraźnie opisanych podlokacji: wejścia od Route 2 i wejścia od Route 11. Główna lokacja jaskini łączy się z oboma wejściami, a każde wejście z właściwą trasą.
+- Zamiast jednej długiej linii Route 11–Diglett's Cave rysunek pokazuje teraz dwa wejścia i osobne połączenia podziemne. Schemat lokalny każdego wejścia ma własne etykiety.
+- Aktualny graf ma 84 połączenia; statyczna walidacja po zmianie potwierdziła 76/76 nazw i 84/84 połączeń. Nie uruchamiano testów ani APK.
+- Commity: `27640d7`, `e990330`, `c853e1d`, `386a06f`, `e8f7ef2`, `fa317cc`, `fff4e55`.
+
