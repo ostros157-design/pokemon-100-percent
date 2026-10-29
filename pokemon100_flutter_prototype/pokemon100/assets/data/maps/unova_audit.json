@@ -31,7 +31,9 @@
       "id": "nuvema_town",
       "name": "Nuvema Town",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_1"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -44,7 +46,10 @@
       "id": "accumula_town",
       "name": "Accumula Town",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_1",
+        "route_2"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -57,7 +62,10 @@
       "id": "striaton_city",
       "name": "Striaton City",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_2",
+        "route_3"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -70,7 +78,9 @@
       "id": "nacrene_city",
       "name": "Nacrene City",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_3"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -83,7 +93,9 @@
       "id": "castelia_city",
       "name": "Castelia City",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_4"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -96,7 +108,11 @@
       "id": "nimbasa_city",
       "name": "Nimbasa City",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_4",
+        "route_5",
+        "route_16"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -109,7 +125,10 @@
       "id": "driftveil_city",
       "name": "Driftveil City",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_6",
+        "driftveil_drawbridge"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -122,7 +141,9 @@
       "id": "mistralton_city",
       "name": "Mistralton City",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_7"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -135,7 +156,9 @@
       "id": "icirrus_city",
       "name": "Icirrus City",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_8"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -148,7 +171,11 @@
       "id": "opelucid_city",
       "name": "Opelucid City",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_9",
+        "route_10",
+        "route_11"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -161,7 +188,10 @@
       "id": "lacunosa_town",
       "name": "Lacunosa Town",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_12",
+        "route_13"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -174,7 +204,10 @@
       "id": "undella_town",
       "name": "Undella Town",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_13",
+        "route_14"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -187,7 +220,10 @@
       "id": "black_city",
       "name": "Black City",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_14",
+        "route_15"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -200,7 +236,10 @@
       "id": "white_forest",
       "name": "White Forest",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_14",
+        "route_15"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "settlement_known_connections_pending_verification",
@@ -390,7 +429,8 @@
       "kind": "route",
       "connectsTo": [
         "victory_road",
-        "opelucid_city"
+        "opelucid_city",
+        "pokemon_league_gate"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -669,7 +709,9 @@
       "id": "chargestone_cave",
       "name": "Chargestone Cave",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_6"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -695,7 +737,9 @@
       "id": "twist_mountain",
       "name": "Twist Mountain",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_7"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -734,7 +778,11 @@
       "id": "giant_chasm",
       "name": "Giant Chasm",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_13",
+        "route_22",
+        "route_23"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -747,7 +795,11 @@
       "id": "victory_road",
       "name": "Victory Road",
       "kind": "dungeon",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_10",
+        "route_23",
+        "pokemon_league_gate"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -812,7 +864,9 @@
       "id": "lostlorn_forest",
       "name": "Lostlorn Forest",
       "kind": "forest",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_16"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -838,7 +892,10 @@
       "id": "village_bridge",
       "name": "Village Bridge",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_11",
+        "route_12"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
@@ -851,7 +908,10 @@
       "id": "marvelous_bridge",
       "name": "Marvelous Bridge",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_15",
+        "route_16"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "dataStatus": "landmark_known_entrance_connections_pending_verification",
