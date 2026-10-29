@@ -686,3 +686,8 @@ Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopis
 - Źródła: https://bulbapedia.bulbagarden.net/wiki/Walkthrough:Pok%C3%A9mon:_Let%27s_Go,_Pikachu!_and_Let%27s_Go,_Eevee!/Part_3 ; https://theroutepedia.com/pokemon-lets-go-pikachu/viridian-forest ; https://theroutepedia.com/pokemon-lets-go-eevee/viridian-forest ; https://theroutepedia.com/pokemon-lets-go-pikachu/pewter-city
 - Commity: ekran `a4e778168b77cd16db1dd1607455603957f7351f`; manifest `e497f65d35c59e0a5dd7120713f3afad19bf3b13`.
 - Status: zapisano w GitHubie. Nie uruchomiono `flutter analyze`, testów ani builda APK; kompilacja i zachowanie interfejsu nadal wymagają weryfikacji.
+
+
+### Mapy — kontynuacja Kanto (2026-10-29)
+
+- Rozszerzono dane offline do Route 25. Dokładne pinezki nadal nie są zweryfikowane; testów i kompilacji nie uruchamiano.
