@@ -1216,3 +1216,8 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Aktualny graf ma 84 połączenia; statyczna walidacja po zmianie potwierdziła 76/76 nazw i 84/84 połączeń. Nie uruchamiano testów ani APK.
 - Commity: `27640d7`, `e990330`, `c853e1d`, `386a06f`, `e8f7ef2`, `fa317cc`, `fff4e55`.
 
+### Mapy — Kanto: zatoka i strumień w warstwie ilustracyjnej (2026-10-29)
+
+- Dodano niewielką, nieregularną zatokę z piaskowym brzegiem, gradientem wody i obrysem; strumień jest poprowadzony w jej kierunku. To element autorskiej stylizacji, nie dokładny kształt wody z gry.
+- Commit: `2231359`. Nie uruchamiano testów, analyzer ani APK.
+
