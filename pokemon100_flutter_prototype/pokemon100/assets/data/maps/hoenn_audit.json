@@ -1,0 +1,968 @@
+{
+  "schemaVersion": 1,
+  "region": "Hoenn",
+  "games": [
+    "Pokémon Ruby",
+    "Pokémon Sapphire",
+    "Pokémon Emerald",
+    "Pokémon Omega Ruby",
+    "Pokémon Alpha Sapphire"
+  ],
+  "purpose": "Offline location inventory for later verified schematic map work; not a scale-accurate map.",
+  "coordinatePolicy": "No exact coordinates or collectible pins until verified for the selected game.",
+  "sources": [
+    {
+      "id": "bulbapedia-hoenn-region",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Hoenn",
+      "scope": "Hoenn settlements, numbered routes and landmarks"
+    },
+    {
+      "id": "bulbapedia-route-list",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/List_of_routes",
+      "scope": "Route termini and regional connections"
+    },
+    {
+      "id": "pokemony-hoenn",
+      "url": "https://www.pokemony.com/en/locations?region=hoenn",
+      "scope": "Hoenn location inventory and schematic-map conventions"
+    }
+  ],
+  "locations": [
+    {
+      "id": "littleroot_town",
+      "name": "Littleroot Town",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "pokemony-hoenn"
+      ]
+    },
+    {
+      "id": "oldale_town",
+      "name": "Oldale Town",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "pokemony-hoenn"
+      ]
+    },
+    {
+      "id": "petalburg_city",
+      "name": "Petalburg City",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "pokemony-hoenn"
+      ]
+    },
+    {
+      "id": "rustboro_city",
+      "name": "Rustboro City",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "pokemony-hoenn"
+      ]
+    },
+    {
+      "id": "dewford_town",
+      "name": "Dewford Town",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "pokemony-hoenn"
+      ]
+    },
+    {
+      "id": "slateport_city",
+      "name": "Slateport City",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "pokemony-hoenn"
+      ]
+    },
+    {
+      "id": "mauville_city",
+      "name": "Mauville City",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "pokemony-hoenn"
+      ]
+    },
+    {
+      "id": "verdanturf_town",
+      "name": "Verdanturf Town",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "pokemony-hoenn"
+      ]
+    },
+    {
+      "id": "fallarbor_town",
+      "name": "Fallarbor Town",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "pokemony-hoenn"
+      ]
+    },
+    {
+      "id": "lavaridge_town",
+      "name": "Lavaridge Town",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "pokemony-hoenn"
+      ]
+    },
+    {
+      "id": "fortree_city",
+      "name": "Fortree City",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "pokemony-hoenn"
+      ]
+    },
+    {
+      "id": "lilycove_city",
+      "name": "Lilycove City",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "pokemony-hoenn"
+      ]
+    },
+    {
+      "id": "mossdeep_city",
+      "name": "Mossdeep City",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "pokemony-hoenn"
+      ]
+    },
+    {
+      "id": "sootopolis_city",
+      "name": "Sootopolis City",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "pokemony-hoenn"
+      ]
+    },
+    {
+      "id": "pacifidlog_town",
+      "name": "Pacifidlog Town",
+      "kind": "town",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "pokemony-hoenn"
+      ]
+    },
+    {
+      "id": "ever_grande_city",
+      "name": "Ever Grande City",
+      "kind": "league",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "settlement_known_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "pokemony-hoenn"
+      ]
+    },
+    {
+      "id": "route_101",
+      "name": "Route 101",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_102",
+      "name": "Route 102",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_103",
+      "name": "Route 103",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_104",
+      "name": "Route 104",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_105",
+      "name": "Route 105",
+      "kind": "water_route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_106",
+      "name": "Route 106",
+      "kind": "water_route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_107",
+      "name": "Route 107",
+      "kind": "water_route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_108",
+      "name": "Route 108",
+      "kind": "water_route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_109",
+      "name": "Route 109",
+      "kind": "water_route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_110",
+      "name": "Route 110",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_111",
+      "name": "Route 111",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_112",
+      "name": "Route 112",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_113",
+      "name": "Route 113",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_114",
+      "name": "Route 114",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_115",
+      "name": "Route 115",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_116",
+      "name": "Route 116",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_117",
+      "name": "Route 117",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_118",
+      "name": "Route 118",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_119",
+      "name": "Route 119",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_120",
+      "name": "Route 120",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_121",
+      "name": "Route 121",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_122",
+      "name": "Route 122",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_123",
+      "name": "Route 123",
+      "kind": "route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_124",
+      "name": "Route 124",
+      "kind": "water_route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_125",
+      "name": "Route 125",
+      "kind": "water_route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_126",
+      "name": "Route 126",
+      "kind": "water_route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_127",
+      "name": "Route 127",
+      "kind": "water_route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_128",
+      "name": "Route 128",
+      "kind": "water_route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_129",
+      "name": "Route 129",
+      "kind": "water_route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_130",
+      "name": "Route 130",
+      "kind": "water_route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_131",
+      "name": "Route 131",
+      "kind": "water_route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_132",
+      "name": "Route 132",
+      "kind": "water_route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_133",
+      "name": "Route 133",
+      "kind": "water_route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "route_134",
+      "name": "Route 134",
+      "kind": "water_route",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "bulbapedia-route-list"
+      ]
+    },
+    {
+      "id": "petalburg_woods",
+      "name": "Petalburg Woods",
+      "kind": "forest",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "pokemony-hoenn"
+      ]
+    },
+    {
+      "id": "rusturf_tunnel",
+      "name": "Rusturf Tunnel",
+      "kind": "tunnel",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "pokemony-hoenn"
+      ]
+    },
+    {
+      "id": "granite_cave",
+      "name": "Granite Cave",
+      "kind": "cave",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "pokemony-hoenn"
+      ]
+    },
+    {
+      "id": "meteor_falls",
+      "name": "Meteor Falls",
+      "kind": "cave",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "pokemony-hoenn"
+      ]
+    },
+    {
+      "id": "fiery_path",
+      "name": "Fiery Path",
+      "kind": "cave",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "pokemony-hoenn"
+      ]
+    },
+    {
+      "id": "jagged_pass",
+      "name": "Jagged Pass",
+      "kind": "mountain_path",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "pokemony-hoenn"
+      ]
+    },
+    {
+      "id": "mt_chimney",
+      "name": "Mt. Chimney",
+      "kind": "mountain",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "pokemony-hoenn"
+      ]
+    },
+    {
+      "id": "desert_ruins",
+      "name": "Desert Ruins",
+      "kind": "ruins",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "pokemony-hoenn"
+      ]
+    },
+    {
+      "id": "safari_zone",
+      "name": "Safari Zone",
+      "kind": "park",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "pokemony-hoenn"
+      ]
+    },
+    {
+      "id": "new_mauville",
+      "name": "New Mauville",
+      "kind": "facility",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "pokemony-hoenn"
+      ]
+    },
+    {
+      "id": "weather_institute",
+      "name": "Weather Institute",
+      "kind": "building",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "pokemony-hoenn"
+      ]
+    },
+    {
+      "id": "mt_pyre",
+      "name": "Mt. Pyre",
+      "kind": "mountain",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "pokemony-hoenn"
+      ]
+    },
+    {
+      "id": "shoal_cave",
+      "name": "Shoal Cave",
+      "kind": "cave",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "pokemony-hoenn"
+      ]
+    },
+    {
+      "id": "seafloor_cavern",
+      "name": "Seafloor Cavern",
+      "kind": "cave",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "pokemony-hoenn"
+      ]
+    },
+    {
+      "id": "cave_of_origin",
+      "name": "Cave of Origin",
+      "kind": "cave",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "pokemony-hoenn"
+      ]
+    },
+    {
+      "id": "sky_pillar",
+      "name": "Sky Pillar",
+      "kind": "tower",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "pokemony-hoenn"
+      ]
+    },
+    {
+      "id": "victory_road",
+      "name": "Victory Road",
+      "kind": "cave",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "pokemony-hoenn"
+      ]
+    },
+    {
+      "id": "abandoned_ship",
+      "name": "Abandoned Ship",
+      "kind": "shipwreck",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "pokemony-hoenn"
+      ]
+    },
+    {
+      "id": "team_aqua_hideout",
+      "name": "Team Aqua Hideout",
+      "kind": "hideout",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "pokemony-hoenn"
+      ]
+    },
+    {
+      "id": "team_magma_hideout",
+      "name": "Team Magma Hideout",
+      "kind": "hideout",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "pokemony-hoenn"
+      ]
+    },
+    {
+      "id": "battle_frontier",
+      "name": "Battle Frontier",
+      "kind": "facility",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "pokemony-hoenn"
+      ]
+    },
+    {
+      "id": "battle_resort",
+      "name": "Battle Resort",
+      "kind": "facility",
+      "connectsTo": [],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "sourceIds": [
+        "bulbapedia-hoenn-region",
+        "pokemony-hoenn"
+      ]
+    }
+  ]
+}
