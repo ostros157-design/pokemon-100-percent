@@ -197,9 +197,10 @@ class _MapsScreenState extends State<MapsScreen> {
               runSpacing: 6,
               children: encounters.map((entry) {
                 final name = entry['name']!;
-                final pokemon = pokemonList.where(
+                final matches = pokemonList.where(
                   (candidate) => candidate.name.toLowerCase() == name.toLowerCase(),
-                ).firstOrNull;
+                );
+                final pokemon = matches.isEmpty ? null : matches.first;
                 final details = <String>[
                   if (entry['levels'] != null) 'Lv. ${entry['levels']}',
                   if (entry['rate'] != null) '${entry['rate']}%',
