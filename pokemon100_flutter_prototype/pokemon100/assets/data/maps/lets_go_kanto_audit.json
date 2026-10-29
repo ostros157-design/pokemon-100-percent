@@ -582,6 +582,21 @@
       "id": "bulbapedia-sea-cottage",
       "url": "https://bulbapedia.bulbagarden.net/wiki/Sea_Cottage",
       "scope": "Sea Cottage location reference"
+    },
+    {
+      "id": "rotomlabs-digletts-cave",
+      "url": "https://rotomlabs.net/locations/lets-go-pikachu-eevee/digletts-cave",
+      "scope": "Let’s Go Diglett's Cave encounter levels and version-independent rates"
+    },
+    {
+      "id": "rotomlabs-mt-moon",
+      "url": "https://rotomlabs.net/locations/lets-go-pikachu-eevee/mt-moon",
+      "scope": "Let’s Go Mt. Moon encounter levels and rates by cave section"
+    },
+    {
+      "id": "rotomlabs-rock-tunnel",
+      "url": "https://rotomlabs.net/locations/lets-go-pikachu-eevee/rock-tunnel",
+      "scope": "Let’s Go Rock Tunnel encounter levels and rates by floor"
     }
   ],
   "locations": [
@@ -1848,75 +1863,223 @@
           5,
           10
         ],
-        "1F": [
-          [
-            "Zubat",
-            40
-          ],
-          [
-            "Geodude",
-            40
-          ],
-          [
-            "Paras",
-            15
-          ],
-          [
-            "Clefairy",
-            4
-          ],
-          [
-            "Onix",
-            1
-          ]
+        "lets_go_pikachu": [
+          {
+            "name": "Zubat",
+            "levelRange": [
+              5,
+              10
+            ],
+            "ratePercent": 40,
+            "method": "1F / B1F"
+          },
+          {
+            "name": "Geodude",
+            "levelRange": [
+              5,
+              10
+            ],
+            "ratePercent": 40,
+            "method": "1F / B1F"
+          },
+          {
+            "name": "Paras",
+            "levelRange": [
+              5,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "1F / B1F"
+          },
+          {
+            "name": "Clefairy",
+            "levelRange": [
+              5,
+              10
+            ],
+            "ratePercent": 4,
+            "method": "1F / B1F"
+          },
+          {
+            "name": "Onix",
+            "levelRange": [
+              5,
+              10
+            ],
+            "ratePercent": 1,
+            "method": "1F / B1F"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              5,
+              10
+            ],
+            "ratePercent": 40,
+            "method": "General spawn table"
+          },
+          {
+            "name": "Geodude",
+            "levelRange": [
+              5,
+              10
+            ],
+            "ratePercent": 34,
+            "method": "General spawn table"
+          },
+          {
+            "name": "Paras",
+            "levelRange": [
+              5,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "General spawn table"
+          },
+          {
+            "name": "Clefairy",
+            "levelRange": [
+              5,
+              10
+            ],
+            "ratePercent": 9,
+            "method": "General spawn table"
+          },
+          {
+            "name": "Clefable",
+            "levelRange": [
+              5,
+              10
+            ],
+            "ratePercent": 1,
+            "method": "General spawn table"
+          },
+          {
+            "name": "Onix",
+            "levelRange": [
+              5,
+              10
+            ],
+            "ratePercent": 1,
+            "method": "General spawn table"
+          },
+          {
+            "name": "Chansey",
+            "levelRange": [
+              5,
+              10
+            ],
+            "method": "Rare spawn — rate not published"
+          }
         ],
-        "B1F": [
-          [
-            "Zubat",
-            40
-          ],
-          [
-            "Geodude",
-            40
-          ],
-          [
-            "Paras",
-            15
-          ],
-          [
-            "Clefairy",
-            4
-          ],
-          [
-            "Onix",
-            1
-          ]
-        ],
-        "B2F": [
-          [
-            "Zubat",
-            40
-          ],
-          [
-            "Geodude",
-            34
-          ],
-          [
-            "Paras",
-            15
-          ],
-          [
-            "Clefairy",
-            9
-          ],
-          [
-            "Onix",
-            1
-          ],
-          [
-            "Clefable",
-            1
-          ]
+        "lets_go_eevee": [
+          {
+            "name": "Zubat",
+            "levelRange": [
+              5,
+              10
+            ],
+            "ratePercent": 40,
+            "method": "1F / B1F"
+          },
+          {
+            "name": "Geodude",
+            "levelRange": [
+              5,
+              10
+            ],
+            "ratePercent": 40,
+            "method": "1F / B1F"
+          },
+          {
+            "name": "Paras",
+            "levelRange": [
+              5,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "1F / B1F"
+          },
+          {
+            "name": "Clefairy",
+            "levelRange": [
+              5,
+              10
+            ],
+            "ratePercent": 4,
+            "method": "1F / B1F"
+          },
+          {
+            "name": "Onix",
+            "levelRange": [
+              5,
+              10
+            ],
+            "ratePercent": 1,
+            "method": "1F / B1F"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              5,
+              10
+            ],
+            "ratePercent": 40,
+            "method": "General spawn table"
+          },
+          {
+            "name": "Geodude",
+            "levelRange": [
+              5,
+              10
+            ],
+            "ratePercent": 34,
+            "method": "General spawn table"
+          },
+          {
+            "name": "Paras",
+            "levelRange": [
+              5,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "General spawn table"
+          },
+          {
+            "name": "Clefairy",
+            "levelRange": [
+              5,
+              10
+            ],
+            "ratePercent": 9,
+            "method": "General spawn table"
+          },
+          {
+            "name": "Clefable",
+            "levelRange": [
+              5,
+              10
+            ],
+            "ratePercent": 1,
+            "method": "General spawn table"
+          },
+          {
+            "name": "Onix",
+            "levelRange": [
+              5,
+              10
+            ],
+            "ratePercent": 1,
+            "method": "General spawn table"
+          },
+          {
+            "name": "Chansey",
+            "levelRange": [
+              5,
+              10
+            ],
+            "method": "Rare spawn — rate not published"
+          }
         ]
       },
       "items": [
@@ -1941,9 +2104,10 @@
       "sourceIds": [
         "routepedia-mt-moon-pikachu",
         "routepedia-mt-moon-eevee",
-        "bulbapedia-part4"
+        "bulbapedia-part4",
+        "rotomlabs-mt-moon"
       ],
-      "dataStatus": "text_verified_positions_not_mapped"
+      "dataStatus": "encounter_rates_verified_from_rotomlabs_positions_not_mapped"
     },
     {
       "id": "route_4",
@@ -5433,81 +5597,349 @@
           18,
           23
         ],
-        "1F": [
-          [
-            "Zubat",
-            20
-          ],
-          [
-            "Geodude",
-            20
-          ],
-          [
-            "Golbat",
-            10
-          ],
-          [
-            "Graveler",
-            10
-          ],
-          [
-            "Machop",
-            10
-          ],
-          [
-            "Onix",
-            10
-          ],
-          [
-            "Rhyhorn",
-            10
-          ],
-          [
-            "Cubone",
-            9
-          ],
-          [
-            "Kangaskhan",
-            1
-          ]
+        "lets_go_pikachu": [
+          {
+            "name": "Golbat",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 20,
+            "method": "Entrance / overworld"
+          },
+          {
+            "name": "Graveler",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 20,
+            "method": "Entrance / overworld"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 10,
+            "method": "Entrance / overworld"
+          },
+          {
+            "name": "Machop",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 10,
+            "method": "Entrance / overworld"
+          },
+          {
+            "name": "Geodude",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 10,
+            "method": "Entrance / overworld"
+          },
+          {
+            "name": "Onix",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 10,
+            "method": "Entrance / overworld"
+          },
+          {
+            "name": "Rhyhorn",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 10,
+            "method": "Entrance / overworld"
+          },
+          {
+            "name": "Cubone",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 9,
+            "method": "Entrance / overworld"
+          },
+          {
+            "name": "Kangaskhan",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 1,
+            "method": "Entrance / overworld"
+          },
+          {
+            "name": "Charmander",
+            "levelRange": [
+              18,
+              23
+            ],
+            "method": "Rare spawn — rate not published"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 20,
+            "method": "B1F"
+          },
+          {
+            "name": "Geodude",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 20,
+            "method": "B1F"
+          },
+          {
+            "name": "Golbat",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 10,
+            "method": "B1F"
+          },
+          {
+            "name": "Machop",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 10,
+            "method": "B1F"
+          },
+          {
+            "name": "Graveler",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 10,
+            "method": "B1F"
+          },
+          {
+            "name": "Onix",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 10,
+            "method": "B1F"
+          },
+          {
+            "name": "Rhyhorn",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 10,
+            "method": "B1F"
+          },
+          {
+            "name": "Cubone",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 9,
+            "method": "B1F"
+          },
+          {
+            "name": "Kangaskhan",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 1,
+            "method": "B1F"
+          }
         ],
-        "B1F": [
-          [
-            "Golbat",
-            20
-          ],
-          [
-            "Graveler",
-            20
-          ],
-          [
-            "Zubat",
-            10
-          ],
-          [
-            "Geodude",
-            10
-          ],
-          [
-            "Machop",
-            10
-          ],
-          [
-            "Onix",
-            10
-          ],
-          [
-            "Rhyhorn",
-            10
-          ],
-          [
-            "Cubone",
-            9
-          ],
-          [
-            "Kangaskhan",
-            1
-          ]
+        "lets_go_eevee": [
+          {
+            "name": "Golbat",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 20,
+            "method": "Entrance / overworld"
+          },
+          {
+            "name": "Graveler",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 20,
+            "method": "Entrance / overworld"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 10,
+            "method": "Entrance / overworld"
+          },
+          {
+            "name": "Machop",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 10,
+            "method": "Entrance / overworld"
+          },
+          {
+            "name": "Geodude",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 10,
+            "method": "Entrance / overworld"
+          },
+          {
+            "name": "Onix",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 10,
+            "method": "Entrance / overworld"
+          },
+          {
+            "name": "Rhyhorn",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 10,
+            "method": "Entrance / overworld"
+          },
+          {
+            "name": "Cubone",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 9,
+            "method": "Entrance / overworld"
+          },
+          {
+            "name": "Kangaskhan",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 1,
+            "method": "Entrance / overworld"
+          },
+          {
+            "name": "Charmander",
+            "levelRange": [
+              18,
+              23
+            ],
+            "method": "Rare spawn — rate not published"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 20,
+            "method": "B1F"
+          },
+          {
+            "name": "Geodude",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 20,
+            "method": "B1F"
+          },
+          {
+            "name": "Golbat",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 10,
+            "method": "B1F"
+          },
+          {
+            "name": "Machop",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 10,
+            "method": "B1F"
+          },
+          {
+            "name": "Graveler",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 10,
+            "method": "B1F"
+          },
+          {
+            "name": "Onix",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 10,
+            "method": "B1F"
+          },
+          {
+            "name": "Rhyhorn",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 10,
+            "method": "B1F"
+          },
+          {
+            "name": "Cubone",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 9,
+            "method": "B1F"
+          },
+          {
+            "name": "Kangaskhan",
+            "levelRange": [
+              18,
+              23
+            ],
+            "ratePercent": 1,
+            "method": "B1F"
+          }
         ]
       },
       "items": [
@@ -5525,9 +5957,10 @@
       "trainerCount": 17,
       "sourceIds": [
         "routepedia-rock-tunnel-pikachu",
-        "bulbapedia-part8"
+        "bulbapedia-part8",
+        "rotomlabs-rock-tunnel"
       ],
-      "dataStatus": "text_verified_positions_not_mapped"
+      "dataStatus": "encounter_rates_verified_from_rotomlabs_positions_not_mapped"
     },
     {
       "id": "lavender_town",
@@ -5979,27 +6412,88 @@
           18
         ],
         "lets_go_pikachu": [
-          [
-            "Diglett",
-            85
-          ],
-          [
-            "Zubat",
-            10
-          ],
-          [
-            "Dugtrio",
-            5
-          ]
+          {
+            "name": "Diglett",
+            "levelRange": [
+              13,
+              18
+            ],
+            "ratePercent": 85,
+            "method": "Overworld"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              13,
+              18
+            ],
+            "ratePercent": 10,
+            "method": "Overworld"
+          },
+          {
+            "name": "Dugtrio",
+            "levelRange": [
+              13,
+              18
+            ],
+            "ratePercent": 5,
+            "method": "Overworld"
+          },
+          {
+            "name": "Chansey",
+            "levelRange": [
+              13,
+              18
+            ],
+            "method": "Rare spawn — rate not published"
+          }
+        ],
+        "lets_go_eevee": [
+          {
+            "name": "Diglett",
+            "levelRange": [
+              13,
+              18
+            ],
+            "ratePercent": 85,
+            "method": "Overworld"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              13,
+              18
+            ],
+            "ratePercent": 10,
+            "method": "Overworld"
+          },
+          {
+            "name": "Dugtrio",
+            "levelRange": [
+              13,
+              18
+            ],
+            "ratePercent": 5,
+            "method": "Overworld"
+          },
+          {
+            "name": "Chansey",
+            "levelRange": [
+              13,
+              18
+            ],
+            "method": "Rare spawn — rate not published"
+          }
         ]
       },
       "rareEncounter": "Chansey",
-      "notes": "Długi tunel łączący Route 11 z wschodnią częścią Route 2.",
+      "notes": "Długi tunel łączący Route 11 z wschodnią częścią Route 2. Spotkania są takie same w obu wersjach Let’s Go; szczegółowe położenie dzikich Pokémonów nie jest odwzorowane.",
       "sourceIds": [
         "routepedia-diglett-cave-pikachu",
-        "bulbapedia-part7"
+        "bulbapedia-part7",
+        "rotomlabs-digletts-cave"
       ],
-      "dataStatus": "text_verified_positions_not_mapped"
+      "dataStatus": "encounter_rates_verified_from_rotomlabs_positions_not_mapped"
     },
     {
       "id": "route_12",
