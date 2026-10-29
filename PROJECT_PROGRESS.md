@@ -1,3 +1,8 @@
+### Mapy — czytelne wyświetlanie przedmiotów strukturalnych (2026-10-29)
+
+- Panel spotkań Let’s Go formatuje teraz wpisy przedmiotów zapisane jako obiekty JSON (np. Route 1) na nazwę, ilość i opis lokalizacji zamiast surowego `{id: ..., name: ...}`.
+- Zwykłe tekstowe wpisy pozostałych lokacji zachowują dotychczasowy format. Commit UI: `a046c6d`. Bez testów, analyzer ani APK.
+
 ### Mapy — automatyczny licznik trenerów z listy (2026-10-29)
 
 - Gdy lokacja nie ma osobnego pola `trainerCount`, panel wylicza teraz licznik z długości udokumentowanej listy trenerów. Jawny licznik w danych nadal ma pierwszeństwo.
