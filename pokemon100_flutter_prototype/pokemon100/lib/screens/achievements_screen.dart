@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../data/achievements_data.dart';
+import '../data/guides_data.dart';
 import '../data/pokemon_data.dart';
 import '../models/achievement.dart';
 import '../widgets/achievement_card.dart';
@@ -22,6 +23,13 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
   String _selectedGameId = 'lets_go_pikachu';
   int _globalCaughtCount = 0;
   int _selectedGameCaughtCount = 0;
+  int _globalShinyCount = 0;
+  int _teamTypeCount = 0;
+  int _gameProgressPercent = 0;
+  List<int> _savedTeamIds = <int>[];
+  bool _guideStarted = false;
+  bool _guideComplete = false;
+  bool _firstBadgeStepComplete = false;
 
   @override
   void initState() {
@@ -70,11 +78,74 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
     allCaughtIds.retainAll(validPokemonIds);
     selectedGameIds.retainAll(validPokemonIds);
 
+    final shinyIds = <int>{};
+    for (final key in preferences.getKeys()) {
+      if (!key.startsWith('shiny_pokemon_ids_')) continue;
+      shinyIds.addAll(
+        (preferences.getStringList(key) ?? const <String>[])
+            .map(int.tryParse)
+            .whereType<int>(),
+      );
+    }
+    shinyIds.retainAll(validPokemonIds);
+
+    final teamIds = (preferences.getStringList('team_making_saved_team_v1') ??
+            const <String>[])
+        .map(int.tryParse)
+        .whereType<int>()
+        .toSet()
+        .intersection(validPokemonIds);
+    final teamTypes = <String>{};
+    for (final id in teamIds) {
+      final matches = pokemonList.where((pokemon) => pokemon.id == id);
+      if (matches.isNotEmpty) teamTypes.addAll(matches.first.types);
+    }
+
+    final gameGuides = guidesList.where((guide) => guide.gameId == gameId);
+    var totalGuideSteps = 0;
+    var completedGuideSteps = 0;
+    var guideStarted = false;
+    var guideComplete = false;
+    var firstBadgeStepComplete = false;
+    for (final guide in gameGuides) {
+      totalGuideSteps += guide.steps.length;
+      final completed = (preferences.getStringList(
+                'guide_progress_${guide.gameId}_${guide.id}',
+              ) ??
+              const <String>[])
+          .map(int.tryParse)
+          .whereType<int>()
+          .where((index) => index >= 0 && index < guide.steps.length)
+          .toSet();
+      completedGuideSteps += completed.length;
+      if (completed.isNotEmpty) guideStarted = true;
+      if (guide.steps.isNotEmpty && completed.length == guide.steps.length) {
+        guideComplete = true;
+      }
+      for (final index in completed) {
+        if (guide.steps[index].title.toLowerCase().contains('pokonaj brocka')) {
+          firstBadgeStepComplete = true;
+        }
+      }
+    }
+    final totalObjectives = totalGuideSteps + pokemonList.length;
+    final completedObjectives = completedGuideSteps + selectedGameIds.length;
+    final gameProgressPercent = totalObjectives == 0
+        ? 0
+        : (completedObjectives * 100 / totalObjectives).round();
+
     if (!mounted) return;
     setState(() {
       _selectedGameId = gameId;
       _globalCaughtCount = allCaughtIds.length;
       _selectedGameCaughtCount = selectedGameIds.length;
+      _globalShinyCount = shinyIds.length;
+      _savedTeamIds = teamIds.toList();
+      _teamTypeCount = teamTypes.length;
+      _gameProgressPercent = gameProgressPercent;
+      _guideStarted = guideStarted;
+      _guideComplete = guideComplete;
+      _firstBadgeStepComplete = firstBadgeStepComplete;
       _loading = false;
     });
   }
@@ -93,9 +164,32 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
       case 'pokedex_complete':
         // This is a global database milestone, not a per-game regional dex.
         return _globalCaughtCount >= pokemonList.length;
+      case 'first_badge':
+        // The achievement is tied to the player checking off the Brock battle
+        // in the guide, rather than opening the step alone.
+        return _firstBadgeStepComplete;
+      case 'shiny':
+        return _globalShinyCount > 0;
+      case 'full_team':
+        return _savedTeamIds.length == 6;
+      case 'team_types':
+        return _teamTypeCount >= 6;
+      case 'guide_start':
+        return _guideStarted;
+      case 'guide_complete':
+        return _guideComplete;
+      case 'game_complete':
+      case 'first_100':
+        return _gameProgressPercent >= 100;
+      case 'speed_progress':
+        return _gameProgressPercent >= 25;
+      case 'half_progress':
+        return _gameProgressPercent >= 50;
+      case 'three_quarters':
+        return _gameProgressPercent >= 75;
       default:
-        // Do not unlock achievements until their real completion signals
-        // (badges, battles, evolutions, team composition, etc.) are tracked.
+        // Keep achievements locked when the app does not yet track their
+        // real completion signal (e.g. Elite Four, evolutions or trades).
         return false;
     }
   }
