@@ -1107,7 +1107,7 @@ class _MapsScreenState extends State<MapsScreen> {
                                       ),
                                       const SizedBox(height: 4),
                                       const Text(
-                                        '• Mapa regionu i wszystkie 76 schematów lokalnych są autorskimi ilustracjami wektorowymi, a nie dokładnymi mapami kafelkowymi z gry.\n• Węzły i strefy pięter są poglądowe; sieć 84 połączeń odpowiada indeksowi lokacji.\n• Dane spotkań i notatki są dostępne offline, ale dokładne pinezki Pokémonów, trenerów i przedmiotów pozostają niezweryfikowane.',
+                                        '• Mapa regionu i schematy lokalne są autorskimi ilustracjami wektorowymi, a nie dokładnymi mapami kafelkowymi z gry. Aliasowe nazwy Bill’s House i Safari Zone korzystają ze wspólnych planów.\n• Węzły i strefy pięter są poglądowe; sieć 82 połączeń odpowiada indeksowi lokacji.\n• Dane spotkań i notatki są dostępne offline, ale dokładne pinezki Pokémonów, trenerów i przedmiotów pozostają niezweryfikowane.',
                                       ),
                                       const SizedBox(height: 12),
                                       _KantoRegionMap(
