@@ -1178,3 +1178,9 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Statycznie sprawdzono, że nazwy i połączenia nadal zachowują indeks: 74/74 węzły, 83 połączenia, brak nieistniejących indeksów. Nie uruchamiano analyzer, testów ani APK.
 - Commity: `3d1ac9f`, `1d299db`, `4bf0423`, `e100b9a`.
 
+### Mapy — Kanto: ikony typów lokacji na widoku regionu (2026-10-29)
+
+- Rozróżniono na mapie głównej skupiska budynków/miast, osobne budynki i Gymy oraz wejścia do jaskiń/tuneli. Ikony są wektorowe i rysowane przy wybieralnych węzłach.
+- Seafoam Islands otrzymały symbol jaskini/wysp zamiast ikony miasta; wyspy Cinnabar zachowują symbol zabudowy.
+- Commity: `cbe4e6b`, `0f2e274`. To poprawka warstwy ilustracyjnej; nie wykonywano testów ani kompilacji.
+
