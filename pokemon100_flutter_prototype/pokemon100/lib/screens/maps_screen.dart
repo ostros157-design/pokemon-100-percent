@@ -795,6 +795,56 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
     if (oldWidget.location != widget.location) _selectedFeature = null;
   }
 
+  Future<void> _showExpandedMap(BuildContext context, String location) {
+    return showDialog<void>(
+      context: context,
+      builder: (dialogContext) => Dialog(
+        child: SizedBox(
+          width: MediaQuery.sizeOf(dialogContext).width * 0.9,
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.all(16),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Powiększony schemat: $location',
+                  style: Theme.of(dialogContext).textTheme.titleLarge,
+                ),
+                const SizedBox(height: 12),
+                AspectRatio(
+                  aspectRatio: 1.25,
+                  child: CustomPaint(
+                    painter: _KantoLocalAreaPainter(
+                      location: location,
+                      land: Theme.of(dialogContext).colorScheme.surfaceContainerHighest,
+                      route: Theme.of(dialogContext).colorScheme.primary,
+                      label: Theme.of(dialogContext).colorScheme.onSurface,
+                    ),
+                    child: const SizedBox.expand(),
+                  ),
+                ),
+                const SizedBox(height: 8),
+                const Text(
+                  'Schemat poglądowy offline — nie przedstawia dokładnej skali ani współrzędnych z gry.',
+                  style: TextStyle(fontSize: 12),
+                ),
+                const SizedBox(height: 12),
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: TextButton(
+                    onPressed: () => Navigator.of(dialogContext).pop(),
+                    child: const Text('Zamknij'),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
   IconData _featureIcon(String feature) {
     final normalized = feature.toLowerCase();
     if (normalized.contains('dom') ||
@@ -846,18 +896,24 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
           style: TextStyle(fontSize: 12),
         ),
         const SizedBox(height: 8),
-        ClipRRect(
-          borderRadius: BorderRadius.circular(12),
-          child: AspectRatio(
-            aspectRatio: 1.5,
-            child: CustomPaint(
-              painter: _KantoLocalAreaPainter(
-                location: location,
-                land: Theme.of(context).colorScheme.surfaceContainerHighest,
-                route: Theme.of(context).colorScheme.primary,
-                label: Theme.of(context).colorScheme.onSurface,
+        Tooltip(
+          message: 'Dotknij, aby powiększyć schemat',
+          child: GestureDetector(
+            onTap: () => _showExpandedMap(context, location),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(12),
+              child: AspectRatio(
+                aspectRatio: 1.5,
+                child: CustomPaint(
+                  painter: _KantoLocalAreaPainter(
+                    location: location,
+                    land: Theme.of(context).colorScheme.surfaceContainerHighest,
+                    route: Theme.of(context).colorScheme.primary,
+                    label: Theme.of(context).colorScheme.onSurface,
+                  ),
+                  child: const SizedBox.expand(),
+                ),
               ),
-              child: const SizedBox.expand(),
             ),
           ),
         ),
