@@ -1,3 +1,8 @@
+### Mapy — korekta opisu liczby połączeń i aliasów (2026-10-29)
+
+- Zaktualizowano opis pod mapą po scaleniu aliasów: teraz poprawnie podaje 74 fizyczne punkty, 76 nazw i 82 połączenia (zamiast starej liczby 84).
+- Dopisano, że Bill’s House / Sea Cottage oraz Safari Zone / GO Park korzystają ze wspólnych planów. Commit UI: `636ef89`.
+
 ### Mapy — czytelne wyświetlanie przedmiotów strukturalnych (2026-10-29)
 
 - Panel spotkań Let’s Go formatuje teraz wpisy przedmiotów zapisane jako obiekty JSON (np. Route 1) na nazwę, ilość i opis lokalizacji zamiast surowego `{id: ..., name: ...}`.
