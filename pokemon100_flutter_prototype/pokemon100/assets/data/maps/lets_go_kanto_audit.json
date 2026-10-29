@@ -2299,8 +2299,7 @@
         "route_9",
         "route_24",
         "cerulean_gym",
-        "cerulean_cave",
-        "sea_cottage"
+        "cerulean_cave"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -2717,7 +2716,8 @@
       "kind": "route",
       "connectsTo": [
         "route_24",
-        "bills_house"
+        "bills_house",
+        "sea_cottage"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -12592,7 +12592,7 @@
       "name": "Sea Cottage",
       "kind": "house",
       "connectsTo": [
-        "cerulean_city"
+        "route_25"
       ],
       "notes": "Domek Billa przy północnym wybrzeżu, osiągany z Route 25. Wnętrze i dokładne położenie drzwi nie są jeszcze odwzorowane.",
       "sourceIds": [
