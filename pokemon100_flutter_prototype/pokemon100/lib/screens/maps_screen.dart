@@ -1136,7 +1136,7 @@ class _MapsScreenState extends State<MapsScreen> {
                                           ),
                                           Chip(
                                             avatar: Icon(Icons.catching_pokemon, size: 18),
-                                            label: Text('Pokémony'),
+                                            label: Text('Lista Pokémonów'),
                                           ),
                                           Chip(
                                             avatar: Icon(Icons.inventory_2_outlined, size: 18),
