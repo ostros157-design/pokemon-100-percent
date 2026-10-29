@@ -1083,6 +1083,10 @@ class _MapsScreenState extends State<MapsScreen> {
                                             label: Text('Trasy'),
                                           ),
                                           Chip(
+                                            avatar: Icon(Icons.waves_outlined, size: 18),
+                                            label: Text('Trasy wodne'),
+                                          ),
+                                          Chip(
                                             avatar: Icon(Icons.park_outlined, size: 18),
                                             label: Text('Ilustrowane lasy'),
                                           ),
