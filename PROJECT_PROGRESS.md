@@ -1,3 +1,11 @@
+### Mapy — nowe punkty z poradnika na mapie Kanto (2026-10-29)
+
+- Dodano do przeglądu regionu klikalne punkty Route 2, Viridian Forest i Pewter Gym, których wcześniej brakowało na mapie mimo obecności tych lokacji w poradniku.
+- Uzupełniono schematyczne połączenia podróży: Viridian City → Route 2 → Viridian Forest → Pewter City → Pewter Gym. Usunięto bezpośredni skrót Viridian City–Pewter City, aby nie pomijać lokacji z poradnika.
+- Punkty są orientacyjne, nie stanowią dokładnych współrzędnych gry. Kliknięcie punktu wybiera lokację i pozwala przejść do powiązanych danych poradnika.
+- Commit kodu: `c598fe6`.
+- Weryfikacja kompilacji i działania dotyku nadal nie została wykonana.
+
 ### Audyt zakresu aplikacji i dalszy rozwój map (2026-10-29)
 
 - Przejrzano bieżące pliki repozytorium, w tym ekran główny, poradniki, Pokédex, szczegóły Pokémonów, profil, osiągnięcia, Team, ustawienia, usługi zapisu i ekran map. To audyt kodu w repozytorium, a nie potwierdzenie poprawnego działania na urządzeniu.
