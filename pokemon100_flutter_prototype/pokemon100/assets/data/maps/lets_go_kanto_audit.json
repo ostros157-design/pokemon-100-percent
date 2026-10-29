@@ -222,6 +222,26 @@
       "id": "bulbapedia-part8",
       "url": "https://bulbapedia.bulbagarden.net/wiki/Appendix%3ALet%27s_Go,_Pikachu!_and_Let%27s_Go,_Eevee!/Part_8",
       "scope": "Route 7–10, Rock Tunnel and Lavender Town walkthrough"
+    },
+    {
+      "id": "routepedia-route10-pikachu",
+      "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/route-10",
+      "scope": "Route 10 and Power Plant encounters, items and trainers"
+    },
+    {
+      "id": "routepedia-rock-tunnel-pikachu",
+      "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/rock-tunnel",
+      "scope": "Rock Tunnel floors, encounter rates, items and trainers"
+    },
+    {
+      "id": "routepedia-lavender-pikachu",
+      "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/lavender-town",
+      "scope": "Lavender Town facilities, items and connections"
+    },
+    {
+      "id": "routepedia-underground78-pikachu",
+      "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/underground-path-routes-7-8",
+      "scope": "Underground Path 7–8 connections"
     }
   ],
   "locations": [
@@ -1699,6 +1719,214 @@
         "bulbapedia-part8"
       ],
       "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "route_10",
+      "name": "Route 10",
+      "kind": "route",
+      "connectsTo": [
+        "route_9",
+        "rock_tunnel",
+        "lavender_town",
+        "route_8"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "notes": "Północna i południowa część Route 10 są rozdzielone przez Rock Tunnel. Obok północnego wejścia znajduje się Pokémon Center; w okolicy leży Power Plant.",
+      "items": [
+        "Great Balls",
+        "Super Potion",
+        "5 Poké Balls",
+        "Thunder Stone",
+        "Max Revive",
+        "Rare Candy",
+        "TM38",
+        "Max Potion",
+        "Paralyze Heal",
+        "X Sp. Def",
+        "różne ukryte przedmioty"
+      ],
+      "features": [
+        "Pokémon Center",
+        "Power Plant",
+        "wejście do Rock Tunnel"
+      ],
+      "sourceIds": [
+        "routepedia-route10-pikachu",
+        "bulbapedia-part8"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "rock_tunnel",
+      "name": "Rock Tunnel",
+      "kind": "cave",
+      "connectsTo": [
+        "route_10",
+        "lavender_town"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "floors": [
+        "1F",
+        "B1F"
+      ],
+      "wildPokemonDetails": {
+        "levels": [
+          18,
+          23
+        ],
+        "1F": [
+          [
+            "Zubat",
+            20
+          ],
+          [
+            "Geodude",
+            20
+          ],
+          [
+            "Golbat",
+            10
+          ],
+          [
+            "Graveler",
+            10
+          ],
+          [
+            "Machop",
+            10
+          ],
+          [
+            "Onix",
+            10
+          ],
+          [
+            "Rhyhorn",
+            10
+          ],
+          [
+            "Cubone",
+            9
+          ],
+          [
+            "Kangaskhan",
+            1
+          ]
+        ],
+        "B1F": [
+          [
+            "Golbat",
+            20
+          ],
+          [
+            "Graveler",
+            20
+          ],
+          [
+            "Zubat",
+            10
+          ],
+          [
+            "Geodude",
+            10
+          ],
+          [
+            "Machop",
+            10
+          ],
+          [
+            "Onix",
+            10
+          ],
+          [
+            "Rhyhorn",
+            10
+          ],
+          [
+            "Cubone",
+            9
+          ],
+          [
+            "Kangaskhan",
+            1
+          ]
+        ]
+      },
+      "items": [
+        "Repel",
+        "Escape Rope",
+        "Super Potion",
+        "Pearl",
+        "Stardust",
+        "Revive",
+        "3 Great Balls",
+        "Full Heal",
+        "Dire Hit",
+        "2 ukryte przedmioty: Revive i Super Potion"
+      ],
+      "trainerCount": 17,
+      "sourceIds": [
+        "routepedia-rock-tunnel-pikachu",
+        "bulbapedia-part8"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "lavender_town",
+      "name": "Lavender Town",
+      "kind": "town",
+      "connectsTo": [
+        "route_10",
+        "route_12",
+        "route_8"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "features": [
+        "Pokémon Center",
+        "Poké Mart",
+        "Mr. Fuji's House",
+        "Pokémon Tower"
+      ],
+      "items": [
+        "X Attack",
+        "Elixir",
+        "Awakening",
+        "Super Potion",
+        "Escape Rope",
+        "TM04",
+        "Full Heal",
+        "Ice Stone",
+        "Nugget",
+        "Revive",
+        "Rare Candy",
+        "3 Ultra Balls",
+        "Hyper Potion",
+        "ukryte: Pearl, Star Piece, Super Potion, Big Pearl, PP Up"
+      ],
+      "sourceIds": [
+        "routepedia-lavender-pikachu",
+        "bulbapedia-part8"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "underground_path_7_8",
+      "name": "Underground Path (Routes 7–8)",
+      "kind": "underground_path",
+      "connectsTo": [
+        "route_7",
+        "route_8"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "notes": "Przejście pod Saffron City łączące Route 7 i Route 8. Nie dodano pinezek przedmiotów.",
+      "sourceIds": [
+        "routepedia-underground78-pikachu",
+        "bulbapedia-part8"
+      ],
+      "dataStatus": "connection_verified_details_pending"
     }
   ]
 }
