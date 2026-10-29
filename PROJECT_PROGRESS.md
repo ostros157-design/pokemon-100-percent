@@ -1121,3 +1121,13 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Kontrola statyczna po zmianach: 74/74 nazwy lokacji zgodne z indeksem danych; 83/83 połączenia zgodne; brak nieprawidłowych indeksów połączeń.
 - Nie uruchamiano `flutter analyze`, testów ani budowania APK. Wciąż do zrobienia przed uznaniem mapy za kompletną: szczegółowe plany wnętrz i jaskiń, weryfikacja przebiegu terenu względem wiarygodnych map źródłowych oraz dalsze sprawdzenie czytelności po uruchomieniu aplikacji.
 
+### Mapy — Kanto: schematy lokalne dla całego indeksu 74 lokacji (2026-10-29, kontynuacja)
+
+- Rozszerzono panel lokalnych schematów z początkowych 7 miejsc do wszystkich 74 lokacji w indeksie Kanto. Każda lokacja ma teraz własny zestaw nazwanych stref/elementów w panelu.
+- Dodano poglądowe plany głównych jaskiń i obiektów: Mt. Moon, Rock Tunnel, Diglett's Cave, Seafoam Islands, Cerulean Cave, Victory Road, Pokémon Tower, Pokémon Mansion, Power Plant i S.S. Anne.
+- Dodano schematyczne plany głównych miast: Cerulean, Vermilion, Celadon, Saffron, Lavender, Fuchsia, Cinnabar i Indigo Plateau; dodano też wnętrza ważnych budynków, Gymów, przejść podziemnych i wszystkich tras 1–25.
+- Schematy wykorzystują wektorowe strefy, korytarze, ikony i etykiety. Nadal są ilustracją orientacyjną, nie wiernym odwzorowaniem kafelków, map pięter ani dokładnych współrzędnych z gry; pozycje trenerów, przedmiotów i spotkań nie są zmyślonymi pinezkami.
+- Audyt statyczny: 74/74 lokacje mają węzeł mapy; 83 połączenia nie odwołują się do nieistniejących indeksów; wszystkie 74 nazwy lokacji mają odpowiadający schemat lokalny; brak dodatkowych nazw i duplikatów kluczy w mapie schematów.
+- Commity tej serii obejmują m.in. `76f4461`, `911a263`, `f4bd042`, `f798ec7`, `b538ccd`, `e66d851`, `04be4d5`, `dd0fddc` i `1d6fc3f`.
+- Nie uruchamiano `flutter analyze`, testów ani APK zgodnie z dotychczasowym sposobem pracy. Przed określeniem mapy jako gotowej nadal potrzebne są: przegląd wizualny po uruchomieniu aplikacji oraz weryfikacja geometrii i pięter z wiarygodnymi mapami źródłowymi.
+
