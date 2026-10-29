@@ -160,6 +160,80 @@ class _MapsScreenState extends State<MapsScreen> {
     return searchable.any((value) => value.toLowerCase().contains(query));
   }
 
+  Widget _buildLetsGoEncounterPanel(
+    BuildContext context,
+    String locationName,
+  ) {
+    final index = _mapIndexes["Kanto (Let's Go)"];
+    final rawLocations = index?['locations'];
+    if (rawLocations is! List) return const SizedBox.shrink();
+
+    Map<String, dynamic>? location;
+    for (final candidate in rawLocations.whereType<Map<String, dynamic>>()) {
+      final name = candidate['name'] as String? ?? '';
+      if (name.toLowerCase() == locationName.toLowerCase()) {
+        location = candidate;
+        break;
+      }
+    }
+    if (location == null) return const SizedBox.shrink();
+
+    final encounters = _mapWildPokemonEntries(location['wildPokemonDetails']);
+    if (encounters.isEmpty) return const SizedBox.shrink();
+
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Pokémony do złapania — $locationName',
+              style: Theme.of(context).textTheme.titleMedium,
+            ),
+            const SizedBox(height: 8),
+            Wrap(
+              spacing: 6,
+              runSpacing: 6,
+              children: encounters.map((entry) {
+                final name = entry['name']!;
+                final pokemon = pokemonList.where(
+                  (candidate) => candidate.name.toLowerCase() == name.toLowerCase(),
+                ).firstOrNull;
+                final details = <String>[
+                  if (entry['levels'] != null) 'Lv. ${entry['levels']}',
+                  if (entry['rate'] != null) '${entry['rate']}%',
+                  if (entry['method'] != null) entry['method']!,
+                ];
+                return ActionChip(
+                  avatar: const Icon(Icons.catching_pokemon, size: 18),
+                  label: Text(
+                    details.isEmpty ? name : '$name • ${details.join(' • ')}',
+                  ),
+                  onPressed: pokemon == null
+                      ? null
+                      : () => Navigator.of(context).push(
+                            MaterialPageRoute<void>(
+                              builder: (_) => PokemonDetailsScreen(
+                                pokemon: pokemon,
+                                gameId: _selectedGameId,
+                              ),
+                            ),
+                          ),
+                );
+              }).toList(),
+            ),
+            const SizedBox(height: 4),
+            const Text(
+              'Dotknij nazwy, aby otworzyć Pokédex. Pozycje spotkań nie oznaczają dokładnych współrzędnych na mapie.',
+              style: TextStyle(fontSize: 12),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
   List<Map<String, String>> _mapWildPokemonEntries(dynamic raw) {
     if (raw is! Map) return const <Map<String, String>>[];
     final variantKey = _selectedGameId == 'lets_go_eevee'
@@ -1756,6 +1830,11 @@ class _MapsScreenState extends State<MapsScreen> {
                               'Wybierz lokację z mapy albo wpisz jej dokładną nazwę, aby zobaczyć schemat lokalny i informacje powiązane z poradnikiem. Nie pokazujemy dokładnych pinezek przedmiotów bez zweryfikowanych współrzędnych.',
                             ),
                           const SizedBox(height: 12),
+                          if (_isLetsGoKanto && selectedLocalLocation != null)
+                            _buildLetsGoEncounterPanel(
+                              context,
+                              selectedLocalLocation,
+                            ),
                           _KantoLocalAreaPanel(
                             location: selectedLocalLocation,
                             references: selectedLocalLocation == null
