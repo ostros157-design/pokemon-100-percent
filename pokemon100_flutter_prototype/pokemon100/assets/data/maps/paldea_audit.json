@@ -8,7 +8,7 @@
     "The Indigo Disk"
   ],
   "purpose": "Open-world location inventory for Paldea and DLC. Scarlet/Violet has no numbered routes; Pokémon and collectibles must be pinned to verified terrain locations, not route tables.",
-  "coordinatePolicy": "No exact coordinates or collectible pins until verified for version, DLC and terrain.",
+  "coordinatePolicy": "Paldea is an open world with no numbered routes. Use terrain-based Pokémon spawn areas and verify every item, trainer, stake, Gimmighoul and raid pin against Scarlet/Violet and DLC.",
   "sources": [
     {
       "id": "bulbapedia-paldea",
@@ -19,6 +19,16 @@
       "id": "bulbapedia-scarlet-violet",
       "url": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Scarlet_and_Violet",
       "scope": "Scarlet/Violet open-world regions and DLC locations"
+    },
+    {
+      "id": "routepedia-paldea-map",
+      "url": "https://theroutepedia.com/paldea-map",
+      "scope": "Paldea open-world map and location coverage"
+    },
+    {
+      "id": "pokedb-paldea",
+      "url": "https://pokedb.org/locations/paldea",
+      "scope": "Paldea provinces, areas, shrines and landmarks"
     }
   ],
   "locations": [
@@ -33,7 +43,8 @@
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet"
-      ]
+      ],
+      "province": "South Province"
     },
     {
       "id": "los_platos",
@@ -46,7 +57,8 @@
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet"
-      ]
+      ],
+      "province": "South Province"
     },
     {
       "id": "mesagoza",
@@ -59,7 +71,8 @@
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet"
-      ]
+      ],
+      "province": "South Province"
     },
     {
       "id": "cortondo",
@@ -72,7 +85,8 @@
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet"
-      ]
+      ],
+      "province": "South Province"
     },
     {
       "id": "artazon",
@@ -85,7 +99,8 @@
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet"
-      ]
+      ],
+      "province": "East Province"
     },
     {
       "id": "levincia",
@@ -98,7 +113,8 @@
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet"
-      ]
+      ],
+      "province": "East Province"
     },
     {
       "id": "cascarrafa",
@@ -111,7 +127,8 @@
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet"
-      ]
+      ],
+      "province": "West Province"
     },
     {
       "id": "porto_marinada",
@@ -124,7 +141,8 @@
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet"
-      ]
+      ],
+      "province": "West Province"
     },
     {
       "id": "medali",
@@ -137,7 +155,8 @@
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet"
-      ]
+      ],
+      "province": "West Province"
     },
     {
       "id": "montenevera",
@@ -150,7 +169,8 @@
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet"
-      ]
+      ],
+      "province": "North Province"
     },
     {
       "id": "alfornada",
@@ -163,7 +183,8 @@
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet"
-      ]
+      ],
+      "province": "South Province"
     },
     {
       "id": "zapapico",
@@ -176,7 +197,8 @@
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet"
-      ]
+      ],
+      "province": "East Province"
     },
     {
       "id": "pok_mon_league",
@@ -202,7 +224,8 @@
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet"
-      ]
+      ],
+      "province": "South Province"
     },
     {
       "id": "south_province_area_two",
@@ -215,7 +238,8 @@
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet"
-      ]
+      ],
+      "province": "South Province"
     },
     {
       "id": "south_province_area_three",
@@ -228,7 +252,8 @@
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet"
-      ]
+      ],
+      "province": "South Province"
     },
     {
       "id": "south_province_area_four",
@@ -241,7 +266,8 @@
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet"
-      ]
+      ],
+      "province": "South Province"
     },
     {
       "id": "south_province_area_five",
@@ -254,7 +280,8 @@
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet"
-      ]
+      ],
+      "province": "South Province"
     },
     {
       "id": "south_province_area_six",
@@ -267,7 +294,8 @@
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet"
-      ]
+      ],
+      "province": "South Province"
     },
     {
       "id": "west_province_area_one",
@@ -280,7 +308,8 @@
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet"
-      ]
+      ],
+      "province": "West Province"
     },
     {
       "id": "west_province_area_two",
@@ -293,7 +322,8 @@
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet"
-      ]
+      ],
+      "province": "West Province"
     },
     {
       "id": "west_province_area_three",
@@ -306,7 +336,8 @@
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet"
-      ]
+      ],
+      "province": "West Province"
     },
     {
       "id": "east_province_area_one",
@@ -319,7 +350,8 @@
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet"
-      ]
+      ],
+      "province": "East Province"
     },
     {
       "id": "east_province_area_two",
@@ -332,7 +364,8 @@
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet"
-      ]
+      ],
+      "province": "East Province"
     },
     {
       "id": "east_province_area_three",
@@ -345,7 +378,8 @@
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet"
-      ]
+      ],
+      "province": "East Province"
     },
     {
       "id": "north_province_area_one",
@@ -358,7 +392,8 @@
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet"
-      ]
+      ],
+      "province": "North Province"
     },
     {
       "id": "north_province_area_two",
@@ -371,7 +406,8 @@
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet"
-      ]
+      ],
+      "province": "North Province"
     },
     {
       "id": "north_province_area_three",
@@ -384,7 +420,8 @@
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet"
-      ]
+      ],
+      "province": "North Province"
     },
     {
       "id": "tagtree_thicket",
@@ -397,7 +434,8 @@
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet"
-      ]
+      ],
+      "province": "East Province"
     },
     {
       "id": "asado_desert",
@@ -410,7 +448,8 @@
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet"
-      ]
+      ],
+      "province": "West Province"
     },
     {
       "id": "casseroya_lake",
@@ -423,7 +462,8 @@
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet"
-      ]
+      ],
+      "province": "North Province"
     },
     {
       "id": "glaseado_mountain",
@@ -436,7 +476,8 @@
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet"
-      ]
+      ],
+      "province": "North Province"
     },
     {
       "id": "dalizapa_passage",
@@ -449,7 +490,8 @@
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet"
-      ]
+      ],
+      "province": "North Province"
     },
     {
       "id": "socarrat_trail",
@@ -462,7 +504,8 @@
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet"
-      ]
+      ],
+      "province": "North Province"
     },
     {
       "id": "area_zero",
@@ -475,7 +518,8 @@
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet"
-      ]
+      ],
+      "province": "Great Crater of Paldea"
     },
     {
       "id": "great_crater_of_paldea",
@@ -501,7 +545,8 @@
       "sourceIds": [
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet"
-      ]
+      ],
+      "province": "South Province"
     },
     {
       "id": "south_paldean_sea",
@@ -670,7 +715,8 @@
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet"
       ],
-      "dataStatus": "named_location_known_exact_pins_pending_verification"
+      "dataStatus": "named_location_known_exact_pins_pending_verification",
+      "province": "Great Crater of Paldea"
     },
     {
       "id": "zero_lab",
@@ -683,7 +729,8 @@
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet"
       ],
-      "dataStatus": "named_location_known_exact_pins_pending_verification"
+      "dataStatus": "named_location_known_exact_pins_pending_verification",
+      "province": "Great Crater of Paldea"
     },
     {
       "id": "area_zero_underdepths",
@@ -696,7 +743,8 @@
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet"
       ],
-      "dataStatus": "named_location_known_exact_pins_pending_verification"
+      "dataStatus": "named_location_known_exact_pins_pending_verification",
+      "province": "Great Crater of Paldea"
     },
     {
       "id": "alfornada_cavern",
@@ -709,7 +757,8 @@
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet"
       ],
-      "dataStatus": "named_location_known_exact_pins_pending_verification"
+      "dataStatus": "named_location_known_exact_pins_pending_verification",
+      "province": "South Province"
     },
     {
       "id": "inlet_grotto",
@@ -722,7 +771,8 @@
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet"
       ],
-      "dataStatus": "named_location_known_exact_pins_pending_verification"
+      "dataStatus": "named_location_known_exact_pins_pending_verification",
+      "province": "South Province"
     },
     {
       "id": "poco_path",
@@ -735,7 +785,8 @@
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet"
       ],
-      "dataStatus": "named_location_known_exact_pins_pending_verification"
+      "dataStatus": "named_location_known_exact_pins_pending_verification",
+      "province": "South Province"
     },
     {
       "id": "groundblight_shrine",
@@ -878,7 +929,8 @@
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet"
       ],
-      "dataStatus": "named_location_known_exact_pins_pending_verification"
+      "dataStatus": "named_location_known_exact_pins_pending_verification",
+      "province": "North Province"
     },
     {
       "id": "paldeas_highest_peak",
@@ -904,7 +956,8 @@
         "bulbapedia-paldea",
         "bulbapedia-scarlet-violet"
       ],
-      "dataStatus": "named_location_known_exact_pins_pending_verification"
+      "dataStatus": "named_location_known_exact_pins_pending_verification",
+      "province": "North Province"
     },
     {
       "id": "naranja_academy",
