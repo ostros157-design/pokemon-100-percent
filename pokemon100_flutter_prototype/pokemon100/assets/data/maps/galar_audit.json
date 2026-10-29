@@ -195,7 +195,7 @@
         "route_10",
         "white_hill_station",
         "pok_mon_league",
-        "pokémon_league_galar"
+        "pok_mon_league"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -225,8 +225,7 @@
       "name": "Pokémon League",
       "kind": "league",
       "connectsTo": [
-        "wyndon",
-        "victory_road"
+        "wyndon"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
