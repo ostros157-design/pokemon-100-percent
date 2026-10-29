@@ -1371,19 +1371,6 @@
       "dataStatus": "landmark_area_connection_source_verified_exact_pin_pending"
     },
     {
-      "id": "distant_rock",
-      "name": "Distant Rock",
-      "kind": "landmark",
-      "connectsTo": [],
-      "localMapAsset": null,
-      "coordinateStatus": "unverified",
-      "sourceIds": [
-        "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
-      ],
-      "dataStatus": "named_location_known_exact_pins_pending_verification"
-    },
-    {
       "id": "casseroya_falls",
       "name": "Casseroya Falls",
       "kind": "landmark",
@@ -1416,20 +1403,6 @@
         "bulbapedia-ten-sights"
       ],
       "dataStatus": "landmark_area_connection_source_verified_exact_pin_pending"
-    },
-    {
-      "id": "socarrat_trail_sight",
-      "name": "Socarrat Trail Sight",
-      "kind": "landmark",
-      "connectsTo": [],
-      "localMapAsset": null,
-      "coordinateStatus": "unverified",
-      "sourceIds": [
-        "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
-      ],
-      "dataStatus": "named_location_known_exact_pins_pending_verification",
-      "province": "North Province"
     },
     {
       "id": "naranja_academy",
@@ -1623,19 +1596,6 @@
       ],
       "dataStatus": "parent_access_indexed_exact_subarea_routes_pending",
       "parentRegion": "Terarium"
-    },
-    {
-      "id": "tropical_biome",
-      "name": "Tropical Biome",
-      "kind": "area",
-      "connectsTo": [],
-      "localMapAsset": null,
-      "coordinateStatus": "unverified",
-      "sourceIds": [
-        "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
-      ],
-      "dataStatus": "named_location_known_exact_pins_pending_verification"
     },
     {
       "id": "kitakami_road",
