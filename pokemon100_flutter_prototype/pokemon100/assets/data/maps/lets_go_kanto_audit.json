@@ -507,6 +507,36 @@
       "id": "serebii-route5",
       "url": "https://www.serebii.net/pokearth/kanto/route5.shtml",
       "scope": "Route 5 Let’s Go ground, sky and special encounter tables"
+    },
+    {
+      "id": "rotomlabs-cerulean-cave",
+      "url": "https://rotomlabs.net/locations/lets-go-pikachu-eevee/cerulean-cave",
+      "scope": "Let’s Go Pikachu/Eevee cave encounter levels, rates, water encounters and Mewtwo static encounter"
+    },
+    {
+      "id": "rotomlabs-power-plant",
+      "url": "https://rotomlabs.net/locations/lets-go-pikachu-eevee/power-plant",
+      "scope": "Let’s Go Pikachu/Eevee Power Plant encounter levels, version exclusives and Zapdos static encounter"
+    },
+    {
+      "id": "rotomlabs-pokemon-tower",
+      "url": "https://rotomlabs.net/locations/lets-go-pikachu-eevee/pokemon-tower",
+      "scope": "Let’s Go Pikachu/Eevee Pokémon Tower encounter levels and floor-grouped rates"
+    },
+    {
+      "id": "rotomlabs-pokemon-mansion",
+      "url": "https://rotomlabs.net/locations/lets-go-pikachu-eevee/pokemon-mansion",
+      "scope": "Let’s Go Pikachu/Eevee Pokémon Mansion encounter levels, version exclusives and rates"
+    },
+    {
+      "id": "rotomlabs-seafoam-islands",
+      "url": "https://rotomlabs.net/locations/lets-go-pikachu-eevee/seafoam-islands",
+      "scope": "Let’s Go Pikachu/Eevee Seafoam Islands land/water encounter levels, rates and Articuno static encounter"
+    },
+    {
+      "id": "rotomlabs-victory-road",
+      "url": "https://rotomlabs.net/locations/lets-go-pikachu-eevee/victory-road-1-kanto",
+      "scope": "Let’s Go Pikachu/Eevee Victory Road encounter levels, rates and Moltres static encounter"
     }
   ],
   "locations": [
@@ -9248,9 +9278,269 @@
         "Articuno"
       ],
       "sourceIds": [
-        "routepedia-seafoam-pikachu"
+        "routepedia-seafoam-pikachu",
+        "rotomlabs-seafoam-islands"
       ],
-      "dataStatus": "text_verified_positions_not_mapped"
+      "dataStatus": "encounter_rates_verified_from_rotomlabs_positions_not_mapped",
+      "wildPokemonDetails": {
+        "levels": [
+          39,
+          44
+        ],
+        "lets_go_pikachu": [
+          {
+            "name": "Golbat",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 20,
+            "method": "Overworld"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 16,
+            "method": "Overworld"
+          },
+          {
+            "name": "Slowpoke",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 15,
+            "method": "Overworld"
+          },
+          {
+            "name": "Seel",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 15,
+            "method": "Overworld"
+          },
+          {
+            "name": "Jynx",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 14,
+            "method": "Overworld"
+          },
+          {
+            "name": "Slowbro",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 10,
+            "method": "Overworld"
+          },
+          {
+            "name": "Dewgong",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 10,
+            "method": "Overworld"
+          },
+          {
+            "name": "Squirtle",
+            "levelRange": [
+              39,
+              44
+            ],
+            "method": "Overworld — rate not published"
+          },
+          {
+            "name": "Tentacool",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 30,
+            "method": "Surfing"
+          },
+          {
+            "name": "Shellder",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 30,
+            "method": "Surfing"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 30,
+            "method": "Surfing"
+          },
+          {
+            "name": "Tentacruel",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 9,
+            "method": "Surfing"
+          },
+          {
+            "name": "Cloyster",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 1,
+            "method": "Surfing"
+          },
+          {
+            "name": "Articuno",
+            "levelRange": [
+              50,
+              50
+            ],
+            "method": "Static encounter"
+          }
+        ],
+        "lets_go_eevee": [
+          {
+            "name": "Golbat",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 20,
+            "method": "Overworld"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 16,
+            "method": "Overworld"
+          },
+          {
+            "name": "Slowpoke",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 15,
+            "method": "Overworld"
+          },
+          {
+            "name": "Seel",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 15,
+            "method": "Overworld"
+          },
+          {
+            "name": "Jynx",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 14,
+            "method": "Overworld"
+          },
+          {
+            "name": "Slowbro",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 10,
+            "method": "Overworld"
+          },
+          {
+            "name": "Dewgong",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 10,
+            "method": "Overworld"
+          },
+          {
+            "name": "Squirtle",
+            "levelRange": [
+              39,
+              44
+            ],
+            "method": "Overworld — rate not published"
+          },
+          {
+            "name": "Tentacool",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 30,
+            "method": "Surfing"
+          },
+          {
+            "name": "Shellder",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 30,
+            "method": "Surfing"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 30,
+            "method": "Surfing"
+          },
+          {
+            "name": "Tentacruel",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 9,
+            "method": "Surfing"
+          },
+          {
+            "name": "Cloyster",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 1,
+            "method": "Surfing"
+          },
+          {
+            "name": "Articuno",
+            "levelRange": [
+              50,
+              50
+            ],
+            "method": "Static encounter"
+          }
+        ]
+      },
+      "notes": "Spotkania na lądzie i podczas Surfowania mają zakres poziomów 39–44. Articuno jest statycznym spotkaniem na poziomie 50; wewnętrzne piętra i przesuwane głazy nie są jeszcze odwzorowane."
     },
     {
       "id": "cinnabar_island",
@@ -10438,9 +10728,247 @@
         "Moltres"
       ],
       "sourceIds": [
-        "routepedia-victory-road-pikachu"
+        "routepedia-victory-road-pikachu",
+        "rotomlabs-victory-road"
       ],
-      "dataStatus": "text_verified_positions_not_mapped"
+      "dataStatus": "encounter_rates_verified_from_rotomlabs_positions_not_mapped",
+      "wildPokemonDetails": {
+        "levels": [
+          41,
+          46
+        ],
+        "lets_go_pikachu": [
+          {
+            "name": "Golbat",
+            "levelRange": [
+              41,
+              46
+            ],
+            "ratePercent": 15,
+            "method": "Overworld"
+          },
+          {
+            "name": "Machoke",
+            "levelRange": [
+              41,
+              46
+            ],
+            "ratePercent": 15,
+            "method": "Overworld"
+          },
+          {
+            "name": "Graveler",
+            "levelRange": [
+              41,
+              46
+            ],
+            "ratePercent": 15,
+            "method": "Overworld"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              41,
+              46
+            ],
+            "ratePercent": 10,
+            "method": "Overworld"
+          },
+          {
+            "name": "Machop",
+            "levelRange": [
+              41,
+              46
+            ],
+            "ratePercent": 10,
+            "method": "Overworld"
+          },
+          {
+            "name": "Geodude",
+            "levelRange": [
+              41,
+              46
+            ],
+            "ratePercent": 10,
+            "method": "Overworld"
+          },
+          {
+            "name": "Onix",
+            "levelRange": [
+              41,
+              46
+            ],
+            "ratePercent": 10,
+            "method": "Overworld"
+          },
+          {
+            "name": "Rhyhorn",
+            "levelRange": [
+              41,
+              46
+            ],
+            "ratePercent": 10,
+            "method": "Overworld"
+          },
+          {
+            "name": "Rhydon",
+            "levelRange": [
+              41,
+              46
+            ],
+            "ratePercent": 5,
+            "method": "Overworld"
+          },
+          {
+            "name": "Hitmonlee",
+            "levelRange": [
+              41,
+              46
+            ],
+            "method": "Overworld — rate not published"
+          },
+          {
+            "name": "Hitmonchan",
+            "levelRange": [
+              41,
+              46
+            ],
+            "method": "Overworld — rate not published"
+          },
+          {
+            "name": "Chansey",
+            "levelRange": [
+              41,
+              46
+            ],
+            "method": "Overworld — rate not published"
+          },
+          {
+            "name": "Moltres",
+            "levelRange": [
+              50,
+              50
+            ],
+            "method": "Static encounter"
+          }
+        ],
+        "lets_go_eevee": [
+          {
+            "name": "Golbat",
+            "levelRange": [
+              41,
+              46
+            ],
+            "ratePercent": 15,
+            "method": "Overworld"
+          },
+          {
+            "name": "Machoke",
+            "levelRange": [
+              41,
+              46
+            ],
+            "ratePercent": 15,
+            "method": "Overworld"
+          },
+          {
+            "name": "Graveler",
+            "levelRange": [
+              41,
+              46
+            ],
+            "ratePercent": 15,
+            "method": "Overworld"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              41,
+              46
+            ],
+            "ratePercent": 10,
+            "method": "Overworld"
+          },
+          {
+            "name": "Machop",
+            "levelRange": [
+              41,
+              46
+            ],
+            "ratePercent": 10,
+            "method": "Overworld"
+          },
+          {
+            "name": "Geodude",
+            "levelRange": [
+              41,
+              46
+            ],
+            "ratePercent": 10,
+            "method": "Overworld"
+          },
+          {
+            "name": "Onix",
+            "levelRange": [
+              41,
+              46
+            ],
+            "ratePercent": 10,
+            "method": "Overworld"
+          },
+          {
+            "name": "Rhyhorn",
+            "levelRange": [
+              41,
+              46
+            ],
+            "ratePercent": 10,
+            "method": "Overworld"
+          },
+          {
+            "name": "Rhydon",
+            "levelRange": [
+              41,
+              46
+            ],
+            "ratePercent": 5,
+            "method": "Overworld"
+          },
+          {
+            "name": "Hitmonlee",
+            "levelRange": [
+              41,
+              46
+            ],
+            "method": "Overworld — rate not published"
+          },
+          {
+            "name": "Hitmonchan",
+            "levelRange": [
+              41,
+              46
+            ],
+            "method": "Overworld — rate not published"
+          },
+          {
+            "name": "Chansey",
+            "levelRange": [
+              41,
+              46
+            ],
+            "method": "Overworld — rate not published"
+          },
+          {
+            "name": "Moltres",
+            "levelRange": [
+              50,
+              50
+            ],
+            "method": "Static encounter"
+          }
+        ]
+      },
+      "notes": "Moltres jest statycznym spotkaniem na poziomie 50. Wnętrze z przesuwanymi głazami, trenerami i przedmiotami wymaga osobnej mapy pięter."
     },
     {
       "id": "indigo_plateau",
@@ -10481,9 +11009,305 @@
         "Mewtwo"
       ],
       "sourceIds": [
-        "routepedia-cerulean-cave-pikachu"
+        "routepedia-cerulean-cave-pikachu",
+        "rotomlabs-cerulean-cave"
       ],
-      "dataStatus": "postgame_text_verified_positions_not_mapped"
+      "dataStatus": "encounter_rates_verified_from_rotomlabs_positions_not_mapped",
+      "wildPokemonDetails": {
+        "levels": [
+          51,
+          56
+        ],
+        "lets_go_pikachu": [
+          {
+            "name": "Golbat",
+            "levelRange": [
+              51,
+              56
+            ],
+            "ratePercent": 15,
+            "method": "Overworld"
+          },
+          {
+            "name": "Golduck",
+            "levelRange": [
+              51,
+              56
+            ],
+            "ratePercent": 15,
+            "method": "Overworld"
+          },
+          {
+            "name": "Graveler",
+            "levelRange": [
+              51,
+              56
+            ],
+            "ratePercent": 15,
+            "method": "Overworld"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              51,
+              56
+            ],
+            "ratePercent": 10,
+            "method": "Overworld"
+          },
+          {
+            "name": "Geodude",
+            "levelRange": [
+              51,
+              56
+            ],
+            "ratePercent": 10,
+            "method": "Overworld"
+          },
+          {
+            "name": "Lickitung",
+            "levelRange": [
+              51,
+              56
+            ],
+            "ratePercent": 10,
+            "method": "Overworld"
+          },
+          {
+            "name": "Rhyhorn",
+            "levelRange": [
+              51,
+              56
+            ],
+            "ratePercent": 10,
+            "method": "Overworld"
+          },
+          {
+            "name": "Psyduck",
+            "levelRange": [
+              51,
+              56
+            ],
+            "ratePercent": 5,
+            "method": "Overworld"
+          },
+          {
+            "name": "Rhydon",
+            "levelRange": [
+              51,
+              56
+            ],
+            "ratePercent": 5,
+            "method": "Overworld"
+          },
+          {
+            "name": "Ditto",
+            "levelRange": [
+              51,
+              56
+            ],
+            "ratePercent": 5,
+            "method": "Overworld"
+          },
+          {
+            "name": "Snorlax",
+            "levelRange": [
+              51,
+              56
+            ],
+            "method": "Overworld — rate not published"
+          },
+          {
+            "name": "Poliwag",
+            "levelRange": [
+              51,
+              56
+            ],
+            "ratePercent": 45,
+            "method": "Surfing"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              51,
+              56
+            ],
+            "ratePercent": 45,
+            "method": "Surfing"
+          },
+          {
+            "name": "Poliwhirl",
+            "levelRange": [
+              51,
+              56
+            ],
+            "ratePercent": 9,
+            "method": "Surfing"
+          },
+          {
+            "name": "Poliwrath",
+            "levelRange": [
+              51,
+              56
+            ],
+            "ratePercent": 1,
+            "method": "Surfing"
+          },
+          {
+            "name": "Mewtwo",
+            "levelRange": [
+              70,
+              70
+            ],
+            "method": "Static encounter"
+          }
+        ],
+        "lets_go_eevee": [
+          {
+            "name": "Golbat",
+            "levelRange": [
+              51,
+              56
+            ],
+            "ratePercent": 15,
+            "method": "Overworld"
+          },
+          {
+            "name": "Golduck",
+            "levelRange": [
+              51,
+              56
+            ],
+            "ratePercent": 15,
+            "method": "Overworld"
+          },
+          {
+            "name": "Graveler",
+            "levelRange": [
+              51,
+              56
+            ],
+            "ratePercent": 15,
+            "method": "Overworld"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              51,
+              56
+            ],
+            "ratePercent": 10,
+            "method": "Overworld"
+          },
+          {
+            "name": "Geodude",
+            "levelRange": [
+              51,
+              56
+            ],
+            "ratePercent": 10,
+            "method": "Overworld"
+          },
+          {
+            "name": "Lickitung",
+            "levelRange": [
+              51,
+              56
+            ],
+            "ratePercent": 10,
+            "method": "Overworld"
+          },
+          {
+            "name": "Rhyhorn",
+            "levelRange": [
+              51,
+              56
+            ],
+            "ratePercent": 10,
+            "method": "Overworld"
+          },
+          {
+            "name": "Psyduck",
+            "levelRange": [
+              51,
+              56
+            ],
+            "ratePercent": 5,
+            "method": "Overworld"
+          },
+          {
+            "name": "Rhydon",
+            "levelRange": [
+              51,
+              56
+            ],
+            "ratePercent": 5,
+            "method": "Overworld"
+          },
+          {
+            "name": "Ditto",
+            "levelRange": [
+              51,
+              56
+            ],
+            "ratePercent": 5,
+            "method": "Overworld"
+          },
+          {
+            "name": "Snorlax",
+            "levelRange": [
+              51,
+              56
+            ],
+            "method": "Overworld — rate not published"
+          },
+          {
+            "name": "Poliwag",
+            "levelRange": [
+              51,
+              56
+            ],
+            "ratePercent": 45,
+            "method": "Surfing"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              51,
+              56
+            ],
+            "ratePercent": 45,
+            "method": "Surfing"
+          },
+          {
+            "name": "Poliwhirl",
+            "levelRange": [
+              51,
+              56
+            ],
+            "ratePercent": 9,
+            "method": "Surfing"
+          },
+          {
+            "name": "Poliwrath",
+            "levelRange": [
+              51,
+              56
+            ],
+            "ratePercent": 1,
+            "method": "Surfing"
+          },
+          {
+            "name": "Mewtwo",
+            "levelRange": [
+              70,
+              70
+            ],
+            "method": "Static encounter"
+          }
+        ]
+      },
+      "notes": "Podane są spotkania standardowe i wodne; Mewtwo to statyczne spotkanie na poziomie 70. Wewnętrzne piętra i pozycje przedmiotów nie są jeszcze odwzorowane."
     },
     {
       "id": "ss_anne",
@@ -10518,11 +11342,171 @@
       "notablePokemon": [
         "Zapdos"
       ],
-      "notes": "Elektrownia dostępna z Route 10; wymaga osobnego planu wnętrza i potwierdzenia lokalizacji przedmiotów.",
+      "notes": "Zapdos jest statycznym spotkaniem na poziomie 50. Pozycje przedmiotów i wewnętrzny plan elektrowni nie są jeszcze naniesione.",
       "sourceIds": [
-        "bulbapedia-part14"
+        "bulbapedia-part14",
+        "rotomlabs-power-plant"
       ],
-      "dataStatus": "text_verified_positions_not_mapped"
+      "dataStatus": "encounter_rates_verified_from_rotomlabs_positions_not_mapped",
+      "wildPokemonDetails": {
+        "levels": [
+          37,
+          42
+        ],
+        "lets_go_pikachu": [
+          {
+            "name": "Grimer",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 25,
+            "method": "Overworld"
+          },
+          {
+            "name": "Magnemite",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 23,
+            "method": "Overworld"
+          },
+          {
+            "name": "Voltorb",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 23,
+            "method": "Overworld"
+          },
+          {
+            "name": "Electabuzz",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 14,
+            "method": "Overworld"
+          },
+          {
+            "name": "Magneton",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 5,
+            "method": "Overworld"
+          },
+          {
+            "name": "Electrode",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 5,
+            "method": "Overworld"
+          },
+          {
+            "name": "Chansey",
+            "levelRange": [
+              37,
+              42
+            ],
+            "method": "Overworld — rate not published"
+          },
+          {
+            "name": "Zapdos",
+            "levelRange": [
+              50,
+              50
+            ],
+            "method": "Static encounter"
+          }
+        ],
+        "lets_go_eevee": [
+          {
+            "name": "Koffing",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 25,
+            "method": "Overworld"
+          },
+          {
+            "name": "Magnemite",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 23,
+            "method": "Overworld"
+          },
+          {
+            "name": "Voltorb",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 23,
+            "method": "Overworld"
+          },
+          {
+            "name": "Electabuzz",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 14,
+            "method": "Overworld"
+          },
+          {
+            "name": "Magneton",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 5,
+            "method": "Overworld"
+          },
+          {
+            "name": "Electrode",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 5,
+            "method": "Overworld"
+          },
+          {
+            "name": "Weezing",
+            "levelRange": [
+              37,
+              42
+            ],
+            "ratePercent": 5,
+            "method": "Overworld"
+          },
+          {
+            "name": "Chansey",
+            "levelRange": [
+              37,
+              42
+            ],
+            "method": "Overworld — rate not published"
+          },
+          {
+            "name": "Zapdos",
+            "levelRange": [
+              50,
+              50
+            ],
+            "method": "Static encounter"
+          }
+        ]
+      }
     },
     {
       "id": "pokemon_tower",
@@ -10546,11 +11530,308 @@
         "Pokémon Tower",
         "Mr. Fuji"
       ],
-      "notes": "Wielo piętrowa wieża w Lavender Town; wydarzenia fabularne wymagają Silph Scope.",
+      "notes": "Dane spotkań obejmują ogólną tabelę i piętra 3F–6F; pełny plan wieży, trenerzy i pozycje przedmiotów wymagają osobnego odwzorowania.",
       "sourceIds": [
-        "bulbapedia-part9"
+        "bulbapedia-part9",
+        "rotomlabs-pokemon-tower"
       ],
-      "dataStatus": "text_verified_positions_not_mapped"
+      "dataStatus": "encounter_rates_verified_from_rotomlabs_positions_not_mapped",
+      "wildPokemonDetails": {
+        "levels": [
+          27,
+          32
+        ],
+        "lets_go_pikachu": [
+          {
+            "name": "Gastly",
+            "levelRange": [
+              27,
+              32
+            ],
+            "ratePercent": 60,
+            "method": "Pokémon Tower — standard"
+          },
+          {
+            "name": "Haunter",
+            "levelRange": [
+              27,
+              32
+            ],
+            "ratePercent": 20,
+            "method": "Pokémon Tower — standard"
+          },
+          {
+            "name": "Cubone",
+            "levelRange": [
+              27,
+              32
+            ],
+            "ratePercent": 10,
+            "method": "Pokémon Tower — standard"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              27,
+              32
+            ],
+            "ratePercent": 5,
+            "method": "Pokémon Tower — standard"
+          },
+          {
+            "name": "Golbat",
+            "levelRange": [
+              27,
+              32
+            ],
+            "ratePercent": 5,
+            "method": "Pokémon Tower — standard"
+          },
+          {
+            "name": "Chansey",
+            "levelRange": [
+              27,
+              32
+            ],
+            "method": "Pokémon Tower — rate not published"
+          },
+          {
+            "name": "Gastly",
+            "levelRange": [
+              27,
+              32
+            ],
+            "ratePercent": 75,
+            "method": "3F–4F"
+          },
+          {
+            "name": "Cubone",
+            "levelRange": [
+              27,
+              32
+            ],
+            "ratePercent": 10,
+            "method": "3F–4F"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              27,
+              32
+            ],
+            "ratePercent": 5,
+            "method": "3F–4F"
+          },
+          {
+            "name": "Golbat",
+            "levelRange": [
+              27,
+              32
+            ],
+            "ratePercent": 5,
+            "method": "3F–4F"
+          },
+          {
+            "name": "Haunter",
+            "levelRange": [
+              27,
+              32
+            ],
+            "ratePercent": 5,
+            "method": "3F–4F"
+          },
+          {
+            "name": "Gastly",
+            "levelRange": [
+              27,
+              32
+            ],
+            "ratePercent": 70,
+            "method": "5F–6F"
+          },
+          {
+            "name": "Haunter",
+            "levelRange": [
+              27,
+              32
+            ],
+            "ratePercent": 10,
+            "method": "5F–6F"
+          },
+          {
+            "name": "Cubone",
+            "levelRange": [
+              27,
+              32
+            ],
+            "ratePercent": 10,
+            "method": "5F–6F"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              27,
+              32
+            ],
+            "ratePercent": 5,
+            "method": "5F–6F"
+          },
+          {
+            "name": "Golbat",
+            "levelRange": [
+              27,
+              32
+            ],
+            "ratePercent": 5,
+            "method": "5F–6F"
+          }
+        ],
+        "lets_go_eevee": [
+          {
+            "name": "Gastly",
+            "levelRange": [
+              27,
+              32
+            ],
+            "ratePercent": 60,
+            "method": "Pokémon Tower — standard"
+          },
+          {
+            "name": "Haunter",
+            "levelRange": [
+              27,
+              32
+            ],
+            "ratePercent": 20,
+            "method": "Pokémon Tower — standard"
+          },
+          {
+            "name": "Cubone",
+            "levelRange": [
+              27,
+              32
+            ],
+            "ratePercent": 10,
+            "method": "Pokémon Tower — standard"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              27,
+              32
+            ],
+            "ratePercent": 5,
+            "method": "Pokémon Tower — standard"
+          },
+          {
+            "name": "Golbat",
+            "levelRange": [
+              27,
+              32
+            ],
+            "ratePercent": 5,
+            "method": "Pokémon Tower — standard"
+          },
+          {
+            "name": "Chansey",
+            "levelRange": [
+              27,
+              32
+            ],
+            "method": "Pokémon Tower — rate not published"
+          },
+          {
+            "name": "Gastly",
+            "levelRange": [
+              27,
+              32
+            ],
+            "ratePercent": 75,
+            "method": "3F–4F"
+          },
+          {
+            "name": "Cubone",
+            "levelRange": [
+              27,
+              32
+            ],
+            "ratePercent": 10,
+            "method": "3F–4F"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              27,
+              32
+            ],
+            "ratePercent": 5,
+            "method": "3F–4F"
+          },
+          {
+            "name": "Golbat",
+            "levelRange": [
+              27,
+              32
+            ],
+            "ratePercent": 5,
+            "method": "3F–4F"
+          },
+          {
+            "name": "Haunter",
+            "levelRange": [
+              27,
+              32
+            ],
+            "ratePercent": 5,
+            "method": "3F–4F"
+          },
+          {
+            "name": "Gastly",
+            "levelRange": [
+              27,
+              32
+            ],
+            "ratePercent": 70,
+            "method": "5F–6F"
+          },
+          {
+            "name": "Haunter",
+            "levelRange": [
+              27,
+              32
+            ],
+            "ratePercent": 10,
+            "method": "5F–6F"
+          },
+          {
+            "name": "Cubone",
+            "levelRange": [
+              27,
+              32
+            ],
+            "ratePercent": 10,
+            "method": "5F–6F"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              27,
+              32
+            ],
+            "ratePercent": 5,
+            "method": "5F–6F"
+          },
+          {
+            "name": "Golbat",
+            "levelRange": [
+              27,
+              32
+            ],
+            "ratePercent": 5,
+            "method": "5F–6F"
+          }
+        ]
+      }
     },
     {
       "id": "rocket_hideout",
@@ -10626,11 +11907,254 @@
       "notablePokemon": [
         "Mewtwo (odblokowanie w Cerulean Cave po ukończeniu gry; nie w Mansion)"
       ],
-      "notes": "Opuszczona posiadłość z dziennikami o Mewtwo i kluczem do Cinnabar Gym.",
+      "notes": "Spotkania rozdzielono według wersji. Mansion zawiera dokumenty fabularne o Mewtwo, ale Mewtwo nie jest tu dzikim spotkaniem.",
       "sourceIds": [
-        "bulbapedia-part13"
+        "bulbapedia-part13",
+        "rotomlabs-pokemon-mansion"
       ],
-      "dataStatus": "text_verified_positions_not_mapped"
+      "dataStatus": "encounter_rates_verified_from_rotomlabs_positions_not_mapped",
+      "wildPokemonDetails": {
+        "levels": [
+          39,
+          44
+        ],
+        "lets_go_pikachu": [
+          {
+            "name": "Grimer",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 30,
+            "method": "Pokémon Mansion — standard"
+          },
+          {
+            "name": "Rattata",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 20,
+            "method": "Pokémon Mansion — standard"
+          },
+          {
+            "name": "Raticate",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 20,
+            "method": "Pokémon Mansion — standard"
+          },
+          {
+            "name": "Muk",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 10,
+            "method": "Pokémon Mansion — standard"
+          },
+          {
+            "name": "Magmar",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 10,
+            "method": "Pokémon Mansion — standard"
+          },
+          {
+            "name": "Ditto",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 10,
+            "method": "Pokémon Mansion — standard"
+          },
+          {
+            "name": "Chansey",
+            "levelRange": [
+              39,
+              44
+            ],
+            "method": "Pokémon Mansion — rate not published"
+          },
+          {
+            "name": "Grimer",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 40,
+            "method": "Pokémon Mansion — table 2"
+          },
+          {
+            "name": "Rattata",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 20,
+            "method": "Pokémon Mansion — table 2"
+          },
+          {
+            "name": "Raticate",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 20,
+            "method": "Pokémon Mansion — table 2"
+          },
+          {
+            "name": "Magmar",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 14,
+            "method": "Pokémon Mansion — table 2"
+          },
+          {
+            "name": "Muk",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 5,
+            "method": "Pokémon Mansion — table 2"
+          },
+          {
+            "name": "Ditto",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 1,
+            "method": "Pokémon Mansion — table 2"
+          }
+        ],
+        "lets_go_eevee": [
+          {
+            "name": "Koffing",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 30,
+            "method": "Pokémon Mansion — standard"
+          },
+          {
+            "name": "Rattata",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 20,
+            "method": "Pokémon Mansion — standard"
+          },
+          {
+            "name": "Raticate",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 20,
+            "method": "Pokémon Mansion — standard"
+          },
+          {
+            "name": "Weezing",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 10,
+            "method": "Pokémon Mansion — standard"
+          },
+          {
+            "name": "Magmar",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 10,
+            "method": "Pokémon Mansion — standard"
+          },
+          {
+            "name": "Ditto",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 10,
+            "method": "Pokémon Mansion — standard"
+          },
+          {
+            "name": "Chansey",
+            "levelRange": [
+              39,
+              44
+            ],
+            "method": "Pokémon Mansion — rate not published"
+          },
+          {
+            "name": "Koffing",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 40,
+            "method": "Pokémon Mansion — table 2"
+          },
+          {
+            "name": "Rattata",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 20,
+            "method": "Pokémon Mansion — table 2"
+          },
+          {
+            "name": "Raticate",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 20,
+            "method": "Pokémon Mansion — table 2"
+          },
+          {
+            "name": "Magmar",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 14,
+            "method": "Pokémon Mansion — table 2"
+          },
+          {
+            "name": "Weezing",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 5,
+            "method": "Pokémon Mansion — table 2"
+          },
+          {
+            "name": "Ditto",
+            "levelRange": [
+              39,
+              44
+            ],
+            "ratePercent": 1,
+            "method": "Pokémon Mansion — table 2"
+          }
+        ]
+      }
     },
     {
       "id": "safari_zone",
