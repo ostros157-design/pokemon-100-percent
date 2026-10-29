@@ -3497,7 +3497,8 @@ class _KantoRegionMap extends StatefulWidget {
 }
 
 class _KantoRegionMapState extends State<_KantoRegionMap> {
-  static const double _mapSize = 900;
+  static const double _mapWidth = 900;
+  static const double _mapHeight = 660;
   static const double _nearbyRadius = 95;
   final TransformationController _transformController =
       TransformationController();
@@ -3519,8 +3520,8 @@ class _KantoRegionMapState extends State<_KantoRegionMap> {
     _MapPlace? nearest;
     var nearestDistance = double.infinity;
     for (final place in _KantoMapPainter.places) {
-      final dx = sceneCenter.dx - place.x * _mapSize;
-      final dy = sceneCenter.dy - place.y * _mapSize;
+      final dx = sceneCenter.dx - place.x * _mapWidth;
+      final dy = sceneCenter.dy - place.y * _mapHeight;
       final distance = dx * dx + dy * dy;
       if (distance < nearestDistance) {
         nearestDistance = distance;
@@ -3543,8 +3544,8 @@ class _KantoRegionMapState extends State<_KantoRegionMap> {
 
   void _zoomBy(double factor, Size viewport) {
     final current = _transformController.value;
-    final currentScale = current.getMaxScaleOnAxis().clamp(0.55, 4.0).toDouble();
-    final nextScale = (currentScale * factor).clamp(0.55, 4.0).toDouble();
+    final currentScale = current.getMaxScaleOnAxis().clamp(0.35, 4.0).toDouble();
+    final nextScale = (currentScale * factor).clamp(0.35, 4.0).toDouble();
     if ((nextScale - currentScale).abs() < 0.001) return;
     final actualFactor = nextScale / currentScale;
     final center = Offset(viewport.width / 2, viewport.height / 2);
@@ -3555,16 +3556,24 @@ class _KantoRegionMapState extends State<_KantoRegionMap> {
     _transformController.value = zoomAtCenter * current;
   }
 
+  double _fitScale(Size viewport) {
+    final horizontalFit = (viewport.width - 20) / _mapWidth;
+    final verticalFit = (viewport.height - 20) / _mapHeight;
+    return math.min(horizontalFit, verticalFit).clamp(0.35, 1.0).toDouble();
+  }
+
   void _resetMap(Size viewport) {
+    final scale = _fitScale(viewport);
     _transformController.value = Matrix4.identity()
       ..translate(
-        (viewport.width - _mapSize) / 2,
-        (viewport.height - _mapSize) / 2,
-      );
+        (viewport.width - _mapWidth * scale) / 2,
+        (viewport.height - _mapHeight * scale) / 2,
+      )
+      ..scale(scale);
   }
 
   void _selectTappedPlace(Offset tap) {
-    final scale = _transformController.value.getMaxScaleOnAxis().clamp(0.55, 4.0).toDouble();
+    final scale = _transformController.value.getMaxScaleOnAxis().clamp(0.35, 4.0).toDouble();
     final symbolHitRadius = 14 / scale;
     final locationHitRadius = 38 / scale;
     // These two symbols sit beside the Route 1 node. Treat them as separate
@@ -3572,8 +3581,8 @@ class _KantoRegionMapState extends State<_KantoRegionMap> {
     final routeOne = _KantoMapPainter.places.firstWhere(
       (place) => place.name == 'Route 1',
     );
-    final routeX = routeOne.x * _mapSize;
-    final routeY = routeOne.y * _mapSize;
+    final routeX = routeOne.x * _mapWidth;
+    final routeY = routeOne.y * _mapHeight;
     final informationCenter = Offset(routeX - 12, routeY - 15);
     final areaCenter = Offset(routeX + 13, routeY - 15);
 
@@ -3591,8 +3600,8 @@ class _KantoRegionMapState extends State<_KantoRegionMap> {
     _MapPlace? nearest;
     var nearestDistance = double.infinity;
     for (final place in _KantoMapPainter.places) {
-      final dx = tap.dx - place.x * _mapSize;
-      final dy = tap.dy - place.y * _mapSize;
+      final dx = tap.dx - place.x * _mapWidth;
+      final dy = tap.dy - place.y * _mapHeight;
       final distance = dx * dx + dy * dy;
       if (distance < nearestDistance) {
         nearestDistance = distance;
@@ -3619,18 +3628,20 @@ class _KantoRegionMapState extends State<_KantoRegionMap> {
     return ClipRRect(
       borderRadius: BorderRadius.circular(14),
       child: AspectRatio(
-        aspectRatio: screenWidth < 500 ? 0.82 : 1.25,
+        aspectRatio: screenWidth < 500 ? 1.18 : 1.35,
         child: LayoutBuilder(
           builder: (context, constraints) {
             if (!_initialPositionSet) {
               _initialPositionSet = true;
               WidgetsBinding.instance.addPostFrameCallback((_) {
                 if (!mounted) return;
+                final scale = _fitScale(constraints.biggest);
                 _transformController.value = Matrix4.identity()
                   ..translate(
-                    (constraints.maxWidth - _mapSize) / 2,
-                    (constraints.maxHeight - _mapSize) / 2,
-                  );
+                    (constraints.maxWidth - _mapWidth * scale) / 2,
+                    (constraints.maxHeight - _mapHeight * scale) / 2,
+                  )
+                  ..scale(scale);
               });
             }
             return Stack(
@@ -3639,7 +3650,7 @@ class _KantoRegionMapState extends State<_KantoRegionMap> {
                   child: InteractiveViewer(
                     transformationController: _transformController,
                     constrained: false,
-                    minScale: 0.55,
+                    minScale: 0.35,
                     maxScale: 4,
                     boundaryMargin: const EdgeInsets.all(160),
                     onInteractionUpdate: (_) =>
@@ -3647,8 +3658,8 @@ class _KantoRegionMapState extends State<_KantoRegionMap> {
                     onInteractionEnd: (_) =>
                         _centeredLocation(constraints.biggest),
                     child: SizedBox(
-                      width: _mapSize,
-                      height: _mapSize,
+                      width: _mapWidth,
+                      height: _mapHeight,
                       child: GestureDetector(
                         behavior: HitTestBehavior.opaque,
                         onTapDown: (details) =>
