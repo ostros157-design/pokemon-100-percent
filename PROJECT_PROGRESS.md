@@ -1,3 +1,13 @@
+### Mapy — spotkania w jaskiniach i ważnych lokacjach Kanto (2026-10-29)
+
+- Rozszerzono dane offline Let’s Go Pikachu/Eevee dla Cerulean Cave, Power Plant, Pokémon Tower, Pokémon Mansion, Seafoam Islands i Victory Road.
+- Dodano poziomy, procenty tam, gdzie źródło je podaje, rozróżnienie spotkań lądowych/wodnych i wersji gry oraz statyczne spotkania Mewtwo Lv. 70, Zapdos Lv. 50, Articuno Lv. 50 i Moltres Lv. 50.
+- Panel szczegółów lokacji pokazuje teraz również opis lokacji, tekstową listę przedmiotów, liczbę trenerów i liczbę ukrytych przedmiotów, jeśli te informacje są obecne w indeksie. Nie rysuje pinezek dla pozycji, których współrzędne nie zostały potwierdzone.
+- Źródło danych o spotkaniach: RotomLabs — strony Cerulean Cave, Power Plant, Pokémon Tower, Pokémon Mansion, Seafoam Islands i Victory Road. Źródła zapisano w indeksie JSON.
+- Statyczna kontrola po dodaniu danych: JSON poprawny; 65 lokacji; 980 wystąpień wpisów spotkań; wszystkie nazwy spotkań dopasowane do Pokédexu. Wykryte stare, błędne identyfikatory źródeł Route 7/8 usunięto.
+- Commit danych spotkań: `0ab1ed16`; poprawka źródeł: `6a907d7c`; commit panelu lokacji: `7aa46dc6`.
+- Nie uruchomiono `flutter analyze`, testów ani kompilacji APK. Nie jest to jeszcze dokładna mapa graficzna wnętrz i nie zawiera zweryfikowanych współrzędnych pinezek.
+
 ### Mapy — kontrola spójności kompletnej mapy Kanto (2026-10-29)
 
 - Dodatkowy audyt porównał graf rysowany przez `_KantoMapPainter` z połączeniami `connectsTo` w JSON: 65/65 lokacji ma węzeł na mapie, 74/74 połączenia zgadzają się, brak dodatkowych lub pominiętych krawędzi.
