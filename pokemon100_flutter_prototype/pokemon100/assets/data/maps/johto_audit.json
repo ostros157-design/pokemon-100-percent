@@ -878,8 +878,7 @@
       "name": "Tohjo Falls",
       "kind": "cave",
       "connectsTo": [
-        "route_27",
-        "route_26"
+        "route_27"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -912,7 +911,6 @@
       "connectsTo": [
         "pokemon_league_reception_gate",
         "route_27",
-        "tohjo_falls",
         "victory_road"
       ],
       "localMapAsset": null,
