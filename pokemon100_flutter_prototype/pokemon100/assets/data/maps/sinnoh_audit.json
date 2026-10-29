@@ -371,7 +371,7 @@
       "kind": "route",
       "connectsTo": [
         "route_206",
-        "mount_coronet",
+        "mt_coronet",
         "oreburgh_city"
       ],
       "localMapAsset": null,
@@ -388,7 +388,7 @@
       "kind": "route",
       "connectsTo": [
         "hearthome_city",
-        "mount_coronet"
+        "mt_coronet"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -439,7 +439,7 @@
       "connectsTo": [
         "eterna_city",
         "celestic_town",
-        "mount_coronet"
+        "mt_coronet"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -521,7 +521,7 @@
       "name": "Route 216",
       "kind": "route",
       "connectsTo": [
-        "mount_coronet",
+        "mt_coronet",
         "route_217"
       ],
       "localMapAsset": null,
@@ -1191,39 +1191,6 @@
       "kind": "island",
       "connectsTo": [
         "seabreak_path"
-      ],
-      "localMapAsset": null,
-      "coordinateStatus": "unverified",
-      "sourceIds": [
-        "bulbapedia-sinnoh",
-        "bulbapedia-route-list"
-      ],
-      "dataStatus": "connection_indexed_details_pending"
-    },
-    {
-      "id": "pokemon_league_sinnoh",
-      "name": "Pokémon League (Sinnoh)",
-      "kind": "league",
-      "connectsTo": [
-        "route_223"
-      ],
-      "localMapAsset": null,
-      "coordinateStatus": "unverified",
-      "sourceIds": [
-        "bulbapedia-sinnoh",
-        "bulbapedia-route-list"
-      ],
-      "dataStatus": "connection_indexed_details_pending"
-    },
-    {
-      "id": "mount_coronet",
-      "name": "Mt. Coronet",
-      "kind": "mountain",
-      "connectsTo": [
-        "route_207",
-        "route_208",
-        "route_211",
-        "route_216"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
