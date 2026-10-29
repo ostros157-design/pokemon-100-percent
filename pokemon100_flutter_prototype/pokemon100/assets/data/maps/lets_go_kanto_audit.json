@@ -12996,7 +12996,8 @@
       "sourceIds": [
         "bulbapedia-player-house"
       ],
-      "dataStatus": "location_indexed_interior_not_mapped"
+      "dataStatus": "location_indexed_interior_not_mapped",
+      "coordinateStatus": "unverified"
     },
     {
       "id": "professor_oak_lab",
@@ -13009,7 +13010,8 @@
       "sourceIds": [
         "bulbapedia-oak-lab"
       ],
-      "dataStatus": "location_indexed_interior_not_mapped"
+      "dataStatus": "location_indexed_interior_not_mapped",
+      "coordinateStatus": "unverified"
     },
     {
       "id": "celadon_department_store",
@@ -13022,7 +13024,8 @@
       "sourceIds": [
         "bulbapedia-celadon-store"
       ],
-      "dataStatus": "location_indexed_interior_not_mapped"
+      "dataStatus": "location_indexed_interior_not_mapped",
+      "coordinateStatus": "unverified"
     },
     {
       "id": "celadon_game_corner",
@@ -13035,7 +13038,8 @@
       "sourceIds": [
         "bulbapedia-celadon-game-corner"
       ],
-      "dataStatus": "location_indexed_interior_not_mapped"
+      "dataStatus": "location_indexed_interior_not_mapped",
+      "coordinateStatus": "unverified"
     },
     {
       "id": "celadon_condominiums",
@@ -13048,7 +13052,8 @@
       "sourceIds": [
         "bulbapedia-celadon-condominiums"
       ],
-      "dataStatus": "location_indexed_interior_not_mapped"
+      "dataStatus": "location_indexed_interior_not_mapped",
+      "coordinateStatus": "unverified"
     },
     {
       "id": "cinnabar_lab",
@@ -13061,7 +13066,8 @@
       "sourceIds": [
         "bulbapedia-cinnabar-lab"
       ],
-      "dataStatus": "location_indexed_interior_not_mapped"
+      "dataStatus": "location_indexed_interior_not_mapped",
+      "coordinateStatus": "unverified"
     },
     {
       "id": "fighting_dojo",
@@ -13074,7 +13080,8 @@
       "sourceIds": [
         "bulbapedia-fighting-dojo"
       ],
-      "dataStatus": "location_indexed_interior_not_mapped"
+      "dataStatus": "location_indexed_interior_not_mapped",
+      "coordinateStatus": "unverified"
     },
     {
       "id": "go_park",
@@ -13087,7 +13094,8 @@
       "sourceIds": [
         "bulbapedia-go-park"
       ],
-      "dataStatus": "location_indexed_interior_not_mapped"
+      "dataStatus": "location_indexed_interior_not_mapped",
+      "coordinateStatus": "unverified"
     },
     {
       "id": "sea_cottage",
@@ -13100,7 +13108,8 @@
       "sourceIds": [
         "bulbapedia-sea-cottage"
       ],
-      "dataStatus": "location_indexed_interior_not_mapped"
+      "dataStatus": "location_indexed_interior_not_mapped",
+      "coordinateStatus": "unverified"
     },
     {
       "id": "digletts_cave_route2_entrance",
