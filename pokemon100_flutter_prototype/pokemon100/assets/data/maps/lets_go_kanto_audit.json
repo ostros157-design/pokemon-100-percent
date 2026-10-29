@@ -392,6 +392,16 @@
       "id": "bulbapedia-route-list",
       "url": "https://bulbapedia.bulbagarden.net/wiki/List_of_routes",
       "scope": "Canonical route termini and connections across Kanto and other regions"
+    },
+    {
+      "id": "serebii-route7",
+      "url": "https://www.serebii.net/pokearth/kanto/route7.shtml",
+      "scope": "Route 7 encounter tables for Let’s Go Pikachu and Let’s Go Eevee, including ground and sky encounters"
+    },
+    {
+      "id": "serebii-route8",
+      "url": "https://www.serebii.net/pokearth/kanto/route8.shtml",
+      "scope": "Route 8 encounter tables for Let’s Go Pikachu and Let’s Go Eevee, including ground and sky encounters"
     }
   ],
   "locations": [
@@ -1847,9 +1857,372 @@
       "notes": "Krótka trasa łącząca Celadon City z Saffron City; zachodni wylot Underground Path (Routes 7–8).",
       "sourceIds": [
         "routepedia-route7-pikachu",
-        "bulbapedia-part8"
+        "bulbapedia-part8",
+        "serebii-route_"
       ],
-      "dataStatus": "connections_verified_details_pending"
+      "dataStatus": "text_verified_positions_not_mapped",
+      "wildPokemonDetails": {
+        "lets_go_pikachu": [
+          {
+            "name": "Growlithe",
+            "method": "grass",
+            "levelRange": [
+              22,
+              27
+            ],
+            "ratePercent": 19
+          },
+          {
+            "name": "Pidgey",
+            "method": "grass",
+            "levelRange": [
+              22,
+              27
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Pidgeotto",
+            "method": "grass",
+            "levelRange": [
+              22,
+              27
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Rattata",
+            "method": "grass",
+            "levelRange": [
+              22,
+              27
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Raticate",
+            "method": "grass",
+            "levelRange": [
+              22,
+              27
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Jigglypuff",
+            "method": "grass",
+            "levelRange": [
+              22,
+              27
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Abra",
+            "method": "grass",
+            "levelRange": [
+              22,
+              27
+            ],
+            "ratePercent": 4
+          },
+          {
+            "name": "Arcanine",
+            "method": "grass",
+            "levelRange": [
+              22,
+              27
+            ],
+            "ratePercent": 1
+          },
+          {
+            "name": "Kadabra",
+            "method": "grass",
+            "levelRange": [
+              22,
+              27
+            ],
+            "ratePercent": 1
+          },
+          {
+            "name": "Pidgey",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 60
+          },
+          {
+            "name": "Pidgeotto",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 35
+          },
+          {
+            "name": "Pidgeot",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 5
+          },
+          {
+            "name": "Porygon",
+            "method": "special spawn",
+            "levelRange": [
+              22,
+              27
+            ]
+          },
+          {
+            "name": "Charizard",
+            "method": "sky special spawn",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Dragonite",
+            "method": "sky special spawn",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Articuno",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Zapdos",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Moltres",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          }
+        ],
+        "lets_go_eevee": [
+          {
+            "name": "Vulpix",
+            "method": "grass",
+            "levelRange": [
+              22,
+              27
+            ],
+            "ratePercent": 19
+          },
+          {
+            "name": "Pidgey",
+            "method": "grass",
+            "levelRange": [
+              22,
+              27
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Pidgeotto",
+            "method": "grass",
+            "levelRange": [
+              22,
+              27
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Rattata",
+            "method": "grass",
+            "levelRange": [
+              22,
+              27
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Raticate",
+            "method": "grass",
+            "levelRange": [
+              22,
+              27
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Jigglypuff",
+            "method": "grass",
+            "levelRange": [
+              22,
+              27
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Abra",
+            "method": "grass",
+            "levelRange": [
+              22,
+              27
+            ],
+            "ratePercent": 4
+          },
+          {
+            "name": "Ninetales",
+            "method": "grass",
+            "levelRange": [
+              22,
+              27
+            ],
+            "ratePercent": 1
+          },
+          {
+            "name": "Kadabra",
+            "method": "grass",
+            "levelRange": [
+              22,
+              27
+            ],
+            "ratePercent": 1
+          },
+          {
+            "name": "Pidgey",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 60
+          },
+          {
+            "name": "Pidgeotto",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 35
+          },
+          {
+            "name": "Pidgeot",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 5
+          },
+          {
+            "name": "Porygon",
+            "method": "special spawn",
+            "levelRange": [
+              22,
+              27
+            ]
+          },
+          {
+            "name": "Charizard",
+            "method": "sky special spawn",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Dragonite",
+            "method": "sky special spawn",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Articuno",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Zapdos",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Moltres",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          }
+        ],
+        "status": "text_verified",
+        "sourceIds": [
+          "serebii-route_",
+          "routepedia-route7-pikachu"
+        ]
+      },
+      "wildPokemon": {
+        "lets_go_pikachu": [
+          "Growlithe",
+          "Pidgey",
+          "Pidgeotto",
+          "Rattata",
+          "Raticate",
+          "Jigglypuff",
+          "Abra",
+          "Arcanine",
+          "Kadabra",
+          "Pidgeot",
+          "Porygon",
+          "Charizard",
+          "Dragonite",
+          "Articuno",
+          "Zapdos",
+          "Moltres"
+        ],
+        "lets_go_eevee": [
+          "Vulpix",
+          "Pidgey",
+          "Pidgeotto",
+          "Rattata",
+          "Raticate",
+          "Jigglypuff",
+          "Abra",
+          "Ninetales",
+          "Kadabra",
+          "Pidgeot",
+          "Porygon",
+          "Charizard",
+          "Dragonite",
+          "Articuno",
+          "Zapdos",
+          "Moltres"
+        ]
+      },
+      "encounterStatus": "text_verified"
     },
     {
       "id": "route_8",
@@ -1865,9 +2238,372 @@
       "notes": "Trasa między Lavender Town i Saffron City; wschodni wylot Underground Path (Routes 7–8).",
       "sourceIds": [
         "routepedia-route8-pikachu",
-        "bulbapedia-part8"
+        "bulbapedia-part8",
+        "serebii-route_"
       ],
-      "dataStatus": "connections_verified_details_pending"
+      "dataStatus": "text_verified_positions_not_mapped",
+      "wildPokemonDetails": {
+        "lets_go_pikachu": [
+          {
+            "name": "Growlithe",
+            "method": "grass",
+            "levelRange": [
+              22,
+              27
+            ],
+            "ratePercent": 19
+          },
+          {
+            "name": "Pidgey",
+            "method": "grass",
+            "levelRange": [
+              22,
+              27
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Pidgeotto",
+            "method": "grass",
+            "levelRange": [
+              22,
+              27
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Rattata",
+            "method": "grass",
+            "levelRange": [
+              22,
+              27
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Raticate",
+            "method": "grass",
+            "levelRange": [
+              22,
+              27
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Jigglypuff",
+            "method": "grass",
+            "levelRange": [
+              22,
+              27
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Abra",
+            "method": "grass",
+            "levelRange": [
+              22,
+              27
+            ],
+            "ratePercent": 4
+          },
+          {
+            "name": "Arcanine",
+            "method": "grass",
+            "levelRange": [
+              22,
+              27
+            ],
+            "ratePercent": 1
+          },
+          {
+            "name": "Kadabra",
+            "method": "grass",
+            "levelRange": [
+              22,
+              27
+            ],
+            "ratePercent": 1
+          },
+          {
+            "name": "Pidgey",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 60
+          },
+          {
+            "name": "Pidgeotto",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 35
+          },
+          {
+            "name": "Pidgeot",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 5
+          },
+          {
+            "name": "Chansey",
+            "method": "special spawn",
+            "levelRange": [
+              22,
+              27
+            ]
+          },
+          {
+            "name": "Charizard",
+            "method": "sky special spawn",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Dragonite",
+            "method": "sky special spawn",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Articuno",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Zapdos",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Moltres",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          }
+        ],
+        "lets_go_eevee": [
+          {
+            "name": "Vulpix",
+            "method": "grass",
+            "levelRange": [
+              22,
+              27
+            ],
+            "ratePercent": 19
+          },
+          {
+            "name": "Pidgey",
+            "method": "grass",
+            "levelRange": [
+              22,
+              27
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Pidgeotto",
+            "method": "grass",
+            "levelRange": [
+              22,
+              27
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Rattata",
+            "method": "grass",
+            "levelRange": [
+              22,
+              27
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Raticate",
+            "method": "grass",
+            "levelRange": [
+              22,
+              27
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Jigglypuff",
+            "method": "grass",
+            "levelRange": [
+              22,
+              27
+            ],
+            "ratePercent": 15
+          },
+          {
+            "name": "Abra",
+            "method": "grass",
+            "levelRange": [
+              22,
+              27
+            ],
+            "ratePercent": 4
+          },
+          {
+            "name": "Ninetales",
+            "method": "grass",
+            "levelRange": [
+              22,
+              27
+            ],
+            "ratePercent": 1
+          },
+          {
+            "name": "Kadabra",
+            "method": "grass",
+            "levelRange": [
+              22,
+              27
+            ],
+            "ratePercent": 1
+          },
+          {
+            "name": "Pidgey",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 60
+          },
+          {
+            "name": "Pidgeotto",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 35
+          },
+          {
+            "name": "Pidgeot",
+            "method": "sky",
+            "levelRange": [
+              3,
+              56
+            ],
+            "ratePercent": 5
+          },
+          {
+            "name": "Chansey",
+            "method": "special spawn",
+            "levelRange": [
+              22,
+              27
+            ]
+          },
+          {
+            "name": "Charizard",
+            "method": "sky special spawn",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Dragonite",
+            "method": "sky special spawn",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Articuno",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Zapdos",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          },
+          {
+            "name": "Moltres",
+            "method": "sky special spawn; conditional",
+            "levelRange": [
+              3,
+              56
+            ]
+          }
+        ],
+        "status": "text_verified",
+        "sourceIds": [
+          "serebii-route_",
+          "routepedia-route8-pikachu"
+        ]
+      },
+      "wildPokemon": {
+        "lets_go_pikachu": [
+          "Growlithe",
+          "Pidgey",
+          "Pidgeotto",
+          "Rattata",
+          "Raticate",
+          "Jigglypuff",
+          "Abra",
+          "Arcanine",
+          "Kadabra",
+          "Pidgeot",
+          "Chansey",
+          "Charizard",
+          "Dragonite",
+          "Articuno",
+          "Zapdos",
+          "Moltres"
+        ],
+        "lets_go_eevee": [
+          "Vulpix",
+          "Pidgey",
+          "Pidgeotto",
+          "Rattata",
+          "Raticate",
+          "Jigglypuff",
+          "Abra",
+          "Ninetales",
+          "Kadabra",
+          "Pidgeot",
+          "Chansey",
+          "Charizard",
+          "Dragonite",
+          "Articuno",
+          "Zapdos",
+          "Moltres"
+        ]
+      },
+      "encounterStatus": "text_verified"
     },
     {
       "id": "route_9",
