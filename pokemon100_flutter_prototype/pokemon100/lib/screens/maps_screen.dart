@@ -1108,6 +1108,30 @@ class _MapsScreenState extends State<MapsScreen> {
                           ] else if (normalizedQuery == 'cerulean cave') ...[
                             const Text('Cerulean Cave — lokacja postgame', style: TextStyle(fontWeight: FontWeight.w700)),
                             const Text('Jaskinia odblokowywana po ukończeniu głównej historii, dostępna z okolic Cerulean City. Ma piętra 1F, 2F i B1F; Mewtwo znajduje się w jej głębi. Dokładne piętra i pinezki wymagają osobnego opracowania.'),
+                          ] else if (normalizedQuery == 's.s. anne' || normalizedQuery == 'ss anne') ...[
+                            const Text('S.S. Anne — statek w porcie Vermilion', style: TextStyle(fontWeight: FontWeight.w700)),
+                            const Text('Statek fabularny dostępny z portu Vermilion City. Ma pokład, kabiny, jadalnię i mostek. Po zdobyciu Cut i zakończeniu wydarzeń statek odpływa; wnętrza oraz przedmioty nie mają jeszcze szczegółowych pinezek.'),
+                          ] else if (normalizedQuery == 'power plant') ...[
+                            const Text('Power Plant', style: TextStyle(fontWeight: FontWeight.w700)),
+                            const Text('Elektrownia dostępna z Route 10. Można tu spotkać legendarnego Zapdosa. To osobna lokacja wymagająca własnego planu wnętrza; dokładne pozycje przedmiotów i spotkań nie są jeszcze naniesione.'),
+                          ] else if (normalizedQuery == 'pokémon tower' || normalizedQuery == 'pokemon tower') ...[
+                            const Text('Pokémon Tower — Lavender Town', style: TextStyle(fontWeight: FontWeight.w700)),
+                            const Text('Wieża ma siedem pięter. Wydarzenia fabularne wymagają Silph Scope; w wieży odnajduje się Mr. Fuji. Każde piętro powinno dostać osobny, zweryfikowany plan przed dodaniem pinezek.'),
+                          ] else if (normalizedQuery == 'rocket hideout' || normalizedQuery == 'team rocket hideout') ...[
+                            const Text('Team Rocket Hideout', style: TextStyle(fontWeight: FontWeight.w700)),
+                            const Text('Podziemna kryjówka pod Celadon Game Corner, obejmująca poziomy B1F–B4F i walkę z Giovannim. Wymaga osobnej mapy pięter; nie pokazujemy jeszcze dokładnych pozycji przełączników, trenerów ani przedmiotów.'),
+                          ] else if (normalizedQuery == 'silph co' || normalizedQuery == 'silph co.') ...[
+                            const Text('Silph Co. — Saffron City', style: TextStyle(fontWeight: FontWeight.w700)),
+                            const Text('Budynek biurowy z 11 piętrami, teleportami i wydarzeniem ratowania prezesa. To osobny kompleks; dokładny układ teleportów, trenerów i przedmiotów nie jest jeszcze odwzorowany.'),
+                          ] else if (normalizedQuery == 'pokémon mansion' || normalizedQuery == 'pokemon mansion') ...[
+                            const Text('Pokémon Mansion — Cinnabar Island', style: TextStyle(fontWeight: FontWeight.w700)),
+                            const Text('Opuszczona posiadłość z piętrami 1F–3F i B1F. Dzienniki wyjaśniają historię Mewtwo; klucz do Cinnabar Gym jest związany z tą lokacją. Mewtwo znajduje się jednak w Cerulean Cave, nie w Mansion.'),
+                          ] else if (normalizedQuery == 'safari zone') ...[
+                            const Text('Safari Zone — Fuchsia City', style: TextStyle(fontWeight: FontWeight.w700)),
+                            const Text('Strefa dostępna przez bramę w Fuchsia City; w środku znajduje się m.in. Gold Teeth Warden’a. Dokładne strefy, przedmioty i spotkania wymagają osobnych danych, więc nie dodano fałszywych pinezek.'),
+                          ] else if (normalizedQuery == 'viridian gym') ...[
+                            const Text('Viridian Gym', style: TextStyle(fontWeight: FontWeight.w700)),
+                            const Text('Sala Giovanni’ego w Viridian City. W Let’s Go Pikachu/Eevee jest to ostatnia sala przed Pokémon League. Dokładny plan sali i pełna drużyna lidera wymagają dalszego sprawdzenia.'),
                           ] else if (normalizedQuery == 'route 2') ...[
                             const Text(
                               'Dzikie Pokémony w trawie (poziomy 3–4)',
