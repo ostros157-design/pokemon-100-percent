@@ -103,6 +103,10 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
   @override
   Widget build(BuildContext context) {
     final achievements = achievementsList;
+    final unlockedCount = achievements.where(_isUnlocked).length;
+    final achievementProgress = achievements.isEmpty
+        ? 0.0
+        : unlockedCount / achievements.length;
 
     return Scaffold(
       appBar: AppBar(title: const Text('Osiągnięcia')),
@@ -116,8 +120,24 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
                     child: ListTile(
                       leading: const Icon(Icons.catching_pokemon),
                       title: const Text('Kolekcja ze wszystkich gier'),
-                      subtitle: Text(
-                        '$_globalCaughtCount różnych Pokémonów zarejestrowanych łącznie',
+                      subtitle: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text(
+                            '$_globalCaughtCount różnych Pokémonów zarejestrowanych łącznie',
+                          ),
+                          const SizedBox(height: 10),
+                          LinearProgressIndicator(
+                            value: achievementProgress,
+                            minHeight: 6,
+                          ),
+                          const SizedBox(height: 6),
+                          Text(
+                            '$unlockedCount z ${achievements.length} osiągnięć odblokowanych',
+                            style: Theme.of(context).textTheme.bodySmall,
+                          ),
+                        ],
                       ),
                     ),
                   ),
