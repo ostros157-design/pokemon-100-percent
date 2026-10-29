@@ -1077,7 +1077,7 @@ class _MapsScreenState extends State<MapsScreen> {
                                       ),
                                       const SizedBox(height: 8),
                                       const Text(
-                                        'Poniżej znajduje się offline’owa, wektorowo rysowana ilustracja Kanto. Zawiera 75 fizycznych punktów mapy, 76 nazw lokacji (Bill’s House jest aliasem Sea Cottage) i 83 połączenia, z malowanymi lasami, górami, miasteczkami, wybrzeżem i wejściami do jaskiń. Kształty terenu i pozycje węzłów są artystycznym schematem, nie mapą w skali ani dokładną kopią map z gry. Wektorowe elementy pozostają gładkie przy powiększaniu.',
+                                        'Poniżej znajduje się offline’owa, wektorowo rysowana ilustracja Kanto. Zawiera 74 fizyczne punkty mapy, 76 nazw lokacji (Bill’s House = Sea Cottage; Safari Zone = GO Park) i 82 połączenia, z malowanymi lasami, górami, miasteczkami, wybrzeżem i wejściami do jaskiń. Kształty terenu i pozycje węzłów są artystycznym schematem, nie mapą w skali ani dokładną kopią map z gry. Wektorowe elementy pozostają gładkie przy powiększaniu.',
                                       ),
                                       const SizedBox(height: 10),
                                       const Text(
@@ -2385,9 +2385,8 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
       'Route 12': 'Południowy kierunek na trasę nadmorską.',
     },
     'Fuchsia City': {
-      'Safari Zone': 'Wejście do Safari Zone; nie pokazujemy dokładnych stref wewnętrznych.',
+      'GO Park / Playful Park': 'Kompleks GO Park w obszarze dawnej Safari Zone; jedna lokacja w Let’s Go.',
       'Fuchsia Gym': 'Gym Kogi.',
-      'GO Park': 'Obiekt Let’s Go związany z przenoszeniem Pokémonów.',
       'Route 15 / Route 18': 'Kierunki na północ i zachód od miasta.',
     },
     'Cinnabar Island': {
@@ -2642,9 +2641,9 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
       'Wyjście Route 8': 'Drugie wejście/wyjście przejścia.',
     },
     'Safari Zone': {
-      'Wejście / recepcja': 'Punkt wejścia do Safari Zone.',
-      'Obszary safari': 'Kilka stref pokazanych jako uproszczony plan; nie odwzorowuje dokładnych ścieżek i przedmiotów.',
-      'Secret House': 'Obszar nagrody HM Surf; dokładna pozycja nie jest pinezką.',
+      'Wejście / recepcja GO Park': 'Punkt wejścia do GO Park; Safari Zone jest tu nazwą historyczną, nie osobnym obiektem.',
+      'Playful Park': 'Obszar spotkań z Pokémonami przedstawiony symbolicznie.',
+      'Strefy GO Park': 'Obszary parku pokazane schematycznie, bez dokładnych ścieżek i pinezek.',
       'Wyjście do Fuchsia City': 'Powrót do miasta.',
     },
     'Pokémon League Reception Gate': {
@@ -3108,7 +3107,7 @@ class _KantoLocalAreaPainter extends CustomPainter {
         ..moveTo(size.width * .50, size.height * .28)
         ..lineTo(size.width * .35, size.height * .66)
         ..lineTo(size.width * .68, size.height * .66);
-    } else if (location == 'Safari Zone') {
+    } else if (location == 'Safari Zone' || location == 'GO Park') {
       drawZone(.08, .20, .34, .25);
       drawZone(.56, .16, .34, .25);
       drawZone(.12, .57, .30, .23);
@@ -3344,9 +3343,8 @@ class _KantoLocalAreaPainter extends CustomPainter {
       ]);
     } else if (location == 'Fuchsia City') {
       markers.addAll([
-        ('Safari Zone', Offset(size.width * .22, size.height * .31)),
-        ('Fuchsia Gym', Offset(size.width * .50, size.height * .28)),
-        ('GO Park', Offset(size.width * .79, size.height * .33)),
+        ('GO Park / Playful Park', Offset(size.width * .30, size.height * .31)),
+        ('Fuchsia Gym', Offset(size.width * .56, size.height * .28)),
         ('Route 15 / 18', Offset(size.width * .68, size.height * .66)),
       ]);
     } else if (location == 'Cinnabar Island') {
@@ -3364,9 +3362,9 @@ class _KantoLocalAreaPainter extends CustomPainter {
       ]);
     } else if (location == 'Safari Zone') {
       markers.addAll([
-        ('Wejście', Offset(size.width * .25, size.height * .32)),
-        ('Strefa safari', Offset(size.width * .72, size.height * .29)),
-        ('Secret House', Offset(size.width * .27, size.height * .68)),
+        ('Recepcja GO Park', Offset(size.width * .25, size.height * .32)),
+        ('Playful Park', Offset(size.width * .72, size.height * .29)),
+        ('Strefy GO Park', Offset(size.width * .27, size.height * .68)),
         ('Wyjście', Offset(size.width * .73, size.height * .67)),
       ]);
     } else if (location == 'Pokémon League Reception Gate') {
@@ -3921,7 +3919,6 @@ class _KantoMapPainter extends CustomPainter {
     _MapPlace('Team Rocket Hideout', 0.48, 0.38),
     _MapPlace('Silph Co.', 0.63, 0.29),
     _MapPlace('Pokémon Mansion', 0.19, 0.86),
-    _MapPlace('Safari Zone', 0.64, 0.79),
     _MapPlace('Viridian Gym', 0.27, 0.57),
     _MapPlace('Pewter Gym', 0.27, 0.27),
     _MapPlace('Cerulean Gym', 0.7, 0.19),
@@ -3941,7 +3938,7 @@ class _KantoMapPainter extends CustomPainter {
     _MapPlace('Celadon Condominiums', 0.39, 0.25),
     _MapPlace('Cinnabar Lab', 0.22, 0.95),
     _MapPlace('Fighting Dojo', 0.68, 0.37),
-    _MapPlace('GO Park', 0.7, 0.78),
+    _MapPlace('GO Park', 0.7, 0.78, aliases: const ["Safari Zone"]),
     _MapPlace('Sea Cottage', 0.89, 0.12, aliases: const ["Bill's House"]),
     _MapPlace("Diglett's Cave (Route 2 entrance)", 0.35, 0.44),
     _MapPlace("Diglett's Cave (Route 11 entrance)", 0.65, 0.53),
@@ -4400,31 +4397,31 @@ class _KantoMapPainter extends CustomPainter {
       (1, 2),
       (2, 3),
       (2, 40),
-      (2, 52),
+      (2, 51),
       (3, 5),
       (3, 4),
       (5, 6),
-      (5, 53),
-      (5, 60),
+      (5, 52),
+      (5, 59),
       (6, 7),
       (7, 8),
       (8, 9),
       (9, 12),
       (9, 18),
       (9, 10),
-      (9, 54),
+      (9, 53),
       (9, 44),
       (10, 11),
       (12, 31),
       (12, 13),
-      (12, 62),
+      (12, 61),
       (13, 14),
       (14, 31),
       (14, 15),
       (15, 23),
       (15, 45),
-      (15, 61),
-      (15, 55),
+      (15, 60),
+      (15, 54),
       (16, 31),
       (16, 30),
       (16, 22),
@@ -4444,13 +4441,12 @@ class _KantoMapPainter extends CustomPainter {
       (28, 29),
       (29, 34),
       (29, 35),
-      (29, 51),
-      (29, 58),
+      (29, 57),
       (30, 32),
       (30, 48),
-      (30, 56),
+      (30, 55),
       (31, 49),
-      (31, 57),
+      (31, 56),
       (32, 33),
       (33, 34),
       (35, 36),
@@ -4458,26 +4454,26 @@ class _KantoMapPainter extends CustomPainter {
       (36, 38),
       (38, 39),
       (38, 50),
-      (38, 59),
-      (40, 63),
-      (41, 63),
+      (38, 58),
+      (40, 62),
+      (41, 62),
       (41, 43),
       (41, 42),
       (42, 43),
-      (43, 63),
+      (43, 62),
+      (63, 0),
       (64, 0),
-      (65, 0),
+      (65, 30),
       (66, 30),
       (67, 30),
-      (68, 30),
-      (69, 38),
-      (70, 31),
-      (71, 29),
-      (72, 11),
-      (3, 73),
-      (23, 74),
+      (68, 38),
+      (69, 31),
+      (70, 29),
+      (71, 11),
+      (3, 72),
+      (23, 73),
+      (72, 24),
       (73, 24),
-      (74, 24),
     ];
     final roadShadow = Paint()..isAntiAlias = true
       ..color = const Color(0xFF8B9C73).withValues(alpha: .30)
@@ -4668,7 +4664,7 @@ class _KantoMapPainter extends CustomPainter {
 
     // Broad forest clusters sit behind routes and selectable location markers.
     drawForest(.22, .35, 18, 2); // Viridian Forest area
-    drawForest(.64, .79, 15, 5); // Safari Zone / Fuchsia area
+    drawForest(.64, .79, 15, 5); // GO Park / Fuchsia area
     drawForest(.42, .31, 11, 3); // Celadon outskirts
     drawForest(.36, .55, 12, 7); // southern central woodland
     drawForest(.15, .30, 12, 1); // western uplands
