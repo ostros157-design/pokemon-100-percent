@@ -1030,3 +1030,9 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 
 - Walidacja powiązań nazw z Pokédexem wykryła różnicę w apostrofie w nazwie Farfetch’d. Porównywanie nazw normalizuje teraz proste i typograficzne apostrofy, aby ten wpis również otwierał Pokédex. Commit: `e2276a4`.
 
+### Audyt pokrycia spotkań na trasach Kanto (2026-10-29)
+
+- Sprawdzono wszystkie 25 tras w indeksie Let’s Go: każda ma teraz listę dla Let’s Go Pikachu i Let’s Go Eevee.
+- Sprawdzono też nazwy wszystkich wpisów względem katalogu Pokédexu oraz to, że identyfikatory źródeł istnieją w indeksie. Walidacja tekstowych danych nie zastępuje testu w aplikacji i nie potwierdza dokładnych współrzędnych na mapie.
+- Naprawiono dopasowanie apostrofu w Farfetch’d. Commity: `e2276a4`, `78fac90`.
+
