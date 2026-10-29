@@ -1,3 +1,10 @@
+### Mapy — powiększanie schematu lokacji (2026-10-29)
+
+- Dodano możliwość dotknięcia lokalnego schematu, aby otworzyć jego większy widok w oknie dialogowym.
+- Powiększenie zachowuje nazwę lokacji i etykiety schematu; użytkownik może wrócić do szczegółów mapy przyciskiem „Zamknij”.
+- To powiększenie własnego schematu offline, nie wierna grafika terenu z gry. Dokładne podkłady nadal wymagają weryfikacji i osobnych zasobów.
+- Commit kodu: `cb2574d`. Kompilacja i test ręczny nie zostały wykonane.
+
 ### Mapy — usunięcie niepotwierdzonego skrótu na mapie Kanto (2026-10-29)
 
 - Usunięto bezpośrednią linię Pewter City–Indigo Plateau, która mogła sugerować trasę bez pokazania lokacji pośrednich.
