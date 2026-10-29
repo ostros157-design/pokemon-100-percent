@@ -1283,3 +1283,13 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Commity: `35e9e7a` (antyaliasing), `fff5166` (rozsunięcie punktów), `51b6ece` (status współrzędnych), `5966b82` (opisy UI).
 - Nie uruchamiano `flutter analyze`, testów ani budowania APK. Grafika pozostaje autorską mapą poglądową; dokładna geometria terenu, pięter i pozycje pinezek wymagają osobnej weryfikacji ze źródłowymi mapami gry oraz oglądu w działającej aplikacji.
 
+### Mapy — Kanto: końcowy audyt układu i referencji (2026-10-29)
+
+- Po ostatnim rozstawieniu punktów mapa ma 76/76 lokacji, 84/84 połączenia zgodne z indeksem i 76/76 zestawów schematów lokalnych; nie wykryto brakujących ani dodatkowych nazw, duplikatów kluczy, połączeń do nieistniejących lokacji ani pozycji poza obszarem mapy.
+- Węzły są lepiej rozdzielone w zatłoczonych miastach; pozostała tylko jedna para w odległości mniejszej niż 3,5% rozmiaru mapy (Saffron City–Silph Co.), czyli poniżej progu 4 par z poprzedniego audytu.
+- Sprawdzono wszystkie 122 źródła i odwołania: brak identyfikatorów źródeł, których nie ma w indeksie. Wszystkie 76 lokacji mają jawny status współrzędnych `unverified`; to zabezpiecza przed pomyleniem układu ilustracji z dokładnymi współrzędnymi gry.
+- Nazwy spotkań w danych (121 nazw Pokémonów oraz dodatkowy wpis lokalizacyjny) dopasowują się do katalogu Pokédexu. To kontrola tekstowa, nie dowód dokładnego położenia na planszy.
+- Dodano referencje do mapy regionu Kanto i katalogu map lokacji w Bulbagarden Archives. Używane są jako źródła porównawcze; żadna grafika z gry nie została skopiowana do zasobów aplikacji.
+- Commit układu: `6914569`; commit referencji danych: `e0b1f21`.
+- Nie uruchamiano `flutter analyze`, testów ani budowania APK. Nadal nierozstrzygnięte bez oglądu aplikacji i ręcznego porównania ze źródłowymi mapami: dokładne współrzędne terenu, pięter oraz pinezek przedmiotów/trenerów/Pokémonów.
+
