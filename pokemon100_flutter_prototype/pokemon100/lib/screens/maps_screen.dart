@@ -720,6 +720,11 @@ class _MapsScreenState extends State<MapsScreen> {
                             const Text('• Pokémon Center i Poké Mart\\n• Pokémon Fan Club\\n• Vermilion Gym — Lt. Surge\\n• Port i statek S.S. Anne'),
                             const SizedBox(height: 8),
                             const Text('Drużyna Lt. Surge’a: Voltorb Lv. 25, Magnemite Lv. 25 i Raichu Lv. 26. Squirtle Lv. 16 może zostać podarowany. W zależności od wersji dostępny jest gift Arcanine lub Persian. Przedmioty i wejścia nie mają jeszcze zweryfikowanych pinezek.'),
+                          ] else if (normalizedQuery == 'route 4') ...[
+                            const Text('Route 4 — przejście przez góry', style: TextStyle(fontWeight: FontWeight.w700)),
+                            const Text('Zachodnia część zawiera Pokémon Center i wejście do Mt. Moon; wschodnia schodzi w stronę Cerulean City. Dzikie spotkania w trawie występują na poziomach 7–12, a skład zależy od wersji.'),
+                            const SizedBox(height: 8),
+                            const Text('Przedmioty opisane w źródłach: Escape Rope, 5 Poké Balls, Paralyze Heal, PP Max, 3 Great Balls, Repel oraz ukryty PP Up. W Pokémon Center można kupić Magikarp Lv. 5 za 500. Pinezki nie zostały jeszcze zweryfikowane.'),
                           ] else if (normalizedQuery == 'cerulean city') ...[
                             const Text('Ważne miejsca', style: TextStyle(fontWeight: FontWeight.w700)),
                             const Text('• Pokémon Center i Poké Mart\\n• Cerulean Gym\\n• Bicycle Shop i Herb Shop\\n• Dom z północnym wyjściem oraz dom złodzieja'),
