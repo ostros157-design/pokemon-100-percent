@@ -1,6 +1,8 @@
 import 'dart:async';
+import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -26,6 +28,8 @@ class _MapsScreenState extends State<MapsScreen> {
   String _searchQuery = '';
   final Set<String> _completedStepKeys = <String>{};
   final TextEditingController _locationSearchController = TextEditingController();
+  final Map<String, Map<String, dynamic>> _mapIndexes = <String, Map<String, dynamic>>{};
+  bool _mapIndexesLoading = true;
 
   @override
   void dispose() {
@@ -49,6 +53,79 @@ class _MapsScreenState extends State<MapsScreen> {
   void initState() {
     super.initState();
     _loadSelectedGame();
+    _loadMapIndexes();
+  }
+
+  Future<void> _loadMapIndexes() async {
+    const assets = <String>[
+      'assets/data/maps/lets_go_kanto_audit.json',
+      'assets/data/maps/johto_audit.json',
+      'assets/data/maps/hoenn_audit.json',
+      'assets/data/maps/sinnoh_audit.json',
+      'assets/data/maps/unova_audit.json',
+      'assets/data/maps/kalos_audit.json',
+      'assets/data/maps/alola_audit.json',
+      'assets/data/maps/galar_audit.json',
+      'assets/data/maps/hisui_audit.json',
+      'assets/data/maps/paldea_audit.json',
+    ];
+    final loaded = <String, Map<String, dynamic>>{};
+    for (final asset in assets) {
+      try {
+        final decoded = jsonDecode(await rootBundle.loadString(asset));
+        if (decoded is Map<String, dynamic> &&
+            decoded['region'] is String &&
+            decoded['locations'] is List) {
+          loaded[decoded['region'] as String] = decoded;
+        }
+      } catch (_) {
+        // A missing regional file should not prevent the map screen opening.
+      }
+    }
+    if (!mounted) return;
+    setState(() {
+      _mapIndexes
+        ..clear()
+        ..addAll(loaded);
+      _mapIndexesLoading = false;
+    });
+  }
+
+  String get _mapIndexRegionName {
+    if (_selectedGameId == 'legends_arceus') return 'Hisui';
+    switch (_generation) {
+      case 1:
+        return 'Kanto';
+      case 2:
+        return 'Johto';
+      case 3:
+        return 'Hoenn';
+      case 4:
+        return 'Sinnoh';
+      case 5:
+        return 'Unova';
+      case 6:
+        return 'Kalos';
+      case 7:
+        return 'Alola';
+      case 8:
+        return 'Galar';
+      case 9:
+        return 'Paldea + DLC';
+      default:
+        return _regionName;
+    }
+  }
+
+  Map<String, dynamic>? get _activeMapIndex =>
+      _mapIndexes[_mapIndexRegionName];
+
+  List<Map<String, dynamic>> get _activeMapIndexLocations {
+    final raw = _activeMapIndex?['locations'];
+    if (raw is! List) return const <Map<String, dynamic>>[];
+    return raw
+        .whereType<Map<String, dynamic>>()
+        .toList(growable: false);
   }
 
   Future<void> _loadSelectedGame() async {
