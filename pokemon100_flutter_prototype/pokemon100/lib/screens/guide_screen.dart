@@ -44,6 +44,9 @@ class _GuideScreenState extends State<GuideScreen> {
 
   Future<void> _loadProgress() async {
     final preferences = await SharedPreferences.getInstance();
+    // Remember that the player has opened this guide, even before completing
+    // its first step, so the guide-start achievement has a real signal.
+    await preferences.setBool('guide_opened_${widget.guide.gameId}_${widget.guide.id}', true);
     final savedSteps = preferences.getStringList(_progressKey) ?? const <String>[];
     final restoredSteps = savedSteps
         .map(int.tryParse)
