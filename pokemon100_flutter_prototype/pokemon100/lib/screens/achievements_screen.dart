@@ -35,7 +35,7 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
   bool _hiddenTeamRocketDefeated = false;
   bool _hiddenCompletionReached = false;
   bool _anyGuideOpened = false;
-  Map<String, bool> _hiddenAchievementUnlocks = <String, bool>{};
+  Map<String, bool> _additionalAchievementUnlocks = <String, bool>{};
 
   @override
   void initState() {
@@ -91,7 +91,7 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
     final legendaryCaught = pokemonList.any((pokemon) =>
         allCaughtIds.contains(pokemon.id) &&
         (pokemon.isLegendary || pokemon.isMythical));
-    // Keep the secret mythical milestone distinct from the public legendary one.
+    // Separate mythical Pokémon from the broader legendary milestone.
     final mythicalCaught = pokemonList.any((pokemon) =>
         allCaughtIds.contains(pokemon.id) && pokemon.isMythical);
     final anyGuideOpened = preferences.getKeys().any(
@@ -151,8 +151,7 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
         if (searchableStep.contains('pokonaj brocka')) {
           firstBadgeStepComplete = true;
         }
-        // Future guide chapters can unlock this secret by recording a completed
-        // Team Rocket/Giovanni encounter; merely visiting the location is not enough.
+        // A completed step mentioning Team Rocket/Giovanni counts as progress.
         if (searchableStep.contains('team rocket') ||
             searchableStep.contains('giovanni')) {
           hiddenTeamRocketDefeated = true;
@@ -164,54 +163,54 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
     final gameProgressPercent = totalObjectives == 0
         ? 0
         : (completedObjectives * 100 / totalObjectives).round();
-    final hiddenAchievementUnlocks = <String, bool>{
-      'hidden_extra_01': allCaughtIds.length >= 5,
-      'hidden_extra_02': allCaughtIds.length >= 10,
-      'hidden_extra_03': allCaughtIds.length >= 20,
-      'hidden_extra_04': allCaughtIds.length >= 30,
-      'hidden_extra_05': allCaughtIds.length >= 40,
-      'hidden_extra_06': allCaughtIds.length >= 75,
-      'hidden_extra_07': allCaughtIds.length >= 150,
-      'hidden_extra_08': caughtTypes.length >= 3,
-      'hidden_extra_09': caughtTypes.length >= 6,
-      'hidden_extra_10': caughtTypes.length >= 10,
-      'hidden_extra_11': caughtTypes.length >= 15,
-      'hidden_extra_12': caughtPokemon.any((pokemon) => pokemon.types.contains('Fire')),
-      'hidden_extra_13': caughtPokemon.any((pokemon) => pokemon.types.contains('Water')),
-      'hidden_extra_14': caughtPokemon.any((pokemon) => pokemon.types.contains('Grass')),
-      'hidden_extra_15': caughtPokemon.any((pokemon) => pokemon.types.contains('Electric')),
-      'hidden_extra_16': caughtPokemon.any((pokemon) => pokemon.types.contains('Psychic')),
-      'hidden_extra_17': caughtPokemon.any((pokemon) => pokemon.types.contains('Dragon')),
-      'hidden_extra_18': caughtPokemon.any((pokemon) => pokemon.types.contains('Ghost')),
-      'hidden_extra_19': caughtPokemon.any((pokemon) => pokemon.types.contains('Steel')),
-      'hidden_extra_20': caughtPokemon.any((pokemon) => pokemon.types.contains('Fairy')),
-      'hidden_extra_21': caughtBabies >= 1,
-      'hidden_extra_22': caughtBabies >= 3,
-      'hidden_extra_23': caughtPokemon.any((pokemon) => pokemon.generation == 1),
-      'hidden_extra_24': caughtPokemon.any((pokemon) => pokemon.generation == 2),
-      'hidden_extra_25': caughtPokemon.any((pokemon) => pokemon.generation == 3),
-      'hidden_extra_26': caughtPokemon.any((pokemon) => pokemon.generation == 4),
-      'hidden_extra_27': caughtPokemon.any((pokemon) => pokemon.generation == 5),
-      'hidden_extra_28': caughtPokemon.any((pokemon) => pokemon.generation == 6),
-      'hidden_extra_29': caughtPokemon.any((pokemon) => pokemon.generation == 7),
-      'hidden_extra_30': caughtPokemon.any((pokemon) => pokemon.generation == 8),
-      'hidden_extra_31': caughtPokemon.any((pokemon) => pokemon.generation == 9),
-      'hidden_extra_32': caughtHighStats >= 1,
-      'hidden_extra_33': caughtHighStats >= 3,
-      'hidden_extra_34': caughtCompleteStats >= 10,
-      'hidden_extra_35': teamTypes.length >= 3,
-      'hidden_extra_36': teamTypes.length >= 6,
-      'hidden_extra_37': completedGuideSteps >= 3,
-      'hidden_extra_38': completedGuideSteps >= 6,
-      'hidden_extra_39': completedGuideText.any((step) => step.contains('forest') || step.contains('las')),
-      'hidden_extra_40': completedGuideText.any((step) => step.contains('gym')),
-      'hidden_extra_41': completedGuideText.any((step) => step.contains('route')),
-      'hidden_extra_42': completedGuideText.any((step) => step.contains('profesor') || step.contains('professor')),
-      'hidden_extra_43': gameProgressPercent >= 10,
-      'hidden_extra_44': gameProgressPercent >= 90,
-      'hidden_extra_45': caughtPokemon.any((pokemon) => pokemon.isLegendary) && caughtPokemon.any((pokemon) => pokemon.isMythical),
-      'hidden_extra_46': caughtPokemon.any((pokemon) => pokemon.hiddenAbilities.isNotEmpty),
-      'hidden_extra_47': caughtPokemon.any((pokemon) => pokemon.captureRate != null && pokemon.captureRate! <= 45),
+    final additionalAchievementUnlocks = <String, bool>{
+      'achievement_extra_01': allCaughtIds.length >= 5,
+      'achievement_extra_02': allCaughtIds.length >= 10,
+      'achievement_extra_03': allCaughtIds.length >= 20,
+      'achievement_extra_04': allCaughtIds.length >= 30,
+      'achievement_extra_05': allCaughtIds.length >= 40,
+      'achievement_extra_06': allCaughtIds.length >= 75,
+      'achievement_extra_07': allCaughtIds.length >= 150,
+      'achievement_extra_08': caughtTypes.length >= 3,
+      'achievement_extra_09': caughtTypes.length >= 6,
+      'achievement_extra_10': caughtTypes.length >= 10,
+      'achievement_extra_11': caughtTypes.length >= 15,
+      'achievement_extra_12': caughtPokemon.any((pokemon) => pokemon.types.contains('Fire')),
+      'achievement_extra_13': caughtPokemon.any((pokemon) => pokemon.types.contains('Water')),
+      'achievement_extra_14': caughtPokemon.any((pokemon) => pokemon.types.contains('Grass')),
+      'achievement_extra_15': caughtPokemon.any((pokemon) => pokemon.types.contains('Electric')),
+      'achievement_extra_16': caughtPokemon.any((pokemon) => pokemon.types.contains('Psychic')),
+      'achievement_extra_17': caughtPokemon.any((pokemon) => pokemon.types.contains('Dragon')),
+      'achievement_extra_18': caughtPokemon.any((pokemon) => pokemon.types.contains('Ghost')),
+      'achievement_extra_19': caughtPokemon.any((pokemon) => pokemon.types.contains('Steel')),
+      'achievement_extra_20': caughtPokemon.any((pokemon) => pokemon.types.contains('Fairy')),
+      'achievement_extra_21': caughtBabies >= 1,
+      'achievement_extra_22': caughtBabies >= 3,
+      'achievement_extra_23': caughtPokemon.any((pokemon) => pokemon.generation == 1),
+      'achievement_extra_24': caughtPokemon.any((pokemon) => pokemon.generation == 2),
+      'achievement_extra_25': caughtPokemon.any((pokemon) => pokemon.generation == 3),
+      'achievement_extra_26': caughtPokemon.any((pokemon) => pokemon.generation == 4),
+      'achievement_extra_27': caughtPokemon.any((pokemon) => pokemon.generation == 5),
+      'achievement_extra_28': caughtPokemon.any((pokemon) => pokemon.generation == 6),
+      'achievement_extra_29': caughtPokemon.any((pokemon) => pokemon.generation == 7),
+      'achievement_extra_30': caughtPokemon.any((pokemon) => pokemon.generation == 8),
+      'achievement_extra_31': caughtPokemon.any((pokemon) => pokemon.generation == 9),
+      'achievement_extra_32': caughtHighStats >= 1,
+      'achievement_extra_33': caughtHighStats >= 3,
+      'achievement_extra_34': caughtCompleteStats >= 10,
+      'achievement_extra_35': teamTypes.length >= 3,
+      'achievement_extra_36': teamTypes.length >= 6,
+      'achievement_extra_37': completedGuideSteps >= 3,
+      'achievement_extra_38': completedGuideSteps >= 6,
+      'achievement_extra_39': completedGuideText.any((step) => step.contains('forest') || step.contains('las')),
+      'achievement_extra_40': completedGuideText.any((step) => step.contains('gym')),
+      'achievement_extra_41': completedGuideText.any((step) => step.contains('route')),
+      'achievement_extra_42': completedGuideText.any((step) => step.contains('profesor') || step.contains('professor')),
+      'achievement_extra_43': gameProgressPercent >= 10,
+      'achievement_extra_44': gameProgressPercent >= 90,
+      'achievement_extra_45': caughtPokemon.any((pokemon) => pokemon.isLegendary) && caughtPokemon.any((pokemon) => pokemon.isMythical),
+      'achievement_extra_46': caughtPokemon.any((pokemon) => pokemon.hiddenAbilities.isNotEmpty),
+      'achievement_extra_47': caughtPokemon.any((pokemon) => pokemon.captureRate != null && pokemon.captureRate! <= 45),
     };
 
     if (!mounted) return;
@@ -231,7 +230,7 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
       _hiddenTeamRocketDefeated = hiddenTeamRocketDefeated;
       _hiddenCompletionReached = gameProgressPercent >= 100 && guideComplete;
       _anyGuideOpened = anyGuideOpened;
-      _hiddenAchievementUnlocks = hiddenAchievementUnlocks;
+      _additionalAchievementUnlocks = additionalAchievementUnlocks;
       _loading = false;
     });
   }
@@ -264,54 +263,54 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
         return _hiddenTeamRocketDefeated;
       case 'hidden_complete':
         return _hiddenCompletionReached;
-      case 'hidden_extra_01':
-      case 'hidden_extra_02':
-      case 'hidden_extra_03':
-      case 'hidden_extra_04':
-      case 'hidden_extra_05':
-      case 'hidden_extra_06':
-      case 'hidden_extra_07':
-      case 'hidden_extra_08':
-      case 'hidden_extra_09':
-      case 'hidden_extra_10':
-      case 'hidden_extra_11':
-      case 'hidden_extra_12':
-      case 'hidden_extra_13':
-      case 'hidden_extra_14':
-      case 'hidden_extra_15':
-      case 'hidden_extra_16':
-      case 'hidden_extra_17':
-      case 'hidden_extra_18':
-      case 'hidden_extra_19':
-      case 'hidden_extra_20':
-      case 'hidden_extra_21':
-      case 'hidden_extra_22':
-      case 'hidden_extra_23':
-      case 'hidden_extra_24':
-      case 'hidden_extra_25':
-      case 'hidden_extra_26':
-      case 'hidden_extra_27':
-      case 'hidden_extra_28':
-      case 'hidden_extra_29':
-      case 'hidden_extra_30':
-      case 'hidden_extra_31':
-      case 'hidden_extra_32':
-      case 'hidden_extra_33':
-      case 'hidden_extra_34':
-      case 'hidden_extra_35':
-      case 'hidden_extra_36':
-      case 'hidden_extra_37':
-      case 'hidden_extra_38':
-      case 'hidden_extra_39':
-      case 'hidden_extra_40':
-      case 'hidden_extra_41':
-      case 'hidden_extra_42':
-      case 'hidden_extra_43':
-      case 'hidden_extra_44':
-      case 'hidden_extra_45':
-      case 'hidden_extra_46':
-      case 'hidden_extra_47':
-        return _hiddenAchievementUnlocks[achievement.id] ?? false;
+      case 'achievement_extra_01':
+      case 'achievement_extra_02':
+      case 'achievement_extra_03':
+      case 'achievement_extra_04':
+      case 'achievement_extra_05':
+      case 'achievement_extra_06':
+      case 'achievement_extra_07':
+      case 'achievement_extra_08':
+      case 'achievement_extra_09':
+      case 'achievement_extra_10':
+      case 'achievement_extra_11':
+      case 'achievement_extra_12':
+      case 'achievement_extra_13':
+      case 'achievement_extra_14':
+      case 'achievement_extra_15':
+      case 'achievement_extra_16':
+      case 'achievement_extra_17':
+      case 'achievement_extra_18':
+      case 'achievement_extra_19':
+      case 'achievement_extra_20':
+      case 'achievement_extra_21':
+      case 'achievement_extra_22':
+      case 'achievement_extra_23':
+      case 'achievement_extra_24':
+      case 'achievement_extra_25':
+      case 'achievement_extra_26':
+      case 'achievement_extra_27':
+      case 'achievement_extra_28':
+      case 'achievement_extra_29':
+      case 'achievement_extra_30':
+      case 'achievement_extra_31':
+      case 'achievement_extra_32':
+      case 'achievement_extra_33':
+      case 'achievement_extra_34':
+      case 'achievement_extra_35':
+      case 'achievement_extra_36':
+      case 'achievement_extra_37':
+      case 'achievement_extra_38':
+      case 'achievement_extra_39':
+      case 'achievement_extra_40':
+      case 'achievement_extra_41':
+      case 'achievement_extra_42':
+      case 'achievement_extra_43':
+      case 'achievement_extra_44':
+      case 'achievement_extra_45':
+      case 'achievement_extra_46':
+      case 'achievement_extra_47':
+        return _additionalAchievementUnlocks[achievement.id] ?? false;
       case 'guide_start':
         return _anyGuideOpened;
       case 'full_team':
