@@ -1401,9 +1401,7 @@
       "connectsTo": [
         "route_22",
         "route_23",
-        "indigo_plateau",
-        "route_26",
-        "route_28"
+        "indigo_plateau"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -1411,104 +1409,7 @@
         "bulbapedia-kanto",
         "bulbapedia-route-list"
       ],
-      "dataStatus": "topology_indexed_variant_details_pending"
-    },
-    {
-      "id": "route_26",
-      "name": "Route 26",
-      "kind": "route",
-      "connectsTo": [
-        "pokemon_league_reception_gate",
-        "route_27",
-        "tohjo_falls"
-      ],
-      "localMapAsset": null,
-      "coordinateStatus": "unverified",
-      "sourceIds": [
-        "bulbapedia-kanto",
-        "bulbapedia-route-list"
-      ],
-      "dataStatus": "postgame_topology_indexed_variant_details_pending"
-    },
-    {
-      "id": "route_27",
-      "name": "Route 27",
-      "kind": "route",
-      "connectsTo": [
-        "route_26",
-        "new_bark_town",
-        "tohjo_falls"
-      ],
-      "localMapAsset": null,
-      "coordinateStatus": "unverified",
-      "sourceIds": [
-        "bulbapedia-kanto",
-        "bulbapedia-route-list"
-      ],
-      "dataStatus": "postgame_topology_indexed_variant_details_pending"
-    },
-    {
-      "id": "route_28",
-      "name": "Route 28",
-      "kind": "route",
-      "connectsTo": [
-        "pokemon_league_reception_gate",
-        "mt_silver"
-      ],
-      "localMapAsset": null,
-      "coordinateStatus": "unverified",
-      "sourceIds": [
-        "bulbapedia-kanto",
-        "bulbapedia-route-list"
-      ],
-      "dataStatus": "postgame_topology_indexed_variant_details_pending"
-    },
-    {
-      "id": "tohjo_falls",
-      "name": "Tohjo Falls",
-      "kind": "cave",
-      "connectsTo": [
-        "route_26",
-        "route_27"
-      ],
-      "localMapAsset": null,
-      "coordinateStatus": "unverified",
-      "sourceIds": [
-        "bulbapedia-kanto",
-        "bulbapedia-route-list"
-      ],
-      "dataStatus": "postgame_topology_indexed_variant_details_pending"
-    },
-    {
-      "id": "mt_silver",
-      "name": "Mt. Silver",
-      "kind": "mountain",
-      "connectsTo": [
-        "route_28"
-      ],
-      "localMapAsset": null,
-      "coordinateStatus": "unverified",
-      "sourceIds": [
-        "bulbapedia-kanto",
-        "bulbapedia-route-list"
-      ],
-      "dataStatus": "postgame_topology_indexed_variant_details_pending"
-    },
-    {
-      "id": "new_bark_town",
-      "name": "New Bark Town (Johto)",
-      "region": "Johto",
-      "kind": "town",
-      "connectsTo": [
-        "route_27"
-      ],
-      "localMapAsset": null,
-      "coordinateStatus": "unverified",
-      "sourceIds": [
-        "bulbapedia-kanto",
-        "bulbapedia-route-list"
-      ],
-      "dataStatus": "cross_region_reference"
+      "dataStatus": "connection_indexed_kanto_routes_only"
     }
   ],
   "region": "Kanto",
