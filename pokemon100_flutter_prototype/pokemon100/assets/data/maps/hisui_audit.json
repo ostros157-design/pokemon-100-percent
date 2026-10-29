@@ -46,7 +46,12 @@
         "front_gate",
         "canala_avenue",
         "floaro_main_street",
-        "your_quarters"
+        "your_quarters",
+        "obsidian_fieldlands",
+        "crimson_mirelands",
+        "cobalt_coastlands",
+        "coronet_highlands",
+        "alabaster_icelands"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -76,7 +81,8 @@
         "sandgem_flats",
         "the_heartwood",
         "worn_bridge",
-        "windswept_run"
+        "windswept_run",
+        "jubilife_village"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -85,7 +91,7 @@
         "bulbapedia-hisui",
         "legends-arceus-locations"
       ],
-      "notes": "Obszar ekspedycyjny wybierany z Jubilife Village; dostęp przez system wypraw/fast travel, nie zwykłą trasę pieszą."
+      "notes": "Dostęp przez wybór wyprawy/fast travel z Jubilife Village; to połączenie menu podróży, nie fizyczna droga na mapie."
     },
     {
       "id": "crimson_mirelands",
@@ -106,7 +112,8 @@
         "scarlet_bog",
         "shrouded_ruins",
         "sludge_mound",
-        "ursa_s_ring"
+        "ursa_s_ring",
+        "jubilife_village"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -115,7 +122,7 @@
         "bulbapedia-hisui",
         "legends-arceus-locations"
       ],
-      "notes": "Obszar ekspedycyjny wybierany z Jubilife Village; dostęp przez system wypraw/fast travel, nie zwykłą trasę pieszą."
+      "notes": "Dostęp przez wybór wyprawy/fast travel z Jubilife Village; to połączenie menu podróży, nie fizyczna droga na mapie."
     },
     {
       "id": "cobalt_coastlands",
@@ -135,7 +142,8 @@
         "windbreak_stand",
         "sand_s_reach",
         "tombolo_walk",
-        "tranquility_cove"
+        "tranquility_cove",
+        "jubilife_village"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -144,7 +152,7 @@
         "bulbapedia-hisui",
         "legends-arceus-locations"
       ],
-      "notes": "Obszar ekspedycyjny wybierany z Jubilife Village; dostęp przez system wypraw/fast travel, nie zwykłą trasę pieszą."
+      "notes": "Dostęp przez wybór wyprawy/fast travel z Jubilife Village; to połączenie menu podróży, nie fizyczna droga na mapie."
     },
     {
       "id": "coronet_highlands",
@@ -159,7 +167,8 @@
         "fabled_spring",
         "sonorous_path",
         "stonetooth_rows",
-        "wayward_cave"
+        "wayward_cave",
+        "jubilife_village"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -168,7 +177,7 @@
         "bulbapedia-hisui",
         "legends-arceus-locations"
       ],
-      "notes": "Obszar ekspedycyjny wybierany z Jubilife Village; dostęp przez system wypraw/fast travel, nie zwykłą trasę pieszą."
+      "notes": "Dostęp przez wybór wyprawy/fast travel z Jubilife Village; to połączenie menu podróży, nie fizyczna droga na mapie."
     },
     {
       "id": "alabaster_icelands",
@@ -186,7 +195,8 @@
         "heart_s_crag",
         "arena_s_approach",
         "icebound_falls",
-        "glacier_terrace"
+        "glacier_terrace",
+        "jubilife_village"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -195,7 +205,7 @@
         "bulbapedia-hisui",
         "legends-arceus-locations"
       ],
-      "notes": "Obszar ekspedycyjny wybierany z Jubilife Village; dostęp przez system wypraw/fast travel, nie zwykłą trasę pieszą."
+      "notes": "Dostęp przez wybór wyprawy/fast travel z Jubilife Village; to połączenie menu podróży, nie fizyczna droga na mapie."
     },
     {
       "id": "ancient_quarry",
