@@ -837,3 +837,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Karty lokacji pokazują teraz powiązane źródła danych jako klikalne chipy; otwierają adres HTTP/HTTPS w zewnętrznej przeglądarce. Dzięki temu łatwiej sprawdzić, skąd pochodzi wpis i czy trzeba doprecyzować wariant gry.
 - Commit: `9f2560c`.
 - Nadal brak testu uruchomieniowego po zmianach UI; nie uruchamiano analyzer, testów ani APK.
+
+
+### Mapy — Galar: Wild Area z 18 podobszarami (2026-10-29)
+
+- Dodano 18 osobnych rekordów podobszarów Wild Area: Meetup Spot, Rolling Fields, jeziora Axewell/Miloch, Bridge Field, Dusty Bowl, Lake of Outrage i pozostałe nazwane strefy.
+- Połączono je z rekordem Wild Area oraz dodano potwierdzone punkty dostępu od Motostoke i Hammerlocke. Źródło: Bulbapedia — Wild Area (`https://bulbapedia.bulbagarden.net/wiki/Wild_Area`).
+- Indeks Galar wzrósł z 48 do 66 lokacji. Nazwy podobszarów są indeksowane, ale dokładne pinezki, granice podobszarów i warunki pogodowe nadal wymagają osobnej weryfikacji.
+- Commit: `05f2299`.
