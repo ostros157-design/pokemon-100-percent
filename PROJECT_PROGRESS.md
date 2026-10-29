@@ -1043,3 +1043,9 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Route 24 i Route 25 uwzględniają Squirtle jako specjalne spotkanie, a dane wodne pozostają osobną metodą.
 - Commit: `ad2ab21`. Nie uruchamiano Flutter analyzer, testów ani APK.
 
+### Mapy — dodatkowe spotkania na Route 2, 3 i 5 (2026-10-29)
+
+- Uzupełniono spotkania na niebie i spawny specjalne zgodnie z tabelami Serebii.
+- Route 3 uwzględnia Charmandera jako specjalne spotkanie. Route 2 wyjaśnia różnicę poziomów między częścią południową (3–4) i północną (3–8).
+- Commit: `cc77bd8`. Nie uruchamiano Flutter analyzer, testów ani APK.
+
