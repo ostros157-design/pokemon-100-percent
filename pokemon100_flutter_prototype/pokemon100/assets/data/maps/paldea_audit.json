@@ -179,19 +179,6 @@
       ]
     },
     {
-      "id": "glaseado_mountain",
-      "name": "Glaseado Mountain",
-      "kind": "town",
-      "connectsTo": [],
-      "localMapAsset": null,
-      "coordinateStatus": "unverified",
-      "dataStatus": "settlement_known_connections_pending_variant_and_dlc_audit",
-      "sourceIds": [
-        "bulbapedia-paldea",
-        "bulbapedia-scarlet-violet"
-      ]
-    },
-    {
       "id": "pok_mon_league",
       "name": "Pokémon League",
       "kind": "league",
