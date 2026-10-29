@@ -1191,3 +1191,8 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Powierzchniowe drogi są kremowo-złote, trasy wodne niebieskie i przerywane, a połączenia podziemne mają osobny, stonowany przerywany styl. Link Route 2–Diglett's Cave pozostaje wejściem powierzchniowym; połączenie Diglett's Cave–Route 11 oznacza przejście podziemne.
 - Commity: `77ec257`, `f0ff1c2`, `ee22d2c`, `7501fee`, `e3577e0`, `ae6d2b5`. Nie uruchamiano testów ani APK.
 
+### Mapy — Kanto: precyzyjniejsze wybieranie punktów przy powiększeniu (2026-10-29)
+
+- Promień dotknięcia punktów mapy i symboli Route 1 jest teraz przeliczany względem aktualnej skali powiększenia. Po mocnym zoomie dotknięcie nie powinno wybierać odległego punktu tylko dlatego, że dawny promień był liczony w jednostkach mapy.
+- Commit: `20e1c71`. Zmiana wymaga sprawdzenia dotykiem na urządzeniu; nie uruchamiano testów ani APK.
+
