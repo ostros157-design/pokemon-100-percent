@@ -605,7 +605,7 @@ class _MapsScreenState extends State<MapsScreen> {
                                 ),
                               ] else
                                 const Text(
-                                  'Mapa graficzna tego regionu nie została jeszcze przygotowana. Indeks poniżej pokazuje wyłącznie lokacje zapisane w poradnikach.',
+                                  'Dokładna mapa graficzna tego regionu nie została jeszcze przygotowana. Poniższy indeks offline pochodzi z pliku regionalnego; połączenia, wnętrza i pinezki wymagają dalszej weryfikacji dla wybranej wersji gry.',
                                 ),
                             ],
                           ),
