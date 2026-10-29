@@ -2842,9 +2842,10 @@
         "Camper Shane — Spearow Lv. 11"
       ],
       "items": [
-        "X Sp. Def",
-        "3 Razz Berries",
-        "3 Pinap Berries (ukryte)"
+        "X Sp. Def — na północny wschód od Nugget Bridge, po zachodniej stronie płaskowyżu dostępnego od Route 25; opis tekstowy, bez pinezki.",
+        "Pinap Berry ×3 — ukryte w krzaku na wschód od Nugget Bridge, dostępne od Route 25 (przedmiot dzienny).",
+        "Razz Berry / Silver Razz Berry / Golden Razz Berry — krzak na północny wschód od Nugget Bridge; partner Pokémon może znaleźć różny wariant (przedmiot dzienny).",
+        "Nugget — nagroda po pokonaniu pięciu trenerów na Nugget Bridge; wydarzenie z Team Rocket Grunt następuje przy północnym końcu mostu."
       ],
       "notablePokemon": [
         "Charmander Lv. 14 — gift"
@@ -3214,11 +3215,14 @@
         "Coach Trainer Amala — Machop Lv. 16"
       ],
       "items": [
-        "TM16",
-        "Lure",
-        "Super Potion",
-        "Ether",
-        "Nanab Berry (ukryta)"
+        "Super Potion — zachodnia strona żywopłotowego labiryntu, na północny zachód od Youngster Chad; pozycja opisana tekstowo, bez pinezki.",
+        "TM16 (Thunder Wave) — północno-wschodnia część labiryntu; dostęp po pokonaniu Camper Dustin lub użyciu Chop Down.",
+        "Ether — południowo-wschodnia część labiryntu, na południowy zachód od Lass Haley.",
+        "Lure — na południowy wschód od Sea Cottage.",
+        "Pinap Berry ×3 — ukryte w krzaku na wschód od Nugget Bridge, dostępne od Route 25 (przedmiot dzienny).",
+        "Nanab Berry ×3 — ukryte w krzaku na południe od Sea Cottage, na południowy zachód od dwóch stawów (przedmiot dzienny).",
+        "TM15 (Seismic Toss) — nagroda od Coach Trainer Amala po zwycięstwie; obok domu Billa.",
+        "S.S. Ticket ×2 — od Billa po zakończeniu wydarzenia w Sea Cottage."
       ],
       "features": [
         "Bill's House"
