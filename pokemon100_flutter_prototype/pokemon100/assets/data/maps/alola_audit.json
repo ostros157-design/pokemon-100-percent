@@ -156,10 +156,16 @@
       "id": "route_1",
       "name": "Route 1",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "iki_town",
+        "melemele_sea",
+        "hau_oli_city",
+        "ten_carat_hill",
+        "route_3"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_version_audit_pending",
       "sourceIds": [
         "bulbapedia-alola",
         "pokemony-alola"
@@ -169,10 +175,16 @@
       "id": "route_2",
       "name": "Route 2",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "verdant_cavern",
+        "hau_oli_cemetery",
+        "big_wave_beach",
+        "hau_oli_city",
+        "route_3"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_version_audit_pending",
       "sourceIds": [
         "bulbapedia-alola",
         "pokemony-alola"
@@ -182,10 +194,14 @@
       "id": "route_3",
       "name": "Route 3",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "melemele_meadow",
+        "route_1",
+        "route_2"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_version_audit_pending",
       "sourceIds": [
         "bulbapedia-alola",
         "pokemony-alola"
@@ -195,10 +211,14 @@
       "id": "route_4",
       "name": "Route 4",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "paniola_town",
+        "heahea_city",
+        "pikachu_valley"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_version_audit_pending",
       "sourceIds": [
         "bulbapedia-alola",
         "pokemony-alola"
@@ -208,10 +228,15 @@
       "id": "route_5",
       "name": "Route 5",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "lush_jungle",
+        "brooklet_hill",
+        "paniola_ranch",
+        "route_8"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_version_audit_pending",
       "sourceIds": [
         "bulbapedia-alola",
         "pokemony-alola"
@@ -221,10 +246,15 @@
       "id": "route_6",
       "name": "Route 6",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "paniola_ranch",
+        "royal_avenue",
+        "paniola_town",
+        "heahea_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_version_audit_pending",
       "sourceIds": [
         "bulbapedia-alola",
         "pokemony-alola"
@@ -234,10 +264,15 @@
       "id": "route_7",
       "name": "Route 7",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "dividing_peak_tunnel",
+        "wela_volcano_park",
+        "royal_avenue",
+        "route_8"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_version_audit_pending",
       "sourceIds": [
         "bulbapedia-alola",
         "pokemony-alola"
@@ -247,10 +282,14 @@
       "id": "route_8",
       "name": "Route 8",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_5",
+        "route_7",
+        "dividing_peak_tunnel"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_version_audit_pending",
       "sourceIds": [
         "bulbapedia-alola",
         "pokemony-alola"
@@ -260,10 +299,14 @@
       "id": "route_9",
       "name": "Route 9",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "diglett_s_tunnel",
+        "memorial_hill",
+        "konikoni_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_version_audit_pending",
       "sourceIds": [
         "bulbapedia-alola",
         "pokemony-alola"
@@ -273,10 +316,13 @@
       "id": "route_10",
       "name": "Route 10",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "mount_hokulani",
+        "malie_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_version_audit_pending",
       "sourceIds": [
         "bulbapedia-alola",
         "pokemony-alola"
@@ -286,10 +332,13 @@
       "id": "route_11",
       "name": "Route 11",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "malie_city",
+        "route_12"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_version_audit_pending",
       "sourceIds": [
         "bulbapedia-alola",
         "pokemony-alola"
@@ -299,10 +348,15 @@
       "id": "route_12",
       "name": "Route 12",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "blush_mountain",
+        "route_11",
+        "ulaula_beach",
+        "route_13"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_version_audit_pending",
       "sourceIds": [
         "bulbapedia-alola",
         "pokemony-alola"
@@ -312,10 +366,14 @@
       "id": "route_13",
       "name": "Route 13",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "haina_desert",
+        "route_12",
+        "tapu_village"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_version_audit_pending",
       "sourceIds": [
         "bulbapedia-alola",
         "pokemony-alola"
@@ -325,10 +383,13 @@
       "id": "route_14",
       "name": "Route 14",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "tapu_village",
+        "thrifty_megamart"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_version_audit_pending",
       "sourceIds": [
         "bulbapedia-alola",
         "pokemony-alola"
@@ -338,10 +399,13 @@
       "id": "route_15",
       "name": "Route 15",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "route_16",
+        "tapu_village"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_version_audit_pending",
       "sourceIds": [
         "bulbapedia-alola",
         "pokemony-alola"
@@ -351,10 +415,13 @@
       "id": "route_16",
       "name": "Route 16",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "ulaula_meadow",
+        "route_15"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_version_audit_pending",
       "sourceIds": [
         "bulbapedia-alola",
         "pokemony-alola"
@@ -364,10 +431,13 @@
       "id": "route_17",
       "name": "Route 17",
       "kind": "route",
-      "connectsTo": [],
+      "connectsTo": [
+        "po_town",
+        "ulaula_meadow"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "route_known_topology_pending_game_variant_audit",
+      "dataStatus": "route_topology_indexed_version_audit_pending",
       "sourceIds": [
         "bulbapedia-alola",
         "pokemony-alola"
@@ -723,6 +793,239 @@
         "bulbapedia-alola",
         "pokemony-alola"
       ]
+    },
+    {
+      "id": "paniola_ranch",
+      "name": "Paniola Ranch",
+      "kind": "ranch",
+      "connectsTo": [
+        "route_5",
+        "route_6"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ],
+      "dataStatus": "connection_indexed_version_audit_pending"
+    },
+    {
+      "id": "pikachu_valley",
+      "name": "Pikachu Valley",
+      "kind": "area",
+      "connectsTo": [
+        "route_4"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ],
+      "dataStatus": "connection_indexed_version_audit_pending"
+    },
+    {
+      "id": "royal_avenue",
+      "name": "Royal Avenue",
+      "kind": "settlement",
+      "connectsTo": [
+        "route_6",
+        "route_7"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ],
+      "dataStatus": "connection_indexed_version_audit_pending"
+    },
+    {
+      "id": "dividing_peak_tunnel",
+      "name": "Dividing Peak Tunnel",
+      "kind": "tunnel",
+      "connectsTo": [
+        "route_7",
+        "route_8"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ],
+      "dataStatus": "connection_indexed_version_audit_pending"
+    },
+    {
+      "id": "blush_mountain",
+      "name": "Blush Mountain",
+      "kind": "mountain",
+      "connectsTo": [
+        "route_12"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ],
+      "dataStatus": "connection_indexed_version_audit_pending"
+    },
+    {
+      "id": "ulaula_beach",
+      "name": "Ula'ula Beach",
+      "kind": "beach",
+      "connectsTo": [
+        "route_12"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ],
+      "dataStatus": "connection_indexed_version_audit_pending"
+    },
+    {
+      "id": "ulaula_meadow",
+      "name": "Ula'ula Meadow",
+      "kind": "meadow",
+      "connectsTo": [
+        "route_16",
+        "route_17"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ],
+      "dataStatus": "connection_indexed_version_audit_pending"
+    },
+    {
+      "id": "big_wave_beach",
+      "name": "Big Wave Beach",
+      "kind": "beach",
+      "connectsTo": [
+        "route_2",
+        "sandy_cave"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ],
+      "dataStatus": "connection_indexed_version_audit_pending"
+    },
+    {
+      "id": "sandy_cave",
+      "name": "Sandy Cave",
+      "kind": "cave",
+      "connectsTo": [
+        "big_wave_beach"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ],
+      "dataStatus": "connection_indexed_version_audit_pending"
+    },
+    {
+      "id": "seaward_cave",
+      "name": "Seaward Cave",
+      "kind": "cave",
+      "connectsTo": [
+        "melemele_meadow",
+        "kalae_bay"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ],
+      "dataStatus": "connection_indexed_version_audit_pending"
+    },
+    {
+      "id": "kalae_bay",
+      "name": "Kala'e Bay",
+      "kind": "bay",
+      "connectsTo": [
+        "seaward_cave"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ],
+      "dataStatus": "connection_indexed_version_audit_pending"
+    },
+    {
+      "id": "mahalo_trail",
+      "name": "Mahalo Trail",
+      "kind": "trail",
+      "connectsTo": [
+        "iki_town",
+        "ruins_of_conflict"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ],
+      "dataStatus": "connection_indexed_version_audit_pending"
+    },
+    {
+      "id": "ruins_of_conflict",
+      "name": "Ruins of Conflict",
+      "kind": "ruins",
+      "connectsTo": [
+        "mahalo_trail"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ],
+      "dataStatus": "connection_indexed_version_audit_pending"
+    },
+    {
+      "id": "ruins_of_life",
+      "name": "Ruins of Life",
+      "kind": "ruins",
+      "connectsTo": [
+        "akala_outskirts"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ],
+      "dataStatus": "connection_indexed_version_audit_pending"
+    },
+    {
+      "id": "paniola_ranch",
+      "name": "Paniola Ranch",
+      "kind": "ranch",
+      "connectsTo": [
+        "route_5",
+        "route_6"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "pokemony-alola"
+      ],
+      "dataStatus": "connection_indexed_version_audit_pending"
     }
   ]
 }
