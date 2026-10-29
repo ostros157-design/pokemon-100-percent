@@ -1045,7 +1045,7 @@ class _MapsScreenState extends State<MapsScreen> {
                                       ),
                                       const SizedBox(height: 8),
                                       const Text(
-                                        'Poniżej znajduje się schematyczna mapa Kanto rysowana przez aplikację, więc działa bez internetu. Zawiera 74 wybieralne lokacje i 83 połączenia, w tym trasy, miasta, jaskinie, sale i wybrane wnętrza. To nadal nie jest mapa w skali ani dokładna kopia map z gry.',
+                                        'Poniżej znajduje się offline’owa, wektorowo rysowana ilustracja Kanto. Zawiera 74 wybieralne lokacje i 83 połączenia, z malowanymi lasami, górami, miasteczkami, wybrzeżem i wejściami do jaskiń. Kształty terenu i pozycje węzłów są artystycznym schematem, nie mapą w skali ani dokładną kopią map z gry. Wektorowe elementy pozostają gładkie przy powiększaniu.',
                                       ),
                                       const SizedBox(height: 10),
                                       const Text(
@@ -1054,7 +1054,7 @@ class _MapsScreenState extends State<MapsScreen> {
                                       ),
                                       const SizedBox(height: 4),
                                       const Text(
-                                        '• Po wybraniu węzła mapa pokazuje dane dostępne dla tej lokacji. Szczegółowe plany lokalne są na razie przygotowane tylko dla części miejsc.\n• Pozycje węzłów są poglądowe. Dokładne pinezki przedmiotów, trenerów i Pokémonów wymagają osobnej weryfikacji.',
+                                        '• Rysunki lasów, gór, budynków i jaskiń są dekoracyjną warstwą wektorową; nie oznaczają dokładnych kafelków z gry.\n• Po wybraniu węzła mapa pokazuje dane dostępne dla tej lokacji. Szczegółowe plany lokalne są na razie przygotowane tylko dla części miejsc.\n• Pozycje węzłów są poglądowe. Dokładne pinezki przedmiotów, trenerów i Pokémonów wymagają osobnej weryfikacji.',
                                       ),
                                       const SizedBox(height: 12),
                                       _KantoRegionMap(
@@ -1083,8 +1083,16 @@ class _MapsScreenState extends State<MapsScreen> {
                                             label: Text('Trasy'),
                                           ),
                                           Chip(
+                                            avatar: Icon(Icons.park_outlined, size: 18),
+                                            label: Text('Ilustrowane lasy'),
+                                          ),
+                                          Chip(
                                             avatar: Icon(Icons.landscape_outlined, size: 18),
-                                            label: Text('Jaskinie / wnętrza'),
+                                            label: Text('Góry i jaskinie'),
+                                          ),
+                                          Chip(
+                                            avatar: Icon(Icons.home_work_outlined, size: 18),
+                                            label: Text('Rysowane budynki'),
                                           ),
                                           Chip(
                                             avatar: Icon(Icons.catching_pokemon, size: 18),
