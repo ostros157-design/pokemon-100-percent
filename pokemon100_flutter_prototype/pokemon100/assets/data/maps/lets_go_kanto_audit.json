@@ -1082,9 +1082,9 @@
       "kind": "route",
       "connectsTo": [
         "pewter_city",
-        "digletts_cave",
         "viridian_city",
-        "viridian_forest"
+        "viridian_forest",
+        "digletts_cave_route2_entrance"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -6035,8 +6035,8 @@
       "name": "Route 11",
       "kind": "route",
       "connectsTo": [
-        "digletts_cave",
-        "vermilion_city"
+        "vermilion_city",
+        "digletts_cave_route11_entrance"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -6410,8 +6410,8 @@
       "name": "Diglett's Cave",
       "kind": "cave",
       "connectsTo": [
-        "route_11",
-        "route_2"
+        "digletts_cave_route2_entrance",
+        "digletts_cave_route11_entrance"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -13101,6 +13101,56 @@
         "bulbapedia-sea-cottage"
       ],
       "dataStatus": "location_indexed_interior_not_mapped"
+    },
+    {
+      "id": "digletts_cave_route2_entrance",
+      "name": "Diglett's Cave (Route 2 entrance)",
+      "kind": "entrance",
+      "connectsTo": [
+        "route_2",
+        "digletts_cave"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "features": [
+        {
+          "id": "route2_entrance",
+          "name": "Entrance from Route 2",
+          "category": "entrance",
+          "status": "text_verified"
+        }
+      ],
+      "notes": "Separate map marker for the Route 2 entrance to Diglett's Cave. Its drawn position is schematic and does not claim exact tile coordinates.",
+      "sourceIds": [
+        "routepedia-route2-pikachu",
+        "rotomlabs-digletts-cave"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
+    },
+    {
+      "id": "digletts_cave_route11_entrance",
+      "name": "Diglett's Cave (Route 11 entrance)",
+      "kind": "entrance",
+      "connectsTo": [
+        "route_11",
+        "digletts_cave"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "features": [
+        {
+          "id": "route11_entrance",
+          "name": "Entrance from Route 11",
+          "category": "entrance",
+          "status": "text_verified"
+        }
+      ],
+      "notes": "Separate map marker for the Route 11 entrance to Diglett's Cave. The connection to the cave is drawn as an underground passage; no exact tile coordinates are claimed.",
+      "sourceIds": [
+        "routepedia-route11-pikachu",
+        "rotomlabs-digletts-cave"
+      ],
+      "dataStatus": "text_verified_positions_not_mapped"
     }
   ],
   "region": "Kanto (Let's Go)",
