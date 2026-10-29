@@ -65,7 +65,8 @@
       "kind": "town",
       "connectsTo": [
         "route_4",
-        "route_6"
+        "route_6",
+        "aether_paradise"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -141,10 +142,13 @@
       "id": "seafolk_village",
       "name": "Seafolk Village",
       "kind": "town",
-      "connectsTo": [],
+      "connectsTo": [
+        "ancient_poni_path",
+        "poni_wilds"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "settlement_known_connections_pending_game_variant_audit",
+      "dataStatus": "landmark_connection_indexed_version_audit_pending",
       "sourceIds": [
         "bulbapedia-alola",
         "pokemony-alola"
@@ -346,7 +350,8 @@
       "kind": "route",
       "connectsTo": [
         "mount_hokulani",
-        "malie_city"
+        "malie_city",
+        "hokulani_observatory"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -656,10 +661,12 @@
       "id": "aether_paradise",
       "name": "Aether Paradise",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "heahea_city"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_version_audit_pending",
       "sourceIds": [
         "bulbapedia-alola",
         "pokemony-alola"
@@ -685,7 +692,8 @@
       "name": "Mount Hokulani",
       "kind": "location",
       "connectsTo": [
-        "route_10"
+        "route_10",
+        "hokulani_observatory"
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
@@ -699,10 +707,13 @@
       "id": "hokulani_observatory",
       "name": "Hokulani Observatory",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "mount_hokulani",
+        "route_10"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_version_audit_pending",
       "sourceIds": [
         "bulbapedia-alola",
         "pokemony-alola"
@@ -712,10 +723,12 @@
       "id": "lake_of_the_sunne",
       "name": "Lake of the Sunne",
       "kind": "location",
-      "connectsTo": [],
+      "connectsTo": [
+        "altar_of_the_sunne"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_version_audit_pending",
       "sourceIds": [
         "bulbapedia-alola",
         "pokemony-alola"
@@ -725,10 +738,12 @@
       "id": "lake_of_the_moone",
       "name": "Lake of the Moone",
       "kind": "location",
-      "connectsTo": [],
+      "connectsTo": [
+        "altar_of_the_moone"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_version_audit_pending",
       "sourceIds": [
         "bulbapedia-alola",
         "pokemony-alola"
@@ -738,10 +753,14 @@
       "id": "vast_poni_canyon",
       "name": "Vast Poni Canyon",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "poni_plains",
+        "altar_of_the_sunne",
+        "altar_of_the_moone"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_version_audit_pending",
       "sourceIds": [
         "bulbapedia-alola",
         "pokemony-alola"
@@ -751,10 +770,12 @@
       "id": "resolution_cave",
       "name": "Resolution Cave",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "poni_grove"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_version_audit_pending",
       "sourceIds": [
         "bulbapedia-alola",
         "pokemony-alola"
@@ -764,10 +785,14 @@
       "id": "poni_grove",
       "name": "Poni Grove",
       "kind": "natural_area",
-      "connectsTo": [],
+      "connectsTo": [
+        "poni_plains",
+        "poni_meadow",
+        "resolution_cave"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_version_audit_pending",
       "sourceIds": [
         "bulbapedia-alola",
         "pokemony-alola"
@@ -777,10 +802,13 @@
       "id": "poni_meadow",
       "name": "Poni Meadow",
       "kind": "natural_area",
-      "connectsTo": [],
+      "connectsTo": [
+        "poni_grove",
+        "poni_plains"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_version_audit_pending",
       "sourceIds": [
         "bulbapedia-alola",
         "pokemony-alola"
@@ -790,10 +818,16 @@
       "id": "poni_plains",
       "name": "Poni Plains",
       "kind": "natural_area",
-      "connectsTo": [],
+      "connectsTo": [
+        "poni_grove",
+        "poni_meadow",
+        "poni_gauntlet",
+        "vast_poni_canyon",
+        "poni_breaker_coast"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_version_audit_pending",
       "sourceIds": [
         "bulbapedia-alola",
         "pokemony-alola"
@@ -803,10 +837,12 @@
       "id": "poni_gauntlet",
       "name": "Poni Gauntlet",
       "kind": "location",
-      "connectsTo": [],
+      "connectsTo": [
+        "poni_plains"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_version_audit_pending",
       "sourceIds": [
         "bulbapedia-alola",
         "pokemony-alola"
@@ -816,10 +852,14 @@
       "id": "altar_of_the_sunne",
       "name": "Altar of the Sunne",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "vast_poni_canyon",
+        "lake_of_the_sunne",
+        "ultra_space"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_version_audit_pending",
       "sourceIds": [
         "bulbapedia-alola",
         "pokemony-alola"
@@ -829,10 +869,14 @@
       "id": "altar_of_the_moone",
       "name": "Altar of the Moone",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "vast_poni_canyon",
+        "lake_of_the_moone",
+        "ultra_space"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_version_audit_pending",
       "sourceIds": [
         "bulbapedia-alola",
         "pokemony-alola"
@@ -842,10 +886,13 @@
       "id": "ultra_space",
       "name": "Ultra Space",
       "kind": "landmark",
-      "connectsTo": [],
+      "connectsTo": [
+        "altar_of_the_sunne",
+        "altar_of_the_moone"
+      ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "dataStatus": "landmark_known_entrance_connections_pending_verification",
+      "dataStatus": "landmark_connection_indexed_version_audit_pending",
       "sourceIds": [
         "bulbapedia-alola",
         "pokemony-alola"
@@ -865,7 +912,7 @@
         "bulbapedia-alola",
         "pokemony-alola"
       ],
-      "dataStatus": "connection_indexed_version_audit_pending"
+      "dataStatus": "landmark_connection_indexed_version_audit_pending"
     },
     {
       "id": "pikachu_valley",
@@ -1067,6 +1114,53 @@
         "pokemony-alola"
       ],
       "dataStatus": "connection_indexed_version_audit_pending"
+    },
+    {
+      "id": "ancient_poni_path",
+      "name": "Ancient Poni Path",
+      "kind": "path",
+      "connectsTo": [
+        "seafolk_village",
+        "poni_wilds"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "location_connection_indexed_version_audit_pending"
+    },
+    {
+      "id": "poni_wilds",
+      "name": "Poni Wilds",
+      "kind": "area",
+      "connectsTo": [
+        "ancient_poni_path",
+        "seafolk_village"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "location_connection_indexed_version_audit_pending"
+    },
+    {
+      "id": "poni_breaker_coast",
+      "name": "Poni Breaker Coast",
+      "kind": "coast",
+      "connectsTo": [
+        "poni_plains"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-alola",
+        "bulbapedia-route-list"
+      ],
+      "dataStatus": "location_connection_indexed_version_audit_pending"
     }
   ]
 }
