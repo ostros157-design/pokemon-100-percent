@@ -1697,5 +1697,5 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Poradnik ma teraz **165 kroków łącznie**, w tym **136 kroków kontynuacji Emerald**. Szacowana kompletność treści wzrasta z około 81% do około **91% (+10 p.p.)**. To ocena pokrycia tematów i szczegółowości, nie postęp gracza.
 - Kontrola statyczna: 165 wystąpień GuideStep, 136 w kontynuacji Emerald, 39 tabel encounterów — każda suma wynosi 100%; delimitery nawiasów są zbilansowane. Nie uruchamiano Flutter Analyzer, testów ani APK.
 - Źródła: Bulbapedia Emerald Part 16–19; pomocniczo zestawienia Gym Leaders i Elite Four dla Emerald. Dane dot. Juana, trenerów Victory Road, Wally’ego i pełnych składów Ligi sprawdzono w tabelach gry.
-- Commit danych: `a581ae76d8f19416be2512cc09e19fbe0053c083`.
+- Commity danych: `a581ae76d8f19416be2512cc09e19fbe0053c083` oraz `87a3676dd7e00a1d1fdba6de9b158641150b49b5` (korekta: z listy Pokémonów usunięto imiona postaci ludzkich z wydarzenia Rayquazy).
 
