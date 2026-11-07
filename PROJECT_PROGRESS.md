@@ -1652,3 +1652,16 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Nowa wersja poradnika ma 137 kroków łącznie, z czego 108 w kontynuacji Emerald. To rozszerzenie obejmuje znaczny fragment głównej trasy i opcjonalnej zawartości; szacowana kompletność poradnika wzrasta z 51% do około 61% (+10 p.p.). Procent jest audytem pokrycia treści, nie postępem gracza.
 - Kontrola statyczna: sprawdzono liczbę kroków i zachowanie granic listy; nie uruchamiano Flutter Analyzer, testów ani APK. Dane źródłowe: Bulbapedia Emerald Part 11 i Part 12; pomocniczo Quest Compendium dla szczegółów Fortree Gym i Mt. Pyre.
 - Commit danych: `102989e3cbebff4b1cd203dbace7799e4dca5d25`; korekta listy Pokémonów Mt. Pyre: `01f991d1940ea03b49bd981c08e0a74e3f041598`.
+
+
+### Poradnik Emerald — Magma Hideout, Slateport, Lilycove i Aqua Hideout (2026-11-07)
+
+- Zastąpiono ogólny krok Magma Hideout szczegółowym przejściem: odblokowanie wejścia na Jagged Pass, wymaganie Strength, składy Gruntów, Double Battles, dzikie spotkania (Geodude 55%, Torkoal 30%, Graveler 15%) i pełna lista głównych przedmiotów.
+- Dodano dokładne drużyny Tabithy (Numel 26, Mightyena 28, Zubat 30, Camerupt 33) oraz Maxiego (Mightyena 37, Crobat 38, Camerupt 39) i ruchy Maxiego. Opisano przebudzenie Groudona, Blue Orb i drogę wyjścia z bazy.
+- Rozpisano wydarzenie w Slateport Harbor z Kapitanem Sternem, Archiem i kradzieżą łodzi podwodnej.
+- Lilycove uzupełniono o procenty Surf i wędkowania, ukryte przedmioty na plaży, TM44 Rest, Pokéblock Case, Move Deleter i codzienną jagodę. Dodano piątą walkę z rywalem z wariantami dla trzech starterów.
+- Aqua Hideout otrzymało trasę po panelach teleportacyjnych, listę Gruntów i ich Pokémonów, ostrzeżenie o dwóch Electrode Lv.30 podszywających się pod przedmioty, lokalizację Master Ball, Nugget, Max Elixir i Nest Ball oraz pełny skład Matta (Mightyena 34, Golbat 34) z ruchami.
+- Łącznie poradnik ma teraz 142 kroków, z czego 113 w kontynuacji Emerald. Szacowana kompletność wzrasta z 61% do około 71% (+10 p.p.). To audyt pokrycia treści, a nie postęp gracza.
+- Kontrola danych: każda nowa tabela procentowa spotkań została sprawdzona na sumę 100%; walidacja składni i nawiasów wykonana po zapisie. Nie uruchamiano Flutter Analyzer, testów ani APK.
+- Źródła: Bulbapedia Emerald Part 12 i Part 13; Quest Compendium użyto pomocniczo do weryfikacji sekwencji Aqua Hideout.
+- Commit danych: `746aee6a30bf0d6c2b0e914e2ae57dd68dec1f08`.
