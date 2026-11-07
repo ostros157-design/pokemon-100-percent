@@ -141,6 +141,8 @@ class _TeamScreenState extends State<TeamScreen> {
     );
     if (_activeTeamId != null) {
       await prefs.setString(_activeTeamStorageKey, _activeTeamId!);
+    } else {
+      await prefs.remove(_activeTeamStorageKey);
     }
   }
 
