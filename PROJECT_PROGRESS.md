@@ -1,3 +1,18 @@
+### Poradnik Pokémon Emerald — dalsze szczegóły tras 109–118 (2026-11-07)
+
+<badge color="success">Szacowana kompletność poradnika: 44%</badge>
+
+- Liczba kroków: **103** (16 początkowych + 87 kontynuacji). To liczba pozycji checklisty, nie procent ukończenia zawartości.
+- Route 109: dodano pierwsze składy plażowych trenerów, poziomy Pokémonów i dwa przedmioty do zebrania (Heart Scale, PP Up).
+- Route 110: dodano trenerów Isabel, Kaleb, Timmy, Edwin, Joseph, Edward, Alyssa i Dale, skład drużyny rywala pozostaje w oddzielnym kroku; dodano procenty spotkań w trawie (Electrike 30%, Poochyena 20%, Minun 15%, Gulpin 15%, Oddish 10%, Wingull 8%, Plusle 2%) i listę przedmiotów.
+- Route 117: dodano 9 pierwszych walk, procenty spotkań w trawie i przedmioty. Zaznaczono możliwość walk podwójnych i oddzielono dane pierwszych walk od późniejszych rewanżów.
+- Route 118 (zachodni brzeg): dodano czterech trenerów, spotkania z Old Rod oraz ukryty Heart Scale.
+- Źródła szczegółów Route 109: Bulbapedia Part 8 https://bulbapedia.bulbagarden.net/wiki/Walkthrough:Pok%C3%A9mon_Emerald/Part_8 . Route 110: Bulbapedia Part 4 https://bulbapedia.bulbagarden.net/wiki/Walkthrough:Pok%C3%A9mon_Emerald/Part_4 . Route 117 i zachodnia część Route 118: Bulbapedia Part 5 https://bulbapedia.bulbagarden.net/wiki/Walkthrough:Pok%C3%A9mon_Emerald/Part_5 .
+- Commit danych: `a5550e0` (Route 109/110), `6c2d13e` (Route 117/118).
+- **Metoda szacowania kompletności 44%:** ważony audyt dziesięciu obszarów (główna trasa 20%, walki bossów 15%, trenerzy 15%, spotkania dzikich Pokémonów 10%, przedmioty/TM/HM 10%, post-game 10%, Battle Frontier 8%, legendarne Pokémony 5%, eventy specjalne 4%, Pokédex/hodowla/wymiany 3%). Oceny pokrycia: odpowiednio 70%, 75%, 18%, 17%, 10%, 55%, 70%, 45%, 0%, 10%. Wynik ważony to 44% po zaokrągleniu. To szacunek zakresu i szczegółowości treści, nie licznik ukończonych kroków w aplikacji.
+- Następne: kontynuować pełne listy trenerów i przedmiotów dla Route 111–123, uzupełnić encounter rates dla wszystkich metod (trawa, Surf, wędki, Rock Smash), a potem wrócić do eventów i Pokédexu.
+- Nie uruchomiono Flutter Analyzer, testów ani APK. Zmiany nie są potwierdzone na urządzeniu.
+
 ### Poradnik Pokémon Emerald — Battle Frontier, post-game i spotkania Safari Zone (2026-11-07)
 
 - Rozbudowano poradnik Emerald do **99 kroków**: 16 pierwotnych kroków + 83 kroki kontynuacji.
