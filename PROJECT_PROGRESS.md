@@ -1,3 +1,11 @@
+### Poradniki — Pokémon Emerald: początek przygody (2026-11-07)
+
+- Dodano osobny poradnik dla `emerald` w wyborze gier. Pierwsza część prowadzi od Littleroot Town przez Route 101, Oldale, Route 103, Route 102, Petalburg City, Route 104 i Petalburg Woods do pierwszej odznaki w Rustboro City.
+- Dodano 16 kroków, w tym startery, pierwszą walkę rywala, samouczek Wally’ego, przedmioty, spotkania z Team Aqua, przygotowanie do Gymu i Roxanne.
+- Uzupełniono procentowe szanse spotkań w trawie dla Route 101, 103, 102, 104 i Petalburg Woods; Pokémony w tych listach pozostają klikalne i prowadzą do Pokédexu. Wyświetlanie procentów, ikony Poké Ball i klikalność wykorzystują istniejący `GuideStepCard`.
+- Dane spotkań i przebieg fabuły sprawdzono z poradnikiem Bulbapedia dla Pokémon Emerald, części 1 i 2. Źródła: https://bulbapedia.bulbagarden.net/wiki/Walkthrough:Pok%C3%A9mon_Emerald/Part_1 oraz https://bulbapedia.bulbagarden.net/wiki/Walkthrough:Pok%C3%A9mon_Emerald/Part_2.
+- To pierwsza część poradnika Emerald, a nie komplet całej gry. Nie uruchomiono Flutter analyzer, testów ani kompilacji APK; wymagane sprawdzenie w aplikacji.
+
 ### Pokédex — wygląd kart przypisany do typu Pokémona (2026-11-07)
 
 - Kolor tekstu nazwy i numeru oraz emoji są teraz zapisywane według pierwszego (głównego) typu Pokémona, a nie osobno dla każdego gatunku.
