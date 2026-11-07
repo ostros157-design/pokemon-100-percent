@@ -167,7 +167,7 @@ class GuideStepCard extends StatelessWidget {
     ];
     for (final trainerClass in classes) {
       final pattern = RegExp(
-        '\${RegExp.escape(trainerClass)}\\s+([A-ZÀ-Ż][a-zà-ż’\\-]+)',
+        '${RegExp.escape(trainerClass)}\\s+([A-ZÀ-Ż][a-zà-ż’\\-]+)',
       );
       for (final match in pattern.allMatches(step.description)) {
         final name = match.group(1);
@@ -177,7 +177,6 @@ class GuideStepCard extends StatelessWidget {
 
     final namedBattles = RegExp(
       r'(?:Pokonaj|zmierz się z|walcz z)\s+([A-ZÀ-Ż][a-zà-ż’\-]+)',
-      caseSensitive: false,
     );
     for (final match in namedBattles.allMatches(step.title)) {
       final name = match.group(1);
@@ -198,7 +197,7 @@ class GuideStepCard extends StatelessWidget {
       dense: true,
       visualDensity: VisualDensity.compact,
       childrenPadding: const EdgeInsets.only(bottom: 4),
-      title: Text('Pokaż (\${chips.length})'),
+      title: Text('Pokaż (${chips.length})'),
       children: [Wrap(spacing: 6, runSpacing: 6, children: chips)],
     );
   }
