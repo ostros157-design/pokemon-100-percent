@@ -1,3 +1,19 @@
+### Poradnik Pokémon Emerald — Route 111–114 i Meteor Falls (2026-11-07)
+
+- Rozbudowano poradnik do **111 kroków** (16 kroków podstawowych + 95 kontynuacji).
+- Route 111 (południe): dodano pierwszych trenerów, rodzinę Winstrate z czterema walkami z rzędu, Macho Brace, Elixir oraz walki na odcinku wymagającym Rock Smash.
+- Route 112: rozpisano trenerów południowego i północnego odcinka, spotkania w trawie (Numel 75%, Marill 25%) i jagody przy wyjściu z Fiery Path.
+- Fiery Path: dodano pełną tabelę spotkań (Numel 30%, Koffing 25%, Torkoal 18%, Machop 15%, Slugma 10%, Grimer 2%).
+- Route 111 (północ): dodano składy Wiltona, Brooke i Daisuke, wymóg Mach Bike, leczenie w domu oraz TM43 i jagody.
+- Route 113: dodano pierwsze walki trenerów, procenty spotkań w trawie, listę przedmiotów, Soot Sack i wymiany popiołu na przedmioty ze szkła.
+- Fallarbor Town: dodano usługi Move Maniac, jednorazowego tutora Metronome, Battle Tent, Lanette i ukryty Nugget.
+- Route 114: dodano składy pierwszych trenerów, spotkania w trawie i przedmioty. Meteor Falls otrzymało spotkania z podziałem na jaskinię i Old Rod oraz Full Heal i Moon Stone.
+- Źródło danych tras 111–114 i Meteor Falls: Bulbapedia Emerald Part 6 https://bulbapedia.bulbagarden.net/wiki/Walkthrough:Pok%C3%A9mon_Emerald/Part_6 . Opis głównego wydarzenia w Meteor Falls i danych Route 115 będzie rozwijany w następnym etapie.
+- Commit danych: `578c254`.
+- Walidacja statyczna tekstu Dart: nawiasy klamrowe, okrągłe i kwadratowe są zbilansowane. Nie uruchomiono Flutter Analyzer, testów ani APK.
+- **Szacowana kompletność poradnika: 48%** — aktualizacja ważonego audytu: główna trasa 78%, bossowie 75%, trenerzy 24%, dzikie spotkania 24%, przedmioty/TM/HM 17%, post-game 55%, Battle Frontier 70%, legendarne 45%, eventy 0%, Pokédex/hodowla/wymiany 10%. Wynik ważony: 48,2%, po zaokrągleniu 48%. To szacunek zakresu i szczegółowości, nie procent odhaczonych kroków.
+- Następne: Route 115 (w tym obszary dostępne po Surf), a potem powrót do pełniejszych list Route 119–123.
+
 ### Poradnik Pokémon Emerald — dalsze szczegóły tras 109–118 (2026-11-07)
 
 <badge color="success">Szacowana kompletność poradnika: 44%</badge>
