@@ -88,8 +88,14 @@ class _TeamScreenState extends State<TeamScreen> {
     }
 
     final activeId = prefs.getString(_activeTeamStorageKey);
-    final active = restoredTeams.where((team) => team.id == activeId).firstOrNull
-        ?? (restoredTeams.isNotEmpty ? restoredTeams.first : null);
+    _SavedTeam? active;
+    for (final team in restoredTeams) {
+      if (team.id == activeId) {
+        active = team;
+        break;
+      }
+    }
+    active ??= restoredTeams.isNotEmpty ? restoredTeams.first : null;
     if (!mounted) return;
     setState(() {
       _savedTeams
