@@ -197,12 +197,12 @@ class _TeamScreenState extends State<TeamScreen> {
       );
       return;
     }
-    final selectedId = await showModalBottomSheet<String>(
+    final action = await showModalBottomSheet<String>(
       context: context,
       showDragHandle: true,
       builder: (sheetContext) => SafeArea(
         child: SizedBox(
-          height: MediaQuery.of(sheetContext).size.height * 0.65,
+          height: MediaQuery.of(sheetContext).size.height * 0.7,
           child: ListView(
             padding: const EdgeInsets.all(16),
             children: [
@@ -213,10 +213,22 @@ class _TeamScreenState extends State<TeamScreen> {
                   leading: const Icon(Icons.groups),
                   title: Text(saved.name),
                   subtitle: Text('${saved.pokemonIds.length}/6 Pokémonów · ${_games[saved.gameId] ?? saved.gameId}'),
-                  trailing: _activeTeamId == saved.id
-                      ? const Icon(Icons.check_circle, color: Colors.green)
-                      : const Icon(Icons.chevron_right),
-                  onTap: () => Navigator.pop(sheetContext, saved.id),
+                  trailing: PopupMenuButton<String>(
+                    tooltip: 'Opcje drużyny',
+                    onSelected: (choice) => Navigator.pop(sheetContext, '$choice:${saved.id}'),
+                    itemBuilder: (context) => const [
+                      PopupMenuItem(value: 'load', child: ListTile(
+                        dense: true, leading: Icon(Icons.folder_open), title: Text('Wczytaj'),
+                      )),
+                      PopupMenuItem(value: 'copy', child: ListTile(
+                        dense: true, leading: Icon(Icons.copy), title: Text('Utwórz kopię'),
+                      )),
+                      PopupMenuItem(value: 'delete', child: ListTile(
+                        dense: true, leading: Icon(Icons.delete_outline), title: Text('Usuń'),
+                      )),
+                    ],
+                  ),
+                  onTap: () => Navigator.pop(sheetContext, 'load:${saved.id}'),
                 ),
               )),
             ],
@@ -224,25 +236,86 @@ class _TeamScreenState extends State<TeamScreen> {
         ),
       ),
     );
-    if (selectedId == null || !mounted) return;
+    if (action == null || !mounted) return;
+    final separator = action.indexOf(':');
+    if (separator < 0) return;
+    final command = action.substring(0, separator);
+    final teamId = action.substring(separator + 1);
     _SavedTeam? selected;
     for (final team in _savedTeams) {
-      if (team.id == selectedId) {
+      if (team.id == teamId) {
         selected = team;
         break;
       }
     }
     if (selected == null) return;
-    setState(() {
-      _activeTeamId = selected.id;
-      _team = _pokemonFromIds(selected.pokemonIds);
-      _nameController.text = selected.name;
-      _selectedGame = _games.containsKey(selected.gameId)
-          ? selected.gameId
-          : TeamRecommendationService.supportedGameId;
-      _status = 'Wczytano drużynę „${selected.name}”.';
-    });
-    await _persistSavedTeams();
+
+    if (command == 'load') {
+      setState(() {
+        _activeTeamId = selected!.id;
+        _team = _pokemonFromIds(selected.pokemonIds);
+        _nameController.text = selected.name;
+        _selectedGame = _games.containsKey(selected.gameId)
+            ? selected.gameId
+            : TeamRecommendationService.supportedGameId;
+        _status = 'Wczytano drużynę „${selected.name}”.';
+      });
+      await _persistSavedTeams();
+      return;
+    }
+
+    if (command == 'copy') {
+      final copy = _SavedTeam(
+        id: DateTime.now().microsecondsSinceEpoch.toString(),
+        name: '${selected.name} — kopia',
+        gameId: selected.gameId,
+        pokemonIds: List<int>.from(selected.pokemonIds),
+      );
+      setState(() {
+        _savedTeams.add(copy);
+        _activeTeamId = copy.id;
+        _team = _pokemonFromIds(copy.pokemonIds);
+        _nameController.text = copy.name;
+        _selectedGame = _games.containsKey(copy.gameId)
+            ? copy.gameId
+            : TeamRecommendationService.supportedGameId;
+        _status = 'Utworzono kopię drużyny „${selected.name}”.';
+      });
+      await _persistSavedTeams();
+      return;
+    }
+
+    if (command == 'delete') {
+      final confirmed = await showDialog<bool>(
+        context: context,
+        builder: (dialogContext) => AlertDialog(
+          title: const Text('Usunąć drużynę?'),
+          content: Text('Czy na pewno chcesz usunąć „${selected!.name}”? Tej operacji nie można cofnąć.'),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(dialogContext, false),
+              child: const Text('Anuluj'),
+            ),
+            FilledButton(
+              onPressed: () => Navigator.pop(dialogContext, true),
+              child: const Text('Usuń'),
+            ),
+          ],
+        ),
+      );
+      if (confirmed != true || !mounted) return;
+      setState(() {
+        _savedTeams.removeWhere((team) => team.id == selected!.id);
+        if (_activeTeamId == selected.id) {
+          _activeTeamId = null;
+          _team = [];
+          _nameController.text = 'Nowa drużyna';
+          _selectedGame = TeamRecommendationService.supportedGameId;
+        }
+        _status = 'Usunięto drużynę „${selected.name}”.';
+      });
+      await _persistSavedTeams();
+    }
   }
 
   Future<void> _choosePokemon() async {
