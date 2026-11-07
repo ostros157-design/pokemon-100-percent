@@ -1742,3 +1742,17 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Źródła: Bulbapedia Emerald Walkthrough Part 15 (Shoal Cave, Abandoned Ship), Emerald Walkthrough Section 20 (Safari Zone, Feebas, post-game), Bulbapedia Route 119, New Mauville; PokéMaps Abandoned Ship; PokéTools Safari Zone.
 - Commity danych: `b863543869862955537a3fc098cc555039112a19`, `722c1bb4ae05aa0c0c9cfd0ed1365552b6acc819`.
 
+### Poradnik Emerald — National Dex, Trick House i audyt spotkań wodnych (2026-11-07)
+
+- Dodano ostatnią, ósmą zagadkę Trick House z nagrodą Nugget.
+- Dodano nagrodę za pełny regionalny Hoenn Pokédex: wybór jednego startera Johto (Chikorita, Cyndaquil lub Totodile) po zarejestrowaniu 200 Pokémonów i ponownej rozmowie z Profesorem Birchem.
+- Rozszerzono Safari Zone o komplet przedmiotów z obszarów 2–6, w tym TM22 SolarBeam, Calcium, PP Up, Full Restore, Big Pearl, Rare Candy, Zinc i Nugget.
+- Audyt Shoal Cave ujawnił, że poprzedni wpis nie rozdzielał poprawnie spotkań w głównej jaskini, Ice Cavern oraz metod wodnych. Poprawiono tabelę Ice Cavern (Spheal 45%, Zubat 40%, Snorunt 10%, Golbat 5%), zachowano osobną tabelę głównej jaskini (50/45/5) i dopisano pełne spotkania Surf oraz Old/Good/Super Rod.
+- Dodano spotkania podwodne Route 124 i okolic Abandoned Ship: Clamperl 65%, Chinchou 30%, Relicanth 5%, wraz z listą ukrytych przedmiotów Route 124.
+- Uzupełniono wędkowanie na Abandoned Ship: Good Rod (Magikarp 60%, Tentacool 40%) oraz Super Rod (Tentacool 80%, Tentacruel 20%).
+- Łącznie poradnik zawiera teraz **191 kroków**, w tym **162 kroki kontynuacji Emerald**. Szacowana kompletność treści: **99%**; dalszy audyt będzie koncentrować się na listach trenerów, szczegółach przedmiotów i spotkaniach na trasach.
+- Kontrola statyczna: **48 tabel encounterów**, każda suma wynosi 100%; brak powtórzonych tytułów w kontynuacji, błędów równowagi nawiasów i niedomkniętych literałów tekstowych.
+- Nie uruchamiano Flutter Analyzer, testów aplikacji ani budowania APK.
+- Źródła: Bulbapedia Emerald Walkthrough Part 11 (Safari Zone), Part 15 (Shoal Cave, Route 124, Abandoned Ship) i Part 20 (National Dex, Johto starter, Trick House, Safari Zone).
+- Commity danych: `2cbd6a179bcac6fefe884f2e3bcbe91c033ec7a3`, `322f61c000601ef7a51a0608ca9409c0c4afa894`.
+
