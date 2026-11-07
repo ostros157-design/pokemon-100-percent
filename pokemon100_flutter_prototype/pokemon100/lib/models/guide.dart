@@ -3,6 +3,7 @@ class GuideStep {
 final String title;
 final String description;
 final String? location;
+final String? section;
 final List<String> pokemon;
 /// Verified encounter percentages for each Pokémon at this guide step/location.
 /// Keys must match Pokémon names; values are percentages from 0 to 100.
@@ -14,6 +15,7 @@ const GuideStep({
 required this.title,
 required this.description,
 this.location,
+this.section,
 this.pokemon = const [],
 this.encounterRatesPercent = const {},
 this.items = const [],
