@@ -79,22 +79,19 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
     selectedGameIds.retainAll(validPokemonIds);
 
     final shinyIds = <int>{};
-    if (hasPerGameCollections) {
-      for (final key in preferences.getKeys()) {
-        if (!key.startsWith('shiny_pokemon_ids_')) continue;
-        shinyIds.addAll(
-          (preferences.getStringList(key) ?? const <String>[])
-              .map(int.tryParse)
-              .whereType<int>(),
-        );
-      }
-    } else {
+    for (final key in preferences.getKeys()) {
+      if (!key.startsWith('shiny_pokemon_ids_')) continue;
       shinyIds.addAll(
-        (preferences.getStringList('shiny_pokemon_ids') ?? const <String>[])
+        (preferences.getStringList(key) ?? const <String>[])
             .map(int.tryParse)
             .whereType<int>(),
       );
     }
+    shinyIds.addAll(
+      (preferences.getStringList('shiny_pokemon_ids') ?? const <String>[])
+          .map(int.tryParse)
+          .whereType<int>(),
+    );
     final hasShiny = shinyIds.isNotEmpty;
     final hasLegendary = allCaughtIds.any((id) =>
         pokemonList.any((pokemon) => pokemon.id == id && pokemon.isLegendary));
