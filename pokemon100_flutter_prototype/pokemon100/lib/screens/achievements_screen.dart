@@ -3,6 +3,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../data/achievements_data.dart';
 import '../data/pokemon_data.dart';
+import '../data/guides_data.dart';
 import '../models/achievement.dart';
 import '../widgets/achievement_card.dart';
 
@@ -22,6 +23,13 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
   String _selectedGameId = 'lets_go_pikachu';
   int _globalCaughtCount = 0;
   int _selectedGameCaughtCount = 0;
+  int _selectedGameGuideCompleted = 0;
+  int _selectedGameGuideTotal = 0;
+  bool _hasStartedGuide = false;
+  bool _hasCompletedGuide = false;
+  bool _hasShiny = false;
+  bool _hasLegendary = false;
+  int _selectedGameProgressPercent = 0;
 
   @override
   void initState() {
@@ -70,11 +78,67 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
     allCaughtIds.retainAll(validPokemonIds);
     selectedGameIds.retainAll(validPokemonIds);
 
+    final shinyIds = <int>{};
+    if (hasPerGameCollections) {
+      for (final key in preferences.getKeys()) {
+        if (!key.startsWith('shiny_pokemon_ids_')) continue;
+        shinyIds.addAll(
+          (preferences.getStringList(key) ?? const <String>[])
+              .map(int.tryParse)
+              .whereType<int>(),
+        );
+      }
+    } else {
+      shinyIds.addAll(
+        (preferences.getStringList('shiny_pokemon_ids') ?? const <String>[])
+            .map(int.tryParse)
+            .whereType<int>(),
+      );
+    }
+    final hasShiny = shinyIds.isNotEmpty;
+    final hasLegendary = allCaughtIds.any((id) =>
+        pokemonList.any((pokemon) => pokemon.id == id && pokemon.isLegendary));
+
+    final selectedGuides = guidesList.where((guide) => guide.gameId == gameId).toList();
+    var guideCompleted = 0;
+    var guideTotal = 0;
+    var hasStartedGuide = false;
+    var hasCompletedGuide = false;
+    for (final guide in selectedGuides) {
+      guideTotal += guide.steps.length;
+      final saved = preferences.getStringList(
+            'guide_progress_${guide.gameId}_${guide.id}',
+          ) ?? const <String>[];
+      final completed = saved
+          .map(int.tryParse)
+          .whereType<int>()
+          .where((index) => index >= 0 && index < guide.steps.length)
+          .toSet()
+          .length;
+      guideCompleted += completed;
+      if (completed > 0) hasStartedGuide = true;
+      if (guide.steps.isNotEmpty && completed == guide.steps.length) {
+        hasCompletedGuide = true;
+      }
+    }
+    final totalObjectives = guideTotal + pokemonList.length;
+    final completedObjectives = guideCompleted + selectedGameIds.length;
+    final progressPercent = totalObjectives == 0
+        ? 0
+        : (completedObjectives * 100 / totalObjectives).round();
+
     if (!mounted) return;
     setState(() {
       _selectedGameId = gameId;
       _globalCaughtCount = allCaughtIds.length;
       _selectedGameCaughtCount = selectedGameIds.length;
+      _selectedGameGuideCompleted = guideCompleted;
+      _selectedGameGuideTotal = guideTotal;
+      _hasStartedGuide = hasStartedGuide;
+      _hasCompletedGuide = hasCompletedGuide;
+      _hasShiny = hasShiny;
+      _hasLegendary = hasLegendary;
+      _selectedGameProgressPercent = progressPercent;
       _loading = false;
     });
   }
@@ -93,6 +157,24 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
       case 'pokedex_complete':
         // This is a global database milestone, not a per-game regional dex.
         return _globalCaughtCount >= pokemonList.length;
+      case 'shiny':
+        return _hasShiny;
+      case 'legendary':
+        return _hasLegendary;
+      case 'guide_start':
+        return _hasStartedGuide;
+      case 'guide_complete':
+        return _hasCompletedGuide;
+      case 'speed_progress':
+        return _selectedGameProgressPercent >= 25;
+      case 'half_progress':
+        return _selectedGameProgressPercent >= 50;
+      case 'three_quarters':
+        return _selectedGameProgressPercent >= 75;
+      case 'first_100':
+        return _selectedGameProgressPercent >= 100;
+      case 'game_complete':
+        return _selectedGameProgressPercent >= 100;
       default:
         // Do not unlock achievements until their real completion signals
         // (badges, battles, evolutions, team composition, etc.) are tracked.
@@ -128,7 +210,7 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
                     alignment: Alignment.centerLeft,
                     child: Text(
                       'Wybrana gra: ${_selectedGameId.replaceAll('_', ' ')} · '
-                      '$_selectedGameCaughtCount złapanych',
+                      '$_selectedGameCaughtCount złapanych · postęp $_selectedGameProgressPercent%',
                       style: Theme.of(context).textTheme.bodySmall,
                     ),
                   ),
