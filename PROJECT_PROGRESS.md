@@ -5374,3 +5374,14 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Nazwy ruchów nie są jeszcze weryfikowane względem bazy gry, a analiza ofensywna nadal nie oblicza skuteczności konkretnych ruchów. To kolejny etap.
 - Commit kodu: `8bce1fc`.
 - Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK. Wymagane sprawdzenie: wpisać ruchy, zapisać skład, skopiować go, wczytać ponownie i potwierdzić, że ruchy są zachowane niezależnie dla obu drużyn.
+
+
+### Team Making — analiza ofensywna na podstawie przypisanych ruchów (2026-11-08)
+
+- Rozbudowano sekcję „Miecz” w analizie drużyny: nie opiera się już wyłącznie na typach samych Pokémonów, ale odczytuje przypisane nazwy ruchów z istniejącego lokalnego katalogu `moveCatalogue`.
+- Dla każdego rozpoznanego ruchu zadającego obrażenia analiza wykorzystuje jego typ i kategorię, a następnie sprawdza skuteczność przeciwko każdemu typowi przeciwnika. Pokazuje listę typów, na które drużyna ma super skuteczne ruchy, oraz braki w pokryciu.
+- Ruchy statusowe i ruchy bez standardowej mocy są pomijane. Nieznane nazwy są jawnie wyświetlane jako pominięte, zamiast być błędnie klasyfikowane.
+- Analiza pokazuje także, u ilu członków drużyny ustawiono zestawy ruchów oraz ile rozpoznano ataków zadających obrażenia.
+- Ograniczenia: to analiza pokrycia typów, a nie symulacja obrażeń. Nie uwzględnia jeszcze STAB, statystyk, zdolności, przedmiotów, immunitetów wynikających ze zdolności ani sprawdzania, czy ruch można zdobyć w wybranej grze. Nazwy muszą pasować do katalogu ruchów aplikacji.
+- Commit kodu: `37d07bc7fc2f9e59efc9197463434ee37ef441d6`.
+- Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK. Wymagane sprawdzenie ręczne: wpisać np. Flamethrower, Ice Beam i Earthquake, zapisać drużynę, a następnie sprawdzić czy sekcja „Miecz” pokazuje odpowiednie pokrycie typów i czy nierozpoznana nazwa jest zgłaszana.
