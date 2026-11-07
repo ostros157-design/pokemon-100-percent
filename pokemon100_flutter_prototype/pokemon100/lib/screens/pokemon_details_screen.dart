@@ -686,8 +686,6 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
             ? 'Ładowanie statusu...'
             : _caught ? 'Oznacz jako niezłapany' : 'Oznacz jako złapany'),
       ),
-      const SizedBox(height: 16),
-      _buildTypeMatchups(pokemon),
     ]);
   }
 
