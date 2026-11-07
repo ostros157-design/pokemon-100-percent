@@ -503,6 +503,76 @@ const List<Guide> guidesList = [
         pokemon: ['Geodude', 'Onix'],
         items: ['Boulder Badge'],
       ),
+      GuideStep(
+        section: 'Route 3 i Mt. Moon',
+        title: 'Zbadaj dzikie Pokémony na Route 3',
+        description:
+            'Na Route 3 w wysokiej trawie spotkasz Rattatę (30%), Spearowa (30%), Sandshrewa (20%) i Mankeya (20%), na poziomach 3–8. Charmander może pojawić się jako rzadki specjalny spawn, ale źródła nie podają dla niego stałego procentu — nie dopisuję zmyślonej wartości. Wysoko nad trasą latają też Spearow (60%) i Fearow (40%); to osobna metoda spotkań.',
+        location: 'Route 3 — wysoka trawa',
+        pokemon: ['Rattata', 'Spearow', 'Sandshrew', 'Mankey'],
+        encounterRatesPercent: {
+          'Rattata': 30,
+          'Spearow': 30,
+          'Sandshrew': 20,
+          'Mankey': 20,
+        },
+      ),
+      GuideStep(
+        section: 'Route 3 i Mt. Moon',
+        title: 'Sprawdź Pokémony pojawiające się na niebie nad Route 3',
+        description:
+            'Podczas eksploracji patrz również w niebo. W zwykłych spotkaniach latających Pokémonów Spearow ma 60%, a Fearow 40%. Charizard i Dragonite mogą pojawiać się jako rzadkie specjalne spawny; po spełnieniu warunków post-game mogą dołączyć także Articuno, Zapdos i Moltres. Nie mają one zwykłych, stałych procentów w tabeli bazowej.',
+        location: 'Route 3 — niebo',
+        pokemon: ['Spearow', 'Fearow'],
+        encounterRatesPercent: {
+          'Spearow': 60,
+          'Fearow': 40,
+        },
+      ),
+      GuideStep(
+        section: 'Route 3 i Mt. Moon',
+        title: 'Pokonaj wszystkich trenerów na Route 3 i zbierz nagrody',
+        description:
+            'Pokonaj siedmiu trenerów: Lass Janice (Oddish Lv.6), Coach Trainer Kareem (Bulbasaur Lv.11), Youngster Calvin (Spearow Lv.6), Camper Victor (Nidoran♂ Lv.7), Picnicker Robin (Nidoran♀ Lv.7), Youngster Ben (Rattata Lv.6) i Bug Catcher Greg (Kakuna Lv.5). Coach Trainer Kareem jest mocniejszym, opcjonalnym wyzwaniem. Zbierz przedmioty po walkach oraz ukryte rzeczy przy krzakach i w trawie.',
+        location: 'Route 3',
+        trainers: [
+          'Lass Janice',
+          'Coach Trainer Kareem',
+          'Youngster Calvin',
+          'Camper Victor',
+          'Picnicker Robin',
+          'Youngster Ben',
+          'Bug Catcher Greg',
+        ],
+        pokemon: [
+          'Oddish',
+          'Bulbasaur',
+          'Spearow',
+          'Nidoran♂',
+          'Nidoran♀',
+          'Rattata',
+          'Kakuna',
+        ],
+        items: [
+          'Revive ×2 (jeden od Coach Trainer Kareema, drugi w trawie na wschodzie)',
+          'Potion',
+          'Poké Ball ×3',
+          'Great Ball ×2',
+          'Lure',
+          'Razz Berry',
+          'Nanab Berry',
+        ],
+      ),
+      GuideStep(
+        section: 'Route 3 i Mt. Moon',
+        title: 'Odwiedź Master Trainera na Route 3 po ukończeniu ligi',
+        description:
+            'Po zostaniu Championem i rozpoczęciu wyzwania Master Trainerów wróć na Route 3. Znajdziesz tu Ace Trainer Ronniego, który specjalizuje się w Nidoran♀ i używa go na poziomie 65.',
+        location: 'Route 3 — post-game',
+        trainers: ['Ace Trainer Ronnie (Master Trainer)'],
+        pokemon: ['Nidoran♀'],
+        optional: true,
+      ),
     ],
   ),
 ];
