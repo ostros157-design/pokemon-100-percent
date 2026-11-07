@@ -1506,3 +1506,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Zastąpiono nieobsługiwane `Canvas.clipPath(..., clipOp: ClipOp.difference)` operacją `Path.combine(PathOperation.difference, ...)`, aby zachować rysowanie fal wyłącznie poza kształtem lądu.
 - Zmiany zapisano na gałęzi `fix/maps-screen-build-errors`; nie scalono z `main`.
 - Nie uruchomiono `flutter analyze`, testów ani budowania APK w tym środowisku. Następny krok: użytkownik ponownie uruchamia komendę build i przekazuje ewentualne dalsze błędy.
+
+### Pokédex — indywidualny wygląd kart Pokémonów (2026-11-07)
+
+- Dodano edytor wyglądu karty dostępny z ikony palety na ekranie szczegółów Pokémona.
+- Użytkownik może wybrać kolor nazwy i numeru Pokémona oraz przypisać emoji z przygotowanej listy albo wybrać „Brak”.
+- Kolor i emoji są zapisywane osobno dla każdego numeru Pokédexa w SharedPreferences i odczytywane przy ponownym otwarciu karty.
+- Zmiana nie modyfikuje koloru tła zależnego od typu Pokémona ani pozostałych danych karty.
+- Commit: `aa456ac`. Nie uruchamiano `flutter analyze`, testów ani APK; wygląd i zapis ustawień wymagają sprawdzenia w aplikacji.
