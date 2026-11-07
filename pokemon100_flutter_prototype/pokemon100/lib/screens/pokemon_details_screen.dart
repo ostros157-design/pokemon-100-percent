@@ -846,7 +846,7 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
           child: Row(
             children: [
               Icon(
-                _caught ? Icons.check_circle : Icons.catching_pokemon_outlined,
+                _caught ? Icons.check_circle : Icons.catching_pokemon,
                 color: _caught ? Colors.green : Theme.of(context).colorScheme.onSurfaceVariant,
                 size: 28,
               ),
