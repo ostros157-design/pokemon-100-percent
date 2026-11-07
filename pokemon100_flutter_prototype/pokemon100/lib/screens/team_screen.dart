@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -17,6 +19,8 @@ class _TeamScreenState extends State<TeamScreen> {
   static const _storageKey = 'team_making_saved_team_v1';
   static const _teamNameKey = 'team_making_saved_name_v1';
   static const _gameKey = 'team_making_selected_game_v1';
+  static const _teamsStorageKey = 'team_making_saved_teams_v2';
+  static const _activeTeamStorageKey = 'team_making_active_team_v2';
   static const _defaultIds = <int>[25, 93, 3, 6, 131, 68];
 
   static const Map<String, String> _games = {
@@ -31,6 +35,8 @@ class _TeamScreenState extends State<TeamScreen> {
 
   String _selectedGame = TeamRecommendationService.supportedGameId;
   late List<Pokemon> _team;
+  final List<_SavedTeam> _savedTeams = [];
+  String? _activeTeamId;
   final TextEditingController _nameController = TextEditingController();
   bool _loading = true;
   bool _saving = false;
@@ -47,25 +53,89 @@ class _TeamScreenState extends State<TeamScreen> {
 
   Future<void> _loadTeam() async {
     final prefs = await SharedPreferences.getInstance();
-    final savedIds = (prefs.getStringList(_storageKey) ?? const <String>[])
-        .map(int.tryParse)
-        .whereType<int>()
-        .toList();
+    final encodedTeams = prefs.getString(_teamsStorageKey);
+    final restoredTeams = <_SavedTeam>[];
+
+    if (encodedTeams != null) {
+      try {
+        final decoded = jsonDecode(encodedTeams);
+        if (decoded is List) {
+          for (final item in decoded) {
+            if (item is Map) {
+              final team = _SavedTeam.fromJson(Map<String, dynamic>.from(item));
+              if (team != null) restoredTeams.add(team);
+            }
+          }
+        }
+      } catch (_) {
+        // A damaged new-format save should not prevent loading the legacy team.
+      }
+    }
+
+    // One-time migration: preserve the team saved by older app versions.
+    if (restoredTeams.isEmpty && prefs.containsKey(_storageKey)) {
+      final ids = (prefs.getStringList(_storageKey) ?? const <String>[])
+          .map(int.tryParse)
+          .whereType<int>()
+          .toList();
+      final legacyTeam = _SavedTeam(
+        id: 'legacy-team',
+        name: prefs.getString(_teamNameKey) ?? 'Moja drużyna',
+        gameId: prefs.getString(_gameKey) ?? TeamRecommendationService.supportedGameId,
+        pokemonIds: ids,
+      );
+      restoredTeams.add(legacyTeam);
+    }
+
+    final activeId = prefs.getString(_activeTeamStorageKey);
+    final active = restoredTeams.where((team) => team.id == activeId).firstOrNull
+        ?? (restoredTeams.isNotEmpty ? restoredTeams.first : null);
+    if (!mounted) return;
+    setState(() {
+      _savedTeams
+        ..clear()
+        ..addAll(restoredTeams);
+      _activeTeamId = active?.id;
+      if (active != null) {
+        _team = _pokemonFromIds(active.pokemonIds);
+        _nameController.text = active.name;
+        _selectedGame = _games.containsKey(active.gameId)
+            ? active.gameId
+            : TeamRecommendationService.supportedGameId;
+      } else {
+        _team = _defaultIds
+            .map((id) => pokemonList.firstWhere((pokemon) => pokemon.id == id))
+            .toList();
+        _nameController.text = 'Moja drużyna';
+        _selectedGame = TeamRecommendationService.supportedGameId;
+      }
+      _loading = false;
+    });
+    if (encodedTeams == null && restoredTeams.isNotEmpty) {
+      await _persistSavedTeams();
+    }
+  }
+
+  List<Pokemon> _pokemonFromIds(List<int> ids) {
     final restored = <Pokemon>[];
-    for (final id in savedIds) {
+    for (final id in ids) {
       final matches = pokemonList.where((pokemon) => pokemon.id == id);
       if (matches.isNotEmpty && !restored.any((p) => p.id == id) && restored.length < 6) {
         restored.add(matches.first);
       }
     }
-    if (!mounted) return;
-    setState(() {
-      if (prefs.containsKey(_storageKey)) _team = restored;
-      _nameController.text = prefs.getString(_teamNameKey) ?? 'Moja drużyna';
-      final savedGame = prefs.getString(_gameKey);
-      _selectedGame = _games.containsKey(savedGame) ? savedGame! : TeamRecommendationService.supportedGameId;
-      _loading = false;
-    });
+    return restored;
+  }
+
+  Future<void> _persistSavedTeams() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString(
+      _teamsStorageKey,
+      jsonEncode(_savedTeams.map((team) => team.toJson()).toList()),
+    );
+    if (_activeTeamId != null) {
+      await prefs.setString(_activeTeamStorageKey, _activeTeamId!);
+    }
   }
 
   Future<void> _saveTeam() async {
@@ -75,23 +145,92 @@ class _TeamScreenState extends State<TeamScreen> {
       _status = null;
     });
     try {
-      final prefs = await SharedPreferences.getInstance();
-      await prefs.setStringList(
-        _storageKey,
-        _team.map((pokemon) => pokemon.id.toString()).toList(),
-      );
-      await prefs.setString(_gameKey, _selectedGame);
-      await prefs.setString(_teamNameKey, _nameController.text.trim().isEmpty
+      final name = _nameController.text.trim().isEmpty
           ? 'Moja drużyna'
-          : _nameController.text.trim());
+          : _nameController.text.trim();
+      final saved = _SavedTeam(
+        id: _activeTeamId ?? DateTime.now().microsecondsSinceEpoch.toString(),
+        name: name,
+        gameId: _selectedGame,
+        pokemonIds: _team.map((pokemon) => pokemon.id).toList(),
+      );
+      final existingIndex = _savedTeams.indexWhere((team) => team.id == saved.id);
+      setState(() {
+        if (existingIndex >= 0) {
+          _savedTeams[existingIndex] = saved;
+        } else {
+          _savedTeams.add(saved);
+        }
+        _activeTeamId = saved.id;
+      });
+      await _persistSavedTeams();
       if (!mounted) return;
-      setState(() => _status = 'Drużyna została zapisana na tym urządzeniu.');
+      setState(() => _status = 'Zapisano drużynę „$name”.');
     } catch (_) {
       if (!mounted) return;
       setState(() => _status = 'Nie udało się zapisać drużyny.');
     } finally {
       if (mounted) setState(() => _saving = false);
     }
+  }
+
+  void _createNewTeam() {
+    setState(() {
+      _activeTeamId = null;
+      _team = [];
+      _nameController.text = 'Nowa drużyna';
+      _selectedGame = TeamRecommendationService.supportedGameId;
+      _status = 'Utworzono nowy skład. Poprzednie zapisane drużyny pozostają bez zmian.';
+    });
+  }
+
+  Future<void> _showSavedTeams() async {
+    if (_savedTeams.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Nie masz jeszcze zapisanych drużyn. Zapisz obecny skład, aby pojawił się na liście.')),
+      );
+      return;
+    }
+    final selectedId = await showModalBottomSheet<String>(
+      context: context,
+      showDragHandle: true,
+      builder: (sheetContext) => SafeArea(
+        child: SizedBox(
+          height: MediaQuery.of(sheetContext).size.height * 0.65,
+          child: ListView(
+            padding: const EdgeInsets.all(16),
+            children: [
+              const Text('Zapisane drużyny', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+              const SizedBox(height: 8),
+              ..._savedTeams.map((saved) => Card(
+                child: ListTile(
+                  leading: const Icon(Icons.groups),
+                  title: Text(saved.name),
+                  subtitle: Text('${saved.pokemonIds.length}/6 Pokémonów · ${_games[saved.gameId] ?? saved.gameId}'),
+                  trailing: _activeTeamId == saved.id
+                      ? const Icon(Icons.check_circle, color: Colors.green)
+                      : const Icon(Icons.chevron_right),
+                  onTap: () => Navigator.pop(sheetContext, saved.id),
+                ),
+              )),
+            ],
+          ),
+        ),
+      ),
+    );
+    if (selectedId == null || !mounted) return;
+    final selected = _savedTeams.where((team) => team.id == selectedId).firstOrNull;
+    if (selected == null) return;
+    setState(() {
+      _activeTeamId = selected.id;
+      _team = _pokemonFromIds(selected.pokemonIds);
+      _nameController.text = selected.name;
+      _selectedGame = _games.containsKey(selected.gameId)
+          ? selected.gameId
+          : TeamRecommendationService.supportedGameId;
+      _status = 'Wczytano drużynę „${selected.name}”.';
+    });
+    await _persistSavedTeams();
   }
 
   Future<void> _choosePokemon() async {
@@ -187,7 +326,21 @@ class _TeamScreenState extends State<TeamScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Kreator drużyny')),
+      appBar: AppBar(
+        title: const Text('Kreator drużyny'),
+        actions: [
+          IconButton(
+            tooltip: 'Zapisane drużyny',
+            onPressed: _showSavedTeams,
+            icon: const Icon(Icons.folder_open),
+          ),
+          IconButton(
+            tooltip: 'Nowa drużyna',
+            onPressed: _createNewTeam,
+            icon: const Icon(Icons.add_circle_outline),
+          ),
+        ],
+      ),
       body: _loading
           ? const Center(child: CircularProgressIndicator())
           : ListView(
@@ -198,6 +351,21 @@ class _TeamScreenState extends State<TeamScreen> {
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 8),
+                Row(
+                  children: [
+                    Expanded(
+                      child: Text(
+                        _activeTeamId == null ? 'Niezapisany skład' : 'Edytujesz zapisany skład',
+                        style: Theme.of(context).textTheme.bodySmall,
+                      ),
+                    ),
+                    TextButton.icon(
+                      onPressed: _showSavedTeams,
+                      icon: const Icon(Icons.folder_open, size: 18),
+                      label: Text('Moje drużyny (${_savedTeams.length})'),
+                    ),
+                  ],
+                ),
                 DropdownButtonFormField<String>(
                   value: _selectedGame,
                   isExpanded: true,
@@ -505,5 +673,39 @@ class _TeamAnalysis extends StatelessWidget {
         ]),
       ),
     );
+  }
+}
+
+
+class _SavedTeam {
+  final String id;
+  final String name;
+  final String gameId;
+  final List<int> pokemonIds;
+
+  const _SavedTeam({
+    required this.id,
+    required this.name,
+    required this.gameId,
+    required this.pokemonIds,
+  });
+
+  Map<String, dynamic> toJson() => {
+    'id': id,
+    'name': name,
+    'gameId': gameId,
+    'pokemonIds': pokemonIds,
+  };
+
+  static _SavedTeam? fromJson(Map<String, dynamic> json) {
+    final id = json['id'];
+    final name = json['name'];
+    final gameId = json['gameId'];
+    final rawIds = json['pokemonIds'];
+    if (id is! String || name is! String || gameId is! String || rawIds is! List) {
+      return null;
+    }
+    final ids = rawIds.whereType<num>().map((value) => value.toInt()).take(6).toList();
+    return _SavedTeam(id: id, name: name, gameId: gameId, pokemonIds: ids);
   }
 }
