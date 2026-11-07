@@ -116,7 +116,11 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
           .toSet()
           .length;
       guideCompleted += completed;
-      if (completed > 0) hasStartedGuide = true;
+      if (preferences.getBool(
+            'guide_opened_${guide.gameId}_${guide.id}',
+          ) == true || completed > 0) {
+        hasStartedGuide = true;
+      }
       if (guide.steps.isNotEmpty && completed == guide.steps.length) {
         hasCompletedGuide = true;
       }
