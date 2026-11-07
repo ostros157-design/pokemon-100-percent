@@ -36,6 +36,7 @@ class _TeamScreenState extends State<TeamScreen> {
   String _selectedGame = TeamRecommendationService.supportedGameId;
   late List<Pokemon> _team;
   final List<_SavedTeam> _savedTeams = [];
+  final Map<int, List<String>> _movesByPokemon = {};
   String? _activeTeamId;
   final TextEditingController _nameController = TextEditingController();
   bool _loading = true;
@@ -104,6 +105,9 @@ class _TeamScreenState extends State<TeamScreen> {
       _activeTeamId = active?.id;
       if (active != null) {
         _team = _pokemonFromIds(active.pokemonIds);
+        _movesByPokemon
+          ..clear()
+          ..addAll(active.movesByPokemon.map((key, value) => MapEntry(key, List<String>.from(value))));
         _nameController.text = active.name;
         _selectedGame = _games.containsKey(active.gameId)
             ? active.gameId
@@ -161,6 +165,11 @@ class _TeamScreenState extends State<TeamScreen> {
         name: name,
         gameId: _selectedGame,
         pokemonIds: _team.map((pokemon) => pokemon.id).toList(),
+        movesByPokemon: Map<int, List<String>>.fromEntries(
+          _movesByPokemon.entries.where((entry) => _team.any((pokemon) => pokemon.id == entry.key)).map(
+            (entry) => MapEntry(entry.key, List<String>.from(entry.value)),
+          ),
+        ),
       );
       final existingIndex = _savedTeams.indexWhere((team) => team.id == saved.id);
       setState(() {
@@ -186,6 +195,7 @@ class _TeamScreenState extends State<TeamScreen> {
     setState(() {
       _activeTeamId = null;
       _team = [];
+      _movesByPokemon.clear();
       _nameController.text = 'Nowa drużyna';
       _selectedGame = TeamRecommendationService.supportedGameId;
       _status = 'Utworzono nowy skład. Poprzednie zapisane drużyny pozostają bez zmian.';
@@ -256,6 +266,9 @@ class _TeamScreenState extends State<TeamScreen> {
       setState(() {
         _activeTeamId = selected!.id;
         _team = _pokemonFromIds(selected.pokemonIds);
+        _movesByPokemon
+          ..clear()
+          ..addAll(selected!.movesByPokemon.map((key, value) => MapEntry(key, List<String>.from(value))));
         _nameController.text = selected.name;
         _selectedGame = _games.containsKey(selected.gameId)
             ? selected.gameId
@@ -272,11 +285,15 @@ class _TeamScreenState extends State<TeamScreen> {
         name: '${selected.name} — kopia',
         gameId: selected.gameId,
         pokemonIds: List<int>.from(selected.pokemonIds),
+        movesByPokemon: selected.movesByPokemon.map((key, value) => MapEntry(key, List<String>.from(value))),
       );
       setState(() {
         _savedTeams.add(copy);
         _activeTeamId = copy.id;
         _team = _pokemonFromIds(copy.pokemonIds);
+        _movesByPokemon
+          ..clear()
+          ..addAll(copy.movesByPokemon.map((key, value) => MapEntry(key, List<String>.from(value))));
         _nameController.text = copy.name;
         _selectedGame = _games.containsKey(copy.gameId)
             ? copy.gameId
@@ -311,6 +328,7 @@ class _TeamScreenState extends State<TeamScreen> {
         if (_activeTeamId == selected.id) {
           _activeTeamId = null;
           _team = [];
+          _movesByPokemon.clear();
           _nameController.text = 'Nowa drużyna';
           _selectedGame = TeamRecommendationService.supportedGameId;
         }
@@ -318,6 +336,64 @@ class _TeamScreenState extends State<TeamScreen> {
       });
       await _persistSavedTeams();
     }
+  }
+
+  Future<void> _editMoves(Pokemon pokemon) async {
+    final existing = _movesByPokemon[pokemon.id] ?? const <String>[];
+    final controllers = List.generate(
+      4,
+      (index) => TextEditingController(text: index < existing.length ? existing[index] : ''),
+    );
+    final result = await showDialog<List<String>>(
+      context: context,
+      builder: (dialogContext) => AlertDialog(
+        title: Text('Ruchy — ${pokemon.name}'),
+        content: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: List.generate(4, (index) => Padding(
+              padding: const EdgeInsets.only(bottom: 8),
+              child: TextField(
+                controller: controllers[index],
+                maxLength: 30,
+                decoration: InputDecoration(
+                  labelText: 'Ruch ${index + 1}',
+                  hintText: 'Wpisz nazwę ruchu',
+                  counterText: '',
+                  border: const OutlineInputBorder(),
+                ),
+              ),
+            )),
+          ),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(dialogContext),
+            child: const Text('Anuluj'),
+          ),
+          FilledButton(
+            onPressed: () => Navigator.pop(
+              dialogContext,
+              controllers.map((controller) => controller.text.trim()).toList(),
+            ),
+            child: const Text('Zapisz ruchy'),
+          ),
+        ],
+      ),
+    );
+    for (final controller in controllers) {
+      controller.dispose();
+    }
+    if (result == null || !mounted) return;
+    final moves = result.where((move) => move.isNotEmpty).take(4).toList();
+    setState(() {
+      if (moves.isEmpty) {
+        _movesByPokemon.remove(pokemon.id);
+      } else {
+        _movesByPokemon[pokemon.id] = moves;
+      }
+      _status = 'Zmieniono zestaw ruchów ${pokemon.name}. Zapisz drużynę, aby zachować zmianę.';
+    });
   }
 
   Future<void> _choosePokemon() async {
@@ -529,26 +605,54 @@ class _TeamScreenState extends State<TeamScreen> {
                   ),
                 ...List.generate(_team.length, (index) {
                   final pokemon = _team[index];
+                  final moves = _movesByPokemon[pokemon.id] ?? const <String>[];
                   return Card(
-                    child: ListTile(
-                      leading: SizedBox(
-                        width: 52,
-                        height: 52,
-                        child: CachedNetworkImage(
-                          imageUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png',
-                          fit: BoxFit.contain,
-                          errorWidget: (_, __, ___) => CircleAvatar(child: Text('${pokemon.id}')),
-                        ),
-                      ),
-                      title: Text(pokemon.name),
-                      subtitle: Text('#${pokemon.id.toString().padLeft(3, '0')} · ${pokemon.types.join(' / ')}'),
-                      trailing: IconButton(
-                        tooltip: 'Usuń z drużyny',
-                        icon: const Icon(Icons.remove_circle_outline),
-                        onPressed: () => setState(() {
-                          _team.removeAt(index);
-                          _status = null;
-                        }),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 4),
+                      child: Column(
+                        children: [
+                          ListTile(
+                            leading: SizedBox(
+                              width: 52,
+                              height: 52,
+                              child: CachedNetworkImage(
+                                imageUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png',
+                                fit: BoxFit.contain,
+                                errorWidget: (_, __, ___) => CircleAvatar(child: Text('${pokemon.id}')),
+                              ),
+                            ),
+                            title: Text(pokemon.name),
+                            subtitle: Text('#${pokemon.id.toString().padLeft(3, '0')} · ${pokemon.types.join(' / ')}'),
+                            trailing: IconButton(
+                              tooltip: 'Usuń z drużyny',
+                              icon: const Icon(Icons.remove_circle_outline),
+                              onPressed: () => setState(() {
+                                _team.removeAt(index);
+                                _movesByPokemon.remove(pokemon.id);
+                                _status = null;
+                              }),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(16, 0, 16, 10),
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Expanded(
+                                  child: Text(
+                                    moves.isEmpty ? 'Ruchy: nie ustawiono' : 'Ruchy: ${moves.join(' · ')}',
+                                    style: Theme.of(context).textTheme.bodySmall,
+                                  ),
+                                ),
+                                TextButton.icon(
+                                  onPressed: () => _editMoves(pokemon),
+                                  icon: const Icon(Icons.edit, size: 16),
+                                  label: Text(moves.isEmpty ? 'Dodaj ruchy' : 'Edytuj ruchy'),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   );
@@ -769,12 +873,14 @@ class _SavedTeam {
   final String name;
   final String gameId;
   final List<int> pokemonIds;
+  final Map<int, List<String>> movesByPokemon;
 
   const _SavedTeam({
     required this.id,
     required this.name,
     required this.gameId,
     required this.pokemonIds,
+    this.movesByPokemon = const <int, List<String>>{},
   });
 
   Map<String, dynamic> toJson() => {
@@ -782,6 +888,7 @@ class _SavedTeam {
     'name': name,
     'gameId': gameId,
     'pokemonIds': pokemonIds,
+    'movesByPokemon': movesByPokemon.map((key, value) => MapEntry(key.toString(), value)),
   };
 
   static _SavedTeam? fromJson(Map<String, dynamic> json) {
@@ -789,10 +896,22 @@ class _SavedTeam {
     final name = json['name'];
     final gameId = json['gameId'];
     final rawIds = json['pokemonIds'];
+    final rawMoves = json['movesByPokemon'];
     if (id is! String || name is! String || gameId is! String || rawIds is! List) {
       return null;
     }
     final ids = rawIds.whereType<num>().map((value) => value.toInt()).take(6).toList();
-    return _SavedTeam(id: id, name: name, gameId: gameId, pokemonIds: ids);
+    final moves = <int, List<String>>{};
+    if (rawMoves is Map) {
+      for (final entry in rawMoves.entries) {
+        final pokemonId = int.tryParse(entry.key.toString());
+        final values = entry.value;
+        if (pokemonId != null && values is List) {
+          final cleaned = values.whereType<String>().map((move) => move.trim()).where((move) => move.isNotEmpty).take(4).toList();
+          if (cleaned.isNotEmpty) moves[pokemonId] = cleaned;
+        }
+      }
+    }
+    return _SavedTeam(id: id, name: name, gameId: gameId, pokemonIds: ids, movesByPokemon: moves);
   }
 }
