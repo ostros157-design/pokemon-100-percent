@@ -802,17 +802,72 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
   }
 
   Widget _buildInfoTab(Pokemon pokemon) {
+    final classifications = <String>[
+      if (pokemon.isLegendary) 'Legendarny',
+      if (pokemon.isMythical) 'Mityczny',
+      if (pokemon.isBaby) 'Baby Pokémon',
+    ];
+
     return _tabContent([
-      Text(pokemon.description,
-        style: const TextStyle(fontSize: 15, height: 1.5)),
-      const SizedBox(height: 16),
+      const Text('Opis Pokémona',
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+      const SizedBox(height: 8),
+      Card(
+        child: Padding(
+          padding: const EdgeInsets.all(14),
+          child: Text(
+            pokemon.description.trim().isEmpty
+                ? 'Brak opisu tego Pokémona w lokalnej bazie danych.'
+                : pokemon.description,
+            style: const TextStyle(fontSize: 15, height: 1.55),
+          ),
+        ),
+      ),
+      if (classifications.isNotEmpty) ...[
+        const SizedBox(height: 8),
+        Wrap(
+          spacing: 8,
+          runSpacing: 4,
+          children: classifications.map((label) => Chip(
+            avatar: const Icon(Icons.star, size: 16),
+            label: Text(label),
+            visualDensity: VisualDensity.compact,
+          )).toList(),
+        ),
+      ],
+      const SizedBox(height: 12),
       _buildSpeciesData(pokemon),
-      FilledButton.icon(
-        onPressed: _loadingCaught ? null : _toggleCaught,
-        icon: Icon(_caught ? Icons.check_circle : Icons.catching_pokemon),
-        label: Text(_loadingCaught
-            ? 'Ładowanie statusu...'
-            : _caught ? 'Oznacz jako niezłapany' : 'Oznacz jako złapany'),
+      const Text('Moja kolekcja',
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+      const SizedBox(height: 8),
+      Card(
+        child: Padding(
+          padding: const EdgeInsets.all(12),
+          child: Row(
+            children: [
+              Icon(
+                _caught ? Icons.check_circle : Icons.catching_pokemon_outlined,
+                color: _caught ? Colors.green : Theme.of(context).colorScheme.onSurfaceVariant,
+                size: 28,
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Text(
+                  _loadingCaught
+                      ? 'Sprawdzanie statusu...'
+                      : _caught
+                          ? 'Ten Pokémon jest oznaczony jako złapany.'
+                          : 'Ten Pokémon nie jest jeszcze oznaczony jako złapany.',
+                ),
+              ),
+              const SizedBox(width: 8),
+              FilledButton.tonal(
+                onPressed: _loadingCaught ? null : _toggleCaught,
+                child: Text(_caught ? 'Cofnij' : 'Złapany'),
+              ),
+            ],
+          ),
+        ),
       ),
     ]);
   }
