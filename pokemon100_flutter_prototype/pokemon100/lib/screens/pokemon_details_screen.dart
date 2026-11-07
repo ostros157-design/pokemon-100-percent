@@ -37,6 +37,20 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
   ];
 
   String get _caughtPokemonKey => 'caught_pokemon_ids_${_activeGameId}';
+  String get _appearanceType =>
+      widget.pokemon.types.isEmpty ? 'Normal' : widget.pokemon.types.first;
+  String get _typeTextColorKey =>
+      'pokemon_type_text_color_${_appearanceType.toLowerCase()}';
+  String get _typeEmojiKey =>
+      'pokemon_type_emoji_${_appearanceType.toLowerCase()}';
+
+  static const Map<String, String> _defaultTypeEmojis = {
+    'Normal': '⭐', 'Fire': '🔥', 'Water': '💧', 'Electric': '⚡',
+    'Grass': '🌱', 'Ice': '❄️', 'Fighting': '🥊', 'Poison': '☠️',
+    'Ground': '🌍', 'Flying': '🪽', 'Psychic': '🔮', 'Bug': '🐛',
+    'Rock': '🪨', 'Ghost': '👻', 'Dragon': '🐉', 'Dark': '🌙',
+    'Steel': '⚙️', 'Fairy': '🧚',
+  };
   bool _loadingCaught = true;
   String? _selectedLearnsetVersion;
 
@@ -70,8 +84,10 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
     }
     final shinyIds = (preferences.getStringList(shinyKey) ?? const <String>[])
         .map(int.tryParse).whereType<int>().toSet();
-    final textColorValue = preferences.getInt('pokemon_card_text_color_${widget.pokemon.id}');
-    final emoji = preferences.getString('pokemon_card_emoji_${widget.pokemon.id}') ?? '';
+    final textColorValue = preferences.getInt(_typeTextColorKey);
+    final emoji = preferences.getString(_typeEmojiKey) ??
+        _defaultTypeEmojis[_appearanceType] ??
+        '';
     if (!mounted) return;
     setState(() {
       _caught = ids.contains(widget.pokemon.id);
@@ -129,7 +145,7 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('Wygląd karty: ${widget.pokemon.name}',
+                Text('Wygląd typu: ${_appearanceType}',
                     style: Theme.of(context).textTheme.titleLarge),
                 const SizedBox(height: 18),
                 const Text('Kolor tekstu', style: TextStyle(fontWeight: FontWeight.bold)),
@@ -180,11 +196,11 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
                     onPressed: () async {
                       final preferences = await SharedPreferences.getInstance();
                       await preferences.setInt(
-                        'pokemon_card_text_color_${widget.pokemon.id}',
+                        _typeTextColorKey,
                         selectedColor.value,
                       );
                       await preferences.setString(
-                        'pokemon_card_emoji_${widget.pokemon.id}',
+                        _typeEmojiKey,
                         selectedEmoji,
                       );
                       if (!mounted) return;
@@ -739,7 +755,7 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
           title: const Text('Pokédex'),
           actions: [
             IconButton(
-              tooltip: 'Dostosuj wygląd karty',
+              tooltip: 'Dostosuj wygląd typu ${_appearanceType}',
               onPressed: _showAppearanceEditor,
               icon: const Icon(Icons.palette_outlined),
             ),
