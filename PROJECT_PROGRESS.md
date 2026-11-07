@@ -1797,3 +1797,13 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Nazwy trenerów są wyświetlane z jawnego pola `trainers`, jeśli zostanie uzupełnione, lub pomocniczo wyciągane z opisów dla popularnych klas trenerów i nazwanych walk. Ekstrakcja automatyczna wymaga dalszego audytu nietypowych walk.
 - Zachowano klikalność Pokémonów, kolory typów, rozwijanie długich list, przedmioty i zapis postępu.
 - Nie uruchamiano Flutter Analyzer, testów ani APK.
+
+
+### Poradnik Emerald — rozdzielenie wodnych metod spotkań (2026-11-07)
+
+- Safari Zone Area 2 i Area 3: rozdzielono spotkania Surf od Old Rod, Good Rod i Super Rod. Każda metoda ma teraz własny krok i własne procenty, zamiast trafiać do sekcji Pokémonów trenerów.
+- Shoal Cave: poprawiono krok spotkań Surf i dodano osobne kroki dla Old Rod, Good Rod oraz Super Rod. Każda tabela ma osobne, zweryfikowane wartości sumujące się do 100%.
+- Dzięki temu trzy sekcje karty działają zgodnie z przeznaczeniem: Pokémony dzikie z procentami, trenerzy oraz Pokémony z drużyn trenerów bez procentów.
+- Kontrola: nowe tabele spotkań sumują się do 100%; zachowano podział metod. Nie uruchamiano Flutter Analyzer, testów ani APK.
+- Źródła: PokéTools — Safari Zone i Shoal Cave; Bulbapedia — Emerald Walkthrough Part 15; PokeCoders — tabele wodne Safari Zone.
+- Commit danych: `25e65238ec69fb48c48fd8c7762b29e8da602e1f`.
