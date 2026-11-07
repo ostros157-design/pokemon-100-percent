@@ -23,8 +23,6 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
   String _selectedGameId = 'lets_go_pikachu';
   int _globalCaughtCount = 0;
   int _selectedGameCaughtCount = 0;
-  int _selectedGameGuideCompleted = 0;
-  int _selectedGameGuideTotal = 0;
   bool _hasStartedGuide = false;
   bool _hasCompletedGuide = false;
   bool _hasShiny = false;
@@ -133,8 +131,6 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
       _selectedGameId = gameId;
       _globalCaughtCount = allCaughtIds.length;
       _selectedGameCaughtCount = selectedGameIds.length;
-      _selectedGameGuideCompleted = guideCompleted;
-      _selectedGameGuideTotal = guideTotal;
       _hasStartedGuide = hasStartedGuide;
       _hasCompletedGuide = hasCompletedGuide;
       _hasShiny = hasShiny;
