@@ -1640,3 +1640,15 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Sprawdzanie odbywa się przy otwarciu ekranu osiągnięć na podstawie SharedPreferences. Nie dodano osobnego serwera ani ręcznego odblokowywania.
 - Osiągnięcia wymagające danych, których aplikacja jeszcze nie zapisuje (np. odznaki, Elite Four, Champion, ewolucje i skład drużyny), pozostają zablokowane — nie są odblokowywane na podstawie zgadywanych warunków.
 - Commity: `8d5141b`, `7296a91`, `4381d9c`, `9777c09`. Nie uruchamiano `flutter analyze`, testów ani APK; wymagane jest sprawdzenie działania na urządzeniu.
+
+
+### Poradnik Emerald — Route 120–123, Fortree Gym i Mt. Pyre (2026-11-07)
+
+- Rozbudowano fragment po Weather Institute o szczegółową eksplorację Route 120: listę pierwszych trenerów, spotkania w długiej trawie, oddzielne metody Surf/wędkowania, sześć niewidzialnych Kecleonów, Scorched Slab z TM11 oraz zestaw przedmiotów dostępnych po zdobyciu Devon Scope i Surf.
+- Fortree Gym otrzymał skład trenerów oraz pełną drużynę Winony z poziomami i ruchami; opisano Feather Badge, TM40 Aerial Ace i praktyczne zagrożenia ze strony Sunny Day oraz Dragon Dance.
+- Route 121 uzupełniono o pierwsze składy trenerów, spotkania w trawie, przedmioty i dojście do Safari Zone. Route 122 otrzymała osobne procenty Surf i obu dostępnych wędek.
+- Mt. Pyre rozbito na wnętrze, zewnętrzne zbocze i szczyt: tabele spotkań dla pięter i szczytu, trenerzy, Cleanse Tag, TM30, kadzidła, TM48, przedmioty ukryte, Archie oraz Magma Emblem.
+- Route 123 otrzymała trenerów, wymagania Cut, TM19 Giga Drain, listę przedmiotów, spotkania w trawie/Surf/wędkowanie i opis Berry Master’s House. Rewanże trenerów nie zostały wliczone do pierwszych walk.
+- Nowa wersja poradnika ma 137 kroków łącznie, z czego 108 w kontynuacji Emerald. To rozszerzenie obejmuje znaczny fragment głównej trasy i opcjonalnej zawartości; szacowana kompletność poradnika wzrasta z 51% do około 61% (+10 p.p.). Procent jest audytem pokrycia treści, nie postępem gracza.
+- Kontrola statyczna: sprawdzono liczbę kroków i zachowanie granic listy; nie uruchamiano Flutter Analyzer, testów ani APK. Dane źródłowe: Bulbapedia Emerald Part 11 i Part 12; pomocniczo Quest Compendium dla szczegółów Fortree Gym i Mt. Pyre.
+- Commit danych: `102989e3cbebff4b1cd203dbace7799e4dca5d25`.
