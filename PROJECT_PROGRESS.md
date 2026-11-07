@@ -1,3 +1,17 @@
+### Poradnik Pokémon Emerald — Route 118–119 i Weather Institute (2026-11-07)
+
+- Poradnik ma teraz **118 kroków** (16 bazowych + 102 kontynuacji).
+- Route 118 (wschód): dodano odbiór Good Rod i przedmioty dostępne po przepłynięciu z Mauville.
+- Route 119: dodano składy pierwszych trenerów na południowej i środkowej części, pary Double Battle, procenty spotkań w długiej trawie i Surf oraz listę przedmiotów.
+- Feebas: dodano osobny opis sześciu losowych pól wodnych; nie potraktowano 50% szansy jako zwykłej szansy spotkania na całej trasie. Opisano zależność lokalizacji pól od trendu w Dewford.
+- Weather Institute rozbito na pierwsze piętro, drugie piętro i walkę z Shelly, odbiór Castforma z Mystic Water oraz trenerów po odblokowaniu mostu.
+- Dodano walkę z rywalem po opuszczeniu instytutu i nagrodę HM02 Fly; skład jest rozróżniony według startera.
+- Źródło: Bulbapedia Emerald Part 10 https://bulbapedia.bulbagarden.net/wiki/Walkthrough:Pok%C3%A9mon_Emerald/Part_10 ; dodatkowe szczegóły trasy: https://bulbapedia.bulbagarden.net/wiki/Route_119 .
+- Commit danych: `9593ba5`.
+- Walidacja statyczna tekstu Dart: nawiasy klamrowe, okrągłe i kwadratowe są zbilansowane. Nie uruchomiono Flutter Analyzer, testów ani APK.
+- **Szacowana kompletność poradnika: 51%** — ważony audyt: główna trasa 82%, bossowie 77%, trenerzy 30%, spotkania 31%, przedmioty/TM/HM 23%, post-game 55%, Battle Frontier 70%, legendarne 45%, eventy 0%, Pokédex/hodowla/wymiany 10%. Wynik ważony ok. 51,3%, po zaokrągleniu 51%. To ocena zakresu i szczegółowości treści, nie procent odhaczonych zadań.
+- Następne: Route 120 (trenerzy, Kecleon i Devon Scope, Scorched Slab, Ancient Tomb), następnie Fortree Gym i Route 121–123.
+
 ### Poradnik Pokémon Emerald — Route 115 i eksploracja po Surf (2026-11-07)
 
 - Poradnik ma teraz **113 kroków** (16 podstawowych + 97 kontynuacji).
