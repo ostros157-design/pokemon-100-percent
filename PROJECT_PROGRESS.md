@@ -1769,3 +1769,12 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Zakres audytu uznaję za domknięty na poziomie poradnika tekstowego 100%: główna historia, post-game, lokacje opcjonalne, spotkania, trenerzy, przedmioty, dzienne/tygodniowe aktywności, hodowla, konkursy, wstążki i ograniczenia kolekcji. To nie oznacza, że jeden kartridż pozwala zdobyć wszystkie 386 Pokémonów ani że każda pojedyncza dekoracja/przedmiot ma osobny checkbox.
 - Nie uruchamiano Flutter Analyzer, testów aplikacji ani APK; walidacja statyczna danych zostanie odnotowana osobno po sprawdzeniu całego pliku.
 - Commit danych: `d59ade4977fbe519473d7291d599ed95239fc2c6`.
+
+
+### Naprawa błędów kompilacji poradnika Emerald (2026-11-07)
+
+- Po zgłoszeniu błędu `:app:compileFlutterBuildRelease` poprawiono dwa błędy składni w `lib/data/guides_data.dart`: brak przecinka po kroku Aqua Hideout oraz przedwczesne zakończenie listy kroków średnikiem po walce z Championem Wallace’em.
+- Ostrzeżenie Flutter o `firebase_core` stosującym Kotlin Gradle Plugin (KGP) jest osobnym ostrzeżeniem migracyjnym i nie było przyczyną przerwania kompilacji. Nie zmieniano wersji Firebase ani konfiguracji Gradle bez potwierdzenia kompatybilnej wersji.
+- Walidacja statyczna po poprawce: 195 wywołań GuideStep w pliku, 166 kroków kontynuacji Emerald, 49 tabel spotkań (wszystkie sumują się do 100%), brak powtórzonych tytułów, brak błędów bilansu nawiasów i brak wykrytych brakujących separatorów między krokami.
+- Flutter Analyzer, testy i ponowny build APK nie zostały uruchomione w tym środowisku. Należy ponowić `flutter build apk --release` lokalnie, aby potwierdzić kompilację całej aplikacji.
+- Commit poprawki: `a2485590c85565a879c4b07aadd92f4044f1c6e0`.
