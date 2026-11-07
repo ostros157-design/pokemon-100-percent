@@ -143,17 +143,41 @@ class _GuideScreenState extends State<GuideScreen> {
       final section = step.section ?? 'Początek przygody i pierwsza odznaka';
 
       if (section != previousSection) {
+        final sectionIndexes = <int>[
+          for (var i = 0; i < widget.guide.steps.length; i++)
+            if ((widget.guide.steps[i].section ??
+                    'Początek przygody i pierwsza odznaka') ==
+                section)
+              i,
+        ];
+        final sectionCompleted = sectionIndexes
+            .where(completedSteps.contains)
+            .length;
+        final sectionPercent = sectionIndexes.isEmpty
+            ? 0
+            : (sectionCompleted * 100 / sectionIndexes.length).round();
+
         widgets.add(
           Padding(
             padding: EdgeInsets.only(
               top: widgets.isEmpty ? 0 : 14,
               bottom: 8,
             ),
-            child: Text(
-              section,
-              style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                    fontWeight: FontWeight.bold,
+            child: Row(
+              children: [
+                Expanded(
+                  child: Text(
+                    section,
+                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                          fontWeight: FontWeight.bold,
+                        ),
                   ),
+                ),
+                Text(
+                  '$sectionCompleted/${sectionIndexes.length} · $sectionPercent%',
+                  style: Theme.of(context).textTheme.labelMedium,
+                ),
+              ],
             ),
           ),
         );
