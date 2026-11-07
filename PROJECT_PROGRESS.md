@@ -1522,3 +1522,12 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Status złapania przeniesiono do sekcji „Moja kolekcja”, która pokazuje aktualny stan i pozwala go zmienić.
 - Zachowano dotychczasową sekcję danych gatunku oraz jej pola.
 - Commit: `eacc6fc`. Nie uruchamiano `flutter analyze`, testów ani APK; układ wymaga późniejszego sprawdzenia na telefonie i AYN Thorze.
+
+### Osiągnięcia — automatyczne warunki odblokowania (2026-11-07)
+
+- Rozszerzono automatyczne sprawdzanie osiągnięć na podstawie zapisanych danych: Shiny, pierwszego legendarnego Pokémona, rozpoczęcia poradnika i ukończenia wszystkich kroków co najmniej jednego poradnika wybranej gry.
+- Dodano automatyczne progi postępu wybranej gry: 25%, 50%, 75% i 100%. Osiągnięcia „Szybki start”, „Połowa drogi”, „Prawie gotowe” i „100%” korzystają z tej samej definicji postępu co profil: kroki poradnika oraz złapane Pokémony.
+- Ekran poradnika zapisuje teraz informację, że poradnik został otwarty, aby osiągnięcie „Rozpoczynamy przygodę” nie wymagało odhaczenia kroku.
+- Sprawdzanie odbywa się przy otwarciu ekranu osiągnięć na podstawie SharedPreferences. Nie dodano osobnego serwera ani ręcznego odblokowywania.
+- Osiągnięcia wymagające danych, których aplikacja jeszcze nie zapisuje (np. odznaki, Elite Four, Champion, ewolucje i skład drużyny), pozostają zablokowane — nie są odblokowywane na podstawie zgadywanych warunków.
+- Commity: `8d5141b`, `7296a91`, `4381d9c`, `9777c09`. Nie uruchamiano `flutter analyze`, testów ani APK; wymagane jest sprawdzenie działania na urządzeniu.
