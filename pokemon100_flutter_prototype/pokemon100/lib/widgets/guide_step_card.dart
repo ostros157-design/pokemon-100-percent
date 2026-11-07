@@ -19,10 +19,17 @@ class GuideStepCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: const EdgeInsets.only(bottom: 12),
-      elevation: 2,
+      margin: const EdgeInsets.only(bottom: 8),
+      elevation: 0,
+      clipBehavior: Clip.antiAlias,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(13),
+        side: BorderSide(
+          color: Theme.of(context).dividerColor.withValues(alpha: 0.55),
+        ),
+      ),
       child: Padding(
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -32,6 +39,8 @@ class GuideStepCard extends StatelessWidget {
                 Checkbox(
                   value: completed,
                   onChanged: (_) => onChanged(),
+                  visualDensity: VisualDensity.compact,
+                  materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                 ),
                 Expanded(
                   child: Text(
@@ -46,7 +55,7 @@ class GuideStepCard extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 8),
+            const SizedBox(height: 5),
             Text(
               step.description,
               style: TextStyle(
@@ -57,7 +66,7 @@ class GuideStepCard extends StatelessWidget {
               ),
             ),
             if (step.location != null) ...[
-              const SizedBox(height: 12),
+              const SizedBox(height: 8),
               Row(
                 children: [
                   const Icon(
@@ -78,7 +87,7 @@ class GuideStepCard extends StatelessWidget {
               ),
             ],
             if (step.pokemon.isNotEmpty) ...[
-              const SizedBox(height: 12),
+              const SizedBox(height: 8),
               const Text(
                 'Pokémon:',
                 style: TextStyle(fontWeight: FontWeight.bold),
@@ -87,7 +96,7 @@ class GuideStepCard extends StatelessWidget {
               _buildPokemonList(context),
             ],
             if (step.items.isNotEmpty) ...[
-              const SizedBox(height: 12),
+              const SizedBox(height: 8),
               const Text(
                 'Przedmioty:',
                 style: TextStyle(fontWeight: FontWeight.bold),
@@ -116,11 +125,13 @@ class GuideStepCard extends StatelessWidget {
         .map((name) => _buildPokemonChip(context, name))
         .toList();
     if (chips.length <= 5) {
-      return Wrap(spacing: 6, runSpacing: 6, children: chips);
+      return Wrap(spacing: 4, runSpacing: 2, children: chips);
     }
     return ExpansionTile(
       tilePadding: EdgeInsets.zero,
-      childrenPadding: const EdgeInsets.only(bottom: 8),
+      dense: true,
+      visualDensity: VisualDensity.compact,
+      childrenPadding: const EdgeInsets.only(bottom: 4),
       title: Text('Pokaż Pokémony (${chips.length})'),
       children: [Wrap(spacing: 6, runSpacing: 6, children: chips)],
     );
@@ -129,8 +140,11 @@ class GuideStepCard extends StatelessWidget {
   Widget _buildItemList() {
     final chips = step.items
         .map((item) => Chip(
-              avatar: const Icon(Icons.backpack, size: 18),
+              avatar: const Icon(Icons.backpack, size: 15),
               label: Text(item),
+              visualDensity: VisualDensity.compact,
+              materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+              labelPadding: const EdgeInsets.symmetric(horizontal: 3),
             ))
         .toList();
     if (chips.length <= 4) {
@@ -193,15 +207,18 @@ class GuideStepCard extends StatelessWidget {
 
     if (pokemon == null) {
       return Chip(
-        avatar: const Icon(Icons.catching_pokemon, size: 18),
+        avatar: const Icon(Icons.catching_pokemon, size: 15),
         label: Text(_pokemonLabel(name, encounterRate)),
+        visualDensity: VisualDensity.compact,
+        materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+        labelPadding: const EdgeInsets.symmetric(horizontal: 3),
       );
     }
 
     final primaryType = pokemon.types.isNotEmpty ? pokemon.types.first : 'normal';
     final typeNames = pokemon.types.join(' / ');
     return ActionChip(
-      avatar: const Icon(Icons.catching_pokemon, size: 18),
+      avatar: const Icon(Icons.catching_pokemon, size: 15),
       label: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -222,6 +239,9 @@ class GuideStepCard extends StatelessWidget {
           ],
         ],
       ),
+      visualDensity: VisualDensity.compact,
+      materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+      labelPadding: const EdgeInsets.symmetric(horizontal: 3),
       tooltip: 'Otwórz Pokédex: $name — $typeNames',
       onPressed: () {
         Navigator.of(context).push(
