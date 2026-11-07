@@ -1787,3 +1787,13 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Zmniejszono odstępy między sekcjami i wysokość nagłówka postępu; pasek postępu jest cieńszy.
 - Zachowano klikalność Pokémonów prowadzącą do Pokédexu, odhaczanie kroków, zapisywanie postępu, listy rozwijane i dane spotkań.
 - Nie uruchamiano Flutter Analyzer, testów ani APK. Zmiany należy sprawdzić wizualnie po pobraniu aktualizacji.
+
+
+### Poradnik — rozdzielenie dzikich Pokémonów, trenerów i drużyn trenerów (2026-11-07)
+
+- Karta kroku pokazuje trzy niezależne sekcje: „Pokémony (dzikie spotkania)”, „Trenerzy” i „Pokémony trenerów”.
+- Dzikie Pokémony są wybierane wyłącznie na podstawie wpisów w zweryfikowanej tabeli `encounterRatesPercent`; tylko one otrzymują procenty.
+- Pokémony z dotychczasowej listy, które nie mają wpisu w tabeli dzikich spotkań, trafiają do sekcji „Pokémony trenerów” i nie dostają procentów.
+- Nazwy trenerów są wyświetlane z jawnego pola `trainers`, jeśli zostanie uzupełnione, lub pomocniczo wyciągane z opisów dla popularnych klas trenerów i nazwanych walk. Ekstrakcja automatyczna wymaga dalszego audytu nietypowych walk.
+- Zachowano klikalność Pokémonów, kolory typów, rozwijanie długich list, przedmioty i zapis postępu.
+- Nie uruchamiano Flutter Analyzer, testów ani APK.
