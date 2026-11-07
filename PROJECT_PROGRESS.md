@@ -1,3 +1,12 @@
+### Poradniki — audyt stanu danych na gałęzi main (2026-11-07)
+
+- Sprawdzono `lib/data/guides_data.dart`, `lib/models/guide.dart`, `lib/widgets/guide_step_card.dart` i `lib/screens/guide_screen.dart`.
+- W aktualnym `guides_data.dart` znajduje się jeden poradnik: Let's Go, Pikachu! — 12 kroków od Pallet Town do pierwszego Gymu (Brock). Nie znaleziono w tym pliku poradnika Emerald ani poradników Sword, Legends: Arceus i X/Y. Nie dopisano duplikatów; stan 16 kroków Emerald zgłoszony w opisie zadania nie jest obecny w odczytanym pliku na `main` i wymaga wyjaśnienia, czy znajduje się na innej gałęzi lub w lokalnych, niezapisanych zmianach.
+- Model `GuideStep` ma już pole `encounterRatesPercent`, a karta wyświetla procent, jeśli został podany. W istniejących 12 krokach Let's Go nie ma jednak wpisanych zweryfikowanych procentów.
+- Nazwy Pokémonów są klikalne, ale obecna karta pokazuje ogólną ikonę `catching_pokemon` zamiast Poké Balla i nie wyświetla sprite'ów. Nie zmieniono jeszcze UI.
+- `GuideScreen` zapisuje postęp w SharedPreferences i obsługuje otwieranie wskazanego kroku z mapy.
+- Zmiany: wyłącznie wpis audytowy w tym pliku. Nie uruchomiono Flutter analyze, testów ani kompilacji APK.
+
 ### Poradniki — Pokémon Emerald: początek przygody (2026-11-07)
 
 - Dodano osobny poradnik dla `emerald` w wyborze gier. Pierwsza część prowadzi od Littleroot Town przez Route 101, Oldale, Route 103, Route 102, Petalburg City, Route 104 i Petalburg Woods do pierwszej odznaki w Rustboro City.
