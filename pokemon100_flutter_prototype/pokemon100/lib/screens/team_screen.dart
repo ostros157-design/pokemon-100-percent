@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../data/pokemon_data.dart';
+import '../data/move_data.dart';
 import '../models/pokemon.dart';
 import '../services/team_recommendation_service.dart';
 
@@ -660,7 +661,7 @@ class _TeamScreenState extends State<TeamScreen> {
                 const SizedBox(height: 12),
                 if (_team.isNotEmpty) ...[
                   const SizedBox(height: 12),
-                  _TeamAnalysis(team: _team),
+                  _TeamAnalysis(team: _team, movesByPokemon: _movesByPokemon),
                 ],
                 FilledButton.icon(
                   onPressed: _saving ? null : _saveTeam,
@@ -761,7 +762,9 @@ class _PokemonPickerState extends State<_PokemonPicker> {
 /// Analiza rozdziela problemy defensywne (tarcza) i ofensywne (miecz).
 class _TeamAnalysis extends StatelessWidget {
   final List<Pokemon> team;
-  const _TeamAnalysis({required this.team});
+  final Map<int, List<String>> movesByPokemon;
+
+  const _TeamAnalysis({required this.team, required this.movesByPokemon});
 
   static const Map<String, Set<String>> _strongAgainst = {
     'Normal': {}, 'Fire': {'Grass', 'Ice', 'Bug', 'Steel'},
@@ -791,6 +794,13 @@ class _TeamAnalysis extends StatelessWidget {
     'Flying': {'Ground'}, 'Ghost': {'Normal', 'Fighting'},
     'Dark': {'Psychic'}, 'Steel': {'Poison'}, 'Fairy': {'Dragon'},
   };
+  static const Map<String, String> _displayTypes = {
+    'normal': 'Normal', 'fire': 'Fire', 'water': 'Water', 'electric': 'Electric',
+    'grass': 'Grass', 'ice': 'Ice', 'fighting': 'Fighting', 'poison': 'Poison',
+    'ground': 'Ground', 'flying': 'Flying', 'psychic': 'Psychic', 'bug': 'Bug',
+    'rock': 'Rock', 'ghost': 'Ghost', 'dragon': 'Dragon', 'dark': 'Dark',
+    'steel': 'Steel', 'fairy': 'Fairy',
+  };
 
   double _multiplier(String attackType, List<String> defendingTypes) {
     var multiplier = 1.0;
@@ -815,9 +825,34 @@ class _TeamAnalysis extends StatelessWidget {
     final defensiveSorted = defensive.entries.toList()
       ..sort((a, b) => b.value != a.value ? b.value.compareTo(a.value) : a.key.compareTo(b.key));
 
-    final offensiveGaps = _strongAgainst.keys.where((defendingType) =>
-      !team.any((pokemon) => pokemon.types.any((attackType) =>
-        _strongAgainst[attackType]?.contains(defendingType) ?? false))).toList();
+    final catalogue = <String, MoveData>{
+      for (final move in moveCatalogue) move.name.trim().toLowerCase(): move,
+    };
+    final coverage = <String, List<String>>{};
+    final unknown = <String>[];
+    var damagingMoveCount = 0;
+    for (final pokemon in team) {
+      for (final name in movesByPokemon[pokemon.id] ?? const <String>[]) {
+        final move = catalogue[name.trim().toLowerCase()];
+        if (move == null) {
+          unknown.add('${pokemon.name}: $name');
+          continue;
+        }
+        if (move.category == 'status' || (move.power ?? 0) <= 0) continue;
+        damagingMoveCount++;
+        final moveType = _displayTypes[move.type.toLowerCase()];
+        if (moveType == null) continue;
+        for (final target in _strongAgainst.keys) {
+          if (_multiplier(moveType, [target]) > 1) {
+            final label = '${pokemon.name} — ${move.name}';
+            coverage.putIfAbsent(target, () => <String>[]);
+            if (!coverage[target]!.contains(label)) coverage[target]!.add(label);
+          }
+        }
+      }
+    }
+    final gaps = _strongAgainst.keys.where((type) => !coverage.containsKey(type)).toList();
+    final configured = team.where((p) => (movesByPokemon[p.id] ?? const <String>[]).isNotEmpty).length;
 
     return Card(
       child: Padding(
@@ -825,7 +860,7 @@ class _TeamAnalysis extends StatelessWidget {
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           const Text('Analiza drużyny', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
           const SizedBox(height: 6),
-          const Text('Jak czytać wynik: 2/6 oznacza, że 2 z 6 Pokémonów są słabe na ten typ ataku. Im mniejsza liczba, tym lepiej. To nie jest ocena całej drużyny — sprawdź też, czy te same Pokémony mają kilka wspólnych słabości.'),
+          const Text('Jak czytać wynik: 2/6 oznacza, że 2 z 6 Pokémonów są słabe na ten typ ataku. Im mniejsza liczba, tym lepiej.'),
           const SizedBox(height: 14),
           Row(children: [
             Icon(Icons.shield, color: Theme.of(context).colorScheme.error),
@@ -844,21 +879,35 @@ class _TeamAnalysis extends StatelessWidget {
           Row(children: [
             Icon(Icons.sports_martial_arts, color: Theme.of(context).colorScheme.primary),
             const SizedBox(width: 8),
-            const Text('Miecz — braki w ataku', style: TextStyle(fontWeight: FontWeight.bold)),
+            const Text('Miecz — pokrycie konkretnymi ruchami', style: TextStyle(fontWeight: FontWeight.bold)),
           ]),
           const SizedBox(height: 4),
-          const Text('Pokazuje typy przeciwników, na które żaden typ Twojego Pokémona nie zadaje super skutecznych obrażeń. Nie sprawdza jeszcze konkretnych ruchów.'),
-          const SizedBox(height: 6),
-          if (offensiveGaps.isEmpty)
-            const Text('Drużyna ma super skuteczne pokrycie przeciwko wszystkim typom.')
-          else
-            Wrap(spacing: 8, runSpacing: 4, children: offensiveGaps.map((type) => Chip(
-              avatar: Icon(Icons.sports_martial_arts, size: 18, color: Theme.of(context).colorScheme.primary),
-              label: Text(type),
-            )).toList()),
+          Text('Zestawy ruchów ustawiono u $configured/${team.length} Pokémonów. Rozpoznano $damagingMoveCount ruchów zadających obrażenia.'),
+          const SizedBox(height: 8),
+          if (damagingMoveCount == 0)
+            const Text('Dodaj nazwy ruchów z katalogu aplikacji, aby sprawdzić ich skuteczność przeciwko typom przeciwników.')
+          else ...[
+            if (gaps.isEmpty)
+              const Text('Ruchy w drużynie mają super skuteczne pokrycie przeciwko wszystkim typom.')
+            else
+              Wrap(spacing: 8, runSpacing: 4, children: gaps.map((type) => Chip(
+                avatar: Icon(Icons.warning_amber, size: 18, color: Theme.of(context).colorScheme.error),
+                label: Text(type),
+              )).toList()),
+            const SizedBox(height: 8),
+            ...coverage.entries.map((entry) => Padding(
+              padding: const EdgeInsets.only(bottom: 5),
+              child: Text('${entry.key}: ${entry.value.join(', ')}', style: Theme.of(context).textTheme.bodySmall),
+            )),
+          ],
+          if (unknown.isNotEmpty) ...[
+            const SizedBox(height: 8),
+            Text('Nierozpoznane nazwy pominięte w analizie: ${unknown.join(', ')}',
+              style: TextStyle(color: Theme.of(context).colorScheme.error, fontSize: 12)),
+          ],
           const SizedBox(height: 8),
           Text(
-            'Analiza uwzględnia podstawowe relacje typów i podwójne typy w obronie. Nie uwzględnia rzeczywistych ruchów, zdolności ani statystyk Pokémonów.',
+            'Analiza wykorzystuje typ i kategorię ruchu z lokalnego katalogu. Nie oblicza jeszcze obrażeń, STAB, statystyk, zdolności ani ograniczeń dostępności ruchu w wybranej grze. Ruchy statusowe są pomijane.',
             style: Theme.of(context).textTheme.bodySmall,
           ),
         ]),
@@ -866,7 +915,6 @@ class _TeamAnalysis extends StatelessWidget {
     );
   }
 }
-
 
 class _SavedTeam {
   final String id;
