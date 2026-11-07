@@ -1,3 +1,15 @@
+### Poradnik Pokémon Emerald — Route 115 i eksploracja po Surf (2026-11-07)
+
+- Poradnik ma teraz **113 kroków** (16 podstawowych + 97 kontynuacji).
+- Dodano południową Route 115: pierwsze składy czterech trenerów, możliwą Double Battle, przedmioty oraz Old Rod (Magikarp 70%, Tentacool 30%).
+- Dodano osobny krok powrotu po HM03 Surf: trenerów dostępnych od strony wody, spotkania w trawie, Surf i wszystkie trzy wędki. Rozdzielono pierwszą wizytę od późniejszej eksploracji wymagającej Surf.
+- Uwzględniono TM01 Focus Punch, Heal Powder, Iron i Kelpsy Berries w północnej części trasy.
+- Źródła: Bulbapedia Emerald Part 7 (pierwsza wizyta i południowa Route 115) https://bulbapedia.bulbagarden.net/wiki/Walkthrough:Pok%C3%A9mon_Emerald/Part_7 ; Bulbapedia Emerald Part 8 (późniejsza eksploracja po Surf) https://bulbapedia.bulbagarden.net/wiki/Walkthrough:Pok%C3%A9mon_Emerald/Part_8 ; tabele spotkań Route 115: https://bulbapedia.bulbagarden.net/wiki/Route_115 .
+- Commit danych: `6a8dd9d`.
+- Walidacja statyczna: nawiasy klamrowe, okrągłe i kwadratowe są zbilansowane. Nie uruchomiono Flutter Analyzer, testów ani APK.
+- **Szacowana kompletność poradnika: 49%** — ważony audyt: główna trasa 80%, bossowie 75%, trenerzy 26%, spotkania 26%, przedmioty/TM/HM 19%, post-game 55%, Battle Frontier 70%, legendarne 45%, eventy 0%, Pokédex/hodowla/wymiany 10%. Wynik ważony 49,3%, po zaokrągleniu 49%. To ocena zakresu treści, a nie postępu gracza.
+- Następne: Route 119–123, zaczynając od pełnej listy trenerów i metod spotkań na Route 119 oraz Weather Institute.
+
 ### Poradnik Pokémon Emerald — Route 111–114 i Meteor Falls (2026-11-07)
 
 - Rozbudowano poradnik do **111 kroków** (16 kroków podstawowych + 95 kontynuacji).
