@@ -1514,3 +1514,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Kolor i emoji są zapisywane osobno dla każdego numeru Pokédexa w SharedPreferences i odczytywane przy ponownym otwarciu karty.
 - Zmiana nie modyfikuje koloru tła zależnego od typu Pokémona ani pozostałych danych karty.
 - Commit: `aa456ac`. Nie uruchamiano `flutter analyze`, testów ani APK; wygląd i zapis ustawień wymagają sprawdzenia w aplikacji.
+
+### Pokédex — uporządkowanie zakładki Informacje (2026-11-07)
+
+- Opis Pokémona jest teraz pokazany w osobnej karcie z nagłówkiem i czytelniejszą interlinią; pusty opis otrzymuje jawny komunikat zamiast pustego miejsca.
+- Oznaczenia „Legendarny”, „Mityczny” i „Baby Pokémon” są prezentowane jako osobne etykiety.
+- Status złapania przeniesiono do sekcji „Moja kolekcja”, która pokazuje aktualny stan i pozwala go zmienić.
+- Zachowano dotychczasową sekcję danych gatunku oraz jej pola.
+- Commit: `eacc6fc`. Nie uruchamiano `flutter analyze`, testów ani APK; układ wymaga późniejszego sprawdzenia na telefonie i AYN Thorze.
