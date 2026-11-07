@@ -476,108 +476,184 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
     );
   }
 
+
+  Color _primaryTypeColor(Pokemon pokemon) {
+    const colors = <String, Color>{
+      'Normal': Color(0xFFA8A77A), 'Fire': Color(0xFFEE8130),
+      'Water': Color(0xFF6390F0), 'Electric': Color(0xFFF7D02C),
+      'Grass': Color(0xFF7AC74C), 'Ice': Color(0xFF96D9D6),
+      'Fighting': Color(0xFFC22E28), 'Poison': Color(0xFFA33EA1),
+      'Ground': Color(0xFFE2BF65), 'Flying': Color(0xFFA98FF3),
+      'Psychic': Color(0xFFF95587), 'Bug': Color(0xFFA6B91A),
+      'Rock': Color(0xFFB6A136), 'Ghost': Color(0xFF735797),
+      'Dragon': Color(0xFF6F35FC), 'Dark': Color(0xFF705746),
+      'Steel': Color(0xFFB7B7CE), 'Fairy': Color(0xFFD685AD),
+    };
+    return colors[pokemon.types.isEmpty ? 'Normal' : pokemon.types.first] ??
+        const Color(0xFF6688CC);
+  }
+
+  void _openAdjacentPokemon(int offset) {
+    final index = pokemonList.indexWhere((item) => item.id == widget.pokemon.id);
+    final nextIndex = index + offset;
+    if (nextIndex < 0 || nextIndex >= pokemonList.length) return;
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute<void>(
+        builder: (_) => PokemonDetailsScreen(
+          pokemon: pokemonList[nextIndex],
+          gameId: widget.gameId ?? _activeGameId,
+        ),
+      ),
+    );
+  }
+
+  Widget _buildHero(Pokemon pokemon, Color color) {
+    return Container(
+      height: 286,
+      decoration: BoxDecoration(
+        color: color,
+        borderRadius: const BorderRadius.vertical(
+          bottom: Radius.circular(34),
+        ),
+      ),
+      child: Stack(
+        children: [
+          Positioned(
+            right: -34,
+            top: 18,
+            child: Icon(Icons.catching_pokemon,
+                size: 170, color: Colors.white.withValues(alpha: 0.10)),
+          ),
+          Column(
+            children: [
+              const SizedBox(height: 14),
+              Text(
+                pokemon.name,
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 27,
+                  fontWeight: FontWeight.w800,
+                  shadows: [Shadow(color: Colors.black26, blurRadius: 8)],
+                ),
+              ),
+              Text(
+                '#${pokemon.id.toString().padLeft(3, '0')}',
+                style: TextStyle(
+                  color: Colors.white.withValues(alpha: 0.88),
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 1.2,
+                ),
+              ),
+              Expanded(
+                child: Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    CachedNetworkImage(
+                      imageUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${_shiny ? 'shiny/' : ''}${pokemon.id}.png',
+                      fit: BoxFit.contain,
+                      width: 230,
+                      height: 210,
+                      placeholder: (context, url) => const SizedBox(
+                        width: 36, height: 36,
+                        child: CircularProgressIndicator(color: Colors.white),
+                      ),
+                      errorWidget: (context, url, error) => const Icon(
+                        Icons.catching_pokemon, size: 120, color: Colors.white,
+                      ),
+                    ),
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: IconButton(
+                        tooltip: 'Poprzedni Pokémon',
+                        onPressed: pokemon.id > pokemonList.first.id
+                            ? () => _openAdjacentPokemon(-1) : null,
+                        color: Colors.white,
+                        icon: const Icon(Icons.chevron_left, size: 34),
+                      ),
+                    ),
+                    Align(
+                      alignment: Alignment.centerRight,
+                      child: IconButton(
+                        tooltip: 'Następny Pokémon',
+                        onPressed: pokemon.id < pokemonList.last.id
+                            ? () => _openAdjacentPokemon(1) : null,
+                        color: Colors.white,
+                        icon: const Icon(Icons.chevron_right, size: 34),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 18),
+                child: Wrap(
+                  spacing: 8,
+                  children: pokemon.types.map((type) => Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
+                    decoration: BoxDecoration(
+                      color: Colors.white.withValues(alpha: 0.92),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Text(type,
+                      style: TextStyle(color: color, fontWeight: FontWeight.bold)),
+                  )).toList(),
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final pokemon = widget.pokemon;
-    return Scaffold(
-      appBar: AppBar(title: Text(pokemon.name), centerTitle: true, actions: [IconButton(tooltip: _shiny ? 'Pokaż zwykłą formę' : 'Pokaż Shiny', onPressed: _toggleShiny, icon: Icon(_shiny ? Icons.auto_awesome : Icons.auto_awesome_outlined))]),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
+    final primaryColor = _primaryTypeColor(pokemon);
+
+    return DefaultTabController(
+      length: 4,
+      child: Scaffold(
+        backgroundColor: Theme.of(context).colorScheme.surface,
+        appBar: AppBar(
+          backgroundColor: primaryColor,
+          foregroundColor: Colors.white,
+          elevation: 0,
+          title: const Text('Pokédex'),
+          actions: [
+            IconButton(
+              tooltip: _shiny ? 'Pokaż zwykłą formę' : 'Pokaż Shiny',
+              onPressed: _toggleShiny,
+              icon: Icon(_shiny ? Icons.auto_awesome : Icons.auto_awesome_outlined),
+            ),
+          ],
+        ),
+        body: Column(
           children: [
-            Text(
-              '#${pokemon.id.toString().padLeft(3, '0')}',
-              textAlign: TextAlign.center,
-              style: const TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.bold,
-                color: Colors.grey,
+            _buildHero(pokemon, primaryColor),
+            Material(
+              color: Theme.of(context).colorScheme.surface,
+              child: TabBar(
+                labelColor: primaryColor,
+                unselectedLabelColor: Theme.of(context).colorScheme.onSurfaceVariant,
+                indicatorColor: primaryColor,
+                indicatorWeight: 3,
+                labelStyle: const TextStyle(fontSize: 12, fontWeight: FontWeight.w700),
+                tabs: const [
+                  Tab(text: 'Informacje'),
+                  Tab(text: 'Statystyki'),
+                  Tab(text: 'Ewolucja'),
+                  Tab(text: 'Ruchy'),
+                ],
               ),
             ),
-            const SizedBox(height: 8),
-            Text(
-              pokemon.name,
-              textAlign: TextAlign.center,
-              style: const TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
-            ),
-            const SizedBox(height: 20),
-            Center(
-              child: SizedBox(
-                width: 220,
-                height: 220,
-                child: CachedNetworkImage(
-                  imageUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${_shiny ? 'shiny/' : ''}${pokemon.id}.png',
-                  fit: BoxFit.contain,
-                  placeholder: (context, url) => const SizedBox(
-                    width: 64,
-                    height: 64,
-                    child: Center(child: CircularProgressIndicator()),
-                  ),
-                  errorWidget: (context, url, error) => const Icon(
-                    Icons.catching_pokemon,
-                    size: 120,
-                  ),
-                ),
-              ),
-            ),
-            const SizedBox(height: 20),
-            FilledButton.icon(
-              onPressed: _loadingCaught ? null : _toggleCaught,
-              icon: Icon(_caught ? Icons.check_circle : Icons.catching_pokemon),
-              label: Text(_loadingCaught
-                  ? 'Ładowanie statusu...'
-                  : _caught
-                      ? 'Oznacz jako niezłapany'
-                      : 'Oznacz jako złapany'),
-            ),
-            const SizedBox(height: 24),
-            const Text('Typ', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-            const SizedBox(height: 8),
-            Wrap(
-              spacing: 8,
-              runSpacing: 8,
-              children: pokemon.types.map((type) => Chip(
-                label: Text(type, style: const TextStyle(fontWeight: FontWeight.bold)),
-              )).toList(),
-            ),
-            _buildTypeMatchups(pokemon),
-            _buildBaseStats(pokemon),
-            _buildSpeciesData(pokemon),
-            _buildLearnset(pokemon),
-            const SizedBox(height: 24),
-            const Text('Informacje', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-            const SizedBox(height: 8),
-            Card(
-              child: Padding(
-                padding: const EdgeInsets.all(16),
-                child: Text(pokemon.description, style: const TextStyle(fontSize: 16, height: 1.5)),
-              ),
-            ),
-            _buildEvolutionTree(context, pokemon),
-            const SizedBox(height: 24),
-            const Text('Spotkanie i łapanie', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-            const SizedBox(height: 8),
-            const Card(
-              child: Column(
+            Expanded(
+              child: TabBarView(
                 children: [
-                  ListTile(
-                    leading: Icon(Icons.location_on),
-                    title: Text('Szansa pojawienia się'),
-                    subtitle: Text('Procent musi zależeć od wybranej gry, lokacji, metody spotkania i warunków. Te dane nie są jeszcze dostępne — nie pokazujemy zmyślonej wartości.'),
-                  ),
-                  Divider(),
-                  ListTile(
-                    leading: Icon(Icons.auto_awesome),
-                    title: Text('Szansa złapania'),
-                    subtitle: Text('Zależy m.in. od gry, aktualnego HP, statusu, Poké Balla i parametrów spotkania. Kalkulator wymaga tych danych, więc procent nie jest jeszcze wyliczany.'),
-                  ),
-                  Divider(),
-                  ListTile(
-                    leading: Icon(Icons.bar_chart),
-                    title: Text('Statystyki'),
-                    subtitle: Text('Tutaj później będą wyświetlane statystyki Pokémona.'),
-                  ),
+                  _buildInfoTab(pokemon),
+                  _buildStatsTab(pokemon),
+                  _buildEvolutionTab(pokemon),
+                  _buildMovesTab(pokemon),
                 ],
               ),
             ),
@@ -585,5 +661,76 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
         ),
       ),
     );
+  }
+
+  Widget _tabContent(List<Widget> children) {
+    return SingleChildScrollView(
+      padding: const EdgeInsets.fromLTRB(16, 18, 16, 28),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: children,
+      ),
+    );
+  }
+
+  Widget _buildInfoTab(Pokemon pokemon) {
+    return _tabContent([
+      Text(pokemon.description,
+        style: const TextStyle(fontSize: 15, height: 1.5)),
+      const SizedBox(height: 16),
+      _buildSpeciesData(pokemon),
+      FilledButton.icon(
+        onPressed: _loadingCaught ? null : _toggleCaught,
+        icon: Icon(_caught ? Icons.check_circle : Icons.catching_pokemon),
+        label: Text(_loadingCaught
+            ? 'Ładowanie statusu...'
+            : _caught ? 'Oznacz jako niezłapany' : 'Oznacz jako złapany'),
+      ),
+    ]);
+  }
+
+  Widget _buildStatsTab(Pokemon pokemon) {
+    return _tabContent([
+      _buildBaseStats(pokemon),
+      _buildTypeMatchups(pokemon),
+    ]);
+  }
+
+  Widget _buildEvolutionTab(Pokemon pokemon) {
+    final familyIds = evolutionFamilies[pokemon.id];
+    if (familyIds == null || familyIds.length < 2) {
+      return _tabContent([
+        const Center(
+          child: Padding(
+            padding: EdgeInsets.all(28),
+            child: Text('Ten Pokémon nie ma zapisanej rodziny ewolucyjnej.'),
+          ),
+        ),
+      ]);
+    }
+    return _tabContent([
+      _buildEvolutionTree(context, pokemon),
+    ]);
+  }
+
+  Widget _buildMovesTab(Pokemon pokemon) {
+    return _tabContent([
+      Card(
+        clipBehavior: Clip.antiAlias,
+        child: ExpansionTile(
+          initiallyExpanded: false,
+          leading: const Icon(Icons.bolt),
+          title: const Text('Lista ruchów',
+              style: TextStyle(fontWeight: FontWeight.bold)),
+          subtitle: const Text('Rozwiń, aby zobaczyć ruchy i metody nauki'),
+          children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(12, 0, 12, 12),
+              child: _buildLearnset(pokemon),
+            ),
+          ],
+        ),
+      ),
+    ]);
   }
 }

@@ -1,3 +1,11 @@
+### Pokédex — przebudowa ekranu szczegółów (2026-11-07)
+
+- Na gałęzi `feature/pokedex-detail-redesign` przebudowano `pokemon_details_screen.dart` według dostarczonej przez użytkownika referencji wizualnej.
+- Dodano nagłówek kolorowany według pierwszego typu Pokémona, duży sprite, numer i nazwę, przyciski poprzedni/następny Pokémon, oznaczenia typów oraz zachowano przełącznik Shiny.
+- Szczegóły podzielono na zakładki: Informacje, Statystyki, Ewolucja i Ruchy. Lista ruchów jest domyślnie zwinięta w ExpansionTile.
+- Zachowano istniejące źródła danych, zapisy złapania/Shiny, statystyki bazowe, dane gatunku, efektywność typów, rodzinę ewolucyjną oraz filtrowanie ruchów według grupy wersji.
+- Status: zmiany zapisane w repozytorium; Flutter analyze, testy i kompilacja APK nie zostały jeszcze uruchomione. Wymagane sprawdzenie wizualne na urządzeniu i ewentualne poprawki.
+
 ### Mapy — poprawa czytelności i ponowny audyt (2026-10-29)
 
 - Powiększono etykiety głównych lokacji do 11.5 px (13 px dla zaznaczonej) oraz plakietki numerów tras do 10.5 px; etykiety Underground Path są teraz widoczne na mapie regionu.
