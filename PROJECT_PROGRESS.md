@@ -1665,3 +1665,19 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Kontrola danych: każda nowa tabela procentowa spotkań została sprawdzona na sumę 100%; walidacja składni i nawiasów wykonana po zapisie. Nie uruchamiano Flutter Analyzer, testów ani APK.
 - Źródła: Bulbapedia Emerald Part 12 i Part 13; Quest Compendium użyto pomocniczo do weryfikacji sekwencji Aqua Hideout.
 - Commit danych: `746aee6a30bf0d6c2b0e914e2ae57dd68dec1f08`.
+
+
+### Poradnik Emerald — Mossdeep, Shoal Cave, Route 127–128 i Seafloor Cavern (2026-11-07)
+
+- Route 124 otrzymała pełną listę pierwszych trenerów, składów i możliwych Double Battles; dodano spotkania Surf oraz Old/Good/Super Rod i wymianę Shardów u Treasure Huntera.
+- Mossdeep City uzupełniono o DynamicPunch Move Tutor, King's Rock, Net Ball, Super Rod, Sun Stone, zadanie Wingulla/Mental Herb oraz informację o Beldumie jako prezencie dopiero po Hall of Fame.
+- Mossdeep Gym rozpisano na trenerów z poziomami i pokojami, trasę paneli teleportacyjnych oraz pełną drużynę Tate i Lizy: Claydol 41, Xatu 41, Lunatone 42, Solrock 42 z ruchami i Sitrus Berry. Zaznaczono odporność Levitate na Earthquake.
+- Space Center: dodano kolejność walk na piętrach, składy Gruntów oraz walkę Multi Battle Steven + gracz kontra Maxie i Tabitha; podano drużynę Stevena i bossów.
+- Shoal Cave opisano jako opcjonalną lokację zależną od pływów (zmiana co 6 godzin o 3:00 i 9:00), z rozdzieleniem przypływu/odpływu, Shell Bell, przedmiotami i osobnymi spotkaniami w głównej i lodowej komorze.
+- Po zdobyciu Dive dodano podwodne przedmioty Route 124, pełne klucze i przedmioty Abandoned Ship oraz wymianę Scanner u Captain Stern na DeepSeaTooth albo DeepSeaScale.
+- Route 127 i 128: trenerzy, pierwsze składy, tabele Surf/wędkowania oraz podwodne i ukryte przedmioty.
+- Seafloor Cavern: wymagania Rock Smash/Strength/Surf, nawigacja po pokojach i prądach, drużyna Shelly (Sharpedo 37, Mightyena 37), drużyna Archiego (Mightyena 41, Crobat 41, Sharpedo 43) i TM26 Earthquake.
+- Poradnik ma teraz 149 kroków łącznie, z czego 120 w kontynuacji Emerald. Szacowana kompletność wzrasta z 71% do około 81% (+10 p.p.). To szacunek pokrycia tematycznego, nie postęp gracza.
+- Kontrola statyczna po zapisie: nawiasy i delimitery, liczba nowych kroków i sumy tabel encounterów; nie uruchamiano Flutter Analyzer, testów ani APK.
+- Źródła: Bulbapedia Emerald Part 14 i Part 15; dodatkowo sprawdzono dane Mossdeep City i bossów.
+- Commit danych: `48a7f17227a500ffc38ec98042217ea3152a7d06`.
