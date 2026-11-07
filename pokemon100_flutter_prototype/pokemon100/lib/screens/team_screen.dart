@@ -143,7 +143,7 @@ class _TeamScreenState extends State<TeamScreen> {
             children: [
               const Text('Dopasuj Pokémona', style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
               const SizedBox(height: 6),
-              const Text('Propozycje bazują na typach obecnej drużyny. Dostępność w konkretnej grze nie jest weryfikowana, ponieważ lokalny model nie zawiera list gatunków dla poszczególnych gier.'),
+              const Text('Propozycje bazują na typach obecnej drużyny i filtrze dostępności dla wybranej gry. Filtr korzysta z regionalnego Pokédexu, więc nie uwzględnia jeszcze etapu fabuły, poziomu, pełnych warunków wymian ani wszystkich wydarzeń specjalnych.'),
               const SizedBox(height: 12),
               ...recommendations.map((recommendation) => Card(
                 child: ListTile(
