@@ -225,7 +225,13 @@ class _TeamScreenState extends State<TeamScreen> {
       ),
     );
     if (selectedId == null || !mounted) return;
-    final selected = _savedTeams.where((team) => team.id == selectedId).firstOrNull;
+    _SavedTeam? selected;
+    for (final team in _savedTeams) {
+      if (team.id == selectedId) {
+        selected = team;
+        break;
+      }
+    }
     if (selected == null) return;
     setState(() {
       _activeTeamId = selected.id;
