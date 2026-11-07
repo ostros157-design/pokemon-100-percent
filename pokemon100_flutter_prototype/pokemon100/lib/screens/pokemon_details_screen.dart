@@ -507,9 +507,9 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
     );
   }
 
-  Widget _buildHero(Pokemon pokemon, Color color) {
+  Widget _buildHero(Pokemon pokemon, Color color, {required bool compact}) {
     return Container(
-      height: 286,
+      height: compact ? 148 : 286,
       decoration: BoxDecoration(
         color: color,
         borderRadius: const BorderRadius.vertical(
@@ -522,16 +522,16 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
             right: -34,
             top: 18,
             child: Icon(Icons.catching_pokemon,
-                size: 170, color: Colors.white.withValues(alpha: 0.10)),
+                size: compact ? 100 : 170, color: Colors.white.withValues(alpha: 0.10)),
           ),
           Column(
             children: [
-              const SizedBox(height: 14),
+              SizedBox(height: compact ? 4 : 14),
               Text(
                 pokemon.name,
                 style: const TextStyle(
                   color: Colors.white,
-                  fontSize: 27,
+                  fontSize: compact ? 19 : 27,
                   fontWeight: FontWeight.w800,
                   shadows: [Shadow(color: Colors.black26, blurRadius: 8)],
                 ),
@@ -551,8 +551,8 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
                     CachedNetworkImage(
                       imageUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${_shiny ? 'shiny/' : ''}${pokemon.id}.png',
                       fit: BoxFit.contain,
-                      width: 230,
-                      height: 210,
+                      width: compact ? 112 : 230,
+                      height: compact ? 78 : 210,
                       placeholder: (context, url) => const SizedBox(
                         width: 36, height: 36,
                         child: CircularProgressIndicator(color: Colors.white),
@@ -585,7 +585,7 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(bottom: 18),
+                padding: EdgeInsets.only(bottom: compact ? 6 : 18),
                 child: Wrap(
                   spacing: 8,
                   children: pokemon.types.map((type) => Container(
@@ -628,36 +628,42 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
             ),
           ],
         ),
-        body: Column(
-          children: [
-            _buildHero(pokemon, primaryColor),
-            Material(
-              color: Theme.of(context).colorScheme.surface,
-              child: TabBar(
-                labelColor: primaryColor,
-                unselectedLabelColor: Theme.of(context).colorScheme.onSurfaceVariant,
-                indicatorColor: primaryColor,
-                indicatorWeight: 3,
-                labelStyle: const TextStyle(fontSize: 12, fontWeight: FontWeight.w700),
-                tabs: const [
-                  Tab(text: 'Informacje'),
-                  Tab(text: 'Statystyki'),
-                  Tab(text: 'Ewolucja'),
-                  Tab(text: 'Ruchy'),
-                ],
-              ),
-            ),
-            Expanded(
-              child: TabBarView(
-                children: [
-                  _buildInfoTab(pokemon),
-                  _buildStatsTab(pokemon),
-                  _buildEvolutionTab(pokemon),
-                  _buildMovesTab(pokemon),
-                ],
-              ),
-            ),
-          ],
+        body: OrientationBuilder(
+          builder: (context, orientation) {
+            final compact = orientation == Orientation.landscape;
+            return Column(
+              children: [
+                _buildHero(pokemon, primaryColor, compact: compact),
+                Material(
+                  color: Theme.of(context).colorScheme.surface,
+                  child: TabBar(
+                    isScrollable: compact,
+                    labelColor: primaryColor,
+                    unselectedLabelColor: Theme.of(context).colorScheme.onSurfaceVariant,
+                    indicatorColor: primaryColor,
+                    indicatorWeight: 3,
+                    labelStyle: const TextStyle(fontSize: 12, fontWeight: FontWeight.w700),
+                    tabs: const [
+                      Tab(text: 'Informacje'),
+                      Tab(text: 'Statystyki'),
+                      Tab(text: 'Ewolucja'),
+                      Tab(text: 'Ruchy'),
+                    ],
+                  ),
+                ),
+                Expanded(
+                  child: TabBarView(
+                    children: [
+                      _buildInfoTab(pokemon),
+                      _buildStatsTab(pokemon),
+                      _buildEvolutionTab(pokemon),
+                      _buildMovesTab(pokemon),
+                    ],
+                  ),
+                ),
+              ],
+            );
+          },
         ),
       ),
     );
