@@ -1755,4 +1755,4 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Nie uruchamiano Flutter Analyzer, testów aplikacji ani budowania APK.
 - Źródła: Bulbapedia Emerald Walkthrough Part 11 (Safari Zone), Part 15 (Shoal Cave, Route 124, Abandoned Ship) i Part 20 (National Dex, Johto starter, Trick House, Safari Zone).
 - Commity danych: `2cbd6a179bcac6fefe884f2e3bcbe91c033ec7a3`, `322f61c000601ef7a51a0608ca9409c0c4afa894`.
-
+- Doprecyzowano harmonogram Shoal Cave: niski pływ 3:00–8:59 i 15:00–20:59, wysoki 9:00–14:59 i 21:00–2:59. Commit korekty: `c64a309da2ee5be1951644d8751fd4eb345f3f6d`.
