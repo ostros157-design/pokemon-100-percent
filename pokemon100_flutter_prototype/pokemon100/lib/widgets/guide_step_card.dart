@@ -84,13 +84,7 @@ class GuideStepCard extends StatelessWidget {
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 4),
-              Wrap(
-                spacing: 6,
-                runSpacing: 6,
-                children: step.pokemon
-                    .map((name) => _buildPokemonChip(context, name))
-                    .toList(),
-              ),
+              _buildPokemonList(context),
             ],
             if (step.items.isNotEmpty) ...[
               const SizedBox(height: 12),
@@ -99,21 +93,7 @@ class GuideStepCard extends StatelessWidget {
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 4),
-              Wrap(
-                spacing: 6,
-                runSpacing: 6,
-                children: step.items
-                    .map(
-                      (item) => Chip(
-                        avatar: const Icon(
-                          Icons.backpack,
-                          size: 18,
-                        ),
-                        label: Text(item),
-                      ),
-                    )
-                    .toList(),
-              ),
+              _buildItemList(),
             ],
             if (step.optional) ...[
               const SizedBox(height: 8),
@@ -129,6 +109,65 @@ class GuideStepCard extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Widget _buildPokemonList(BuildContext context) {
+    final chips = step.pokemon
+        .map((name) => _buildPokemonChip(context, name))
+        .toList();
+    if (chips.length <= 5) {
+      return Wrap(spacing: 6, runSpacing: 6, children: chips);
+    }
+    return ExpansionTile(
+      tilePadding: EdgeInsets.zero,
+      childrenPadding: const EdgeInsets.only(bottom: 8),
+      title: Text('Pokaż Pokémony (${chips.length})'),
+      children: [Wrap(spacing: 6, runSpacing: 6, children: chips)],
+    );
+  }
+
+  Widget _buildItemList() {
+    final chips = step.items
+        .map((item) => Chip(
+              avatar: const Icon(Icons.backpack, size: 18),
+              label: Text(item),
+            ))
+        .toList();
+    if (chips.length <= 4) {
+      return Wrap(spacing: 6, runSpacing: 6, children: chips);
+    }
+    return ExpansionTile(
+      tilePadding: EdgeInsets.zero,
+      childrenPadding: const EdgeInsets.only(bottom: 8),
+      title: Text('Pokaż przedmioty (${chips.length})'),
+      children: [Wrap(spacing: 6, runSpacing: 6, children: chips)],
+    );
+  }
+
+  Color _typeColor(String type) {
+    const colors = <String, Color>{
+      'normal': Color(0xFFA8A77A), 'fire': Color(0xFFEE8130),
+      'water': Color(0xFF6390F0), 'electric': Color(0xFFF7D02C),
+      'grass': Color(0xFF7AC74C), 'ice': Color(0xFF96D9D6),
+      'fighting': Color(0xFFC22E28), 'poison': Color(0xFFA33EA1),
+      'ground': Color(0xFFE2BF65), 'flying': Color(0xFFA98FF3),
+      'psychic': Color(0xFFF95587), 'bug': Color(0xFFA6B91A),
+      'rock': Color(0xFFB6A136), 'ghost': Color(0xFF735797),
+      'dragon': Color(0xFF6F35FC), 'dark': Color(0xFF705746),
+      'steel': Color(0xFFB7B7CE), 'fairy': Color(0xFFD685AD),
+    };
+    return colors[type.toLowerCase()] ?? Colors.blueGrey;
+  }
+
+  String _typeEmoji(String type) {
+    const emojis = <String, String>{
+      'normal': '⚪', 'fire': '🔥', 'water': '💧', 'electric': '⚡',
+      'grass': '🍃', 'ice': '❄️', 'fighting': '🥊', 'poison': '☠️',
+      'ground': '🌍', 'flying': '🪽', 'psychic': '🔮', 'bug': '🐛',
+      'rock': '🪨', 'ghost': '👻', 'dragon': '🐉', 'dark': '🌑',
+      'steel': '⚙️', 'fairy': '✨',
+    };
+    return emojis[type.toLowerCase()] ?? '🔹';
   }
 
   String _pokemonLabel(String name, double? encounterRate) {
@@ -159,10 +198,31 @@ class GuideStepCard extends StatelessWidget {
       );
     }
 
+    final primaryType = pokemon.types.isNotEmpty ? pokemon.types.first : 'normal';
+    final typeNames = pokemon.types.join(' / ');
     return ActionChip(
       avatar: const Icon(Icons.catching_pokemon, size: 18),
-      label: Text(_pokemonLabel(name, encounterRate)),
-      tooltip: 'Otwórz Pokédex: $name',
+      label: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Text('${_typeEmoji(primaryType)} '),
+          Text(
+            _pokemonLabel(name, encounterRate),
+            style: TextStyle(
+              color: _typeColor(primaryType),
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+          if (pokemon.types.length > 1) ...[
+            const SizedBox(width: 4),
+            Text(
+              '($typeNames)',
+              style: Theme.of(context).textTheme.labelSmall,
+            ),
+          ],
+        ],
+      ),
+      tooltip: 'Otwórz Pokédex: $name — $typeNames',
       onPressed: () {
         Navigator.of(context).push(
           MaterialPageRoute<void>(
