@@ -126,30 +126,60 @@ class _GuideScreenState extends State<GuideScreen> {
                       : ListView(
                           controller: _scrollController,
                           padding: const EdgeInsets.all(16),
-                          children: List<Widget>.generate(guide.steps.length, (index) {
-                            final step = guide.steps[index];
-
-                            return GuideStepCard(
-                              key: _stepKeys[index],
-                              step: step,
-                              completed: completedSteps.contains(index),
-                              onChanged: () async {
-                                setState(() {
-                                  if (completedSteps.contains(index)) {
-                                    completedSteps.remove(index);
-                                  } else {
-                                    completedSteps.add(index);
-                                  }
-                                });
-                                await _saveProgress();
-                              },
-                            );
-                          }),
+                          children: _buildGuideSteps(),
                         ),
                 ),
               ],
             ),
     );
+  }
+
+  List<Widget> _buildGuideSteps() {
+    final widgets = <Widget>[];
+    String? previousSection;
+
+    for (var index = 0; index < widget.guide.steps.length; index++) {
+      final step = widget.guide.steps[index];
+      final section = step.section ?? 'Początek przygody i pierwsza odznaka';
+
+      if (section != previousSection) {
+        widgets.add(
+          Padding(
+            padding: EdgeInsets.only(
+              top: widgets.isEmpty ? 0 : 14,
+              bottom: 8,
+            ),
+            child: Text(
+              section,
+              style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                    fontWeight: FontWeight.bold,
+                  ),
+            ),
+          ),
+        );
+        previousSection = section;
+      }
+
+      widgets.add(
+        GuideStepCard(
+          key: _stepKeys[index],
+          step: step,
+          completed: completedSteps.contains(index),
+          onChanged: () async {
+            setState(() {
+              if (completedSteps.contains(index)) {
+                completedSteps.remove(index);
+              } else {
+                completedSteps.add(index);
+              }
+            });
+            await _saveProgress();
+          },
+        ),
+      );
+    }
+
+    return widgets;
   }
 
   Widget _buildProgressHeader() {
