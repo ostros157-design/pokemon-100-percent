@@ -1712,3 +1712,20 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Źródła: Bulbapedia Emerald Part 21 (S.S. Tidal, Frontier, zasady obiektów, IV Judge, Move Tutors, Exchange Service Corner); dodatkowo PokéMaps i Serebii dla porównania progów Frontier Brain oraz systemu BP.
 - Commity danych: `55c52a116ebf467bae63a635280c2898d68bc99d`, `8cc8ae24fdd030e31d429616dddc1663586c3293`.
 
+### Poradnik Emerald — dopracowanie post-game i legendarnych Pokémonów (2026-11-07)
+
+- Rozbudowano post-game po Hall of Fame, bazując na rozdziałach 20 i 21 przewodnika Bulbapedii oraz danych Serebii.
+- S.S. Tidal: dopisano funkcję statku i trasę Slateport ↔ Lilycove ↔ Battle Frontier, kabinę do leczenia, trenerów na pokładzie, TM49 Snatch, ukryte Leftovers w piwnicy oraz sposób odblokowania rejsu na Battle Frontier.
+- Steven w Meteor Falls: dopisano kompletną drużynę i poziomy: Skarmory 77, Claydol 75, Aggron 76, Cradily 76, Armaldo 76 i Metagross 78; uwzględniono wszystkie ruchy oraz Sitrus Berry Metagrossa.
+- Rayquaza: dopisano poziom 70, Air Lock, Fly, Rest, Outrage i Extremespeed oraz powtórne przejście Sky Pillar z Mach Bike na popękanych płytkach.
+- Groudon i Kyogre: rozdzielono wskazówki do Terra Cave i Marine Cave, podano konkretne trasy, warunki wejścia, poziomy 70, zdolności i ruchy. Podkreślono konieczność szybkiego dotarcia do jaskini po komunikacie meteorologa.
+- Eon Pokémon: opisano wybór czerwony/niebieski po wiadomości telewizyjnej, wędrówkę Latiasa/Latiosa na poziomie 40, ucieczkę w pierwszej turze, śledzenie przez Pokédex i metody blokowania ucieczki. Dodano osobny opis Southern Island i Eon Ticket.
+- Eventowe wyspy: wyraźnie rozdzielono zawartość wymagającą Old Sea Map, AuroraTicket i MysticTicket od normalnej zawartości gry.
+- Rewanże: dopisano zasady Match Call, Double Battles liderów, cztery kolejne zestawy drużyn, warunek New Mauville dla Wattsona, próg losowania gotowości oraz osobny rewanż Wally’ego.
+- Trainer Hill, Desert Underpass i Altering Cave: uzupełniono cztery tryby, zasady walk i nagrody czasowe, spotkania Ditto/Whismur/Loudred z procentami, drugą skamielinę oraz fakt, że w standardowym Emerald Altering Cave zawiera wyłącznie Zubata.
+- Battle Frontier: uzupełniono ograniczenia — zakaz powtarzania trzymanych przedmiotów, brak używania zwykłej torby podczas walk (wyjątek Pyramid), brak EXP i pieniędzy, lista zakazanych legendarnych Pokémonów oraz wymóg Single 3 na 3 dla Frontier Brain.
+- Poradnik ma teraz **178 kroków łącznie**, w tym **149 kroków kontynuacji Emerald**. Szacowana kompletność treści pozostaje na poziomie około **98%** (wzrost z 96%); nadal pozostają do sprawdzenia szczegółowe listy wszystkich trenerów, ukrytych przedmiotów, metod łapania i kompletność danych encounterów.
+- Kontrola statyczna po poprawkach: 178 kroków, 149 w kontynuacji, 47 tabel spotkań — każda suma wynosi 100%; sprawdzono równowagę nawiasów i zamknięcie literałów tekstowych. Naprawiono trzy błędnie sklejone opisy Battle Frontier wykryte przy kontroli. Nie uruchamiano Flutter Analyzer, testów ani APK.
+- Źródła: Bulbapedia Emerald Walkthrough Part 20 i Part 21; Serebii Legendary Pokémon i Match Call — Steven; Bulbapedia Weather Institute.
+- Commity danych: `e51efa93ec9e348045bd7829c92d2e6cf9cf1082`, `3ccdc3b85f935aef8d3f69bf9381ddd832260e73`, `ec16578ac6aad75ff210f5612e8aec15b0615816`.
+
