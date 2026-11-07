@@ -1729,3 +1729,16 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Źródła: Bulbapedia Emerald Walkthrough Part 20 i Part 21; Serebii Legendary Pokémon i Match Call — Steven; Bulbapedia Weather Institute.
 - Commity danych: `e51efa93ec9e348045bd7829c92d2e6cf9cf1082`, `3ccdc3b85f935aef8d3f69bf9381ddd832260e73`, `ec16578ac6aad75ff210f5612e8aec15b0615816`.
 
+### Poradnik Emerald — audyt lokacji, encounterów i kompletowania Pokédexu (2026-11-07)
+
+- Rozszerzono opis Abandoned Ship: Storage Key, TM13 Ice Beam, ukryty ciąg kluczy Rm. 1/2/4/6, Water Stone, TM18 Rain Dance, Luxury Ball, Scanner oraz wymiana u Captain Stern na jeden z przedmiotów DeepSeaTooth/DeepSeaScale.
+- Rozwinięto New Mauville: Basement Key od Wattsona po Balance Badge, labirynt niebieskich i zielonych drzwi, trzy Voltorby udające przedmioty, wyłączenie generatora, Thunderstone i nagroda TM24 Thunderbolt.
+- Dodano szczegółową metodę łapania Feebasa: sześć losowanych pól z puli 444 na Route 119, 50% szansy na wybranym polu, dowolna wędka, zmiana pól po zmianie Trendy Phrase w Dewford oraz ewolucja w Milotica po osiągnięciu 170 Beauty i awansie na poziom.
+- Uzupełniono Safari Zone o metody wodne: Surf i wszystkie trzy wędki w Area 2 i Area 3, Surf i wędki w nowym Area 5, a także Rock Smash i Shuckle (100%) w Area 6.
+- Shoal Cave: dodano pełny podział wysokiego i niskiego pływu, cztery Shoal Shells/Shoal Salts, Shell Bell, Rare Candy, Big Pearl, Ice Heal, Focus Band, NeverMeltIce i TM07 Hail. Dodano osobną tabelę spotkań Ice Cavern ze Snoruntem (10%).
+- Szacowana kompletność poradnika: **99%**. Pozostaje audyt pełnych list trenerów, ukrytych przedmiotów i nieujętych jeszcze metod encounterów w pozostałych lokacjach; 100% nie jest jeszcze deklarowane.
+- Kontrola statyczna po zmianach: **185 kroków łącznie**, **156 kroków kontynuacji Emerald**, **47 tabel encounterów** — wszystkie sumują się do 100%; brak powtórzonych tytułów w kontynuacji, błędów równowagi nawiasów i niedomkniętych literałów tekstowych.
+- Nie uruchamiano Flutter Analyzer, testów aplikacji ani budowania APK.
+- Źródła: Bulbapedia Emerald Walkthrough Part 15 (Shoal Cave, Abandoned Ship), Emerald Walkthrough Section 20 (Safari Zone, Feebas, post-game), Bulbapedia Route 119, New Mauville; PokéMaps Abandoned Ship; PokéTools Safari Zone.
+- Commity danych: `b863543869862955537a3fc098cc555039112a19`, `722c1bb4ae05aa0c0c9cfd0ed1365552b6acc819`.
+
