@@ -58,16 +58,23 @@ const List<Guide> guidesList = [
   Guide(
     id: 'emerald_start',
     gameId: 'emerald',
-    title: 'Pokémon Emerald — Początek przygody i pierwsza odznaka',
+    title: 'Pokémon Emerald — Kompletny poradnik 100%',
     description:
-        'Poradnik prowadzi od Littleroot Town do zdobycia Stone Badge w Rustboro City. '
-        'Zawiera spotkania dzikich Pokémonów z procentowymi szansami dla trawiastych obszarów.',
+        'Przewodnik od Littleroot Town przez wszystkie osiem odznak i Pokémon League, aż po post-game, legendarne Pokémony, zadania poboczne i Battle Frontier. Dane spotkań są podawane tylko tam, gdzie zostały wprowadzone.',
     sections: [
-      'Littleroot Town i wybór startera',
-      'Route 101, Oldale Town i pierwsza walka rywala',
-      'Route 102 i Petalburg City',
-      'Route 104, Petalburg Woods i Rustboro City',
-      'Pierwsza sala — Roxanne',
+      'Początek przygody i pierwsza odznaka',
+      'Dewford Town i druga odznaka',
+      'Slateport i trzecia odznaka',
+      'Fallarbor i czwarta odznaka',
+      'Piąta odznaka i Norman',
+      'Fortree i szósta odznaka',
+      'Lilycove i Team Magma',
+      'Aqua Hideout i siódma odznaka',
+      'Seafloor Cavern i ósma odznaka',
+      'Victory Road i Pokémon League',
+      'Post-game i Battle Frontier',
+      'Legendarne Pokémony',
+      'Zadania poboczne i Pokédex',
     ],
     steps: [
       GuideStep(
