@@ -1699,3 +1699,16 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Źródła: Bulbapedia Emerald Part 16–19; pomocniczo zestawienia Gym Leaders i Elite Four dla Emerald. Dane dot. Juana, trenerów Victory Road, Wally’ego i pełnych składów Ligi sprawdzono w tabelach gry.
 - Commity danych: `a581ae76d8f19416be2512cc09e19fbe0053c083` oraz `87a3676dd7e00a1d1fdba6de9b158641150b49b5` (korekta: z listy Pokémonów usunięto imiona postaci ludzkich z wydarzenia Rayquazy).
 
+### Poradnik Emerald — Battle Frontier i zawartość post-game (2026-11-07)
+
+- Rozbudowano siedem obiektów Battle Frontier i poprawiono progi spotkań z Frontier Brains. Battle Tower: 35. i 70. walka; Battle Pike: po 2 i 10 pełnych przejściach 21-pokojowego obiektu (zgodnie z opisem Bulbapedii); Battle Factory: 21. i 42. walka; Battle Dome: 5. i 10. wygrany turniej; Battle Arena: 28. i 56. walka; Battle Palace: 21. i 42. walka; Battle Pyramid: 21. i 70. piętro.
+- Doprecyzowano zasady Battle Factory (wypożyczane Pokémony, wymiany po walkach, losowy zespół Nolana), Battle Dome (drabinka 16 osób, wybór dwóch Pokémonów), Battle Pike (21 pokoi, możliwe walki, statusy, leczenie, dzikie spotkania), Battle Arena (oceny Mind/Skill/Body), Battle Palace (ruchy wybierane przez AI zależne od natury i HP) oraz Battle Pyramid (7 pięter, Battle Bag i ograniczone zasoby).
+- Dodano system BP i Exchange Service Corner: nagrody za wyzwania i dodatkowe 10 BP za pokonanie Frontier Brain, zakupy przedmiotów trzymanych i witamin.
+- Dodano pełną listę 20 ruchów z dwóch Frontier Move Tutors wraz z cenami 16–48 BP.
+- Dodano Stats Judge i ocenę IV, wymianę Skitty na Meowtha (z Retro Mail), Ranking Hall, zakłady Double or Nothing po trzech srebrnych symbolach oraz dodatkowe Silver/Gold Shield za 50/100 kolejnych zwycięstw w Battle Tower.
+- Dodano Sudowoodo na poziomie 40 (jednorazowe spotkanie po użyciu Wailmer Pail) oraz wejście do Artisan Cave i Smeargle.
+- Poradnik ma teraz **175 kroków łącznie**, w tym **146 kroków kontynuacji Emerald**. Szacowana kompletność treści wzrasta z około 91% do około **96%**. Nie podnoszę wyniku do 100%, ponieważ nadal trzeba rozwinąć część post-game, spotkania i przedmioty poboczne oraz sprawdzić kompletność wszystkich trenerów i metod łapania.
+- Kontrola statyczna: 175 kroków, 146 w kontynuacji, 39 tabel spotkań — wszystkie sumują się do 100%; nawiasy i delimitery są zbilansowane. Zweryfikowano progi Pike i Tower. Nie uruchamiano Flutter Analyzer, testów ani APK.
+- Źródła: Bulbapedia Emerald Part 21 (S.S. Tidal, Frontier, zasady obiektów, IV Judge, Move Tutors, Exchange Service Corner); dodatkowo PokéMaps i Serebii dla porównania progów Frontier Brain oraz systemu BP.
+- Commity danych: `55c52a116ebf467bae63a635280c2898d68bc99d`, `8cc8ae24fdd030e31d429616dddc1663586c3293`.
+
