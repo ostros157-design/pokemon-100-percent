@@ -1681,3 +1681,21 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Kontrola statyczna po zapisie: nawiasy i delimitery, liczba nowych kroków i sumy tabel encounterów; nie uruchamiano Flutter Analyzer, testów ani APK.
 - Źródła: Bulbapedia Emerald Part 14 i Part 15; dodatkowo sprawdzono dane Mossdeep City i bossów.
 - Commit danych: `82c2e893f7df368c9237774d9aaae5ede3d9d7a4` (uzupełnienie pominiętego kroku walki z Archiem).
+
+### Poradnik Emerald — Sootopolis, Sky Pillar, Victory Road i Pokémon League (2026-11-07)
+
+- Rozwinięto dotychczasowe skrótowe kroki końcówki głównej historii w pełną sekwencję od Route 126 do Hall of Fame.
+- Route 126 i Sootopolis: wejście do miasta przez podwodny krater, pierwsza scena Groudona i Kyogre, eksploracja Cave of Origin z osobnymi procentami spotkań na wejściu i 1F oraz rozmowa z Wallace’em o Rayquazie.
+- Route 129–131: dodano pierwszych trenerów Route 129, ich poziomy i Pokémony, możliwą Double Battle oraz osobną tabelę Surf i wędkowania. Dodano także Pacifidlog jako opcjonalny przystanek.
+- Route 132–134 i Sealed Chamber: opisano trudne prądy oceaniczne, przedmioty na wysepkach, wejście do Sealed Chamber, tłumaczenie wskazówek Braille’a, wymagane Dig oraz kolejność Wailord → Relicanth.
+- Ruiny Regis: dodano zagadki Desert Ruins, Island Cave i Ancient Tomb oraz poziom 40 Regirocka, Regice’a i Registeela.
+- Sky Pillar: dodano spotkania na piętrach, procenty, nawigację po popękanych płytkach, pierwszą wizytę Wallace’a i przebudzenie Rayquazy. Wyjaśniono, że Rayquaza zatrzymuje konflikt, a po przebudzeniu wejście do Cave of Origin zostaje zamknięte.
+- Sootopolis po kryzysie: dodano scenę z Archiem, Maxiem, Stevenem i Wallace’em, HM07 Waterfall, TM31 Brick Break, Wailmer Doll, Elixiry oraz jednorazowego Move Tutora Double-Edge.
+- Sootopolis Gym: poprawiono i wyraźnie zaznaczono, że w Emerald liderem jest Juan, a nie Wallace. Dodano regułę trzech lodowych plansz, trenerów, pełną drużynę Juana z poziomami i ruchami, Chesto Berry Kingdry, Rain Badge i TM03 Water Pulse.
+- Ever Grande i Victory Road: dodano drogę przez Route 128, spotkania Surf, wymagane HM-y, pierwszych trenerów i ich składy, przedmioty z odnogów oraz pełną drużynę Wally’ego z poziomami i kluczowymi zagrożeniami.
+- Pokémon League: dodano przygotowanie zapasów i wszystkie pięć walk. Każdy członek Elite Four i Champion Wallace ma wypisany pełny skład, poziomy oraz ruchy; uwzględniono Sitrus Berry, zagrożenia statusowe i najważniejsze kontry.
+- Poradnik ma teraz **165 kroków łącznie**, w tym **136 kroków kontynuacji Emerald**. Szacowana kompletność treści wzrasta z około 81% do około **91% (+10 p.p.)**. To ocena pokrycia tematów i szczegółowości, nie postęp gracza.
+- Kontrola statyczna: 165 wystąpień GuideStep, 136 w kontynuacji Emerald, 39 tabel encounterów — każda suma wynosi 100%; delimitery nawiasów są zbilansowane. Nie uruchamiano Flutter Analyzer, testów ani APK.
+- Źródła: Bulbapedia Emerald Part 16–19; pomocniczo zestawienia Gym Leaders i Elite Four dla Emerald. Dane dot. Juana, trenerów Victory Road, Wally’ego i pełnych składów Ligi sprawdzono w tabelach gry.
+- Commit danych: `a581ae76d8f19416be2512cc09e19fbe0053c083`.
+
