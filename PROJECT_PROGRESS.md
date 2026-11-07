@@ -1,3 +1,15 @@
+### Poradnik Pokémon Let’s Go, Pikachu! — Route 3 (2026-11-07)
+
+- Po zakończeniu pierwszej części Emerald przeniesiono prace na kolejny poradnik z ustalonej kolejności: **Let’s Go, Pikachu!**.
+- Rozbudowano poradnik poza pierwszą odznakę o Route 3: osobna tabela spotkań w trawie (Rattata 30%, Spearow 30%, Sandshrew 20%, Mankey 20%) oraz osobna tabela spotkań na niebie (Spearow 60%, Fearow 40%). Każda tabela sumuje się do 100%.
+- Uwzględniono rzadki spawn Charmandera i specjalne spawny latające (Charizard, Dragonite oraz ptaki legendarne) bez wymyślania im procentów, których źródła nie podają jako zwykłej tabeli.
+- Dodano siedmiu trenerów Route 3 wraz z ich Pokémonami i poziomami, nagrody/przedmioty oraz osobny opcjonalny krok post-game z Master Trainerem Ronnie.
+- Karta poradnika już rozdziela wpisy na trzy sekcje: **Pokémony (dzikie spotkania)**, **Trenerzy** i **Pokémony trenerów**. W nowych krokach dane wykorzystują te pola; trenerzy są wpisani jawnie, a Pokémony trenerów nie dostają procentów spotkań.
+- Źródła: SuperCheats Route 3 https://www.supercheats.com/lets-go-pikachu/walkthrough/route-3 ; Bulbapedia walkthrough Part 4 https://bulbapedia.bulbagarden.net/wiki/Appendix:Let's_Go,_Pikachu!_and_Let's_Go,_Eevee!_walkthrough/Section_4 .
+- Commit danych: `f3ecd8c`.
+- Walidacja statyczna nowych danych: 4 kroki Route 3; obie tabele spotkań sumują się do 100%; jawna lista trenerów jest obecna. Nie uruchomiono Flutter Analyzer, testów ani APK.
+- Następny punkt: Route 4 (zachód), Coach Trainer Oberon, Magikarp sprzedawany w Pokémon Center oraz wejście do Mt. Moon.
+
 ### Poradnik Pokémon Emerald — Route 118–119 i Weather Institute (2026-11-07)
 
 - Poradnik ma teraz **118 kroków** (16 bazowych + 102 kontynuacji).
