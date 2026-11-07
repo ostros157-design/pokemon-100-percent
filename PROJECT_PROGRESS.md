@@ -1,3 +1,11 @@
+### Pokédex — wygląd kart przypisany do typu Pokémona (2026-11-07)
+
+- Kolor tekstu nazwy i numeru oraz emoji są teraz zapisywane według pierwszego (głównego) typu Pokémona, a nie osobno dla każdego gatunku.
+- Zmiana wyglądu typu w karcie jednego Pokémona będzie więc widoczna także na kartach innych Pokémonów z tym samym głównym typem.
+- Dodano domyślne emoji dla 18 typów; kolor tekstu pozostaje domyślnie biały i można go dostosować edytorem palety.
+- W przypadku Pokémonów dwutypowych wygląd jest przypisany do pierwszego typu z listy typów, zgodnie z kolorem nagłówka karty.
+- Commit kodu: `441d088`. Nie uruchomiono Flutter analyzer, testów ani APK; zmiana wymaga sprawdzenia w aplikacji.
+
 ### Poprawka Pokédexa — układ poziomy (2026-11-07)
 
 - Ekran szczegółów reaguje teraz na orientację urządzenia: w poziomie nagłówek Pokémona jest niższy, sprite mniejszy, a zakładki mogą przewijać się poziomo.
