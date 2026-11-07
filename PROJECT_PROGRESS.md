@@ -1651,4 +1651,4 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Route 123 otrzymała trenerów, wymagania Cut, TM19 Giga Drain, listę przedmiotów, spotkania w trawie/Surf/wędkowanie i opis Berry Master’s House. Rewanże trenerów nie zostały wliczone do pierwszych walk.
 - Nowa wersja poradnika ma 137 kroków łącznie, z czego 108 w kontynuacji Emerald. To rozszerzenie obejmuje znaczny fragment głównej trasy i opcjonalnej zawartości; szacowana kompletność poradnika wzrasta z 51% do około 61% (+10 p.p.). Procent jest audytem pokrycia treści, nie postępem gracza.
 - Kontrola statyczna: sprawdzono liczbę kroków i zachowanie granic listy; nie uruchamiano Flutter Analyzer, testów ani APK. Dane źródłowe: Bulbapedia Emerald Part 11 i Part 12; pomocniczo Quest Compendium dla szczegółów Fortree Gym i Mt. Pyre.
-- Commit danych: `102989e3cbebff4b1cd203dbace7799e4dca5d25`.
+- Commit danych: `102989e3cbebff4b1cd203dbace7799e4dca5d25`; korekta listy Pokémonów Mt. Pyre: `01f991d1940ea03b49bd981c08e0a74e3f041598`.
