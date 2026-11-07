@@ -125,7 +125,7 @@ class _GuideScreenState extends State<GuideScreen> {
                       ? _buildEmptyGuide()
                       : ListView(
                           controller: _scrollController,
-                          padding: const EdgeInsets.all(16),
+                          padding: const EdgeInsets.fromLTRB(12, 8, 12, 16),
                           children: _buildGuideSteps(),
                         ),
                 ),
@@ -160,8 +160,8 @@ class _GuideScreenState extends State<GuideScreen> {
         widgets.add(
           Padding(
             padding: EdgeInsets.only(
-              top: widgets.isEmpty ? 0 : 14,
-              bottom: 8,
+              top: widgets.isEmpty ? 2 : 10,
+              bottom: 5,
             ),
             child: Row(
               children: [
@@ -211,7 +211,7 @@ class _GuideScreenState extends State<GuideScreen> {
 
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.fromLTRB(16, 16, 16, 18),
+      padding: const EdgeInsets.fromLTRB(14, 10, 14, 12),
       decoration: BoxDecoration(
         color: Colors.green.shade50,
         border: Border(
@@ -229,7 +229,7 @@ class _GuideScreenState extends State<GuideScreen> {
               const Text(
                 'Postęp poradnika',
                 style: TextStyle(
-                  fontSize: 18,
+                  fontSize: 16,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -242,15 +242,15 @@ class _GuideScreenState extends State<GuideScreen> {
               ),
             ],
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 7),
           ClipRRect(
             borderRadius: BorderRadius.circular(10),
             child: LinearProgressIndicator(
               value: progress,
-              minHeight: 10,
+              minHeight: 7,
             ),
           ),
-          const SizedBox(height: 8),
+          const SizedBox(height: 5),
           Text(
             '$completedCount / ${widget.guide.steps.length} kroków ukończonych',
             style: TextStyle(
@@ -278,7 +278,7 @@ class _GuideScreenState extends State<GuideScreen> {
               'Ten poradnik nie ma jeszcze żadnych kroków.',
               textAlign: TextAlign.center,
               style: TextStyle(
-                fontSize: 18,
+                fontSize: 16,
                 fontWeight: FontWeight.bold,
               ),
             ),
