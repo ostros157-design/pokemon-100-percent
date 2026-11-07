@@ -1,3 +1,15 @@
+### Poradnik Pokémon Emerald — Battle Frontier, post-game i spotkania Safari Zone (2026-11-07)
+
+- Rozbudowano poradnik Emerald do **91 kroków**: 16 pierwotnych kroków + 75 kroków kontynuacji.
+- Battle Frontier rozpisano na osobne checklisty: wejście i Frontier Pass, siedem obiektów, progi srebrnych i złotych symboli, komplet 7 Silver / 7 Gold Symbols, nagrody Lansat Berry i Starf Berry oraz dodatkowe Silver/Gold Shield za serie Battle Tower.
+- Dodano reguły i składy obu wyzwań Frontier Brainów dla Battle Dome, Pike, Tower, Arena, Palace i Pyramid wraz z ich zestawami ruchów. Battle Factory ma losowe wypożyczane składy, dlatego nie przypisano Nolandowi stałej drużyny.
+- Rozbudowano post-game: S.S. Ticket, wybór Latias/Latios (czerwony = Latias, niebieski = Latios), National Pokédex, Johto starter po złapaniu 200 gatunków Hoenn, rewanże Match Call, ósmy Trick House, Desert Underpass i Ditto, Trainer Hill, cztery dodatkowe jagody, Safari Zone, Beldum od Stevena i opcjonalna walka ze Stevenem.
+- Safari Zone rozdzielono na sześć obszarów. Dodano osobne procenty spotkań w trawie dla Area 1–6. Spotkania przez Surf, wędkarstwo i Rock Smash nie są mieszane z tabelami trawy.
+- Dane o Battle Frontier, symbolach, ograniczeniach, progach i składach pochodzą z walkthrough Bulbapedia Part 21: https://bulbapedia.bulbagarden.net/wiki/Walkthrough:Pok%C3%A9mon_Emerald/Part_21 . Dane o post-game, National Pokédex, Johto starterze, rewanżach, Safari Zone, Trainer Hill, Terra/Marine Cave i Stevenie pochodzą z Bulbapedia Part 20: https://bulbapedia.bulbagarden.net/wiki/Walkthrough:Pok%C3%A9mon_Emerald/Part_20 . Dla trasy 116 użyto również tabel Emerald z https://www.pokemon-france.com/en/guides/ruby-sapphire-emerald/walkthrough-4/ .
+- Commity: Battle Frontier checklisty `63acbe5`, porządek list Pokédexu `b917a43`, post-game / Safari Zone / Steven `3ffdf39`, składy i ruchy Frontier Brainów `4d7f788`.
+- Walidacja strukturalna tekstu Dart: nawiasy i nawiasy klamrowe w `guides_data.dart` są zbilansowane; liczba kroków Emerald została policzona z definicji danych. To nie zastępuje kompilacji.
+- Nadal nie uruchomiono Flutter Analyzer, testów ani APK. Brakuje pełnych tabel trenerów i przedmiotów na wszystkich trasach, pełnych metod spotkań poza Safari Zone, dokładnych instrukcji zagadek Regi, pełnego katalogu eventów z warunkami dystrybucji i osobnych trackerów kategorii post-game. Nie deklarujemy poradnika jako ukończonego.
+
 ### Poradniki — rozbudowa Pokémon Emerald do struktury całej gry (2026-11-07)
 
 - Rozszerzono poradnik Emerald z 16 kroków kończących się na Stone Badge do 55 kroków obejmujących osiem odznak, Pokémon League, post-game, Battle Frontier, legendarne Pokémony oraz zadania poboczne i Pokédex.
