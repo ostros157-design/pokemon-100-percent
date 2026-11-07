@@ -1807,3 +1807,13 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Kontrola: nowe tabele spotkań sumują się do 100%; zachowano podział metod. Nie uruchamiano Flutter Analyzer, testów ani APK.
 - Źródła: PokéTools — Safari Zone i Shoal Cave; Bulbapedia — Emerald Walkthrough Part 15; PokeCoders — tabele wodne Safari Zone.
 - Commit danych: `25e65238ec69fb48c48fd8c7762b29e8da602e1f`.
+
+
+### Poradnik Emerald — Abandoned Ship (2026-11-07)
+
+- Rozdzielono spotkania w Abandoned Ship na cztery metody: Surf, Old Rod, Good Rod i Super Rod.
+- Dodano brakującą tabelę Old Rod oraz procenty dla Surf i pozostałych wędek. Każda tabela sumuje się do 100%.
+- Oddzielono eksplorację podwodnego piętra po zdobyciu Dive od listy dzikich spotkań; opis obejmuje klucze, przedmioty, Scanner i wymianę u Captain Stern.
+- Źródła: PokéTools Abandoned Ship (Emerald), Pokemony.com (Emerald), RotomLabs Emerald Abandoned Ship. <https://www.poketools.com/emerald/abandoned-ship> <https://www.pokemony.com/lokacja/abandoned-ship?gra=emerald> <https://rotomlabs.net/locations/emerald/abandoned-ship>
+- Commit danych: `22780d732d31bd5b90613a44c4fc969b9843510a`.
+- Nie uruchamiano Flutter Analyzer, testów ani APK.
