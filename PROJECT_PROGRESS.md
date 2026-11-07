@@ -1,3 +1,9 @@
+### Poprawka Pokédexa — układ poziomy (2026-11-07)
+
+- Ekran szczegółów reaguje teraz na orientację urządzenia: w poziomie nagłówek Pokémona jest niższy, sprite mniejszy, a zakładki mogą przewijać się poziomo.
+- Celem jest zachowanie miejsca dla zawartości TabBarView na niższych ekranach, w tym AYN Thor w orientacji poziomej.
+- Zmiana zapisana bezpośrednio w `main`; nie uruchomiono jeszcze analizy Flutter, testów ani APK. Wymagana weryfikacja na urządzeniu.
+
 ### Pokédex — przebudowa ekranu szczegółów (2026-11-07)
 
 - Na gałęzi `feature/pokedex-detail-redesign` przebudowano `pokemon_details_screen.dart` według dostarczonej przez użytkownika referencji wizualnej.
