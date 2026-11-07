@@ -1677,7 +1677,7 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Po zdobyciu Dive dodano podwodne przedmioty Route 124, pełne klucze i przedmioty Abandoned Ship oraz wymianę Scanner u Captain Stern na DeepSeaTooth albo DeepSeaScale.
 - Route 127 i 128: trenerzy, pierwsze składy, tabele Surf/wędkowania oraz podwodne i ukryte przedmioty.
 - Seafloor Cavern: wymagania Rock Smash/Strength/Surf, nawigacja po pokojach i prądach, drużyna Shelly (Sharpedo 37, Mightyena 37), drużyna Archiego (Mightyena 41, Crobat 41, Sharpedo 43) i TM26 Earthquake.
-- Poradnik ma teraz 149 kroków łącznie, z czego 120 w kontynuacji Emerald. Szacowana kompletność wzrasta z 71% do około 81% (+10 p.p.). To szacunek pokrycia tematycznego, nie postęp gracza.
+- Poradnik ma teraz 150 kroków łącznie, z czego 121 w kontynuacji Emerald. Szacowana kompletność wzrasta z 71% do około 81% (+10 p.p.). To szacunek pokrycia tematycznego, nie postęp gracza.
 - Kontrola statyczna po zapisie: nawiasy i delimitery, liczba nowych kroków i sumy tabel encounterów; nie uruchamiano Flutter Analyzer, testów ani APK.
 - Źródła: Bulbapedia Emerald Part 14 i Part 15; dodatkowo sprawdzono dane Mossdeep City i bossów.
-- Commit danych: `48a7f17227a500ffc38ec98042217ea3152a7d06`.
+- Commit danych: `82c2e893f7df368c9237774d9aaae5ede3d9d7a4` (uzupełnienie pominiętego kroku walki z Archiem).
