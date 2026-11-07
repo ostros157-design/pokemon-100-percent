@@ -1,3 +1,13 @@
+### Poradniki — rozbudowa Pokémon Emerald do struktury całej gry (2026-11-07)
+
+- Rozszerzono poradnik Emerald z 16 kroków kończących się na Stone Badge do 55 kroków obejmujących osiem odznak, Pokémon League, post-game, Battle Frontier, legendarne Pokémony oraz zadania poboczne i Pokédex.
+- Dodano rozdziały do kolejnych kroków. Ekran poradnika pokazuje nagłówki rozdziałów, a dotychczasowy zapis kroków ukończonych nadal korzysta z istniejącego klucza SharedPreferences poradnika.
+- Długie listy Pokémonów i przedmiotów są teraz zwijane. Nazwy Pokémonów pozostają klikalne; dodano emoji i kolor nazwy według głównego typu oraz pokazanie obu typów Pokémonów dwutypowych.
+- Dodane informacje i drużyny pochodzą z dostarczonego przez użytkownika dokumentu. Procentowe szanse spotkań uzupełniono tylko dla wcześniej opisanych lokacji oraz Route 116; nie dopisano niezweryfikowanych procentów dla pozostałych tras.
+- To znacząca rozbudowa, ale poradnik nie jest jeszcze pełnym odwzorowaniem specyfikacji 100%: brakuje m.in. kompletnego spisu trenerów i ich ruchów/nagród, pełnych list przedmiotów dla każdej lokacji, procentów i metod spotkań dla wszystkich lokacji, szczegółowych osobnych celów/symboli siedmiu obiektów Battle Frontier oraz oddzielnych wskaźników postępu dla głównej historii, post-game, Pokédexu, Frontier i eventów. Dane o spotkaniach z pozostałych lokacji wymagają weryfikacji dla wersji Emerald.
+- Commity: model rozdziałów `b4ad5e4`, dane poradnika `c37c95f`, grupowanie rozdziałów `5f69374`, rozwijane listy i styl typów `54fcd1e`, opis i indeks rozdziałów `7567506`.
+- Nie uruchomiono Flutter analyzer, testów ani kompilacji APK. Nie potwierdzono jeszcze działania na telefonie ani AYN Thor.
+
 ### Poradniki — audyt stanu danych na gałęzi main (2026-11-07)
 
 - Sprawdzono `lib/data/guides_data.dart`, `lib/models/guide.dart`, `lib/widgets/guide_step_card.dart` i `lib/screens/guide_screen.dart`.
