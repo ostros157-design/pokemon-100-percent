@@ -23,6 +23,18 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
   bool _caught = false;
   bool _shiny = false;
   String _activeGameId = 'lets_go_pikachu';
+  Color _cardTextColor = Colors.white;
+  String _pokemonEmoji = '';
+
+  static const List<Color> _cardTextColors = [
+    Colors.white, Colors.black, Color(0xFFFFD54F), Color(0xFF80DEEA),
+    Color(0xFFFF8A80), Color(0xFFB9F6CA), Color(0xFFD1C4E9),
+    Color(0xFFFFCCBC), Color(0xFF90CAF9), Color(0xFFF5F5F5),
+  ];
+  static const List<String> _pokemonEmojis = [
+    '', '🔥', '🌱', '💧', '⚡', '❄️', '👻', '🐉', '⭐', '❤️',
+    '🌸', '🌙', '☀️', '🍀', '💎', '🪽', '🦴', '🎀', '👑', '💥',
+  ];
 
   String get _caughtPokemonKey => 'caught_pokemon_ids_${_activeGameId}';
   bool _loadingCaught = true;
@@ -58,10 +70,14 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
     }
     final shinyIds = (preferences.getStringList(shinyKey) ?? const <String>[])
         .map(int.tryParse).whereType<int>().toSet();
+    final textColorValue = preferences.getInt('pokemon_card_text_color_${widget.pokemon.id}');
+    final emoji = preferences.getString('pokemon_card_emoji_${widget.pokemon.id}') ?? '';
     if (!mounted) return;
     setState(() {
       _caught = ids.contains(widget.pokemon.id);
       _shiny = shinyIds.contains(widget.pokemon.id);
+      _cardTextColor = textColorValue == null ? Colors.white : Color(textColorValue);
+      _pokemonEmoji = emoji;
       _loadingCaught = false;
     });
   }
@@ -95,6 +111,97 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
     await preferences.setStringList(
       _caughtPokemonKey,
       ids.map((id) => id.toString()).toList(),
+    );
+  }
+
+  Future<void> _showAppearanceEditor() async {
+    var selectedColor = _cardTextColor;
+    var selectedEmoji = _pokemonEmoji;
+    await showModalBottomSheet<void>(
+      context: context,
+      isScrollControlled: true,
+      showDragHandle: true,
+      builder: (sheetContext) => StatefulBuilder(
+        builder: (context, refreshSheet) => SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(20, 8, 20, 24),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('Wygląd karty: ${widget.pokemon.name}',
+                    style: Theme.of(context).textTheme.titleLarge),
+                const SizedBox(height: 18),
+                const Text('Kolor tekstu', style: TextStyle(fontWeight: FontWeight.bold)),
+                const SizedBox(height: 10),
+                Wrap(
+                  spacing: 12,
+                  runSpacing: 12,
+                  children: _cardTextColors.map((color) => InkWell(
+                    onTap: () => refreshSheet(() => selectedColor = color),
+                    borderRadius: BorderRadius.circular(24),
+                    child: Container(
+                      width: 38,
+                      height: 38,
+                      decoration: BoxDecoration(
+                        color: color,
+                        shape: BoxShape.circle,
+                        border: Border.all(
+                          color: selectedColor == color
+                              ? Theme.of(context).colorScheme.primary
+                              : Theme.of(context).colorScheme.outline,
+                          width: selectedColor == color ? 3 : 1,
+                        ),
+                      ),
+                      child: selectedColor == color
+                          ? Icon(Icons.check,
+                              color: color.computeLuminance() > 0.5 ? Colors.black : Colors.white)
+                          : null,
+                    ),
+                  )).toList(),
+                ),
+                const SizedBox(height: 20),
+                const Text('Emoji Pokémona', style: TextStyle(fontWeight: FontWeight.bold)),
+                const SizedBox(height: 10),
+                Wrap(
+                  spacing: 8,
+                  runSpacing: 8,
+                  children: _pokemonEmojis.map((emoji) => ChoiceChip(
+                    label: Text(emoji.isEmpty ? 'Brak' : emoji,
+                        style: const TextStyle(fontSize: 20)),
+                    selected: selectedEmoji == emoji,
+                    onSelected: (_) => refreshSheet(() => selectedEmoji = emoji),
+                  )).toList(),
+                ),
+                const SizedBox(height: 18),
+                SizedBox(
+                  width: double.infinity,
+                  child: FilledButton(
+                    onPressed: () async {
+                      final preferences = await SharedPreferences.getInstance();
+                      await preferences.setInt(
+                        'pokemon_card_text_color_${widget.pokemon.id}',
+                        selectedColor.value,
+                      );
+                      await preferences.setString(
+                        'pokemon_card_emoji_${widget.pokemon.id}',
+                        selectedEmoji,
+                      );
+                      if (!mounted) return;
+                      setState(() {
+                        _cardTextColor = selectedColor;
+                        _pokemonEmoji = selectedEmoji;
+                      });
+                      if (sheetContext.mounted) Navigator.of(sheetContext).pop();
+                    },
+                    child: const Text('Zapisz wygląd'),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
     );
   }
 
@@ -527,19 +634,29 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
           Column(
             children: [
               SizedBox(height: compact ? 4 : 14),
-              Text(
-                pokemon.name,
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: compact ? 19 : 27,
-                  fontWeight: FontWeight.w800,
-                  shadows: [Shadow(color: Colors.black26, blurRadius: 8)],
-                ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  if (_pokemonEmoji.isNotEmpty) ...[
+                    Text(_pokemonEmoji, style: TextStyle(fontSize: compact ? 20 : 26)),
+                    const SizedBox(width: 7),
+                  ],
+                  Text(
+                    pokemon.name,
+                    style: TextStyle(
+                      color: _cardTextColor,
+                      fontSize: compact ? 19 : 27,
+                      fontWeight: FontWeight.w800,
+                      shadows: const [Shadow(color: Colors.black26, blurRadius: 8)],
+                    ),
+                  ),
+                ],
               ),
               Text(
                 '#${pokemon.id.toString().padLeft(3, '0')}',
                 style: TextStyle(
-                  color: Colors.white.withValues(alpha: 0.88),
+                  color: _cardTextColor.withValues(alpha: 0.88),
                   fontWeight: FontWeight.bold,
                   letterSpacing: 1.2,
                 ),
@@ -621,6 +738,11 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
           elevation: 0,
           title: const Text('Pokédex'),
           actions: [
+            IconButton(
+              tooltip: 'Dostosuj wygląd karty',
+              onPressed: _showAppearanceEditor,
+              icon: const Icon(Icons.palette_outlined),
+            ),
             IconButton(
               tooltip: _shiny ? 'Pokaż zwykłą formę' : 'Pokaż Shiny',
               onPressed: _toggleShiny,
