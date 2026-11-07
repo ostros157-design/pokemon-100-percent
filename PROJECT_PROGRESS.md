@@ -1778,3 +1778,12 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Walidacja statyczna po poprawce: 195 wywołań GuideStep w pliku, 166 kroków kontynuacji Emerald, 49 tabel spotkań (wszystkie sumują się do 100%), brak powtórzonych tytułów, brak błędów bilansu nawiasów i brak wykrytych brakujących separatorów między krokami.
 - Flutter Analyzer, testy i ponowny build APK nie zostały uruchomione w tym środowisku. Należy ponowić `flutter build apk --release` lokalnie, aby potwierdzić kompilację całej aplikacji.
 - Commit poprawki: `a2485590c85565a879c4b07aadd92f4044f1c6e0`.
+
+
+### Poradnik — lżejszy i bardziej kompaktowy wygląd (2026-11-07)
+
+- Zmniejszono wizualną masywność kart kroków bez zmniejszania rozmiaru głównego tekstu: mniejsze marginesy i wewnętrzne odstępy, delikatne obramowanie zamiast cienia.
+- Zmniejszono wizualny rozmiar checkboxów, chipów Pokémonów i przedmiotów oraz odstępy między nimi.
+- Zmniejszono odstępy między sekcjami i wysokość nagłówka postępu; pasek postępu jest cieńszy.
+- Zachowano klikalność Pokémonów prowadzącą do Pokédexu, odhaczanie kroków, zapisywanie postępu, listy rozwijane i dane spotkań.
+- Nie uruchamiano Flutter Analyzer, testów ani APK. Zmiany należy sprawdzić wizualnie po pobraniu aktualizacji.
