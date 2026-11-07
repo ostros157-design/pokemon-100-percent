@@ -1756,3 +1756,16 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Źródła: Bulbapedia Emerald Walkthrough Part 11 (Safari Zone), Part 15 (Shoal Cave, Route 124, Abandoned Ship) i Part 20 (National Dex, Johto starter, Trick House, Safari Zone).
 - Commity danych: `2cbd6a179bcac6fefe884f2e3bcbe91c033ec7a3`, `322f61c000601ef7a51a0608ca9409c0c4afa894`.
 - Doprecyzowano harmonogram Shoal Cave: niski pływ 3:00–8:59 i 15:00–20:59, wysoki 9:00–14:59 i 21:00–2:59. Commit korekty: `c64a309da2ee5be1951644d8751fd4eb345f3f6d`.
+
+
+### Poradnik Emerald — zamknięcie końcowego audytu 100% (2026-11-07)
+
+- Końcowy audyt uzupełnił codzienne wydarzenia Hoenn, prezenty jagodowe, tygodniowy prezent w Pacifidlog, telewizyjne promocje i roje oraz rzadką Mirage Island na Route 130 (Wynaut i Liechi Berry).
+- Dodano kompletne wskazówki dotyczące Secret Bases (jedna aktywna baza, limit 16 dekoracji), hodowli w Day Care na Route 117, jaj, Egg Groups i kadzideł dla niemowlęcych Pokémonów.
+- Rozwinięto checklistę Contestów: pięć kategorii, cztery rangi, Pokéblocki, Berry Blender, nagrody Master Rank i pozostałe źródła wstążek.
+- Dopisano ograniczenia kompletowania Pokédexu: 200 wpisów Hoenn wymaga wymian, wybrane ewolucje i gatunki nie są dostępne w zwykłych spotkaniach Emerald, starter Johto jest nagrodą za pełny Hoenn Dex, a dyplom National Dex w Emerald obejmuje 380 gatunków. Rozdzielono normalną zawartość od Pokémonów eventowych.
+- Poprawiono istotny błąd w poprzednim kroku Berry Master’s Wife: w Emerald hasło GREAT BATTLE daje Spelon Berry; poprzednia lista Pamtre/Watmel/Durin/Belue nie była poprawna dla tej wersji gry. Dopisano także trzy po osiem jagód w ogrodzie Berry Mastera i dziesięć jagód z codziennej puli.
+- Nowa zawartość: 4 kroki. Weryfikacja źródeł: Bulbapedia Emerald walkthrough Part 9 (Berry Master), PokéMaps R/S/E Pokédex Completion Guide, zestawienie Daily Events in RSE oraz przewodnik Mirage Island.
+- Zakres audytu uznaję za domknięty na poziomie poradnika tekstowego 100%: główna historia, post-game, lokacje opcjonalne, spotkania, trenerzy, przedmioty, dzienne/tygodniowe aktywności, hodowla, konkursy, wstążki i ograniczenia kolekcji. To nie oznacza, że jeden kartridż pozwala zdobyć wszystkie 386 Pokémonów ani że każda pojedyncza dekoracja/przedmiot ma osobny checkbox.
+- Nie uruchamiano Flutter Analyzer, testów aplikacji ani APK; walidacja statyczna danych zostanie odnotowana osobno po sprawdzeniu całego pliku.
+- Commit danych: `d59ade4977fbe519473d7291d599ed95239fc2c6`.
