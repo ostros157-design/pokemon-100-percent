@@ -33,7 +33,16 @@ class _GuideScreenState extends State<GuideScreen> {
   @override
   void initState() {
     super.initState();
+    _markGuideOpened();
     _loadProgress();
+  }
+
+  Future<void> _markGuideOpened() async {
+    final preferences = await SharedPreferences.getInstance();
+    await preferences.setBool(
+      'guide_opened_${widget.guide.gameId}_${widget.guide.id}',
+      true,
+    );
   }
 
   @override
