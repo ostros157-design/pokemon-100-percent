@@ -86,14 +86,46 @@ class GuideStepCard extends StatelessWidget {
                 ],
               ),
             ],
-            if (step.pokemon.isNotEmpty) ...[
+            if (step.wildPokemon.isNotEmpty) ...[
               const SizedBox(height: 8),
               const Text(
-                'Pokémon:',
+                'Pokémon (dzikie spotkania):',
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 4),
-              _buildPokemonList(context),
+              _buildPokemonGroup(context, step.wildPokemon),
+            ],
+            if (_trainerNames.isNotEmpty) ...[
+              const SizedBox(height: 8),
+              const Text(
+                'Trenerzy:',
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+              const SizedBox(height: 4),
+              Wrap(
+                spacing: 5,
+                runSpacing: 3,
+                children: _trainerNames
+                    .map((name) => Chip(
+                          avatar: const Icon(Icons.person, size: 14),
+                          label: Text(name),
+                          visualDensity: VisualDensity.compact,
+                          materialTapTargetSize:
+                              MaterialTapTargetSize.shrinkWrap,
+                          labelPadding:
+                              const EdgeInsets.symmetric(horizontal: 3),
+                        ))
+                    .toList(),
+              ),
+            ],
+            if (step.trainerPokemon.isNotEmpty) ...[
+              const SizedBox(height: 8),
+              const Text(
+                'Pokémony trenerów:',
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+              const SizedBox(height: 4),
+              _buildPokemonGroup(context, step.trainerPokemon),
             ],
             if (step.items.isNotEmpty) ...[
               const SizedBox(height: 8),
@@ -120,8 +152,42 @@ class GuideStepCard extends StatelessWidget {
     );
   }
 
-  Widget _buildPokemonList(BuildContext context) {
-    final chips = step.pokemon
+  List<String> get _trainerNames {
+    if (step.trainers.isNotEmpty) return step.trainers;
+
+    final names = <String>{};
+    const classes = [
+      'Camper', 'Picnicker', 'Hiker', 'Fisherman', 'Swimmer',
+      'Bird Keeper', 'Bug Catcher', 'Bug Maniac', 'Aroma Lady',
+      'Psychic', 'Cooltrainer', 'Black Belt', 'Battle Girl',
+      'Kindler', 'Ninja Boy', 'Hex Maniac', 'PokéManiac',
+      'Pokémon Breeder', 'Collector', 'Guitarist', 'Triathlete',
+      'Parasol Lady', 'Gentleman', 'Pokéfan', 'Sailor', 'Expert',
+      'Ruin Maniac', 'Youngster', 'Tuber',
+    ];
+    for (final trainerClass in classes) {
+      final pattern = RegExp(
+        '\${RegExp.escape(trainerClass)}\\s+([A-ZÀ-Ż][a-zà-ż’\\-]+)',
+      );
+      for (final match in pattern.allMatches(step.description)) {
+        final name = match.group(1);
+        if (name != null) names.add('$trainerClass $name');
+      }
+    }
+
+    final namedBattles = RegExp(
+      r'(?:Pokonaj|zmierz się z|walcz z)\s+([A-ZÀ-Ż][a-zà-ż’\-]+)',
+      caseSensitive: false,
+    );
+    for (final match in namedBattles.allMatches(step.title)) {
+      final name = match.group(1);
+      if (name != null) names.add(name);
+    }
+    return names.toList(growable: false);
+  }
+
+  Widget _buildPokemonGroup(BuildContext context, List<String> names) {
+    final chips = names
         .map((name) => _buildPokemonChip(context, name))
         .toList();
     if (chips.length <= 5) {
@@ -132,7 +198,7 @@ class GuideStepCard extends StatelessWidget {
       dense: true,
       visualDensity: VisualDensity.compact,
       childrenPadding: const EdgeInsets.only(bottom: 4),
-      title: Text('Pokaż Pokémony (${chips.length})'),
+      title: Text('Pokaż (\${chips.length})'),
       children: [Wrap(spacing: 6, runSpacing: 6, children: chips)],
     );
   }
