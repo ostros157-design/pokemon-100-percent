@@ -181,7 +181,12 @@ class GuideStepCard extends StatelessWidget {
       'Kindler', 'Ninja Boy', 'Hex Maniac', 'PokéManiac',
       'Pokémon Breeder', 'Collector', 'Guitarist', 'Triathlete',
       'Parasol Lady', 'Gentleman', 'Pokéfan', 'Sailor', 'Expert',
-      'Ruin Maniac', 'Youngster', 'Tuber',
+      'Ruin Maniac', 'Youngster', 'Tuber', 'Beauty', 'Rocker',
+      'Engineer', 'Gamer', 'Juggler', 'Burglar', 'Scientist',
+      'Tamer', 'Ace Trainer', 'Channeler', 'Super Nerd',
+      'Team Rocket Grunt', 'Rocket Grunt', 'Pokémon Trainer',
+      'Poké Kid', 'Lady', 'Waiter', 'Madame', 'Coach Trainer',
+      'Gentleman', 'Poké Maniac', 'PokéManiac',
     ];
     for (final trainerClass in classes) {
       final pattern = RegExp(
