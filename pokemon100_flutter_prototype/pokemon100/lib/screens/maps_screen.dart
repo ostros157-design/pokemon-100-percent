@@ -3101,14 +3101,10 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
                     spacing: 8,
                     runSpacing: 8,
                     children: caveConnections.map((connection) {
-                      final feature = _featuresByLocation[location]!.keys.firstWhere(
-                        (key) => key.toLowerCase().contains(connection.toLowerCase().replaceFirst('wyjście ', '').replaceFirst('wejście ', '')),
-                        orElse: () => connection,
-                      );
                       return ActionChip(
-                        avatar: Icon(connection.startsWith('Wejście') ? Icons.login : Icons.logout, size: 17),
-                        label: Text(connection),
-                        onPressed: () => setState(() => _selectedFeature = feature),
+                        avatar: Icon(connection.$1.startsWith('Wejście') ? Icons.login : Icons.logout, size: 17),
+                        label: Text(connection.$1),
+                        onPressed: () => setState(() => _selectedFeature = connection.$2),
                       );
                     }).toList(),
                   ),
