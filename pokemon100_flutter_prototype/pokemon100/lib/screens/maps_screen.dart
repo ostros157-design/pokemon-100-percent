@@ -2417,6 +2417,32 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
   String? _selectedFeature;
   String? _selectedFloor;
   final Set<String> _clearedObstacles = <String>{};
+  static const String _clearedObstaclesStorageKey = 'kanto_cleared_obstacles_v1';
+
+  @override
+  void initState() {
+    super.initState();
+    _loadClearedObstacles();
+  }
+
+  Future<void> _loadClearedObstacles() async {
+    final preferences = await SharedPreferences.getInstance();
+    final saved = preferences.getStringList(_clearedObstaclesStorageKey) ?? const <String>[];
+    if (!mounted) return;
+    setState(() {
+      _clearedObstacles
+        ..clear()
+        ..addAll(saved);
+    });
+  }
+
+  Future<void> _saveClearedObstacles() async {
+    final preferences = await SharedPreferences.getInstance();
+    await preferences.setStringList(
+      _clearedObstaclesStorageKey,
+      _clearedObstacles.toList()..sort(),
+    );
+  }
 
   static const Map<String, List<String>> _floorsByLocation = {
     'Mt. Moon': ['1F', 'B1F', 'B2F'],
@@ -3036,13 +3062,16 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
                 avatar: Icon(cleared ? Icons.check_circle : Icons.landscape, size: 18),
                 label: Text(cleared ? '$name — usunięta' : name),
                 selected: cleared,
-                onSelected: (value) => setState(() {
-                  if (value) {
-                    _clearedObstacles.add('$location|$name');
-                  } else {
-                    _clearedObstacles.remove('$location|$name');
-                  }
-                }),
+                onSelected: (value) {
+                  setState(() {
+                    if (value) {
+                      _clearedObstacles.add('$location|$name');
+                    } else {
+                      _clearedObstacles.remove('$location|$name');
+                    }
+                  });
+                  _saveClearedObstacles();
+                },
               );
             }).toList(),
           ),
