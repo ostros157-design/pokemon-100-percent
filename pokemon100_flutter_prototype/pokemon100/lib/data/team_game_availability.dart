@@ -1,7 +1,31 @@
-/// Conservative regional-dex availability data for the Team Builder.
-/// Source dataset: https://github.com/cybolt-games/pokemon-regional-master-dex-tracker
-/// Lists include entries marked obtainable plus listed trade-only species/evolutions.
-/// They are regional-dex based, not a guarantee of every post-game encounter.
+/// Conservative game-availability data for Team Making.
+///
+/// The regional-dex lists below identify Pokémon listed in each regional dex;
+/// they do not prove that every species outside the list is unobtainable.
+/// Let's Go version exclusives and special access methods are handled explicitly.
+enum TeamAvailabilityKind {
+  inGame,
+  tradeRequired,
+  specialAccess,
+  outsideRegionalDex,
+  notInGame,
+  unknown,
+}
+
+class TeamPokemonAvailability {
+  final TeamAvailabilityKind kind;
+  final String label;
+  final String detail;
+
+  const TeamPokemonAvailability(this.kind, this.label, this.detail);
+
+  bool get canBeAdded => kind == TeamAvailabilityKind.inGame;
+  bool get canBeShownAsExtra =>
+      kind == TeamAvailabilityKind.tradeRequired ||
+      kind == TeamAvailabilityKind.specialAccess ||
+      kind == TeamAvailabilityKind.outsideRegionalDex;
+}
+
 class TeamGameAvailability {
   static const Map<String, String> _ranges = {
     'emerald': '25-28,37-45,54-55,59,63-68,72-76,81-82,84-85,88-89,100-101,109-112,116-121,127,129-130,141,169-172,174,177-178,182-184,186,202-203,214,218-219,222,227,230-232,252-282,285-306,309-314,316-334,336,338-386',
@@ -12,9 +36,21 @@ class TeamGameAvailability {
     'legends_arceus': '25,35-38,41-42,46-48,54-55,60,63-68,72-74,81-82,92-95,108,111-114,119,122-123,125-126,129-130,133-138,143,155-156,160,169,172-173,175-176,184-185,190,193,196-198,200-201,207-208,212,214-217,220-221,223-224,226,233-234,239-240,242,265-269,280-282,299,315,339-340,355-356,358,361-365,387-493,501-502,548,627,641-642,645,700,704,712,722-723,899-905',
   };
 
-  static bool supports(String gameId) => _ranges.containsKey(gameId) || gameId == 'xy';
+  static const Set<int> _letsGoEeveeExclusives = {
+    23, 24, 37, 38, 52, 53, 69, 70, 71, 109, 110, 127,
+  };
+  static const Set<int> _letsGoPikachuExclusives = {
+    27, 28, 43, 44, 45, 56, 57, 58, 59, 88, 89, 123,
+  };
+  static const Set<int> _tradeEvolutionsInLetsGo = {65, 68, 76, 94};
 
-  static bool contains(String gameId, int nationalDex) {
+  static bool supports(String gameId) =>
+      gameId == 'lets_go_pikachu' ||
+      gameId == 'lets_go_eevee' ||
+      _ranges.containsKey(gameId) ||
+      gameId == 'xy';
+
+  static bool _regionalContains(String gameId, int nationalDex) {
     final encoded = gameId == 'xy'
         ? '${_ranges['x']},${_ranges['y']}'
         : _ranges[gameId];
@@ -27,4 +63,72 @@ class TeamGameAvailability {
     }
     return false;
   }
+
+  static TeamPokemonAvailability forPokemon(String gameId, int nationalDex) {
+    if (nationalDex <= 0) {
+      return const TeamPokemonAvailability(
+        TeamAvailabilityKind.notInGame, 'Nieprawidłowy numer', 'Numer Pokédexu musi być dodatni.',
+      );
+    }
+
+    if (gameId == 'lets_go_pikachu' || gameId == 'lets_go_eevee') {
+      if (nationalDex == 151) {
+        return const TeamPokemonAvailability(
+          TeamAvailabilityKind.specialAccess, 'Specjalny dostęp',
+          'Mew wymaga Poké Ball Plus; nie jest zwykłym spotkaniem w grze.',
+        );
+      }
+      if (nationalDex == 808 || nationalDex == 809) {
+        return const TeamPokemonAvailability(
+          TeamAvailabilityKind.specialAccess, 'Transfer z Pokémon GO',
+          'Meltan i Melmetal trafiają do Let’s Go przez połączenie z Pokémon GO.',
+        );
+      }
+      if (nationalDex < 1 || nationalDex > 150) {
+        return const TeamPokemonAvailability(
+          TeamAvailabilityKind.notInGame, 'Poza grą',
+          'Let’s Go obsługuje gatunki Kanto oraz Meltan i Melmetal.',
+        );
+      }
+      final oppositeExclusive = gameId == 'lets_go_pikachu'
+          ? _letsGoEeveeExclusives
+          : _letsGoPikachuExclusives;
+      if (oppositeExclusive.contains(nationalDex)) {
+        return const TeamPokemonAvailability(
+          TeamAvailabilityKind.tradeRequired, 'Wymaga wymiany',
+          'Gatunek jest wersjo-ekskluzywny w drugiej wersji Let’s Go.',
+        );
+      }
+      if (_tradeEvolutionsInLetsGo.contains(nationalDex)) {
+        return const TeamPokemonAvailability(
+          TeamAvailabilityKind.tradeRequired, 'Ewolucja przez wymianę',
+          'Ten etap ewolucji wymaga wymiany w Let’s Go.',
+        );
+      }
+      return const TeamPokemonAvailability(
+        TeamAvailabilityKind.inGame, 'Dostępny w grze',
+        'Gatunek występuje w tej wersji; szczegóły miejsca i etapu gry nie są tu rozpisane.',
+      );
+    }
+
+    if (!supports(gameId)) {
+      return const TeamPokemonAvailability(
+        TeamAvailabilityKind.unknown, 'Brak danych',
+        'Nie mamy jeszcze wiarygodnego zestawienia dla tej gry.',
+      );
+    }
+    if (_regionalContains(gameId, nationalDex)) {
+      return const TeamPokemonAvailability(
+        TeamAvailabilityKind.inGame, 'W regionalnym Pokédexie',
+        'Gatunek znajduje się na liście regionalnego Pokédexu; konkretna metoda i etap zdobycia mogą się różnić.',
+      );
+    }
+    return const TeamPokemonAvailability(
+      TeamAvailabilityKind.outsideRegionalDex, 'Poza regionalnym Pokédexem',
+      'Brak wpisu na używanej liście regionalnej nie dowodzi, że gatunek jest niemożliwy do zdobycia. Sprawdź wymiany, post-game i wydarzenia.',
+    );
+  }
+
+  static bool contains(String gameId, int nationalDex) =>
+      forPokemon(gameId, nationalDex).kind == TeamAvailabilityKind.inGame;
 }
