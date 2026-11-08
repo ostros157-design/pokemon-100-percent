@@ -5409,3 +5409,15 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Commity: serwis `feebd6f`, poprawka typowania wyniku `e11168d`, interfejs `7375e79`, rozstrzyganie remisów `1b0c69a`.
 - Ograniczenia: to heurystyczny ranking, nie pełna symulacja walk. Nie analizuje jeszcze przypisanych zestawów ruchów, natur, EV/IV, przedmiotów, ról zależnych od strategii ani dokładnych efektów wszystkich umiejętności. Lista rozpoznawanych umiejętności jest celowo ograniczona do jawnie obsłużonych przypadków.
 - Kontrola statyczna: ponownie pobrano zaktualizowany serwis i sprawdzono bilans nawiasów klamrowych oraz okrągłych; brak rozbieżności. Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK.
+
+
+### Team Making — drużyny rezerwowe i porównywanie składów (2026-11-08)
+
+- Dodano przycisk „Porównaj drużyny” w pasku kreatora. Otwiera porównywarkę dwóch zapisanych składów z możliwością wyboru obu drużyn.
+- Porównanie pokazuje liczbę Pokémonów, liczbę różnych typów, średnią sumę statystyk bazowych (dla Pokémonów z dostępnymi danymi), liczbę ustawionych zestawów ruchów oraz listy Pokémonów wspólnych i występujących tylko w jednym składzie.
+- Jeśli składy są przypisane do różnych gier, interfejs wyświetla ostrzeżenie, że dostępności nie należy porównywać bezpośrednio.
+- Istniejący system wielu zapisanych drużyn służy teraz także do przechowywania wariantów i składów rezerwowych; nie dodawano osobnego, zdublowanego magazynu.
+- Ograniczenia: porównanie nie oblicza jeszcze wspólnego rankingu jakości, odporności, słabości ani pokrycia konkretnymi ruchami. Zmiana została zapisana w kodzie, ale wymaga sprawdzenia w aplikacji.
+- Commit: `a58ef6f6d46b73af0e9d87d0d0ad85fb83eec52e`.
+- Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK.
+
