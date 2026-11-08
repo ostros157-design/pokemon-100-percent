@@ -2416,6 +2416,7 @@ class _KantoLocalAreaPanel extends StatefulWidget {
 class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
   String? _selectedFeature;
   String? _selectedFloor;
+  final Set<String> _clearedObstacles = <String>{};
 
   static const Map<String, List<String>> _floorsByLocation = {
     'Mt. Moon': ['1F', 'B1F', 'B2F'],
@@ -2969,6 +2970,14 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
         .toSet()
         .toList()
       ..sort();
+    final obstacleNames = <String, List<String>>{
+      'Mt. Moon': ['Głaz blokujący korytarz', 'Zawalisko przy odnodze'],
+      'Rock Tunnel': ['Głaz na przejściu', 'Zawalony tunel'],
+      "Diglett's Cave": ['Osuwisko w tunelu'],
+      'Seafoam Islands': ['Głaz przy wodnym kanale', 'Zablokowane przejście'],
+      'Cerulean Cave': ['Głaz w komnacie', 'Zawalona odnoga'],
+      'Victory Road': ['Głaz do przesunięcia', 'Blokada skalna'],
+    }[location] ?? const <String>[];
     final optionalSteps = widget.references
         .where((reference) => reference.step.optional)
         .length;
@@ -3004,6 +3013,7 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
                     land: Theme.of(context).colorScheme.surfaceContainerHighest,
                     route: Theme.of(context).colorScheme.primary,
                     label: Theme.of(context).colorScheme.onSurface,
+                    clearedObstacles: _clearedObstacles,
                   ),
                   child: const SizedBox.expand(),
                 ),
@@ -3011,6 +3021,32 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
             ),
           ),
         ),
+        if (obstacleNames.isNotEmpty) ...[
+          const SizedBox(height: 10),
+          Text('Przeszkody na mapie', style: Theme.of(context).textTheme.titleSmall),
+          const SizedBox(height: 4),
+          Text('Przełączaj przeszkody, aby oznaczyć je jako usunięte i odsłonić przejście.', style: Theme.of(context).textTheme.bodySmall),
+          const SizedBox(height: 6),
+          Wrap(
+            spacing: 8,
+            runSpacing: 8,
+            children: obstacleNames.map((name) {
+              final cleared = _clearedObstacles.contains('$location|$name');
+              return FilterChip(
+                avatar: Icon(cleared ? Icons.check_circle : Icons.landscape, size: 18),
+                label: Text(cleared ? '$name — usunięta' : name),
+                selected: cleared,
+                onSelected: (value) => setState(() {
+                  if (value) {
+                    _clearedObstacles.add('$location|$name');
+                  } else {
+                    _clearedObstacles.remove('$location|$name');
+                  }
+                }),
+              );
+            }).toList(),
+          ),
+        ],
         if (floors.isNotEmpty) ...[
           const SizedBox(height: 10),
           if (location == 'Silph Co.') ...[
@@ -3322,6 +3358,7 @@ class _KantoLocalAreaPainter extends CustomPainter {
   final Color land;
   final Color route;
   final Color label;
+  final Set<String> clearedObstacles;
 
   static const Map<String, (String, String)> _routeEndpoints = {
     'Route 3': ('Pewter City', 'Mt. Moon'),
@@ -3360,6 +3397,7 @@ class _KantoLocalAreaPainter extends CustomPainter {
     required this.land,
     required this.route,
     required this.label,
+    this.clearedObstacles = const <String>{},
   });
 
   @override
@@ -4621,6 +4659,41 @@ class _KantoLocalAreaPainter extends CustomPainter {
         height: 3,
       );
       canvas.drawRect(door, Paint()..color = const Color(0xFFFFF1B8));
+    }
+
+    // Interaktywne przeszkody: status jest sterowany z panelu lokacji.
+    final obstacleSets = <String, List<Offset>>{
+      'Mt. Moon': [const Offset(.50, .38), const Offset(.22, .78)],
+      'Rock Tunnel': [const Offset(.50, .48), const Offset(.78, .72)],
+      "Diglett's Cave": [const Offset(.50, .50)],
+      'Seafoam Islands': [const Offset(.50, .54), const Offset(.78, .28)],
+      'Cerulean Cave': [const Offset(.50, .55), const Offset(.22, .68)],
+      'Victory Road': [const Offset(.52, .46), const Offset(.76, .72)],
+    };
+    final obstacles = obstacleSets[location] ?? const <Offset>[];
+    for (var i = 0; i < obstacles.length; i++) {
+      final names = <String, List<String>>{
+        'Mt. Moon': ['Głaz blokujący korytarz', 'Zawalisko przy odnodze'],
+        'Rock Tunnel': ['Głaz na przejściu', 'Zawalony tunel'],
+        "Diglett's Cave": ['Osuwisko w tunelu'],
+        'Seafoam Islands': ['Głaz przy wodnym kanale', 'Zablokowane przejście'],
+        'Cerulean Cave': ['Głaz w komnacie', 'Zawalona odnoga'],
+        'Victory Road': ['Głaz do przesunięcia', 'Blokada skalna'],
+      }[location]!;
+      final cleared = clearedObstacles.contains('$location|${names[i]}');
+      final center = Offset(size.width * obstacles[i].dx, size.height * obstacles[i].dy);
+      final radius = math.max(7.0, size.shortestSide * .035);
+      if (cleared) {
+        canvas.drawCircle(center, radius * 1.25, Paint()..color = const Color(0xFF66B982).withValues(alpha: .28));
+        canvas.drawCircle(center, radius * .62, Paint()..color = const Color(0xFF4C9A67));
+        canvas.drawLine(center.translate(-radius*.3, 0), center.translate(-radius*.05, radius*.25), Paint()..color=Colors.white..strokeWidth=2);
+        canvas.drawLine(center.translate(-radius*.05, radius*.25), center.translate(radius*.38, -radius*.28), Paint()..color=Colors.white..strokeWidth=2);
+      } else {
+        canvas.drawCircle(center.translate(1, 2), radius * 1.12, Paint()..color=const Color(0xFF263238).withValues(alpha:.25));
+        canvas.drawCircle(center, radius, Paint()..color=const Color(0xFF77796F));
+        canvas.drawCircle(center, radius, Paint()..color=const Color(0xFF454B49)..style=PaintingStyle.stroke..strokeWidth=1.5);
+        canvas.drawLine(center.translate(-radius*.45,-radius*.15),center.translate(radius*.15,-radius*.48),Paint()..color=const Color(0xFFC2BFAE)..strokeWidth=1.5);
+      }
     }
 
     // Naturalne i podziemne detale rozpoznawalne dla poszczególnych lokacji.
