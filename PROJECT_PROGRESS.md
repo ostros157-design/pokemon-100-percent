@@ -1,3 +1,15 @@
+### Poradnik Let's Go, Pikachu! — kolejne zweryfikowane tabele spotkań (2026-11-08)
+
+- Dodano 12 kroków tabel spotkań, rozdzielając metody: trawa, niebo, woda i osobne piętra jaskiń.
+- Uzupełniono Route 1 (trawa i niebo), Route 2 (trawa i niebo), Route 5 (trawa i niebo), Route 6 (trawa, niebo i woda), Diglett's Cave oraz Rock Tunnel (główne piętro i B1F).
+- Uwzględniono poziomy: Route 1 3–4; Route 2 3–8; Route 5/6 11–16; Diglett's Cave 13–18; Rock Tunnel 18–23; latające spotkania 3–56.
+- Wszystkie dodane standardowe tabele sumują się do 100% osobno dla danej metody spotkania.
+- Specjalne spawny Chansey i Charmandera, a także specjalne latające spawny (Dragonite, Charizard, Articuno, Zapdos, Moltres), są pokazane bez wymyślonych procentów.
+- Źródła danych: RotomLabs (strony Route 1–6, Diglett's Cave, Rock Tunnel i Mt. Moon) oraz Serebii Pokéarth dla kontroli tabel Route 1; dane wersji Let's Go, Pikachu! są oddzielone od wyłączności Let's Go, Eevee!.
+- Pozostałe lokacje Kanto wymagają dalszego uzupełnienia tabel (m.in. Route 7–25, Pokémon Tower, Power Plant, Pokémon Mansion, Seafoam Islands, Victory Road i Cerulean Cave). Nie oznaczono ich jako ukończonych.
+- Nie uruchomiono Flutter Analyzer, testów ani APK; kontrola kompilacji nadal odłożona do czasu powrotu laptopa.
+
+
 ### Poradnik Pokémon Let’s Go, Pikachu! — rozbudowa do całej historii i post-game (2026-11-08)
 
 - Zaktualizowano nazwę i opis poradnika: nie jest już przedstawiany jako krótki wstęp do pierwszego Gymu.
