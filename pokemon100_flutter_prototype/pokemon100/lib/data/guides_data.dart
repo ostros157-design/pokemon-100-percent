@@ -706,15 +706,25 @@ const List<Guide> guidesList = [
       ),
       GuideStep(
         section: 'Route 4 i Mt. Moon',
-        title: 'Sprawdź wodne i latające spotkania na Route 4',
+        title: 'Sprawdź wodne spotkania na Route 4',
         description:
-            'W wodzie Route 4 spotkasz Tentacoola 45%, Magikarpa 45% i Tentacruela 10% (poziomy 7–12). Na niebie zwykłe spotkania to Spearow 60% i Fearow 40% (poziomy 3–56). Charizard, Dragonite oraz Articuno, Zapdos i Moltres są specjalnymi spawnami latającymi; nie mają tu stałego procentu w zwykłej tabeli. Warto rozdzielić te metody od spotkań w trawie.',
-        location: 'Route 4 — woda i niebo',
-        pokemon: ['Tentacool', 'Magikarp', 'Tentacruel', 'Spearow', 'Fearow', 'Charizard', 'Dragonite', 'Articuno', 'Zapdos', 'Moltres'],
+            'W wodzie Route 4 spotkasz Tentacoola 45%, Magikarpa 45% i Tentacruela 10% na poziomach 7–12. To osobna metoda spotkań — nie łącz jej z tabelą trawy.',
+        location: 'Route 4 — woda',
+        pokemon: ['Tentacool', 'Magikarp', 'Tentacruel'],
         encounterRatesPercent: {
           'Tentacool': 45,
           'Magikarp': 45,
           'Tentacruel': 10,
+        },
+      ),
+      GuideStep(
+        section: 'Route 4 i Mt. Moon',
+        title: 'Sprawdź Pokémony pojawiające się na niebie nad Route 4',
+        description:
+            'Zwykłe spotkania latające to Spearow 60% i Fearow 40% na poziomach 3–56. Charizard, Dragonite oraz Articuno, Zapdos i Moltres są specjalnymi spawnami latającymi; nie mają tu stałego procentu w zwykłej tabeli.',
+        location: 'Route 4 — niebo',
+        pokemon: ['Spearow', 'Fearow', 'Charizard', 'Dragonite', 'Articuno', 'Zapdos', 'Moltres'],
+        encounterRatesPercent: {
           'Spearow': 60,
           'Fearow': 40,
         },
