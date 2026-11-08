@@ -5807,3 +5807,12 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Schemat szybu na mapie pokazuje 11 przystanków, oznaczenia poziomów i kabinę na wybranym piętrze; pozostawiono także dotychczasowe przyciski przejścia na sąsiednie piętra.
 - Układ jest poglądowy i nie deklaruje dokładnego położenia windy na oryginalnej mapie gry.
 - Kontrola tekstowa potwierdziła obecność selektora, wskaźnika 11 pięter i wyliczania pozycji kabiny; nie uruchomiono Flutter Analyzer, testów ani kompilacji APK.
+
+
+### Mapy Kanto — interaktywne przejścia w pozostałych budynkach (2026-11-09)
+
+- Dodano dedykowany panel przejść dla lokacji wielopoziomowych poza Silph Co.: bezpośredni wybór piętra z listy oraz przyciski przejścia na sąsiedni poziom.
+- Panel pokazuje typ przejścia (schody lub winda), liczbę dostępnych poziomów i aktualnie wybrany poziom; skrajne przyciski są blokowane, gdy nie ma dalszego piętra.
+- Podpisy markerów schodów i windy na schemacie pokazują teraz również aktualnie wybrany poziom.
+- Rozwiązanie obejmuje wieżę, rezydencję, domy, sklep, statek oraz wielopoziomowe jaskinie i kryjówki; schematy pozostają poglądowe.
+- Kontrola tekstowa potwierdziła obecność panelu, wyboru poziomu, przycisków i podpisu poziomu; nie uruchomiono Flutter Analyzer, testów ani kompilacji APK.
