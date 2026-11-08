@@ -1,4 +1,5 @@
 import '../data/pokemon_data.dart';
+import '../data/move_data.dart';
 import '../data/team_game_availability.dart';
 import '../models/pokemon.dart';
 
@@ -55,7 +56,25 @@ class TeamRecommendationService {
     'Ghost': {'Normal', 'Fighting'}, 'Dark': {'Psychic'}, 'Steel': {'Poison'}, 'Fairy': {'Dragon'},
   };
 
-  static List<TeamRecommendation> recommend(List<Pokemon> team, {String gameId = supportedGameId, int limit = 5}) {
+  static double _effectiveness(String attackType, List<String> defendingTypes) {
+    var multiplier = 1.0;
+    for (final defenseType in defendingTypes) {
+      if (_immune[defenseType]?.contains(attackType) ?? false) return 0;
+      if (_superEffectiveAgainst[attackType]?.contains(defenseType) ?? false) {
+        multiplier *= 2;
+      } else if (_resists[defenseType]?.contains(attackType) ?? false) {
+        multiplier *= 0.5;
+      }
+    }
+    return multiplier;
+  }
+
+  static List<TeamRecommendation> recommend(
+    List<Pokemon> team, {
+    String gameId = supportedGameId,
+    Map<int, List<String>> movesByPokemon = const <int, List<String>>{},
+    int limit = 5,
+  }) {
     if (team.isEmpty || !isSupportedGame(gameId)) return const [];
     final weakCounts = <String, int>{};
     for (final attackType in _superEffectiveAgainst.keys) {
@@ -70,6 +89,37 @@ class TeamRecommendationService {
       }).length;
       if (count > 0) weakCounts[attackType] = count;
     }
+    // Read only configured, recognized damaging moves. This makes recommendations
+    // respond to the team's actual offensive coverage instead of assuming that
+    // every Pokémon automatically has an attack matching its own type.
+    final moveByName = <String, MoveData>{
+      for (final move in moveCatalogue) move.name.trim().toLowerCase(): move,
+    };
+    final coveredByAssignedMoves = <String, Set<String>>{};
+    final assignedMoveTypes = <String>{};
+    var recognizedAssignedMoves = 0;
+    for (final entry in movesByPokemon.entries) {
+      if (!team.any((member) => member.id == entry.key)) continue;
+      for (final moveName in entry.value) {
+        final move = moveByName[moveName.trim().toLowerCase()];
+        if (move == null || move.category == 'status' || (move.power ?? 0) <= 0) continue;
+        final attackType = move.type.isEmpty
+            ? null
+            : move.type[0].toUpperCase() + move.type.substring(1).toLowerCase();
+        if (attackType == null || !_superEffectiveAgainst.containsKey(attackType)) continue;
+        recognizedAssignedMoves++;
+        assignedMoveTypes.add(attackType);
+        for (final targetType in _superEffectiveAgainst.keys) {
+          if (_effectiveness(attackType, [targetType]) > 1) {
+            coveredByAssignedMoves.putIfAbsent(targetType, () => <String>{}).add(move.name);
+          }
+        }
+      }
+    }
+    final missingMoveCoverage = _superEffectiveAgainst.keys
+        .where((targetType) => !coveredByAssignedMoves.containsKey(targetType))
+        .toSet();
+
     final teamAverages = <String, double>{};
     final statGetters = <String, int? Function(Pokemon)>{
       'HP': (p) => p.hp,
@@ -105,6 +155,23 @@ class TeamRecommendationService {
           score += entry.value * 3;
           reasons.add('Chroni przed typem ${entry.key} (${entry.value} podatnych członków)');
         }
+      }
+
+      // Move-aware offensive fit: reward a candidate whose typing can add
+      // potential STAB coverage against types not covered by the team's
+      // currently assigned damaging moves. This is explicitly potential
+      // coverage; candidate learnsets are not assumed here.
+      final candidateTypes = candidate.types.toSet();
+      final potentialGaps = <String>[];
+      for (final targetType in missingMoveCoverage) {
+        final canHitSuperEffectively = candidateTypes.any((attackType) =>
+            (_superEffectiveAgainst[attackType]?.contains(targetType) ?? false));
+        if (canHitSuperEffectively) potentialGaps.add(targetType);
+      }
+      if (potentialGaps.isNotEmpty) {
+        final points = potentialGaps.length.clamp(1, 4).toInt();
+        score += points;
+        reasons.add('Może uzupełnić luki w pokryciu ruchami: ${potentialGaps.take(4).join(', ')}');
       }
 
       // Base-stat profile: reward standout stats that improve a team-wide gap.
@@ -154,6 +221,9 @@ class TeamRecommendationService {
       }
 
       if (score > 0) {
+        if (recognizedAssignedMoves > 0 && missingMoveCoverage.isEmpty) {
+          reasons.add('Obecne ruchy drużyny mają już szerokie pokrycie typów — unikaj niepotrzebnego dublowania');
+        }
         ranked.add(TeamRecommendation(pokemon: candidate, score: score, reasons: reasons));
       }
     }
