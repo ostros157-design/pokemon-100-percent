@@ -3749,15 +3749,30 @@ class _KantoRegionMapState extends State<_KantoRegionMap> {
   static const double _nearbyRadius = 95;
   final TransformationController _transformController =
       TransformationController();
-  Timer? _hideLocationTimer;
   String? _visibleLocation;
   bool _initialPositionSet = false;
   Size? _lastViewportSize;
   bool _hasUserInteracted = false;
 
   @override
+  void initState() {
+    super.initState();
+    _visibleLocation = widget.selectedLocation.trim().isEmpty
+        ? 'Kanto'
+        : widget.selectedLocation;
+  }
+
+  @override
+  void didUpdateWidget(covariant _KantoRegionMap oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.selectedLocation != widget.selectedLocation &&
+        widget.selectedLocation.trim().isNotEmpty) {
+      setState(() => _visibleLocation = widget.selectedLocation);
+    }
+  }
+
+  @override
   void dispose() {
-    _hideLocationTimer?.cancel();
     _transformController.dispose();
     super.dispose();
   }
@@ -3780,15 +3795,9 @@ class _KantoRegionMapState extends State<_KantoRegionMap> {
     final nextLocation =
         nearest != null && nearestDistance <= _nearbyRadius * _nearbyRadius
             ? nearest.name
-            : null;
+            : 'Obszar Kanto';
     if (nextLocation == _visibleLocation) return;
     setState(() => _visibleLocation = nextLocation);
-    _hideLocationTimer?.cancel();
-    if (nextLocation != null) {
-      _hideLocationTimer = Timer(const Duration(seconds: 2), () {
-        if (mounted) setState(() => _visibleLocation = null);
-      });
-    }
   }
 
   void _zoomBy(double factor, Size viewport) {
@@ -3867,11 +3876,7 @@ class _KantoRegionMapState extends State<_KantoRegionMap> {
   }
 
   void _showLocation(String name) {
-    _hideLocationTimer?.cancel();
     setState(() => _visibleLocation = name);
-    _hideLocationTimer = Timer(const Duration(seconds: 2), () {
-      if (mounted) setState(() => _visibleLocation = null);
-    });
   }
 
   @override
@@ -3880,7 +3885,7 @@ class _KantoRegionMapState extends State<_KantoRegionMap> {
     return ClipRRect(
       borderRadius: BorderRadius.circular(14),
       child: AspectRatio(
-        aspectRatio: screenWidth < 500 ? 1.18 : 1.35,
+        aspectRatio: screenWidth < 500 ? 1.28 : 1.48,
         child: LayoutBuilder(
           builder: (context, constraints) {
             final viewportSize = constraints.biggest;
@@ -3946,45 +3951,50 @@ class _KantoRegionMapState extends State<_KantoRegionMap> {
                   top: 12,
                   left: 12,
                   right: 12,
-                  child: IgnorePointer(
-                    child: AnimatedSwitcher(
-                      duration: const Duration(milliseconds: 180),
-                      child: _visibleLocation == null
-                          ? const SizedBox(
-                              key: ValueKey('map-location-empty'),
-                              height: 0,
-                            )
-                          : Container(
-                              key: ValueKey(_visibleLocation),
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: 16,
-                                vertical: 10,
-                              ),
-                              decoration: BoxDecoration(
-                                color: Theme.of(context)
-                                    .colorScheme
-                                    .inverseSurface
-                                    .withValues(alpha: 0.94),
-                                borderRadius: BorderRadius.circular(24),
-                                boxShadow: const [
-                                  BoxShadow(
-                                    blurRadius: 12,
-                                    color: Colors.black26,
-                                    offset: Offset(0, 3),
+                  child: AnimatedSwitcher(
+                    duration: const Duration(milliseconds: 180),
+                    child: Container(
+                      key: ValueKey(_visibleLocation),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 16,
+                        vertical: 10,
+                      ),
+                      decoration: BoxDecoration(
+                        color: Theme.of(context).colorScheme.surface,
+                        borderRadius: BorderRadius.circular(16),
+                        border: Border.all(
+                          color: Theme.of(context).colorScheme.outlineVariant,
+                        ),
+                        boxShadow: const [
+                          BoxShadow(
+                            blurRadius: 12,
+                            color: Colors.black26,
+                            offset: Offset(0, 3),
+                          ),
+                        ],
+                      ),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Icon(
+                            Icons.location_on,
+                            size: 20,
+                            color: Theme.of(context).colorScheme.primary,
+                          ),
+                          const SizedBox(width: 8),
+                          Flexible(
+                            child: Text(
+                              _visibleLocation ?? 'Kanto',
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              textAlign: TextAlign.center,
+                              style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                                    fontWeight: FontWeight.w800,
                                   ),
-                                ],
-                              ),
-                              child: Text(
-                                _visibleLocation!,
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  color: Theme.of(context)
-                                      .colorScheme
-                                      .onInverseSurface,
-                                  fontWeight: FontWeight.w700,
-                                ),
-                              ),
                             ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
