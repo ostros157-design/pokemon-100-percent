@@ -2436,6 +2436,32 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
   List<String> _floorsFor(String location) =>
       _floorsByLocation[location] ?? const <String>[];
 
+  String _transferLabel(String location) {
+    if (location == 'Silph Co.') return 'WINDA';
+    if (location == 'Mt. Moon' ||
+        location == 'Rock Tunnel' ||
+        location == "Diglett's Cave" ||
+        location == 'Seafoam Islands' ||
+        location == 'Cerulean Cave' ||
+        location == 'Victory Road' ||
+        location == 'Team Rocket Hideout') return 'DRABINA';
+    return 'SCHODY';
+  }
+
+  void _changeFloor(List<String> floors, String currentFloor, int direction) {
+    final nextIndex = floors.indexOf(currentFloor) + direction;
+    if (nextIndex < 0 || nextIndex >= floors.length) return;
+    setState(() => _selectedFloor = floors[nextIndex]);
+  }
+
+  String? _adjacentFloor(String location, String? floor, int direction) {
+    if (floor == null) return null;
+    final floors = _floorsFor(location);
+    final index = floors.indexOf(floor) + direction;
+    if (index < 0 || index >= floors.length) return null;
+    return floors[index];
+  }
+
   static const _featuresByLocation = <String, Map<String, String>>{
     'Pallet Town': {
       'Dom gracza': 'Dom gracza — miejsce rozpoczęcia przygody.',
@@ -2862,6 +2888,9 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
                     painter: _KantoLocalAreaPainter(
                       location: location,
                       floor: floor,
+                      previousFloor: _adjacentFloor(location, floor, -1),
+                      nextFloor: _adjacentFloor(location, floor, 1),
+                      transferLabel: _transferLabel(location),
                       land: Theme.of(dialogContext).colorScheme.surfaceContainerHighest,
                       route: Theme.of(dialogContext).colorScheme.primary,
                       label: Theme.of(dialogContext).colorScheme.onSurface,
@@ -2969,6 +2998,9 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
                   painter: _KantoLocalAreaPainter(
                     location: location,
                     floor: selectedFloor,
+                    previousFloor: _adjacentFloor(location, selectedFloor, -1),
+                    nextFloor: _adjacentFloor(location, selectedFloor, 1),
+                    transferLabel: _transferLabel(location),
                     land: Theme.of(context).colorScheme.surfaceContainerHighest,
                     route: Theme.of(context).colorScheme.primary,
                     label: Theme.of(context).colorScheme.onSurface,
@@ -2991,6 +3023,34 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
               selected: selectedFloor == floor,
               onSelected: (_) => setState(() => _selectedFloor = floor),
             )).toList(),
+          ),
+          const SizedBox(height: 8),
+          Row(
+            children: [
+              Expanded(
+                child: OutlinedButton.icon(
+                  onPressed: _adjacentFloor(location, selectedFloor, -1) == null
+                      ? null
+                      : () => _changeFloor(floors, selectedFloor!, -1),
+                  icon: const Icon(Icons.arrow_upward),
+                  label: Text(_adjacentFloor(location, selectedFloor, -1) ?? 'Brak wyższego', overflow: TextOverflow.ellipsis),
+                ),
+              ),
+              const SizedBox(width: 8),
+              Expanded(
+                child: FilledButton.tonalIcon(
+                  onPressed: _adjacentFloor(location, selectedFloor, 1) == null
+                      ? null
+                      : () => _changeFloor(floors, selectedFloor!, 1),
+                  icon: const Icon(Icons.arrow_downward),
+                  label: Text(_adjacentFloor(location, selectedFloor, 1) ?? 'Brak niższego', overflow: TextOverflow.ellipsis),
+                ),
+              ),
+            ],
+          ),
+          Text(
+            'Przejścia: ${_transferLabel(location).toLowerCase()} — wybierz poziom, aby przejść dalej.',
+            style: Theme.of(context).textTheme.bodySmall,
           ),
         ],
         const SizedBox(height: 8),
@@ -3101,6 +3161,9 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
 class _KantoLocalAreaPainter extends CustomPainter {
   final String location;
   final String? floor;
+  final String? previousFloor;
+  final String? nextFloor;
+  final String transferLabel;
   final Color land;
   final Color route;
   final Color label;
@@ -3136,6 +3199,9 @@ class _KantoLocalAreaPainter extends CustomPainter {
   const _KantoLocalAreaPainter({
     required this.location,
     this.floor,
+    this.previousFloor,
+    this.nextFloor,
+    this.transferLabel = 'SCHODY',
     required this.land,
     required this.route,
     required this.label,
@@ -4243,6 +4309,24 @@ class _KantoLocalAreaPainter extends CustomPainter {
       :'Pomieszczenia i przejścia między strefami';
     final legend=TextPainter(text:TextSpan(text:legendText,style:TextStyle(color:label.withValues(alpha:.8),fontSize:math.max(8,size.shortestSide*.032))),textDirection:TextDirection.ltr,maxLines:1,ellipsis:'…')..layout(maxWidth:size.width*.84);
     legend.paint(canvas,Offset(size.width*.08,size.height*.105));
+
+    // Widoczne znaczniki przejścia na sąsiednie poziomy.
+    void drawTransfer(String text, double x, Color color) {
+      final painter = TextPainter(
+        text: TextSpan(text: text, style: const TextStyle(color: Colors.white, fontSize: 10, fontWeight: FontWeight.w800)),
+        textDirection: TextDirection.ltr,
+        maxLines: 1,
+      )..layout(maxWidth: size.width * .38);
+      final rect = Rect.fromLTWH(x * size.width, size.height * .91, painter.width + 16, painter.height + 8);
+      canvas.drawRRect(RRect.fromRectAndRadius(rect, const Radius.circular(7)), Paint()..color = color);
+      painter.paint(canvas, Offset(rect.left + 8, rect.top + 4));
+    }
+    if (previousFloor != null) {
+      drawTransfer('↑ ' + transferLabel + ' ' + previousFloor!, .06, const Color(0xFF477B56));
+    }
+    if (nextFloor != null) {
+      drawTransfer('↓ ' + transferLabel + ' ' + nextFloor!, .53, const Color(0xFFB47A32));
+    }
   }
 
   int _floorIndex(String value) {
@@ -4261,6 +4345,9 @@ class _KantoLocalAreaPainter extends CustomPainter {
   bool shouldRepaint(covariant _KantoLocalAreaPainter oldDelegate) =>
       location != oldDelegate.location ||
       floor != oldDelegate.floor ||
+      previousFloor != oldDelegate.previousFloor ||
+      nextFloor != oldDelegate.nextFloor ||
+      transferLabel != oldDelegate.transferLabel ||
       land != oldDelegate.land ||
       route != oldDelegate.route ||
       label != oldDelegate.label;
