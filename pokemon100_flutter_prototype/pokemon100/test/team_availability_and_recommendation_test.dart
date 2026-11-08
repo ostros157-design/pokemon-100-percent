@@ -22,7 +22,8 @@ void main() {
       ]) {
         expect(TeamGameAvailability.supports(game), isTrue, reason: game);
       }
-      expect(TeamGameAvailability.supports('sword'), isFalse);
+      expect(TeamGameAvailability.supports('sword'), isTrue);
+      expect(TeamGameAvailability.hasVerifiedData('sword'), isFalse);
       expect(TeamGameAvailability.supports('unknown'), isFalse);
     });
 
