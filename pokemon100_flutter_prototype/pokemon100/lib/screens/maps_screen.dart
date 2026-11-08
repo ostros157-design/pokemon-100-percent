@@ -3004,14 +3004,14 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
       'Cerulean Cave': ['Głaz w komnacie', 'Zawalona odnoga'],
       'Victory Road': ['Głaz do przesunięcia', 'Blokada skalna'],
     }[location] ?? const <String>[];
-    final caveConnections = <String, List<String>>{
-      'Mt. Moon': ['Wejście od Route 3', 'Wyjście na Route 4'],
-      'Rock Tunnel': ['Wejście od Route 10', 'Wyjście do Lavender Town'],
-      "Diglett's Cave": ['Wejście od Route 2', 'Wyjście przy Route 11'],
-      'Seafoam Islands': ['Wejście od Route 20', 'Wyjście w stronę Route 20'],
-      'Cerulean Cave': ['Wejście od Cerulean City', 'Wyjście do Cerulean City'],
-      'Victory Road': ['Wejście od Route 23', 'Wyjście przy Indigo Plateau'],
-    }[location] ?? const <String>[];
+    final caveConnections = <(String, String)>{
+      'Mt. Moon': [('Wejście od Route 3', 'Wejście do jaskini'), ('Wyjście na Route 4', 'Wyjście w stronę Route 4')],
+      'Rock Tunnel': [('Wejście od Route 10', 'Wejście północne'), ('Wyjście do Lavender Town', 'Wyjście południowe')],
+      "Diglett's Cave": [('Wejście od Route 2', 'Wejście od Route 2'), ('Wyjście przy Route 11', 'Wyjście przy Route 11')],
+      'Seafoam Islands': [('Wejście od Route 20', 'Wejście'), ('Wyjście na Route 20', 'Poziomy B3F–B4F')],
+      'Cerulean Cave': [('Wejście od Cerulean City', 'Wejście'), ('Wyjście do Cerulean City', 'Poziom 1F')],
+      'Victory Road': [('Wejście od Route 23', 'Wejście od Route 23'), ('Wyjście przy Indigo Plateau', 'Poziom 3F / wyjście')],
+    }[location] ?? const <(String, String)>[];
     final optionalSteps = widget.references
         .where((reference) => reference.step.optional)
         .length;
