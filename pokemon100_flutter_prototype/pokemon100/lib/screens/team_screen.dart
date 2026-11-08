@@ -32,9 +32,10 @@ class _TeamScreenState extends State<TeamScreen> {
     'lets_go_eevee': "Pokémon: Let's Go, Eevee!",
     'emerald': 'Pokémon Emerald',
     'firered': 'Pokémon FireRed',
+    'leafgreen': 'Pokémon LeafGreen',
     'soulsilver': 'Pokémon SoulSilver',
     'xy': 'Pokémon X/Y',
-    'sword': 'Pokémon Sword (dane do sprawdzenia)',
+    'sword': 'Pokémon Sword (dostępność niezweryfikowana)',
     'legends_arceus': 'Pokémon Legends: Arceus',
   };
 
@@ -504,8 +505,8 @@ class _TeamScreenState extends State<TeamScreen> {
   }
 
   Future<void> _showRecommendations() async {
-    if (!TeamRecommendationService.isSupportedGame(_selectedGame)) {
-      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Nie ma jeszcze danych dostępności dla tej gry.')));
+    if (!TeamRecommendationService.hasVerifiedAvailabilityData(_selectedGame)) {
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Nie ma zweryfikowanej listy dostępności dla tej gry. Możesz budować skład ręcznie, ale rekomendacje są wyłączone.')));
       return;
     }
     final recommendations = TeamRecommendationService.recommend(_team, gameId: _selectedGame, movesByPokemon: _movesByPokemon);
@@ -801,12 +802,14 @@ class _TeamScreenState extends State<TeamScreen> {
                     setState(() {
                       _selectedGame = value;
                       _status = !TeamRecommendationService.isSupportedGame(value)
-                          ? 'Brak danych dostępności dla tej gry — wybór i rekomendacje są zablokowane.'
-                          : (value == 'lets_go_pikachu' || value == 'lets_go_eevee')
-                              ? 'Dostępność rozróżnia wersjo-ekskluzywne Pokémony, wymiany i specjalne metody.'
-                              : value == 'firered'
-                                  ? 'Filtr FireRed uwzględnia znane ekskluzywne Pokémony LeafGreen i część metod post-game.'
-                                  : 'Filtr oparty na regionalnym Pokédexie; pozycje spoza listy pozostają niepotwierdzone.';
+                          ? 'Brak danych dostępności dla tej gry — wybór jest zablokowany.'
+                          : value == 'sword'
+                              ? 'Dane Sword są niezweryfikowane: możesz ręcznie dodać Pokémony, ale nie otrzymasz automatycznych rekomendacji.'
+                              : (value == 'lets_go_pikachu' || value == 'lets_go_eevee')
+                                  ? 'Dostępność rozróżnia wersjo-ekskluzywne Pokémony, wymiany i specjalne metody.'
+                                  : (value == 'firered' || value == 'leafgreen')
+                                      ? 'Filtr FireRed/LeafGreen uwzględnia wersjo-ekskluzywne Pokémony, wymiany i część metod post-game.'
+                                      : 'Filtr oparty na regionalnym Pokédexie; pozycje spoza listy pozostają niepotwierdzone.';
                     });
                   },
                 ),
@@ -814,9 +817,13 @@ class _TeamScreenState extends State<TeamScreen> {
                 Text(
                   _selectedGame == 'lets_go_pikachu' || _selectedGame == 'lets_go_eevee'
                       ? 'Filtr rozróżnia Pokémony dostępne w tej wersji, ekskluzywne dla drugiej wersji, ewolucje przez wymianę i specjalny transfer. W selektorze możesz włączyć także pozycje wymagające wymiany lub dodatkowej metody.'
-                      : TeamRecommendationService.isSupportedGame(_selectedGame)
-                          ? 'Dane potwierdzają przynależność do regionalnego Pokédexu. Gatunki spoza listy można pokazać osobno, ale ich dostępność wymaga sprawdzenia (np. post-game, wymiana lub event).'
-                          : 'Dla tej gry nie ma jeszcze wiarygodnych danych dostępności.' ,
+                      : _selectedGame == 'firered' || _selectedGame == 'leafgreen'
+                          ? 'Filtr uwzględnia ekskluzywne Pokémony FireRed/LeafGreen, wymiany, część post-game i hodowlę. Pozostałe gatunki spoza listy wymagają dodatkowego sprawdzenia.'
+                          : _selectedGame == 'sword'
+                              ? 'Dostępność Sword nie ma jeszcze kompletnej, zweryfikowanej listy. Możesz ręcznie dodawać gatunki z oznaczeniem „Brak zweryfikowanej listy”, ale automatyczne rekomendacje są wyłączone.'
+                              : TeamRecommendationService.hasVerifiedAvailabilityData(_selectedGame)
+                                  ? 'Dane potwierdzają przynależność do regionalnego Pokédexu. Gatunki spoza listy można pokazać osobno, ale ich dostępność wymaga sprawdzenia (np. post-game, wymiana lub event).'
+                                  : 'Dla tej gry nie ma jeszcze wiarygodnych danych dostępności.' ,
                 ),
                 const SizedBox(height: 16),
                 TextField(
