@@ -832,7 +832,7 @@ class _TeamScreenState extends State<TeamScreen> {
                           : _selectedGame == 'sword'
                               ? 'Dostępność Sword nie ma jeszcze kompletnej, zweryfikowanej listy. Możesz ręcznie dodawać gatunki z oznaczeniem „Brak zweryfikowanej listy”, ale automatyczne rekomendacje są wyłączone.'
                               : TeamRecommendationService.hasVerifiedAvailabilityData(_selectedGame)
-                                  ? 'Dane potwierdzają przynależność do regionalnego Pokédexu. Gatunki spoza listy można pokazać osobno, ale ich dostępność wymaga sprawdzenia (np. post-game, wymiana lub event).'
+                                  ? 'Dane potwierdzają przynależność do regionalnego Pokédexu, ale nie rozpisują każdej metody i blokady fabularnej. Gatunki spoza listy można pokazać osobno jako niepotwierdzone.'
                                   : 'Dla tej gry nie ma jeszcze wiarygodnych danych dostępności.' ,
                 ),
                 const SizedBox(height: 16),
