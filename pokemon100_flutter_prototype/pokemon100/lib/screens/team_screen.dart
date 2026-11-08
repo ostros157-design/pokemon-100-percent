@@ -362,6 +362,14 @@ class _TeamScreenState extends State<TeamScreen> {
         .map((entry) => moveById[entry.moveId]?.name)
         .whereType<String>()
         .toSet();
+    final availableMoveDetails = learnset.map((entry) {
+      final name = moveById[entry.moveId]?.name;
+      if (name == null) return null;
+      final method = entry.methodId == 1
+          ? 'poziom ' + entry.level.toString()
+          : entry.methodLabel;
+      return name + ' — ' + method;
+    }).whereType<String>().toSet();
     final canVerify = learnset.isNotEmpty && availableMoveNames.isNotEmpty;
     final existing = _movesByPokemon[pokemon.id] ?? const <String>[];
     final controllers = List.generate(
@@ -390,13 +398,13 @@ class _TeamScreenState extends State<TeamScreen> {
                   tilePadding: EdgeInsets.zero,
                   title: Text('Pokaż dostępne ruchy (${availableMoveNames.length})'),
                   children: [
-                    Align(
+                    ...((availableMoveDetails.toList()..sort()).map((detail) => Align(
                       alignment: Alignment.centerLeft,
-                      child: Text(
-                        (availableMoveNames.toList()..sort()).join(' · '),
-                        style: Theme.of(dialogContext).textTheme.bodySmall,
+                      child: Padding(
+                        padding: const EdgeInsets.only(bottom: 3),
+                        child: Text(detail, style: Theme.of(dialogContext).textTheme.bodySmall),
                       ),
-                    ),
+                    ))),
                   ],
                 ),
               ],
