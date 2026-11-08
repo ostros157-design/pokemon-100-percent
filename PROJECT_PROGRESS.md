@@ -1,3 +1,17 @@
+### Poradnik Let's Go, Pikachu! — jaskinie, budynki i legendarne spotkania (2026-11-08)
+
+- Dodano 17 kroków spotkań dla Pokémon Tower, Seafoam Islands, Pokémon Mansion, Power Plant, Victory Road i Cerulean Cave.
+- Pokémon Tower: osobne tabele dla głównych pięter, 3F–4F oraz 5F–6F.
+- Seafoam Islands: osobna tabela spotkań głównych, wodnych i wariantu niższych pięter oraz statyczny Articuno Lv.50.
+- Pokémon Mansion: dwie osobne tabele spotkań.
+- Power Plant: tabela spotkań i statyczny Zapdos Lv.50.
+- Victory Road: tabela spotkań oraz statyczny Moltres Lv.50.
+- Cerulean Cave: główna tabela, woda, osobna tabela 2F i statyczny Mewtwo Lv.70.
+- Chansey, Snorlax, Hitmonlee i Hitmonchan pozostają bez stałych procentów tam, gdzie źródło oznacza je jako rzadkie spawny.
+- Źródła: RotomLabs — strony Let's Go Pikachu & Eevee dla Pokémon Tower, Seafoam Islands, Pokémon Mansion, Power Plant, Victory Road i Cerulean Cave.
+- Nie uruchomiono Flutter Analyzer, testów ani APK.
+
+
 ### Poradnik Let's Go, Pikachu! — doprecyzowanie tabel Route 20 i nazw wersji (2026-11-08)
 
 - Rozdzielono wodne spotkania Route 20 na dwa odcinki, ponieważ źródło podaje dwa zakresy poziomów (37–42 oraz 39–44). Każda tabela zachowuje tę samą zweryfikowaną dystrybucję 45/45/5/5, ale ma osobny zakres.
