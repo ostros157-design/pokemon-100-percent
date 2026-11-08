@@ -23,6 +23,10 @@ class TeamPokemonAvailability {
   const TeamPokemonAvailability(this.kind, this.label, this.detail);
 
   bool get canBeAdded => kind == TeamAvailabilityKind.inGame || kind == TeamAvailabilityKind.regionalDex;
+  bool get canBeRecommended => canBeAdded ||
+      kind == TeamAvailabilityKind.tradeRequired ||
+      kind == TeamAvailabilityKind.postGame ||
+      kind == TeamAvailabilityKind.breedingRequired;
   bool get canBeShownAsExtra =>
       kind == TeamAvailabilityKind.tradeRequired ||
       kind == TeamAvailabilityKind.specialAccess ||
