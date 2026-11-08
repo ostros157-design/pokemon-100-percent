@@ -1,86 +1,143 @@
-import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'dart:async';
 
-/// Provides a safe entry point to the official Pokémon Game Sound Library.
-/// Audio stays on the rights-holder's website; the app does not copy or host tracks.
-class PokemonMusicScreen extends StatelessWidget {
+import 'package:audioplayers/audioplayers.dart';
+import 'package:flutter/material.dart';
+
+import '../data/pokemon_music_data.dart';
+
+class PokemonMusicScreen extends StatefulWidget {
   const PokemonMusicScreen({super.key});
 
-  static final Uri _libraryUri =
-      Uri.parse('https://soundlibrary.pokemon.co.jp/en');
+  @override
+  State<PokemonMusicScreen> createState() => _PokemonMusicScreenState();
+}
 
-  Future<void> _openLibrary(BuildContext context) async {
-    var opened = false;
+class _PokemonMusicScreenState extends State<PokemonMusicScreen> {
+  final AudioPlayer _player = AudioPlayer();
+  PlayerState _state = PlayerState.stopped;
+  Duration _duration = Duration.zero;
+  Duration _position = Duration.zero;
+  double _volume = 0.65;
+  bool _loading = false;
+  StreamSubscription<PlayerState>? _stateSubscription;
+  StreamSubscription<Duration>? _durationSubscription;
+  StreamSubscription<Duration>? _positionSubscription;
+
+  bool get _isPlaying => _state == PlayerState.playing;
+
+  @override
+  void initState() {
+    super.initState();
+    _stateSubscription = _player.onPlayerStateChanged.listen((value) {
+      if (mounted) setState(() => _state = value);
+    });
+    _durationSubscription = _player.onDurationChanged.listen((value) {
+      if (mounted) setState(() => _duration = value);
+    });
+    _positionSubscription = _player.onPositionChanged.listen((value) {
+      if (mounted) setState(() => _position = value);
+    });
+    unawaited(_player.setVolume(_volume));
+    unawaited(_player.setReleaseMode(ReleaseMode.loop));
+  }
+
+  Future<void> _togglePlayback() async {
+    if (_loading) return;
+    setState(() => _loading = true);
     try {
-      opened = await launchUrl(_libraryUri, mode: LaunchMode.externalApplication);
-      if (!opened) {
-        opened = await launchUrl(_libraryUri, mode: LaunchMode.platformDefault);
+      if (_isPlaying) {
+        await _player.pause();
+      } else if (_state == PlayerState.paused) {
+        await _player.resume();
+      } else {
+        await _player.play(BytesSource(pokemonOfflineMusicBytes));
       }
     } catch (_) {
-      opened = false;
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Nie udało się uruchomić muzyki offline.')),
+        );
+      }
+    } finally {
+      if (mounted) setState(() => _loading = false);
     }
-    if (!opened && context.mounted) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: const Text('Nie udało się otworzyć strony. Sprawdź internet i domyślną przeglądarkę; możesz skopiować adres widoczny niżej.'),
-        ),
-      );
-    }
+  }
+
+  String _time(Duration value) {
+    final m = value.inMinutes.remainder(60).toString().padLeft(2, '0');
+    final s = value.inSeconds.remainder(60).toString().padLeft(2, '0');
+    return '$m:$s';
+  }
+
+  @override
+  void dispose() {
+    _stateSubscription?.cancel();
+    _durationSubscription?.cancel();
+    _positionSubscription?.cancel();
+    unawaited(_player.dispose());
+    super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final max = _duration.inMilliseconds > 0 ? _duration.inMilliseconds.toDouble() : 1.0;
+    final current = _position.inMilliseconds.clamp(0, max.toInt()).toDouble();
     return Scaffold(
       appBar: AppBar(title: const Text('Muzyka Pokémon')),
       body: ListView(
         padding: const EdgeInsets.all(20),
         children: [
-          const Icon(Icons.library_music, size: 76),
-          const SizedBox(height: 16),
-          const Text(
-            'Oficjalna biblioteka melodii Pokémon',
-            textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-          ),
-          const SizedBox(height: 12),
-          const Text(
-            'Słuchaj utworów bezpośrednio w oficjalnej bibliotece The Pokémon Company. '
-            'Aplikacja nie kopiuje ani nie przechowuje ścieżek dźwiękowych.',
-            textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 16, height: 1.5),
-          ),
-          const SizedBox(height: 20),
-          FilledButton.icon(
-            onPressed: () => _openLibrary(context),
-            icon: const Icon(Icons.open_in_new),
-            label: const Text('Otwórz bibliotekę muzyki'),
-          ),
-          const SizedBox(height: 12),
-          const Card(
-            child: Padding(
-              padding: EdgeInsets.all(16),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Dlaczego otwieramy stronę zewnętrzną?',
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                  SizedBox(height: 8),
-                  Text(
-                    'Odtwarzanie odbywa się na oficjalnej stronie, zgodnie z jej dostępnością '
-                    'i zasadami. Nie osadzamy ani nie pobieramy utworów bez wyraźnej licencji '
-                    'na takie wykorzystanie.',
-                  ),
-                ],
+          const SizedBox(height: 24),
+          Container(
+            height: 210,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(28),
+              gradient: const LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [Color(0xFF283E75), Color(0xFF7654A8), Color(0xFFDB8B78)],
               ),
             ),
+            child: const Center(child: Icon(Icons.graphic_eq_rounded, size: 104, color: Colors.white)),
           ),
+          const SizedBox(height: 24),
+          Text('Pokémon 100% — spokojna podróż', textAlign: TextAlign.center,
+              style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
           const SizedBox(height: 8),
-          SelectableText(
-            'Źródło: ${_libraryUri.toString()}',
-            style: TextStyle(color: Theme.of(context).colorScheme.primary),
-          ),
+          Text('Oryginalna melodia • działa całkowicie offline', textAlign: TextAlign.center,
+              style: theme.textTheme.bodyMedium),
+          const SizedBox(height: 24),
+          Slider(value: current, max: max, onChanged: _duration == Duration.zero ? null : (value) async {
+            await _player.seek(Duration(milliseconds: value.round()));
+          }),
+          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Text(_time(_position)), Text(_time(_duration))]),
+          const SizedBox(height: 18),
+          Center(child: FilledButton.tonalIcon(
+            onPressed: _loading ? null : _togglePlayback,
+            icon: _loading
+                ? const SizedBox(width: 20, height: 20, child: CircularProgressIndicator(strokeWidth: 2))
+                : Icon(_isPlaying ? Icons.pause_rounded : Icons.play_arrow_rounded, size: 30),
+            label: Text(_loading ? 'Uruchamianie…' : _isPlaying ? 'Pauza' : 'Odtwórz'),
+            style: FilledButton.styleFrom(padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 16)),
+          )),
+          const SizedBox(height: 24),
+          Row(children: [
+            const Icon(Icons.volume_down),
+            Expanded(child: Slider(value: _volume, onChanged: (value) {
+              setState(() => _volume = value);
+              unawaited(_player.setVolume(value));
+            })),
+            const Icon(Icons.volume_up),
+          ]),
+          const SizedBox(height: 16),
+          const Card(child: Padding(padding: EdgeInsets.all(16), child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [Icon(Icons.offline_bolt_outlined), SizedBox(width: 12), Expanded(
+              child: Text('Utwór jest zapisany wewnątrz aplikacji. Nie używa transmisji danych, nie wymaga konta ani pobierania muzyki.',
+                  style: TextStyle(height: 1.45)),
+            )],
+          ))),
         ],
       ),
     );
