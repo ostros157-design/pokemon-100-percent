@@ -4476,6 +4476,128 @@ class _KantoLocalAreaPainter extends CustomPainter {
         RRect.fromRectAndRadius(prop, const Radius.circular(2)),
         propPaint,
       );
+
+      // Charakterystyczne wyposażenie zależne od rodzaju lokacji.
+      final furniture = Paint()..isAntiAlias = true;
+      final furnitureEdge = Paint()
+        ..isAntiAlias = true
+        ..color = const Color(0xFF554B3D)
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 1.1;
+      final x = rect.left;
+      final y = rect.top;
+      final w = rect.width;
+      final h = rect.height;
+      final desk = Rect.fromLTWH(x + w * .18, y + h * .58, w * .62, h * .17);
+      if (location == "Professor Oak's Laboratory" ||
+          location == 'Cinnabar Lab' ||
+          location == 'Silph Co.') {
+        furniture.color = const Color(0xFF9A7650);
+        canvas.drawRRect(RRect.fromRectAndRadius(desk, const Radius.circular(2)), furniture);
+        canvas.drawRRect(RRect.fromRectAndRadius(desk, const Radius.circular(2)), furnitureEdge);
+        furniture.color = const Color(0xFF527C91);
+        final monitor = Rect.fromLTWH(x + w * .29, y + h * .30, w * .30, h * .20);
+        canvas.drawRect(monitor, furniture);
+        canvas.drawRect(monitor, furnitureEdge);
+        canvas.drawLine(Offset(monitor.center.dx, monitor.bottom), Offset(monitor.center.dx, desk.top), furnitureEdge);
+        furniture.color = const Color(0xFFB9D7D5);
+        canvas.drawCircle(Offset(x + w * .72, y + h * .39), math.max(2, math.min(w, h) * .09), furniture);
+      } else if (location == 'Celadon Department Store' ||
+          location == 'Celadon Game Corner') {
+        furniture.color = const Color(0xFF9B7950);
+        final counter = Rect.fromLTWH(x + w * .12, y + h * .28, w * .76, h * .16);
+        canvas.drawRRect(RRect.fromRectAndRadius(counter, const Radius.circular(2)), furniture);
+        canvas.drawRRect(RRect.fromRectAndRadius(counter, const Radius.circular(2)), furnitureEdge);
+        if (location == 'Celadon Game Corner') {
+          for (var machine = 0; machine < 3; machine++) {
+            final slot = Rect.fromLTWH(x + w * (.16 + machine * .25), y + h * .58, w * .17, h * .23);
+            furniture.color = const Color(0xFF557C91);
+            canvas.drawRRect(RRect.fromRectAndRadius(slot, const Radius.circular(2)), furniture);
+            canvas.drawRRect(RRect.fromRectAndRadius(slot, const Radius.circular(2)), furnitureEdge);
+            furniture.color = const Color(0xFFFFD166);
+            canvas.drawCircle(Offset(slot.center.dx, slot.top + slot.height * .32), math.max(1.5, slot.width * .12), furniture);
+          }
+        } else {
+          for (var shelf = 0; shelf < 3; shelf++) {
+            final item = Rect.fromLTWH(x + w * (.16 + shelf * .25), y + h * .58, w * .16, h * .19);
+            furniture.color = const Color(0xFF78966A);
+            canvas.drawRect(item, furniture);
+            canvas.drawRect(item, furnitureEdge);
+          }
+        }
+      } else if (location == 'Pokémon Fan Club' ||
+          location == 'Pokémon Day Care' ||
+          location == "Player's House" ||
+          location == "Bill's House" ||
+          location == 'Celadon Condominiums') {
+        furniture.color = const Color(0xFF9A7650);
+        final table = Rect.fromLTWH(x + w * .28, y + h * .48, w * .44, h * .22);
+        canvas.drawRRect(RRect.fromRectAndRadius(table, const Radius.circular(5)), furniture);
+        canvas.drawRRect(RRect.fromRectAndRadius(table, const Radius.circular(5)), furnitureEdge);
+        furniture.color = const Color(0xFF6F8B69);
+        canvas.drawCircle(Offset(x + w * .22, y + h * .36), math.max(2, w * .08), furniture);
+        if (location == 'Pokémon Day Care') {
+          furniture.color = const Color(0xFFB7A06D);
+          canvas.drawOval(Rect.fromLTWH(x + w * .67, y + h * .25, w * .20, h * .15), furniture);
+        }
+      } else if (location == 'Pewter Museum of Science') {
+        furniture.color = const Color(0xFF718C9B);
+        for (var display = 0; display < 3; display++) {
+          final caseRect = Rect.fromLTWH(x + w * (.12 + display * .27), y + h * .35, w * .20, h * .30);
+          canvas.drawRRect(RRect.fromRectAndRadius(caseRect, const Radius.circular(3)), furniture);
+          canvas.drawRRect(RRect.fromRectAndRadius(caseRect, const Radius.circular(3)), furnitureEdge);
+          furniture.color = const Color(0xFFE3D19B);
+          canvas.drawCircle(Offset(caseRect.center.dx, caseRect.center.dy), math.max(2, caseRect.width * .18), furniture);
+          furniture.color = const Color(0xFF718C9B);
+        }
+      } else if (location == 'Pokémon Tower') {
+        furniture.color = const Color(0xFFB9B39C);
+        final altar = Rect.fromLTWH(x + w * .30, y + h * .28, w * .40, h * .16);
+        canvas.drawRect(altar, furniture);
+        canvas.drawRect(altar, furnitureEdge);
+        furniture.color = const Color(0xFF8D806A);
+        canvas.drawLine(Offset(x + w * .22, y + h * .70), Offset(x + w * .78, y + h * .70), furnitureEdge);
+      } else if (location == 'S.S. Anne') {
+        furniture.color = const Color(0xFF9B7950);
+        for (var cabin = 0; cabin < 2; cabin++) {
+          final bed = Rect.fromLTWH(x + w * (.12 + cabin * .48), y + h * .32, w * .34, h * .43);
+          canvas.drawRRect(RRect.fromRectAndRadius(bed, const Radius.circular(3)), furniture);
+          furniture.color = const Color(0xFFE7E0CF);
+          canvas.drawRect(Rect.fromLTWH(bed.left + 2, bed.top + 2, bed.width - 4, bed.height * .25), furniture);
+          furniture.color = const Color(0xFF9B7950);
+          canvas.drawRRect(RRect.fromRectAndRadius(bed, const Radius.circular(3)), furnitureEdge);
+        }
+      } else if (location == 'Team Rocket Hideout') {
+        furniture.color = const Color(0xFF596E80);
+        final console = Rect.fromLTWH(x + w * .18, y + h * .30, w * .64, h * .18);
+        canvas.drawRect(console, furniture);
+        canvas.drawRect(console, furnitureEdge);
+        furniture.color = const Color(0xFFCE6658);
+        for (var light = 0; light < 3; light++) {
+          canvas.drawCircle(Offset(x + w * (.30 + light * .20), y + h * .39), math.max(1.5, w * .035), furniture);
+        }
+      } else if (location.contains('Gym')) {
+        furniture.color = const Color(0xFFB5A27B);
+        final mat = Rect.fromLTWH(x + w * .22, y + h * .30, w * .56, h * .40);
+        canvas.drawRect(mat, furniture);
+        canvas.drawRect(mat, furnitureEdge);
+        canvas.drawLine(Offset(mat.left, mat.center.dy), Offset(mat.right, mat.center.dy), furnitureEdge);
+      } else if (location == 'Pokémon Mansion') {
+        furniture.color = const Color(0xFF896E54);
+        final bookcase = Rect.fromLTWH(x + w * .12, y + h * .22, w * .22, h * .54);
+        canvas.drawRect(bookcase, furniture);
+        canvas.drawRect(bookcase, furnitureEdge);
+        for (var shelf = 1; shelf < 4; shelf++) {
+          canvas.drawLine(Offset(bookcase.left, bookcase.top + bookcase.height * shelf / 4), Offset(bookcase.right, bookcase.top + bookcase.height * shelf / 4), furnitureEdge);
+        }
+        furniture.color = const Color(0xFF9A7650);
+        canvas.drawRect(desk, furniture);
+        canvas.drawRect(desk, furnitureEdge);
+      } else {
+        furniture.color = const Color(0xFF9A7650);
+        canvas.drawRRect(RRect.fromRectAndRadius(desk, const Radius.circular(3)), furniture);
+        canvas.drawRRect(RRect.fromRectAndRadius(desk, const Radius.circular(3)), furnitureEdge);
+      }
       canvas.restore();
       // Ciemniejszy obrys i jasna krawędź nadają ścianom efektu głębi.
       canvas.drawRRect(
