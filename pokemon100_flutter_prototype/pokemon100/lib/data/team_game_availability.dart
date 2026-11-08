@@ -7,6 +7,8 @@ enum TeamAvailabilityKind {
   inGame,
   tradeRequired,
   specialAccess,
+  postGame,
+  breedingRequired,
   outsideRegionalDex,
   notInGame,
   unknown,
@@ -23,6 +25,8 @@ class TeamPokemonAvailability {
   bool get canBeShownAsExtra =>
       kind == TeamAvailabilityKind.tradeRequired ||
       kind == TeamAvailabilityKind.specialAccess ||
+      kind == TeamAvailabilityKind.postGame ||
+      kind == TeamAvailabilityKind.breedingRequired ||
       kind == TeamAvailabilityKind.outsideRegionalDex;
 }
 
@@ -43,6 +47,13 @@ class TeamGameAvailability {
     27, 28, 43, 44, 45, 56, 57, 58, 59, 88, 89, 123,
   };
   static const Set<int> _tradeEvolutionsInLetsGo = {65, 68, 76, 94};
+  static const Set<int> _leafGreenExclusivesInFireRed = {
+    27, 28, 37, 38, 69, 70, 71, 79, 80, 120, 121, 126, 127,
+    183, 184, 199, 200, 215, 223, 224, 226, 240, 298,
+  };
+  static const Set<int> _fireRedPostGameSpecies = {
+    182, 194, 195, 198, 211, 212, 225, 227, 239,
+  };
 
   static bool supports(String gameId) =>
       gameId == 'lets_go_pikachu' ||
@@ -68,6 +79,49 @@ class TeamGameAvailability {
     if (nationalDex <= 0) {
       return const TeamPokemonAvailability(
         TeamAvailabilityKind.notInGame, 'Nieprawidłowy numer', 'Numer Pokédexu musi być dodatni.',
+      );
+    }
+
+    if (gameId == 'firered') {
+      if (nationalDex == 151 || nationalDex == 386) {
+        return const TeamPokemonAvailability(
+          TeamAvailabilityKind.specialAccess, 'Wydarzenie specjalne',
+          'Mew i Deoxys wymagają historycznego przedmiotu/eventu; nie są zwykłymi spotkaniami.',
+        );
+      }
+      if (_leafGreenExclusivesInFireRed.contains(nationalDex)) {
+        return const TeamPokemonAvailability(
+          TeamAvailabilityKind.tradeRequired, 'Wymaga wymiany z LeafGreen',
+          'Gatunek jest dostępny naturalnie w Pokémon LeafGreen, a w FireRed wymaga wymiany.',
+        );
+      }
+      if (_fireRedPostGameSpecies.contains(nationalDex)) {
+        if (nationalDex == 212) {
+          return const TeamPokemonAvailability(
+            TeamAvailabilityKind.tradeRequired, 'Ewolucja przez wymianę',
+            'Scizor wymaga wymiany Scythera trzymającego Metal Coat.',
+          );
+        }
+        if (nationalDex == 239) {
+          return const TeamPokemonAvailability(
+            TeamAvailabilityKind.breedingRequired, 'Wymaga hodowli',
+            'Elekid uzyskuje się z jajka po hodowli Electabuzza.',
+          );
+        }
+        return const TeamPokemonAvailability(
+          TeamAvailabilityKind.postGame, 'Dostępny po fabule',
+          'Ten gatunek jest dostępny w obszarach Sevii Islands lub po odblokowaniu post-game.',
+        );
+      }
+      if (nationalDex >= 1 && nationalDex <= 150) {
+        return const TeamPokemonAvailability(
+          TeamAvailabilityKind.inGame, 'Dostępny w FireRed',
+          'Gatunek znajduje się w puli Kanto FireRed; miejsce i metoda zależą od gatunku.',
+        );
+      }
+      return const TeamPokemonAvailability(
+        TeamAvailabilityKind.outsideRegionalDex, 'Poza regionalnym Pokédexem',
+        'Brak potwierdzenia dla zwykłej rozgrywki FireRed. Może wymagać innej gry, wymiany lub eventu.',
       );
     }
 
