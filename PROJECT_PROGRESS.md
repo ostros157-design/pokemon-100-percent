@@ -5456,3 +5456,13 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Commity obejmują m.in. 895c6993 (wspólna analiza walki), 9db06554 (porównywarka i analiza), 5e4aead8 (LeafGreen/Sword — klasyfikacja dostępności), 0a2c4d95 (learnset LeafGreen), 85bdfb26 (synergie umiejętności), c64ecb28 (responsywna porównywarka) oraz 11aacf60/72088afa (statusy dostępności w interfejsie).
 
 - Uzupełnienie końcowe: reguły generacji III (brak Fairy i podział fizyczne/specjalne według typu ruchu) obejmują także LeafGreen. Testy jednostkowe sprawdzają osobno Emerald, LeafGreen i nowoczesną grę, aby nie mieszać tych reguł.
+
+
+### Muzyka offline — pierwszy odtwarzacz (2026-11-08)
+
+- Zmieniono ekran „Muzyka Pokémon” z odnośnika do zewnętrznej biblioteki na lokalny odtwarzacz działający bez internetu.
+- Dodano pierwszą krótką, oryginalną melodię ambientową zapisaną bezpośrednio w aplikacji jako osadzony plik WAV; nie wykorzystuje ona nagrań ani melodii z oficjalnych gier Pokémon.
+- Odtwarzacz obsługuje start, pauzę, wznowienie, zapętlenie, suwak pozycji i regulację głośności.
+- Dodano zależność `audioplayers`; kafelek na ekranie głównym informuje teraz o muzyce offline.
+- Ograniczenia: na razie dostępny jest jeden utwór demonstracyjny. Nie potwierdzono jeszcze odtwarzania na Androidzie ani zużycia pamięci po instalacji.
+- Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK; weryfikacja wymaga laptopa i urządzenia.
