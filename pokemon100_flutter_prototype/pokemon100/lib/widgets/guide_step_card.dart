@@ -310,18 +310,6 @@ class GuideStepCard extends StatelessWidget {
       label: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          if (pokemon.id >= 1 && pokemon.id <= 151)
-            Padding(
-              padding: const EdgeInsets.only(right: 3),
-              child: Image.asset(
-                'assets/pokemon/gen1/${pokemon.id}.png',
-                width: 24,
-                height: 24,
-                fit: BoxFit.contain,
-                errorBuilder: (_, __, ___) =>
-                    const Icon(Icons.catching_pokemon, size: 18),
-              ),
-            ),
           Text('${_typeEmoji(primaryType)} '),
           Text(
             _pokemonLabel(name, encounterRate),
