@@ -996,9 +996,6 @@ class _MapsScreenState extends State<MapsScreen> {
   Widget build(BuildContext context) {
     final games = _gamesForGeneration;
     final selectedGame = _selectedGame;
-    // Preserve first appearance in the guide: this approximates the player's
-    // route progression better than alphabetical sorting.
-    final allLocationEntries = _locations.entries.toList();
     final normalizedQuery = _searchQuery.trim().toLowerCase();
     // Every named node on the full Kanto schematic can be selected, not
     // only the first few tutorial locations.
@@ -1012,9 +1009,6 @@ class _MapsScreenState extends State<MapsScreen> {
         break;
       }
     }
-    final locationEntries = allLocationEntries
-        .where((entry) => entry.key.toLowerCase().contains(normalizedQuery))
-        .toList();
 
     return Scaffold(
       appBar: AppBar(
@@ -2367,128 +2361,6 @@ class _MapsScreenState extends State<MapsScreen> {
                     ),
                   ),
                 ],
-                const SizedBox(height: 12),
-                Text(
-                  'Schemat podróży',
-                  style: Theme.of(context).textTheme.titleMedium,
-                ),
-                const SizedBox(height: 4),
-                const Text(
-                  'Numery pokazują kolejność lokacji w poradniku, a nie ich położenie geograficzne.',
-                  style: TextStyle(fontSize: 12),
-                ),
-                const SizedBox(height: 12),
-                Row(
-                  children: [
-                    Expanded(
-                      child: Text('Lokacje z poradników',
-                          style: Theme.of(context).textTheme.titleLarge),
-                    ),
-                    Chip(label: Text('${locationEntries.length}/${allLocationEntries.length}')),
-                  ],
-                ),
-                if (selectedGame == null || games.isEmpty)
-                  const _EmptyState(
-                    message:
-                        'W katalogu nie ma jeszcze gry przypisanej do tej generacji.',
-                  )
-                else if (_guidesForGame.isEmpty)
-                  const _EmptyState(
-                    message:
-                        'Nie ma jeszcze poradnika z danymi lokacji dla tej gry. Gdy poradnik zostanie uzupełniony, lokacje pojawią się tutaj automatycznie.',
-                  )
-                else if (allLocationEntries.isEmpty)
-                  const _EmptyState(
-                    message:
-                        'Poradniki tej gry nie zawierają jeszcze nazw lokacji.',
-                  )
-                else if (locationEntries.isEmpty)
-                  const _EmptyState(
-                    message:
-                        'Nie znaleziono lokacji pasującej do wyszukiwania.',
-                  )
-                else
-                  ...locationEntries.asMap().entries.map((indexedEntry) {
-                    final locationIndex = indexedEntry.key;
-                    final entry = indexedEntry.value;
-                    final references = entry.value;
-                    final first = references.first;
-                    final completedCount = _completedCount(references);
-                    final allComplete = references.isNotEmpty &&
-                        completedCount == references.length;
-                    final pokemon = <String>{};
-                    final items = <String>{};
-                    for (final reference in references) {
-                      pokemon.addAll(reference.step.pokemon);
-                      items.addAll(reference.step.items);
-                    }
-
-                    return Card(
-                      child: ExpansionTile(
-                        leading: CircleAvatar(
-                          backgroundColor: allComplete
-                              ? Theme.of(context).colorScheme.primaryContainer
-                              : null,
-                          child: allComplete
-                              ? const Icon(Icons.check_circle_outline)
-                              : Text('${locationIndex + 1}'),
-                        ),
-                        title: Text(entry.key),
-                        subtitle: Text(
-                          '$completedCount/${references.length} kroków ukończonych · '
-                          '${references.length} ${references.length == 1 ? 'krok poradnika' : 'kroki poradnika'}',
-                        ),
-                        children: [
-                          if (pokemon.isNotEmpty || items.isNotEmpty)
-                            Padding(
-                              padding: const EdgeInsets.fromLTRB(16, 8, 16, 4),
-                              child: Wrap(
-                                spacing: 6,
-                                runSpacing: 4,
-                                children: [
-                                  ...pokemon.map((name) => Chip(
-                                        avatar: const Icon(Icons.catching_pokemon,
-                                            size: 16),
-                                        label: Text(name),
-                                      )),
-                                  ...items.map((name) => Chip(
-                                        avatar: const Icon(Icons.inventory_2_outlined,
-                                            size: 16),
-                                        label: Text(name),
-                                      )),
-                                ],
-                              ),
-                            ),
-                          ...references.map((reference) => ListTile(
-                                title: Text(
-                                    'Krok ${reference.stepNumber}: ${reference.step.title}'),
-                                subtitle: Text(reference.guide.title),
-                                trailing:
-                                    const Icon(Icons.open_in_new, size: 18),
-                                onTap: () async {
-                                  await Navigator.of(context).push(
-                                    MaterialPageRoute<void>(
-                                      builder: (_) => GuideScreen(
-                                        guide: reference.guide,
-                                        initialStepNumber: reference.stepNumber,
-                                      ),
-                                    ),
-                                  );
-                                  await _loadCompletedSteps();
-                                },
-                              )),
-                          if (first.step.description.isNotEmpty)
-                            Padding(
-                              padding: const EdgeInsets.fromLTRB(16, 0, 16, 12),
-                              child: Align(
-                                alignment: Alignment.centerLeft,
-                                child: Text(first.step.description),
-                              ),
-                            ),
-                        ],
-                      ),
-                    );
-                  }),
               ],
             ),
     );
