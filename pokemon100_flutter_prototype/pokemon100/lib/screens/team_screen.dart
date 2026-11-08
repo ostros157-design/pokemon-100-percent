@@ -1012,7 +1012,7 @@ class _PokemonPickerState extends State<_PokemonPicker> {
                             ),
                           ),
                           title: Text(pokemon.name),
-                          subtitle: Text('#${pokemon.id.toString().padLeft(3, '0')} · ${pokemon.types.join(' / ')}'),
+                          subtitle: Text('#${pokemon.id.toString().padLeft(3, '0')} · ${pokemon.types.join(' / ')}\\n${TeamGameAvailability.forPokemon(widget.gameId, pokemon.id).label}'),
                           onTap: () => Navigator.pop(context, pokemon),
                         );
                       },
