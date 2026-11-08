@@ -108,12 +108,15 @@ class TeamBattleAnalysis {
 
   static TeamBattleProfile analyze(
     List<Pokemon> team,
-    Map<int, List<String>> movesByPokemon,
-  ) {
+    Map<int, List<String>> movesByPokemon, {
+    String gameId = 'lets_go_pikachu',
+  }) {
+    final hasFairyType = !{'emerald', 'firered', 'soulsilver'}.contains(gameId);
+    final usesTypeBasedPhysicalSpecial = {'emerald', 'firered'}.contains(gameId);
     final weaknesses = <String, int>{};
     final resistances = <String, int>{};
     final immunities = <String, int>{};
-    for (final attackType in _types.values) {
+    for (final attackType in _types.values.where((type) => hasFairyType || type != 'Fairy')) {
       var weak = 0, resist = 0, immune = 0;
       for (final pokemon in team) {
         final value = effectiveness(attackType, pokemon.types);
@@ -133,7 +136,11 @@ class TeamBattleAnalysis {
     final unknown = <String>[];
     final hints = <String>[];
     var damaging = 0, stab = 0, configured = 0;
-    final targets = _strongAgainst.values.expand((values) => values).toSet();
+    final targets = _strongAgainst.values.expand((values) => values)
+        .where((type) => hasFairyType || type != 'Fairy').toSet();
+    const genThreePhysicalTypes = {
+      'normal', 'fighting', 'flying', 'poison', 'ground', 'rock', 'bug', 'ghost', 'steel',
+    };
 
     for (final pokemon in team) {
       final assigned = movesByPokemon[pokemon.id] ?? const <String>[];
@@ -166,10 +173,13 @@ class TeamBattleAnalysis {
             if (!coverage[target]!.contains(label)) coverage[target]!.add(label);
           }
         }
-        if (move.category == 'physical') {
+        final category = usesTypeBasedPhysicalSpecial
+            ? (genThreePhysicalTypes.contains(move.type.toLowerCase()) ? 'physical' : 'special')
+            : move.category;
+        if (category == 'physical') {
           physical++;
           physicalNames.add(move.name);
-        } else if (move.category == 'special') {
+        } else if (category == 'special') {
           special++;
           specialNames.add(move.name);
         }
