@@ -267,19 +267,20 @@ class _TeamScreenState extends State<TeamScreen> {
       }
     }
     if (selected == null) return;
+    final chosen = selected;
 
     if (command == 'load') {
       setState(() {
-        _activeTeamId = selected!.id;
-        _team = _pokemonFromIds(selected.pokemonIds);
+        _activeTeamId = chosen.id;
+        _team = _pokemonFromIds(chosen.pokemonIds);
         _movesByPokemon
           ..clear()
-          ..addAll(selected!.movesByPokemon.map((key, value) => MapEntry(key, List<String>.from(value))));
-        _nameController.text = selected.name;
-        _selectedGame = _games.containsKey(selected.gameId)
-            ? selected.gameId
+          ..addAll(chosen.movesByPokemon.map((key, value) => MapEntry(key, List<String>.from(value))));
+        _nameController.text = chosen.name;
+        _selectedGame = _games.containsKey(chosen.gameId)
+            ? chosen.gameId
             : TeamRecommendationService.supportedGameId;
-        _status = 'Wczytano drużynę „${selected.name}”.';
+        _status = 'Wczytano drużynę „${chosen.name}”.';
       });
       await _persistSavedTeams();
       return;
@@ -288,10 +289,10 @@ class _TeamScreenState extends State<TeamScreen> {
     if (command == 'copy') {
       final copy = _SavedTeam(
         id: DateTime.now().microsecondsSinceEpoch.toString(),
-        name: '${selected.name} — kopia',
-        gameId: selected.gameId,
-        pokemonIds: List<int>.from(selected.pokemonIds),
-        movesByPokemon: selected.movesByPokemon.map((key, value) => MapEntry(key, List<String>.from(value))),
+        name: '${chosen.name} — kopia',
+        gameId: chosen.gameId,
+        pokemonIds: List<int>.from(chosen.pokemonIds),
+        movesByPokemon: chosen.movesByPokemon.map((key, value) => MapEntry(key, List<String>.from(value))),
       );
       setState(() {
         _savedTeams.add(copy);
@@ -304,7 +305,7 @@ class _TeamScreenState extends State<TeamScreen> {
         _selectedGame = _games.containsKey(copy.gameId)
             ? copy.gameId
             : TeamRecommendationService.supportedGameId;
-        _status = 'Utworzono kopię drużyny „${selected.name}”.';
+        _status = 'Utworzono kopię drużyny „${chosen.name}”.';
       });
       await _persistSavedTeams();
       return;
@@ -315,7 +316,7 @@ class _TeamScreenState extends State<TeamScreen> {
         context: context,
         builder: (dialogContext) => AlertDialog(
           title: const Text('Usunąć drużynę?'),
-          content: Text('Czy na pewno chcesz usunąć „${selected!.name}”? Tej operacji nie można cofnąć.'),
+          content: Text('Czy na pewno chcesz usunąć „${chosen.name}”? Tej operacji nie można cofnąć.'),
           actions: [
             TextButton(
               onPressed: () => Navigator.pop(dialogContext, false),
@@ -330,15 +331,15 @@ class _TeamScreenState extends State<TeamScreen> {
       );
       if (confirmed != true || !mounted) return;
       setState(() {
-        _savedTeams.removeWhere((team) => team.id == selected!.id);
-        if (_activeTeamId == selected.id) {
+        _savedTeams.removeWhere((team) => team.id == chosen.id);
+        if (_activeTeamId == chosen.id) {
           _activeTeamId = null;
           _team = [];
           _movesByPokemon.clear();
           _nameController.text = 'Nowa drużyna';
           _selectedGame = TeamRecommendationService.supportedGameId;
         }
-        _status = 'Usunięto drużynę „${selected.name}”.';
+        _status = 'Usunięto drużynę „${chosen.name}”.';
       });
       await _persistSavedTeams();
     }
@@ -906,7 +907,7 @@ class _TeamScreenState extends State<TeamScreen> {
                               ),
                             ),
                             title: Text(pokemon.name),
-                            subtitle: Text('#${pokemon.id.toString().padLeft(3, '0')} · ${pokemon.types.join(' / ')}\\n${TeamGameAvailability.forPokemon(widget.gameId, pokemon.id).label}: ${TeamGameAvailability.forPokemon(widget.gameId, pokemon.id).detail}', maxLines: 2, overflow: TextOverflow.ellipsis),
+                            subtitle: Text('#${pokemon.id.toString().padLeft(3, '0')} · ${pokemon.types.join(' / ')}\\n${TeamGameAvailability.forPokemon(_selectedGame, pokemon.id).label}: ${TeamGameAvailability.forPokemon(_selectedGame, pokemon.id).detail}', maxLines: 2, overflow: TextOverflow.ellipsis),
                             trailing: IconButton(
                               tooltip: 'Usuń z drużyny',
                               icon: const Icon(Icons.remove_circle_outline),
@@ -982,7 +983,7 @@ class _PokemonPickerState extends State<_PokemonPicker> {
     final query = _query.trim().toLowerCase();
     final results = pokemonList.where((pokemon) {
       if (widget.excludedIds.contains(pokemon.id)) return false;
-      final availability = TeamGameAvailability.forPokemon(widget.gameId, pokemon.id);
+      final availability = TeamGameAvailability.forPokemon(_selectedGame, pokemon.id);
       if (!availability.canBeAdded &&
           !(_showOutsideRegionalDex && availability.canBeShownAsExtra)) return false;
       return query.isEmpty ||
@@ -1038,7 +1039,7 @@ class _PokemonPickerState extends State<_PokemonPicker> {
                             ),
                           ),
                           title: Text(pokemon.name),
-                          subtitle: Text('#${pokemon.id.toString().padLeft(3, '0')} · ${pokemon.types.join(' / ')}\\n${TeamGameAvailability.forPokemon(widget.gameId, pokemon.id).label}: ${TeamGameAvailability.forPokemon(widget.gameId, pokemon.id).detail}'),
+                          subtitle: Text('#${pokemon.id.toString().padLeft(3, '0')} · ${pokemon.types.join(' / ')}\\n${TeamGameAvailability.forPokemon(_selectedGame, pokemon.id).label}: ${TeamGameAvailability.forPokemon(_selectedGame, pokemon.id).detail}'),
                           onTap: () => Navigator.pop(context, pokemon),
                         );
                       },
