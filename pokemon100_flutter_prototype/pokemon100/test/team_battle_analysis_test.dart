@@ -83,13 +83,20 @@ void main() {
         const {229: ['Bite']},
         gameId: 'emerald',
       );
+      final leafGreen = TeamBattleAnalysis.analyze(
+        [houndoom],
+        const {229: ['Bite']},
+        gameId: 'leafgreen',
+      );
       final modern = TeamBattleAnalysis.analyze(
         [houndoom],
         const {229: ['Bite']},
         gameId: 'lets_go_pikachu',
       );
       expect(genThree.uncoveredTypes, isNot(contains('Fairy')));
+      expect(leafGreen.uncoveredTypes, isNot(contains('Fairy')));
       expect(genThree.synergyHints.any((hint) => hint.contains('Atak specjalny')), isFalse);
+      expect(leafGreen.synergyHints.any((hint) => hint.contains('Atak specjalny')), isFalse);
       expect(modern.synergyHints.any((hint) => hint.contains('Atak specjalny')), isTrue);
     });
 
