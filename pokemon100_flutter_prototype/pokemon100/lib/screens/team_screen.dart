@@ -509,7 +509,7 @@ class _TeamScreenState extends State<TeamScreen> {
     if (!mounted) return;
     if (recommendations.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Nie znaleziono kandydatów poprawiających pokrycie słabości na podstawie danych typów.')),
+        const SnackBar(content: Text('Nie znaleziono kandydatów poprawiających równowagę drużyny na podstawie dostępnych danych.')),
       );
       return;
     }
@@ -523,7 +523,7 @@ class _TeamScreenState extends State<TeamScreen> {
             children: [
               const Text('Dopasuj Pokémona', style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
               const SizedBox(height: 6),
-              const Text('Propozycje bazują na typach obecnej drużyny i filtrze dostępności dla wybranej gry. Filtr korzysta z regionalnego Pokédexu, więc nie uwzględnia jeszcze etapu fabuły, poziomu, pełnych warunków wymian ani wszystkich wydarzeń specjalnych.'),
+              const Text('Propozycje uwzględniają odporności typów, statystyki bazowe i wybrane umiejętności Pokémonów. Dostępność jest filtrowana według regionalnego Pokédexu; system nie uwzględnia jeszcze etapu fabuły, poziomu, pełnych warunków wymian ani wszystkich wydarzeń specjalnych.'),
               const SizedBox(height: 12),
               ...recommendations.map((recommendation) => Card(
                 child: ListTile(
