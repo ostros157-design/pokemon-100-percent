@@ -27,7 +27,8 @@ class TeamPokemonAvailability {
       kind == TeamAvailabilityKind.specialAccess ||
       kind == TeamAvailabilityKind.postGame ||
       kind == TeamAvailabilityKind.breedingRequired ||
-      kind == TeamAvailabilityKind.outsideRegionalDex;
+      kind == TeamAvailabilityKind.outsideRegionalDex ||
+      kind == TeamAvailabilityKind.unknown;
 }
 
 class TeamGameAvailability {
