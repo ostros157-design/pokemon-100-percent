@@ -5798,3 +5798,12 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - W Celadon Department Store oznaczono centralną windę, a na S.S. Anne schody łączące pokłady.
 - Zaktualizowano opisy legendy, aby wskazywały rolę pionowych ciągów komunikacyjnych. Oznaczenia są orientacyjne, nie stanowią potwierdzonych współrzędnych z oryginalnych map.
 - Kontrola tekstowa potwierdziła obecność oznaczeń dla wskazanych budynków; nie uruchomiono Flutter Analyzer, testów ani kompilacji APK.
+
+
+### Mapy Kanto — interaktywny panel windy Silph Co. (2026-11-09)
+
+- Dodano dedykowany panel windy Silph Co. z pionowym wskaźnikiem wszystkich 11 pięter oraz podświetleniem aktualnego poziomu.
+- Dodano rozwijany wybór piętra; zmiana wyboru aktualizuje stan piętra i położenie kabiny na schemacie mapy.
+- Schemat szybu na mapie pokazuje 11 przystanków, oznaczenia poziomów i kabinę na wybranym piętrze; pozostawiono także dotychczasowe przyciski przejścia na sąsiednie piętra.
+- Układ jest poglądowy i nie deklaruje dokładnego położenia windy na oryginalnej mapie gry.
+- Kontrola tekstowa potwierdziła obecność selektora, wskaźnika 11 pięter i wyliczania pozycji kabiny; nie uruchomiono Flutter Analyzer, testów ani kompilacji APK.
