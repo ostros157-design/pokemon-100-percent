@@ -5740,3 +5740,10 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Nagłówek lokalnej mapy rozpoznaje teraz, czy oglądana lokacja jest miastem, trasą czy innym obszarem; tytuł widoku powiększonego został ujednolicony.
 - Zachowano istniejące połączenia lokacji, nazwy punktów orientacyjnych i dane offline. Układy są nadal schematyczne — nie dodano niezweryfikowanych współrzędnych ani fikcyjnych pinezek Pokémonów, trenerów czy przedmiotów.
 - Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK. Zmiany wymagają sprawdzenia na urządzeniu; kontrola tekstowa nie zastępuje kompilacji.
+
+
+### Mapy Kanto — indywidualne schematy kolejnych tras (2026-11-09)
+
+- Rozszerzono lokalny renderer o odrębne poglądowe przebiegi Route 11–18 oraz Route 22–25. Każda z tych tras otrzymała własny kształt ścieżki i rozmieszczenie stref, zamiast korzystać z ogólnego wariantu zastępczego.
+- Zachowano osobny wariant wodny dla Route 19–21 oraz istniejące schematy Route 3–10. Nie dodano nowych pinezek ani niezweryfikowanych współrzędnych; rysunki nadal służą orientacji, a nie dokładnemu odwzorowaniu kafelków gry.
+- Kontrola tekstowa potwierdziła obecność wszystkich 12 nowych wariantów oraz zbilansowanie nawiasów klamrowych i kwadratowych. Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK.
