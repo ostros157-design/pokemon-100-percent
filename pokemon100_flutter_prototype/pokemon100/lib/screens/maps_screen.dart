@@ -3534,6 +3534,100 @@ class _KantoLocalAreaPainter extends CustomPainter {
           ..cubicTo(size.width * .30, size.height * .78, size.width * .24, size.height * .28, size.width * .48, size.height * .32)
           ..cubicTo(size.width * .72, size.height * .36, size.width * .68, size.height * .72, size.width * .90, size.height * .72);
         drawZone(.36, .12, .24, .18);
+      } else if (location == 'Route 11') {
+        drawZone(.12, .18, .22, .18);
+        drawZone(.64, .62, .24, .18);
+        path
+          ..moveTo(size.width * .10, size.height * .72)
+          ..cubicTo(size.width * .26, size.height * .70, size.width * .24, size.height * .34, size.width * .42, size.height * .38)
+          ..lineTo(size.width * .62, size.height * .38)
+          ..cubicTo(size.width * .78, size.height * .38, size.width * .72, size.height * .68, size.width * .90, size.height * .70);
+      } else if (location == 'Route 12') {
+        drawZone(.12, .16, .18, .24);
+        drawZone(.70, .60, .18, .22);
+        path
+          ..moveTo(size.width * .18, size.height * .10)
+          ..lineTo(size.width * .18, size.height * .34)
+          ..cubicTo(size.width * .18, size.height * .48, size.width * .48, size.height * .44, size.width * .50, size.height * .60)
+          ..lineTo(size.width * .50, size.height * .90);
+      } else if (location == 'Route 13') {
+        drawZone(.12, .20, .22, .18);
+        drawZone(.66, .62, .22, .18);
+        path
+          ..moveTo(size.width * .10, size.height * .28)
+          ..lineTo(size.width * .34, size.height * .28)
+          ..cubicTo(size.width * .48, size.height * .28, size.width * .42, size.height * .72, size.width * .58, size.height * .72)
+          ..lineTo(size.width * .90, size.height * .72);
+      } else if (location == 'Route 14') {
+        drawZone(.12, .62, .20, .18);
+        drawZone(.68, .18, .20, .18);
+        path
+          ..moveTo(size.width * .14, size.height * .82)
+          ..cubicTo(size.width * .34, size.height * .68, size.width * .26, size.height * .36, size.width * .48, size.height * .40)
+          ..cubicTo(size.width * .68, size.height * .44, size.width * .68, size.height * .20, size.width * .88, size.height * .16);
+      } else if (location == 'Route 15') {
+        drawZone(.12, .18, .24, .20);
+        drawZone(.62, .62, .24, .18);
+        path
+          ..moveTo(size.width * .12, size.height * .20)
+          ..cubicTo(size.width * .30, size.height * .38, size.width * .28, size.height * .62, size.width * .48, size.height * .62)
+          ..lineTo(size.width * .88, size.height * .62);
+      } else if (location == 'Route 16') {
+        drawZone(.12, .18, .24, .22);
+        drawZone(.64, .60, .24, .20);
+        path
+          ..moveTo(size.width * .10, size.height * .30)
+          ..lineTo(size.width * .38, size.height * .30)
+          ..quadraticBezierTo(size.width * .52, size.height * .30, size.width * .52, size.height * .48)
+          ..lineTo(size.width * .52, size.height * .88);
+      } else if (location == 'Route 17') {
+        drawZone(.10, .18, .18, .18);
+        drawZone(.72, .62, .18, .18);
+        path
+          ..moveTo(size.width * .16, size.height * .10)
+          ..cubicTo(size.width * .34, size.height * .24, size.width * .22, size.height * .42, size.width * .50, size.height * .50)
+          ..cubicTo(size.width * .78, size.height * .58, size.width * .66, size.height * .76, size.width * .86, size.height * .90);
+      } else if (location == 'Route 18') {
+        drawZone(.12, .58, .22, .20);
+        drawZone(.66, .18, .22, .20);
+        path
+          ..moveTo(size.width * .10, size.height * .76)
+          ..lineTo(size.width * .34, size.height * .76)
+          ..quadraticBezierTo(size.width * .50, size.height * .76, size.width * .50, size.height * .58)
+          ..lineTo(size.width * .50, size.height * .18)
+          ..lineTo(size.width * .90, size.height * .18);
+      } else if (location == 'Route 22') {
+        drawZone(.12, .18, .22, .20);
+        drawZone(.66, .62, .22, .18);
+        path
+          ..moveTo(size.width * .10, size.height * .72)
+          ..quadraticBezierTo(size.width * .30, size.height * .50, size.width * .48, size.height * .52)
+          ..lineTo(size.width * .68, size.height * .52)
+          ..quadraticBezierTo(size.width * .80, size.height * .52, size.width * .90, size.height * .28);
+      } else if (location == 'Route 23') {
+        drawZone(.10, .18, .20, .18);
+        drawZone(.40, .62, .20, .18);
+        drawZone(.70, .18, .20, .18);
+        path
+          ..moveTo(size.width * .12, size.height * .82)
+          ..cubicTo(size.width * .30, size.height * .70, size.width * .28, size.height * .36, size.width * .48, size.height * .42)
+          ..cubicTo(size.width * .68, size.height * .48, size.width * .70, size.height * .24, size.width * .88, size.height * .12);
+      } else if (location == 'Route 24') {
+        drawZone(.12, .16, .22, .18);
+        drawZone(.66, .64, .22, .18);
+        path
+          ..moveTo(size.width * .50, size.height * .10)
+          ..lineTo(size.width * .50, size.height * .34)
+          ..quadraticBezierTo(size.width * .28, size.height * .52, size.width * .50, size.height * .66)
+          ..lineTo(size.width * .50, size.height * .90);
+      } else if (location == 'Route 25') {
+        drawZone(.12, .18, .20, .20);
+        drawZone(.68, .18, .20, .20);
+        drawZone(.40, .64, .20, .18);
+        path
+          ..moveTo(size.width * .10, size.height * .76)
+          ..cubicTo(size.width * .30, size.height * .76, size.width * .24, size.height * .36, size.width * .48, size.height * .42)
+          ..cubicTo(size.width * .70, size.height * .48, size.width * .72, size.height * .72, size.width * .90, size.height * .72);
       } else if (isWaterRoute) {
         path
           ..moveTo(size.width * .12, size.height * .78)
