@@ -5846,3 +5846,10 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Gracz może oznaczyć głaz, zawalisko lub blokadę jako usuniętą; symbol na schemacie zmienia się wtedy na zielone oznaczenie otwartego przejścia.
 - Stan przeszkód jest przechowywany w stanie panelu mapy podczas jego działania; nie jest jeszcze zapisywany jako trwały postęp gry.
 - Pozycje symboli są ilustracyjne. Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK.
+
+
+### Trwały zapis usuniętych przeszkód Kanto (2026-11-09)
+
+- Stan usuniętych przeszkód jest wczytywany z SharedPreferences podczas otwierania panelu mapy i zapisywany po każdej zmianie przełącznika.
+- Dane są przechowywane lokalnie pod kluczem kanto_cleared_obstacles_v1, niezależnie dla każdej lokacji i przeszkody; odznaczenie przywraca blokadę.
+- Zapis działa na urządzeniu i nie wymaga internetu. Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK.
