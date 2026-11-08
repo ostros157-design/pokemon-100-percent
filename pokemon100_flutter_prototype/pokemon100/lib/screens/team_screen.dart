@@ -558,6 +558,127 @@ class _TeamScreenState extends State<TeamScreen> {
     });
   }
 
+  Future<void> _showTeamComparison() async {
+    if (_savedTeams.length < 2) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Zapisz co najmniej dwie drużyny, aby móc je porównać.')),
+      );
+      return;
+    }
+
+    var firstId = _savedTeams.first.id;
+    var secondId = _savedTeams[1].id;
+
+    List<Pokemon> membersOf(_SavedTeam saved) => _pokemonFromIds(saved.pokemonIds);
+    String summary(_SavedTeam saved) {
+      final members = membersOf(saved);
+      final types = members.expand((pokemon) => pokemon.types).toSet().toList()..sort();
+      final knownTotals = members.map((pokemon) => pokemon.baseStatTotal).whereType<int>().toList();
+      final average = knownTotals.isEmpty
+          ? 'brak danych'
+          : (knownTotals.reduce((a, b) => a + b) / knownTotals.length).round().toString();
+      final movesSet = saved.movesByPokemon.values.where((moves) => moves.isNotEmpty).length;
+      return '${members.length}/6 Pokémonów · ${types.length} typów · średnia suma statystyk: $average · zestawy ruchów: $movesSet/${members.length}';
+    }
+
+    await showDialog<void>(
+      context: context,
+      builder: (dialogContext) => StatefulBuilder(
+        builder: (context, setDialogState) {
+          final first = _savedTeams.firstWhere((team) => team.id == firstId);
+          final second = _savedTeams.firstWhere((team) => team.id == secondId);
+          final firstMembers = membersOf(first);
+          final secondMembers = membersOf(second);
+          final firstIds = firstMembers.map((pokemon) => pokemon.id).toSet();
+          final secondIds = secondMembers.map((pokemon) => pokemon.id).toSet();
+          final commonIds = firstIds.intersection(secondIds);
+          final onlyFirst = firstMembers.where((pokemon) => !secondIds.contains(pokemon.id)).toList();
+          final onlySecond = secondMembers.where((pokemon) => !firstIds.contains(pokemon.id)).toList();
+          final sameGame = first.gameId == second.gameId;
+
+          Widget teamPicker(String label, String selectedId, ValueChanged<String?> onChanged) {
+            return DropdownButtonFormField<String>(
+              value: selectedId,
+              isExpanded: true,
+              decoration: InputDecoration(labelText: label, border: const OutlineInputBorder()),
+              items: _savedTeams.map((team) => DropdownMenuItem<String>(
+                value: team.id,
+                child: Text(team.name, overflow: TextOverflow.ellipsis),
+              )).toList(),
+              onChanged: onChanged,
+            );
+          }
+
+          Widget comparisonColumn(String title, _SavedTeam saved) {
+            final members = membersOf(saved);
+            return Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(title, style: const TextStyle(fontWeight: FontWeight.bold)),
+                  const SizedBox(height: 6),
+                  Text(saved.name, style: Theme.of(context).textTheme.titleMedium),
+                  Text(summary(saved), style: Theme.of(context).textTheme.bodySmall),
+                  const SizedBox(height: 8),
+                  ...members.map((pokemon) => Padding(
+                    padding: const EdgeInsets.only(bottom: 4),
+                    child: Text('• ${pokemon.name}'),
+                  )),
+                ],
+              ),
+            );
+          }
+
+          return AlertDialog(
+            title: const Text('Porównanie drużyn'),
+            content: SizedBox(
+              width: 520,
+              child: SingleChildScrollView(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    teamPicker('Pierwsza drużyna', firstId, (value) {
+                      if (value != null) setDialogState(() => firstId = value);
+                    }),
+                    const SizedBox(height: 10),
+                    teamPicker('Druga drużyna', secondId, (value) {
+                      if (value != null) setDialogState(() => secondId = value);
+                    }),
+                    const SizedBox(height: 16),
+                    if (firstId == secondId)
+                      const Text('Wybierz dwie różne drużyny.')
+                    else ...[
+                      if (!sameGame)
+                        const Text('Uwaga: drużyny są przygotowane do różnych gier, więc porównanie dostępności nie jest bezpośrednie.',
+                          style: TextStyle(color: Colors.orange)),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          comparisonColumn('Drużyna A', first),
+                          const SizedBox(width: 12),
+                          comparisonColumn('Drużyna B', second),
+                        ],
+                      ),
+                      const Divider(height: 24),
+                      Text('Wspólne Pokémony: ${commonIds.isEmpty ? 'brak' : firstMembers.where((p) => commonIds.contains(p.id)).map((p) => p.name).join(', ')}'),
+                      const SizedBox(height: 8),
+                      Text('Tylko w A: ${onlyFirst.isEmpty ? 'brak' : onlyFirst.map((p) => p.name).join(', ')}'),
+                      const SizedBox(height: 8),
+                      Text('Tylko w B: ${onlySecond.isEmpty ? 'brak' : onlySecond.map((p) => p.name).join(', ')}'),
+                    ],
+                  ],
+                ),
+              ),
+            ),
+            actions: [
+              TextButton(onPressed: () => Navigator.pop(dialogContext), child: const Text('Zamknij')),
+            ],
+          );
+        },
+      ),
+    );
+  }
+
   @override
   void dispose() {
     _nameController.dispose();
@@ -574,6 +695,11 @@ class _TeamScreenState extends State<TeamScreen> {
             tooltip: 'Zapisane drużyny',
             onPressed: _showSavedTeams,
             icon: const Icon(Icons.folder_open),
+          ),
+          IconButton(
+            tooltip: 'Porównaj drużyny',
+            onPressed: _showTeamComparison,
+            icon: const Icon(Icons.compare_arrows),
           ),
           IconButton(
             tooltip: 'Nowa drużyna',
