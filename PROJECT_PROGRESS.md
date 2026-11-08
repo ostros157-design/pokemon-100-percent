@@ -5595,3 +5595,13 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 
 
 - Korekta końcowa: rozdzielono nowe kroki trenerów Route 24 i Route 25 od istniejących kroków fabularnych 13 i 14. Ponowna kontrola nie wykrywa osieroconych tytułów ani zagnieżdżonych początków GuideStep; delimitery są zbilansowane.
+
+
+### Poradnik Let’s Go, Pikachu! — naprawa konstrukcji kroków (2026-11-08)
+
+- Audyt obejmuje całą listę kroków poradnika: blisko 200 wpisów fabularnych, spotkań, trenerów i post-game.
+- Usunięto dwa zagnieżdżone początki `GuideStep`.
+- Naprawiono dwa osierocone wpisy `title` (Viridian City i Viridian Forest), przywracając im osobne konstruktory.
+- Dodano brakujące nazwy sekcji do 11 początkowych kroków Pallet Town, Route 1–2 i Pewter City.
+- Kontrola tekstowa: brak zagnieżdżonych początków, brak kroków bez konstrukcji oraz brak osieroconych pól `title` w poradniku.
+- Nie uruchomiono Dart/Flutter Analyzer, testów ani APK. Kontrola tekstowa nie potwierdza kompilacji.
