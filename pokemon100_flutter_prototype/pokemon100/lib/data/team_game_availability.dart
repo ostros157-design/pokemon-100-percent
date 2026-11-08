@@ -1,8 +1,8 @@
 /// Conservative game-availability data for Team Making.
 ///
-/// The regional-dex lists below identify Pokémon listed in each regional dex;
-/// they do not prove that every species outside the list is unobtainable.
-/// Let's Go version exclusives and special access methods are handled explicitly.
+/// The regional-dex lists below identify regional-list membership, not every
+/// encounter method or story gate. Let’s Go and FireRed/LeafGreen have extra
+/// explicit version, trade, post-game, breeding and event classifications.
 enum TeamAvailabilityKind {
   inGame,
   regionalDex,
