@@ -5853,3 +5853,10 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Stan usuniętych przeszkód jest wczytywany z SharedPreferences podczas otwierania panelu mapy i zapisywany po każdej zmianie przełącznika.
 - Dane są przechowywane lokalnie pod kluczem kanto_cleared_obstacles_v1, niezależnie dla każdej lokacji i przeszkody; odznaczenie przywraca blokadę.
 - Zapis działa na urządzeniu i nie wymaga internetu. Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK.
+
+
+### Interaktywne wejścia i wyjścia jaskiń Kanto (2026-11-09)
+
+- Dodano panel wejść i wyjść dla Mt. Moon, Rock Tunnel, Diglett's Cave, Seafoam Islands, Cerulean Cave i Victory Road.
+- Wybór punktu ustawia powiązaną pozycję/opis w panelu lokacji; istniejące kontrolki pięter pozwalają przechodzić między poziomami drabinami i schodami.
+- Punkty zewnętrzne są orientacyjne i nie przełączają automatycznie mapy regionu; nie uruchomiono Flutter Analyzer, testów ani APK.
