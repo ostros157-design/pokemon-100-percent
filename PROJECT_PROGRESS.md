@@ -5860,3 +5860,12 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Dodano panel wejść i wyjść dla Mt. Moon, Rock Tunnel, Diglett's Cave, Seafoam Islands, Cerulean Cave i Victory Road.
 - Wybór punktu ustawia powiązaną pozycję/opis w panelu lokacji; istniejące kontrolki pięter pozwalają przechodzić między poziomami drabinami i schodami.
 - Punkty zewnętrzne są orientacyjne i nie przełączają automatycznie mapy regionu; nie uruchomiono Flutter Analyzer, testów ani APK.
+
+
+### Pokémon Emerald — audyt Route 132–134 (2026-11-09)
+
+- Uzupełniono wszystkie 24 pierwsze walki trenerów na Route 132, 133 i 134, podając pełne składy i poziomy; lista zawiera teraz również wcześniej pominiętych trenerów na Route 132 oraz pełne składy pozostałych dwóch tras.
+- Dopisano osobne tabele metod spotkań: Surf 60/35/5%, Old Rod 70/30%, Good Rod 60/20/20% i Super Rod 45/40/15%; procenty Surf pozostają w polu strukturalnym, a pozostałe metody są wyjaśnione w opisie, aby nie mieszać ich w jednej tabeli.
+- Skorygowano przypisanie przedmiotów: Route 132 — Rare Candy i Protein; Route 133 — Big Pearl, Max Revive i Star Piece; Route 134 — Carbos i Star Piece.
+- Źródła porównawcze: Dexfully, strony Route 132, Route 133 i Route 134 (listy trenerów, poziomy, spotkania i przedmioty); tabele metod wodnych porównano również z dokumentacją spotkań Emerald.
+- Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK. Audyt pozostałych tras i lokacji Hoenn nadal trwa.
