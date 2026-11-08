@@ -3361,6 +3361,7 @@ class _KantoLocalAreaPainter extends CustomPainter {
         ..moveTo(size.width * .50, size.height * .58)
         ..lineTo(size.width * .50, size.height * .80);
     } else if ({
+      'Pewter City',
       'Cerulean City',
       'Vermilion City',
       'Celadon City',
@@ -3370,18 +3371,92 @@ class _KantoLocalAreaPainter extends CustomPainter {
       'Cinnabar Island',
       'Indigo Plateau',
     }.contains(location)) {
-      drawZone(.10, .20, .25, .22);
-      drawZone(.39, .16, .24, .24);
-      drawZone(.67, .22, .23, .22);
-      drawZone(.22, .55, .25, .22);
-      drawZone(.55, .55, .25, .22);
-      path
-        ..moveTo(size.width * .22, size.height * .31)
-        ..lineTo(size.width * .50, size.height * .28)
-        ..lineTo(size.width * .79, size.height * .33)
-        ..moveTo(size.width * .50, size.height * .28)
-        ..lineTo(size.width * .35, size.height * .66)
-        ..lineTo(size.width * .68, size.height * .66);
+      // City plans use distinct visual layouts to help distinguish districts.
+      // These are orientation diagrams, not tile-accurate game coordinates.
+      if (location == 'Pewter City') {
+        drawZone(.12, .16, .28, .24);
+        drawZone(.60, .16, .28, .24);
+        drawZone(.36, .58, .28, .22);
+        path
+          ..moveTo(size.width * .50, size.height * .08)
+          ..lineTo(size.width * .50, size.height * .48)
+          ..lineTo(size.width * .50, size.height * .88)
+          ..moveTo(size.width * .22, size.height * .48)
+          ..lineTo(size.width * .78, size.height * .48);
+      } else if (location == 'Cerulean City') {
+        drawZone(.08, .18, .25, .22);
+        drawZone(.64, .18, .27, .22);
+        drawZone(.36, .58, .28, .24);
+        path
+          ..moveTo(size.width * .50, size.height * .08)
+          ..lineTo(size.width * .50, size.height * .42)
+          ..quadraticBezierTo(size.width * .50, size.height * .54, size.width * .36, size.height * .58)
+          ..moveTo(size.width * .50, size.height * .42)
+          ..lineTo(size.width * .82, size.height * .42);
+      } else if (location == 'Vermilion City') {
+        drawZone(.08, .18, .26, .22);
+        drawZone(.40, .18, .24, .22);
+        drawZone(.70, .18, .22, .22);
+        drawZone(.34, .62, .30, .18);
+        path
+          ..moveTo(size.width * .10, size.height * .50)
+          ..lineTo(size.width * .90, size.height * .50)
+          ..moveTo(size.width * .50, size.height * .40)
+          ..lineTo(size.width * .50, size.height * .88);
+      } else if (location == 'Celadon City') {
+        drawZone(.08, .14, .30, .26);
+        drawZone(.62, .14, .30, .26);
+        drawZone(.08, .60, .30, .24);
+        drawZone(.62, .60, .30, .24);
+        path
+          ..moveTo(size.width * .50, size.height * .08)
+          ..lineTo(size.width * .50, size.height * .90)
+          ..moveTo(size.width * .08, size.height * .50)
+          ..lineTo(size.width * .92, size.height * .50);
+      } else if (location == 'Saffron City') {
+        drawZone(.34, .12, .32, .24);
+        drawZone(.08, .60, .26, .22);
+        drawZone(.66, .60, .26, .22);
+        path
+          ..moveTo(size.width * .50, size.height * .08)
+          ..lineTo(size.width * .50, size.height * .90)
+          ..moveTo(size.width * .10, size.height * .48)
+          ..lineTo(size.width * .90, size.height * .48);
+      } else if (location == 'Lavender Town') {
+        drawZone(.34, .14, .32, .24);
+        drawZone(.10, .62, .26, .20);
+        drawZone(.64, .62, .26, .20);
+        path
+          ..moveTo(size.width * .50, size.height * .08)
+          ..lineTo(size.width * .50, size.height * .90)
+          ..moveTo(size.width * .18, size.height * .50)
+          ..lineTo(size.width * .82, size.height * .50);
+      } else if (location == 'Fuchsia City') {
+        drawZone(.08, .18, .34, .24);
+        drawZone(.60, .18, .32, .24);
+        drawZone(.28, .62, .44, .20);
+        path
+          ..moveTo(size.width * .50, size.height * .08)
+          ..lineTo(size.width * .50, size.height * .90)
+          ..moveTo(size.width * .12, size.height * .52)
+          ..quadraticBezierTo(size.width * .50, size.height * .38, size.width * .88, size.height * .52);
+      } else if (location == 'Cinnabar Island') {
+        drawZone(.10, .20, .24, .24);
+        drawZone(.40, .14, .24, .30);
+        drawZone(.68, .20, .24, .24);
+        path
+          ..moveTo(size.width * .08, size.height * .56)
+          ..lineTo(size.width * .92, size.height * .56)
+          ..moveTo(size.width * .52, size.height * .44)
+          ..lineTo(size.width * .52, size.height * .88);
+      } else {
+        drawZone(.10, .22, .24, .24);
+        drawZone(.40, .22, .20, .24);
+        drawZone(.66, .22, .24, .24);
+        path
+          ..moveTo(size.width * .08, size.height * .56)
+          ..lineTo(size.width * .92, size.height * .56);
+      }
     } else if (location == 'Safari Zone' || location == 'GO Park') {
       drawZone(.08, .20, .34, .25);
       drawZone(.56, .16, .34, .25);
@@ -3417,10 +3492,47 @@ class _KantoLocalAreaPainter extends CustomPainter {
           sidePaint,
         );
       }
-      path
-        ..moveTo(size.width * .10, size.height * .80)
-        ..cubicTo(size.width * .25, size.height * .62, size.width * .34, size.height * .28, size.width * .52, size.height * .48)
-        ..cubicTo(size.width * .66, size.height * .65, size.width * .73, size.height * .30, size.width * .90, size.height * .18);
+      if (location == 'Route 3') {
+        path
+          ..moveTo(size.width * .10, size.height * .72)
+          ..cubicTo(size.width * .28, size.height * .62, size.width * .30, size.height * .28, size.width * .50, size.height * .38)
+          ..cubicTo(size.width * .68, size.height * .48, size.width * .72, size.height * .22, size.width * .90, size.height * .20);
+      } else if (location == 'Route 4') {
+        path
+          ..moveTo(size.width * .10, size.height * .28)
+          ..cubicTo(size.width * .28, size.height * .20, size.width * .38, size.height * .72, size.width * .56, size.height * .60)
+          ..cubicTo(size.width * .72, size.height * .48, size.width * .74, size.height * .22, size.width * .90, size.height * .30);
+      } else if (location == 'Route 5' || location == 'Route 6') {
+        path
+          ..moveTo(size.width * .48, size.height * .10)
+          ..lineTo(size.width * .48, size.height * .34)
+          ..quadraticBezierTo(size.width * .26, size.height * .52, size.width * .48, size.height * .70)
+          ..lineTo(size.width * .48, size.height * .90);
+        drawZone(.12, .38, .20, .22);
+        drawZone(.68, .38, .20, .22);
+      } else if (location == 'Route 7' || location == 'Route 8') {
+        path
+          ..moveTo(size.width * .10, size.height * .50)
+          ..lineTo(size.width * .34, size.height * .50)
+          ..quadraticBezierTo(size.width * .50, size.height * .30, size.width * .66, size.height * .50)
+          ..lineTo(size.width * .90, size.height * .50);
+      } else if (location == 'Route 9' || location == 'Route 10') {
+        path
+          ..moveTo(size.width * .10, size.height * .78)
+          ..cubicTo(size.width * .30, size.height * .78, size.width * .24, size.height * .28, size.width * .48, size.height * .32)
+          ..cubicTo(size.width * .72, size.height * .36, size.width * .68, size.height * .72, size.width * .90, size.height * .72);
+        drawZone(.36, .12, .24, .18);
+      } else if (isWaterRoute) {
+        path
+          ..moveTo(size.width * .12, size.height * .78)
+          ..cubicTo(size.width * .28, size.height * .58, size.width * .38, size.height * .24, size.width * .54, size.height * .48)
+          ..cubicTo(size.width * .68, size.height * .72, size.width * .76, size.height * .28, size.width * .90, size.height * .18);
+      } else {
+        path
+          ..moveTo(size.width * .10, size.height * .80)
+          ..cubicTo(size.width * .25, size.height * .62, size.width * .34, size.height * .28, size.width * .52, size.height * .48)
+          ..cubicTo(size.width * .66, size.height * .65, size.width * .73, size.height * .30, size.width * .90, size.height * .18);
+      }
       if (location.startsWith('Underground Path')) {
         drawZone(.12, .36, .76, .28);
       }
