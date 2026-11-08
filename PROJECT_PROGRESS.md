@@ -5838,3 +5838,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Dodano charakterystyczne detale do planów pięter: kryształy w Mt. Moon i Cerulean Cave, skały w Rock Tunnel, kopce w Diglett's Cave, wodne sadzawki i kryształowe formacje na Seafoam Islands, głazy na Victory Road oraz skrzynie i lampy w podziemnych lokacjach.
 - Elementy są rysowane jako dekoracje poglądowe, bez przypisywania im niezweryfikowanych pozycji z oryginalnych map.
 - Kontrola tekstowa zmian; Flutter Analyzer, testy i kompilacja APK nie były uruchamiane.
+
+
+### Interaktywne przeszkody jaskiń Kanto (2026-11-09)
+
+- Dodano przełączane przeszkody dla Mt. Moon, Rock Tunnel, Diglett's Cave, Seafoam Islands, Cerulean Cave i Victory Road.
+- Gracz może oznaczyć głaz, zawalisko lub blokadę jako usuniętą; symbol na schemacie zmienia się wtedy na zielone oznaczenie otwartego przejścia.
+- Stan przeszkód jest przechowywany w stanie panelu mapy podczas jego działania; nie jest jeszcze zapisywany jako trwały postęp gry.
+- Pozycje symboli są ilustracyjne. Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK.
