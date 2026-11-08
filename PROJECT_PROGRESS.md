@@ -5732,3 +5732,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Lista jest budowana wyłącznie z identyfikatorów istniejących w indeksie — nie dodaje nowych tras ani nie zmienia niezweryfikowanych współrzędnych.
 - Zmiana poprawia nawigację tekstową po sieci lokacji; nie oznacza jeszcze automatycznego wyznaczania dokładnej ścieżki na rysowanej mapie.
 - Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK. Zmiana wymaga sprawdzenia lokalnego builda.
+
+### Mapy Kanto — bardziej zróżnicowane mapy miast i tras (2026-11-09)
+
+- Rozbudowano lokalny renderer map Kanto: główne miasta (m.in. Pewter, Cerulean, Vermilion, Celadon, Saffron, Lavender, Fuchsia i Cinnabar) mają teraz odrębne układy dzielnic, budynków i dróg zamiast jednego wspólnego szablonu.
+- Rozróżniono przebieg poglądowych map wybranych tras: Route 3–10 mają indywidualne kształty korytarzy i stref, a trasy wodne zachowują odmienny charakter wizualny.
+- Nagłówek lokalnej mapy rozpoznaje teraz, czy oglądana lokacja jest miastem, trasą czy innym obszarem; tytuł widoku powiększonego został ujednolicony.
+- Zachowano istniejące połączenia lokacji, nazwy punktów orientacyjnych i dane offline. Układy są nadal schematyczne — nie dodano niezweryfikowanych współrzędnych ani fikcyjnych pinezek Pokémonów, trenerów czy przedmiotów.
+- Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK. Zmiany wymagają sprawdzenia na urządzeniu; kontrola tekstowa nie zastępuje kompilacji.
