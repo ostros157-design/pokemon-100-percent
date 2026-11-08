@@ -75,7 +75,10 @@ class TeamRecommendationService {
   }) {
     if (team.isEmpty || !isSupportedGame(gameId)) return const [];
     final weakCounts = <String, int>{};
-    for (final attackType in _superEffectiveAgainst.keys) {
+    final hasFairyType = !{'emerald', 'firered', 'soulsilver'}.contains(gameId);
+    final attackTypes = _superEffectiveAgainst.keys
+        .where((type) => hasFairyType || type != 'Fairy');
+    for (final attackType in attackTypes) {
       final count = team.where((member) {
         var multiplier = 1.0;
         for (final defenseType in member.types) {
@@ -112,10 +115,11 @@ class TeamRecommendationService {
         }
       }
     }
-    // Normal has no weakness in the modern type chart, so it is not a
-    // meaningful "missing super-effective coverage" target.
-    final hittableTargetTypes = _superEffectiveAgainst.values
-        .expand((types) => types)
+    // Build target types from the selected game's type chart; Fairy did not
+    // exist in Emerald, FireRed or SoulSilver.
+    final hittableTargetTypes = attackTypes
+        .expand((type) => _superEffectiveAgainst[type]!)
+        .where((type) => hasFairyType || type != 'Fairy')
         .toSet();
     final missingMoveCoverage = hittableTargetTypes
         .where((targetType) => !coveredByAssignedMoves.containsKey(targetType))
