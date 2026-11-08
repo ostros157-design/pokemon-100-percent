@@ -5653,3 +5653,12 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Uzupełniono opis Candy jako systemu Awakening Values (AV) oraz liczbę 153 Master Trainerów.
 - Źródła: Nintendo Support (transfer GO Park i Mew), Bulbapedia GO Park/availability, Pokémon GO Help Center.
 - Nie uruchomiono Flutter Analyzer, testów ani APK.
+
+
+### Poradnik Let’s Go, Pikachu! — rozdzielenie procentowych i bezprocentowych spotkań (2026-11-08)
+
+- Karta poradnika rozdziela teraz trzy grupy Pokémonów: dzikie spotkania z procentami, stałe spotkania/prezenty/rare spawns bez procentu oraz Pokémony trenerów.
+- Dzięki temu prezenty i legendarne spotkania statyczne nie są już opisywane jako losowe spawny. Pokémony z GO Park (Meltan/Melmetal) pozostają wzmiankami o metodzie transferu, a nie błędnymi Pokémonami trenerów.
+- Dodano w modelu osobne gettery dla procentowych spotkań oraz bezprocentowych spotkań stałych, zachowując stary getter `wildPokemon` dla kompatybilności.
+- Zmiana interfejsu dotyczy wszystkich poradników. Nie zmieniono logiki zapisu ukończenia kroków.
+- Nie uruchomiono Flutter Analyzer, testów ani APK.
