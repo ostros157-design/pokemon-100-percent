@@ -5614,3 +5614,13 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Sprite ma 24×24 px, zachowuje proporcje i ma ikonę zastępczą przy braku obrazu. Kliknięcie nazwy nadal otwiera szczegóły Pokédexu, a Pokéball pozostaje po lewej stronie.
 - Zmiana widgetu wpływa na karty wszystkich poradników, nie tylko Let’s Go. Nie zmieniono logiki innych modułów.
 - Nie uruchomiono Flutter Analyzer, testów ani APK.
+
+
+### Poradnik Let’s Go, Pikachu! — drużyny sal i Pokémon League (2026-11-08)
+
+- Uzupełniono jawne listy trenerów i Pokémonów dla sal Lt. Surge’a, Eriki, Sabriny, Kogi, Blaine’a i Giovanniego. Dzięki polom `trainers` i `pokemon` karta rozdziela teraz trenerów od ich Pokémonów zamiast pokazywać wyłącznie nazwę lidera.
+- Uzupełniono składy Pokémonów Elite Four: Lorelei, Bruno, Agatha i Lance oraz Championa Trace’a w wersji Let’s Go, Pikachu! (Jolteon, nie Raichu).
+- Skorygowano drużynę Giovanniego: jego główna walka w Viridian Gym nie zawiera Persiana; lista obejmuje Dugtrio, Nidoqueen, Nidoking i Rhydona. Poziomy 49–50.
+- Dane sal porównano z walkthrough Bulbapedia dla części 6, 9, 10, 11, 13 i 14; Pokémon League z części 16. Tam, gdzie lista trainerów zawiera nazwy, ale nie wszystkie składy w tym wpisie, nie dopisano wymyślonych poziomów ani ruchów.
+- Źródła: Bulbapedia Part 6, Part 9, Part 10, Part 11, Part 13, Part 14 i Part 16.
+- Nie uruchomiono Flutter Analyzer, testów ani APK.
