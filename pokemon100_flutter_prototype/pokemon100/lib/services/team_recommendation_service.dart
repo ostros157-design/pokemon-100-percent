@@ -78,6 +78,10 @@ class TeamRecommendationService {
     final hasFairyType = !{'emerald', 'firered', 'soulsilver'}.contains(gameId);
     final attackTypes = _superEffectiveAgainst.keys
         .where((type) => hasFairyType || type != 'Fairy');
+    final hittableTargetTypes = attackTypes
+        .expand((type) => _superEffectiveAgainst[type]!)
+        .where((type) => hasFairyType || type != 'Fairy')
+        .toSet();
     for (final attackType in attackTypes) {
       final count = team.where((member) {
         var multiplier = 1.0;
@@ -106,21 +110,15 @@ class TeamRecommendationService {
         final attackType = move.type.isEmpty
             ? null
             : move.type[0].toUpperCase() + move.type.substring(1).toLowerCase();
-        if (attackType == null || !_superEffectiveAgainst.containsKey(attackType)) continue;
+        if (attackType == null || (!hasFairyType && attackType == 'Fairy') || !_superEffectiveAgainst.containsKey(attackType)) continue;
         recognizedAssignedMoves++;
-        for (final targetType in _superEffectiveAgainst.keys) {
+        for (final targetType in hittableTargetTypes) {
           if (_effectiveness(attackType, [targetType]) > 1) {
             coveredByAssignedMoves.putIfAbsent(targetType, () => <String>{}).add(move.name);
           }
         }
       }
     }
-    // Build target types from the selected game's type chart; Fairy did not
-    // exist in Emerald, FireRed or SoulSilver.
-    final hittableTargetTypes = attackTypes
-        .expand((type) => _superEffectiveAgainst[type]!)
-        .where((type) => hasFairyType || type != 'Fairy')
-        .toSet();
     final missingMoveCoverage = hittableTargetTypes
         .where((targetType) => !coveredByAssignedMoves.containsKey(targetType))
         .toSet();
