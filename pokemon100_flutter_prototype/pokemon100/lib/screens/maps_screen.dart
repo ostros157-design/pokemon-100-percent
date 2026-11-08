@@ -3372,6 +3372,117 @@ class _KantoLocalAreaPainter extends CustomPainter {
         ..lineTo(size.width * .80, size.height * .58)
         ..moveTo(size.width * .50, size.height * .58)
         ..lineTo(size.width * .50, size.height * .80);
+    } else if (location == 'Pewter Museum of Science') {
+      drawZone(.12, .18, .76, .22);
+      drawZone(.12, .56, .34, .24);
+      drawZone(.56, .56, .32, .24);
+      path
+        ..moveTo(size.width * .50, size.height * .40)
+        ..lineTo(size.width * .50, size.height * .88)
+        ..moveTo(size.width * .20, size.height * .44)
+        ..lineTo(size.width * .80, size.height * .44);
+    } else if (location == 'Pokémon Fan Club') {
+      drawZone(.18, .18, .64, .24);
+      drawZone(.30, .58, .40, .20);
+      path
+        ..moveTo(size.width * .50, size.height * .42)
+        ..lineTo(size.width * .50, size.height * .58);
+    } else if (location == 'Pokémon Day Care') {
+      drawZone(.12, .22, .30, .28);
+      drawZone(.58, .22, .30, .28);
+      drawZone(.34, .64, .32, .18);
+      path
+        ..moveTo(size.width * .27, size.height * .36)
+        ..lineTo(size.width * .73, size.height * .36)
+        ..lineTo(size.width * .50, size.height * .72);
+    } else if (location == "Player's House" ||
+        location == "Bill's House") {
+      drawZone(.28, .20, .44, .30);
+      drawZone(.38, .62, .24, .16);
+      path
+        ..moveTo(size.width * .50, size.height * .50)
+        ..lineTo(size.width * .50, size.height * .62);
+    } else if (location == "Professor Oak's Laboratory") {
+      drawZone(.12, .18, .34, .28);
+      drawZone(.56, .18, .32, .28);
+      drawZone(.26, .62, .48, .18);
+      path
+        ..moveTo(size.width * .29, size.height * .32)
+        ..lineTo(size.width * .71, size.height * .32)
+        ..lineTo(size.width * .50, size.height * .70);
+    } else if (location == 'Cinnabar Lab') {
+      drawZone(.10, .18, .24, .24);
+      drawZone(.40, .18, .24, .24);
+      drawZone(.70, .18, .20, .24);
+      drawZone(.24, .60, .52, .20);
+      path
+        ..moveTo(size.width * .22, size.height * .42)
+        ..lineTo(size.width * .22, size.height * .60)
+        ..lineTo(size.width * .76, size.height * .60);
+    } else if (location == 'Celadon Department Store') {
+      drawZone(.12, .16, .76, .18);
+      drawZone(.12, .42, .34, .18);
+      drawZone(.56, .42, .32, .18);
+      drawZone(.30, .68, .40, .14);
+      path
+        ..moveTo(size.width * .50, size.height * .34)
+        ..lineTo(size.width * .50, size.height * .68);
+    } else if (location == 'Celadon Game Corner') {
+      drawZone(.12, .18, .30, .24);
+      drawZone(.58, .18, .30, .24);
+      drawZone(.12, .58, .76, .22);
+      path
+        ..moveTo(size.width * .27, size.height * .42)
+        ..lineTo(size.width * .27, size.height * .58)
+        ..lineTo(size.width * .73, size.height * .58)
+        ..lineTo(size.width * .73, size.height * .42);
+    } else if (location == 'Celadon Condominiums') {
+      drawZone(.14, .18, .28, .24);
+      drawZone(.58, .18, .28, .24);
+      drawZone(.14, .58, .28, .22);
+      drawZone(.58, .58, .28, .22);
+      path
+        ..moveTo(size.width * .50, size.height * .12)
+        ..lineTo(size.width * .50, size.height * .88);
+    } else if (location == 'Fighting Dojo') {
+      drawZone(.18, .18, .64, .24);
+      drawZone(.18, .58, .64, .22);
+      path
+        ..moveTo(size.width * .50, size.height * .42)
+        ..lineTo(size.width * .50, size.height * .58)
+        ..moveTo(size.width * .30, size.height * .50)
+        ..lineTo(size.width * .70, size.height * .50);
+    } else if (location == 'Team Rocket Hideout') {
+      drawZone(.10, .18, .24, .20);
+      drawZone(.66, .18, .24, .20);
+      drawZone(.10, .62, .24, .20);
+      drawZone(.66, .62, .24, .20);
+      path
+        ..moveTo(size.width * .22, size.height * .28)
+        ..lineTo(size.width * .50, size.height * .50)
+        ..lineTo(size.width * .78, size.height * .28)
+        ..moveTo(size.width * .50, size.height * .50)
+        ..lineTo(size.width * .50, size.height * .72);
+    } else if (location == 'Silph Co.') {
+      drawZone(.14, .14, .72, .18);
+      drawZone(.14, .40, .30, .18);
+      drawZone(.56, .40, .30, .18);
+      drawZone(.30, .68, .40, .16);
+      path
+        ..moveTo(size.width * .50, size.height * .32)
+        ..lineTo(size.width * .50, size.height * .68);
+    } else if (location == 'Underground Path (Routes 5–6)') {
+      drawZone(.10, .30, .80, .36);
+      path
+        ..moveTo(size.width * .12, size.height * .48)
+        ..quadraticBezierTo(size.width * .50, size.height * .24, size.width * .88, size.height * .48);
+    } else if (location == 'Underground Path (Routes 7–8)') {
+      drawZone(.12, .18, .76, .64);
+      path
+        ..moveTo(size.width * .18, size.height * .72)
+        ..lineTo(size.width * .18, size.height * .38)
+        ..quadraticBezierTo(size.width * .50, size.height * .18, size.width * .82, size.height * .38)
+        ..lineTo(size.width * .82, size.height * .72);
     } else if ({
       'Pewter City',
       'Cerulean City',
@@ -3874,12 +3985,138 @@ class _KantoLocalAreaPainter extends CustomPainter {
         ('Odcinek środkowy', Offset(size.width * .52, size.height * .48)),
         (endpoints?.$2 ?? 'Koniec trasy', Offset(size.width * .85, size.height * .22)),
       ]);
+    } else if (location == 'Pewter Gym') {
+      markers.addAll([
+        ('Wejście', Offset(size.width * .18, size.height * .52)),
+        ('Kamienne przeszkody', Offset(size.width * .50, size.height * .30)),
+        ('Brock', Offset(size.width * .80, size.height * .52)),
+      ]);
+    } else if (location == 'Cerulean Gym') {
+      markers.addAll([
+        ('Wejście', Offset(size.width * .18, size.height * .50)),
+        ('Basen', Offset(size.width * .50, size.height * .50)),
+        ('Misty', Offset(size.width * .80, size.height * .50)),
+      ]);
+    } else if (location == 'Vermilion Gym') {
+      markers.addAll([
+        ('Wejście', Offset(size.width * .18, size.height * .72)),
+        ('Przełączniki', Offset(size.width * .50, size.height * .32)),
+        ('Lt. Surge', Offset(size.width * .80, size.height * .50)),
+      ]);
+    } else if (location == 'Celadon Gym') {
+      markers.addAll([
+        ('Wejście', Offset(size.width * .18, size.height * .72)),
+        ('Żywopłoty', Offset(size.width * .50, size.height * .32)),
+        ('Erika', Offset(size.width * .80, size.height * .50)),
+      ]);
+    } else if (location == 'Saffron Gym') {
+      markers.addAll([
+        ('Wejście', Offset(size.width * .18, size.height * .72)),
+        ('Pola teleportów', Offset(size.width * .50, size.height * .32)),
+        ('Sabrina', Offset(size.width * .80, size.height * .50)),
+      ]);
+    } else if (location == 'Fuchsia Gym') {
+      markers.addAll([
+        ('Wejście', Offset(size.width * .18, size.height * .72)),
+        ('Ukryte ściany', Offset(size.width * .50, size.height * .32)),
+        ('Koga', Offset(size.width * .80, size.height * .50)),
+      ]);
+    } else if (location == 'Cinnabar Gym') {
+      markers.addAll([
+        ('Wejście', Offset(size.width * .18, size.height * .72)),
+        ('Quiz i przełączniki', Offset(size.width * .50, size.height * .32)),
+        ('Blaine', Offset(size.width * .80, size.height * .50)),
+      ]);
+    } else if (location == 'Viridian Gym') {
+      markers.addAll([
+        ('Wejście', Offset(size.width * .18, size.height * .72)),
+        ('Pasy kierunkowe', Offset(size.width * .50, size.height * .32)),
+        ('Giovanni', Offset(size.width * .80, size.height * .50)),
+      ]);
     } else if (location.endsWith('Gym')) {
       markers.addAll([
         ('Sala Gymu', Offset(size.width * .27, size.height * .31)),
         ('Trenerzy', Offset(size.width * .73, size.height * .31)),
         ('Lider', Offset(size.width * .27, size.height * .65)),
         ('Wyjście', Offset(size.width * .73, size.height * .65)),
+      ]);
+    } else if (location == 'Pewter Museum of Science') {
+      markers.addAll([
+        ('Wejście', Offset(size.width * .50, size.height * .22)),
+        ('Wystawy', Offset(size.width * .28, size.height * .66)),
+        ('Skrzydło boczne', Offset(size.width * .72, size.height * .66)),
+      ]);
+    } else if (location == 'Pokémon Fan Club') {
+      markers.addAll([
+        ('Wejście', Offset(size.width * .50, size.height * .28)),
+        ('Przewodniczący klubu', Offset(size.width * .50, size.height * .68)),
+      ]);
+    } else if (location == 'Pokémon Day Care') {
+      markers.addAll([
+        ('Opiekun', Offset(size.width * .27, size.height * .36)),
+        ('Pokémony', Offset(size.width * .73, size.height * .36)),
+        ('Odbiór', Offset(size.width * .50, size.height * .72)),
+      ]);
+    } else if (location == "Player's House" || location == "Bill's House") {
+      markers.addAll([
+        ('Wejście', Offset(size.width * .50, size.height * .30)),
+        ('Pokój', Offset(size.width * .50, size.height * .68)),
+      ]);
+    } else if (location == "Professor Oak's Laboratory") {
+      markers.addAll([
+        ('Wejście', Offset(size.width * .50, size.height * .24)),
+        ('Stanowiska badań', Offset(size.width * .28, size.height * .48)),
+        ('Laboratorium', Offset(size.width * .72, size.height * .70)),
+      ]);
+    } else if (location == 'Cinnabar Lab') {
+      markers.addAll([
+        ('Recepcja', Offset(size.width * .22, size.height * .30)),
+        ('Laboratoria', Offset(size.width * .72, size.height * .30)),
+        ('Badania', Offset(size.width * .50, size.height * .70)),
+      ]);
+    } else if (location == 'Celadon Department Store') {
+      markers.addAll([
+        ('Parter', Offset(size.width * .50, size.height * .24)),
+        ('Sklepy', Offset(size.width * .28, size.height * .50)),
+        ('Wyższe piętra', Offset(size.width * .72, size.height * .72)),
+      ]);
+    } else if (location == 'Celadon Game Corner') {
+      markers.addAll([
+        ('Automaty', Offset(size.width * .27, size.height * .30)),
+        ('Główna sala', Offset(size.width * .73, size.height * .30)),
+        ('Wejście do kryjówki', Offset(size.width * .50, size.height * .70)),
+      ]);
+    } else if (location == 'Celadon Condominiums') {
+      markers.addAll([
+        ('Wejście', Offset(size.width * .50, size.height * .24)),
+        ('Apartamenty', Offset(size.width * .28, size.height * .64)),
+        ('Dach', Offset(size.width * .72, size.height * .64)),
+      ]);
+    } else if (location == 'Fighting Dojo') {
+      markers.addAll([
+        ('Wejście', Offset(size.width * .50, size.height * .28)),
+        ('Sala treningowa', Offset(size.width * .50, size.height * .70)),
+      ]);
+    } else if (location == 'Team Rocket Hideout') {
+      markers.addAll([
+        ('Wejście', Offset(size.width * .50, size.height * .26)),
+        ('Labirynt', Offset(size.width * .22, size.height * .52)),
+        ('Winda', Offset(size.width * .78, size.height * .52)),
+        ('Giovanni', Offset(size.width * .50, size.height * .76)),
+      ]);
+    } else if (location == 'Silph Co.') {
+      markers.addAll([
+        ('Lobby', Offset(size.width * .50, size.height * .22)),
+        ('Biura', Offset(size.width * .28, size.height * .50)),
+        ('Winda', Offset(size.width * .72, size.height * .50)),
+        ('Piętra', Offset(size.width * .50, size.height * .76)),
+      ]);
+    } else if (location.startsWith('Underground Path')) {
+      final endpoints = _routeEndpoints[location];
+      markers.addAll([
+        (endpoints?.$1 ?? 'Wejście', Offset(size.width * .16, size.height * .50)),
+        ('Tunel', Offset(size.width * .50, size.height * .50)),
+        (endpoints?.$2 ?? 'Wyjście', Offset(size.width * .84, size.height * .50)),
       ]);
     } else if ({
       "Player's House",
