@@ -62,6 +62,30 @@ void main() {
         ),
         isFalse,
       );
+      expect(
+        TeamRecommendationService.isAvailableInGame(
+          species(23, 'Ekans', ['Poison']),
+          'lets_go_pikachu',
+        ),
+        isTrue,
+        reason: 'trade-only Pokémon can still be used after a version trade',
+      );
+      expect(
+        TeamRecommendationService.isAvailableInGame(
+          species(194, 'Wooper', ['Water', 'Ground']),
+          'firered',
+        ),
+        isTrue,
+        reason: 'explicitly confirmed post-game Pokémon are valid candidates',
+      );
+      expect(
+        TeamRecommendationService.isAvailableInGame(
+          species(25, 'Pikachu', ['Electric']),
+          'sword',
+        ),
+        isFalse,
+        reason: 'unknown Sword availability must not enter automatic recommendations',
+      );
     });
 
     test('returns no recommendations for a game without data', () {
