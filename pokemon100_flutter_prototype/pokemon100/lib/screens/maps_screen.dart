@@ -4294,6 +4294,83 @@ class _KantoLocalAreaPainter extends CustomPainter {
       canvas.drawRRect(RRect.fromRectAndRadius(rect,const Radius.circular(9)),roomFill);
       canvas.drawRRect(RRect.fromRectAndRadius(rect,const Radius.circular(9)),edge);
     }
+
+    // Centralne oznaczenie pionowego ciągu komunikacyjnego na planach budynków.
+    // Pozycje są orientacyjne i służą rozpoznaniu schodów/windy, nie nawigacji kafelkowej.
+    final connectorCenter = switch (location) {
+      'Silph Co.' => const Offset(.50, .47),
+      'Pokémon Tower' => const Offset(.50, .475),
+      'Pokémon Mansion' => const Offset(.50, .52),
+      'Celadon Condominiums' => const Offset(.50, .49),
+      'Celadon Department Store' => const Offset(.50, .51),
+      'S.S. Anne' => const Offset(.50, .715),
+      _ => null,
+    };
+    if (connectorCenter != null) {
+      final center = Offset(connectorCenter.dx * size.width, connectorCenter.dy * size.height);
+      final isLift = location == 'Silph Co.' || location == 'Celadon Department Store';
+      final markerRect = Rect.fromCenter(
+        center: center,
+        width: math.max(34, size.shortestSide * .17),
+        height: math.max(30, size.shortestSide * .15),
+      );
+      canvas.drawRRect(
+        RRect.fromRectAndRadius(markerRect, const Radius.circular(7)),
+        Paint()..color = isLift ? const Color(0xFF315F8C) : const Color(0xFF477B56),
+      );
+      if (isLift) {
+        final shaft = markerRect.deflate(markerRect.width * .24);
+        canvas.drawRRect(
+          RRect.fromRectAndRadius(shaft, const Radius.circular(3)),
+          Paint()..color = const Color(0xFFE8E8D5),
+        );
+        final car = Rect.fromCenter(
+          center: shaft.center,
+          width: shaft.width * .62,
+          height: shaft.height * .48,
+        );
+        canvas.drawRect(car, Paint()..color = const Color(0xFF315F8C));
+        final arrowPaint = Paint()
+          ..color = const Color(0xFFE8E8D5)
+          ..strokeWidth = 1.8
+          ..strokeCap = StrokeCap.round
+          ..style = PaintingStyle.stroke;
+        canvas.drawLine(Offset(shaft.center.dx, shaft.top + 2), Offset(shaft.center.dx, shaft.top + 7), arrowPaint);
+        canvas.drawLine(Offset(shaft.center.dx, shaft.bottom - 2), Offset(shaft.center.dx, shaft.bottom - 7), arrowPaint);
+      } else {
+        final stairPaint = Paint()
+          ..color = const Color(0xFFF1F0D9)
+          ..strokeWidth = math.max(2, size.shortestSide * .012)
+          ..strokeCap = StrokeCap.square
+          ..style = PaintingStyle.stroke;
+        final stairs = Path()
+          ..moveTo(markerRect.left + markerRect.width * .18, markerRect.bottom - markerRect.height * .2)
+          ..lineTo(markerRect.left + markerRect.width * .42, markerRect.bottom - markerRect.height * .2)
+          ..lineTo(markerRect.left + markerRect.width * .42, markerRect.bottom - markerRect.height * .42)
+          ..lineTo(markerRect.left + markerRect.width * .65, markerRect.bottom - markerRect.height * .42)
+          ..lineTo(markerRect.left + markerRect.width * .65, markerRect.bottom - markerRect.height * .64)
+          ..lineTo(markerRect.right - markerRect.width * .16, markerRect.bottom - markerRect.height * .64);
+        canvas.drawPath(stairs, stairPaint);
+        canvas.drawLine(
+          Offset(markerRect.center.dx, markerRect.top + markerRect.height * .12),
+          Offset(markerRect.center.dx, markerRect.top + markerRect.height * .38),
+          stairPaint,
+        );
+      }
+      final markerLabel = location == 'Silph Co.' || location == 'Celadon Department Store'
+          ? 'WINDA'
+          : 'SCHODY';
+      final markerText = TextPainter(
+        text: TextSpan(text: markerLabel, style: const TextStyle(color: Colors.white, fontSize: 7, fontWeight: FontWeight.w900)),
+        textDirection: TextDirection.ltr,
+        maxLines: 1,
+      )..layout(maxWidth: markerRect.width);
+      markerText.paint(
+        canvas,
+        Offset(markerRect.center.dx - markerText.width / 2, markerRect.bottom - markerText.height - 2),
+      );
+    }
+
     canvas.drawCircle(Offset(centers.first.dx*size.width,centers.first.dy*size.height),math.max(4,size.shortestSide*.035),Paint()..color=const Color(0xFF477B56));
     canvas.drawCircle(Offset(centers.last.dx*size.width,centers.last.dy*size.height),math.max(4,size.shortestSide*.035),Paint()..color=const Color(0xFFB47A32));
     final textStyle=TextStyle(color:label,fontSize:math.max(9,size.shortestSide*.045),fontWeight:FontWeight.w700);
@@ -4302,10 +4379,12 @@ class _KantoLocalAreaPainter extends CustomPainter {
     final isCave={'Mt. Moon','Rock Tunnel',"Diglett's Cave",'Seafoam Islands','Cerulean Cave','Victory Road'}.contains(location);
     final legendText=isCave?'Komory i odnogi korytarzy • schemat poziomu'
       :location=='Team Rocket Hideout'?'Podziemne pomieszczenia i przejścia'
-      :location=='Silph Co.'?'Pokoje biurowe wokół centralnego szybu'
-      :location=='Celadon Department Store'?'Sklepy wokół centralnego atrium'
-      :location=='Pokémon Tower'?'Centralna klatka schodowa i sale'
-      :location=='S.S. Anne'?'Korytarz pokładowy i kabiny'
+      :location=='Silph Co.'?'Centralny szyb windy łączy piętra biurowca'
+      :location=='Celadon Department Store'?'Centralna winda i strefy sklepowe'
+      :location=='Pokémon Tower'?'Centralna klatka schodowa łączy piętra wieży'
+      :location=='Pokémon Mansion'?'Korytarze rezydencji i klatka schodowa'
+      :location=='Celadon Condominiums'?'Wspólna klatka schodowa budynku'
+      :location=='S.S. Anne'?'Korytarz pokładowy i schody między pokładami'
       :'Pomieszczenia i przejścia między strefami';
     final legend=TextPainter(text:TextSpan(text:legendText,style:TextStyle(color:label.withValues(alpha:.8),fontSize:math.max(8,size.shortestSide*.032))),textDirection:TextDirection.ltr,maxLines:1,ellipsis:'…')..layout(maxWidth:size.width*.84);
     legend.paint(canvas,Offset(size.width*.08,size.height*.105));
