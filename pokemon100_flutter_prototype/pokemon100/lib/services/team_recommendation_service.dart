@@ -96,7 +96,6 @@ class TeamRecommendationService {
       for (final move in moveCatalogue) move.name.trim().toLowerCase(): move,
     };
     final coveredByAssignedMoves = <String, Set<String>>{};
-    final assignedMoveTypes = <String>{};
     var recognizedAssignedMoves = 0;
     for (final entry in movesByPokemon.entries) {
       if (!team.any((member) => member.id == entry.key)) continue;
@@ -108,7 +107,6 @@ class TeamRecommendationService {
             : move.type[0].toUpperCase() + move.type.substring(1).toLowerCase();
         if (attackType == null || !_superEffectiveAgainst.containsKey(attackType)) continue;
         recognizedAssignedMoves++;
-        assignedMoveTypes.add(attackType);
         for (final targetType in _superEffectiveAgainst.keys) {
           if (_effectiveness(attackType, [targetType]) > 1) {
             coveredByAssignedMoves.putIfAbsent(targetType, () => <String>{}).add(move.name);
