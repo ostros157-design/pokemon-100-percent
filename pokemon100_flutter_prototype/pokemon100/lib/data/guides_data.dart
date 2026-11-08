@@ -2364,16 +2364,14 @@ const List<Guide> guidesList = [
         section: "Legendarne i mityczne Pokémony",
         title: "82. Meltan",
         description: "Meltan zdobywa się przez Pokémon GO, a nie przez dzikie spotkanie w Kanto. Po pierwszym wysłaniu kompatybilnego Pokémona z Pokémon GO do GO Park otrzymasz Mystery Box w Pokémon GO. Otwórz ją w Pokémon GO, złap pojawiające się Meltany, a następnie wyślij Meltana do GO Park w Fuchsia City i złap go w Let's Go. Transfer z Pokémon GO do Let's Go jest jednokierunkowy — Pokémon nie wróci do Pokémon GO. Mew, Pokémony cieni, oczyszczone i część specjalnych/eventowych Pokémonów nie kwalifikują się do transferu.",
-        pokemon: ["Meltan"],
-        pokemonMentions: [],
+        pokemonMentions: ["Meltan"],
         optional: true,
       ),
       GuideStep(
         section: "Legendarne i mityczne Pokémony",
         title: "83. Melmetal",
         description: "Melmetal ewoluuje z Meltana wyłącznie w Pokémon GO. Zbierz 400 Meltan Candy, wybierz Meltana w Pokémon GO i użyj opcji Evolution. Następnie wyślij Melmetala do GO Park w Fuchsia City i złap go w Let's Go. Nie da się ewoluować Meltana w Melmetala bezpośrednio w Let's Go. Transfer do Let's Go jest jednokierunkowy.",
-        pokemon: ["Meltan", "Melmetal"],
-        pokemonMentions: [],
+        pokemonMentions: ["Meltan", "Melmetal"],
         optional: true,
       ),
       GuideStep(
