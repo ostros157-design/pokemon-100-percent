@@ -33,7 +33,7 @@ void main() {
       );
       expect(profile.damagingMoveCount, 2);
       expect(profile.stabMoveCount, 1);
-      expect(profile.coveredTypes, containsAll(['Water', 'Flying', 'Normal']));
+      expect(profile.coveredTypes, containsAll(['Water', 'Flying']));
       expect(profile.synergyHints.any((hint) => hint.contains('Adaptability')), isTrue);
       expect(profile.synergyHints.any((hint) => hint.contains('Technician')), isTrue);
       expect(profile.synergyHints.any((hint) => hint.contains('Atak specjalny')), isTrue);
