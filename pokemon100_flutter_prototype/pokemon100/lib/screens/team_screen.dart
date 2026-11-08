@@ -983,7 +983,7 @@ class _PokemonPickerState extends State<_PokemonPicker> {
     final query = _query.trim().toLowerCase();
     final results = pokemonList.where((pokemon) {
       if (widget.excludedIds.contains(pokemon.id)) return false;
-      final availability = TeamGameAvailability.forPokemon(_selectedGame, pokemon.id);
+      final availability = TeamGameAvailability.forPokemon(widget.gameId, pokemon.id);
       if (!availability.canBeAdded &&
           !(_showOutsideRegionalDex && availability.canBeShownAsExtra)) return false;
       return query.isEmpty ||
@@ -1039,7 +1039,7 @@ class _PokemonPickerState extends State<_PokemonPicker> {
                             ),
                           ),
                           title: Text(pokemon.name),
-                          subtitle: Text('#${pokemon.id.toString().padLeft(3, '0')} · ${pokemon.types.join(' / ')}\\n${TeamGameAvailability.forPokemon(_selectedGame, pokemon.id).label}: ${TeamGameAvailability.forPokemon(_selectedGame, pokemon.id).detail}'),
+                          subtitle: Text('#${pokemon.id.toString().padLeft(3, '0')} · ${pokemon.types.join(' / ')}\\n${TeamGameAvailability.forPokemon(widget.gameId, pokemon.id).label}: ${TeamGameAvailability.forPokemon(widget.gameId, pokemon.id).detail}'),
                           onTap: () => Navigator.pop(context, pokemon),
                         );
                       },
