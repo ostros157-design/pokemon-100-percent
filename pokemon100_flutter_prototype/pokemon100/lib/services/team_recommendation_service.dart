@@ -13,8 +13,8 @@ class TeamRecommendation {
 }
 
 class TeamRecommendationService {
-  // Game availability is sourced from regional-dex data. Lists are conservative
-  // and do not guarantee every post-game encounter or event distribution.
+  // Recommendations use only explicit availability statuses. Regional-dex
+  // entries are useful candidates, while event-only and unknown cases are excluded.
   static const String supportedGameId = 'lets_go_pikachu';
 
   static bool isSupportedGame(String gameId) =>
