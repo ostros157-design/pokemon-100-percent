@@ -5831,3 +5831,10 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Dodano wyposażenie zależne od rodzaju budynku: laboratoryjne biurka, monitory i aparaturę; półki sklepowe i automaty Game Corner; stoły oraz domowe dekoracje; gabloty muzealne; ołtarze wieży; łóżka kabin S.S. Anne; konsole kryjówki Team Rocket; maty sal Gym i regały Pokémon Mansion.
 - Elementy są rysowane wewnątrz istniejących pomieszczeń i przycinane do ich obrysów; pozostają ilustracyjnymi detalami, a nie deklaracją dokładnego położenia obiektów w grach.
 - Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK.
+
+
+### Mapy Kanto — dekoracje jaskiń i podziemi (2026-11-09)
+
+- Dodano charakterystyczne detale do planów pięter: kryształy w Mt. Moon i Cerulean Cave, skały w Rock Tunnel, kopce w Diglett's Cave, wodne sadzawki i kryształowe formacje na Seafoam Islands, głazy na Victory Road oraz skrzynie i lampy w podziemnych lokacjach.
+- Elementy są rysowane jako dekoracje poglądowe, bez przypisywania im niezweryfikowanych pozycji z oryginalnych map.
+- Kontrola tekstowa zmian; Flutter Analyzer, testy i kompilacja APK nie były uruchamiane.
