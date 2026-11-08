@@ -5706,3 +5706,12 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Wniosek: offline indeks, wyszukiwarka lokacji, połączenia i poglądowa mapa regionu już istnieją. Główną brakującą częścią nie jest liczba lokacji, lecz zweryfikowana warstwa położeń oraz dokładniejsze mapy lokalne. Nie dodano fikcyjnych współrzędnych ani pinezek.
 - Nie zmieniano kodu aplikacji w tym audycie. Nie uruchomiono Flutter Analyzer, testów ani APK.
 - Następny etap: opracować źródłowo zweryfikowane pozycje i sposób ich odwzorowania na mapie Kanto; dopiero po weryfikacji włączać pinezki Pokémonów, trenerów i przedmiotów.
+
+### Poradniki, muzyka i ekran wyboru mapy (2026-11-09)
+
+- Usunięto małe sprite'y Pokémonów z kart kroków poradników. Pozostawiono nazwy, typy, Poké Balle, procenty spotkań i klikalne przejście do Pokédexu.
+- Dodano wspólny PokemonMusicService z jednym odtwarzaczem dla całej aplikacji. Po rozpoczęciu odtwarzania muzyka nie jest zatrzymywana przy przechodzeniu między ekranami; nadal można ją wstrzymać i regulować głośność na ekranie muzyki.
+- Wykorzystano istniejącą oryginalną melodię ambientową osadzoną offline w aplikacji; nie dodano muzyki z komercyjnych gier.
+- Dodano osobny ekran startowy wyboru mapy z wyborem generacji, gry i — gdy dotyczy — obszaru regionu. Dodano też przycisk powrotu do wyboru mapy z ekranu mapy.
+- Nie zmieniono schematycznych współrzędnych mapy ani nie dodano niezweryfikowanych pinezek. Styl i dokładność samej mapy wymagają osobnego etapu z potwierdzonymi planami lokacji; obecne dane nie uzasadniają przedstawiania mapy jako dokładnej jak Google Maps.
+- Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK. Zmiany wymagają sprawdzenia lokalnego builda.
