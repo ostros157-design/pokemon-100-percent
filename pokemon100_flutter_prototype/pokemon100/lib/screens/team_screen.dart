@@ -9,6 +9,8 @@ import '../data/move_data.dart';
 import '../data/pokemon_learnset_data.dart';
 import '../models/pokemon.dart';
 import '../services/team_recommendation_service.dart';
+import '../services/team_battle_analysis.dart';
+import '../data/team_game_availability.dart';
 
 class TeamScreen extends StatefulWidget {
   const TeamScreen({super.key});
@@ -27,6 +29,7 @@ class _TeamScreenState extends State<TeamScreen> {
 
   static const Map<String, String> _games = {
     'lets_go_pikachu': "Pokémon: Let's Go, Pikachu!",
+    'lets_go_eevee': "Pokémon: Let's Go, Eevee!",
     'emerald': 'Pokémon Emerald',
     'firered': 'Pokémon FireRed',
     'soulsilver': 'Pokémon SoulSilver',
@@ -523,7 +526,7 @@ class _TeamScreenState extends State<TeamScreen> {
             children: [
               const Text('Dopasuj Pokémona', style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
               const SizedBox(height: 6),
-              const Text('Propozycje uwzględniają odporności typów, statystyki bazowe, wybrane umiejętności oraz ruchy ustawione już w drużynie. Przy lukach w pokryciu typów system wskazuje Pokémony, których typ może potencjalnie pomóc — dostępność konkretnych ruchów kandydata trzeba jeszcze zweryfikować. Dostępność jest filtrowana według regionalnego Pokédexu; system nie uwzględnia jeszcze etapu fabuły, poziomu, pełnych warunków wymian ani wszystkich wydarzeń specjalnych.'),
+              const Text('Propozycje uwzględniają odporności typów, statystyki bazowe, wybrane umiejętności oraz przypisane ruchy. Kandydat uzupełniający lukę typem nie ma automatycznie potwierdzonego odpowiedniego ruchu. Ranking bierze tylko gatunki potwierdzone w danych regionalnych lub podstawowej wersji Let’s Go; wymiany, eventy i niepełne dane nie są zgadywane.'),
               const SizedBox(height: 12),
               ...recommendations.map((recommendation) => Card(
                 child: ListTile(
@@ -595,6 +598,36 @@ class _TeamScreenState extends State<TeamScreen> {
           final onlyFirst = firstMembers.where((pokemon) => !secondIds.contains(pokemon.id)).toList();
           final onlySecond = secondMembers.where((pokemon) => !firstIds.contains(pokemon.id)).toList();
           final sameGame = first.gameId == second.gameId;
+          final profileA = TeamBattleAnalysis.analyze(firstMembers, first.movesByPokemon);
+          final profileB = TeamBattleAnalysis.analyze(secondMembers, second.movesByPokemon);
+          final sharedCoverage = profileA.coveredTypes.intersection(profileB.coveredTypes).toList()..sort();
+          final onlyCoverageA = profileA.coveredTypes.difference(profileB.coveredTypes).toList()..sort();
+          final onlyCoverageB = profileB.coveredTypes.difference(profileA.coveredTypes).toList()..sort();
+
+          String counts(Map<String, int> values) {
+            final entries = values.entries.toList()
+              ..sort((a, b) => b.value != a.value ? b.value.compareTo(a.value) : a.key.compareTo(b.key));
+            return entries.isEmpty ? 'brak' : entries.map((e) => e.key + ' (' + e.value.toString() + ')').join(', ');
+          }
+
+          Widget profileColumn(String heading, TeamBattleProfile profile) {
+            return Expanded(child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(heading, style: const TextStyle(fontWeight: FontWeight.bold)),
+                const SizedBox(height: 5),
+                Text('Słabości: ' + counts(profile.weaknesses), style: Theme.of(context).textTheme.bodySmall),
+                const SizedBox(height: 5),
+                Text('Odporności: ' + counts(profile.resistances), style: Theme.of(context).textTheme.bodySmall),
+                const SizedBox(height: 5),
+                Text('Immunitety: ' + counts(profile.immunities), style: Theme.of(context).textTheme.bodySmall),
+                const SizedBox(height: 5),
+                Text('Pokryte typy ruchami: ' + (profile.coveredTypes.isEmpty ? 'brak' : (profile.coveredTypes.toList()..sort()).join(', ')), style: Theme.of(context).textTheme.bodySmall),
+                Text('Braki: ' + (profile.uncoveredTypes.isEmpty ? 'brak' : profile.uncoveredTypes.join(', ')), style: Theme.of(context).textTheme.bodySmall),
+                Text('Ruchy STAB: ' + profile.stabMoveCount.toString() + ' · ataki: ' + profile.damagingMoveCount.toString(), style: Theme.of(context).textTheme.bodySmall),
+              ],
+            ));
+          }
 
           Widget teamPicker(String label, String selectedId, ValueChanged<String?> onChanged) {
             return DropdownButtonFormField<String>(
@@ -665,6 +698,23 @@ class _TeamScreenState extends State<TeamScreen> {
                       Text('Tylko w A: ${onlyFirst.isEmpty ? 'brak' : onlyFirst.map((p) => p.name).join(', ')}'),
                       const SizedBox(height: 8),
                       Text('Tylko w B: ${onlySecond.isEmpty ? 'brak' : onlySecond.map((p) => p.name).join(', ')}'),
+                      const Divider(height: 24),
+                      const Align(alignment: Alignment.centerLeft, child: Text('Porównanie walki', style: TextStyle(fontWeight: FontWeight.bold))),
+                      const SizedBox(height: 8),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          profileColumn('Drużyna A', profileA),
+                          const SizedBox(width: 12),
+                          profileColumn('Drużyna B', profileB),
+                        ],
+                      ),
+                      const SizedBox(height: 12),
+                      Text('Wspólne pokrycie ruchami: ' + (sharedCoverage.isEmpty ? 'brak' : sharedCoverage.join(', '))),
+                      const SizedBox(height: 4),
+                      Text('Pokrycie tylko A: ' + (onlyCoverageA.isEmpty ? 'brak' : onlyCoverageA.join(', '))),
+                      const SizedBox(height: 4),
+                      Text('Pokrycie tylko B: ' + (onlyCoverageB.isEmpty ? 'brak' : onlyCoverageB.join(', '))),
                     ],
                   ],
                 ),
@@ -758,11 +808,11 @@ class _TeamScreenState extends State<TeamScreen> {
                 ),
                 const SizedBox(height: 8),
                 Text(
-                  _selectedGame == TeamRecommendationService.supportedGameId
-                      ? "Filtr dostępności: Let's Go, Pikachu! Pokémony dostępne wyłącznie w wersji Eevee i Mew są wykluczone. Ewolucje przez wymianę mogą wymagać wymiany."
+                  _selectedGame == 'lets_go_pikachu' || _selectedGame == 'lets_go_eevee'
+                      ? 'Filtr rozróżnia Pokémony dostępne w tej wersji, ekskluzywne dla drugiej wersji, ewolucje przez wymianę i specjalny transfer. W selektorze możesz włączyć także pozycje wymagające wymiany lub dodatkowej metody.'
                       : TeamRecommendationService.isSupportedGame(_selectedGame)
-                          ? 'Filtr oparty na regionalnym Pokédexie; może nie obejmować wszystkich spotkań po zakończeniu gry.'
-                          : 'Dla tej gry nie ma jeszcze danych dostępności.' ,
+                          ? 'Dane potwierdzają przynależność do regionalnego Pokédexu. Gatunki spoza listy można pokazać osobno, ale ich dostępność wymaga sprawdzenia (np. post-game, wymiana lub event).'
+                          : 'Dla tej gry nie ma jeszcze wiarygodnych danych dostępności.' ,
                 ),
                 const SizedBox(height: 16),
                 TextField(
@@ -826,7 +876,7 @@ class _TeamScreenState extends State<TeamScreen> {
                               ),
                             ),
                             title: Text(pokemon.name),
-                            subtitle: Text('#${pokemon.id.toString().padLeft(3, '0')} · ${pokemon.types.join(' / ')}'),
+                            subtitle: Text('#${pokemon.id.toString().padLeft(3, '0')} · ${pokemon.types.join(' / ')}\\n${TeamGameAvailability.forPokemon(widget.gameId, pokemon.id).label}'),
                             trailing: IconButton(
                               tooltip: 'Usuń z drużyny',
                               icon: const Icon(Icons.remove_circle_outline),
@@ -895,13 +945,16 @@ class _PokemonPicker extends StatefulWidget {
 
 class _PokemonPickerState extends State<_PokemonPicker> {
   String _query = '';
+  bool _showOutsideRegionalDex = false;
 
   @override
   Widget build(BuildContext context) {
     final query = _query.trim().toLowerCase();
     final results = pokemonList.where((pokemon) {
       if (widget.excludedIds.contains(pokemon.id)) return false;
-      if (!TeamRecommendationService.isAvailableInGame(pokemon, widget.gameId)) return false;
+      final availability = TeamGameAvailability.forPokemon(widget.gameId, pokemon.id);
+      if (availability.kind != TeamAvailabilityKind.inGame &&
+          !(_showOutsideRegionalDex && availability.canBeShownAsExtra)) return false;
       return query.isEmpty ||
           pokemon.name.toLowerCase().contains(query) ||
           pokemon.id.toString().contains(query) ||
@@ -929,7 +982,14 @@ class _PokemonPickerState extends State<_PokemonPicker> {
                 ),
               ),
             ),
-            const SizedBox(height: 8),
+            SwitchListTile(
+              contentPadding: const EdgeInsets.symmetric(horizontal: 16),
+              title: const Text('Pokaż też wymiany, eventy i gatunki spoza regionalnego Pokédexu'),
+              subtitle: const Text('Takie pozycje są oznaczone jako wymagające dodatkowej weryfikacji.'),
+              value: _showOutsideRegionalDex,
+              onChanged: (value) => setState(() => _showOutsideRegionalDex = value),
+            ),
+            const SizedBox(height: 4),
             Expanded(
               child: results.isEmpty
                   ? const Center(child: Text('Brak wyników.'))
@@ -962,100 +1022,22 @@ class _PokemonPickerState extends State<_PokemonPicker> {
 }
 
 
-/// Analiza rozdziela problemy defensywne (tarcza) i ofensywne (miecz).
+/// Ekranowa prezentacja wspólnego profilu walki.
 class _TeamAnalysis extends StatelessWidget {
   final List<Pokemon> team;
   final Map<int, List<String>> movesByPokemon;
 
   const _TeamAnalysis({required this.team, required this.movesByPokemon});
 
-  static const Map<String, Set<String>> _strongAgainst = {
-    'Normal': {}, 'Fire': {'Grass', 'Ice', 'Bug', 'Steel'},
-    'Water': {'Fire', 'Ground', 'Rock'}, 'Electric': {'Water', 'Flying'},
-    'Grass': {'Water', 'Ground', 'Rock'}, 'Ice': {'Grass', 'Ground', 'Flying', 'Dragon'},
-    'Fighting': {'Normal', 'Ice', 'Rock', 'Dark', 'Steel'}, 'Poison': {'Grass', 'Fairy'},
-    'Ground': {'Fire', 'Electric', 'Poison', 'Rock', 'Steel'}, 'Flying': {'Grass', 'Fighting', 'Bug'},
-    'Psychic': {'Fighting', 'Poison'}, 'Bug': {'Grass', 'Psychic', 'Dark'},
-    'Rock': {'Fire', 'Ice', 'Flying', 'Bug'}, 'Ghost': {'Psychic', 'Ghost'},
-    'Dragon': {'Dragon'}, 'Dark': {'Psychic', 'Ghost'}, 'Steel': {'Ice', 'Rock', 'Fairy'},
-    'Fairy': {'Fighting', 'Dragon', 'Dark'},
-  };
-  static const Map<String, Set<String>> _resists = {
-    'Normal': {}, 'Fire': {'Fire', 'Grass', 'Ice', 'Bug', 'Steel', 'Fairy'},
-    'Water': {'Fire', 'Water', 'Ice', 'Steel'}, 'Electric': {'Electric', 'Flying', 'Steel'},
-    'Grass': {'Water', 'Electric', 'Grass', 'Ground'}, 'Ice': {'Ice'},
-    'Fighting': {'Bug', 'Rock', 'Dark'}, 'Poison': {'Grass', 'Fighting', 'Poison', 'Bug', 'Fairy'},
-    'Ground': {'Poison', 'Rock'}, 'Flying': {'Fighting', 'Bug', 'Grass'},
-    'Psychic': {'Fighting', 'Psychic'}, 'Bug': {'Fighting', 'Ground', 'Grass'},
-    'Rock': {'Normal', 'Fire', 'Poison', 'Flying'}, 'Ghost': {'Poison', 'Bug'},
-    'Dragon': {'Fire', 'Water', 'Electric', 'Grass'}, 'Dark': {'Ghost', 'Dark'},
-    'Steel': {'Normal', 'Grass', 'Ice', 'Flying', 'Psychic', 'Bug', 'Rock', 'Dragon', 'Steel', 'Fairy'},
-    'Fairy': {'Fighting', 'Bug', 'Dark'},
-  };
-  static const Map<String, Set<String>> _immune = {
-    'Normal': {'Ghost'}, 'Electric': {}, 'Ground': {'Electric'},
-    'Flying': {'Ground'}, 'Ghost': {'Normal', 'Fighting'},
-    'Dark': {'Psychic'}, 'Steel': {'Poison'}, 'Fairy': {'Dragon'},
-  };
-  static const Map<String, String> _displayTypes = {
-    'normal': 'Normal', 'fire': 'Fire', 'water': 'Water', 'electric': 'Electric',
-    'grass': 'Grass', 'ice': 'Ice', 'fighting': 'Fighting', 'poison': 'Poison',
-    'ground': 'Ground', 'flying': 'Flying', 'psychic': 'Psychic', 'bug': 'Bug',
-    'rock': 'Rock', 'ghost': 'Ghost', 'dragon': 'Dragon', 'dark': 'Dark',
-    'steel': 'Steel', 'fairy': 'Fairy',
-  };
-
-  double _multiplier(String attackType, List<String> defendingTypes) {
-    var multiplier = 1.0;
-    for (final defendingType in defendingTypes) {
-      if (_immune[defendingType]?.contains(attackType) ?? false) return 0;
-      if (_strongAgainst[attackType]?.contains(defendingType) ?? false) {
-        multiplier *= 2;
-      } else if (_resists[defendingType]?.contains(attackType) ?? false) {
-        multiplier *= 0.5;
-      }
-    }
-    return multiplier;
-  }
-
   @override
   Widget build(BuildContext context) {
-    final defensive = <String, int>{};
-    for (final attackType in _strongAgainst.keys) {
-      final count = team.where((pokemon) => _multiplier(attackType, pokemon.types) > 1).length;
-      if (count > 0) defensive[attackType] = count;
-    }
-    final defensiveSorted = defensive.entries.toList()
+    final profile = TeamBattleAnalysis.analyze(team, movesByPokemon);
+    final weaknessEntries = profile.weaknesses.entries.toList()
       ..sort((a, b) => b.value != a.value ? b.value.compareTo(a.value) : a.key.compareTo(b.key));
-
-    final catalogue = <String, MoveData>{
-      for (final move in moveCatalogue) move.name.trim().toLowerCase(): move,
-    };
-    final coverage = <String, List<String>>{};
-    final unknown = <String>[];
-    var damagingMoveCount = 0;
-    for (final pokemon in team) {
-      for (final name in movesByPokemon[pokemon.id] ?? const <String>[]) {
-        final move = catalogue[name.trim().toLowerCase()];
-        if (move == null) {
-          unknown.add('${pokemon.name}: $name');
-          continue;
-        }
-        if (move.category == 'status' || (move.power ?? 0) <= 0) continue;
-        damagingMoveCount++;
-        final moveType = _displayTypes[move.type.toLowerCase()];
-        if (moveType == null) continue;
-        for (final target in _strongAgainst.keys) {
-          if (_multiplier(moveType, [target]) > 1) {
-            final label = '${pokemon.name} — ${move.name}';
-            coverage.putIfAbsent(target, () => <String>[]);
-            if (!coverage[target]!.contains(label)) coverage[target]!.add(label);
-          }
-        }
-      }
-    }
-    final gaps = _strongAgainst.keys.where((type) => !coverage.containsKey(type)).toList();
-    final configured = team.where((p) => (movesByPokemon[p.id] ?? const <String>[]).isNotEmpty).length;
+    final resistanceEntries = profile.resistances.entries.toList()
+      ..sort((a, b) => b.value != a.value ? b.value.compareTo(a.value) : a.key.compareTo(b.key));
+    final immunityEntries = profile.immunities.entries.toList()
+      ..sort((a, b) => b.value != a.value ? b.value.compareTo(a.value) : a.key.compareTo(b.key));
 
     return Card(
       child: Padding(
@@ -1063,56 +1045,69 @@ class _TeamAnalysis extends StatelessWidget {
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           const Text('Analiza drużyny', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
           const SizedBox(height: 6),
-          const Text('Jak czytać wynik: 2/6 oznacza, że 2 z 6 Pokémonów są słabe na ten typ ataku. Im mniejsza liczba, tym lepiej.'),
+          Text('Zestawy ruchów ustawiono u ' + profile.configuredMoveSets.toString() +
+              '/' + team.length.toString() + ' Pokémonów. Rozpoznano ' +
+              profile.damagingMoveCount.toString() + ' ataków, w tym ' +
+              profile.stabMoveCount.toString() + ' ruchów STAB.'),
           const SizedBox(height: 14),
-          Row(children: [
-            Icon(Icons.shield, color: Theme.of(context).colorScheme.error),
-            const SizedBox(width: 8),
-            const Text('Tarcza — słabości w obronie', style: TextStyle(fontWeight: FontWeight.bold)),
+          const Row(children: [
+            Icon(Icons.shield_outlined),
+            SizedBox(width: 8),
+            Text('Tarcza — obrona', style: TextStyle(fontWeight: FontWeight.bold)),
           ]),
           const SizedBox(height: 6),
-          if (defensiveSorted.isEmpty)
-            const Text('Brak wykrytych słabości defensywnych.')
+          const Text('Liczba Pokémonów podatnych, odpornych lub odpornych całkowicie na dany typ ataku.'),
+          const SizedBox(height: 6),
+          if (weaknessEntries.isEmpty)
+            const Text('Brak wykrytych słabości.')
           else
-            Wrap(spacing: 8, runSpacing: 4, children: defensiveSorted.map((entry) => Chip(
-              avatar: Icon(Icons.shield, size: 18, color: Theme.of(context).colorScheme.error),
-              label: Text('${entry.key} · ${entry.value}/${team.length} podatne'),
+            Wrap(spacing: 7, runSpacing: 4, children: weaknessEntries.map((entry) => Chip(
+              avatar: const Icon(Icons.warning_amber, size: 17),
+              label: Text(entry.key + ' · ' + entry.value.toString() + '/' + team.length.toString() + ' słabych'),
             )).toList()),
-          const SizedBox(height: 14),
-          Row(children: [
-            Icon(Icons.sports_martial_arts, color: Theme.of(context).colorScheme.primary),
-            const SizedBox(width: 8),
-            const Text('Miecz — pokrycie konkretnymi ruchami', style: TextStyle(fontWeight: FontWeight.bold)),
-          ]),
-          const SizedBox(height: 4),
-          Text('Zestawy ruchów ustawiono u $configured/${team.length} Pokémonów. Rozpoznano $damagingMoveCount ruchów zadających obrażenia.'),
-          const SizedBox(height: 8),
-          if (damagingMoveCount == 0)
-            const Text('Dodaj nazwy ruchów z katalogu aplikacji, aby sprawdzić ich skuteczność przeciwko typom przeciwników.')
-          else ...[
-            if (gaps.isEmpty)
-              const Text('Ruchy w drużynie mają super skuteczne pokrycie przeciwko wszystkim typom.')
-            else
-              Wrap(spacing: 8, runSpacing: 4, children: gaps.map((type) => Chip(
-                avatar: Icon(Icons.warning_amber, size: 18, color: Theme.of(context).colorScheme.error),
-                label: Text(type),
-              )).toList()),
+          if (resistanceEntries.isNotEmpty) ...[
             const SizedBox(height: 8),
-            ...coverage.entries.map((entry) => Padding(
-              padding: const EdgeInsets.only(bottom: 5),
-              child: Text('${entry.key}: ${entry.value.join(', ')}', style: Theme.of(context).textTheme.bodySmall),
+            Text('Odporności: ' + resistanceEntries.map((e) => e.key + ' (' + e.value.toString() + ')').join(', ')),
+          ],
+          if (immunityEntries.isNotEmpty) ...[
+            const SizedBox(height: 6),
+            Text('Immunitety: ' + immunityEntries.map((e) => e.key + ' (' + e.value.toString() + ')').join(', ')),
+          ],
+          const Divider(height: 24),
+          const Row(children: [
+            Icon(Icons.sports_martial_arts),
+            SizedBox(width: 8),
+            Text('Miecz — pokrycie ruchami', style: TextStyle(fontWeight: FontWeight.bold)),
+          ]),
+          const SizedBox(height: 6),
+          if (profile.damagingMoveCount == 0)
+            const Text('Dodaj rozpoznane ruchy zadające obrażenia, aby sprawdzić pokrycie typów.')
+          else ...[
+            Text('Brakujące typy, na które można trafić super skutecznie: ' +
+                (profile.uncoveredTypes.isEmpty ? 'brak' : profile.uncoveredTypes.join(', '))),
+            const SizedBox(height: 8),
+            ...profile.moveCoverage.entries.map((entry) => Padding(
+              padding: const EdgeInsets.only(bottom: 4),
+              child: Text(entry.key + ': ' + entry.value.join(', '), style: Theme.of(context).textTheme.bodySmall),
             )),
           ],
-          if (unknown.isNotEmpty) ...[
+          if (profile.synergyHints.isNotEmpty) ...[
+            const Divider(height: 24),
+            const Text('Synergie ruchów i umiejętności', style: TextStyle(fontWeight: FontWeight.bold)),
+            const SizedBox(height: 6),
+            ...profile.synergyHints.map((hint) => Padding(
+              padding: const EdgeInsets.only(bottom: 5),
+              child: Text('• ' + hint, style: Theme.of(context).textTheme.bodySmall),
+            )),
+          ],
+          if (profile.unknownMoves.isNotEmpty) ...[
             const SizedBox(height: 8),
-            Text('Nierozpoznane nazwy pominięte w analizie: ${unknown.join(', ')}',
+            Text('Nierozpoznane nazwy pominięte w analizie: ' + profile.unknownMoves.join(', '),
               style: TextStyle(color: Theme.of(context).colorScheme.error, fontSize: 12)),
           ],
           const SizedBox(height: 8),
-          Text(
-            'Analiza wykorzystuje typ i kategorię ruchu z lokalnego katalogu. Nie oblicza jeszcze obrażeń, STAB, statystyk, zdolności ani ograniczeń dostępności ruchu w wybranej grze. Ruchy statusowe są pomijane.',
-            style: Theme.of(context).textTheme.bodySmall,
-          ),
+          Text('Analiza obejmuje typy, STAB, dopasowanie kategorii ruchu do statystyk i wybrane synergie umiejętności. To podpowiedzi, nie symulacja obrażeń: nie uwzględnia m.in. natur, EV/IV, przedmiotów, pogody, efektów pobocznych ani wszystkich zdolności.',
+            style: Theme.of(context).textTheme.bodySmall),
         ]),
       ),
     );
