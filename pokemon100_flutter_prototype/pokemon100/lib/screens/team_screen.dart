@@ -598,8 +598,8 @@ class _TeamScreenState extends State<TeamScreen> {
           final onlyFirst = firstMembers.where((pokemon) => !secondIds.contains(pokemon.id)).toList();
           final onlySecond = secondMembers.where((pokemon) => !firstIds.contains(pokemon.id)).toList();
           final sameGame = first.gameId == second.gameId;
-          final profileA = TeamBattleAnalysis.analyze(firstMembers, first.movesByPokemon);
-          final profileB = TeamBattleAnalysis.analyze(secondMembers, second.movesByPokemon);
+          final profileA = TeamBattleAnalysis.analyze(firstMembers, first.movesByPokemon, gameId: first.gameId);
+          final profileB = TeamBattleAnalysis.analyze(secondMembers, second.movesByPokemon, gameId: second.gameId);
           final sharedCoverage = profileA.coveredTypes.intersection(profileB.coveredTypes).toList()..sort();
           final onlyCoverageA = profileA.coveredTypes.difference(profileB.coveredTypes).toList()..sort();
           final onlyCoverageB = profileB.coveredTypes.difference(profileA.coveredTypes).toList()..sort();
@@ -800,9 +800,13 @@ class _TeamScreenState extends State<TeamScreen> {
                     if (value == null) return;
                     setState(() {
                       _selectedGame = value;
-                      _status = TeamRecommendationService.isSupportedGame(value)
-                          ? 'Filtr dostępności oparty na danych regionalnego Pokédexu.'
-                          : 'Brak danych dostępności dla tej gry — wybór i rekomendacje są zablokowane.';
+                      _status = !TeamRecommendationService.isSupportedGame(value)
+                          ? 'Brak danych dostępności dla tej gry — wybór i rekomendacje są zablokowane.'
+                          : (value == 'lets_go_pikachu' || value == 'lets_go_eevee')
+                              ? 'Dostępność rozróżnia wersjo-ekskluzywne Pokémony, wymiany i specjalne metody.'
+                              : value == 'firered'
+                                  ? 'Filtr FireRed uwzględnia znane ekskluzywne Pokémony LeafGreen i część metod post-game.'
+                                  : 'Filtr oparty na regionalnym Pokédexie; pozycje spoza listy pozostają niepotwierdzone.';
                     });
                   },
                 ),
@@ -914,7 +918,7 @@ class _TeamScreenState extends State<TeamScreen> {
                 const SizedBox(height: 12),
                 if (_team.isNotEmpty) ...[
                   const SizedBox(height: 12),
-                  _TeamAnalysis(team: _team, movesByPokemon: _movesByPokemon),
+                  _TeamAnalysis(team: _team, movesByPokemon: _movesByPokemon, gameId: _selectedGame),
                 ],
                 FilledButton.icon(
                   onPressed: _saving ? null : _saveTeam,
@@ -1026,12 +1030,13 @@ class _PokemonPickerState extends State<_PokemonPicker> {
 class _TeamAnalysis extends StatelessWidget {
   final List<Pokemon> team;
   final Map<int, List<String>> movesByPokemon;
+  final String gameId;
 
-  const _TeamAnalysis({required this.team, required this.movesByPokemon});
+  const _TeamAnalysis({required this.team, required this.movesByPokemon, required this.gameId});
 
   @override
   Widget build(BuildContext context) {
-    final profile = TeamBattleAnalysis.analyze(team, movesByPokemon);
+    final profile = TeamBattleAnalysis.analyze(team, movesByPokemon, gameId: gameId);
     final weaknessEntries = profile.weaknesses.entries.toList()
       ..sort((a, b) => b.value != a.value ? b.value.compareTo(a.value) : a.key.compareTo(b.key));
     final resistanceEntries = profile.resistances.entries.toList()
