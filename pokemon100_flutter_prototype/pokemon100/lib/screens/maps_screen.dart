@@ -3089,6 +3089,85 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
               ),
             ),
           ],
+          if (floors.length > 1 && location != 'Silph Co.') ...[
+            const SizedBox(height: 8),
+            Card(
+              margin: EdgeInsets.zero,
+              child: Padding(
+                padding: const EdgeInsets.all(12),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Icon(
+                          location == 'Celadon Department Store' ? Icons.elevator : Icons.stairs,
+                          color: Theme.of(context).colorScheme.primary,
+                        ),
+                        const SizedBox(width: 8),
+                        Expanded(
+                          child: Text(
+                            '${_transferLabel(location)} • ${floors.length} poziomów',
+                            style: Theme.of(context).textTheme.titleSmall,
+                          ),
+                        ),
+                        Text(
+                          selectedFloor ?? '',
+                          style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 8),
+                    DropdownButtonFormField<String>(
+                      value: selectedFloor,
+                      isExpanded: true,
+                      decoration: const InputDecoration(
+                        labelText: 'Przejdź bezpośrednio na poziom',
+                        isDense: true,
+                        border: OutlineInputBorder(),
+                        contentPadding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                      ),
+                      items: floors.map((floor) => DropdownMenuItem<String>(
+                        value: floor,
+                        child: Text(floor),
+                      )).toList(),
+                      onChanged: (floor) {
+                        if (floor != null) setState(() => _selectedFloor = floor);
+                      },
+                    ),
+                    const SizedBox(height: 8),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: OutlinedButton.icon(
+                            onPressed: _adjacentFloor(location, selectedFloor, -1) == null
+                                ? null
+                                : () => _changeFloor(floors, selectedFloor!, -1),
+                            icon: const Icon(Icons.arrow_upward),
+                            label: Text(_adjacentFloor(location, selectedFloor, -1) ?? 'Górny koniec'),
+                          ),
+                        ),
+                        const SizedBox(width: 8),
+                        Expanded(
+                          child: FilledButton.tonalIcon(
+                            onPressed: _adjacentFloor(location, selectedFloor, 1) == null
+                                ? null
+                                : () => _changeFloor(floors, selectedFloor!, 1),
+                            icon: const Icon(Icons.arrow_downward),
+                            label: Text(_adjacentFloor(location, selectedFloor, 1) ?? 'Dolny koniec'),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Text(
+                      'Wybrany poziom jest pokazywany również na schemacie przejścia.',
+                      style: Theme.of(context).textTheme.bodySmall,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
           Text('Poziom / piętro', style: Theme.of(context).textTheme.titleSmall),
           const SizedBox(height: 6),
           Wrap(
@@ -4441,7 +4520,7 @@ class _KantoLocalAreaPainter extends CustomPainter {
         }
         final markerLabel = isLift ? 'WINDA' : 'SCHODY';
         final markerText = TextPainter(
-          text: TextSpan(text: markerLabel, style: const TextStyle(color: Colors.white, fontSize: 7, fontWeight: FontWeight.w900)),
+          text: TextSpan(text: markerLabel + (location == 'Silph Co.' ? '' : ' • ' + floorName), style: const TextStyle(color: Colors.white, fontSize: 7, fontWeight: FontWeight.w900)),
           textDirection: TextDirection.ltr,
           maxLines: 1,
         )..layout(maxWidth: markerRect.width);
