@@ -19,6 +19,9 @@ class TeamRecommendationService {
   static bool isSupportedGame(String gameId) =>
       TeamGameAvailability.supports(gameId);
 
+  static bool hasVerifiedAvailabilityData(String gameId) =>
+      TeamGameAvailability.hasVerifiedData(gameId);
+
   /// True only when the current availability dataset explicitly confirms the
   /// species as part of the selected version's normal regional roster.
   /// Trade/event/unknown cases are kept out of automatic recommendations.
@@ -73,7 +76,7 @@ class TeamRecommendationService {
     Map<int, List<String>> movesByPokemon = const <int, List<String>>{},
     int limit = 5,
   }) {
-    if (team.isEmpty || !isSupportedGame(gameId)) return const [];
+    if (team.isEmpty || !hasVerifiedAvailabilityData(gameId)) return const [];
     final weakCounts = <String, int>{};
     final hasFairyType = !{'emerald', 'firered', 'soulsilver'}.contains(gameId);
     final attackTypes = _superEffectiveAgainst.keys
