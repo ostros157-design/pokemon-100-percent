@@ -1,3 +1,16 @@
+### Poradnik Let's Go, Pikachu! — Route 19–25 (2026-11-08)
+
+- Dodano 20 kroków tabel spotkań dla Route 19–25.
+- Route 19: latające i wodne spotkania.
+- Route 20: latające i wodne spotkania; Lapras pozostaje specjalnym spawnem bez stałego procentu.
+- Route 21: trawa, niebo i woda; uwzględniono wersjonowe ewolucje linii Oddish/Bellsprout.
+- Route 22 i 23: osobne tabele trawy, nieba i wody.
+- Route 24 i 25: trawa, niebo i woda; Squirtle oznaczono jako specjalny spawn bez stałego procentu. Dodano osobny wpis o prezencie Charmander Lv.14 na Route 24.
+- Standardowe tabele procentowe rozdzielono według metody spotkania. Rzadkie spawny i prezenty nie są mieszane z procentami losowych spotkań.
+- Źródła: RotomLabs — strony Let's Go Pikachu & Eevee dla Route 19–25.
+- Nie uruchomiono Flutter Analyzer, testów ani APK.
+
+
 ### Poradnik Let's Go, Pikachu! — Route 13–18 (2026-11-08)
 
 - Dodano 14 kroków tabel spotkań dla Route 13, 14, 15, 16, 17 i 18.
