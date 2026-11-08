@@ -5632,3 +5632,12 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Dzięki temu nie będą błędnie prezentowane jako neutralne wzmianki ani Pokémony trenerów. Nadal nie dostają procentów, ponieważ nie są losowymi spotkaniami.
 - Zachowano osobną kategorię procentowych spotkań losowych.
 - Nie uruchomiono Flutter Analyzer, testów ani APK.
+
+
+### Poradnik Let’s Go, Pikachu! — post-game: Green, Red i Team Rocket (2026-11-08)
+
+- Uzupełniono jawne składy Pokémonów Green (Clefable, Gengar, Kangaskhan, Victreebel, Ninetales, Blastoise) w pierwszej i codziennej walce.
+- Uzupełniono pełną drużynę Reda na poziomie 85: Pikachu, Machamp, Arcanine, Lapras, Snorlax i Venusaur; dopisano prawidłowy warunek pojawienia się Reda (co najmniej sześciu pokonanych Master Trainerów i pełna drużyna sześciu Pokémonów).
+- Uzupełniono składy post-game Team Rocket: Archer (Electrode, Golbat, Magmar, Weezing) oraz Jessie i James (Arbok, Weezing).
+- Źródła: Bulbapedia Part 18, Serebii Red/Green, SuperCheats Red.
+- Nie uruchomiono Flutter Analyzer, testów ani APK.
