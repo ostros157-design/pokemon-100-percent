@@ -23,9 +23,9 @@ class TeamRecommendationService {
   static bool hasVerifiedAvailabilityData(String gameId) =>
       TeamGameAvailability.hasVerifiedData(gameId);
 
-  /// True only when the current availability dataset explicitly confirms the
-  /// species as part of the selected version's normal regional roster.
-  /// Trade/event/unknown cases are kept out of automatic recommendations.
+  /// True when the current dataset provides a usable status for the species:
+  /// regional-dex membership, normal in-game access, trade, post-game or breeding.
+  /// Event-only and unknown cases are kept out of automatic recommendations.
   static bool isAvailableInGame(Pokemon pokemon, String gameId) =>
       TeamGameAvailability.forPokemon(gameId, pokemon.id).canBeRecommended;
 
