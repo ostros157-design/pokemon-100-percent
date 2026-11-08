@@ -578,7 +578,7 @@ const List<Guide> guidesList = [
         section: 'Route 4 i Mt. Moon',
         title: 'Zbadaj zachodnią część Route 4',
         description:
-            'Po Route 3 przejdź na zachodnią część Route 4. W trawie spotkasz Rattatę (25%), Spearowa (30%), Sandshrewa (20%), Mankeya (20%) i Psyducka (5%) na poziomach 7–12. Charmander może pojawić się jako rzadki specjalny spawn, ale nie ma potwierdzonego stałego procentu. W Pokémon Center możesz wyleczyć drużynę i kupić Magikarpa od mężczyzny po lewej stronie lady za 500₽.',
+            'Po Route 3 przejdź na zachodnią część Route 4. W trawie spotkasz Rattatę (25%), Spearowa (30%), Sandshrewa (20%), Mankeya (20%) i Psyducka (5%) na poziomach 7–12. Charmander może pojawić się jako rzadki specjalny spawn, ale nie ma potwierdzonego stałego procentu. W Pokémon Center możesz wyleczyć drużynę i kupić Magikarpa od mężczyzny po lewej stronie lady za \\$500.',
         location: 'Route 4 — zachód',
         pokemon: ['Rattata', 'Spearow', 'Sandshrew', 'Mankey', 'Psyduck', 'Charmander'],
         encounterRatesPercent: {
@@ -589,13 +589,13 @@ const List<Guide> guidesList = [
           'Psyduck': 5,
         },
         wildPokemonNoRate: ['Charmander'],
-        items: ['Magikarp (prezent za 500₽, poziom 5)'],
+        items: ['Magikarp (prezent za \\$500, poziom 5)'],
       ),
       GuideStep(
         section: 'Route 4 i Mt. Moon',
         title: 'Pokonaj Coach Trainer Oberona',
         description:
-            'Opcjonalny trener stoi na zachodniej części Route 4. Używa Meowtha na poziomie 13. Po zwycięstwie otrzymasz 1300₽ oraz TM57 Pay Day. Wśród skał na zachód od Pokémon Center podnieś Escape Rope przed wejściem do Mt. Moon.',
+            'Opcjonalny trener stoi na zachodniej części Route 4. Używa Meowtha na poziomie 13. Po zwycięstwie otrzymasz \\$1,300 oraz TM57 Pay Day. Wśród skał na zachód od Pokémon Center podnieś Escape Rope przed wejściem do Mt. Moon.',
         location: 'Route 4 — zachód',
         trainers: ['Coach Trainer Oberon'],
         pokemon: ['Meowth'],
@@ -681,7 +681,7 @@ const List<Guide> guidesList = [
         section: 'Route 4 i Mt. Moon',
         title: 'Pokonaj Jessie i Jamesa w pierwszej walce podwójnej',
         description:
-            'Przed wyjściem z Mt. Moon Jessie i James ujawnią swoją tożsamość i zaatakują razem z Meowthem. To pierwsza walka podwójna w tej przygodzie: do walki wystawią się dwa pierwsze Pokémony w lewym górnym i środkowym miejscu drużyny. Jessie używa Ekansa Lv.12, a James Koffinga Lv.12. Po zwycięstwie Team Rocket ucieknie, a ty możesz wyjść z jaskini.',
+            'Przed wyjściem z Mt. Moon Jessie i James ujawnią swoją tożsamość i zaatakują, a Meowth będzie im towarzyszył. To pierwsza walka podwójna w tej przygodzie: do walki wystawią się dwa pierwsze Pokémony w lewym górnym i środkowym miejscu drużyny. Jessie używa Ekansa Lv.12, a James Koffinga Lv.12. Po zwycięstwie Team Rocket ucieknie, a ty możesz wyjść z jaskini.',
         location: 'Mt. Moon — B2F, wyjście',
         trainers: ['Team Rocket Jessie', 'Team Rocket James'],
         pokemon: ['Ekans', 'Koffing'],
