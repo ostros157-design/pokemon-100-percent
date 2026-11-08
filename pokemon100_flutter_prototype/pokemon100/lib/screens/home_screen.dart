@@ -94,7 +94,7 @@ MaterialPageRoute(builder: (_) => const MapsScreen()),
 _HomeButton(
 icon: Icons.music_note,
 title: 'Muzyka Pokémon',
-subtitle: 'Otwórz oficjalną bibliotekę melodii',
+subtitle: 'Odtwarzaj wbudowaną muzykę bez internetu',
 onTap: () {
 Navigator.push(
 context,
