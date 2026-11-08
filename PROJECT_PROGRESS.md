@@ -1,3 +1,15 @@
+### Poradnik Let's Go, Pikachu! — Route 8–12 i Snorlax (2026-11-08)
+
+- Dodano 14 kroków z tabelami dla Route 8, Route 9, Route 10, Route 11 i Route 12.
+- Rozdzielono spotkania naziemne, latające i wodne. Route 10, Route 11 i Route 12 mają osobne tabele wodne.
+- Uzupełniono standardowe poziomy: Route 8 22–27; Route 9 17–22; Route 10 18–23; Route 11 13–18; Route 12 31–36; latające 3–56.
+- Dodano osobny wpis o fabularnym, statycznym spotkaniu ze Snorlaxem na Route 12 (poziom 34), bez traktowania go jako losowego spawnu.
+- Chansey oraz specjalne latające spawny pozostają bez procentów, zgodnie z tabelami źródłowymi.
+- Źródła: RotomLabs — strony Let's Go Pikachu & Eevee dla Route 8, 9, 10, 11 i 12.
+- Nadal do sprawdzenia i uzupełnienia pozostają m.in. Route 7, Route 13–25 oraz lokacje jaskiniowe i budynki, których tabele nie zostały jeszcze dodane do poradnika.
+- Nie uruchomiono Flutter Analyzer, testów ani APK.
+
+
 ### Poradnik Let's Go, Pikachu! — kolejne zweryfikowane tabele spotkań (2026-11-08)
 
 - Dodano 12 kroków tabel spotkań, rozdzielając metody: trawa, niebo, woda i osobne piętra jaskiń.
