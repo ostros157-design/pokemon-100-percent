@@ -5715,3 +5715,12 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Dodano osobny ekran startowy wyboru mapy z wyborem generacji, gry i — gdy dotyczy — obszaru regionu. Dodano też przycisk powrotu do wyboru mapy z ekranu mapy.
 - Nie zmieniono schematycznych współrzędnych mapy ani nie dodano niezweryfikowanych pinezek. Styl i dokładność samej mapy wymagają osobnego etapu z potwierdzonymi planami lokacji; obecne dane nie uzasadniają przedstawiania mapy jako dokładnej jak Google Maps.
 - Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK. Zmiany wymagają sprawdzenia lokalnego builda.
+
+### Mapy — stały wskaźnik lokacji i widok pełnoekranowy (2026-11-09)
+
+- Wskaźnik lokacji na mapie Kanto pozostaje widoczny zamiast znikać po 2 sekundach. Aktualizuje się po przesunięciu mapy i po wybraniu pinezki; przy braku bliskiego węzła pokazuje „Obszar Kanto”.
+- Zmieniono pasek lokacji na czytelny jasny panel z ikoną lokalizacji, zbliżony do interfejsów map nawigacyjnych.
+- Zwiększono proporcje widoku mapy, aby lepiej wykorzystywać szerokość ekranu.
+- Dodano przycisk otwierania interaktywnej mapy w trybie pełnoekranowym, z zachowaniem przesuwania, zoomu i wyboru lokacji.
+- Nie dodano fikcyjnych współrzędnych ani nie przedstawiono schematu jako mapy w skali Google Maps. Dokładność topologii i pozycji wymaga jeszcze weryfikacji na podstawie planów gry lub wiarygodnych źródeł.
+- Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK.
