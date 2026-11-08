@@ -5690,3 +5690,6 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Naprawiono obsługę nullable w menu zapisanych drużyn: po sprawdzeniu, że wybrana drużyna istnieje, dalsza obsługa korzysta z lokalnej, nie-nullowalnej referencji. Dotyczy wczytywania, kopiowania i usuwania.
 - Poprawiono odwołanie do wybranej gry w karcie Pokémonów kreatora drużyn: ekran używa własnego stanu `_selectedGame`, zamiast nieistniejącego `widget.gameId`.
 - Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK w tym środowisku. Naprawa odpowiada błędom wskazanym w dostarczonym logu; wymaga ponownego builda na komputerze użytkownika.
+
+
+- Uzupełnienie naprawy po ponownym odczycie rzeczywistego logu: w `guides_data.dart` pozostały jeszcze 22 nieescapowane znaki `$` w opisach trenerów, nagród i Mega Stones. Wszystkie 22 zostały teraz zamienione na poprawne `\$`; kontrola tekstowa potwierdziła 0 pozostałych nieescapowanych znaków waluty. `team_screen.dart` zawiera już wcześniejsze poprawki: lokalną nie-nullowalną referencję `chosen` po kontroli `selected == null` oraz użycie `_selectedGame` zamiast nieistniejącego `widget.gameId`. Commit danych poradnika: `87926276cd30ef6e3294a5a75b9cae5ff6ec42c7`. Nie uruchomiono Analyzer, testów ani APK.
