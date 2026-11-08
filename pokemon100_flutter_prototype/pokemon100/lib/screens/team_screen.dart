@@ -381,7 +381,22 @@ class _TeamScreenState extends State<TeamScreen> {
                     : 'Brak pełnych danych nauki ruchów dla tego Pokémona i gry. Nazwy zostaną zapisane bez weryfikacji dostępności.',
                 style: Theme.of(dialogContext).textTheme.bodySmall,
               ),
-              const SizedBox(height: 12),
+              if (canVerify) ...[
+                ExpansionTile(
+                  tilePadding: EdgeInsets.zero,
+                  title: Text('Pokaż dostępne ruchy (${availableMoveNames.length})'),
+                  children: [
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        (availableMoveNames.toList()..sort()).join(' · '),
+                        style: Theme.of(dialogContext).textTheme.bodySmall,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+              const SizedBox(height: 8),
               ...List.generate(4, (index) => Padding(
                 padding: const EdgeInsets.only(bottom: 8),
                 child: TextField(
