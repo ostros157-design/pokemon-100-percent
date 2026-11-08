@@ -17,16 +17,14 @@ class TeamRecommendationService {
   static const String supportedGameId = 'lets_go_pikachu';
 
   static bool isSupportedGame(String gameId) =>
-      gameId == supportedGameId || TeamGameAvailability.supports(gameId);
+      TeamGameAvailability.supports(gameId);
 
-  static bool isAvailableInGame(Pokemon pokemon, String gameId) {
-    if (gameId == supportedGameId) {
-      const unavailable = {15, 23, 24, 37, 38, 52, 69, 70, 71, 109, 110, 127, 151};
-      return pokemon.id >= 1 && pokemon.id <= 151 &&
-          !unavailable.contains(pokemon.id);
-    }
-    return TeamGameAvailability.contains(gameId, pokemon.id);
-  }
+  /// True only when the current availability dataset explicitly confirms the
+  /// species as part of the selected version's normal regional roster.
+  /// Trade/event/unknown cases are kept out of automatic recommendations.
+  static bool isAvailableInGame(Pokemon pokemon, String gameId) =>
+      TeamGameAvailability.forPokemon(gameId, pokemon.id).kind ==
+      TeamAvailabilityKind.inGame;
 
   static const Map<String, Set<String>> _superEffectiveAgainst = {
     'Normal': {}, 'Fire': {'Grass', 'Ice', 'Bug', 'Steel'},
@@ -114,7 +112,12 @@ class TeamRecommendationService {
         }
       }
     }
-    final missingMoveCoverage = _superEffectiveAgainst.keys
+    // Normal has no weakness in the modern type chart, so it is not a
+    // meaningful "missing super-effective coverage" target.
+    final hittableTargetTypes = _superEffectiveAgainst.values
+        .expand((types) => types)
+        .toSet();
+    final missingMoveCoverage = hittableTargetTypes
         .where((targetType) => !coveredByAssignedMoves.containsKey(targetType))
         .toSet();
 
