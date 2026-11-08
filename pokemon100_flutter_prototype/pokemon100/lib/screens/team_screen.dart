@@ -535,7 +535,7 @@ class _TeamScreenState extends State<TeamScreen> {
             children: [
               const Text('Dopasuj Pokémona', style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
               const SizedBox(height: 6),
-              const Text('Propozycje uwzględniają odporności typów, statystyki bazowe, wybrane umiejętności oraz przypisane ruchy. Kandydat uzupełniający lukę typem nie ma automatycznie potwierdzonego odpowiedniego ruchu. Ranking bierze tylko gatunki potwierdzone w danych regionalnych lub podstawowej wersji Let’s Go; wymiany, eventy i niepełne dane nie są zgadywane.'),
+              const Text('Propozycje uwzględniają odporności typów, statystyki bazowe, wybrane umiejętności oraz przypisane ruchy. Kandydat uzupełniający lukę typem nie ma automatycznie potwierdzonego odpowiedniego ruchu. Ranking może uwzględniać jawnie oznaczone wymiany, post-game i hodowlę; Pokémony eventowe oraz pozycje o nieznanej dostępności nie są przedstawiane jako zwykłe spotkania.'),
               const SizedBox(height: 12),
               ...recommendations.map((recommendation) => Card(
                 child: ListTile(
