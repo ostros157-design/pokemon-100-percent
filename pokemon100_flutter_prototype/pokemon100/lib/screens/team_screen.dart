@@ -634,6 +634,8 @@ class _TeamScreenState extends State<TeamScreen> {
                 Text('Pokryte typy ruchami: ' + (profile.coveredTypes.isEmpty ? 'brak' : (profile.coveredTypes.toList()..sort()).join(', ')), style: Theme.of(context).textTheme.bodySmall),
                 Text('Braki: ' + (profile.uncoveredTypes.isEmpty ? 'brak' : profile.uncoveredTypes.join(', ')), style: Theme.of(context).textTheme.bodySmall),
                 Text('Ruchy STAB: ' + profile.stabMoveCount.toString() + ' · ataki: ' + profile.damagingMoveCount.toString(), style: Theme.of(context).textTheme.bodySmall),
+                Text('Wykryte synergie: ' + profile.synergyHints.length.toString(), style: Theme.of(context).textTheme.bodySmall),
+                ...profile.synergyHints.take(3).map((hint) => Text('• ' + hint, style: Theme.of(context).textTheme.bodySmall)),
               ],
             ));
           }
