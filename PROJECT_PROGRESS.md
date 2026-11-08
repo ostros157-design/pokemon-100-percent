@@ -5466,3 +5466,14 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Dodano zależność `audioplayers`; kafelek na ekranie głównym informuje teraz o muzyce offline.
 - Ograniczenia: na razie dostępny jest jeden utwór demonstracyjny. Nie potwierdzono jeszcze odtwarzania na Androidzie ani zużycia pamięci po instalacji.
 - Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK; weryfikacja wymaga laptopa i urządzenia.
+
+### Poradnik Let’s Go, Pikachu! — Route 4 i Mt. Moon (2026-11-08)
+
+- Rozszerzono poradnik od Route 3 o zachodnią Route 4, Coach Trainer Oberona, sprzedawcę Magikarpa, pełną ścieżkę przez Mt. Moon oraz wyjście na wschodnią Route 4 w stronę Cerulean City.
+- Dodano osobne, zweryfikowane tabele spotkań dla trawy Route 4 (Rattata 25%, Spearow 30%, Sandshrew 20%, Mankey 20%, Psyduck 5%), Mt. Moon 1F/B1F (40/40/15/4/1) i B2F (40/34/15/9/1/1), wody Route 4 (45/45/10) oraz nieba (60/40).
+- Dodano rzadkie spawny bez przypisywania im zmyślonych procentów: Charmander, Chansey, Charizard, Dragonite i ptaki legendarne. Model GuideStep rozróżnia teraz dzikie Pokémony bez stałej stawki od Pokémonów trenerów, dzięki czemu takie wpisy trafiają do właściwej sekcji bez procentu.
+- Dodano trenerów Mt. Moon z ich Pokémonami i poziomami, trzech Team Rocket Gruntów, Super Neda Miguela, walkę podwójną Jessie i Jamesa, wybór Helix/Dome Fossil, przedmioty i czterech Master Trainerów w post-game.
+- Ekran poradnika zachowuje trzy sekcje: Pokémony (dzikie spotkania), Trenerzy i Pokémony trenerów. Procenty są przypisane tylko do zwykłych tabel spotkań; specjalne spawny pozostają bez procentu.
+- Źródła: Bulbapedia Part 4 https://bulbapedia.bulbagarden.net/wiki/Walkthrough:Pok%C3%A9mon:_Let's_Go,_Pikachu!_and_Let's_Go,_Eevee!/Part_4 ; Serebii Route 4 https://www.serebii.net/pokearth/kanto/route4.shtml ; SuperCheats Mt. Moon https://www.supercheats.com/lets-go-pikachu/walkthrough/mt-moon .
+- Kontrola statyczna: sprawdzono obecność nowych kroków, bilans nawiasów w modelu i danych oraz sumy procentów każdej standardowej tabeli. Nie uruchomiono Flutter Analyzer, testów ani APK — wymagają laptopa.
+- Następny etap poradnika: Cerulean City, Misty, Nugget Bridge, Route 24–25 i Route 5.
