@@ -115,7 +115,7 @@ class TeamRecommendationService {
         if (candidateValue == null || average == null) continue;
         final difference = candidateValue - average;
         if (difference >= 25) {
-          final points = (difference / 15).floor().clamp(1, 4);
+          final points = (difference / 15).floor().clamp(1, 4).toInt();
           score += points;
           reasons.add('Wysoki parametr: ${entry.key} ${candidateValue} (średnia drużyny: ${average.round()})');
         }
