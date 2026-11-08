@@ -972,7 +972,7 @@ class _PokemonPickerState extends State<_PokemonPicker> {
     final results = pokemonList.where((pokemon) {
       if (widget.excludedIds.contains(pokemon.id)) return false;
       final availability = TeamGameAvailability.forPokemon(widget.gameId, pokemon.id);
-      if (availability.kind != TeamAvailabilityKind.inGame &&
+      if (!availability.canBeAdded &&
           !(_showOutsideRegionalDex && availability.canBeShownAsExtra)) return false;
       return query.isEmpty ||
           pokemon.name.toLowerCase().contains(query) ||
