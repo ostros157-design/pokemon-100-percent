@@ -127,6 +127,15 @@ class GuideStepCard extends StatelessWidget {
               const SizedBox(height: 4),
               _buildPokemonGroup(context, step.trainerPokemon),
             ],
+            if (step.pokemonMentions.isNotEmpty) ...[
+              const SizedBox(height: 8),
+              const Text(
+                'Pokémony wymienione w tym kroku:',
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+              const SizedBox(height: 4),
+              _buildPokemonGroup(context, step.pokemonMentions),
+            ],
             if (step.items.isNotEmpty) ...[
               const SizedBox(height: 8),
               const Text(
