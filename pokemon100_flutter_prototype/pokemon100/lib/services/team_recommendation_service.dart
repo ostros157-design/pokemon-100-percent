@@ -2,8 +2,7 @@ import '../data/pokemon_data.dart';
 import '../data/team_game_availability.dart';
 import '../models/pokemon.dart';
 
-/// Recommendations use the types in the local Pokédex only. The current
-/// Pokemon model does not contain game availability, moves, abilities, or stats.
+/// Recommendations combine type coverage with the existing Pokédex base stats and abilities.
 class TeamRecommendation {
   final Pokemon pokemon;
   final int score;
@@ -71,6 +70,22 @@ class TeamRecommendationService {
       }).length;
       if (count > 0) weakCounts[attackType] = count;
     }
+    final teamAverages = <String, double>{};
+    final statGetters = <String, int? Function(Pokemon)>{
+      'HP': (p) => p.hp,
+      'Atak': (p) => p.attack,
+      'Obrona': (p) => p.defense,
+      'Atak specjalny': (p) => p.specialAttack,
+      'Obrona specjalna': (p) => p.specialDefense,
+      'Szybkość': (p) => p.speed,
+    };
+    for (final entry in statGetters.entries) {
+      final values = team.map(entry.value).whereType<int>().toList();
+      if (values.isNotEmpty) {
+        teamAverages[entry.key] = values.reduce((a, b) => a + b) / values.length;
+      }
+    }
+
     final candidates = pokemonList.where((candidate) =>
       isAvailableInGame(candidate, gameId) &&
       !team.any((member) => member.id == candidate.id) &&
@@ -79,16 +94,68 @@ class TeamRecommendationService {
     for (final candidate in candidates) {
       final reasons = <String>[];
       var score = 0;
+
+      // Defensive typing: reward candidates that resist or are immune to
+      // attack types that currently threaten multiple team members.
       for (final entry in weakCounts.entries) {
         final covered = candidate.types.any((type) =>
           (_resists[type]?.contains(entry.key) ?? false) ||
           (_immune[type]?.contains(entry.key) ?? false));
         if (covered) {
-          score += entry.value;
-          reasons.add('Pomaga przeciwko typowi ${entry.key} (${entry.value} podatnych członków drużyny)');
+          score += entry.value * 3;
+          reasons.add('Chroni przed typem ${entry.key} (${entry.value} podatnych członków)');
         }
       }
-      if (score > 0) ranked.add(TeamRecommendation(pokemon: candidate, score: score, reasons: reasons));
+
+      // Base-stat profile: reward standout stats that improve a team-wide gap.
+      // Missing values are ignored rather than treated as zero.
+      for (final entry in statGetters.entries) {
+        final candidateValue = entry.value(candidate);
+        final average = teamAverages[entry.key];
+        if (candidateValue == null || average == null) continue;
+        final difference = candidateValue - average;
+        if (difference >= 25) {
+          final points = (difference / 15).floor().clamp(1, 4);
+          score += points;
+          reasons.add('Wysoki parametr: ${entry.key} ${candidateValue} (średnia drużyny: ${average.round()})');
+        }
+      }
+
+      // Recognized ability effects can cover specific weaknesses even when
+      // the Pokémon's own typing does not. Only explicit, well-known effects
+      // are scored; all other ability names remain neutral.
+      final candidateAbilities = <String>{
+        ...candidate.abilities,
+        ...candidate.hiddenAbilities,
+      }.map((ability) => ability.trim().toLowerCase()).toSet();
+      const abilityCoverage = <String, Set<String>>{
+        'levitate': {'Ground'},
+        'flash fire': {'Fire'},
+        'water absorb': {'Water'},
+        'storm drain': {'Water'},
+        'dry skin': {'Water'},
+        'volt absorb': {'Electric'},
+        'motor drive': {'Electric'},
+        'lightning rod': {'Electric'},
+        'sap sipper': {'Grass'},
+        'thick fat': {'Fire', 'Ice'},
+        'heatproof': {'Fire'},
+      };
+      for (final ability in candidateAbilities) {
+        final coveredTypes = abilityCoverage[ability];
+        if (coveredTypes == null) continue;
+        for (final type in coveredTypes) {
+          final threatened = weakCounts[type] ?? 0;
+          if (threatened > 0) {
+            score += threatened * 2;
+            reasons.add('Umiejętność ${ability[0].toUpperCase()}${ability.substring(1)} pomaga przeciwko typowi ${type}');
+          }
+        }
+      }
+
+      if (score > 0) {
+        ranked.add(TeamRecommendation(pokemon: candidate, score: score, reasons: reasons));
+      }
     }
     ranked.sort((a, b) {
       final byScore = b.score.compareTo(a.score);
