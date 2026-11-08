@@ -545,7 +545,7 @@ class _TeamScreenState extends State<TeamScreen> {
                     errorWidget: (_, __, ___) => CircleAvatar(child: Text('${recommendation.pokemon.id}')),
                   )),
                   title: Text(recommendation.pokemon.name),
-                  subtitle: Text('${recommendation.pokemon.types.join(' / ')}\n${recommendation.availability.label} · ${recommendation.availability.label}: ${recommendation.availability.detail} · ${recommendation.reasons.take(2).join('; ')}'),
+                  subtitle: Text('${recommendation.pokemon.types.join(' / ')}\n${recommendation.availability.label}: ${recommendation.availability.detail} · ${recommendation.reasons.take(2).join('; ')}'),
                   isThreeLine: true, trailing: Text('+ ${recommendation.score}'),
                   onTap: () => Navigator.pop(sheetContext, recommendation.pokemon),
                 ),
