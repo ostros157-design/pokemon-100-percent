@@ -5789,3 +5789,12 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Pod mapą dodano przyciski przechodzenia na sąsiednie piętro; przyciski wyłączają się, gdy brak poziomu w danym kierunku. Dotychczasowy wybór piętra pozostaje dostępny.
 - Oznaczenia przejść są również przekazywane do powiększonego widoku mapy. Przejścia są orientacyjne i nie wskazują dokładnych współrzędnych w grze.
 - Kontrola tekstowa sprawdziła obsługę przełączania, oznaczenia i odświeżania renderera; nie uruchomiono Flutter Analyzer, testów ani kompilacji APK.
+
+
+### Mapy Kanto — dopracowanie wind i klatek schodowych budynków (2026-11-09)
+
+- Na planach pięter Silph Co. dodano centralny, wyróżniony symbol szybu windy z kabiną i strzałkami; na każdym poziomie pozostaje dostępny wybór piętra i sąsiednich poziomów.
+- Dodano czytelne symbole klatek schodowych na planach Pokémon Tower, Pokémon Mansion i Celadon Condominiums.
+- W Celadon Department Store oznaczono centralną windę, a na S.S. Anne schody łączące pokłady.
+- Zaktualizowano opisy legendy, aby wskazywały rolę pionowych ciągów komunikacyjnych. Oznaczenia są orientacyjne, nie stanowią potwierdzonych współrzędnych z oryginalnych map.
+- Kontrola tekstowa potwierdziła obecność oznaczeń dla wskazanych budynków; nie uruchomiono Flutter Analyzer, testów ani kompilacji APK.
