@@ -3999,6 +3999,50 @@ class _KantoRegionMapState extends State<_KantoRegionMap> {
                   ),
                 ),
                 Positioned(
+                  top: 62,
+                  right: 12,
+                  child: Material(
+                    color: Theme.of(context).colorScheme.surface,
+                    borderRadius: BorderRadius.circular(14),
+                    elevation: 3,
+                    child: IconButton(
+                      tooltip: 'Otwórz mapę na pełnym ekranie',
+                      onPressed: () {
+                        showDialog<void>(
+                          context: context,
+                          builder: (dialogContext) => Dialog.fullscreen(
+                            child: Scaffold(
+                              appBar: AppBar(
+                                title: const Text('Mapa Kanto'),
+                                actions: [
+                                  IconButton(
+                                    tooltip: 'Zamknij mapę',
+                                    onPressed: () =>
+                                        Navigator.of(dialogContext).pop(),
+                                    icon: const Icon(Icons.close),
+                                  ),
+                                ],
+                              ),
+                              body: SafeArea(
+                                child: Center(
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8),
+                                    child: _KantoRegionMap(
+                                      selectedLocation: _visibleLocation ?? widget.selectedLocation,
+                                      onLocationSelected: widget.onLocationSelected,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        );
+                      },
+                      icon: const Icon(Icons.fullscreen),
+                    ),
+                  ),
+                ),
+                Positioned(
                   left: 8,
                   bottom: 8,
                   child: DecoratedBox(
