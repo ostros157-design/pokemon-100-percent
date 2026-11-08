@@ -5385,3 +5385,15 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Ograniczenia: to analiza pokrycia typów, a nie symulacja obrażeń. Nie uwzględnia jeszcze STAB, statystyk, zdolności, przedmiotów, immunitetów wynikających ze zdolności ani sprawdzania, czy ruch można zdobyć w wybranej grze. Nazwy muszą pasować do katalogu ruchów aplikacji.
 - Commit kodu: `37d07bc7fc2f9e59efc9197463434ee37ef441d6`.
 - Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK. Wymagane sprawdzenie ręczne: wpisać np. Flamethrower, Ice Beam i Earthquake, zapisać drużynę, a następnie sprawdzić czy sekcja „Miecz” pokazuje odpowiednie pokrycie typów i czy nierozpoznana nazwa jest zgłaszana.
+
+
+### Team Making — weryfikacja dostępności ruchów w wybranej grze (2026-11-08)
+
+- Edytor czterech ruchów korzysta teraz z istniejącego offline'owego `PokemonLearnsetData` i katalogu `moveCatalogue`.
+- Dla wybranej gry pobiera learnset danego Pokémona, pokazuje rozwijaną listę ruchów dostępnych według zaimportowanych danych i odrzuca wpisane ruchy, których ten Pokémon nie może nauczyć się w danej grupie wersji.
+- Porównanie nazw jest niewrażliwe na wielkość liter. Weryfikacja jest wykonywana przed zmianą zestawu, więc niepoprawny wpis nie nadpisuje poprzedniego zestawu ruchów.
+- Jeśli brak danych learnset dla Pokémona lub gry, edytor wyraźnie informuje o braku weryfikacji i pozwala zachować ręcznie wpisane nazwy; nie przedstawia braku danych jako potwierdzenia dostępności.
+- Uzupełniono mapowanie aliasów ID gier używanych przez Team Making: `firered`, `soulsilver`, `xy` (oraz aliasy HeartGold/Let's Go) do odpowiednich grup wersji PokéAPI.
+- Commity: ekran `f91a919`, lista dostępnych ruchów `8eb5d12`, mapowanie grup `77fe3bd`.
+- Ograniczenia: jakość weryfikacji zależy od kompletności pliku `assets/data/pokemon_learnsets.json` i katalogu ruchów. Sprawdzane są ruchy występujące w learnsecie Pokémona dla grupy wersji, nie zaś konkretne warunki fabularne, poziom, eventy lub dostępność TM w danym momencie zapisu.
+- Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK. Wymagane sprawdzenie ręczne w aplikacji dla co najmniej Let's Go, Emerald i Sword oraz sprawdzenie przypadku braku danych.
