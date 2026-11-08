@@ -15,6 +15,20 @@ final List<String> wildPokemonNoRate;
 /// Pokémon species mentioned in the guide text when a wild/trainer classification is not explicit.
 final List<String> pokemonMentions;
 
+/// Random wild encounters with a verified percentage.
+List<String> get wildPokemonWithRate => pokemon
+    .where((name) => encounterRatesPercent.keys.any(
+          (wildName) => wildName.toLowerCase() == name.toLowerCase(),
+        ))
+    .toList(growable: false);
+
+/// Fixed encounters, gifts and rare spawns without a verified percentage.
+List<String> get wildPokemonWithoutRate => wildPokemonNoRate
+    .where((name) => !encounterRatesPercent.keys.any(
+          (wildName) => wildName.toLowerCase() == name.toLowerCase(),
+        ))
+    .toList(growable: false);
+
 /// Pokémon found in the wild, with or without a fixed encounter percentage.
 List<String> get wildPokemon => [
       ...pokemon.where((name) => encounterRatesPercent.keys.any(
