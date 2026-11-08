@@ -95,12 +95,12 @@ class TeamBattleAnalysis {
     'arm thrust', 'barrage', 'bone rush', 'bullet seed', 'double slap',
     'fury attack', 'fury swipes', 'icicle spear', 'pin missile',
     'rock blast', 'spike cannon', 'tail slap', 'water shuriken',
-    'scale shot', 'population bomb',
+    'scale shot',
   };
   static const Set<String> _recoilMoves = {
     'brave bird', 'double-edge', 'flare blitz', 'head charge',
     'head smash', 'submission', 'take down', 'volt tackle',
-    'wild charge', 'wood hammer', 'wave crash', 'chloroblast',
+    'wild charge', 'wood hammer', 'wave crash', 'high jump kick', 'jump kick',
   };
 
   static double effectiveness(String attackType, List<String> defendingTypes) {
