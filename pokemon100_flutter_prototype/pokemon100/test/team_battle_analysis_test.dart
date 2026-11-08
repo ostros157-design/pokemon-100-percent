@@ -39,6 +39,36 @@ void main() {
       expect(profile.synergyHints.any((hint) => hint.contains('Atak specjalny')), isTrue);
     });
 
+    test('recognizes curated ability synergies with assigned moves', () {
+      const hitmonlee = Pokemon(
+        id: 106,
+        name: 'Hitmonlee',
+        types: ['Fighting'],
+        description: '',
+        attack: 120,
+        specialAttack: 30,
+        abilities: [
+          'Iron Fist', 'Strong Jaw', 'Mega Launcher', 'Sharpness',
+          'Punk Rock', 'Huge Power', 'Skill Link', 'Reckless',
+        ],
+      );
+      final profile = TeamBattleAnalysis.analyze(
+        [hitmonlee],
+        const {
+          106: [
+            'Fire Punch', 'Crunch', 'Aura Sphere', 'Leaf Blade',
+            'Hyper Voice', 'Bullet Seed', 'Flare Blitz',
+          ],
+        },
+      );
+      for (final ability in [
+        'Iron Fist', 'Strong Jaw', 'Mega Launcher', 'Sharpness',
+        'Punk Rock', 'Huge Power', 'Skill Link', 'Reckless',
+      ]) {
+        expect(profile.synergyHints.any((hint) => hint.contains(ability)), isTrue, reason: ability);
+      }
+    });
+
     test('uses generation-specific Fairy type and physical/special rules', () {
       const houndoom = Pokemon(
         id: 229,
