@@ -505,7 +505,7 @@ class _TeamScreenState extends State<TeamScreen> {
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Nie ma jeszcze danych dostępności dla tej gry.')));
       return;
     }
-    final recommendations = TeamRecommendationService.recommend(_team, gameId: _selectedGame);
+    final recommendations = TeamRecommendationService.recommend(_team, gameId: _selectedGame, movesByPokemon: _movesByPokemon);
     if (!mounted) return;
     if (recommendations.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -523,7 +523,7 @@ class _TeamScreenState extends State<TeamScreen> {
             children: [
               const Text('Dopasuj Pokémona', style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
               const SizedBox(height: 6),
-              const Text('Propozycje uwzględniają odporności typów, statystyki bazowe i wybrane umiejętności Pokémonów. Dostępność jest filtrowana według regionalnego Pokédexu; system nie uwzględnia jeszcze etapu fabuły, poziomu, pełnych warunków wymian ani wszystkich wydarzeń specjalnych.'),
+              const Text('Propozycje uwzględniają odporności typów, statystyki bazowe, wybrane umiejętności oraz ruchy ustawione już w drużynie. Przy lukach w pokryciu typów system wskazuje Pokémony, których typ może potencjalnie pomóc — dostępność konkretnych ruchów kandydata trzeba jeszcze zweryfikować. Dostępność jest filtrowana według regionalnego Pokédexu; system nie uwzględnia jeszcze etapu fabuły, poziomu, pełnych warunków wymian ani wszystkich wydarzeń specjalnych.'),
               const SizedBox(height: 12),
               ...recommendations.map((recommendation) => Card(
                 child: ListTile(
