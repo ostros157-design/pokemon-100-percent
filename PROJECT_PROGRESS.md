@@ -5641,3 +5641,15 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Uzupełniono składy post-game Team Rocket: Archer (Electrode, Golbat, Magmar, Weezing) oraz Jessie i James (Arbok, Weezing).
 - Źródła: Bulbapedia Part 18, Serebii Red/Green, SuperCheats Red.
 - Nie uruchomiono Flutter Analyzer, testów ani APK.
+
+
+### Poradnik Let’s Go, Pikachu! — Mew, GO Park, Meltan i system kolekcjonowania (2026-11-08)
+
+- Poprawiono instrukcję Mew: Poké Ball Plus, Mystery Gifts, transfer jednorazowy do jednej kopii gry, ryzyko utraty po usunięciu zapisu oraz wymóg połączenia z internetem.
+- Rozpisano transfer do GO Park krok po kroku i zaznaczono jego jednokierunkowy charakter oraz ograniczenia kompatybilności.
+- Poprawiono Meltan: Mystery Box jest otrzymywana w Pokémon GO po pierwszym wysłaniu kompatybilnego Pokémona do GO Park; Meltan pojawia się w Pokémon GO, a następnie może zostać przesłany do Let's Go.
+- Poprawiono Melmetal: ewolucja Meltana za 400 Meltan Candy odbywa się w Pokémon GO, nie w Let's Go.
+- Doprecyzowano, że Day Care nie służy do hodowli jaj w Let's Go.
+- Uzupełniono opis Candy jako systemu Awakening Values (AV) oraz liczbę 153 Master Trainerów.
+- Źródła: Nintendo Support (transfer GO Park i Mew), Bulbapedia GO Park/availability, Pokémon GO Help Center.
+- Nie uruchomiono Flutter Analyzer, testów ani APK.
