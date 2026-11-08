@@ -4623,6 +4623,100 @@ class _KantoLocalAreaPainter extends CustomPainter {
       canvas.drawRect(door, Paint()..color = const Color(0xFFFFF1B8));
     }
 
+    // Naturalne i podziemne detale rozpoznawalne dla poszczególnych lokacji.
+    // Są dekoracją schematu, nie dokładnym rozmieszczeniem obiektów z gry.
+    canvas.save();
+    canvas.clipRect(Offset.zero & size);
+    final rockPaint = Paint()..isAntiAlias = true..color = const Color(0xFF77796F);
+    final rockEdge = Paint()..isAntiAlias = true..color = const Color(0xFF454B49)..style = PaintingStyle.stroke..strokeWidth = 1.5;
+    final shadowPaint = Paint()..isAntiAlias = true..color = const Color(0xFF303D3B).withValues(alpha: .28);
+    final waterPaint = Paint()..isAntiAlias = true..color = const Color(0xFF65B9C8).withValues(alpha: .82);
+    final waterEdge = Paint()..isAntiAlias = true..color = const Color(0xFF287F9A)..style = PaintingStyle.stroke..strokeWidth = 2;
+    final crystalPaint = Paint()..isAntiAlias = true..color = const Color(0xFF79C7D5);
+    final crystalLight = Paint()..isAntiAlias = true..color = const Color(0xFFD9F5E9);
+    final rubblePaint = Paint()..isAntiAlias = true..color = const Color(0xFF9A8D78);
+    Offset point(double x, double y) => Offset(size.width * x, size.height * y);
+    void rock(double x, double y, double scale) {
+      final center = point(x, y);
+      final w = size.shortestSide * scale;
+      final h = w * .72;
+      final path = Path()
+        ..moveTo(center.dx - w * .52, center.dy + h * .28)
+        ..lineTo(center.dx - w * .38, center.dy - h * .20)
+        ..lineTo(center.dx - w * .08, center.dy - h * .52)
+        ..lineTo(center.dx + w * .30, center.dy - h * .35)
+        ..lineTo(center.dx + w * .53, center.dy + h * .18)
+        ..lineTo(center.dx + w * .22, center.dy + h * .42)
+        ..close();
+      canvas.drawOval(Rect.fromCenter(center: center.translate(1, h * .36), width: w * 1.2, height: h * .55), shadowPaint);
+      canvas.drawPath(path, rockPaint);
+      canvas.drawPath(path, rockEdge);
+      canvas.drawLine(point(x - scale * .13, y - scale * .08), point(x, y - scale * .30), Paint()..color = const Color(0xFFB4B2A0).withValues(alpha: .65)..strokeWidth = 1.4);
+    }
+    void crystal(double x, double y, double scale) {
+      final center = point(x, y);
+      final w = size.shortestSide * scale;
+      final h = w * 1.8;
+      final path = Path()
+        ..moveTo(center.dx, center.dy - h * .58)
+        ..lineTo(center.dx + w * .34, center.dy - h * .12)
+        ..lineTo(center.dx + w * .22, center.dy + h * .48)
+        ..lineTo(center.dx - w * .22, center.dy + h * .48)
+        ..lineTo(center.dx - w * .34, center.dy - h * .12)
+        ..close();
+      canvas.drawPath(path, crystalPaint);
+      canvas.drawPath(path, Paint()..color = const Color(0xFF397E91)..style = PaintingStyle.stroke..strokeWidth = 1.2);
+      canvas.drawLine(Offset(center.dx, center.dy - h * .48), Offset(center.dx - w * .04, center.dy + h * .35), crystalLight..strokeWidth = 1.5);
+    }
+    void pool(double x, double y, double w, double h) {
+      final rect = Rect.fromCenter(center: point(x, y), width: size.width * w, height: size.height * h);
+      canvas.drawOval(rect, waterPaint);
+      canvas.drawOval(rect, waterEdge);
+      canvas.drawArc(rect.deflate(4), math.pi * 1.08, math.pi * .55, false, Paint()..color = const Color(0xFFD4F5EF)..style = PaintingStyle.stroke..strokeWidth = 2);
+    }
+    if (location == 'Mt. Moon') {
+      crystal(.16,.20,.075); crystal(.80,.24,.065); crystal(.83,.78,.09);
+      rock(.30,.62,.10); rock(.60,.78,.075);
+    } else if (location == 'Rock Tunnel') {
+      rock(.15,.12,.12); rock(.83,.48,.11); rock(.20,.84,.10); rock(.78,.84,.08);
+    } else if (location == "Diglett's Cave") {
+      rock(.12,.22,.10); rock(.88,.72,.11);
+      for (var mound = 0; mound < 3; mound++) {
+        canvas.drawOval(Rect.fromCenter(center: point(.36 + mound * .14,.78),width:size.shortestSide*.075,height:size.shortestSide*.045),rubblePaint);
+      }
+    } else if (location == 'Seafoam Islands') {
+      pool(.18,.68,.22,.16); pool(.80,.67,.20,.15);
+      crystal(.14,.16,.06); crystal(.84,.17,.06);
+      rock(.50,.88,.10);
+    } else if (location == 'Cerulean Cave') {
+      pool(.16,.72,.20,.13); pool(.82,.70,.18,.12);
+      crystal(.15,.20,.085); crystal(.82,.20,.085); crystal(.50,.88,.07);
+      rock(.50,.32,.08);
+    } else if (location == 'Victory Road') {
+      rock(.15,.12,.12); rock(.84,.22,.12); rock(.15,.83,.11); rock(.84,.83,.10);
+      for (var boulder = 0; boulder < 2; boulder++) {
+        final center = point(.40 + boulder * .18,.48);
+        canvas.drawCircle(center, size.shortestSide * .035, rubblePaint);
+        canvas.drawCircle(center, size.shortestSide * .035, rockEdge);
+      }
+    } else if (location == 'Team Rocket Hideout') {
+      for (var crate = 0; crate < 3; crate++) {
+        final rect = Rect.fromCenter(center: point(.16 + crate * .34,.88),width:size.width*.12,height:size.height*.09);
+        canvas.drawRect(rect, Paint()..color = const Color(0xFF9A7650));
+        canvas.drawRect(rect, rockEdge);
+        canvas.drawLine(rect.topLeft,rect.bottomRight,rockEdge);
+        canvas.drawLine(rect.topRight,rect.bottomLeft,rockEdge);
+      }
+    } else if (location.startsWith('Underground Path')) {
+      rock(.12,.18,.10); rock(.88,.82,.10);
+      for (var lamp = 0; lamp < 3; lamp++) {
+        final center = point(.25 + lamp * .25,.14);
+        canvas.drawCircle(center,size.shortestSide*.018,Paint()..color=const Color(0xFFFFD166));
+        canvas.drawCircle(center,size.shortestSide*.035,Paint()..color=const Color(0xFFFFD166).withValues(alpha:.16));
+      }
+    }
+    canvas.restore();
+
     // Centralne oznaczenie pionowego ciągu komunikacyjnego na planach budynków.
     // Pozycje są orientacyjne i służą rozpoznaniu schodów/windy, nie nawigacji kafelkowej.
     final connectorCenter = switch (location) {
