@@ -86,14 +86,23 @@ class GuideStepCard extends StatelessWidget {
                 ],
               ),
             ],
-            if (step.wildPokemon.isNotEmpty) ...[
+            if (step.wildPokemonWithRate.isNotEmpty) ...[
               const SizedBox(height: 8),
               const Text(
-                'Pokémon (dzikie spotkania):',
+                'Pokémon (dzikie spotkania z procentami):',
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 4),
-              _buildPokemonGroup(context, step.wildPokemon),
+              _buildPokemonGroup(context, step.wildPokemonWithRate),
+            ],
+            if (step.wildPokemonWithoutRate.isNotEmpty) ...[
+              const SizedBox(height: 8),
+              const Text(
+                'Stałe spotkania, prezenty i rzadkie spawny (bez procentu):',
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+              const SizedBox(height: 4),
+              _buildPokemonGroup(context, step.wildPokemonWithoutRate),
             ],
             if (_trainerNames.isNotEmpty) ...[
               const SizedBox(height: 8),
