@@ -3013,6 +3013,82 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
         ),
         if (floors.isNotEmpty) ...[
           const SizedBox(height: 10),
+          if (location == 'Silph Co.') ...[
+            const SizedBox(height: 8),
+            Container(
+              width: double.infinity,
+              padding: const EdgeInsets.all(12),
+              decoration: BoxDecoration(
+                color: Theme.of(context).colorScheme.surfaceContainerHighest,
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(color: Theme.of(context).colorScheme.primary.withValues(alpha: .35)),
+              ),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Container(
+                    width: 54,
+                    height: 112,
+                    padding: const EdgeInsets.all(5),
+                    decoration: BoxDecoration(color: const Color(0xFF315F8C), borderRadius: BorderRadius.circular(9)),
+                    child: Column(
+                      children: [
+                        const Icon(Icons.elevator, color: Colors.white, size: 19),
+                        const SizedBox(height: 4),
+                        Expanded(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: List.generate(11, (index) {
+                              final floor = '${11 - index}F';
+                              final active = floor == selectedFloor;
+                              return Container(
+                                width: double.infinity,
+                                alignment: Alignment.center,
+                                padding: const EdgeInsets.symmetric(vertical: 1),
+                                decoration: BoxDecoration(
+                                  color: active ? const Color(0xFFFFD166) : Colors.white.withValues(alpha: .12),
+                                  borderRadius: BorderRadius.circular(3),
+                                ),
+                                child: Text(floor, style: TextStyle(color: active ? const Color(0xFF263746) : Colors.white, fontSize: 8, fontWeight: FontWeight.w800)),
+                              );
+                            }),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text('Winda Silph Co.', style: Theme.of(context).textTheme.titleSmall),
+                        const SizedBox(height: 3),
+                        Text('Kabina znajduje się na poziomie $selectedFloor.', style: Theme.of(context).textTheme.bodySmall),
+                        const SizedBox(height: 8),
+                        DropdownButtonFormField<String>(
+                          value: selectedFloor,
+                          isExpanded: true,
+                          decoration: const InputDecoration(
+                            labelText: 'Wybierz piętro',
+                            isDense: true,
+                            border: OutlineInputBorder(),
+                            contentPadding: EdgeInsets.symmetric(horizontal: 10, vertical: 9),
+                          ),
+                          items: floors.map((floor) => DropdownMenuItem<String>(value: floor, child: Text(floor))).toList(),
+                          onChanged: (floor) {
+                            if (floor != null) setState(() => _selectedFloor = floor);
+                          },
+                        ),
+                        const SizedBox(height: 6),
+                        Text('Wybór piętra aktualizuje kabinę na schemacie szybu.', style: Theme.of(context).textTheme.bodySmall),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
           Text('Poziom / piętro', style: Theme.of(context).textTheme.titleSmall),
           const SizedBox(height: 6),
           Wrap(
@@ -4308,67 +4384,69 @@ class _KantoLocalAreaPainter extends CustomPainter {
     };
     if (connectorCenter != null) {
       final center = Offset(connectorCenter.dx * size.width, connectorCenter.dy * size.height);
-      final isLift = location == 'Silph Co.' || location == 'Celadon Department Store';
-      final markerRect = Rect.fromCenter(
-        center: center,
-        width: math.max(34, size.shortestSide * .17),
-        height: math.max(30, size.shortestSide * .15),
-      );
-      canvas.drawRRect(
-        RRect.fromRectAndRadius(markerRect, const Radius.circular(7)),
-        Paint()..color = isLift ? const Color(0xFF315F8C) : const Color(0xFF477B56),
-      );
-      if (isLift) {
-        final shaft = markerRect.deflate(markerRect.width * .24);
-        canvas.drawRRect(
-          RRect.fromRectAndRadius(shaft, const Radius.circular(3)),
-          Paint()..color = const Color(0xFFE8E8D5),
-        );
-        final car = Rect.fromCenter(
-          center: shaft.center,
-          width: shaft.width * .62,
-          height: shaft.height * .48,
-        );
-        canvas.drawRect(car, Paint()..color = const Color(0xFF315F8C));
-        final arrowPaint = Paint()
-          ..color = const Color(0xFFE8E8D5)
-          ..strokeWidth = 1.8
-          ..strokeCap = StrokeCap.round
-          ..style = PaintingStyle.stroke;
-        canvas.drawLine(Offset(shaft.center.dx, shaft.top + 2), Offset(shaft.center.dx, shaft.top + 7), arrowPaint);
-        canvas.drawLine(Offset(shaft.center.dx, shaft.bottom - 2), Offset(shaft.center.dx, shaft.bottom - 7), arrowPaint);
+      final isSilphLift = location == 'Silph Co.';
+      final isLift = isSilphLift || location == 'Celadon Department Store';
+      final markerRect = isSilphLift
+          ? Rect.fromCenter(center: center, width: math.max(58, size.shortestSide * .25), height: math.max(112, size.shortestSide * .57))
+          : Rect.fromCenter(center: center, width: math.max(34, size.shortestSide * .17), height: math.max(30, size.shortestSide * .15));
+      if (isSilphLift) {
+        canvas.drawRRect(RRect.fromRectAndRadius(markerRect, const Radius.circular(8)), Paint()..color = const Color(0xFF244D75));
+        final shaft = markerRect.deflate(markerRect.width * .18);
+        canvas.drawRRect(RRect.fromRectAndRadius(shaft, const Radius.circular(4)), Paint()..color = const Color(0xFFE8E8D5));
+        final current = _floorIndex(floorName).clamp(1, 11);
+        final usableTop = shaft.top + 10;
+        final usableBottom = shaft.bottom - 10;
+        final step = (usableBottom - usableTop) / 10;
+        final tickPaint = Paint()..color = const Color(0xFF8295A0)..strokeWidth = 1;
+        for (var level = 11; level >= 1; level--) {
+          final y = usableTop + (11 - level) * step;
+          canvas.drawLine(Offset(shaft.left + 3, y), Offset(shaft.right - 3, y), tickPaint);
+          final floorText = TextPainter(
+            text: TextSpan(text: '${level}F', style: const TextStyle(color: Color(0xFF52616B), fontSize: 6, fontWeight: FontWeight.w700)),
+            textDirection: TextDirection.ltr,
+          )..layout(maxWidth: shaft.width * .42);
+          floorText.paint(canvas, Offset(shaft.left + 3, y - floorText.height - 1));
+        }
+        final cabinY = usableTop + (11 - current) * step;
+        final cabin = Rect.fromCenter(center: Offset(shaft.center.dx, cabinY), width: shaft.width * .72, height: math.max(8, step * .72));
+        canvas.drawRRect(RRect.fromRectAndRadius(cabin, const Radius.circular(3)), Paint()..color = const Color(0xFFFFD166));
+        canvas.drawRRect(RRect.fromRectAndRadius(cabin, const Radius.circular(3)), Paint()..color = const Color(0xFF315F8C)..style = PaintingStyle.stroke..strokeWidth = 1.2);
+        final cabinText = TextPainter(
+          text: TextSpan(text: floorName, style: const TextStyle(color: Color(0xFF263746), fontSize: 7, fontWeight: FontWeight.w900)),
+          textDirection: TextDirection.ltr,
+        )..layout(maxWidth: cabin.width);
+        cabinText.paint(canvas, Offset(cabin.center.dx - cabinText.width / 2, cabin.center.dy - cabinText.height / 2));
+        final title = TextPainter(
+          text: const TextSpan(text: 'WINDA', style: TextStyle(color: Colors.white, fontSize: 8, fontWeight: FontWeight.w900)),
+          textDirection: TextDirection.ltr,
+        )..layout(maxWidth: markerRect.width);
+        title.paint(canvas, Offset(markerRect.center.dx - title.width / 2, markerRect.top + 2));
       } else {
-        final stairPaint = Paint()
-          ..color = const Color(0xFFF1F0D9)
-          ..strokeWidth = math.max(2, size.shortestSide * .012)
-          ..strokeCap = StrokeCap.square
-          ..style = PaintingStyle.stroke;
-        final stairs = Path()
-          ..moveTo(markerRect.left + markerRect.width * .18, markerRect.bottom - markerRect.height * .2)
-          ..lineTo(markerRect.left + markerRect.width * .42, markerRect.bottom - markerRect.height * .2)
-          ..lineTo(markerRect.left + markerRect.width * .42, markerRect.bottom - markerRect.height * .42)
-          ..lineTo(markerRect.left + markerRect.width * .65, markerRect.bottom - markerRect.height * .42)
-          ..lineTo(markerRect.left + markerRect.width * .65, markerRect.bottom - markerRect.height * .64)
-          ..lineTo(markerRect.right - markerRect.width * .16, markerRect.bottom - markerRect.height * .64);
-        canvas.drawPath(stairs, stairPaint);
-        canvas.drawLine(
-          Offset(markerRect.center.dx, markerRect.top + markerRect.height * .12),
-          Offset(markerRect.center.dx, markerRect.top + markerRect.height * .38),
-          stairPaint,
-        );
+        canvas.drawRRect(RRect.fromRectAndRadius(markerRect, const Radius.circular(7)), Paint()..color = isLift ? const Color(0xFF315F8C) : const Color(0xFF477B56));
+        if (isLift) {
+          final shaft = markerRect.deflate(markerRect.width * .24);
+          canvas.drawRRect(RRect.fromRectAndRadius(shaft, const Radius.circular(3)), Paint()..color = const Color(0xFFE8E8D5));
+          final car = Rect.fromCenter(center: shaft.center, width: shaft.width * .62, height: shaft.height * .48);
+          canvas.drawRect(car, Paint()..color = const Color(0xFF315F8C));
+        } else {
+          final stairPaint = Paint()..color = const Color(0xFFF1F0D9)..strokeWidth = math.max(2, size.shortestSide * .012)..strokeCap = StrokeCap.square..style = PaintingStyle.stroke;
+          final stairs = Path()
+            ..moveTo(markerRect.left + markerRect.width * .18, markerRect.bottom - markerRect.height * .2)
+            ..lineTo(markerRect.left + markerRect.width * .42, markerRect.bottom - markerRect.height * .2)
+            ..lineTo(markerRect.left + markerRect.width * .42, markerRect.bottom - markerRect.height * .42)
+            ..lineTo(markerRect.left + markerRect.width * .65, markerRect.bottom - markerRect.height * .42)
+            ..lineTo(markerRect.left + markerRect.width * .65, markerRect.bottom - markerRect.height * .64)
+            ..lineTo(markerRect.right - markerRect.width * .16, markerRect.bottom - markerRect.height * .64);
+          canvas.drawPath(stairs, stairPaint);
+        }
+        final markerLabel = isLift ? 'WINDA' : 'SCHODY';
+        final markerText = TextPainter(
+          text: TextSpan(text: markerLabel, style: const TextStyle(color: Colors.white, fontSize: 7, fontWeight: FontWeight.w900)),
+          textDirection: TextDirection.ltr,
+          maxLines: 1,
+        )..layout(maxWidth: markerRect.width);
+        markerText.paint(canvas, Offset(markerRect.center.dx - markerText.width / 2, markerRect.bottom - markerText.height - 2));
       }
-      final markerLabel = location == 'Silph Co.' || location == 'Celadon Department Store'
-          ? 'WINDA'
-          : 'SCHODY';
-      final markerText = TextPainter(
-        text: TextSpan(text: markerLabel, style: const TextStyle(color: Colors.white, fontSize: 7, fontWeight: FontWeight.w900)),
-        textDirection: TextDirection.ltr,
-        maxLines: 1,
-      )..layout(maxWidth: markerRect.width);
-      markerText.paint(
-        canvas,
-        Offset(markerRect.center.dx - markerText.width / 2, markerRect.bottom - markerText.height - 2),
-      );
     }
 
     canvas.drawCircle(Offset(centers.first.dx*size.width,centers.first.dy*size.height),math.max(4,size.shortestSide*.035),Paint()..color=const Color(0xFF477B56));
