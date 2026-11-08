@@ -10,18 +10,26 @@ final List<String> trainers;
 /// Verified encounter percentages for each Pokémon at this guide step/location.
 /// Keys must match Pokémon names; values are percentages from 0 to 100.
 final Map<String, double> encounterRatesPercent;
-/// Pokémon without a verified wild encounter rate are treated as trainer Pokémon.
-List<String> get trainerPokemon => pokemon
-    .where((name) => !encounterRatesPercent.keys.any(
-          (wildName) => wildName.toLowerCase() == name.toLowerCase(),
-        ))
-    .toList(growable: false);
+/// Pokémon without a verified wild encounter rate are not assumed to be trainer Pokémon.
+final List<String> wildPokemonNoRate;
 
-/// Pokémon with a verified encounter percentage at this location.
-List<String> get wildPokemon => pokemon
-    .where((name) => encounterRatesPercent.keys.any(
-          (wildName) => wildName.toLowerCase() == name.toLowerCase(),
-        ))
+/// Pokémon found in the wild, with or without a fixed encounter percentage.
+List<String> get wildPokemon => [
+      ...pokemon.where((name) => encounterRatesPercent.keys.any(
+            (wildName) => wildName.toLowerCase() == name.toLowerCase(),
+          )),
+      ...wildPokemonNoRate.where((name) => !encounterRatesPercent.keys.any(
+            (wildName) => wildName.toLowerCase() == name.toLowerCase(),
+          )),
+    ].toList(growable: false);
+
+/// Pokémon used by trainers in this step.
+List<String> get trainerPokemon => pokemon
+    .where((name) =>
+        !encounterRatesPercent.keys.any((wildName) =>
+            wildName.toLowerCase() == name.toLowerCase()) &&
+        !wildPokemonNoRate.any((wildName) =>
+            wildName.toLowerCase() == name.toLowerCase()))
     .toList(growable: false);
 
 final List<String> items;
@@ -35,6 +43,7 @@ this.section,
 this.pokemon = const [],
 this.trainers = const [],
 this.encounterRatesPercent = const {},
+this.wildPokemonNoRate = const [],
 this.items = const [],
 this.optional = false,
 });
