@@ -4158,53 +4158,91 @@ class _KantoLocalAreaPainter extends CustomPainter {
 
   void _paintFloorPlan(Canvas canvas, Size size, String floorName) {
     canvas.drawRect(Offset.zero & size, Paint()..isAntiAlias = true..color = land);
-    final edge = Paint()..isAntiAlias = true..color = route.withValues(alpha: .72)..style = PaintingStyle.stroke..strokeWidth = 2;
-    final roomFill = Paint()..isAntiAlias = true..color = const Color(0xFFD8D9BD).withValues(alpha: .90);
-    final corridor = Paint()..isAntiAlias = true..color = route.withValues(alpha: .30)..strokeWidth = math.max(8, size.shortestSide * .055)..strokeCap = StrokeCap.round;
+    final edge = Paint()..isAntiAlias = true..color = route.withValues(alpha: .78)..style = PaintingStyle.stroke..strokeWidth = 2;
+    final roomFill = Paint()..isAntiAlias = true..color = const Color(0xFFD8D9BD).withValues(alpha: .94);
+    final corridor = Paint()..isAntiAlias = true..color = route.withValues(alpha: .34)..strokeWidth = math.max(8, size.shortestSide * .055)..strokeCap = StrokeCap.round;
     final index = _floorIndex(floorName);
-    final isCave = {'Mt. Moon','Rock Tunnel',"Diglett's Cave",'Seafoam Islands','Cerulean Cave','Victory Road','Team Rocket Hideout'}.contains(location);
-    final isTower = location == 'Pokémon Tower';
-    final isOffice = location == 'Silph Co.';
-    final isStore = location == 'Celadon Department Store';
-    final isShip = location == 'S.S. Anne';
-    final roomCount = isCave ? 4 + (index % 2) : isOffice ? 7 : isStore ? 5 : isTower ? 4 : isShip ? 5 : 4;
-    final columns = roomCount >= 6 ? 3 : 2;
-    final rows = (roomCount / columns).ceil();
-    final marginX = size.width * .10;
-    final marginY = size.height * .16;
-    final gapX = size.width * .055;
-    final gapY = size.height * .07;
-    final roomWidth = (size.width - 2 * marginX - (columns - 1) * gapX) / columns;
-    final roomHeight = (size.height - 2 * marginY - (rows - 1) * gapY) / rows;
-    final centers = <Offset>[];
-    for (var i = 0; i < roomCount; i++) {
-      final row = i ~/ columns;
-      final col = i % columns;
-      final rect = Rect.fromLTWH(marginX + col * (roomWidth + gapX), marginY + row * (roomHeight + gapY), roomWidth, roomHeight);
-      canvas.drawRRect(RRect.fromRectAndRadius(rect, const Radius.circular(9)), roomFill);
-      canvas.drawRRect(RRect.fromRectAndRadius(rect, const Radius.circular(9)), edge);
-      centers.add(rect.center);
+    final rooms = <Rect>[];
+    final links = <(int, int)>[];
+    Rect r(double x, double y, double w, double h) => Rect.fromLTWH(x, y, w, h);
+    void connect(int from, int to) => links.add((from, to));
+
+    // Indywidualne układy funkcjonalne; schematy nie przedstawiają dokładnych kafelków.
+    if (location == 'Mt. Moon') {
+      rooms.addAll([r(.08,.34,.20,.20),r(.34,.16,.22,.19),r(.66,.25,.23,.20),r(.38,.48,.22,.20),r(.08,.70,.20,.16),r(.69,.68,.22,.18)]);
+      connect(0,1); connect(1,2); connect(1,3); connect(3,4); connect(3,5);
+    } else if (location == 'Rock Tunnel') {
+      rooms.addAll([r(.06,.20,.22,.17),r(.38,.13,.22,.17),r(.69,.23,.23,.17),r(.67,.59,.25,.17),r(.36,.68,.23,.17),r(.05,.57,.22,.18)]);
+      connect(0,1); connect(1,2); connect(2,3); connect(3,4); connect(4,5);
+    } else if (location == "Diglett's Cave") {
+      rooms.addAll([r(.04,.37,.19,.22),r(.28,.31,.20,.18),r(.54,.39,.19,.22),r(.78,.31,.18,.18)]);
+      connect(0,1); connect(1,2); connect(2,3);
+    } else if (location == 'Seafoam Islands') {
+      rooms.addAll([r(.37,.15,.26,.16),r(.10,.38,.25,.18),r(.65,.38,.25,.18),r(.37,.63,.26,.17),r(.39,.84,.22,.10)]);
+      connect(0,1); connect(0,2); connect(1,3); connect(2,3); connect(3,4);
+    } else if (location == 'Cerulean Cave') {
+      rooms.addAll([r(.38,.14,.24,.18),r(.08,.38,.23,.18),r(.39,.42,.22,.18),r(.69,.38,.23,.18),r(.37,.70,.26,.17)]);
+      connect(0,1); connect(0,2); connect(0,3); connect(2,4);
+      if (index.isOdd) { rooms.add(r(.08,.70,.20,.15)); connect(1,5); }
+    } else if (location == 'Victory Road') {
+      rooms.addAll([r(.06,.18,.23,.18),r(.39,.15,.22,.18),r(.69,.34,.23,.18),r(.38,.54,.23,.18),r(.07,.70,.23,.16)]);
+      connect(0,1); connect(1,2); connect(2,3); connect(3,4);
+      if (index == 2) { rooms.add(r(.68,.72,.23,.15)); connect(3,5); }
+    } else if (location == 'Team Rocket Hideout') {
+      rooms.addAll([r(.08,.18,.23,.18),r(.39,.18,.22,.18),r(.69,.18,.23,.18),r(.08,.58,.23,.18),r(.39,.58,.22,.18),r(.69,.58,.23,.18)]);
+      connect(0,1); connect(1,2); connect(0,3); connect(3,4); connect(4,5);
+      if (index.isEven) connect(1,4);
+    } else if (location == 'Pokémon Tower') {
+      rooms.addAll([r(.39,.14,.22,.17),r(.10,.37,.22,.17),r(.39,.39,.22,.17),r(.68,.37,.22,.17),r(.39,.66,.22,.17)]);
+      connect(0,2); connect(2,1); connect(2,3); connect(2,4);
+    } else if (location == 'Silph Co.') {
+      rooms.addAll([r(.08,.18,.22,.17),r(.39,.18,.22,.17),r(.70,.18,.22,.17),r(.08,.60,.22,.17),r(.39,.60,.22,.17),r(.70,.60,.22,.17),r(.43,.39,.14,.16)]);
+      connect(0,6); connect(1,6); connect(2,6); connect(6,3); connect(6,4); connect(6,5);
+    } else if (location == 'Celadon Department Store') {
+      rooms.addAll([r(.08,.20,.22,.20),r(.70,.20,.22,.20),r(.08,.61,.22,.20),r(.70,.61,.22,.20),r(.39,.34,.22,.34)]);
+      connect(0,4); connect(1,4); connect(4,2); connect(4,3);
+    } else if (location == 'S.S. Anne') {
+      rooms.addAll([r(.08,.20,.20,.17),r(.39,.20,.22,.17),r(.72,.20,.20,.17),r(.08,.63,.20,.17),r(.39,.63,.22,.17),r(.72,.63,.20,.17)]);
+      connect(0,1); connect(1,2); connect(1,4); connect(4,3); connect(4,5);
+    } else if (location == 'Pokémon Mansion') {
+      rooms.addAll([r(.10,.18,.22,.18),r(.39,.18,.22,.18),r(.68,.18,.22,.18),r(.39,.43,.22,.18),r(.10,.68,.22,.16),r(.68,.68,.22,.16)]);
+      connect(0,1); connect(1,2); connect(1,3); connect(3,4); connect(3,5);
+    } else if (location == 'Celadon Condominiums') {
+      rooms.addAll([r(.12,.18,.25,.18),r(.63,.18,.25,.18),r(.39,.39,.22,.20),r(.12,.66,.25,.16),r(.63,.66,.25,.16)]);
+      connect(0,2); connect(1,2); connect(2,3); connect(2,4);
+    } else {
+      rooms.addAll([r(.08,.20,.23,.18),r(.39,.16,.22,.18),r(.69,.20,.23,.18),r(.20,.62,.23,.18),r(.57,.62,.23,.18)]);
+      connect(0,1); connect(1,2); connect(1,3); connect(1,4);
     }
+
+    final centers = rooms.map((room) => room.center).toList();
     final connector = Path();
-    for (var i = 0; i < centers.length; i++) {
-      if (i == 0) {
-        connector.moveTo(centers[i].dx, centers[i].dy);
-      } else {
-        connector.lineTo(centers[i - 1].dx, centers[i].dy);
-        connector.lineTo(centers[i].dx, centers[i].dy);
-      }
+    for (final link in links) {
+      final from = centers[link.$1];
+      final to = centers[link.$2];
+      connector..moveTo(from.dx * size.width, from.dy * size.height)..lineTo(to.dx * size.width, to.dy * size.height);
     }
     canvas.drawPath(connector, corridor);
-    canvas.drawCircle(centers.first, math.max(4, size.shortestSide * .035), Paint()..color = const Color(0xFF477B56));
-    canvas.drawCircle(centers.last, math.max(4, size.shortestSide * .035), Paint()..color = const Color(0xFFB47A32));
-    final textStyle = TextStyle(color: label, fontSize: math.max(9, size.shortestSide * .045), fontWeight: FontWeight.w700);
-    final title = TextPainter(text: TextSpan(text: '$location • $floorName', style: textStyle), textDirection: TextDirection.ltr, maxLines: 1, ellipsis: '…')..layout(maxWidth: size.width * .84);
-    title.paint(canvas, Offset(size.width * .08, size.height * .035));
-    final legend = TextPainter(
-      text: TextSpan(text: isCave ? 'Komory i korytarze • schemat poziomu' : isOffice ? 'Strefy biurowe • pion komunikacyjny' : isStore ? 'Strefy handlowe • połączenia pięter' : isTower ? 'Sale wieży • przejście na kolejne piętro' : isShip ? 'Pokład i kabiny • przejścia orientacyjne' : 'Pomieszczenia • schody / przejście', style: TextStyle(color: label.withValues(alpha: .8), fontSize: math.max(8, size.shortestSide * .032))),
-      textDirection: TextDirection.ltr, maxLines: 1, ellipsis: '…',
-    )..layout(maxWidth: size.width * .84);
-    legend.paint(canvas, Offset(size.width * .08, size.height * .105));
+    for (final room in rooms) {
+      final rect = Rect.fromLTRB(room.left*size.width,room.top*size.height,room.right*size.width,room.bottom*size.height);
+      canvas.drawRRect(RRect.fromRectAndRadius(rect,const Radius.circular(9)),roomFill);
+      canvas.drawRRect(RRect.fromRectAndRadius(rect,const Radius.circular(9)),edge);
+    }
+    canvas.drawCircle(Offset(centers.first.dx*size.width,centers.first.dy*size.height),math.max(4,size.shortestSide*.035),Paint()..color=const Color(0xFF477B56));
+    canvas.drawCircle(Offset(centers.last.dx*size.width,centers.last.dy*size.height),math.max(4,size.shortestSide*.035),Paint()..color=const Color(0xFFB47A32));
+    final textStyle=TextStyle(color:label,fontSize:math.max(9,size.shortestSide*.045),fontWeight:FontWeight.w700);
+    final title=TextPainter(text:TextSpan(text:'$location • $floorName',style:textStyle),textDirection:TextDirection.ltr,maxLines:1,ellipsis:'…')..layout(maxWidth:size.width*.84);
+    title.paint(canvas,Offset(size.width*.08,size.height*.035));
+    final isCave={'Mt. Moon','Rock Tunnel',"Diglett's Cave",'Seafoam Islands','Cerulean Cave','Victory Road'}.contains(location);
+    final legendText=isCave?'Komory i odnogi korytarzy • schemat poziomu'
+      :location=='Team Rocket Hideout'?'Podziemne pomieszczenia i przejścia'
+      :location=='Silph Co.'?'Pokoje biurowe wokół centralnego szybu'
+      :location=='Celadon Department Store'?'Sklepy wokół centralnego atrium'
+      :location=='Pokémon Tower'?'Centralna klatka schodowa i sale'
+      :location=='S.S. Anne'?'Korytarz pokładowy i kabiny'
+      :'Pomieszczenia i przejścia między strefami';
+    final legend=TextPainter(text:TextSpan(text:legendText,style:TextStyle(color:label.withValues(alpha:.8),fontSize:math.max(8,size.shortestSide*.032))),textDirection:TextDirection.ltr,maxLines:1,ellipsis:'…')..layout(maxWidth:size.width*.84);
+    legend.paint(canvas,Offset(size.width*.08,size.height*.105));
   }
 
   int _floorIndex(String value) {
