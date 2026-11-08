@@ -5696,3 +5696,13 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 
 
 - Kolejny log `flutter build apk --release` wykazał 3 błędy w `_PokemonPickerState`: ta klasa nie ma pola `_selectedGame`, ponieważ identyfikator gry jest przekazywany przez `widget.gameId`. Poprawiono wszystkie 3 odwołania w `team_screen.dart` na `widget.gameId`. Commit: `ce18c334e5c8fd2ee269869953ae5ab1d1cdbfe4`. Ostrzeżenie o Kotlin Gradle Plugin dla `firebase_core` pozostaje ostrzeżeniem, nie przyczyną tego przerwania kompilacji. APK wymaga ponownego zbudowania i sprawdzenia.
+
+### Mapy — audyt indeksu Kanto i warstwy mapy (2026-11-08)
+
+- Sprawdzono indeks offline Let's Go Kanto: zawiera 76 rekordów lokacji. Wszystkie odwołania `connectsTo` prowadzą do istniejących identyfikatorów; nie znaleziono pustych nazw lokacji.
+- Status współrzędnych w indeksie Let's Go: 74 lokacje mają pozycję niezweryfikowaną, a 2 wpisy są aliasami nazw. Żaden rekord nie powinien być traktowany jako potwierdzona pinezka na mapie.
+- Porównano indeks z listą miejsc warstwy wektorowej `_KantoMapPainter`: 74 główne punkty mapy pokrywają się z indeksem; Safari Zone i Bill's House są obsługiwane jako aliasy odpowiednio GO Park i Sea Cottage.
+- Osobny indeks klasycznego Kanto zawiera 65 lokacji; wszystkie pozycje pozostają niezweryfikowane, ale nie znaleziono zerwanych połączeń.
+- Wniosek: offline indeks, wyszukiwarka lokacji, połączenia i poglądowa mapa regionu już istnieją. Główną brakującą częścią nie jest liczba lokacji, lecz zweryfikowana warstwa położeń oraz dokładniejsze mapy lokalne. Nie dodano fikcyjnych współrzędnych ani pinezek.
+- Nie zmieniano kodu aplikacji w tym audycie. Nie uruchomiono Flutter Analyzer, testów ani APK.
+- Następny etap: opracować źródłowo zweryfikowane pozycje i sposób ich odwzorowania na mapie Kanto; dopiero po weryfikacji włączać pinezki Pokémonów, trenerów i przedmiotów.
