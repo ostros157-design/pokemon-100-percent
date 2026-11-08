@@ -5824,3 +5824,10 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Zachowano indywidualne układy pomieszczeń, korytarze, oznaczenia schodów i windy oraz wybór piętra.
 - Zmiany poprawiają czytelność i przybliżają styl schematów do klasycznych wnętrz gier Pokémon; układy nadal są poglądowe, nie tile-accurate.
 - Kontrola tekstowa potwierdziła nowe warstwy wizualne; nie uruchomiono Flutter Analyzer, testów ani kompilacji APK.
+
+
+### Mapy Kanto — charakterystyczne meble i dekoracje (2026-11-09)
+
+- Dodano wyposażenie zależne od rodzaju budynku: laboratoryjne biurka, monitory i aparaturę; półki sklepowe i automaty Game Corner; stoły oraz domowe dekoracje; gabloty muzealne; ołtarze wieży; łóżka kabin S.S. Anne; konsole kryjówki Team Rocket; maty sal Gym i regały Pokémon Mansion.
+- Elementy są rysowane wewnątrz istniejących pomieszczeń i przycinane do ich obrysów; pozostają ilustracyjnymi detalami, a nie deklaracją dokładnego położenia obiektów w grach.
+- Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK.
