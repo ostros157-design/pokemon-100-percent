@@ -6,6 +6,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../data/pokemon_data.dart';
 import '../data/move_data.dart';
+import '../data/pokemon_learnset_data.dart';
 import '../models/pokemon.dart';
 import '../services/team_recommendation_service.dart';
 
@@ -340,10 +341,30 @@ class _TeamScreenState extends State<TeamScreen> {
   }
 
   Future<void> _editMoves(Pokemon pokemon) async {
+    final versionGroup = PokemonLearnsetData.preferredVersionGroupForGame(_selectedGame);
+    List<PokemonLearnsetEntry> learnset = const <PokemonLearnsetEntry>[];
+    if (versionGroup != null) {
+      learnset = await PokemonLearnsetData.forPokemonAndVersion(
+        pokemon.id,
+        versionGroup,
+      );
+    }
+    if (!mounted) return;
+
+    final moveById = <int, MoveData>{
+      for (final move in moveCatalogue) move.id: move,
+    };
+    final availableMoveNames = learnset
+        .map((entry) => moveById[entry.moveId]?.name)
+        .whereType<String>()
+        .toSet();
+    final canVerify = learnset.isNotEmpty && availableMoveNames.isNotEmpty;
     final existing = _movesByPokemon[pokemon.id] ?? const <String>[];
     final controllers = List.generate(
       4,
-      (index) => TextEditingController(text: index < existing.length ? existing[index] : ''),
+      (index) => TextEditingController(
+        text: index < existing.length ? existing[index] : '',
+      ),
     );
     final result = await showDialog<List<String>>(
       context: context,
@@ -352,19 +373,30 @@ class _TeamScreenState extends State<TeamScreen> {
         content: SingleChildScrollView(
           child: Column(
             mainAxisSize: MainAxisSize.min,
-            children: List.generate(4, (index) => Padding(
-              padding: const EdgeInsets.only(bottom: 8),
-              child: TextField(
-                controller: controllers[index],
-                maxLength: 30,
-                decoration: InputDecoration(
-                  labelText: 'Ruch ${index + 1}',
-                  hintText: 'Wpisz nazwę ruchu',
-                  counterText: '',
-                  border: const OutlineInputBorder(),
-                ),
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                canVerify
+                    ? 'Sprawdzanie według danych nauki ruchów dla wybranej gry: ${_games[_selectedGame] ?? _selectedGame}.'
+                    : 'Brak pełnych danych nauki ruchów dla tego Pokémona i gry. Nazwy zostaną zapisane bez weryfikacji dostępności.',
+                style: Theme.of(dialogContext).textTheme.bodySmall,
               ),
-            )),
+              const SizedBox(height: 12),
+              ...List.generate(4, (index) => Padding(
+                padding: const EdgeInsets.only(bottom: 8),
+                child: TextField(
+                  controller: controllers[index],
+                  maxLength: 30,
+                  textCapitalization: TextCapitalization.words,
+                  decoration: InputDecoration(
+                    labelText: 'Ruch ${index + 1}',
+                    hintText: 'Wpisz nazwę ruchu',
+                    counterText: '',
+                    border: const OutlineInputBorder(),
+                  ),
+                ),
+              )),
+            ],
           ),
         ),
         actions: [
@@ -386,14 +418,44 @@ class _TeamScreenState extends State<TeamScreen> {
       controller.dispose();
     }
     if (result == null || !mounted) return;
+
     final moves = result.where((move) => move.isNotEmpty).take(4).toList();
+    if (canVerify) {
+      final allowedByLowercase = {
+        for (final name in availableMoveNames) name.toLowerCase(): name,
+      };
+      final invalid = moves.where(
+        (name) => !allowedByLowercase.containsKey(name.toLowerCase()),
+      ).toList();
+      if (invalid.isNotEmpty) {
+        await showDialog<void>(
+          context: context,
+          builder: (dialogContext) => AlertDialog(
+            title: const Text('Ruch niedostępny w tej grze'),
+            content: Text(
+              'Ten Pokémon nie ma tych ruchów w danych dla wybranej gry: ${invalid.join(', ')}.\n\nUsuń je lub zastąp ruchem z dostępnej listy. Zestaw nie został zapisany.',
+            ),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.pop(dialogContext),
+                child: const Text('Wróć'),
+              ),
+            ],
+          ),
+        );
+        return;
+      }
+    }
+
     setState(() {
       if (moves.isEmpty) {
         _movesByPokemon.remove(pokemon.id);
       } else {
         _movesByPokemon[pokemon.id] = moves;
       }
-      _status = 'Zmieniono zestaw ruchów ${pokemon.name}. Zapisz drużynę, aby zachować zmianę.';
+      _status = canVerify
+          ? 'Zapisano ruchy ${pokemon.name}; sprawdzono dostępność w wybranej grze. Zapisz drużynę, aby zachować zmianę.'
+          : 'Zmieniono ruchy ${pokemon.name}, ale dostępność nie została zweryfikowana z powodu braku danych dla tej gry. Zapisz drużynę, aby zachować zmianę.';
     });
   }
 
