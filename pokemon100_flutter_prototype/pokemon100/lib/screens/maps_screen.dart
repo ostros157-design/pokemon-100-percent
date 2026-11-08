@@ -4444,10 +4444,61 @@ class _KantoLocalAreaPainter extends CustomPainter {
       connector..moveTo(from.dx * size.width, from.dy * size.height)..lineTo(to.dx * size.width, to.dy * size.height);
     }
     canvas.drawPath(connector, corridor);
-    for (final room in rooms) {
+    for (var roomIndex = 0; roomIndex < rooms.length; roomIndex++) {
+      final room = rooms[roomIndex];
       final rect = Rect.fromLTRB(room.left*size.width,room.top*size.height,room.right*size.width,room.bottom*size.height);
-      canvas.drawRRect(RRect.fromRectAndRadius(rect,const Radius.circular(9)),roomFill);
-      canvas.drawRRect(RRect.fromRectAndRadius(rect,const Radius.circular(9)),edge);
+      final rounded = RRect.fromRectAndRadius(rect,const Radius.circular(5));
+      canvas.drawRRect(rounded,roomFill);
+      canvas.save();
+      canvas.clipRRect(rounded);
+      // Delikatna siatka płytek przywodzi na myśl wnętrza klasycznych gier Pokémon.
+      final tilePaint = Paint()
+        ..color = const Color(0xFF9BA58B).withValues(alpha: .24)
+        ..strokeWidth = 0.7;
+      final tile = math.max(9.0, math.min(18.0, size.shortestSide * .045));
+      for (double x = rect.left + tile; x < rect.right; x += tile) {
+        canvas.drawLine(Offset(x, rect.top), Offset(x, rect.bottom), tilePaint);
+      }
+      for (double y = rect.top + tile; y < rect.bottom; y += tile) {
+        canvas.drawLine(Offset(rect.left, y), Offset(rect.right, y), tilePaint);
+      }
+      // Proste elementy wyposażenia różnicują pomieszczenia bez udawania
+      // dokładnego rozmieszczenia obiektów z oryginalnej mapy.
+      final propPaint = Paint()..color = const Color(0xFF8B7655).withValues(alpha: .72);
+      final propSize = math.max(4.0, math.min(rect.width, rect.height) * .13);
+      final prop = Rect.fromLTWH(
+        rect.left + rect.width * (roomIndex.isEven ? .16 : .68),
+        rect.top + rect.height * .18,
+        propSize,
+        propSize,
+      );
+      canvas.drawRRect(
+        RRect.fromRectAndRadius(prop, const Radius.circular(2)),
+        propPaint,
+      );
+      canvas.restore();
+      // Ciemniejszy obrys i jasna krawędź nadają ścianom efektu głębi.
+      canvas.drawRRect(
+        rounded,
+        Paint()
+          ..color = const Color(0xFF596B55)
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = 2.4,
+      );
+      canvas.drawRRect(
+        RRect.fromRectAndRadius(rect.deflate(2.2), const Radius.circular(3)),
+        Paint()
+          ..color = const Color(0xFFF4EED2).withValues(alpha: .85)
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = 1,
+      );
+      // Jasny próg drzwi wskazuje miejsce wejścia do korytarza.
+      final door = Rect.fromCenter(
+        center: Offset(rect.center.dx, rect.bottom - 1),
+        width: math.max(8, rect.width * .22),
+        height: 3,
+      );
+      canvas.drawRect(door, Paint()..color = const Color(0xFFFFF1B8));
     }
 
     // Centralne oznaczenie pionowego ciągu komunikacyjnego na planach budynków.
