@@ -5816,3 +5816,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Podpisy markerów schodów i windy na schemacie pokazują teraz również aktualnie wybrany poziom.
 - Rozwiązanie obejmuje wieżę, rezydencję, domy, sklep, statek oraz wielopoziomowe jaskinie i kryjówki; schematy pozostają poglądowe.
 - Kontrola tekstowa potwierdziła obecność panelu, wyboru poziomu, przycisków i podpisu poziomu; nie uruchomiono Flutter Analyzer, testów ani kompilacji APK.
+
+
+### Mapy Kanto — wizualne dopracowanie wnętrz budynków (2026-11-09)
+
+- Ulepszono rysowanie pomieszczeń na planach pięter: dodano subtelną siatkę płytek, wielowarstwowe obrysy ścian, jasne progi drzwi i niewielkie elementy wyposażenia.
+- Zachowano indywidualne układy pomieszczeń, korytarze, oznaczenia schodów i windy oraz wybór piętra.
+- Zmiany poprawiają czytelność i przybliżają styl schematów do klasycznych wnętrz gier Pokémon; układy nadal są poglądowe, nie tile-accurate.
+- Kontrola tekstowa potwierdziła nowe warstwy wizualne; nie uruchomiono Flutter Analyzer, testów ani kompilacji APK.
