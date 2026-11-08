@@ -12,6 +12,8 @@ final List<String> trainers;
 final Map<String, double> encounterRatesPercent;
 /// Pokémon without a verified wild encounter rate are not assumed to be trainer Pokémon.
 final List<String> wildPokemonNoRate;
+/// Pokémon species mentioned in the guide text when a wild/trainer classification is not explicit.
+final List<String> pokemonMentions;
 
 /// Pokémon found in the wild, with or without a fixed encounter percentage.
 List<String> get wildPokemon => [
@@ -44,6 +46,7 @@ this.pokemon = const [],
 this.trainers = const [],
 this.encounterRatesPercent = const {},
 this.wildPokemonNoRate = const [],
+this.pokemonMentions = const [],
 this.items = const [],
 this.optional = false,
 });
