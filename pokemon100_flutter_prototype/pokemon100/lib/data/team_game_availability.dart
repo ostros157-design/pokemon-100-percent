@@ -5,6 +5,7 @@
 /// Let's Go version exclusives and special access methods are handled explicitly.
 enum TeamAvailabilityKind {
   inGame,
+  regionalDex,
   tradeRequired,
   specialAccess,
   postGame,
@@ -21,7 +22,7 @@ class TeamPokemonAvailability {
 
   const TeamPokemonAvailability(this.kind, this.label, this.detail);
 
-  bool get canBeAdded => kind == TeamAvailabilityKind.inGame;
+  bool get canBeAdded => kind == TeamAvailabilityKind.inGame || kind == TeamAvailabilityKind.regionalDex;
   bool get canBeShownAsExtra =>
       kind == TeamAvailabilityKind.tradeRequired ||
       kind == TeamAvailabilityKind.specialAccess ||
@@ -210,8 +211,8 @@ class TeamGameAvailability {
     }
     if (_regionalContains(gameId, nationalDex)) {
       return const TeamPokemonAvailability(
-        TeamAvailabilityKind.inGame, 'W regionalnym Pokédexie',
-        'Gatunek znajduje się na liście regionalnego Pokédexu; konkretna metoda i etap zdobycia mogą się różnić.',
+        TeamAvailabilityKind.regionalDex, 'W regionalnym Pokédexie',
+        'Gatunek znajduje się na liście regionalnej. Dane nie rozróżniają, czy zdobycie wymaga wymiany, post-game, eventu lub konkretnej metody.',
       );
     }
     return const TeamPokemonAvailability(
@@ -221,5 +222,5 @@ class TeamGameAvailability {
   }
 
   static bool contains(String gameId, int nationalDex) =>
-      forPokemon(gameId, nationalDex).kind == TeamAvailabilityKind.inGame;
+      forPokemon(gameId, nationalDex).canBeAdded;
 }
