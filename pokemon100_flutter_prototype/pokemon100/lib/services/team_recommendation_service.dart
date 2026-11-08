@@ -8,7 +8,8 @@ class TeamRecommendation {
   final Pokemon pokemon;
   final int score;
   final List<String> reasons;
-  const TeamRecommendation({required this.pokemon, required this.score, required this.reasons});
+  final TeamPokemonAvailability availability;
+  const TeamRecommendation({required this.pokemon, required this.score, required this.reasons, required this.availability});
 }
 
 class TeamRecommendationService {
@@ -26,7 +27,7 @@ class TeamRecommendationService {
   /// species as part of the selected version's normal regional roster.
   /// Trade/event/unknown cases are kept out of automatic recommendations.
   static bool isAvailableInGame(Pokemon pokemon, String gameId) =>
-      TeamGameAvailability.forPokemon(gameId, pokemon.id).canBeAdded;
+      TeamGameAvailability.forPokemon(gameId, pokemon.id).canBeRecommended;
 
   static const Map<String, Set<String>> _superEffectiveAgainst = {
     'Normal': {}, 'Fire': {'Grass', 'Ice', 'Bug', 'Steel'},
@@ -229,7 +230,12 @@ class TeamRecommendationService {
         if (recognizedAssignedMoves > 0 && missingMoveCoverage.isEmpty) {
           reasons.add('Obecne ruchy drużyny mają już szerokie pokrycie typów — unikaj niepotrzebnego dublowania');
         }
-        ranked.add(TeamRecommendation(pokemon: candidate, score: score, reasons: reasons));
+        ranked.add(TeamRecommendation(
+          pokemon: candidate,
+          score: score,
+          reasons: reasons,
+          availability: TeamGameAvailability.forPokemon(gameId, candidate.id),
+        ));
       }
     }
     ranked.sort((a, b) {
