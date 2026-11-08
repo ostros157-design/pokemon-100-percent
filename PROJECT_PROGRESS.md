@@ -5771,3 +5771,12 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Usunięto dolną sekcję „Schemat podróży” i rozwijaną listę „Lokacje z poradników”, która zajmowała miejsce pod mapą.
 - Usunięto również nieużywane obliczanie listy lokacji dla tej sekcji. Wyszukiwanie i wybieranie lokacji na samej mapie oraz panel szczegółów pozostają bez zmian.
 - Kontrola tekstowa potwierdziła usunięcie obu nagłówków i deklaracji listy oraz zbilansowanie nawiasów. Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK.
+
+
+### Mapy Kanto — indywidualne schematy pięter jaskiń i budynków (2026-11-09)
+
+- Zastąpiono powtarzalny układ siatki osobnymi schematami dla Mt. Moon, Rock Tunnel, Diglett's Cave, Seafoam Islands, Cerulean Cave, Victory Road, Team Rocket Hideout, Pokémon Tower, Silph Co., Celadon Department Store, S.S. Anne, Pokémon Mansion i Celadon Condominiums.
+- Schematy mają różne układy komór i połączeń: rozgałęzienia jaskiń, długi tunel, centralny pion biurowca, atrium sklepu, korytarz z kabinami statku oraz centralny trzon wieży.
+- Wybrane plany różnią się zależnie od poziomu, m.in. dodatkowymi komorami lub łącznikami.
+- To nadal plany orientacyjne, nie odwzorowanie kafelek ani zweryfikowane współrzędne przedmiotów, Pokémonów i trenerów.
+- Kontrola różnic nawiasów w edytowanej metodzie przeszła przed zapisem; nie uruchomiono Flutter Analyzer, testów ani kompilacji APK.
