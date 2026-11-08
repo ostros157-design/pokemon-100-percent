@@ -204,18 +204,18 @@ class _MapsScreenState extends State<MapsScreen> {
     }
     if (location == null) return const SizedBox.shrink();
 
-    final connectedLocations = (location['connectsTo'] as List?)
-            ?.whereType<String>()
-            .map((id) => rawLocations
-                .whereType<Map<String, dynamic>>()
-                .cast<Map<String, dynamic>?>()
-                .firstWhere(
-                  (candidate) => candidate?['id'] == id,
-                  orElse: () => null,
-                ))
-            .whereType<Map<String, dynamic>>()
-            .toList(growable: false) ??
-        const <Map<String, dynamic>>[];
+    final connectedLocations = <Map<String, dynamic>>[];
+    final connectedIds = (location['connectsTo'] as List?)
+            ?.whereType<String>() ??
+        const <String>[];
+    for (final id in connectedIds) {
+      for (final candidate in rawLocations.whereType<Map<String, dynamic>>()) {
+        if (candidate['id'] == id) {
+          connectedLocations.add(candidate);
+          break;
+        }
+      }
+    }
 
     void openConnectedLocation(String name) {
       _locationSearchController.text = name;
