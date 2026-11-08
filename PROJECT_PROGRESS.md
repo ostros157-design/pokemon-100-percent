@@ -1,3 +1,14 @@
+### Poradnik Let's Go, Pikachu! — Route 7 (2026-11-08)
+
+- Dodano dwie tabele Route 7: spotkania w trawie oraz na niebie.
+- Tabela trawy obejmuje Growlithe 19%, Pidgey/Pidgeotto/Rattata/Raticate/Jigglypuff po 15%, Abra 4%, Arcanine i Kadabra po 1% (poziomy 22–27).
+- Porygon jest oznaczony jako specjalny spawn bez stałego procentu.
+- Tabela nieba obejmuje Pidgey 60%, Pidgeotto 35%, Pidgeot 5%. Specjalne spawny zależą od Catch Combo i warunków wydarzeń legendarnych ptaków, dlatego nie wpisano im jednej stałej wartości.
+- Źródła: Serebii Pokéarth, Routepedia i RotomLabs — Route 7.
+- Ujednolicono przypisanie tabel Route 11 do sekcji Route 11 / Diglett's Cave / Lavender Town.
+- Nie uruchomiono Flutter Analyzer, testów ani APK.
+
+
 ### Poradnik Let's Go, Pikachu! — Route 8–12 i Snorlax (2026-11-08)
 
 - Dodano 14 kroków z tabelami dla Route 8, Route 9, Route 10, Route 11 i Route 12.
