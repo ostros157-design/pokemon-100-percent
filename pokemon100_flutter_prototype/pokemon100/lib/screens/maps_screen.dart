@@ -2543,6 +2543,26 @@ class _KantoLocalAreaPanel extends StatefulWidget {
 
 class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
   String? _selectedFeature;
+  String? _selectedFloor;
+
+  static const Map<String, List<String>> _floorsByLocation = {
+    'Mt. Moon': ['1F', 'B1F', 'B2F'],
+    'Rock Tunnel': ['1F', 'B1F'],
+    "Diglett's Cave": ['Poziom podziemny'],
+    'Seafoam Islands': ['B1F', 'B2F', 'B3F', 'B4F'],
+    'Cerulean Cave': ['1F', '2F', '3F'],
+    'Victory Road': ['1F', '2F', '3F'],
+    'Pokémon Tower': ['1F', '2F', '3F', '4F', '5F', '6F', '7F'],
+    'Pokémon Mansion': ['1F', '2F', '3F', 'B1F'],
+    'Team Rocket Hideout': ['B1F', 'B2F', 'B3F', 'B4F'],
+    'Silph Co.': ['1F', '2F', '3F', '4F', '5F', '6F', '7F', '8F', '9F', '10F', '11F'],
+    'Celadon Department Store': ['1F', '2F', '3F', '4F', '5F', '6F', 'Dach'],
+    'Celadon Condominiums': ['1F', '2F', '3F'],
+    'S.S. Anne': ['Pokład główny', 'Górny pokład', 'Dolny pokład'],
+  };
+
+  List<String> _floorsFor(String location) =>
+      _floorsByLocation[location] ?? const <String>[];
 
   static const _featuresByLocation = <String, Map<String, String>>{
     'Pallet Town': {
@@ -2941,10 +2961,13 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
   @override
   void didUpdateWidget(covariant _KantoLocalAreaPanel oldWidget) {
     super.didUpdateWidget(oldWidget);
-    if (oldWidget.location != widget.location) _selectedFeature = null;
+    if (oldWidget.location != widget.location) {
+      _selectedFeature = null;
+      _selectedFloor = null;
+    }
   }
 
-  Future<void> _showExpandedMap(BuildContext context, String location) {
+  Future<void> _showExpandedMap(BuildContext context, String location, {String? floor}) {
     return showDialog<void>(
       context: context,
       builder: (dialogContext) => Dialog(
@@ -2957,7 +2980,7 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Powiększona mapa: $location',
+                  'Powiększona mapa: $location${floor == null ? '' : ' — $floor'}',
                   style: Theme.of(dialogContext).textTheme.titleLarge,
                 ),
                 const SizedBox(height: 12),
@@ -2966,6 +2989,7 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
                   child: CustomPaint(
                     painter: _KantoLocalAreaPainter(
                       location: location,
+                      floor: floor,
                       land: Theme.of(dialogContext).colorScheme.surfaceContainerHighest,
                       route: Theme.of(dialogContext).colorScheme.primary,
                       label: Theme.of(dialogContext).colorScheme.onSurface,
@@ -3030,6 +3054,10 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
     if (features == null) return const SizedBox.shrink();
 
     final selected = _selectedFeature;
+    final floors = _floorsFor(location);
+    final selectedFloor = floors.isEmpty
+        ? null
+        : (floors.contains(_selectedFloor) ? _selectedFloor : floors.first);
     final availablePokemon = widget.references
         .expand((reference) => reference.step.pokemon)
         .toSet()
@@ -3060,7 +3088,7 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
         Tooltip(
           message: 'Dotknij, aby powiększyć schemat',
           child: GestureDetector(
-            onTap: () => _showExpandedMap(context, location),
+            onTap: () => _showExpandedMap(context, location, floor: selectedFloor),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(12),
               child: AspectRatio(
@@ -3068,6 +3096,7 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
                 child: CustomPaint(
                   painter: _KantoLocalAreaPainter(
                     location: location,
+                    floor: selectedFloor,
                     land: Theme.of(context).colorScheme.surfaceContainerHighest,
                     route: Theme.of(context).colorScheme.primary,
                     label: Theme.of(context).colorScheme.onSurface,
@@ -3078,6 +3107,20 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
             ),
           ),
         ),
+        if (floors.isNotEmpty) ...[
+          const SizedBox(height: 10),
+          Text('Poziom / piętro', style: Theme.of(context).textTheme.titleSmall),
+          const SizedBox(height: 6),
+          Wrap(
+            spacing: 6,
+            runSpacing: 6,
+            children: floors.map((floor) => ChoiceChip(
+              label: Text(floor),
+              selected: selectedFloor == floor,
+              onSelected: (_) => setState(() => _selectedFloor = floor),
+            )).toList(),
+          ),
+        ],
         const SizedBox(height: 8),
         Wrap(
           spacing: 6,
@@ -3185,6 +3228,7 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
 
 class _KantoLocalAreaPainter extends CustomPainter {
   final String location;
+  final String? floor;
   final Color land;
   final Color route;
   final Color label;
@@ -3219,6 +3263,7 @@ class _KantoLocalAreaPainter extends CustomPainter {
 
   const _KantoLocalAreaPainter({
     required this.location,
+    this.floor,
     required this.land,
     required this.route,
     required this.label,
@@ -3226,6 +3271,10 @@ class _KantoLocalAreaPainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
+    if (floor != null) {
+      _paintFloorPlan(canvas, size, floor!);
+      return;
+    }
     canvas.drawRect(Offset.zero & size, Paint()..isAntiAlias = true..color = land);
     final zoneFill = Paint()..isAntiAlias = true..color = const Color(0xFFD8D9BD).withValues(alpha: .88);
     final zoneEdge = Paint()..isAntiAlias = true
@@ -4235,9 +4284,73 @@ class _KantoLocalAreaPainter extends CustomPainter {
     title.paint(canvas, const Offset(8, 8));
   }
 
+  void _paintFloorPlan(Canvas canvas, Size size, String floorName) {
+    canvas.drawRect(Offset.zero & size, Paint()..isAntiAlias = true..color = land);
+    final edge = Paint()..isAntiAlias = true..color = route.withValues(alpha: .72)..style = PaintingStyle.stroke..strokeWidth = 2;
+    final roomFill = Paint()..isAntiAlias = true..color = const Color(0xFFD8D9BD).withValues(alpha: .90);
+    final corridor = Paint()..isAntiAlias = true..color = route.withValues(alpha: .30)..strokeWidth = math.max(8, size.shortestSide * .055)..strokeCap = StrokeCap.round;
+    final index = _floorIndex(floorName);
+    final isCave = {'Mt. Moon','Rock Tunnel',"Diglett's Cave",'Seafoam Islands','Cerulean Cave','Victory Road','Team Rocket Hideout'}.contains(location);
+    final isTower = location == 'Pokémon Tower';
+    final isOffice = location == 'Silph Co.';
+    final isStore = location == 'Celadon Department Store';
+    final isShip = location == 'S.S. Anne';
+    final roomCount = isCave ? 4 + (index % 2) : isOffice ? 7 : isStore ? 5 : isTower ? 4 : isShip ? 5 : 4;
+    final columns = roomCount >= 6 ? 3 : 2;
+    final rows = (roomCount / columns).ceil();
+    final marginX = size.width * .10;
+    final marginY = size.height * .16;
+    final gapX = size.width * .055;
+    final gapY = size.height * .07;
+    final roomWidth = (size.width - 2 * marginX - (columns - 1) * gapX) / columns;
+    final roomHeight = (size.height - 2 * marginY - (rows - 1) * gapY) / rows;
+    final centers = <Offset>[];
+    for (var i = 0; i < roomCount; i++) {
+      final row = i ~/ columns;
+      final col = i % columns;
+      final rect = Rect.fromLTWH(marginX + col * (roomWidth + gapX), marginY + row * (roomHeight + gapY), roomWidth, roomHeight);
+      canvas.drawRRect(RRect.fromRectAndRadius(rect, const Radius.circular(9)), roomFill);
+      canvas.drawRRect(RRect.fromRectAndRadius(rect, const Radius.circular(9)), edge);
+      centers.add(rect.center);
+    }
+    final connector = Path();
+    for (var i = 0; i < centers.length; i++) {
+      if (i == 0) {
+        connector.moveTo(centers[i].dx, centers[i].dy);
+      } else {
+        connector.lineTo(centers[i - 1].dx, centers[i].dy);
+        connector.lineTo(centers[i].dx, centers[i].dy);
+      }
+    }
+    canvas.drawPath(connector, corridor);
+    canvas.drawCircle(centers.first, math.max(4, size.shortestSide * .035), Paint()..color = const Color(0xFF477B56));
+    canvas.drawCircle(centers.last, math.max(4, size.shortestSide * .035), Paint()..color = const Color(0xFFB47A32));
+    final textStyle = TextStyle(color: label, fontSize: math.max(9, size.shortestSide * .045), fontWeight: FontWeight.w700);
+    final title = TextPainter(text: TextSpan(text: '$location • $floorName', style: textStyle), textDirection: TextDirection.ltr, maxLines: 1, ellipsis: '…')..layout(maxWidth: size.width * .84);
+    title.paint(canvas, Offset(size.width * .08, size.height * .035));
+    final legend = TextPainter(
+      text: TextSpan(text: isCave ? 'Komory i korytarze • schemat poziomu' : isOffice ? 'Strefy biurowe • pion komunikacyjny' : isStore ? 'Strefy handlowe • połączenia pięter' : isTower ? 'Sale wieży • przejście na kolejne piętro' : isShip ? 'Pokład i kabiny • przejścia orientacyjne' : 'Pomieszczenia • schody / przejście', style: TextStyle(color: label.withValues(alpha: .8), fontSize: math.max(8, size.shortestSide * .032))),
+      textDirection: TextDirection.ltr, maxLines: 1, ellipsis: '…',
+    )..layout(maxWidth: size.width * .84);
+    legend.paint(canvas, Offset(size.width * .08, size.height * .105));
+  }
+
+  int _floorIndex(String value) {
+    final basement = RegExp(r'B(\d+)').firstMatch(value);
+    if (basement != null) return (int.tryParse(basement.group(1)!) ?? 1) + 10;
+    final numeric = RegExp(r'(\d+)').firstMatch(value);
+    if (numeric != null) return int.tryParse(numeric.group(1)!) ?? 0;
+    if (value == 'Dach') return 20;
+    if (value == 'Pokład główny') return 1;
+    if (value == 'Górny pokład') return 2;
+    if (value == 'Dolny pokład') return 3;
+    return 0;
+  }
+
   @override
   bool shouldRepaint(covariant _KantoLocalAreaPainter oldDelegate) =>
       location != oldDelegate.location ||
+      floor != oldDelegate.floor ||
       land != oldDelegate.land ||
       route != oldDelegate.route ||
       label != oldDelegate.label;
