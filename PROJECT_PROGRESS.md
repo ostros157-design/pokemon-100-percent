@@ -5674,3 +5674,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 
 
 - Korekta po ponownej kontroli: opis Championa Trace’a został w całości zastąpiony prawidłową drużyną wersji Pikachu wraz z poziomami 56–57; usunięto błędną wzmiankę o Eevee.
+
+
+### Poradnik Let’s Go, Pikachu! — rozpoznawanie klas trenerów w kartach (2026-11-08)
+
+- Rozszerzono automatyczne rozpoznawanie nazw trenerów w opisach o brakujące klasy spotykane w Kanto, m.in. Beauty, Rocker, Engineer, Gamer, Juggler, Burglar, Scientist, Tamer, Ace Trainer, Channeler, Super Nerd, Team Rocket Grunt i Coach Trainer.
+- Jawne pole `trainers` nadal ma pierwszeństwo; automatyczne rozpoznawanie jest tylko rozwiązaniem pomocniczym dla starszych kroków bez jawnej listy.
+- Nie dodano poziomów ani składów Pokémonów na podstawie samego rozpoznania nazwy trenera.
+- Nie uruchomiono Flutter Analyzer, testów ani APK.
