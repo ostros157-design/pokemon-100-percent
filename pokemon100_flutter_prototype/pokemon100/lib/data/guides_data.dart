@@ -855,7 +855,8 @@ const List<Guide> guidesList = [
         title: "Odbierz prezent — Charmander na Route 24",
         description: "Na Route 24 możesz otrzymać Charmandera jako prezent na poziomie 14. To prezent, a nie losowe spotkanie w trawie, dlatego nie otrzymuje procentu w tabeli dzikich Pokémonów.",
         location: "Route 24 — prezent od trenera",
-        pokemon: [],
+        pokemon: ["Charmander"],
+        wildPokemonNoRate: ["Charmander"],
         encounterRatesPercent: {
 
         },
@@ -1402,7 +1403,8 @@ const List<Guide> guidesList = [
         title: "Stałe spotkanie ze Snorlaxem na Route 16",
         description: "Na Route 16 śpi Snorlax blokujący drogę. Po zdobyciu Poké Flute możesz go obudzić i rozpocząć stałe spotkanie na poziomie 34. Jest to spotkanie statyczne, a nie losowy spawn.",
         location: "Route 16 — przeszkoda na drodze",
-        pokemon: [],
+        pokemon: ["Snorlax"],
+        wildPokemonNoRate: ["Snorlax"],
         encounterRatesPercent: {
 
         },
@@ -1553,7 +1555,8 @@ const List<Guide> guidesList = [
         title: "Stałe spotkanie ze Snorlaxem na Route 12",
         description: "Na Route 12 znajduje się śpiący Snorlax blokujący przejście. Po zdobyciu Poké Flute możesz go obudzić i rozpocząć stałe spotkanie na poziomie 34. To spotkanie fabularne, a nie losowy spawn — dlatego nie jest mieszane z procentowymi tabelami trawy, nieba ani wody.",
         location: "Route 12 — przeszkoda na drodze",
-        pokemon: [],
+        pokemon: ["Snorlax"],
+        wildPokemonNoRate: ["Snorlax"],
         encounterRatesPercent: {
 
         },
@@ -1820,7 +1823,8 @@ const List<Guide> guidesList = [
         title: "Stałe spotkanie z Articuno",
         description: "W głębi Seafoam Islands znajduje się Articuno na poziomie 50. Jest to statyczne spotkanie legendarnego Pokémona, a nie losowy spawn z tabeli procentowej.",
         location: "Seafoam Islands — głęboka komnata",
-        pokemon: [],
+        pokemon: ["Articuno"],
+        wildPokemonNoRate: ["Articuno"],
         encounterRatesPercent: {
 
         },
@@ -1965,7 +1969,8 @@ const List<Guide> guidesList = [
         title: "Stałe spotkanie z Zapdosem",
         description: "W Power Plant znajduje się Zapdos na poziomie 50. To statyczne spotkanie legendarnego Pokémona, niezależne od losowych spotkań w budynku.",
         location: "Power Plant — głęboka część",
-        pokemon: [],
+        pokemon: ["Zapdos"],
+        wildPokemonNoRate: ["Zapdos"],
         encounterRatesPercent: {
 
         },
@@ -2112,7 +2117,8 @@ const List<Guide> guidesList = [
         title: "Stałe spotkanie z Moltresem",
         description: "W Victory Road czeka Moltres na poziomie 50. To statyczne spotkanie legendarnego Pokémona.",
         location: "Victory Road — głęboka komnata",
-        pokemon: [],
+        pokemon: ["Moltres"],
+        wildPokemonNoRate: ["Moltres"],
         encounterRatesPercent: {
 
         },
@@ -2225,7 +2231,8 @@ const List<Guide> guidesList = [
         title: "Stałe spotkanie z Mewtwo",
         description: "W najgłębszej części Cerulean Cave czeka Mewtwo na poziomie 70. To statyczne spotkanie, które rozpoczyna się po dotarciu do niego w post-game.",
         location: "Cerulean Cave — najgłębsza komnata",
-        pokemon: [],
+        pokemon: ["Mewtwo"],
+        wildPokemonNoRate: ["Mewtwo"],
         encounterRatesPercent: {
 
         },
