@@ -545,7 +545,7 @@ class _TeamScreenState extends State<TeamScreen> {
                     errorWidget: (_, __, ___) => CircleAvatar(child: Text('${recommendation.pokemon.id}')),
                   )),
                   title: Text(recommendation.pokemon.name),
-                  subtitle: Text('${recommendation.pokemon.types.join(' / ')}\n${recommendation.availability.label} · ${recommendation.reasons.take(2).join('; ')}'),
+                  subtitle: Text('${recommendation.pokemon.types.join(' / ')}\n${recommendation.availability.label} · ${recommendation.availability.label}: ${recommendation.availability.detail} · ${recommendation.reasons.take(2).join('; ')}'),
                   isThreeLine: true, trailing: Text('+ ${recommendation.score}'),
                   onTap: () => Navigator.pop(sheetContext, recommendation.pokemon),
                 ),
@@ -897,7 +897,7 @@ class _TeamScreenState extends State<TeamScreen> {
                               ),
                             ),
                             title: Text(pokemon.name),
-                            subtitle: Text('#${pokemon.id.toString().padLeft(3, '0')} · ${pokemon.types.join(' / ')}\\n${TeamGameAvailability.forPokemon(widget.gameId, pokemon.id).label}'),
+                            subtitle: Text('#${pokemon.id.toString().padLeft(3, '0')} · ${pokemon.types.join(' / ')}\\n${TeamGameAvailability.forPokemon(widget.gameId, pokemon.id).label}: ${TeamGameAvailability.forPokemon(widget.gameId, pokemon.id).detail}', maxLines: 2, overflow: TextOverflow.ellipsis),
                             trailing: IconButton(
                               tooltip: 'Usuń z drużyny',
                               icon: const Icon(Icons.remove_circle_outline),
@@ -1029,7 +1029,7 @@ class _PokemonPickerState extends State<_PokemonPicker> {
                             ),
                           ),
                           title: Text(pokemon.name),
-                          subtitle: Text('#${pokemon.id.toString().padLeft(3, '0')} · ${pokemon.types.join(' / ')}\\n${TeamGameAvailability.forPokemon(widget.gameId, pokemon.id).label}'),
+                          subtitle: Text('#${pokemon.id.toString().padLeft(3, '0')} · ${pokemon.types.join(' / ')}\\n${TeamGameAvailability.forPokemon(widget.gameId, pokemon.id).label}: ${TeamGameAvailability.forPokemon(widget.gameId, pokemon.id).detail}'),
                           onTap: () => Navigator.pop(context, pokemon),
                         );
                       },
