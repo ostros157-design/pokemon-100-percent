@@ -1,3 +1,11 @@
+### Poradnik Let's Go, Pikachu! — doprecyzowanie tabel Route 20 i nazw wersji (2026-11-08)
+
+- Rozdzielono wodne spotkania Route 20 na dwa odcinki, ponieważ źródło podaje dwa zakresy poziomów (37–42 oraz 39–44). Każda tabela zachowuje tę samą zweryfikowaną dystrybucję 45/45/5/5, ale ma osobny zakres.
+- Dodano brakujące klikalne wzmianki o wersjonowych Pokémonach Eevee na Route 14, 15, 21, 24 i 25.
+- Nie zmieniano stawek spotkań ani nie dopisywano niezweryfikowanych procentów.
+- Nie uruchomiono Flutter Analyzer, testów ani APK.
+
+
 ### Poradnik Let's Go, Pikachu! — Route 19–25 (2026-11-08)
 
 - Dodano 20 kroków tabel spotkań dla Route 19–25.
