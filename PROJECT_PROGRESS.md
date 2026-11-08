@@ -5624,3 +5624,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Dane sal porównano z walkthrough Bulbapedia dla części 6, 9, 10, 11, 13 i 14; Pokémon League z części 16. Tam, gdzie lista trainerów zawiera nazwy, ale nie wszystkie składy w tym wpisie, nie dopisano wymyślonych poziomów ani ruchów.
 - Źródła: Bulbapedia Part 6, Part 9, Part 10, Part 11, Part 13, Part 14 i Part 16.
 - Nie uruchomiono Flutter Analyzer, testów ani APK.
+
+
+### Poradnik Let’s Go, Pikachu! — spotkania stałe i prezenty w prawidłowej kategorii (2026-11-08)
+
+- Przeniesiono statyczne spotkania i prezent Charmandera do pola `wildPokemonNoRate`: Charmander, dwa spotkania ze Snorlaxem, Articuno, Zapdos, Moltres i Mewtwo.
+- Dzięki temu nie będą błędnie prezentowane jako neutralne wzmianki ani Pokémony trenerów. Nadal nie dostają procentów, ponieważ nie są losowymi spotkaniami.
+- Zachowano osobną kategorię procentowych spotkań losowych.
+- Nie uruchomiono Flutter Analyzer, testów ani APK.
