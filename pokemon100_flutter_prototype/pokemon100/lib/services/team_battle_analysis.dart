@@ -91,6 +91,17 @@ class TeamBattleAnalysis {
     'boomburst', 'disarming voice', 'echoed voice', 'hyper voice',
     'overdrive', 'round', 'relic song', 'snarl', 'sparkling aria', 'uproar',
   };
+  static const Set<String> _multiHitMoves = {
+    'arm thrust', 'barrage', 'bone rush', 'bullet seed', 'double slap',
+    'fury attack', 'fury swipes', 'icicle spear', 'pin missile',
+    'rock blast', 'spike cannon', 'tail slap', 'water shuriken',
+    'scale shot', 'population bomb',
+  };
+  static const Set<String> _recoilMoves = {
+    'brave bird', 'double-edge', 'flare blitz', 'head charge',
+    'head smash', 'submission', 'take down', 'volt tackle',
+    'wild charge', 'wood hammer', 'wave crash', 'chloroblast',
+  };
 
   static double effectiveness(String attackType, List<String> defendingTypes) {
     var multiplier = 1.0;
@@ -149,6 +160,8 @@ class TeamBattleAnalysis {
           .map((value) => value.trim().toLowerCase()).toSet();
       var physical = 0, special = 0, lowPower = 0;
       var punches = 0, bites = 0, pulses = 0, blades = 0, sounds = 0, pokemonStab = 0;
+      var multiHit = 0, recoil = 0;
+      final moveTypeCounts = <String, int>{};
       final physicalNames = <String>[], specialNames = <String>[];
 
       for (final rawName in assigned) {
@@ -166,6 +179,7 @@ class TeamBattleAnalysis {
           stab++;
           pokemonStab++;
         }
+        moveTypeCounts[type] = (moveTypeCounts[type] ?? 0) + 1;
         for (final target in targets) {
           if (effectiveness(type, [target]) > 1) {
             final label = pokemon.name + ' — ' + move.name;
@@ -189,6 +203,8 @@ class TeamBattleAnalysis {
         if (_pulses.contains(name)) pulses++;
         if (_blades.contains(name)) blades++;
         if (_soundMoves.contains(name)) sounds++;
+        if (_multiHitMoves.contains(name)) multiHit++;
+        if (_recoilMoves.contains(name)) recoil++;
       }
 
       if (pokemonStab > 0) {
@@ -221,6 +237,27 @@ class TeamBattleAnalysis {
       }
       if (abilities.contains('punk rock') && sounds > 0) {
         hints.add(pokemon.name + ': Punk Rock współgra z ' + sounds.toString() + ' ruchami dźwiękowymi.');
+      }
+      if ((abilities.contains('huge power') || abilities.contains('pure power')) && physical > 0) {
+        hints.add(pokemon.name + ': ' + (abilities.contains('huge power') ? 'Huge Power' : 'Pure Power') + ' wzmacnia Atak fizyczny używany przez ustawione ruchy.');
+      }
+      if (abilities.contains('flash fire') && (moveTypeCounts['Fire'] ?? 0) > 0) {
+        hints.add(pokemon.name + ': Flash Fire może dodatkowo wzmacniać ustawione ruchy ogniste po przyjęciu ataku Fire.');
+      }
+      if ((abilities.contains('storm drain') || abilities.contains('lightning rod')) && special > 0) {
+        hints.add(pokemon.name + ': ' + (abilities.contains('storm drain') ? 'Storm Drain' : 'Lightning Rod') + ' może zwiększyć Atak specjalny, z którego korzystają ustawione ruchy specjalne.');
+      }
+      if (abilities.contains('sap sipper') && physical > 0) {
+        hints.add(pokemon.name + ': Sap Sipper może zwiększyć Atak przed użyciem ustawionych ruchów fizycznych.');
+      }
+      if (abilities.contains('skill link') && multiHit > 0) {
+        hints.add(pokemon.name + ': Skill Link współgra z ' + multiHit.toString() + ' ustawionymi ruchami wielokrotnego trafienia.');
+      }
+      if (abilities.contains('reckless') && recoil > 0) {
+        hints.add(pokemon.name + ': Reckless wzmacnia ' + recoil.toString() + ' ustawionych ruchów z obrażeniami odrzutu.');
+      }
+      if (abilities.contains('dry skin')) {
+        hints.add(pokemon.name + ': uwaga — Dry Skin pomaga przeciwko Water, ale zwiększa otrzymywane obrażenia od Fire.');
       }
     }
 
