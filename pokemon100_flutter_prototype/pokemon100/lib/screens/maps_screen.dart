@@ -34,6 +34,7 @@ class _MapsScreenState extends State<MapsScreen> {
   final TextEditingController _locationSearchController = TextEditingController();
   final Map<String, Map<String, dynamic>> _mapIndexes = <String, Map<String, dynamic>>{};
   bool _mapIndexesLoading = true;
+  bool _showMapPicker = true;
 
   @override
   void dispose() {
@@ -750,6 +751,189 @@ class _MapsScreenState extends State<MapsScreen> {
     await _loadCompletedSteps();
   }
 
+  Widget _buildMapPicker(BuildContext context) {
+    final games = _gamesForGeneration;
+    final selectedGame = _selectedGame;
+    final availableRegions = _availableMapRegionsForSelectedGame;
+    return ListView(
+      padding: const EdgeInsets.all(18),
+      children: [
+        Container(
+          padding: const EdgeInsets.all(20),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(22),
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [
+                Theme.of(context).colorScheme.primaryContainer,
+                Theme.of(context).colorScheme.surfaceContainerHighest,
+              ],
+            ),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Icon(
+                Icons.explore_outlined,
+                size: 48,
+                color: Theme.of(context).colorScheme.onPrimaryContainer,
+              ),
+              const SizedBox(height: 12),
+              Text(
+                'Wybierz mapę',
+                style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                      fontWeight: FontWeight.w800,
+                    ),
+              ),
+              const SizedBox(height: 6),
+              Text(
+                'Wybierz grę i region, który chcesz odkrywać.',
+                style: Theme.of(context).textTheme.bodyMedium,
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(height: 18),
+        Card(
+          child: Padding(
+            padding: const EdgeInsets.all(16),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  '1. Region / generacja',
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                        fontWeight: FontWeight.bold,
+                      ),
+                ),
+                const SizedBox(height: 10),
+                DropdownButtonFormField<int>(
+                  value: _generation,
+                  isExpanded: true,
+                  decoration: const InputDecoration(
+                    border: OutlineInputBorder(),
+                    prefixIcon: Icon(Icons.public),
+                  ),
+                  items: _regions.entries
+                      .map((entry) => DropdownMenuItem<int>(
+                            value: entry.key,
+                            child: Text(
+                              'Generacja ${entry.key} — ${entry.value}',
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ))
+                      .toList(),
+                  onChanged: (value) {
+                    if (value == null) return;
+                    final generationGames = gamesList
+                        .where((game) =>
+                            _generationFromLabel(game.generation) == value)
+                        .toList();
+                    setState(() {
+                      _generation = value;
+                      if (!generationGames.any(
+                        (game) => game.id == _selectedGameId,
+                      )) {
+                        _selectedGameId = generationGames.isEmpty
+                            ? null
+                            : generationGames.first.id;
+                        _selectedMapRegionOverride = null;
+                      }
+                    });
+                    if (_selectedGameId != null) {
+                      _selectGame(_selectedGameId);
+                    }
+                  },
+                ),
+                const SizedBox(height: 18),
+                Text(
+                  '2. Gra Pokémon',
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                        fontWeight: FontWeight.bold,
+                      ),
+                ),
+                const SizedBox(height: 10),
+                DropdownButtonFormField<String>(
+                  value: games.any((game) => game.id == _selectedGameId)
+                      ? _selectedGameId
+                      : null,
+                  isExpanded: true,
+                  decoration: const InputDecoration(
+                    border: OutlineInputBorder(),
+                    prefixIcon: Icon(Icons.sports_esports),
+                  ),
+                  items: games
+                      .map((game) => DropdownMenuItem<String>(
+                            value: game.id,
+                            child: Text(
+                              game.name,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ))
+                      .toList(),
+                  onChanged: _selectGame,
+                ),
+                if (availableRegions.length > 1) ...[
+                  const SizedBox(height: 18),
+                  Text(
+                    '3. Obszar mapy',
+                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                          fontWeight: FontWeight.bold,
+                        ),
+                  ),
+                  const SizedBox(height: 10),
+                  DropdownButtonFormField<String>(
+                    value: availableRegions.contains(_mapIndexRegionName)
+                        ? _mapIndexRegionName
+                        : _defaultMapIndexRegionName,
+                    isExpanded: true,
+                    decoration: const InputDecoration(
+                      border: OutlineInputBorder(),
+                      prefixIcon: Icon(Icons.map_outlined),
+                    ),
+                    items: availableRegions
+                        .map((region) => DropdownMenuItem<String>(
+                              value: region,
+                              child: Text(region),
+                            ))
+                        .toList(),
+                    onChanged: (region) {
+                      if (region == null) return;
+                      setState(() {
+                        _selectedMapRegionOverride =
+                            region == _defaultMapIndexRegionName ? null : region;
+                      });
+                    },
+                  ),
+                ],
+                const SizedBox(height: 20),
+                SizedBox(
+                  width: double.infinity,
+                  child: FilledButton.icon(
+                    onPressed: selectedGame == null
+                        ? null
+                        : () => setState(() => _showMapPicker = false),
+                    icon: const Icon(Icons.map),
+                    label: const Text('Otwórz mapę'),
+                    style: FilledButton.styleFrom(
+                      padding: const EdgeInsets.symmetric(vertical: 15),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+        const SizedBox(height: 12),
+        Text(
+          'Uwaga: mapa pokazuje tylko położenia i szczegóły potwierdzone w danych. Elementy bez zweryfikowanych współrzędnych nie są przedstawiane jako dokładne pinezki.',
+          style: Theme.of(context).textTheme.bodySmall,
+        ),
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final games = _gamesForGeneration;
@@ -775,10 +959,22 @@ class _MapsScreenState extends State<MapsScreen> {
         .toList();
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Mapy i lokacje')),
+      appBar: AppBar(
+        title: const Text('Mapy i lokacje'),
+        actions: [
+          if (!_showMapPicker)
+            IconButton(
+              tooltip: 'Wybierz inną mapę',
+              icon: const Icon(Icons.map_outlined),
+              onPressed: () => setState(() => _showMapPicker = true),
+            ),
+        ],
+      ),
       body: _loading
           ? const Center(child: CircularProgressIndicator())
-          : ListView(
+          : _showMapPicker
+              ? _buildMapPicker(context)
+              : ListView(
               padding: const EdgeInsets.all(16),
               children: [
                 Text(
