@@ -1,3 +1,14 @@
+### Poradnik Pokémon Let’s Go, Pikachu! — rozbudowa do całej historii i post-game (2026-11-08)
+
+- Zaktualizowano nazwę i opis poradnika: nie jest już przedstawiany jako krótki wstęp do pierwszego Gymu.
+- Dodano **88 kolejnych rozdziałów (13–100)** na podstawie dostarczonego dokumentu: Cerulean City i Misty, Vermilion, Lavender, Celadon, Saffron, Fuchsia, Seafoam Islands, Cinnabar, Power Plant, Viridian Gym, Victory Road, Elite Four, Champion, Cerulean Cave, Mewtwo, Green, Master Trainerzy, rewanże, wymiany wersji, Alolan Forms, Pokédex, Mega Ewolucje i dodatkowe aktywności.
+- Zachowano wcześniejsze kroki Pallet Town–Mt. Moon; nowe rozdziały są dopisane po nich, bez usuwania poradnika Emerald ani wcześniejszych danych.
+- Dodano neutralne pole `pokemonMentions` w modelu poradnika. Nazwy gatunków rozpoznane w treści rozdziałów są wyświetlane jako klikalne chipy prowadzące do Pokédexu, ale nie są błędnie klasyfikowane jako dzikie spotkania lub Pokémony trenerów. Dotychczasowe jawne pola spotkań i trenerów nadal działają osobno.
+- Rozdziały post-game i kolekcjonerskie są oznaczone jako opcjonalne, więc ukończenie głównej historii nie oznacza automatycznie ukończenia całego poradnika.
+- **Nadal niekompletne względem docelowej specyfikacji:** pełne dane spotkań dla wszystkich 60 obszarów, poziomy i metody dla każdego dzikiego spotkania, kompletne składy wszystkich trenerów z ruchami i nagrodami, pełna tabela lokalizacji/wymagań Master Trainerów, osobne trackery GO Park/Pokédex/rewanży, dane partnera Pikachu i Secret Techniques w dedykowanej strukturze oraz miniaturowe sprite’y przy nazwach Pokémonów. Nie dopisano brakujących procentów ani niezweryfikowanych składów.
+- Wykonano kontrolę statyczną wygenerowanej struktury i liczby rozdziałów; nie uruchomiono Flutter Analyzer, testów ani APK. Testy urządzeniowe są odłożone do czasu powrotu laptopa.
+- Źródło treści: dokument przekazany w tej rozmowie przez użytkownika.
+
 ### Poradnik Pokémon Let’s Go, Pikachu! — Route 3 (2026-11-07)
 
 - Po zakończeniu pierwszej części Emerald przeniesiono prace na kolejny poradnik z ustalonej kolejności: **Let’s Go, Pikachu!**.
