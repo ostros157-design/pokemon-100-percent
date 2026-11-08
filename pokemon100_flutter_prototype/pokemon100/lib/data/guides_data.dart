@@ -890,8 +890,6 @@ title: 'Eksploruj Viridian Forest',
       ),
       GuideStep(
         section: "Misty i druga odznaka",
-      GuideStep(
-        section: "Misty i druga odznaka",
         title: "Pokonaj trenerów na Nugget Bridge i Route 24",
         description: "Na Nugget Bridge pokonaj kolejno: Bug Catcher Cale — Venonat Lv.9 (108$, 3 Poké Balle); Lass Ali — Psyduck Lv.10 (200$, 3 Poké Balle); Youngster Timmy — Sandshrew Lv.10 (200$, 3 Poké Balle); Lass Reli — Meowth Lv.10 (200$, 3 Poké Balle); Camper Kevin — Growlithe Lv.11 (220$, 2 Great Balle). Po pięciu walkach otrzymasz Nugget, a następnie walczysz z Team Rocket Grunt — Zubat Lv.11 i Koffing Lv.11 (308$). Na zachodniej polanie Route 24 pokonaj Camper Shane’a — Spearow Lv.11 (220$, 2 Great Balle). Łącznie siedem walk. Po walkach możesz odebrać Charmandera od chłopca na wzgórzu, jeśli złapano co najmniej 50 Pokémonów.",
         location: "Route 24 — Nugget Bridge i zachodnia polana",
@@ -899,11 +897,11 @@ title: 'Eksploruj Viridian Forest',
         pokemon: ["Venonat", "Psyduck", "Sandshrew", "Meowth", "Growlithe", "Zubat", "Koffing", "Spearow"],
         items: ["Nugget", "Poké Ball ×12", "Great Ball ×4", "Charmander (prezent po złapaniu 50 Pokémonów)"],
       ),
+      GuideStep(
+        section: "Misty i druga odznaka",
         title: "13. Route 24 i Nugget Bridge",
         description: "Przejdź na północ od Cerulean City.\nNa Route 24 znajduje się Nugget Bridge.\nPokonaj kolejnych trenerów, którzy stoją na moście.\nPo wygraniu wszystkich walk otrzymasz Nugget.\nPod koniec trasy spotkasz członka Team Rocket.\nPokonaj go, aby otrzymać dostęp do dalszej części Route 25.",
       ),
-      GuideStep(
-        section: "Misty i druga odznaka",
       GuideStep(
         section: "Misty i druga odznaka",
         title: "Pokonaj wszystkich trenerów na Route 25",
@@ -913,6 +911,8 @@ title: 'Eksploruj Viridian Forest',
         pokemon: ["Onix", "Diglett", "Pidgeotto", "Ekans", "Rattata", "Geodude", "Machop", "Goldeen", "Squirtle", "Oddish", "Pidgey", "Magikarp", "Krabby"],
         items: ["Poké Ball ×24", "Great Ball ×4", "TM15 Seismic Toss", "Super Potion", "TM16 Thunder Wave", "Ether", "Lure"],
       ),
+      GuideStep(
+        section: "Misty i druga odznaka",
         title: "14. Route 25 i Bill",
         description: "Przejdź przez Route 25.\nZnajdziesz tam trenerów i dzikie Pokémony.\nNa końcu trasy znajduje się dom Billa.\nWejdź do środka i porozmawiaj z dziwną postacią, która okaże się człowiekiem zamienionym w Pokémona.\nPomóż Billowi wrócić do normalnej postaci.\nW nagrodę otrzymasz bilet na S.S. Anne.\nWróć do Cerulean City.",
       ),
