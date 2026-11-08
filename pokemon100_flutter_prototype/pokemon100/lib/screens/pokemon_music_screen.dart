@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
-import '../data/pokemon_music_data.dart';
+import '../services/pokemon_music_service.dart';
 
 class PokemonMusicScreen extends StatefulWidget {
   const PokemonMusicScreen({super.key});
@@ -13,11 +13,12 @@ class PokemonMusicScreen extends StatefulWidget {
 }
 
 class _PokemonMusicScreenState extends State<PokemonMusicScreen> {
-  final AudioPlayer _player = AudioPlayer();
+  final PokemonMusicService _music = PokemonMusicService.instance;
+  AudioPlayer get _player => _music.player;
   PlayerState _state = PlayerState.stopped;
   Duration _duration = Duration.zero;
   Duration _position = Duration.zero;
-  double _volume = 0.65;
+  late double _volume;
   bool _loading = false;
   StreamSubscription<PlayerState>? _stateSubscription;
   StreamSubscription<Duration>? _durationSubscription;
@@ -28,6 +29,8 @@ class _PokemonMusicScreenState extends State<PokemonMusicScreen> {
   @override
   void initState() {
     super.initState();
+    _volume = _music.volume;
+    _state = _player.state;
     _stateSubscription = _player.onPlayerStateChanged.listen((value) {
       if (mounted) setState(() => _state = value);
     });
@@ -37,8 +40,7 @@ class _PokemonMusicScreenState extends State<PokemonMusicScreen> {
     _positionSubscription = _player.onPositionChanged.listen((value) {
       if (mounted) setState(() => _position = value);
     });
-    unawaited(_player.setVolume(_volume));
-    unawaited(_player.setReleaseMode(ReleaseMode.loop));
+    unawaited(_music.configure());
   }
 
   Future<void> _togglePlayback() async {
@@ -46,11 +48,9 @@ class _PokemonMusicScreenState extends State<PokemonMusicScreen> {
     setState(() => _loading = true);
     try {
       if (_isPlaying) {
-        await _player.pause();
-      } else if (_state == PlayerState.paused) {
-        await _player.resume();
+        await _music.pause();
       } else {
-        await _player.play(BytesSource(pokemonOfflineMusicBytes));
+        await _music.playOrResume();
       }
     } catch (_) {
       if (mounted) {
@@ -74,7 +74,6 @@ class _PokemonMusicScreenState extends State<PokemonMusicScreen> {
     _stateSubscription?.cancel();
     _durationSubscription?.cancel();
     _positionSubscription?.cancel();
-    unawaited(_player.dispose());
     super.dispose();
   }
 
@@ -126,7 +125,7 @@ class _PokemonMusicScreenState extends State<PokemonMusicScreen> {
             const Icon(Icons.volume_down),
             Expanded(child: Slider(value: _volume, onChanged: (value) {
               setState(() => _volume = value);
-              unawaited(_player.setVolume(value));
+              unawaited(_music.setVolume(value));
             })),
             const Icon(Icons.volume_up),
           ]),
