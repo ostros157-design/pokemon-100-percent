@@ -12,7 +12,7 @@ Pokemon species(int id, String name, List<String> types) => Pokemon(
 
 void main() {
   group('TeamGameAvailability', () {
-    test('only advertises games with availability data', () {
+    test('distinguishes games with regional data from manual-only games', () {
       for (final game in [
         'emerald',
         'firered',
