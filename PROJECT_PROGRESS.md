@@ -5421,3 +5421,15 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Commit: `a58ef6f6d46b73af0e9d87d0d0ad85fb83eec52e`.
 - Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK.
 
+
+
+### Team Making — rekomendacje uwzględniają przypisane ruchy (2026-11-08)
+
+- `TeamRecommendationService.recommend` przyjmuje teraz mapę `movesByPokemon` z aktualnego składu. Ekran przekazuje zapisane w bieżącym szkicu ruchy do silnika rekomendacji.
+- Serwis odczytuje nazwy ruchów z lokalnego katalogu `moveCatalogue`, pomija nazwy nierozpoznane, ruchy statusowe i ruchy bez standardowej mocy, a następnie oblicza typy przeciwników, przeciwko którym obecny zestaw ataków ma super skuteczne pokrycie.
+- Kandydat może otrzymać dodatkowe punkty, jeśli jego typ daje potencjalne uzupełnienie luk w ofensywnym pokryciu drużyny. Interfejs wyraźnie zaznacza, że jest to potencjał wynikający z typu kandydata, a nie potwierdzenie, że nauczy się on konkretnego ruchu w danej grze.
+- Zachowano dotychczasowe punktowanie defensywne, statystyki bazowe, wybrane umiejętności, filtr gry i regułę pozostawiania Hauntera bez automatycznej zamiany na Gengara.
+- Ograniczenia: ranking nadal jest heurystyczny. Nie symuluje obrażeń, STAB, statystyk przeciwnika, przedmiotów, pogody ani pełnych synergii umiejętności. Kandydat nie ma jeszcze automatycznie dobieranego i walidowanego zestawu ruchów.
+- Commity: serwis `ebab2ecc`, przekazanie danych z ekranu `5317fbca`, porządek w serwisie `36ee4269`.
+- Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK. Wymagany test ręczny: ustawić np. Flamethrower, Ice Beam i Earthquake w obecnym składzie, uruchomić rekomendacje i sprawdzić, czy proponowane Pokémony wskazują uzupełnienie brakujących typów, a nie tylko powielają już dostępne pokrycie.
+
