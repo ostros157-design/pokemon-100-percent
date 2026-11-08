@@ -2171,7 +2171,7 @@ const List<Guide> guidesList = [
       GuideStep(
         section: "Elite Four i Champion",
         title: "63. Champion — Trace",
-        description: "Po pokonaniu Elite Four zmierzysz się z rywalem Trace'em.\nTrace jest ostatnim przeciwnikiem głównej historii.\nJego drużyna zawiera:\n• Pidgeota;\n• Vileplume;\n• Marowaka;\n• Rapidasha;\n• Slowbro;\n• Eevee w swojej rozwiniętej formie.\nSkład i poziomy należy pobrać z danych Let's Go Pikachu, a nie z wersji Let's Go Eevee.\nPo zwycięstwie zostaniesz Championem Kanto.\nTwoje Pokémony zostaną zapisane w Hall of Fame.\nTo koniec głównej historii, ale nadal pozostaje dużo rzeczy do zrobienia.",
+        description: "Po pokonaniu Elite Four zmierzysz się z Championem Trace’em. W wersji Let’s Go, Pikachu! używa: Pidgeot Lv.56 (Mega Ewoluuje na początku walki), Vileplume Lv.56, Marowak Lv.56, Rapidash Lv.56, Slowbro Lv.56 i Jolteon Lv.57. Pidgeotite umożliwia Mega Ewolucję Pidgeota; Jolteon jest partnerową końcową ewolucją w wersji Pikachu. W Let’s Go, Eevee! ostatni Pokémon Trace’a jest Raichu. Po zwycięstwie zostaniesz Championem Kanto, a drużyna zostanie zapisana w Hall of Fame.",
         trainers: ["Champion Trace"],
         pokemon: ["Pidgeot", "Vileplume", "Marowak", "Rapidash", "Slowbro", "Jolteon"],
       ),
