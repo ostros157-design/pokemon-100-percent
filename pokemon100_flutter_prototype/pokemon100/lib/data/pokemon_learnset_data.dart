@@ -81,6 +81,7 @@ class PokemonLearnsetData {
       'ultra_moon': 'ultra-sun-ultra-moon',
       'emerald': 'emerald',
       'firered': 'firered-leafgreen',
+      'leafgreen': 'firered-leafgreen',
       'fire_red': 'firered-leafgreen',
       'leaf_green': 'firered-leafgreen',
       'ruby': 'ruby-sapphire',
