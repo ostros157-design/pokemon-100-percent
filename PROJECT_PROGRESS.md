@@ -5662,3 +5662,12 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Dodano w modelu osobne gettery dla procentowych spotkań oraz bezprocentowych spotkań stałych, zachowując stary getter `wildPokemon` dla kompatybilności.
 - Zmiana interfejsu dotyczy wszystkich poradników. Nie zmieniono logiki zapisu ukończenia kroków.
 - Nie uruchomiono Flutter Analyzer, testów ani APK.
+
+
+### Poradnik Let’s Go, Pikachu! — kompletna lista Mega Stones i poprawka Championa (2026-11-08)
+
+- Uzupełniono dokładne źródła wszystkich 15 Mega Stones: cztery od Blue w Pallet Town po pokonaniu Blaine’a, dziewięć do kupienia po 30 000$ u sprzedawcy w lobby Indigo Plateau oraz dwa od Green po walce w Cerulean Cave.
+- Dodano nazwy wszystkich kamieni i powiązane Pokémony.
+- Poprawiono opis Championa Trace’a dla wersji Let’s Go, Pikachu!: partnerową końcową ewolucją jest Jolteon Lv.57, a Pidgeot Mega Ewoluuje na początku walki.
+- Źródła: Serebii Mega Evolution, Altissimo1 Mega Stone Locations, SuperCheats.
+- Nie uruchomiono Flutter Analyzer, testów ani APK.
