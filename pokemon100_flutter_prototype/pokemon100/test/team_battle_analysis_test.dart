@@ -39,6 +39,30 @@ void main() {
       expect(profile.synergyHints.any((hint) => hint.contains('Atak specjalny')), isTrue);
     });
 
+    test('uses generation-specific Fairy type and physical/special rules', () {
+      const houndoom = Pokemon(
+        id: 229,
+        name: 'Houndoom',
+        types: ['Dark', 'Fire'],
+        description: '',
+        attack: 30,
+        specialAttack: 100,
+      );
+      final genThree = TeamBattleAnalysis.analyze(
+        [houndoom],
+        const {229: ['Bite']},
+        gameId: 'emerald',
+      );
+      final modern = TeamBattleAnalysis.analyze(
+        [houndoom],
+        const {229: ['Bite']},
+        gameId: 'lets_go_pikachu',
+      );
+      expect(genThree.uncoveredTypes, isNot(contains('Fairy')));
+      expect(genThree.synergyHints.any((hint) => hint.contains('Atak specjalny')), isFalse);
+      expect(modern.synergyHints.any((hint) => hint.contains('Atak specjalny')), isTrue);
+    });
+
     test('does not report unknown move names as valid coverage', () {
       const pokemon = Pokemon(
         id: 25, name: 'Pikachu', types: ['Electric'], description: '',
