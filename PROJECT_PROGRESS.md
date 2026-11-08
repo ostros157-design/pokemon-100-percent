@@ -5582,3 +5582,13 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Źródła: Bulbapedia Part 4 https://bulbapedia.bulbagarden.net/wiki/Walkthrough:Pok%C3%A9mon:_Let's_Go,_Pikachu!_and_Let's_Go,_Eevee!/Part_4 ; Serebii Route 4 https://www.serebii.net/pokearth/kanto/route4.shtml ; SuperCheats Mt. Moon https://www.supercheats.com/lets-go-pikachu/walkthrough/mt-moon .
 - Kontrola statyczna: sprawdzono obecność nowych kroków, bilans nawiasów w modelu i danych oraz sumy procentów każdej standardowej tabeli. Nie uruchomiono Flutter Analyzer, testów ani APK — wymagają laptopa.
 - Następny etap poradnika: Cerulean City, Misty, Nugget Bridge, Route 24–25 i Route 5.
+
+
+### Poradnik Let’s Go, Pikachu! — naprawa struktury i trenerzy Route 24–25 (2026-11-08)
+
+- Naprawiono 18 osieroconych wpisów `title` bez początku `GuideStep` oraz usunięto 18 zduplikowanych początków konstruktorów.
+- Dodano siedem walk na Route 24: pięciu trenerów Nugget Bridge, Team Rocket Grunt i Camper Shane; wpisano poziomy, nagrody i warunek prezentu Charmandera.
+- Dodano dziewięciu trenerów Route 25 oraz opcjonalnego Coach Trainer Amala, z Pokémonami, poziomami i nagrodami.
+- Uzupełniono Cerulean Gym o trzy Beauty i drużynę Misty wraz z ruchami, poziomami i nagrodami.
+- Źródła: Bulbapedia Part 5, Thonky Route 24, SuperCheats Route 25.
+- Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK. Zmiany wymagają późniejszego sprawdzenia na laptopie.
