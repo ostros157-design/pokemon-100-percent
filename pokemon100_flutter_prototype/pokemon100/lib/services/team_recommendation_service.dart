@@ -78,7 +78,7 @@ class TeamRecommendationService {
   }) {
     if (team.isEmpty || !hasVerifiedAvailabilityData(gameId)) return const [];
     final weakCounts = <String, int>{};
-    final hasFairyType = !{'emerald', 'firered', 'soulsilver'}.contains(gameId);
+    final hasFairyType = !{'emerald', 'firered', 'leafgreen', 'soulsilver'}.contains(gameId);
     final attackTypes = _superEffectiveAgainst.keys
         .where((type) => hasFairyType || type != 'Fairy');
     final hittableTargetTypes = attackTypes
