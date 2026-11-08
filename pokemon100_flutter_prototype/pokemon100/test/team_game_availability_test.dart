@@ -17,8 +17,24 @@ void main() {
         expect(TeamRecommendationService.isSupportedGame(game), isTrue,
             reason: '$game should be supported');
       }
+      expect(TeamRecommendationService.isSupportedGame('lets_go_eevee'), isTrue);
       expect(TeamRecommendationService.isSupportedGame('sword'), isFalse);
       expect(TeamRecommendationService.isSupportedGame('unknown'), isFalse);
+    });
+
+    test('Let’s Go version exclusives are trade-only rather than silently treated as absent', () {
+      expect(TeamGameAvailability.forPokemon('lets_go_pikachu', 27).kind, TeamAvailabilityKind.inGame);
+      expect(TeamGameAvailability.forPokemon('lets_go_pikachu', 23).kind, TeamAvailabilityKind.tradeRequired);
+      expect(TeamGameAvailability.forPokemon('lets_go_eevee', 23).kind, TeamAvailabilityKind.inGame);
+      expect(TeamGameAvailability.forPokemon('lets_go_eevee', 27).kind, TeamAvailabilityKind.tradeRequired);
+      expect(TeamGameAvailability.forPokemon('lets_go_pikachu', 151).kind, TeamAvailabilityKind.specialAccess);
+      expect(TeamGameAvailability.forPokemon('lets_go_pikachu', 808).kind, TeamAvailabilityKind.specialAccess);
+      expect(TeamGameAvailability.forPokemon('lets_go_pikachu', 809).kind, TeamAvailabilityKind.specialAccess);
+    });
+
+    test('regional dex omissions are labelled unknown rather than impossible', () {
+      expect(TeamGameAvailability.forPokemon('emerald', 1).kind, TeamAvailabilityKind.outsideRegionalDex);
+      expect(TeamGameAvailability.forPokemon('sword', 25).kind, TeamAvailabilityKind.unknown);
     });
 
     test('regional dex membership handles included and excluded species', () {
