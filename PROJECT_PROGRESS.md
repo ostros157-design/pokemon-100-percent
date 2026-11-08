@@ -5397,3 +5397,15 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Commity: ekran `f91a919`, lista dostępnych ruchów `8eb5d12`, mapowanie grup `77fe3bd`.
 - Ograniczenia: jakość weryfikacji zależy od kompletności pliku `assets/data/pokemon_learnsets.json` i katalogu ruchów. Sprawdzane są ruchy występujące w learnsecie Pokémona dla grupy wersji, nie zaś konkretne warunki fabularne, poziom, eventy lub dostępność TM w danym momencie zapisu.
 - Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK. Wymagane sprawdzenie ręczne w aplikacji dla co najmniej Let's Go, Emerald i Sword oraz sprawdzenie przypadku braku danych.
+
+
+### Team Making — rekomendacje uwzględniają statystyki i umiejętności (2026-11-08)
+
+- Rozbudowano `TeamRecommendationService`: ranking kandydatów łączy teraz uzupełnianie defensywnych słabości typów z analizą statystyk bazowych i wybranych umiejętności.
+- Dla HP, Ataku, Obrony, Ataku specjalnego, Obrony specjalnej i Szybkości obliczana jest średnia obecnej drużyny. Kandydat otrzymuje dodatkowe punkty, gdy jego znana statystyka wyraźnie przewyższa średnią składu; brakujące wartości są pomijane, a nie traktowane jako zero.
+- Dodano jawne reguły dla umiejętności zapewniających odporność lub immunitet na wybrane typy: Levitate, Flash Fire, Water Absorb, Storm Drain, Dry Skin, Volt Absorb, Motor Drive, Lightning Rod, Sap Sipper, Thick Fat i Heatproof. Pozostałe umiejętności nie otrzymują arbitralnego bonusu.
+- W rankingu zachowano filtr dostępności dla wybranej gry oraz regułę, która nie proponuje Gengara jako zamiennika Hauntera. Przy remisie wykorzystywana jest suma statystyk bazowych, a potem liczba typów i numer Pokédexu.
+- Zaktualizowano opis rekomendacji w interfejsie, aby informował o wykorzystaniu typów, statystyk i umiejętności.
+- Commity: serwis `feebd6f`, poprawka typowania wyniku `e11168d`, interfejs `7375e79`, rozstrzyganie remisów `1b0c69a`.
+- Ograniczenia: to heurystyczny ranking, nie pełna symulacja walk. Nie analizuje jeszcze przypisanych zestawów ruchów, natur, EV/IV, przedmiotów, ról zależnych od strategii ani dokładnych efektów wszystkich umiejętności. Lista rozpoznawanych umiejętności jest celowo ograniczona do jawnie obsłużonych przypadków.
+- Kontrola statyczna: ponownie pobrano zaktualizowany serwis i sprawdzono bilans nawiasów klamrowych oraz okrągłych; brak rozbieżności. Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK.
