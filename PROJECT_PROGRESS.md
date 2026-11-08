@@ -5724,3 +5724,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Dodano przycisk otwierania interaktywnej mapy w trybie pełnoekranowym, z zachowaniem przesuwania, zoomu i wyboru lokacji.
 - Nie dodano fikcyjnych współrzędnych ani nie przedstawiono schematu jako mapy w skali Google Maps. Dokładność topologii i pozycji wymaga jeszcze weryfikacji na podstawie planów gry lub wiarygodnych źródeł.
 - Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK.
+
+### Mapy — nawigacja między połączonymi lokacjami Kanto (2026-11-09)
+
+- W panelu szczegółów lokacji Let's Go, Pikachu! / Let's Go, Eevee! dodano sekcję „Połączone lokacje”, korzystającą bezpośrednio z relacji `connectsTo` w indeksie offline.
+- Każda połączona lokacja jest dostępna jako chip; wybranie jej ustawia nazwę w wyszukiwarce mapy, dzięki czemu można przejść do jej danych bez ręcznego wpisywania nazwy.
+- Lista jest budowana wyłącznie z identyfikatorów istniejących w indeksie — nie dodaje nowych tras ani nie zmienia niezweryfikowanych współrzędnych.
+- Zmiana poprawia nawigację tekstową po sieci lokacji; nie oznacza jeszcze automatycznego wyznaczania dokładnej ścieżki na rysowanej mapie.
+- Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK. Zmiana wymaga sprawdzenia lokalnego builda.
