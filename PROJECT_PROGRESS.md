@@ -5780,3 +5780,12 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Wybrane plany różnią się zależnie od poziomu, m.in. dodatkowymi komorami lub łącznikami.
 - To nadal plany orientacyjne, nie odwzorowanie kafelek ani zweryfikowane współrzędne przedmiotów, Pokémonów i trenerów.
 - Kontrola różnic nawiasów w edytowanej metodzie przeszła przed zapisem; nie uruchomiono Flutter Analyzer, testów ani kompilacji APK.
+
+
+### Mapy Kanto — widoczne przejścia między piętrami (2026-11-09)
+
+- Na schematach pięter dodano oznaczenia dostępnych przejść w górę i w dół z nazwą rodzaju przejścia oraz docelowym poziomem.
+- Typ przejścia opisano zależnie od lokacji: drabiny w jaskiniach i podziemnych kompleksach, winda w Silph Co. oraz schody w pozostałych budynkach i na statku.
+- Pod mapą dodano przyciski przechodzenia na sąsiednie piętro; przyciski wyłączają się, gdy brak poziomu w danym kierunku. Dotychczasowy wybór piętra pozostaje dostępny.
+- Oznaczenia przejść są również przekazywane do powiększonego widoku mapy. Przejścia są orientacyjne i nie wskazują dokładnych współrzędnych w grze.
+- Kontrola tekstowa sprawdziła obsługę przełączania, oznaczenia i odświeżania renderera; nie uruchomiono Flutter Analyzer, testów ani kompilacji APK.
