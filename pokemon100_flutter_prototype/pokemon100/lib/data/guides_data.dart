@@ -573,6 +573,168 @@ const List<Guide> guidesList = [
         pokemon: ['Nidoran♀'],
         optional: true,
       ),
+
+      GuideStep(
+        section: 'Route 4 i Mt. Moon',
+        title: 'Zbadaj zachodnią część Route 4',
+        description:
+            'Po Route 3 przejdź na zachodnią część Route 4. W trawie spotkasz Rattatę (25%), Spearowa (30%), Sandshrewa (20%), Mankeya (20%) i Psyducka (5%) na poziomach 7–12. Charmander może pojawić się jako rzadki specjalny spawn, ale nie ma potwierdzonego stałego procentu. W Pokémon Center możesz wyleczyć drużynę i kupić Magikarpa od mężczyzny po lewej stronie lady za 500₽.',
+        location: 'Route 4 — zachód',
+        pokemon: ['Rattata', 'Spearow', 'Sandshrew', 'Mankey', 'Psyduck', 'Charmander'],
+        encounterRatesPercent: {
+          'Rattata': 25,
+          'Spearow': 30,
+          'Sandshrew': 20,
+          'Mankey': 20,
+          'Psyduck': 5,
+        },
+        wildPokemonNoRate: ['Charmander'],
+        items: ['Magikarp (prezent za 500₽, poziom 5)'],
+      ),
+      GuideStep(
+        section: 'Route 4 i Mt. Moon',
+        title: 'Pokonaj Coach Trainer Oberona',
+        description:
+            'Opcjonalny trener stoi na zachodniej części Route 4. Używa Meowtha na poziomie 13. Po zwycięstwie otrzymasz 1300₽ oraz TM57 Pay Day. Wśród skał na zachód od Pokémon Center podnieś Escape Rope przed wejściem do Mt. Moon.',
+        location: 'Route 4 — zachód',
+        trainers: ['Coach Trainer Oberon'],
+        pokemon: ['Meowth'],
+        items: ['TM57 Pay Day', 'Escape Rope'],
+      ),
+      GuideStep(
+        section: 'Route 4 i Mt. Moon',
+        title: 'Poznaj układ Mt. Moon i zbierz pierwsze przedmioty',
+        description:
+            'Wejdź do Mt. Moon. Na 1F przejdź zachodnim korytarzem po Potion i Great Ball ×5, a następnie pokonaj Bug Catchera Kenta. Idź dalej na wschód, walcz z Lass Evelyn i zejdź pierwszą drabiną na B2F (południe). Zbierz Rare Candy oraz sprawdź krater, w którym ukryto Moon Stone. Wróć tą samą drabiną na 1F.',
+        location: 'Mt. Moon — 1F i B2F (południe)',
+        items: ['Potion', 'Great Ball ×5', 'Rare Candy', 'Moon Stone (ukryty, odnawia się codziennie)'],
+      ),
+      GuideStep(
+        section: 'Route 4 i Mt. Moon',
+        title: 'Zbadaj spotkania w Mt. Moon — 1F i B1F',
+        description:
+            'W zwykłych spotkaniach w jaskini na 1F i B1F: Zubat 40%, Geodude 40%, Paras 15%, Clefairy 4% i Onix 1% (poziomy 5–10). Chansey może pojawić się jako rzadki specjalny spawn, bez stałego procentu w tabeli. W B1F szukaj także ukrytego Big Mushroom oraz Tiny Mushroomów znajdowanych przy chodzących Parasach i Parasectach.',
+        location: 'Mt. Moon — 1F / B1F',
+        pokemon: ['Zubat', 'Geodude', 'Paras', 'Clefairy', 'Onix', 'Chansey'],
+        encounterRatesPercent: {
+          'Zubat': 40,
+          'Geodude': 40,
+          'Paras': 15,
+          'Clefairy': 4,
+          'Onix': 1,
+        },
+        wildPokemonNoRate: ['Chansey'],
+        items: ['Big Mushroom (ukryty, B1F)', 'Tiny Mushroom (znajdowany przy Paras/Parasect)'],
+      ),
+      GuideStep(
+        section: 'Route 4 i Mt. Moon',
+        title: 'Pokonaj trenerów na pierwszym piętrze Mt. Moon',
+        description:
+            'Na 1F czeka siedmiu trenerów. Bug Catcher Kent używa Butterfree Lv.7; Lass Evelyn — Bellsprout Lv.8; Super Nerd Jovan — Grimer Lv.10; Youngster Robby — Mankey Lv.8; Lass Miriam — Clefairy Lv.8; Youngster Josh — Sandshrew Lv.8; Hiker Marcos — dwóch Geodude Lv.10. Zbierz przedmioty w południowo-wschodniej części i wschodnich korytarzach, zanim ruszysz na północny wschód.',
+        location: 'Mt. Moon — 1F',
+        trainers: [
+          'Bug Catcher Kent',
+          'Lass Evelyn',
+          'Super Nerd Jovan',
+          'Youngster Robby',
+          'Lass Miriam',
+          'Youngster Josh',
+          'Hiker Marcos',
+        ],
+        pokemon: ['Butterfree', 'Bellsprout', 'Grimer', 'Mankey', 'Clefairy', 'Sandshrew', 'Geodude'],
+        items: ['Awakening', 'Ether', 'Repel', 'Stardust (ukryty, odnawia się codziennie)', 'Pearl', 'Poké Ball (od mężczyzny, jeśli masz mniej niż 10)'],
+      ),
+      GuideStep(
+        section: 'Route 4 i Mt. Moon',
+        title: 'Zbadaj spotkania na B2F Mt. Moon',
+        description:
+            'Na B2F (główna część jaskini) spotkasz Zubata 40%, Geodude 34%, Parasa 15%, Clefairy 9%, Clefable 1% i Onixa 1% na poziomach 5–10. Chansey pozostaje rzadkim specjalnym spawnem bez potwierdzonego procentu. Na południowej odnodze zbierz drugi ukryty Moon Stone.',
+        location: 'Mt. Moon — B2F',
+        pokemon: ['Zubat', 'Geodude', 'Paras', 'Clefairy', 'Clefable', 'Onix', 'Chansey'],
+        encounterRatesPercent: {
+          'Zubat': 40,
+          'Geodude': 34,
+          'Paras': 15,
+          'Clefairy': 9,
+          'Clefable': 1,
+          'Onix': 1,
+        },
+        wildPokemonNoRate: ['Chansey'],
+        items: ['Moon Stone (ukryty, odnawia się codziennie)', 'Nugget', 'Rare Candy'],
+      ),
+      GuideStep(
+        section: 'Route 4 i Mt. Moon',
+        title: 'Pokonaj Team Rocket i Super Neda Miguela',
+        description:
+            'Na B2F pokonaj trzech Team Rocket Gruntów: pierwszy używa Rattaty Lv.9, drugi Drowzee Lv.9, a trzeci Zubata Lv.9. Super Nerd Miguel ma Voltorba Lv.10 i Magnemite Lv.10. Zbieraj Revive oraz Potion na zewnętrznej pętli jaskini. Po zwycięstwie nad Miguelem wybierz jeden skamieniały okaz: Helix Fossil (Omanyte) albo Dome Fossil (Kabuto).',
+        location: 'Mt. Moon — B2F',
+        trainers: [
+          'Team Rocket Grunt (Rattata)',
+          'Team Rocket Grunt (Drowzee)',
+          'Team Rocket Grunt (Zubat)',
+          'Super Nerd Miguel',
+        ],
+        pokemon: ['Rattata', 'Drowzee', 'Zubat', 'Voltorb', 'Magnemite'],
+        items: ['Revive ×2', 'Potion', 'Helix Fossil albo Dome Fossil'],
+      ),
+      GuideStep(
+        section: 'Route 4 i Mt. Moon',
+        title: 'Pokonaj Jessie i Jamesa w pierwszej walce podwójnej',
+        description:
+            'Przed wyjściem z Mt. Moon Jessie i James ujawnią swoją tożsamość i zaatakują razem z Meowthem. To pierwsza walka podwójna w tej przygodzie: do walki wystawią się dwa pierwsze Pokémony w lewym górnym i środkowym miejscu drużyny. Jessie używa Ekansa Lv.12, a James Koffinga Lv.12. Po zwycięstwie Team Rocket ucieknie, a ty możesz wyjść z jaskini.',
+        location: 'Mt. Moon — B2F, wyjście',
+        trainers: ['Team Rocket Jessie', 'Team Rocket James'],
+        pokemon: ['Ekans', 'Koffing'],
+        items: ['Wybrany Fossil pozostaje w ekwipunku'],
+      ),
+      GuideStep(
+        section: 'Route 4 i Mt. Moon',
+        title: 'Przejdź wschodnią część Route 4 do Cerulean City',
+        description:
+            'Po wyjściu z Mt. Moon idź w dół wschodniej części Route 4. W trawie na poziomach 7–12 spotkasz Rattatę 25%, Spearowa 30%, Sandshrewa 20%, Mankeya 20% i Psyducka 5%. Charmander jest rzadkim specjalnym spawnem bez stałego procentu. Zbierz przedmioty na zboczu i przy wejściu do miasta; PP Max na najwyższym wschodnim plateau jest dostępny dopiero po odblokowaniu Sea Skim.',
+        location: 'Route 4 — wschód',
+        pokemon: ['Rattata', 'Spearow', 'Sandshrew', 'Mankey', 'Psyduck', 'Charmander'],
+        encounterRatesPercent: {
+          'Rattata': 25,
+          'Spearow': 30,
+          'Sandshrew': 20,
+          'Mankey': 20,
+          'Psyduck': 5,
+        },
+        wildPokemonNoRate: ['Charmander'],
+        items: ['Paralyze Heal', 'Poké Ball ×5', 'Repel', 'PP Up (ukryty, odnawia się codziennie)', 'Great Ball ×3', 'Razz Berry', 'Nanab Berry', 'PP Max (później, po Sea Skim)'],
+      ),
+      GuideStep(
+        section: 'Route 4 i Mt. Moon',
+        title: 'Sprawdź wodne i latające spotkania na Route 4',
+        description:
+            'W wodzie Route 4 spotkasz Tentacoola 45%, Magikarpa 45% i Tentacruela 10% (poziomy 7–12). Na niebie zwykłe spotkania to Spearow 60% i Fearow 40% (poziomy 3–56). Charizard, Dragonite oraz Articuno, Zapdos i Moltres są specjalnymi spawnami latającymi; nie mają tu stałego procentu w zwykłej tabeli. Warto rozdzielić te metody od spotkań w trawie.',
+        location: 'Route 4 — woda i niebo',
+        pokemon: ['Tentacool', 'Magikarp', 'Tentacruel', 'Spearow', 'Fearow', 'Charizard', 'Dragonite', 'Articuno', 'Zapdos', 'Moltres'],
+        encounterRatesPercent: {
+          'Tentacool': 45,
+          'Magikarp': 45,
+          'Tentacruel': 10,
+          'Spearow': 60,
+          'Fearow': 40,
+        },
+        wildPokemonNoRate: ['Charizard', 'Dragonite', 'Articuno', 'Zapdos', 'Moltres'],
+      ),
+      GuideStep(
+        section: 'Route 4 i Mt. Moon',
+        title: 'Wróć do Mt. Moon po Master Trainerów',
+        description:
+            'Po zostaniu Championem i rozpoczęciu wyzwania Master Trainerów wróć do Mt. Moon. Znajdziesz czterech dodatkowych trenerów: Bug Catcher Evan z Parasem Lv.70 na 1F, Lass Alexandra z Clefable Lv.80 na B1F, Hiker Colson z Omanyte Lv.70 na B2F oraz Hiker Barnaby z Kabuto Lv.70 na B2F.',
+        location: 'Mt. Moon — post-game',
+        trainers: [
+          'Bug Catcher Evan (Master Trainer)',
+          'Lass Alexandra (Master Trainer)',
+          'Hiker Colson (Master Trainer)',
+          'Hiker Barnaby (Master Trainer)',
+        ],
+        pokemon: ['Paras', 'Clefable', 'Omanyte', 'Kabuto'],
+        optional: true,
+      ),
     ],
   ),
 ];
