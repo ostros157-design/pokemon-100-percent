@@ -2957,7 +2957,7 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Powiększony schemat: $location',
+                  'Powiększona mapa: $location',
                   style: Theme.of(dialogContext).textTheme.titleLarge,
                 ),
                 const SizedBox(height: 12),
@@ -3014,6 +3014,18 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
   Widget build(BuildContext context) {
     final location = widget.location;
     if (location == null) return const SizedBox.shrink();
+    final isRoute = location.startsWith('Route ') ||
+        location.startsWith('Underground Path');
+    final isCity = location.endsWith('City') ||
+        location.endsWith('Town') ||
+        location == 'Cinnabar Island' ||
+        location == 'Indigo Plateau' ||
+        location == 'Pallet Town';
+    final mapKind = isRoute
+        ? 'Mapa trasy'
+        : isCity
+            ? 'Mapa miasta'
+            : 'Mapa lokacji';
     final features = _featuresByLocation[location];
     if (features == null) return const SizedBox.shrink();
 
@@ -3036,7 +3048,7 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Schemat lokacji: $location',
+          '$mapKind: $location',
           style: Theme.of(context).textTheme.titleMedium,
         ),
         const SizedBox(height: 4),
