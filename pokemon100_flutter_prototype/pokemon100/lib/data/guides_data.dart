@@ -417,12 +417,14 @@ const List<Guide> guidesList = [
         'Przewodnik obejmujący główną historię, osiem odznak, Pokémon League, post-game, legendarne i mityczne Pokémony, Master Trainerów oraz kolekcjonowanie. Szczegółowe tabele spotkań i składy trenerów są uzupełniane tylko tam, gdzie podano konkretne dane.',
     steps: [
       GuideStep(
+        section: 'Pallet Town, Route 1 i Route 2',
         title: 'Rozpocznij przygodę',
         description:
             'Rozpocznij nową grę i wybierz wygląd swojej postaci. Następnie nadaj jej imię.',
         location: 'Pallet Town',
       ),
       GuideStep(
+        section: 'Pallet Town, Route 1 i Route 2',
         title: 'Zdobądź Pikachu',
         description:
             'Wyjdź z domu i spróbuj opuścić Pallet Town. Profesor Oak zabierze Cię do laboratorium. Wybierz Poké Balla, aby rozpocząć przygodę ze swoim partnerem Pikachu.',
@@ -430,6 +432,7 @@ const List<Guide> guidesList = [
         pokemon: ['Pikachu'],
       ),
       GuideStep(
+        section: 'Pallet Town, Route 1 i Route 2',
         title: 'Idź Route 1',
         description:
             'Opuść Pallet Town i przejdź na północ przez Route 1. Po drodze możesz złapać pierwsze dzikie Pokémony.',
@@ -437,7 +440,6 @@ const List<Guide> guidesList = [
         pokemon: ['Pidgey', 'Rattata'],
       ),
       GuideStep(
-              GuideStep(
         section: "Pallet Town, Route 1 i Route 2",
         title: "Spotkania na Route 1 — trawa",
         description: "W wysokiej trawie Route 1 w Pokémon: Let's Go, Pikachu! spotkasz Pokémony na poziomach 3–4. Pidgey pojawia się z częstością 40%, Rattata 30%, a Oddish 30%. To zwykłe spotkania naziemne; nie łącz ich z Pokémonami latającymi nad trasą.",
@@ -462,12 +464,15 @@ const List<Guide> guidesList = [
         },
         wildPokemonNoRate: ["Dragonite", "Charizard", "Articuno", "Zapdos", "Moltres"],
       ),
-title: 'Dotrzyj do Viridian City',
+      GuideStep(
+        section: 'Pallet Town, Route 1 i Route 2',
+        title: 'Dotrzyj do Viridian City',
         description:
             'Przejdź przez Route 1 i wejdź do Viridian City. Odwiedź Pokémon Center, aby przygotować drużynę.',
         location: 'Viridian City',
       ),
       GuideStep(
+        section: 'Pallet Town, Route 1 i Route 2',
         title: 'Odbierz przesyłkę dla Profesora Oaka',
         description:
             'Wejdź do Poké Martu i porozmawiaj z pracownikiem. Otrzymasz przesyłkę przeznaczoną dla Profesora Oaka.',
@@ -475,12 +480,14 @@ title: 'Dotrzyj do Viridian City',
         items: ['Oak’s Parcel'],
       ),
       GuideStep(
+        section: 'Pallet Town, Route 1 i Route 2',
         title: 'Wróć do Pallet Town',
         description:
             'Wróć Route 1 do laboratorium Profesora Oaka i przekaż mu przesyłkę.',
         location: 'Pallet Town',
       ),
       GuideStep(
+        section: 'Pallet Town, Route 1 i Route 2',
         title: 'Otrzymaj Pokédex',
         description:
             'Po wydarzeniach w laboratorium otrzymasz Pokédex. Od tej chwili możesz rozpocząć jego kompletowanie.',
@@ -488,6 +495,7 @@ title: 'Dotrzyj do Viridian City',
         items: ['Pokédex'],
       ),
       GuideStep(
+        section: 'Pallet Town, Route 1 i Route 2',
         title: 'Przygotuj drużynę',
         description:
             'Przed dalszą podróżą złap kilka Pokémonów i zdobądź trochę doświadczenia. Nie musisz jeszcze tworzyć ostatecznej drużyny.',
@@ -495,13 +503,13 @@ title: 'Dotrzyj do Viridian City',
         pokemon: ['Pidgey', 'Rattata'],
       ),
       GuideStep(
+        section: 'Pallet Town, Route 1 i Route 2',
         title: 'Przejdź przez Route 2',
         description:
             'Rusz na północ przez Route 2. Następnie przygotuj się do wejścia do Viridian Forest.',
         location: 'Route 2',
       ),
       GuideStep(
-              GuideStep(
         section: "Pallet Town, Route 1 i Route 2",
         title: "Spotkania na Route 2 — trawa",
         description: "W Pokémon: Let's Go, Pikachu! na Route 2 spotkasz na poziomach 3–8: Pidgey (30%), Rattata (20%), Oddish (20%), Caterpie (15%) i Weedle (15%). Oddish jest wersją Pikachu; w Let's Go, Eevee! jego miejsce zajmuje Bellsprout.",
@@ -528,19 +536,23 @@ title: 'Dotrzyj do Viridian City',
         },
         wildPokemonNoRate: ["Charizard", "Articuno", "Zapdos", "Moltres", "Dragonite"],
       ),
-title: 'Eksploruj Viridian Forest',
+      GuideStep(
+        section: 'Viridian Forest i Pewter City',
+        title: 'Eksploruj Viridian Forest',
         description:
             'Przejdź przez Viridian Forest. Warto złapać Pokémony dostępne w lesie i zebrać znajdujące się tam przedmioty.',
         location: 'Viridian Forest',
         pokemon: ['Caterpie', 'Metapod', 'Pikachu'],
       ),
       GuideStep(
+        section: 'Pewter City i pierwsza odznaka',
         title: 'Dotrzyj do Pewter City',
         description:
             'Po wyjściu z Viridian Forest kontynuuj podróż do Pewter City. Wylecz drużynę przed pierwszym Gymem.',
         location: 'Pewter City',
       ),
       GuideStep(
+        section: 'Pewter City i pierwsza odznaka',
         title: 'Przygotuj się na Brocka',
         description:
             'Brock używa Pokémonów typu Rock. Pokémony typu Grass, Water i Fighting mogą być bardzo skuteczne.',
@@ -548,6 +560,7 @@ title: 'Eksploruj Viridian Forest',
         pokemon: ['Geodude', 'Onix'],
       ),
       GuideStep(
+        section: 'Pewter City i pierwsza odznaka',
         title: 'Pokonaj Brocka',
         description:
             'Pokonaj Brocka i zdobądź swoją pierwszą odznakę Gym.',
