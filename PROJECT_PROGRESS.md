@@ -5764,3 +5764,10 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Osobne poziomy dostępne są dla Mt. Moon, Rock Tunnel, Diglett's Cave, Seafoam Islands, Cerulean Cave, Victory Road, Pokémon Tower, Pokémon Mansion, Team Rocket Hideout, Silph Co., Celadon Department Store, Celadon Condominiums i S.S. Anne.
 - Każdy wybrany poziom renderuje oddzielny schemat pomieszczeń / komór i połączeń orientacyjnych; geometria nie jest odwzorowaniem kafelek po kafelku. Nie dodano fikcyjnych pozycji Pokémonów, trenerów ani przedmiotów.
 - Kontrola tekstowa potwierdziła obecność konfiguracji poziomów, selektora oraz uwzględnienie piętra w odświeżaniu renderera. Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK.
+
+
+### Mapy Kanto — usunięcie listy lokacji pod mapą (2026-11-09)
+
+- Usunięto dolną sekcję „Schemat podróży” i rozwijaną listę „Lokacje z poradników”, która zajmowała miejsce pod mapą.
+- Usunięto również nieużywane obliczanie listy lokacji dla tej sekcji. Wyszukiwanie i wybieranie lokacji na samej mapie oraz panel szczegółów pozostają bez zmian.
+- Kontrola tekstowa potwierdziła usunięcie obu nagłówków i deklaracji listy oraz zbilansowanie nawiasów. Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK.
