@@ -5592,3 +5592,6 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Uzupełniono Cerulean Gym o trzy Beauty i drużynę Misty wraz z ruchami, poziomami i nagrodami.
 - Źródła: Bulbapedia Part 5, Thonky Route 24, SuperCheats Route 25.
 - Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK. Zmiany wymagają późniejszego sprawdzenia na laptopie.
+
+
+- Korekta końcowa: rozdzielono nowe kroki trenerów Route 24 i Route 25 od istniejących kroków fabularnych 13 i 14. Ponowna kontrola nie wykrywa osieroconych tytułów ani zagnieżdżonych początków GuideStep; delimitery są zbilansowane.
