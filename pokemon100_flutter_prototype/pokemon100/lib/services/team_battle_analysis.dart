@@ -161,7 +161,7 @@ class TeamBattleAnalysis {
         if (move.category == 'status' || (move.power ?? 0) <= 0) continue;
         damaging++;
         final type = _types[move.type.toLowerCase()];
-        if (type == null) continue;
+        if (type == null || (!hasFairyType && type == 'Fairy')) continue;
         if (pokemon.types.any((value) => value.toLowerCase() == type.toLowerCase())) {
           stab++;
           pokemonStab++;
