@@ -2452,7 +2452,10 @@ const List<Guide> guidesList = [
       GuideStep(
         section: "Mega Ewolucje",
         title: "95. Zdobywanie Mega Stones",
-        description: "Mega Stones można:\n• otrzymać od postaci fabularnych;\n• znaleźć w określonych lokacjach;\n• kupić po odblokowaniu odpowiednich warunków.\nW poradniku należy umieścić dokładne lokalizacje każdego Mega Stone.",
+        description: "Wszystkie Mega Stones w Let's Go można zdobyć na trzy sposoby. Po pokonaniu Blaine’a i otrzymaniu siedmiu odznak wróć do Pallet Town: Blue przekazuje Key Stone oraz Venusaurite, Blastoisinite, Charizardite X i Charizardite Y. Po zostaniu Championem kup u sprzedawcy w stroju Slowbro w lobby Indigo Plateau pozostałe dziewięć kamieni po 30 000$: Beedrillite, Pidgeotite, Alakazite, Slowbronite, Gengarite, Kangaskhanite, Pinsirite, Gyaradosite i Aerodactylite. Po złapaniu Mewtwo pokonaj Green w Cerulean Cave, aby otrzymać Mewtwonite X i Mewtwonite Y. Łącznie dostępnych jest 15 Mega Stones dla Pokémonów.",
+        location: "Pallet Town / Indigo Plateau / Cerulean Cave",
+        items: ["Key Stone", "Venusaurite", "Blastoisinite", "Charizardite X", "Charizardite Y", "Beedrillite", "Pidgeotite", "Alakazite", "Slowbronite", "Gengarite", "Kangaskhanite", "Pinsirite", "Gyaradosite", "Aerodactylite", "Mewtwonite X", "Mewtwonite Y"],
+        pokemonMentions: ["Venusaur", "Blastoise", "Charizard", "Beedrill", "Pidgeot", "Alakazam", "Slowbro", "Gengar", "Kangaskhan", "Pinsir", "Gyarados", "Aerodactyl", "Mewtwo"],
         optional: true,
       ),
       GuideStep(
