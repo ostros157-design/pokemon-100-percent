@@ -2282,8 +2282,7 @@ const List<Guide> guidesList = [
       GuideStep(
         section: "Master Trainerzy",
         title: "70. Lista Master Trainerów",
-        description: "W grze znajduje się Master Trainer dla każdego gatunku związanego z Kanto Pokédex.\nUwzględnij osobne wpisy dla:\n• Bulbasaur;\n• Ivysaur;\n• Venusaur;\n• Charmander;\n• Charmeleon;\n• Charizard;\n• Squirtle;\n• Wartortle;\n• Blastoise;\n• Caterpie;\n• Metapod;\n• Butterfree;\n• Weedle;\n• Kakuna;\n• Beedrill;\n• Pidgey;\n• Pidgeotto;\n• Pidgeot;\n• Rattata;\n• Raticate;\n• Spearow;\n• Fearow;\n• Ekans;\n• Arbok;\n• Pikachu;\n• Raichu;\n• Sandshrew;\n• Sandslash;\n• Nidoran♀;\n• Nidorina;\n• Nidoqueen;\n• Nidoran♂;\n• Nidorino;\n• Nidoking;\n• Clefairy;\n• Clefable;\n• Vulpix;\n• Ninetales;\n• Jigglypuff;\n• Wigglytuff;\n• Zubat;\n• Golbat;\n• Oddish;\n• Gloom;\n• Vileplume;\n• Paras;\n• Parasect;\n• Venonat;\n• Venomoth;\n• Diglett;\n• Dugtrio;\n• Meowth;\n• Persian;\n• Psyduck;\n• Golduck;\n• Mankey;\n• Primeape;\n• Growlithe;\n• Arcanine;\n• Poliwag;\n• Poliwhirl;\n• Poliwrath;\n• Abra;\n• Kadabra;\n• Alakazam;\n• Machop;\n• Machoke;\n• Machamp;\n• Bellsprout;\n• Weepinbell;\n• Victreebel;\n• Tentacool;\n• Tentacruel;\n• Geodude;\n• Graveler;\n• Golem;\n• Ponyta;\n• Rapidash;\n• Slowpoke;\n• Slowbro;\n• Magnemite;\n• Magneton;\n• Farfetch'd;\n• Doduo;\n• Dodrio;\n• Seel;\n• Dewgong;\n• Grimer;\n• Muk;\n• Shellder;\n• Cloyster;\n• Gastly;\n• Haunter;\n• Gengar;\n• Onix;\n• Drowzee;\n• Hypno;\n• Krabby;\n• Kingler;\n• Voltorb;\n• Electrode;\n• Exeggcute;\n• Exeggutor;\n• Cubone;\n• Marowak;\n• Hitmonlee;\n• Hitmonchan;\n• Lickitung;\n• Koffing;\n• Weezing;\n• Rhyhorn;\n• Rhydon;\n• Chansey;\n• Tangela;\n• Kangaskhan;\n• Horsea;\n• Seadra;\n• Goldeen;\n• Seaking;\n• Staryu;\n• Starmie;\n• Mr. Mime;\n• Scyther;\n• Jynx;\n• Electabuzz;\n• Magmar;\n• Pinsir;\n• Tauros;\n• Magikarp;\n• Gyarados;\n• Lapras;\n• Ditto;\n• Eevee;\n• Vaporeon;\n• Jolteon;\n• Flareon;\n• Porygon;\n• Omanyte;\n• Omastar;\n• Kabuto;\n• Kabutops;\n• Aerodactyl;\n• Snorlax;\n• Articuno;\n• Zapdos;\n• Moltres;\n• Dratini;\n• Dragonair;\n• Dragonite;\n• Mewtwo;\n• Mew;\n• Meltan;\n• Melmetal.\nKażdy wpis musi mieć:\n• lokalizację Master Trainera;\n• wymagany gatunek;\n• poziom przeciwnika;\n• jego ruchy;\n• wymagania dotyczące pokazania Pokémona, jeśli nie dochodzi do walki;\n• nagrodę lub tytuł.\nNie zakładaj, że wszystkie Master Trainery mają identyczny sposób zaliczania.",
-        pokemonMentions: ["Bulbasaur", "Ivysaur", "Venusaur", "Charmander", "Charmeleon", "Charizard", "Squirtle", "Wartortle", "Blastoise", "Caterpie", "Metapod", "Butterfree", "Weedle", "Kakuna", "Beedrill", "Pidgey", "Pidgeotto", "Pidgeot", "Rattata", "Raticate", "Spearow", "Fearow", "Ekans", "Arbok", "Pikachu", "Raichu", "Sandshrew", "Sandslash", "Nidoran♀", "Nidorina", "Nidoqueen", "Nidoran♂", "Nidorino", "Nidoking", "Clefairy", "Clefable", "Vulpix", "Ninetales", "Jigglypuff", "Wigglytuff", "Zubat", "Golbat", "Oddish", "Gloom", "Vileplume", "Paras", "Parasect", "Venonat", "Venomoth", "Diglett", "Dugtrio", "Meowth", "Persian", "Psyduck", "Golduck", "Mankey", "Primeape", "Growlithe", "Arcanine", "Poliwag", "Poliwhirl", "Poliwrath", "Abra", "Kadabra", "Alakazam", "Machop", "Machoke", "Machamp", "Bellsprout", "Weepinbell", "Victreebel", "Tentacool", "Tentacruel", "Geodude", "Graveler", "Golem", "Ponyta", "Rapidash", "Slowpoke", "Slowbro", "Magnemite", "Magneton", "Doduo", "Dodrio", "Seel", "Dewgong", "Grimer", "Muk", "Shellder", "Cloyster", "Gastly", "Haunter", "Gengar", "Onix", "Drowzee", "Hypno", "Krabby", "Kingler", "Voltorb", "Electrode", "Exeggcute", "Exeggutor", "Cubone", "Marowak", "Hitmonlee", "Hitmonchan", "Lickitung", "Koffing", "Weezing", "Rhyhorn", "Rhydon", "Chansey", "Tangela", "Kangaskhan", "Horsea", "Seadra", "Goldeen", "Seaking", "Staryu", "Starmie", "Mr. Mime", "Scyther", "Jynx", "Electabuzz", "Magmar", "Pinsir", "Tauros", "Magikarp", "Gyarados", "Lapras", "Ditto", "Eevee", "Vaporeon", "Jolteon", "Flareon", "Porygon", "Omanyte", "Omastar", "Kabuto", "Kabutops", "Aerodactyl", "Snorlax", "Articuno", "Zapdos", "Moltres", "Dratini", "Dragonair", "Dragonite", "Mewtwo", "Mew", "Meltan", "Melmetal"],
+        description: "Po zostaniu Championem pojawia się 153 Master Trainerów: po jednym dla 151 gatunków pierwszej generacji oraz osobni trenerzy Meltana i Melmetala. Nie wszyscy wymagają walki — część, w tym legendarne Pokémony, sprawdza siłę twojego egzemplarza przez pokazanie go. Dla każdego wpisu listy należy zapisać lokalizację, gatunek, poziom przeciwnika, ruchy i warunek zwycięstwa. Nie uznawaj listy za ukończoną, dopóki nie sprawdzisz wszystkich 153 pozycji. Master Trainerzy wymagają tej samej formy/gatunku, walki 1 na 1 i zakazują używania przedmiotów.",
         optional: true,
       ),
       GuideStep(
@@ -2357,22 +2356,24 @@ const List<Guide> guidesList = [
       GuideStep(
         section: "Legendarne i mityczne Pokémony",
         title: "81. Mew",
-        description: "Mew nie występuje normalnie na dzikich trasach.\nW Let's Go Pikachu można go otrzymać z Poké Ball Plus.\nWymaga to specjalnego akcesorium i dostępnego w nim Mew.",
-        pokemonMentions: ["Pikachu", "Mew"],
+        description: "Mew nie występuje na dzikich trasach ani w GO Park. Jedyną metodą w samej grze jest odbiór Mew z Poké Ball Plus przez menu Communicate → Mystery Gifts → Get with a Poké Ball Plus. Można przenieść Mew tylko jeden raz do jednej kopii gry. Po transferze Mew znika z akcesorium; usunięcie zapisu gry oznacza utratę Mew i nie pozwala odebrać go ponownie z tego samego Poké Ball Plus. Do odbioru wymagane jest połączenie z internetem.",
+        pokemonMentions: ["Mew"],
         optional: true,
       ),
       GuideStep(
         section: "Legendarne i mityczne Pokémony",
         title: "82. Meltan",
-        description: "Meltan można zdobyć przez Pokémon GO.\nWymagane jest:\n1) Połączenie Pokémon GO z Let's Go Pikachu.\n2) Przesłanie Pokémona z GO do GO Park.\n3) Odebranie Mystery Box w Pokémon GO.\n4) Spotkanie Meltana w Pokémon GO.\n5) Złapanie go w Pokémon GO.\n6) Przesłanie go do Let's Go Pikachu.\nMeltan nie występuje normalnie na dzikich trasach Let's Go.",
-        pokemonMentions: ["Pikachu", "Meltan"],
+        description: "Meltan zdobywa się przez Pokémon GO, a nie przez dzikie spotkanie w Kanto. Po pierwszym wysłaniu kompatybilnego Pokémona z Pokémon GO do GO Park otrzymasz Mystery Box w Pokémon GO. Otwórz ją w Pokémon GO, złap pojawiające się Meltany, a następnie wyślij Meltana do GO Park w Fuchsia City i złap go w Let's Go. Transfer z Pokémon GO do Let's Go jest jednokierunkowy — Pokémon nie wróci do Pokémon GO. Mew, Pokémony cieni, oczyszczone i część specjalnych/eventowych Pokémonów nie kwalifikują się do transferu.",
+        pokemon: ["Meltan"],
+        pokemonMentions: [],
         optional: true,
       ),
       GuideStep(
         section: "Legendarne i mityczne Pokémony",
         title: "83. Melmetal",
-        description: "Melmetal jest ewolucją Meltana.\nAby go zdobyć:\n1) Zdobądź Meltana w Pokémon GO.\n2) Zbierz 400 Meltan Candy.\n3) Ewoluuj Meltana w Melmetal.\n4) Prześlij Melmetala do Let's Go Pikachu.",
-        pokemonMentions: ["Pikachu", "Meltan", "Melmetal"],
+        description: "Melmetal ewoluuje z Meltana wyłącznie w Pokémon GO. Zbierz 400 Meltan Candy, wybierz Meltana w Pokémon GO i użyj opcji Evolution. Następnie wyślij Melmetala do GO Park w Fuchsia City i złap go w Let's Go. Nie da się ewoluować Meltana w Melmetala bezpośrednio w Let's Go. Transfer do Let's Go jest jednokierunkowy.",
+        pokemon: ["Meltan", "Melmetal"],
+        pokemonMentions: [],
         optional: true,
       ),
       GuideStep(
@@ -2440,7 +2441,8 @@ const List<Guide> guidesList = [
       GuideStep(
         section: "Pokédex i kolekcjonowanie",
         title: "93. Candy i rozwój statystyk",
-        description: "Candy pozwalają zwiększać statystyki Pokémonów.\nMożna je zdobywać przez:\n• łapanie Pokémonów;\n• łapanie wielu Pokémonów tego samego gatunku;\n• wysyłanie Pokémonów do profesora Oaka;\n• inne aktywności.\nWażne rodzaje:\n• Health Candy;\n• Mighty Candy;\n• Tough Candy;\n• Smart Candy;\n• Courage Candy;\n• Quick Candy.\nWarto rozwijać drużynę i przygotowywać specjalne Pokémony do walk Master Trainerów.",
+        description: "Candy w Let's Go podnoszą Awakening Values (AV), czyli dodatkowe wartości statystyk. Istnieją Candy dla konkretnych statystyk (Health, Mighty, Tough, Smart, Courage i Quick) oraz Candy gatunkowe, które wzmacniają wskazanego Pokémona. Zdobywasz je między innymi za łapanie Pokémonów i wysyłanie ich Profesorowi Oakowi. Zwykłe Candy statystyk mają ograniczenia zależne od aktualnych AV; Candy gatunkowe mają własne limity. Używaj ich do przygotowania Pokémonów do trudnych walk i Master Trainerów.",
+        items: ["Health Candy", "Mighty Candy", "Tough Candy", "Smart Candy", "Courage Candy", "Quick Candy"],
         optional: true,
       ),
       GuideStep(
@@ -2464,13 +2466,16 @@ const List<Guide> guidesList = [
       GuideStep(
         section: "Dodatkowe aktywności",
         title: "97. Day Care",
-        description: "Na Route 5 znajduje się Day Care.\nMożesz pozostawić tam Pokémony, aby zdobywały doświadczenie.",
+        description: "Na Route 5 znajduje się Pokémon Day Care. Możesz zostawić tam jednego Pokémona pod opieką pracownika. W Let's Go nie ma hodowli jaj ani systemu rozmnażania — Day Care nie służy do zdobywania jaj. Odbierz Pokémona, gdy skończysz korzystać z tej usługi; nie traktuj jej jako wymagania do uzupełnienia Pokédexu.",
+        location: "Route 5 — Pokémon Day Care",
         optional: true,
       ),
       GuideStep(
         section: "Dodatkowe aktywności",
         title: "98. Pokémon GO Park",
-        description: "Przesyłaj Pokémony z Pokémon GO.\nZłap wszystkie gatunki, których brakuje w twoim Pokédexie.",
+        description: "GO Park Complex znajduje się w Fuchsia City i odblokowuje transfer z Pokémon GO. Połącz grę z Pokémon GO przez menu komunikacji, a następnie w GO Park porozmawiaj z pracownikiem przy ladzie i wybierz Bring Pokémon oraz jeden z 20 parków. W Pokémon GO otwórz listę Pokémonów, wybierz ikonę Nintendo Switch, zaznacz kompatybilne gatunki z Kanto (w tym Shiny i Alolan Forms), wybierz Send to Nintendo Switch i potwierdź połączenie. Po transferze Pokémony pojawią się w wybranym GO Park; podejdź do nich i złap je w Let's Go. Transfer jest jednokierunkowy. Nie można przesłać Mew ani Pokémonów spoza obsługiwanych gatunków Kanto, a specjalne eventowe formy mogą być zablokowane.",
+        location: "Fuchsia City — GO Park Complex",
+        pokemonMentions: ["Pikachu"],
         optional: true,
       ),
       GuideStep(
