@@ -5747,3 +5747,12 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Rozszerzono lokalny renderer o odrębne poglądowe przebiegi Route 11–18 oraz Route 22–25. Każda z tych tras otrzymała własny kształt ścieżki i rozmieszczenie stref, zamiast korzystać z ogólnego wariantu zastępczego.
 - Zachowano osobny wariant wodny dla Route 19–21 oraz istniejące schematy Route 3–10. Nie dodano nowych pinezek ani niezweryfikowanych współrzędnych; rysunki nadal służą orientacji, a nie dokładnemu odwzorowaniu kafelków gry.
 - Kontrola tekstowa potwierdziła obecność wszystkich 12 nowych wariantów oraz zbilansowanie nawiasów klamrowych i kwadratowych. Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK.
+
+
+### Mapy Kanto — osobne schematy mniejszych lokacji (2026-11-09)
+
+- Dodano odrębne poglądowe plany dla ośmiu sal Gym: Pewter, Cerulean, Vermilion, Celadon, Saffron, Fuchsia, Cinnabar i Viridian. Każda sala ma własny układ przeszkód / stref oraz osobne oznaczenia wejścia, mechaniki sali i lidera.
+- Rozbudowano lokalne plany mniejszych budynków i lokacji: Pewter Museum of Science, Pokémon Fan Club, Pokémon Day Care, dom gracza, dom Billa, laboratorium Profesora Oaka, Cinnabar Lab, Celadon Department Store, Game Corner, Condominiums, Fighting Dojo, Team Rocket Hideout i Silph Co.
+- Dodano indywidualne schematy obu Underground Paths (Routes 5–6 oraz 7–8), z odrębnymi przebiegami tuneli i oznaczeniami wejść/wyjść.
+- Są to mapy orientacyjne, a nie dokładne plany kafelków; nie dodano niezweryfikowanych współrzędnych ani nowych pinezek Pokémonów, trenerów czy przedmiotów.
+- Kontrola tekstowa potwierdziła obecność wariantów lokacji oraz zbilansowanie nawiasów klamrowych i kwadratowych. Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK.
