@@ -617,6 +617,17 @@
 
 # Pokémon 100% — postęp projektu
 
+
+## Bieżący stan poradnika Let's Go, Pikachu! (2026-11-08)
+
+- **197 kroków poradnika** w aktualnej strukturze.
+- **101 tabel spotkań** ze standardowymi procentami; każda z nich została sprawdzona statycznie i sumuje się do 100%.
+- Uzupełniono spotkania dla tras Route 1–25 (w tym osobne metody tam, gdzie występują) oraz m.in. Viridian Forest, Mt. Moon, Diglett's Cave, Rock Tunnel, Pokémon Tower, Seafoam Islands, Pokémon Mansion, Power Plant, Victory Road i Cerulean Cave.
+- Spotkania statyczne i prezenty (m.in. Snorlax, Charmander, Articuno, Zapdos, Moltres, Mewtwo) są oddzielone od losowych tabel.
+- Rzadkie spawny oznaczone przez źródła jako nieposiadające stałego procentu nie otrzymały wymyślonych wartości.
+- To nadal **nie jest pełny audyt wszystkich 60 wymaganych obszarów**: część lokacji i pięter wymaga dalszego sprawdzenia oraz dodania osobnych tabel.
+- Kontrola nawiasów i sum tabel zakończona; Flutter Analyzer, testy i APK pozostają niewykonane do czasu powrotu laptopa.
+
 Ostatnia aktualizacja: 2026-10-25
 
 Ten plik jest dziennikiem postępu projektu. Po kolejnych zmianach należy dopisywać datę, zakres prac, pliki/obszary oraz status testów.
