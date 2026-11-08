@@ -122,8 +122,8 @@ class TeamBattleAnalysis {
     Map<int, List<String>> movesByPokemon, {
     String gameId = 'lets_go_pikachu',
   }) {
-    final hasFairyType = !{'emerald', 'firered', 'soulsilver'}.contains(gameId);
-    final usesTypeBasedPhysicalSpecial = {'emerald', 'firered'}.contains(gameId);
+    final hasFairyType = !{'emerald', 'firered', 'leafgreen', 'soulsilver'}.contains(gameId);
+    final usesTypeBasedPhysicalSpecial = {'emerald', 'firered', 'leafgreen'}.contains(gameId);
     final weaknesses = <String, int>{};
     final resistances = <String, int>{};
     final immunities = <String, int>{};
