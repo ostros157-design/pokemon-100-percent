@@ -18,7 +18,9 @@ void main() {
             reason: '$game should be supported');
       }
       expect(TeamRecommendationService.isSupportedGame('lets_go_eevee'), isTrue);
-      expect(TeamRecommendationService.isSupportedGame('sword'), isFalse);
+      expect(TeamRecommendationService.isSupportedGame('sword'), isTrue);
+      expect(TeamRecommendationService.hasVerifiedAvailabilityData('sword'), isFalse);
+      expect(TeamRecommendationService.isSupportedGame('leafgreen'), isTrue);
       expect(TeamRecommendationService.isSupportedGame('unknown'), isFalse);
     });
 
@@ -27,6 +29,8 @@ void main() {
       expect(TeamGameAvailability.forPokemon('lets_go_pikachu', 23).kind, TeamAvailabilityKind.tradeRequired);
       expect(TeamGameAvailability.forPokemon('lets_go_eevee', 23).kind, TeamAvailabilityKind.inGame);
       expect(TeamGameAvailability.forPokemon('lets_go_eevee', 27).kind, TeamAvailabilityKind.tradeRequired);
+      expect(TeamGameAvailability.forPokemon('leafgreen', 27).kind, TeamAvailabilityKind.inGame);
+      expect(TeamGameAvailability.forPokemon('leafgreen', 23).kind, TeamAvailabilityKind.tradeRequired);
       expect(TeamGameAvailability.forPokemon('lets_go_pikachu', 151).kind, TeamAvailabilityKind.specialAccess);
       expect(TeamGameAvailability.forPokemon('lets_go_pikachu', 808).kind, TeamAvailabilityKind.specialAccess);
       expect(TeamGameAvailability.forPokemon('lets_go_pikachu', 809).kind, TeamAvailabilityKind.specialAccess);
