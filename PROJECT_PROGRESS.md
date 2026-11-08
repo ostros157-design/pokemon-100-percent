@@ -5605,3 +5605,12 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Dodano brakujące nazwy sekcji do 11 początkowych kroków Pallet Town, Route 1–2 i Pewter City.
 - Kontrola tekstowa: brak zagnieżdżonych początków, brak kroków bez konstrukcji oraz brak osieroconych pól `title` w poradniku.
 - Nie uruchomiono Dart/Flutter Analyzer, testów ani APK. Kontrola tekstowa nie potwierdza kompilacji.
+
+
+### Poradnik Let’s Go, Pikachu! — mini sprite’y w listach Pokémonów (2026-11-08)
+
+- Dodano mini sprite obok nazwy każdego rozpoznanego Pokémona z Kanto (National Dex 1–151) na karcie kroku poradnika.
+- Potwierdzono, że w repozytorium istnieje komplet 151 plików `assets/pokemon/gen1/1.png`–`151.png`; ścieżki są zgodne z numeracją National Pokédex.
+- Sprite ma 24×24 px, zachowuje proporcje i ma ikonę zastępczą przy braku obrazu. Kliknięcie nazwy nadal otwiera szczegóły Pokédexu, a Pokéball pozostaje po lewej stronie.
+- Zmiana widgetu wpływa na karty wszystkich poradników, nie tylko Let’s Go. Nie zmieniono logiki innych modułów.
+- Nie uruchomiono Flutter Analyzer, testów ani APK.
