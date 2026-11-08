@@ -3004,6 +3004,14 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
       'Cerulean Cave': ['Głaz w komnacie', 'Zawalona odnoga'],
       'Victory Road': ['Głaz do przesunięcia', 'Blokada skalna'],
     }[location] ?? const <String>[];
+    final caveConnections = <String, List<String>>{
+      'Mt. Moon': ['Wejście od Route 3', 'Wyjście na Route 4'],
+      'Rock Tunnel': ['Wejście od Route 10', 'Wyjście do Lavender Town'],
+      "Diglett's Cave": ['Wejście od Route 2', 'Wyjście przy Route 11'],
+      'Seafoam Islands': ['Wejście od Route 20', 'Wyjście w stronę Route 20'],
+      'Cerulean Cave': ['Wejście od Cerulean City', 'Wyjście do Cerulean City'],
+      'Victory Road': ['Wejście od Route 23', 'Wyjście przy Indigo Plateau'],
+    }[location] ?? const <String>[];
     final optionalSteps = widget.references
         .where((reference) => reference.step.optional)
         .length;
@@ -3074,6 +3082,41 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
                 },
               );
             }).toList(),
+          ),
+        ],
+        if (caveConnections.isNotEmpty) ...[
+          const SizedBox(height: 10),
+          Card(
+            margin: EdgeInsets.zero,
+            child: Padding(
+              padding: const EdgeInsets.all(12),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('Wejścia, wyjścia i przejścia', style: Theme.of(context).textTheme.titleSmall),
+                  const SizedBox(height: 4),
+                  Text('Wybierz punkt, aby wyświetlić jego opis. Przejścia między piętrami zmienisz poniżej.', style: Theme.of(context).textTheme.bodySmall),
+                  const SizedBox(height: 8),
+                  Wrap(
+                    spacing: 8,
+                    runSpacing: 8,
+                    children: caveConnections.map((connection) {
+                      final feature = _featuresByLocation[location]!.keys.firstWhere(
+                        (key) => key.toLowerCase().contains(connection.toLowerCase().replaceFirst('wyjście ', '').replaceFirst('wejście ', '')),
+                        orElse: () => connection,
+                      );
+                      return ActionChip(
+                        avatar: Icon(connection.startsWith('Wejście') ? Icons.login : Icons.logout, size: 17),
+                        label: Text(connection),
+                        onPressed: () => setState(() => _selectedFeature = feature),
+                      );
+                    }).toList(),
+                  ),
+                  const SizedBox(height: 4),
+                  Text('Schemat połączeń jest orientacyjny; wybór nie teleportuje postaci ani nie zmienia regionu automatycznie.', style: Theme.of(context).textTheme.bodySmall),
+                ],
+              ),
+            ),
           ),
         ],
         if (floors.isNotEmpty) ...[
