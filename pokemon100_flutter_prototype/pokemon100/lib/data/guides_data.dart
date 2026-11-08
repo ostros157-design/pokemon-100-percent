@@ -643,7 +643,7 @@ const List<Guide> guidesList = [
         section: 'Route 4 i Mt. Moon',
         title: 'Zbadaj zachodnią część Route 4',
         description:
-            'Po Route 3 przejdź na zachodnią część Route 4. W trawie spotkasz Rattatę (25%), Spearowa (30%), Sandshrewa (20%), Mankeya (20%) i Psyducka (5%) na poziomach 7–12. Charmander może pojawić się jako rzadki specjalny spawn, ale nie ma potwierdzonego stałego procentu. W Pokémon Center możesz wyleczyć drużynę i kupić Magikarpa od mężczyzny po lewej stronie lady za \\$500.',
+            'Po Route 3 przejdź na zachodnią część Route 4. W trawie spotkasz Rattatę (25%), Spearowa (30%), Sandshrewa (20%), Mankeya (20%) i Psyducka (5%) na poziomach 7–12. Charmander może pojawić się jako rzadki specjalny spawn, ale nie ma potwierdzonego stałego procentu. W Pokémon Center możesz wyleczyć drużynę i kupić Magikarpa od mężczyzny po lewej stronie lady za \$500.',
         location: 'Route 4 — zachód',
         pokemon: ['Rattata', 'Spearow', 'Sandshrew', 'Mankey', 'Psyduck', 'Charmander'],
         encounterRatesPercent: {
@@ -654,13 +654,13 @@ const List<Guide> guidesList = [
           'Psyduck': 5,
         },
         wildPokemonNoRate: ['Charmander'],
-        items: ['Magikarp (prezent za \\$500, poziom 5)'],
+        items: ['Magikarp (prezent za \$500, poziom 5)'],
       ),
       GuideStep(
         section: 'Route 4 i Mt. Moon',
         title: 'Pokonaj Coach Trainer Oberona',
         description:
-            'Opcjonalny trener stoi na zachodniej części Route 4. Używa Meowtha na poziomie 13. Po zwycięstwie otrzymasz \\$1,300 oraz TM57 Pay Day. Wśród skał na zachód od Pokémon Center podnieś Escape Rope przed wejściem do Mt. Moon.',
+            'Opcjonalny trener stoi na zachodniej części Route 4. Używa Meowtha na poziomie 13. Po zwycięstwie otrzymasz \$1,300 oraz TM57 Pay Day. Wśród skał na zachód od Pokémon Center podnieś Escape Rope przed wejściem do Mt. Moon.',
         location: 'Route 4 — zachód',
         trainers: ['Coach Trainer Oberon'],
         pokemon: ['Meowth'],
