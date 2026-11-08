@@ -5693,3 +5693,6 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 
 
 - Uzupełnienie naprawy po ponownym odczycie rzeczywistego logu: w `guides_data.dart` pozostały jeszcze 22 nieescapowane znaki `$` w opisach trenerów, nagród i Mega Stones. Wszystkie 22 zostały teraz zamienione na poprawne `\$`; kontrola tekstowa potwierdziła 0 pozostałych nieescapowanych znaków waluty. `team_screen.dart` zawiera już wcześniejsze poprawki: lokalną nie-nullowalną referencję `chosen` po kontroli `selected == null` oraz użycie `_selectedGame` zamiast nieistniejącego `widget.gameId`. Commit danych poradnika: `87926276cd30ef6e3294a5a75b9cae5ff6ec42c7`. Nie uruchomiono Analyzer, testów ani APK.
+
+
+- Kolejny log `flutter build apk --release` wykazał 3 błędy w `_PokemonPickerState`: ta klasa nie ma pola `_selectedGame`, ponieważ identyfikator gry jest przekazywany przez `widget.gameId`. Poprawiono wszystkie 3 odwołania w `team_screen.dart` na `widget.gameId`. Commit: `ce18c334e5c8fd2ee269869953ae5ab1d1cdbfe4`. Ostrzeżenie o Kotlin Gradle Plugin dla `firebase_core` pozostaje ostrzeżeniem, nie przyczyną tego przerwania kompilacji. APK wymaga ponownego zbudowania i sprawdzenia.
