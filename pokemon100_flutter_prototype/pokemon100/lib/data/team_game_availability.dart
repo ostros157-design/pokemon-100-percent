@@ -51,15 +51,29 @@ class TeamGameAvailability {
     27, 28, 37, 38, 69, 70, 71, 79, 80, 120, 121, 126, 127,
     183, 184, 199, 200, 215, 223, 224, 226, 240, 298,
   };
+  static const Set<int> _fireRedExclusivesInLeafGreen = {
+    23, 24, 43, 44, 45, 54, 55, 58, 59, 90, 91, 123, 125,
+    182, 194, 195, 198, 211, 212, 225, 227, 239,
+  };
   static const Set<int> _fireRedPostGameSpecies = {
     182, 194, 195, 198, 211, 212, 225, 227, 239,
   };
+  static const Set<int> _leafGreenPostGameSpecies = {
+    183, 184, 199, 200, 215, 223, 224, 226, 240, 298,
+  };
+  static const Set<int> _tradeEvolutionsInFireredLeafgreen = {65, 68, 76, 94};
 
   static bool supports(String gameId) =>
       gameId == 'lets_go_pikachu' ||
       gameId == 'lets_go_eevee' ||
+      gameId == 'firered' ||
+      gameId == 'leafgreen' ||
+      gameId == 'sword' ||
       _ranges.containsKey(gameId) ||
       gameId == 'xy';
+
+  static bool hasVerifiedData(String gameId) =>
+      gameId != 'sword' && supports(gameId);
 
   static bool _regionalContains(String gameId, int nationalDex) {
     final encoded = gameId == 'xy'
@@ -82,46 +96,68 @@ class TeamGameAvailability {
       );
     }
 
-    if (gameId == 'firered') {
+    if (gameId == 'firered' || gameId == 'leafgreen') {
       if (nationalDex == 151 || nationalDex == 386) {
         return const TeamPokemonAvailability(
           TeamAvailabilityKind.specialAccess, 'Wydarzenie specjalne',
           'Mew i Deoxys wymagają historycznego przedmiotu/eventu; nie są zwykłymi spotkaniami.',
         );
       }
-      if (_leafGreenExclusivesInFireRed.contains(nationalDex)) {
-        return const TeamPokemonAvailability(
-          TeamAvailabilityKind.tradeRequired, 'Wymaga wymiany z LeafGreen',
-          'Gatunek jest dostępny naturalnie w Pokémon LeafGreen, a w FireRed wymaga wymiany.',
+      final oppositeVersionExclusives = gameId == 'firered'
+          ? _leafGreenExclusivesInFireRed
+          : _fireRedExclusivesInLeafGreen;
+      if (oppositeVersionExclusives.contains(nationalDex)) {
+        return TeamPokemonAvailability(
+          TeamAvailabilityKind.tradeRequired,
+          gameId == 'firered' ? 'Wymaga wymiany z LeafGreen' : 'Wymaga wymiany z FireRed',
+          'Gatunek jest ekskluzywny dla drugiej wersji FireRed/LeafGreen.',
         );
       }
-      if (_fireRedPostGameSpecies.contains(nationalDex)) {
-        if (nationalDex == 212) {
+      final postGameSpecies = gameId == 'firered'
+          ? _fireRedPostGameSpecies
+          : _leafGreenPostGameSpecies;
+      if (postGameSpecies.contains(nationalDex)) {
+        if (_tradeEvolutionsInFireredLeafgreen.contains(nationalDex) ||
+            nationalDex == 212 || nationalDex == 199) {
           return const TeamPokemonAvailability(
             TeamAvailabilityKind.tradeRequired, 'Ewolucja przez wymianę',
-            'Scizor wymaga wymiany Scythera trzymającego Metal Coat.',
+            'Ten gatunek wymaga wymiany w FireRed/LeafGreen.',
           );
         }
-        if (nationalDex == 239) {
+        if (nationalDex == 239 || nationalDex == 240 || nationalDex == 298) {
           return const TeamPokemonAvailability(
             TeamAvailabilityKind.breedingRequired, 'Wymaga hodowli',
-            'Elekid uzyskuje się z jajka po hodowli Electabuzza.',
+            'Ten gatunek uzyskuje się przez hodowlę po odblokowaniu odpowiednich obszarów.',
           );
         }
         return const TeamPokemonAvailability(
           TeamAvailabilityKind.postGame, 'Dostępny po fabule',
-          'Ten gatunek jest dostępny w obszarach Sevii Islands lub po odblokowaniu post-game.',
+          'Ten gatunek jest dostępny po odblokowaniu obszarów Sevii Islands.',
+        );
+      }
+      if (_tradeEvolutionsInFireredLeafgreen.contains(nationalDex)) {
+        return const TeamPokemonAvailability(
+          TeamAvailabilityKind.tradeRequired, 'Ewolucja przez wymianę',
+          'Ten etap ewolucji wymaga wymiany w FireRed/LeafGreen.',
         );
       }
       if (nationalDex >= 1 && nationalDex <= 150) {
-        return const TeamPokemonAvailability(
-          TeamAvailabilityKind.inGame, 'Dostępny w FireRed',
-          'Gatunek znajduje się w puli Kanto FireRed; miejsce i metoda zależą od gatunku.',
+        return TeamPokemonAvailability(
+          TeamAvailabilityKind.inGame,
+          gameId == 'firered' ? 'Dostępny w FireRed' : 'Dostępny w LeafGreen',
+          'Gatunek występuje w tej wersji; miejsce i metoda zależą od gatunku.',
         );
       }
       return const TeamPokemonAvailability(
         TeamAvailabilityKind.outsideRegionalDex, 'Poza regionalnym Pokédexem',
-        'Brak potwierdzenia dla zwykłej rozgrywki FireRed. Może wymagać innej gry, wymiany lub eventu.',
+        'Brak potwierdzenia dla zwykłej rozgrywki. Może wymagać innej gry, wymiany lub eventu.',
+      );
+    }
+
+    if (gameId == 'sword') {
+      return const TeamPokemonAvailability(
+        TeamAvailabilityKind.unknown, 'Brak zweryfikowanej listy',
+        'Dla Sword nie mamy jeszcze kompletnej listy Galar, Isle of Armor i Crown Tundra. Wybór ręczny nie potwierdza dostępności.',
       );
     }
 
