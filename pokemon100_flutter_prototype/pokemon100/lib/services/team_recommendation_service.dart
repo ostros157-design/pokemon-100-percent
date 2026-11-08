@@ -26,8 +26,7 @@ class TeamRecommendationService {
   /// species as part of the selected version's normal regional roster.
   /// Trade/event/unknown cases are kept out of automatic recommendations.
   static bool isAvailableInGame(Pokemon pokemon, String gameId) =>
-      TeamGameAvailability.forPokemon(gameId, pokemon.id).kind ==
-      TeamAvailabilityKind.inGame;
+      TeamGameAvailability.forPokemon(gameId, pokemon.id).canBeAdded;
 
   static const Map<String, Set<String>> _superEffectiveAgainst = {
     'Normal': {}, 'Fire': {'Grass', 'Ice', 'Bug', 'Steel'},
