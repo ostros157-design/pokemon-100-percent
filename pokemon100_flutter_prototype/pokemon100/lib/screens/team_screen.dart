@@ -607,6 +607,7 @@ class _TeamScreenState extends State<TeamScreen> {
           final onlyFirst = firstMembers.where((pokemon) => !secondIds.contains(pokemon.id)).toList();
           final onlySecond = secondMembers.where((pokemon) => !firstIds.contains(pokemon.id)).toList();
           final sameGame = first.gameId == second.gameId;
+          final isNarrow = MediaQuery.of(context).size.width < 620;
           final profileA = TeamBattleAnalysis.analyze(firstMembers, first.movesByPokemon, gameId: first.gameId);
           final profileB = TeamBattleAnalysis.analyze(secondMembers, second.movesByPokemon, gameId: second.gameId);
           final sharedCoverage = profileA.coveredTypes.intersection(profileB.coveredTypes).toList()..sort();
@@ -620,7 +621,7 @@ class _TeamScreenState extends State<TeamScreen> {
           }
 
           Widget profileColumn(String heading, TeamBattleProfile profile) {
-            return Expanded(child: Column(
+            return Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(heading, style: const TextStyle(fontWeight: FontWeight.bold)),
@@ -637,7 +638,7 @@ class _TeamScreenState extends State<TeamScreen> {
                 Text('Wykryte synergie: ' + profile.synergyHints.length.toString(), style: Theme.of(context).textTheme.bodySmall),
                 ...profile.synergyHints.take(3).map((hint) => Text('• ' + hint, style: Theme.of(context).textTheme.bodySmall)),
               ],
-            ));
+            );
           }
 
           Widget teamPicker(String label, String selectedId, ValueChanged<String?> onChanged) {
@@ -655,8 +656,7 @@ class _TeamScreenState extends State<TeamScreen> {
 
           Widget comparisonColumn(String title, _SavedTeam saved) {
             final members = membersOf(saved);
-            return Expanded(
-              child: Column(
+            return Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(title, style: const TextStyle(fontWeight: FontWeight.bold)),
@@ -669,14 +669,13 @@ class _TeamScreenState extends State<TeamScreen> {
                     child: Text('• ${pokemon.name}'),
                   )),
                 ],
-              ),
-            );
+              );
           }
 
           return AlertDialog(
             title: const Text('Porównanie drużyn'),
             content: SizedBox(
-              width: 520,
+              width: isNarrow ? MediaQuery.of(context).size.width * 0.78 : 520,
               child: SingleChildScrollView(
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
@@ -695,14 +694,19 @@ class _TeamScreenState extends State<TeamScreen> {
                       if (!sameGame)
                         const Text('Uwaga: drużyny są przygotowane do różnych gier, więc porównanie dostępności nie jest bezpośrednie.',
                           style: TextStyle(color: Colors.orange)),
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          comparisonColumn('Drużyna A', first),
-                          const SizedBox(width: 12),
-                          comparisonColumn('Drużyna B', second),
-                        ],
-                      ),
+                      if (isNarrow) ...[
+                        comparisonColumn('Drużyna A', first),
+                        const Divider(height: 16),
+                        comparisonColumn('Drużyna B', second),
+                      ] else
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Expanded(child: comparisonColumn('Drużyna A', first)),
+                            const SizedBox(width: 12),
+                            Expanded(child: comparisonColumn('Drużyna B', second)),
+                          ],
+                        ),
                       const Divider(height: 24),
                       Text('Wspólne Pokémony: ${commonIds.isEmpty ? 'brak' : firstMembers.where((p) => commonIds.contains(p.id)).map((p) => p.name).join(', ')}'),
                       const SizedBox(height: 8),
@@ -712,14 +716,19 @@ class _TeamScreenState extends State<TeamScreen> {
                       const Divider(height: 24),
                       const Align(alignment: Alignment.centerLeft, child: Text('Porównanie walki', style: TextStyle(fontWeight: FontWeight.bold))),
                       const SizedBox(height: 8),
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          profileColumn('Drużyna A', profileA),
-                          const SizedBox(width: 12),
-                          profileColumn('Drużyna B', profileB),
-                        ],
-                      ),
+                      if (isNarrow) ...[
+                        profileColumn('Drużyna A', profileA),
+                        const Divider(height: 16),
+                        profileColumn('Drużyna B', profileB),
+                      ] else
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Expanded(child: profileColumn('Drużyna A', profileA)),
+                            const SizedBox(width: 12),
+                            Expanded(child: profileColumn('Drużyna B', profileB)),
+                          ],
+                        ),
                       const SizedBox(height: 12),
                       Text('Wspólne pokrycie ruchami: ' + (sharedCoverage.isEmpty ? 'brak' : sharedCoverage.join(', '))),
                       const SizedBox(height: 4),
