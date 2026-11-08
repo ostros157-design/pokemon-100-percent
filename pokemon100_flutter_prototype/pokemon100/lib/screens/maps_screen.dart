@@ -204,6 +204,24 @@ class _MapsScreenState extends State<MapsScreen> {
     }
     if (location == null) return const SizedBox.shrink();
 
+    final connectedLocations = (location['connectsTo'] as List?)
+            ?.whereType<String>()
+            .map((id) => rawLocations
+                .whereType<Map<String, dynamic>>()
+                .cast<Map<String, dynamic>?>()
+                .firstWhere(
+                  (candidate) => candidate?['id'] == id,
+                  orElse: () => null,
+                ))
+            .whereType<Map<String, dynamic>>()
+            .toList(growable: false) ??
+        const <Map<String, dynamic>>[];
+
+    void openConnectedLocation(String name) {
+      _locationSearchController.text = name;
+      setState(() => _searchQuery = name);
+    }
+
     final encounterSource =
         location['wildPokemonDetails'] ?? location['encounters'];
     final encounters = _mapWildPokemonEntries(encounterSource);
@@ -285,6 +303,26 @@ class _MapsScreenState extends State<MapsScreen> {
                         : 'Położenie pinezek: niezweryfikowane — mapa jest poglądowa.',
                 style: Theme.of(context).textTheme.labelSmall,
               ),
+              if (connectedLocations.isNotEmpty) ...[
+                const SizedBox(height: 12),
+                const Text(
+                  'Połączone lokacje',
+                  style: TextStyle(fontWeight: FontWeight.w700),
+                ),
+                const SizedBox(height: 6),
+                Wrap(
+                  spacing: 6,
+                  runSpacing: 4,
+                  children: connectedLocations.map((connected) {
+                    final name = connected['name'] as String? ?? 'Lokacja';
+                    return ActionChip(
+                      avatar: const Icon(Icons.alt_route, size: 16),
+                      label: Text(name),
+                      onPressed: () => openConnectedLocation(name),
+                    );
+                  }).toList(),
+                ),
+              ],
             ],
           ),
         ),
@@ -392,6 +430,26 @@ class _MapsScreenState extends State<MapsScreen> {
                       visualDensity: VisualDensity.compact,
                     ),
                 ],
+              ),
+            ],
+            if (connectedLocations.isNotEmpty) ...[
+              const SizedBox(height: 12),
+              const Text(
+                'Połączone lokacje',
+                style: TextStyle(fontWeight: FontWeight.w700),
+              ),
+              const SizedBox(height: 6),
+              Wrap(
+                spacing: 6,
+                runSpacing: 4,
+                children: connectedLocations.map((connected) {
+                  final name = connected['name'] as String? ?? 'Lokacja';
+                  return ActionChip(
+                    avatar: const Icon(Icons.alt_route, size: 16),
+                    label: Text(name),
+                    onPressed: () => openConnectedLocation(name),
+                  );
+                }).toList(),
               ),
             ],
             if (items.isNotEmpty)
