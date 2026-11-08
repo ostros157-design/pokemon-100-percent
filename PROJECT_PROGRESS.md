@@ -5671,3 +5671,6 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Poprawiono opis Championa Trace’a dla wersji Let’s Go, Pikachu!: partnerową końcową ewolucją jest Jolteon Lv.57, a Pidgeot Mega Ewoluuje na początku walki.
 - Źródła: Serebii Mega Evolution, Altissimo1 Mega Stone Locations, SuperCheats.
 - Nie uruchomiono Flutter Analyzer, testów ani APK.
+
+
+- Korekta po ponownej kontroli: opis Championa Trace’a został w całości zastąpiony prawidłową drużyną wersji Pikachu wraz z poziomami 56–57; usunięto błędną wzmiankę o Eevee.
