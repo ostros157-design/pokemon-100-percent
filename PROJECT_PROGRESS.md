@@ -1,3 +1,16 @@
+### Poradnik Let's Go, Pikachu! — Route 13–18 (2026-11-08)
+
+- Dodano 14 kroków tabel spotkań dla Route 13, 14, 15, 16, 17 i 18.
+- Route 13: tabela trawy, nieba i wody.
+- Route 14 i 15: osobne tabele trawy i nieba; uwzględniono wyłączność Scythera w wersji Pikachu oraz Pinsira w wersji Eevee.
+- Route 16: tabela trawy i nieba oraz osobny wpis o statycznym Snorlaxie na poziomie 34.
+- Route 17 i 18: osobne tabele trawy i nieba.
+- Poziomy naziemne: Route 13–15 i 17–18: 33–38; Route 16: 31–36; latające: 3–56.
+- Chansey oraz rzadkie latające spawny pozostają bez stałych procentów.
+- Źródła: RotomLabs — strony Let's Go Pikachu & Eevee dla Route 13–18.
+- Nie uruchomiono Flutter Analyzer, testów ani APK.
+
+
 ### Poradnik Let's Go, Pikachu! — Route 7 (2026-11-08)
 
 - Dodano dwie tabele Route 7: spotkania w trawie oraz na niebie.
