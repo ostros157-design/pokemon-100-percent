@@ -32,6 +32,15 @@ void main() {
       expect(TeamGameAvailability.forPokemon('lets_go_pikachu', 809).kind, TeamAvailabilityKind.specialAccess);
     });
 
+    test('FireRed distinguishes LeafGreen trades, post-game, breeding and events', () {
+      expect(TeamGameAvailability.forPokemon('firered', 23).kind, TeamAvailabilityKind.inGame);
+      expect(TeamGameAvailability.forPokemon('firered', 27).kind, TeamAvailabilityKind.tradeRequired);
+      expect(TeamGameAvailability.forPokemon('firered', 194).kind, TeamAvailabilityKind.postGame);
+      expect(TeamGameAvailability.forPokemon('firered', 239).kind, TeamAvailabilityKind.breedingRequired);
+      expect(TeamGameAvailability.forPokemon('firered', 212).kind, TeamAvailabilityKind.tradeRequired);
+      expect(TeamGameAvailability.forPokemon('firered', 386).kind, TeamAvailabilityKind.specialAccess);
+    });
+
     test('regional dex omissions are labelled unknown rather than impossible', () {
       expect(TeamGameAvailability.forPokemon('emerald', 1).kind, TeamAvailabilityKind.outsideRegionalDex);
       expect(TeamGameAvailability.forPokemon('sword', 25).kind, TeamAvailabilityKind.unknown);
