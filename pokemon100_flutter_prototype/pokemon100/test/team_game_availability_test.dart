@@ -5,7 +5,7 @@ import 'package:pokemon_guide/services/team_recommendation_service.dart';
 
 void main() {
   group('TeamGameAvailability', () {
-    test('only games with data are marked as supported', () {
+    test('distinguishes selectable games from verified availability data', () {
       for (final game in [
         'lets_go_pikachu',
         'emerald',
@@ -43,6 +43,11 @@ void main() {
       expect(TeamGameAvailability.forPokemon('firered', 239).kind, TeamAvailabilityKind.breedingRequired);
       expect(TeamGameAvailability.forPokemon('firered', 212).kind, TeamAvailabilityKind.tradeRequired);
       expect(TeamGameAvailability.forPokemon('firered', 386).kind, TeamAvailabilityKind.specialAccess);
+    });
+
+    test('regional dex entries are not mislabelled as fully verified encounter methods', () {
+      expect(TeamGameAvailability.forPokemon('emerald', 252).kind, TeamAvailabilityKind.regionalDex);
+      expect(TeamGameAvailability.forPokemon('emerald', 252).canBeAdded, isTrue);
     });
 
     test('regional dex omissions are labelled unknown rather than impossible', () {
