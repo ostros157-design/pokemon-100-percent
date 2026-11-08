@@ -160,6 +160,9 @@ class TeamRecommendationService {
     ranked.sort((a, b) {
       final byScore = b.score.compareTo(a.score);
       if (byScore != 0) return byScore;
+      final byTotalStats = (b.pokemon.baseStatTotal ?? 0)
+          .compareTo(a.pokemon.baseStatTotal ?? 0);
+      if (byTotalStats != 0) return byTotalStats;
       final byTypes = b.pokemon.types.length.compareTo(a.pokemon.types.length);
       return byTypes != 0 ? byTypes : a.pokemon.id.compareTo(b.pokemon.id);
     });
