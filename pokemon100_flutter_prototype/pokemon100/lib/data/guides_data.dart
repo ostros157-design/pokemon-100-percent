@@ -905,7 +905,7 @@ const List<Guide> guidesList = [
       GuideStep(
         section: "Misty i druga odznaka",
         title: "Pokonaj trenerów na Nugget Bridge i Route 24",
-        description: "Na Nugget Bridge pokonaj kolejno: Bug Catcher Cale — Venonat Lv.9 (108$, 3 Poké Balle); Lass Ali — Psyduck Lv.10 (200$, 3 Poké Balle); Youngster Timmy — Sandshrew Lv.10 (200$, 3 Poké Balle); Lass Reli — Meowth Lv.10 (200$, 3 Poké Balle); Camper Kevin — Growlithe Lv.11 (220$, 2 Great Balle). Po pięciu walkach otrzymasz Nugget, a następnie walczysz z Team Rocket Grunt — Zubat Lv.11 i Koffing Lv.11 (308$). Na zachodniej polanie Route 24 pokonaj Camper Shane’a — Spearow Lv.11 (220$, 2 Great Balle). Łącznie siedem walk. Po walkach możesz odebrać Charmandera od chłopca na wzgórzu, jeśli złapano co najmniej 50 Pokémonów.",
+        description: "Na Nugget Bridge pokonaj kolejno: Bug Catcher Cale — Venonat Lv.9 (108\$, 3 Poké Balle); Lass Ali — Psyduck Lv.10 (200\$, 3 Poké Balle); Youngster Timmy — Sandshrew Lv.10 (200\$, 3 Poké Balle); Lass Reli — Meowth Lv.10 (200\$, 3 Poké Balle); Camper Kevin — Growlithe Lv.11 (220\$, 2 Great Balle). Po pięciu walkach otrzymasz Nugget, a następnie walczysz z Team Rocket Grunt — Zubat Lv.11 i Koffing Lv.11 (308\$). Na zachodniej polanie Route 24 pokonaj Camper Shane’a — Spearow Lv.11 (220\$, 2 Great Balle). Łącznie siedem walk. Po walkach możesz odebrać Charmandera od chłopca na wzgórzu, jeśli złapano co najmniej 50 Pokémonów.",
         location: "Route 24 — Nugget Bridge i zachodnia polana",
         trainers: ["Bug Catcher Cale", "Lass Ali", "Youngster Timmy", "Lass Reli", "Camper Kevin", "Team Rocket Grunt", "Camper Shane"],
         pokemon: ["Venonat", "Psyduck", "Sandshrew", "Meowth", "Growlithe", "Zubat", "Koffing", "Spearow"],
@@ -919,7 +919,7 @@ const List<Guide> guidesList = [
       GuideStep(
         section: "Misty i druga odznaka",
         title: "Pokonaj wszystkich trenerów na Route 25",
-        description: "Na Route 25 czeka dziewięciu trenerów: Hiker Franklin — Onix Lv.14 (560$, 3 Poké Balle); Youngster Chad — Diglett Lv.12 (240$, 3 Poké Balle); Bird Keeper Joey — Pidgeotto Lv.15 (900$, 3 Poké Balle); Youngster Dan — Ekans i Rattata Lv.12 (240$, 3 Poké Balle); Hiker Nob — Geodude i Machop Lv.14 (560$, 3 Poké Balle); Picnicker Kelsey — Goldeen Lv.13 (260$, 2 Great Balle); Camper Dustin — Squirtle Lv.13 (260$, 2 Great Balle); Lass Haley — Oddish i Pidgey Lv.12 (240$, 3 Poké Balle); Fisherman Wayne — Magikarp i Krabby Lv.14 (560$, 3 Poké Balle). Opcjonalny Coach Trainer Amala używa Machopa Lv.16; nagrodą za zwycięstwo jest TM15 Seismic Toss i 1600$. Zbierz przedmioty w labiryncie żywopłotów i dotrzyj do Sea Cottage.",
+        description: "Na Route 25 czeka dziewięciu trenerów: Hiker Franklin — Onix Lv.14 (560\$, 3 Poké Balle); Youngster Chad — Diglett Lv.12 (240\$, 3 Poké Balle); Bird Keeper Joey — Pidgeotto Lv.15 (900\$, 3 Poké Balle); Youngster Dan — Ekans i Rattata Lv.12 (240\$, 3 Poké Balle); Hiker Nob — Geodude i Machop Lv.14 (560\$, 3 Poké Balle); Picnicker Kelsey — Goldeen Lv.13 (260\$, 2 Great Balle); Camper Dustin — Squirtle Lv.13 (260\$, 2 Great Balle); Lass Haley — Oddish i Pidgey Lv.12 (240\$, 3 Poké Balle); Fisherman Wayne — Magikarp i Krabby Lv.14 (560\$, 3 Poké Balle). Opcjonalny Coach Trainer Amala używa Machopa Lv.16; nagrodą za zwycięstwo jest TM15 Seismic Toss i 1600\$. Zbierz przedmioty w labiryncie żywopłotów i dotrzyj do Sea Cottage.",
         location: "Route 25",
         trainers: ["Hiker Franklin", "Youngster Chad", "Bird Keeper Joey", "Youngster Dan", "Hiker Nob", "Picnicker Kelsey", "Camper Dustin", "Lass Haley", "Fisherman Wayne", "Coach Trainer Amala"],
         pokemon: ["Onix", "Diglett", "Pidgeotto", "Ekans", "Rattata", "Geodude", "Machop", "Goldeen", "Squirtle", "Oddish", "Pidgey", "Magikarp", "Krabby"],
@@ -933,7 +933,7 @@ const List<Guide> guidesList = [
       GuideStep(
         section: "Misty i druga odznaka",
         title: "15. Cerulean Gym — Misty",
-        description: "W sali pokonaj trzy Beauty przed liderką: Lily — Goldeen Lv.16 (320$), Violet — Shellder Lv.16 (320$) i Daisy — Seel Lv.16 (320$). Misty używa Psyduck Lv.18 (Confusion, Water Gun) oraz Starmie Lv.19 (Scald, Swift, Psywave); nagroda za liderkę to 3040$, Cascade Badge i TM29 Scald. Do wejścia musisz pokazać Pokémona co najmniej na poziomie 15. Najlepsze typy to Electric i Grass, ale Psyduck ma ruch Psychic, a Starmie jest szybkie i mocne specjalnie.",
+        description: "W sali pokonaj trzy Beauty przed liderką: Lily — Goldeen Lv.16 (320\$), Violet — Shellder Lv.16 (320\$) i Daisy — Seel Lv.16 (320\$). Misty używa Psyduck Lv.18 (Confusion, Water Gun) oraz Starmie Lv.19 (Scald, Swift, Psywave); nagroda za liderkę to 3040\$, Cascade Badge i TM29 Scald. Do wejścia musisz pokazać Pokémona co najmniej na poziomie 15. Najlepsze typy to Electric i Grass, ale Psyduck ma ruch Psychic, a Starmie jest szybkie i mocne specjalnie.",
         trainers: ["Beauty Lily", "Beauty Violet", "Beauty Daisy", "Misty"],
         pokemon: ["Goldeen", "Shellder", "Seel", "Psyduck", "Starmie"],
         pokemonMentions: ["Pikachu"],
@@ -2452,7 +2452,7 @@ const List<Guide> guidesList = [
       GuideStep(
         section: "Mega Ewolucje",
         title: "95. Zdobywanie Mega Stones",
-        description: "Wszystkie Mega Stones w Let's Go można zdobyć na trzy sposoby. Po pokonaniu Blaine’a i otrzymaniu siedmiu odznak wróć do Pallet Town: Blue przekazuje Key Stone oraz Venusaurite, Blastoisinite, Charizardite X i Charizardite Y. Po zostaniu Championem kup u sprzedawcy w stroju Slowbro w lobby Indigo Plateau pozostałe dziewięć kamieni po 30 000$: Beedrillite, Pidgeotite, Alakazite, Slowbronite, Gengarite, Kangaskhanite, Pinsirite, Gyaradosite i Aerodactylite. Po złapaniu Mewtwo pokonaj Green w Cerulean Cave, aby otrzymać Mewtwonite X i Mewtwonite Y. Łącznie dostępnych jest 15 Mega Stones dla Pokémonów.",
+        description: "Wszystkie Mega Stones w Let's Go można zdobyć na trzy sposoby. Po pokonaniu Blaine’a i otrzymaniu siedmiu odznak wróć do Pallet Town: Blue przekazuje Key Stone oraz Venusaurite, Blastoisinite, Charizardite X i Charizardite Y. Po zostaniu Championem kup u sprzedawcy w stroju Slowbro w lobby Indigo Plateau pozostałe dziewięć kamieni po 30 000\$: Beedrillite, Pidgeotite, Alakazite, Slowbronite, Gengarite, Kangaskhanite, Pinsirite, Gyaradosite i Aerodactylite. Po złapaniu Mewtwo pokonaj Green w Cerulean Cave, aby otrzymać Mewtwonite X i Mewtwonite Y. Łącznie dostępnych jest 15 Mega Stones dla Pokémonów.",
         location: "Pallet Town / Indigo Plateau / Cerulean Cave",
         items: ["Key Stone", "Venusaurite", "Blastoisinite", "Charizardite X", "Charizardite Y", "Beedrillite", "Pidgeotite", "Alakazite", "Slowbronite", "Gengarite", "Kangaskhanite", "Pinsirite", "Gyaradosite", "Aerodactylite", "Mewtwonite X", "Mewtwonite Y"],
         pokemonMentions: ["Venusaur", "Blastoise", "Charizard", "Beedrill", "Pidgeot", "Alakazam", "Slowbro", "Gengar", "Kangaskhan", "Pinsir", "Gyarados", "Aerodactyl", "Mewtwo"],
