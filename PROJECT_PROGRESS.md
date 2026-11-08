@@ -5682,3 +5682,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Jawne pole `trainers` nadal ma pierwszeństwo; automatyczne rozpoznawanie jest tylko rozwiązaniem pomocniczym dla starszych kroków bez jawnej listy.
 - Nie dodano poziomów ani składów Pokémonów na podstawie samego rozpoznania nazwy trenera.
 - Nie uruchomiono Flutter Analyzer, testów ani APK.
+
+
+### Naprawa błędów kompilacji APK — 2026-11-08
+
+- Na podstawie logu kompilacji poprawiono zapis znaków dolara w tekstach poradnika Let’s Go, Pikachu!: znaki waluty są teraz poprawnie escapowane w literałach Dart, bez zmiany wyświetlanej treści.
+- Naprawiono obsługę nullable w menu zapisanych drużyn: po sprawdzeniu, że wybrana drużyna istnieje, dalsza obsługa korzysta z lokalnej, nie-nullowalnej referencji. Dotyczy wczytywania, kopiowania i usuwania.
+- Poprawiono odwołanie do wybranej gry w karcie Pokémonów kreatora drużyn: ekran używa własnego stanu `_selectedGame`, zamiast nieistniejącego `widget.gameId`.
+- Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK w tym środowisku. Naprawa odpowiada błędom wskazanym w dostarczonym logu; wymaga ponownego builda na komputerze użytkownika.
