@@ -18,6 +18,7 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
   static const _selectedGameKey = 'selected_pokemon_game_id';
   static const _caughtKeyPrefix = 'caught_pokemon_ids_';
   static const _legacyCaughtKey = 'caught_pokemon_ids';
+  static const _manualUnlockedKey = 'manual_achievement_ids';
 
   bool _loading = true;
   String _selectedGameId = 'lets_go_pikachu';
@@ -28,6 +29,7 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
   bool _hasShiny = false;
   bool _hasLegendary = false;
   int _selectedGameProgressPercent = 0;
+  Set<String> _manualUnlockedIds = <String>{};
 
   @override
   void initState() {
@@ -39,6 +41,7 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
     final preferences = await SharedPreferences.getInstance();
     final gameId =
         preferences.getString(_selectedGameKey) ?? 'lets_go_pikachu';
+    final manualUnlockedIds = (preferences.getStringList(_manualUnlockedKey) ?? const <String>[]).toSet();
 
     final hasPerGameCollections = preferences
         .getKeys()
@@ -136,11 +139,12 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
       _hasShiny = hasShiny;
       _hasLegendary = hasLegendary;
       _selectedGameProgressPercent = progressPercent;
+      _manualUnlockedIds = manualUnlockedIds;
       _loading = false;
     });
   }
 
-  bool _isUnlocked(Achievement achievement) {
+  bool _isAutomaticallyUnlocked(Achievement achievement) {
     switch (achievement.id) {
       case 'first_pokemon':
       case 'pokedex_start':
@@ -177,6 +181,19 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
         // (badges, battles, evolutions, team composition, etc.) are tracked.
         return false;
     }
+  }
+
+  bool _isUnlocked(Achievement achievement) =>
+      _manualUnlockedIds.contains(achievement.id) ||
+      _isAutomaticallyUnlocked(achievement);
+
+  Future<void> _toggleManualUnlock(String achievementId) async {
+    final updated = Set<String>.from(_manualUnlockedIds);
+    if (!updated.add(achievementId)) updated.remove(achievementId);
+    final preferences = await SharedPreferences.getInstance();
+    await preferences.setStringList(_manualUnlockedKey, updated.toList()..sort());
+    if (!mounted) return;
+    setState(() => _manualUnlockedIds = updated);
   }
 
   @override
@@ -223,6 +240,9 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
                             return AchievementCard(
                               achievement: achievement,
                               unlocked: _isUnlocked(achievement),
+                              manuallyUnlocked: _manualUnlockedIds.contains(achievement.id),
+                              canManuallyUnlock: !_isAutomaticallyUnlocked(achievement),
+                              onManualToggle: () => _toggleManualUnlock(achievement.id),
                             );
                           },
                         ),
