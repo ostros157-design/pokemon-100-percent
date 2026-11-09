@@ -7,6 +7,7 @@ import 'services/app_appearance.dart';
 import 'services/app_navigation.dart';
 import 'services/app_update_service.dart';
 import 'services/notification_service.dart';
+import 'services/pokemon_music_service.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -27,6 +28,7 @@ class _PokemonGuideAppState extends State<PokemonGuideApp> {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
       unawaited(NotificationService.initialize());
+      unawaited(PokemonMusicService.instance.startIfEnabled());
       AppUpdateService.startDailyChecks();
     });
   }
