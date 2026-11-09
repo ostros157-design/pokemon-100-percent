@@ -14935,7 +14935,8 @@
         "bulbapedia-celadon-game-corner",
         "pokemondb-mastertrainers",
         "bulbapedia-part9-celadon",
-        "bulbapedia-part9"
+        "bulbapedia-part9",
+        "altissimo-celadon-lgpe"
       ],
       "dataStatus": "schematic_interior_available_exact_layout_pending",
       "coordinateStatus": "unverified",
@@ -14949,14 +14950,15 @@
       "trainerCount": 2,
       "trainerStatus": "postgame_master_trainer_teams_verified",
       "items": [
-        "Ukryte znajdźki odświeżają się codziennie; w sześciu punktach może pojawić się Gold Bottle Cap (1% na punkt), Bottle Cap, PP Max lub PP Up (2% na punkt).",
+        "Sześć punktów ukrytych odświeża się codziennie; każdy losuje nagrodę z tej samej puli: Berry 50%, Candy 30%, Candy L 10%, Candy XL 5%, PP Up 2%, PP Max 1%, Bottle Cap 1% albo Gold Bottle Cap 1%. Typ Berry i Candy zależy od konkretnego punktu.",
         "Południowo-zachodni narożnik: Health Candy XL (5%), Health Candy L (10%) albo Health Candy (30%); w tym samym punkcie możliwa jest Razz Berry (50%).",
         "Gaśnica w północno-zachodniej części: Mighty Candy XL (5%), Mighty Candy L (10%) albo Mighty Candy (30%); możliwa także Razz Berry (50%).",
         "Przed najbardziej wysuniętą na północ maszyną po wschodniej stronie: Tough Candy XL (5%), Tough Candy L (10%) albo Tough Candy (30%); możliwa Nanab Berry (50%).",
         "Przed najbardziej wysuniętą na północ maszyną po zachodniej stronie: Smart Candy XL (5%), Smart Candy L (10%) albo Smart Candy (30%); możliwa Nanab Berry (50%).",
         "Między ladami oddzielającymi zachodnią i wschodnią część: Courage Candy XL (5%), Courage Candy L (10%) albo Courage Candy (30%); możliwa Pinap Berry (50%).",
         "Na południe od kanapy w północno-wschodniej części: Quick Candy XL (5%), Quick Candy L (10%) albo Quick Candy (30%); możliwa Pinap Berry (50%)."
-      ]
+      ],
+      "itemsStatus": "six daily hidden-item spots and per-item probabilities verified from Altissimo LGPE guide"
     },
     {
       "id": "celadon_condominiums",
