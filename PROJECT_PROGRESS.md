@@ -6108,3 +6108,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Zmieniono środkowy kolor dróg na cieplejszy, ziemisty odcień i rozjaśniono ich obrys, aby lepiej przypominały ścieżki w mapie RPG.
 - Zmieniono podpis mapy z atlasowego na „LET’S GO • ADVENTURE MAP”. Wszystkie nowe elementy są dekoracyjne; nie oznaczają dokładnych biomów, spotkań ani współrzędnych z gry.
 - Nie uruchomiono Flutter Analyzer, testów Flutter ani kompilacji APK. Wygląd wymaga oceny na urządzeniu i ewentualnej korekty czytelności przy małym ekranie.
+
+
+### Mapy Kanto — pasek wybranej lokacji (2026-11-09)
+
+- Nad mapą Let’s Go Kanto dodano pasek „Wybrana lokacja”, który wyraźnie pokazuje aktualnie zaznaczone miejsce.
+- Dodano przycisk „Całe Kanto”, który czyści wyszukiwanie i zaznaczenie, aby szybko wrócić do widoku całego regionu.
+- Pasek pojawia się tylko po wybraniu lokacji; nie zmienia indeksu danych ani nie sugeruje dokładności współrzędnych.
+- Flutter Analyzer, testy Flutter i kompilacja APK nie zostały uruchomione. Zmiana wymaga sprawdzenia wizualnego na telefonie i AYN Thor.
