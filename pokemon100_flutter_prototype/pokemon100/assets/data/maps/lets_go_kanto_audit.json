@@ -822,6 +822,11 @@
       "id": "serebii-gym-leaders-lgpe",
       "url": "https://www.serebii.net/letsgopikachueevee/gyms.shtml",
       "scope": "Let's Go gym leader teams, levels, badges and TM rewards"
+    },
+    {
+      "id": "altissimo-vermilion-lgpe",
+      "url": "https://altissimo1.github.io/Main-Series/Kanto-Locations/vermilion-city.html",
+      "scope": "Let's Go Vermilion City hidden items, gifts, walking Pokémon finds and trainer details"
     }
   ],
   "locations": [
@@ -4480,13 +4485,12 @@
         "Elixir",
         "Big Pearl (ukryty)",
         "Full Heal (ukryty)",
-        "3 Pinap Berries (ukryte)",
-        "Tiny Mushroom (ukryty)"
+        "Sailor Set — od marynarza przy wejściu na S.S. Anne po pokazaniu S.S. Ticket."
       ],
       "notablePokemon": [
         "Squirtle Lv. 16 — gift",
-        "Arcanine Lv. 16 — gift w Let's Go Pikachu",
-        "Persian Lv. 16 — gift w Let's Go Eevee"
+        "Persian Lv. 16 — gift w Let's Go Pikachu",
+        "Arcanine Lv. 16 — gift w Let's Go Eevee"
       ],
       "gymLeader": {
         "name": "Lt. Surge",
@@ -4547,7 +4551,17 @@
             "bulbapedia-part6"
           ]
         },
-        "Mina przy dokach — pierwsza walka Jigglypuff Lv. 21 / Mr. Mime Lv. 22; po zostaniu Championem codzienny rewanż z Mr. Mime Lv. 54, Wigglytuff Lv. 54 i Alolan Ninetales Lv. 55; za wygraną Bottle Cap."
+        "Mina przy dokach — pierwsza walka Jigglypuff Lv. 21 / Mr. Mime Lv. 22; po zostaniu Championem codzienny rewanż z Mr. Mime Lv. 54, Wigglytuff Lv. 54 i Alolan Ninetales Lv. 55; za wygraną Bottle Cap.",
+        {
+          "id": "walking_pokemon_pretty_wing_vermilion",
+          "name": "Pretty Wing — kwietnik przy Route 11",
+          "category": "walking_pokemon_find",
+          "note": "Niektóre Pokémony chodzące za graczem mogą rzadko znaleźć Pretty Wing w kwietniku przy wejściu na Route 11.",
+          "status": "text_verified",
+          "sourceIds": [
+            "altissimo-vermilion-lgpe"
+          ]
+        }
       ],
       "trainers": [
         "Master Trainer Bird Keeper Moe — Farfetch'd Lv. 70 (obok Pokémon Center).",
@@ -4555,7 +4569,9 @@
         "Pokémon Trainer Mina — Jigglypuff Lv. 21 i Mr. Mime Lv. 22; nagroda Bottle Cap. Po zostaniu Championem codzienny rewanż: Mr. Mime Lv. 54, Wigglytuff Lv. 54 i Alolan Ninetales Lv. 55; nagroda Bottle Cap."
       ],
       "trainerCount": 3,
-      "trainerStatus": "postgame_master_trainer_teams_verified"
+      "trainerStatus": "postgame_master_trainer_teams_verified",
+      "itemsStatus": "seven town item balls, three town hidden pickups, and Sailor Set reward separated from S.S. Anne items; hidden locations verified from Altissimo",
+      "hiddenItemCount": 3
     },
     {
       "id": "route_7",
@@ -8914,7 +8930,8 @@
       ],
       "items": [
         "Super Lure",
-        "Nugget — od Digletta w domu Warden’a po użyciu Strong Push; codzienna nagroda."
+        "Nugget — od Digletta w domu Warden’a po użyciu Strong Push; codzienna nagroda.",
+        "TM14 (Fly) — od dziewczyny w ukrytym domu w północnej części miasta; dostęp wymaga Chop Down."
       ],
       "gymLeader": {
         "name": "Koga",
@@ -9000,7 +9017,7 @@
       ],
       "trainerCount": 4,
       "trainerStatus": "postgame_master_trainer_teams_verified",
-      "itemsStatus": "Super Lure and daily Nugget verified from Bulbapedia Part 11"
+      "itemsStatus": "Super Lure, daily Warden-house Nugget and TM14 hidden-house reward text-verified"
     },
     {
       "id": "celadon_city",
@@ -13297,7 +13314,8 @@
       ],
       "notes": "Statek w porcie Vermilion City; dostęp fabularny jest ograniczony i statek odpływa po wydarzeniach.",
       "sourceIds": [
-        "bulbapedia-part6"
+        "bulbapedia-part6",
+        "altissimo-vermilion-lgpe"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
@@ -13316,10 +13334,11 @@
         "Sailor Edmond — Poliwag Lv. 18 (pokład).",
         "Fisherman Dale — Magikarp Lv. 18 (2F).",
         "Gentleman Brooks — Ponyta Lv. 18 (2F).",
-        "Gentleman Lamar — Sandshrew Lv. 18 (2F)."
+        "Gentleman Lamar — Sandshrew Lv. 18 (2F).",
+        "Pokémon Trainer Trace — Pidgeotto Lv. 20, Oddish Lv. 20 i Eevee Lv. 21 (Let's Go Pikachu) albo Pikachu Lv. 21 (Let's Go Eevee); 2F, wschodnia część korytarza."
       ],
-      "trainerCount": 12,
-      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough",
+      "trainerCount": 13,
+      "trainerStatus": "all ship trainers plus version-specific Trace battle cross-checked against Altissimo and Bulbapedia",
       "items": [
         "Shalour Sable — od Blue’a przy wejściu na statek.",
         "Paralyze Heal — 1F, druga kajuta od lewej.",
