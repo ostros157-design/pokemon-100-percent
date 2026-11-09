@@ -4025,7 +4025,8 @@
         "Master Trainer Scientist Julian — Magneton Lv. 75 (Underground Path 5–6)"
       ],
       "trainerStatus": "master_trainer_postgame_roster_cross_checked_pokemondb",
-      "itemsStatus": "all four daily random-item positions and possible pools verified from Altissimo hidden-item index"
+      "itemsStatus": "all four daily random-item positions and possible pools verified from Altissimo hidden-item index",
+      "hiddenItemCount": 4
     },
     {
       "id": "route_6",
@@ -4948,7 +4949,8 @@
       ],
       "trainerCount": 4,
       "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb",
-      "itemsStatus": "field items plus daily hidden Pinap Berry verified from Altissimo hidden-item index"
+      "itemsStatus": "field items plus daily hidden Pinap Berry verified from Altissimo hidden-item index",
+      "hiddenItemCount": 1
     },
     {
       "id": "route_8",
@@ -6210,7 +6212,8 @@
       ],
       "trainerCount": 10,
       "trainerStatus": "master_trainer_postgame_roster_cross_checked_pokemondb",
-      "itemsStatus": "existing item list supplemented with both confirmed daily hidden items from Altissimo"
+      "itemsStatus": "existing item list supplemented with both confirmed daily hidden items from Altissimo",
+      "hiddenItemCount": 2
     },
     {
       "id": "rock_tunnel",
@@ -6736,7 +6739,8 @@
       ],
       "trainerCount": 3,
       "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb",
-      "itemsStatus": "all four daily random-item positions and possible pools verified from Altissimo hidden-item index"
+      "itemsStatus": "all four daily random-item positions and possible pools verified from Altissimo hidden-item index",
+      "hiddenItemCount": 4
     },
     {
       "id": "route_11",
@@ -9178,7 +9182,8 @@
         "X Sp. Def — przed Saffron Gym, po wschodniej stronie sali.",
         "Police Set — od Officer Jenny na wschód od Saffron Gym po pokonaniu Giovanniego w Silph Co."
       ],
-      "itemsStatus": "all five Let's Go city items and gifts verified from Altissimo Saffron guide"
+      "itemsStatus": "all five Let's Go city items and gifts verified from Altissimo Saffron guide",
+      "hiddenItemCount": 1
     },
     {
       "id": "route_16",
@@ -13529,7 +13534,8 @@
         "Pretty Wing — ukryty na południe od wschodniego komputera w pokoju na wschód od Zapdos.",
         "Paralyze Heal — w pomieszczeniu na północ od centralnego poziomego korytarza."
       ],
-      "itemsStatus": "14 Let's Go item/reward entries verified by room from Altissimo; four hidden Voltorb Candy spots and Pretty Wing itemized; fake Electrode decoys excluded"
+      "itemsStatus": "14 Let's Go item/reward entries verified by room from Altissimo; four hidden Voltorb Candy spots and Pretty Wing itemized; fake Electrode decoys excluded",
+      "hiddenItemCount": 5
     },
     {
       "id": "pokemon_tower",
@@ -13907,7 +13913,8 @@
         "PP Up — 6F, północno-zachodni narożnik przy ścianie, na ścieżce na południe od Hyper Potion (ukryty, codzienny).",
         "Rare Candy — 6F, w pobliżu schodów na 7F; dostęp wymaga Silph Scope."
       ],
-      "itemsStatus": "20 Let's Go item/reward entries verified by floor from Altissimo; daily hidden items and Silph Scope gate noted"
+      "itemsStatus": "20 Let's Go item/reward entries verified by floor from Altissimo; daily hidden items and Silph Scope gate noted",
+      "hiddenItemCount": 5
     },
     {
       "id": "rocket_hideout",
@@ -15051,7 +15058,8 @@
         "Fresh Water — automat po prawej stronie salonu gier, ₽200.",
         "Soda Pop — automat po prawej stronie salonu gier, ₽300."
       ],
-      "itemsStatus": "six daily hidden-item spots and per-item probabilities verified from Altissimo LGPE guide"
+      "itemsStatus": "six daily hidden spots with item probabilities plus two vending-machine drinks verified from Altissimo",
+      "hiddenItemCount": 6
     },
     {
       "id": "celadon_condominiums",
@@ -15100,7 +15108,9 @@
       ],
       "notablePokemon": [
         "Eevee Lv. 25 — prezent w Poké Ball na dachu, dostęp przez tylne wejście."
-      ]
+      ],
+      "hiddenItemCount": 1,
+      "itemsStatus": "five listed fixed rewards plus one daily/step-regenerating hidden Fresh Water; Eevee gift documented separately"
     },
     {
       "id": "cinnabar_lab",
