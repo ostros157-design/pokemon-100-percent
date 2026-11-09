@@ -712,6 +712,11 @@
       "id": "supercheats-cinnabar-postgame",
       "url": "https://www.supercheats.com/lets-go-pikachu/walkthrough/cinnabar-island",
       "scope": "Cinnabar Island postgame Master Trainers and levels"
+    },
+    {
+      "id": "bulbapedia-part1-houses",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Walkthrough:_Pok%C3%A9mon:_Let's_Go,_Pikachu!_and_Let's_Go,_Eevee!/Part_1",
+      "scope": "Pallet Town home, rival house, Oak's Lab and opening gifts"
     }
   ],
   "locations": [
@@ -775,6 +780,27 @@
           "category": "story_gift",
           "note": "Received from the rival's sister near the Route 1 exit during the opening sequence.",
           "status": "text_verified"
+        },
+        {
+          "id": "player_home_interior",
+          "name": "Dom gracza — piętra 1F i 2F",
+          "category": "building_detail",
+          "note": "Na 2F znajduje się sypialnia gracza i konsola Nintendo Switch; na 1F mama stoi w kuchni i kieruje gracza do Profesora Oaka. Brak dodatkowego przedmiotu do zebrania we wnętrzu podczas otwarcia gry.",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-part1-houses"
+          ]
+        },
+        {
+          "id": "rival_house",
+          "name": "Dom Trace’a i jego siostry",
+          "category": "building_detail",
+          "note": "Dom sąsiada gracza znajduje się po wschodniej stronie Pallet Town; Trace odwiedza pokój gracza na początku przygody, a jego siostra wręcza Sportswear po dostarczeniu Oak’s Parcel.",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-part1-houses",
+            "bulbapedia-part2"
+          ]
         }
       ],
       "encounters": {
@@ -800,7 +826,8 @@
         }
       },
       "sourceIds": [
-        "routepedia-pallet-pikachu"
+        "routepedia-pallet-pikachu",
+        "bulbapedia-part1-houses"
       ],
       "dataStatus": "text_verified_positions_not_mapped"
     },
@@ -1175,12 +1202,53 @@
           "sourceIds": [
             "bulbapedia-viridian-city"
           ]
+        },
+        {
+          "id": "trainers_school",
+          "name": "Trainers’ School",
+          "category": "building_detail",
+          "note": "Szkoła w centrum miasta zawiera tablicę z objaśnieniami pięciu statusów: Burn, Freeze, Paralysis, Poison i Sleep.",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-part2"
+          ]
+        },
+        {
+          "id": "oddish_woman_house",
+          "name": "Dom kobiety z Oddishem",
+          "category": "building_detail",
+          "note": "Kobieta na północ od Trainers’ School pokazuje, że drugi Pokémon z drużyny może chodzić za graczem poza Poké Ballem.",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-part2"
+          ]
+        },
+        {
+          "id": "nickname_house",
+          "name": "Dom z poradą o zmianie imienia",
+          "category": "building_detail",
+          "note": "Mężczyzna w domu obok kobiety z Oddishem wyjaśnia, że imię Pokémona można zmienić z poziomu jego menu w drużynie.",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-part2"
+          ]
+        },
+        {
+          "id": "sleeping_man_tm11",
+          "name": "Śpiący mężczyzna — TM11 Will-O-Wisp",
+          "category": "story_reward",
+          "note": "Podczas późniejszej wizyty, po uzyskaniu Chop Down, można dotrzeć do śpiącego mężczyzny w południowo-zachodniej części miasta i otrzymać TM11.",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-part2"
+          ]
         }
       ],
       "sourceIds": [
         "routepedia-viridian-pikachu",
         "pokemondb-mastertrainers",
-        "supercheats-viridian-postgame"
+        "supercheats-viridian-postgame",
+        "bulbapedia-part2"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "trainers": [
@@ -1701,6 +1769,26 @@
           "note": "Behind the Pokémon Center; exact coordinates not verified.",
           "coordinateStatus": "unverified",
           "status": "text_verified_position_not_mapped"
+        },
+        {
+          "id": "slowpoke_babysitting",
+          "name": "Opieka nad Slowpoke — Big Pearl",
+          "category": "side_event",
+          "note": "Kobieta na północno-zachodnim wzniesieniu prosi o przypilnowanie Slowpoke, gdy odwiedza muzeum; po krótkim oczekiwaniu wraca i daje Big Pearl. Wydarzenie można powtarzać codziennie.",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-part3"
+          ]
+        },
+        {
+          "id": "museum_employee_section",
+          "name": "Muzeum — część pracownicza",
+          "category": "building_detail",
+          "note": "Po uzyskaniu Chop Down można wejść do zamkniętej części muzeum i otrzymać Old Amber; naukowiec daje także 10 Pretty Wings po pokazaniu Aerodactyla.",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-part3"
+          ]
         }
       ],
       "gymLeader": {
@@ -2687,7 +2775,47 @@
         "Wymiana: Alolan Rattata za zwykłego Rattata w Pokémon Center; wymiana może być powtarzana.",
         "TM10 (Dig) — po pokonaniu Team Rocket Grunt, który włamał się do domu na południowym zachodzie miasta.",
         "Heart Scale ×5 — od Bike Maniaca po wysłuchaniu opisów wszystkich rowerów.",
-        "Post-game: TM60 (Megahorn) — nagroda od Coach Trainer Harjit po zostaniu Championem."
+        "Post-game: TM60 (Megahorn) — nagroda od Coach Trainer Harjit po zostaniu Championem.",
+        {
+          "id": "bulbasaur_house",
+          "name": "Dom opiekunki Bulbasaura",
+          "category": "gift_pokemon",
+          "note": "Dziewczyna w domu obok Pokémon Center oddaje Bulbasaura Lv. 12 po złapaniu co najmniej 30 Pokémonów.",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-part5"
+          ]
+        },
+        {
+          "id": "badge_trivia_house",
+          "name": "Dom kolekcjonera odznak",
+          "category": "building_detail",
+          "note": "Mężczyzna w północno-zachodnim domu opowiada ciekawostki o odznakach Gymów; nie przyznaje potwierdzonego przedmiotu.",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-part5"
+          ]
+        },
+        {
+          "id": "bike_maniac_house",
+          "name": "Dom Bike Maniaca — Heart Scales ×5",
+          "category": "side_event",
+          "note": "Obejrzyj wszystkie rowery, także wiszący na ścianie, i wysłuchaj opisów, aby otrzymać pięć Heart Scales.",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-part5"
+          ]
+        },
+        {
+          "id": "rocket_burgled_house",
+          "name": "Dom okradziony przez Team Rocket",
+          "category": "story_event",
+          "note": "Wejście jest początkowo pilnowane przez Officer Jenny. Po pokonaniu Grunta, który włamał się do domu, gracz otrzymuje TM10 Dig.",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-part5"
+          ]
+        }
       ],
       "trainers": [
         "Pokémon Trainer Trace — Pidgey Lv. 12, Oddish Lv. 12 oraz Eevee Lv. 13 (Let's Go Pikachu).",
@@ -4204,13 +4332,44 @@
       "sourceIds": [
         "routepedia-vermilion-pikachu",
         "routepedia-vermilion-eevee",
-        "pokemondb-mastertrainers"
+        "pokemondb-mastertrainers",
+        "bulbapedia-part6"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
         "S.S. Anne — kapitan statku uczy partnera techniki Chop Down po wydarzeniu fabularnym.",
         "Squirtle — prezent od Officer Jenny po złapaniu co najmniej 60 Pokémonów.",
-        "Pokémon Fan Club — budynek z wydarzeniem fanowskim; dokładne położenie NPC nie jest naniesione."
+        "Pokémon Fan Club — budynek z wydarzeniem fanowskim; dokładne położenie NPC nie jest naniesione.",
+        {
+          "id": "fan_club_clothing",
+          "name": "Pokémon Fan Club — zestawy ubrań",
+          "category": "gift",
+          "note": "Przewodniczący daje Pikachu Set w Let’s Go Pikachu albo Eevee Set w Let’s Go Eevee; po osiągnięciu najwyższej przyjaźni z partnerem przyznaje dodatkowo Raichu Set lub zestawy Eeveelution.",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-part6"
+          ]
+        },
+        {
+          "id": "growlithe_meowth_task",
+          "name": "Wybór Growlithe lub Meowth",
+          "category": "gift_pokemon",
+          "note": "Osoba na ławce na zachód od Poké Mart prosi o złapanie pięciu Growlithe albo pięciu Meowth; nagrodą jest odpowiednio Persian w Let’s Go Pikachu lub Arcanine w Let’s Go Eevee.",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-part6"
+          ]
+        },
+        {
+          "id": "alolan_geodude_trade",
+          "name": "Wymiana Geodude na Alolan Geodude",
+          "category": "trade",
+          "note": "Hiker siedzący na sofie w Pokémon Center wymienia zwykłego Geodude na Alolan Geodude; wymianę można powtarzać.",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-part6"
+          ]
+        }
       ],
       "trainers": [
         "Master Trainer Bird Keeper Moe — Farfetch'd Lv. 70 (obok Pokémon Center).",
@@ -6304,7 +6463,49 @@
         "Master Trainer Hiker Julius — Marowak Lv. 75 (dom Mr. Fuji)."
       ],
       "trainerCount": 4,
-      "trainerStatus": "postgame_master_trainer_teams_verified"
+      "trainerStatus": "postgame_master_trainer_teams_verified",
+      "events": [
+        {
+          "id": "volunteer_pokemon_house",
+          "name": "Lavender Volunteer Pokémon House",
+          "category": "building_detail",
+          "note": "Dom organizacji założonej przez Mr. Fuji, w której wolontariusze opiekują się osieroconymi i porzuconymi Pokémonami.",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-part8"
+          ]
+        },
+        {
+          "id": "mr_fuji_pokeflute",
+          "name": "Mr. Fuji — Poké Flute",
+          "category": "story_reward",
+          "note": "Po uratowaniu Mr. Fuji z Pokémon Tower wróć do Volunteer Pokémon House; otrzymasz Poké Flute potrzebną do obudzenia Snorlax.",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-part8"
+          ]
+        },
+        {
+          "id": "alolan_diglett_trade",
+          "name": "Wymiana Diglett na Alolan Diglett",
+          "category": "trade",
+          "note": "W Pokémon Center można wymienić zwykłego Diglett na Alolan Diglett; wymiana jest powtarzalna.",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-part8"
+          ]
+        },
+        {
+          "id": "great_balls_rescue",
+          "name": "20 Great Balls za uratowanie Cubone",
+          "category": "story_reward",
+          "note": "Mężczyzna po zachodniej stronie miasta wręcza 20 Great Balls po uratowaniu Cubone z Team Rocket Hideout.",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-part8"
+          ]
+        }
+      ]
     },
     {
       "id": "underground_path_7_8",
@@ -8496,7 +8697,47 @@
         "Strong Push — Secret Technique uczona przez Warden'a po oddaniu Gold Teeth.",
         "Safari Set — otrzymywany od Warden'a po oddaniu Gold Teeth; w Let’s Go klasyczna Safari Zone jest zastąpiona kompleksem GO Park.",
         "Sea Skim — technika partnera uczona w Playful Park przez mężczyznę przy eksponacie Laprasa.",
-        "Fuchsia Gym — zwycięstwo z Kogą daje Soul Badge i TM27 (Toxic)."
+        "Fuchsia Gym — zwycięstwo z Kogą daje Soul Badge i TM27 (Toxic).",
+        {
+          "id": "warden_house_details",
+          "name": "Dom Warden’a — Gold Teeth i Strong Push",
+          "category": "story_event",
+          "note": "Oddaj Wardenowi Gold Teeth, aby otrzymać Safari Set i nauczyć partnera Secret Technique Strong Push; później Diglett w domu daje codziennie Nugget.",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-part11"
+          ]
+        },
+        {
+          "id": "hidden_fly_house",
+          "name": "Ukryty dom — TM14 Fly",
+          "category": "side_event",
+          "note": "Po użyciu Chop Down na drzewie w północnej, odosobnionej części miasta wejdź do domu i porozmawiaj z dziewczyną, aby otrzymać TM14 Fly.",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-part11"
+          ]
+        },
+        {
+          "id": "alolan_marowak_trade",
+          "name": "Wymiana Marowak na Alolan Marowak",
+          "category": "trade",
+          "note": "Gentleman w Pokémon Center wymienia zwykłego Marowak na Alolan Marowak; wymianę można powtarzać.",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-part11"
+          ]
+        },
+        {
+          "id": "playful_park_sea_skim",
+          "name": "Playful Park — Sea Skim",
+          "category": "story_event",
+          "note": "Mężczyzna przy eksponacie Laprasa uczy partnera Secret Technique Sea Skim.",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-part11"
+          ]
+        }
       ],
       "trainers": [
         "Master Trainer Black Belt Ryuji — Machoke Lv. 70 (dom w południowo-wschodniej części miasta).",
@@ -8534,14 +8775,45 @@
       "sourceIds": [
         "routepedia-celadon-pikachu",
         "pokemondb-mastertrainers",
-        "supercheats-celadon-postgame"
+        "supercheats-celadon-postgame",
+        "bulbapedia-part9"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
         "Celadon Department Store — wielopiętrowy sklep z przedmiotami, TM i automatami; szczegółowe półki i piętra wymagają osobnego planu.",
         "Celadon Game Corner — wejście do Team Rocket Hideout znajduje się w salonie gier.",
         "Celadon Gym — sala Eriki; zwycięstwo daje Rainbow Badge i TM53 (Mega Drain).",
-        "Celadon Condominiums — budynek mieszkalny z prezentami i interakcjami; rozmieszczenie pomieszczeń jest schematyczne."
+        "Celadon Condominiums — budynek mieszkalny z prezentami i interakcjami; rozmieszczenie pomieszczeń jest schematyczne.",
+        {
+          "id": "celadon_center_trade",
+          "name": "Pokémon Center — wymiana Sandshrew/Vulpix",
+          "category": "trade",
+          "note": "Camper wymienia Alolan Sandshrew na zwykłego Sandshrew w Let’s Go Pikachu albo Alolan Vulpix na zwykłego Vulpix w Let’s Go Eevee; wymiana jest powtarzalna.",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-part9"
+          ]
+        },
+        {
+          "id": "madam_celadon",
+          "name": "Pokémon Center — Madam Celadon",
+          "category": "service",
+          "note": "Channeler Madam Celadon za 10 000 ₽ wpływa na naturę dzikich Pokémonów spotykanych do końca dnia.",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-part9"
+          ]
+        },
+        {
+          "id": "celadon_condominiums_roof",
+          "name": "Condominiums — dach i ukryte przedmioty",
+          "category": "building_detail",
+          "note": "Na 3F znajduje się ukryta Fresh Water; na dachu można znaleźć Health Candy ×3 i TM44 Play Rough. Na 3F Game Director przyznaje Shiny Charm po złapaniu wszystkich Pokémonów poza Mythical.",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-part9"
+          ]
+        }
       ],
       "trainers": [
         "Master Trainer Ace Trainer Satch — Arcanine Lv. 75 (hotel).",
@@ -8577,13 +8849,54 @@
       "sourceIds": [
         "routepedia-saffron-pikachu",
         "pokemondb-mastertrainers",
-        "supercheats-saffron-postgame"
+        "supercheats-saffron-postgame",
+        "bulbapedia-part10"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
         "Silph Co. — wydarzenie fabularne z Team Rocket obejmuje wiele pięter i teleportów; dokładna trasa po teleportach nie jest naniesiona.",
         "Fighting Dojo — po pokonaniu lidera można wybrać Hitmonlee albo Hitmonchan.",
-        "Saffron Gym — sala Sabriny; zwycięstwo daje Marsh Badge i TM33 (Calm Mind)."
+        "Saffron Gym — sala Sabriny; zwycięstwo daje Marsh Badge i TM33 (Calm Mind).",
+        {
+          "id": "copycat_house",
+          "name": "Dom Copycat — TM08 Substitute",
+          "category": "building_detail",
+          "note": "Pokaż dziewczynie Clefairy, aby otrzymać TM08 Substitute; w jej pokoju można też codziennie znaleźć ukryty Moon Stone przy północnej stronie łóżka.",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-part10"
+          ]
+        },
+        {
+          "id": "mr_psychic_house",
+          "name": "Dom Mr. Psychic — TM40 Psychic",
+          "category": "building_detail",
+          "note": "Mężczyzna w południowo-wschodnim domu daje TM40 Psychic po rozmowie.",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-part10"
+          ]
+        },
+        {
+          "id": "alolan_raichu_trade",
+          "name": "Wymiana Raichu na Alolan Raichu",
+          "category": "trade",
+          "note": "Ace Trainer w Pokémon Center wymienia zwykłego Raichu na Alolan Raichu; wymianę można powtarzać.",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-part10"
+          ]
+        },
+        {
+          "id": "officer_jenny_reward",
+          "name": "Officer Jenny — Police Set",
+          "category": "story_reward",
+          "note": "Po pokonaniu Giovanniego w Silph Co. Officer Jenny przy Saffron Gym wręcza Police Set.",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-part10"
+          ]
+        }
       ],
       "trainers": [
         "Master Trainer Lass Chel — Clefairy Lv. 70 (zachodnia część miasta).",
@@ -13792,7 +14105,19 @@
         "bulbapedia-part5"
       ],
       "dataStatus": "alias_of_location",
-      "aliasOf": "sea_cottage"
+      "aliasOf": "sea_cottage",
+      "events": [
+        {
+          "id": "bill_house_alias_detail",
+          "name": "Bill’s House / Sea Cottage",
+          "category": "building_detail",
+          "note": "To alias Sea Cottage przy Route 25, nie osobny budynek. Po pomocy Billowi otrzymujesz dwa S.S. Tickets; komputer zawiera raporty o lokalizacjach legendarnych ptaków.",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-part5"
+          ]
+        }
+      ]
     },
     {
       "id": "pewter_museum",
@@ -13815,7 +14140,17 @@
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
-        "Old Amber — od naukowca w części pracowniczej muzeum podczas ponownej wizyty; dostęp wymaga Chop Down."
+        "Old Amber — od naukowca w części pracowniczej muzeum podczas ponownej wizyty; dostęp wymaga Chop Down.",
+        {
+          "id": "aerodactyl_pretty_wings",
+          "name": "Naukowiec — Pretty Wing ×10",
+          "category": "story_reward",
+          "note": "Po pokazaniu Aerodactyla naukowcowi w części pracowniczej muzeum otrzymasz 10 Pretty Wings; dostęp wymaga Chop Down.",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-part3"
+          ]
+        }
       ],
       "trainers": [
         "Master Trainer Hiker Hisato — Aerodactyl Lv. 75 (1F).",
@@ -13846,7 +14181,19 @@
         "Master Trainer Ace Trainer Carl — Krabby Lv. 70 (wewnątrz Pokémon Fan Club)."
       ],
       "trainerCount": 1,
-      "trainerStatus": "postgame_master_trainer_teams_verified"
+      "trainerStatus": "postgame_master_trainer_teams_verified",
+      "events": [
+        {
+          "id": "fan_club_chairman_gifts",
+          "name": "Przewodniczący — nagrody za przyjaźń",
+          "category": "gift",
+          "note": "Pierwsza nagroda zależy od wersji gry (Pikachu Set albo Eevee Set); po osiągnięciu najwyższej przyjaźni partnera dostępne są Raichu Set lub Eeveelution Sets.",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-part6"
+          ]
+        }
+      ]
     },
     {
       "id": "day_care",
@@ -13859,11 +14206,22 @@
       "coordinateStatus": "unverified",
       "notes": "Day Care przy Route 5 w Let’s Go; nie jest to system hodowli jaj.",
       "sourceIds": [
-        "routepedia-route5-pikachu"
+        "routepedia-route5-pikachu",
+        "bulbapedia-part5"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
-        "Day Care w Let’s Go podnosi poziom jednego pozostawionego Pokémona podczas chodzenia; nie jest to system hodowli jaj."
+        "Day Care w Let’s Go podnosi poziom jednego pozostawionego Pokémona podczas chodzenia; nie jest to system hodowli jaj.",
+        {
+          "id": "day_care_single_pokemon",
+          "name": "Opieka nad jednym Pokémonem",
+          "category": "facility_detail",
+          "note": "W Let’s Go Day Care przy Route 5 przyjmuje jednego Pokémona i podnosi jego poziom podczas chodzenia; gra nie zawiera tu systemu hodowli jaj.",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-part5"
+          ]
+        }
       ]
     },
     {
@@ -14080,13 +14438,24 @@
       ],
       "notes": "Domek Billa (znany również jako Bill's House) przy Route 25. To jeden fizyczny budynek; nie należy traktować aliasu Bill's House jako osobnego punktu mapy.",
       "sourceIds": [
-        "bulbapedia-sea-cottage"
+        "bulbapedia-sea-cottage",
+        "bulbapedia-part5"
       ],
       "dataStatus": "schematic_interior_available_exact_layout_pending",
       "coordinateStatus": "unverified",
       "events": [
         "Po pomocy Billowi gracz otrzymuje dwa S.S. Tickets.",
-        "Na komputerze Billa można odczytać raporty o lokalizacjach legendarnych ptaków; domek jest tym samym miejscem co alias Bill's House."
+        "Na komputerze Billa można odczytać raporty o lokalizacjach legendarnych ptaków; domek jest tym samym miejscem co alias Bill's House.",
+        {
+          "id": "bill_ss_tickets",
+          "name": "Bill — dwa S.S. Tickets",
+          "category": "story_reward",
+          "note": "Po uwolnieniu Billa z maszyny teleportacyjnej otrzymujesz dwa S.S. Tickets; drugi bilet można przekazać Trace’owi.",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-part5"
+          ]
+        }
       ]
     },
     {
