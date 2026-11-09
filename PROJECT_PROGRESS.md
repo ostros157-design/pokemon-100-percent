@@ -6000,3 +6000,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Pokémon Mansion otrzymało 20 stałych znalezisk rozpisanych na 1F, 2F, 3F i B1F, z opisami pomieszczeń i dojść. Osiem dziennych ukrytych znajdziek Candy rozpisano osobno według piętra i charakterystycznego obiektu; zachowano informację, że typ Candy jest losowy.
 - Źródło: Bulbapedia, Let’s Go walkthrough Part 13 — tabele przedmiotów oraz opis przejścia przez Mansion, Cinnabar Lab i Gym. Nie dodano współrzędnych ani pinezek; tekstowe opisy pomieszczeń nie są jeszcze dokładnymi pozycjami na mapie.
 - Zmiany zapisano na gałęzi work/map-achievements-music. Wymaga dalszej kontroli pozostałych agregatów miejskich i testów w aplikacji; Flutter Analyzer, testy Flutter i APK nie zostały uruchomione.
+
+
+### Let's Go Kanto — Pewter Museum i Fuchsia City: nagrody oraz korekta TM Kogi (2026-11-09)
+
+- Dodano do osobnego rekordu Pewter Museum of Science nagrody Old Amber oraz Pretty Wing ×10 wraz z warunkiem Chop Down i pokazania Aerodactyla.
+- Uzupełniono Fuchsia City o codzienny Nugget od Digletta w domu Warden’a po odblokowaniu Strong Push.
+- Poprawiono błąd nazwy nagrody Kogi: w Let’s Go jest to TM06 (Toxic), a nie TM27. Zmianę naniesiono w opisie Fuchsia Gym i dodano nagrodę do listy przedmiotów tej lokacji.
+- Źródła: Bulbapedia walkthrough Parts 3 i 11 oraz Serebii Daily Events. Nie dodano niezweryfikowanych współrzędnych. Nie uruchomiono Flutter Analyzer, testów ani APK.
