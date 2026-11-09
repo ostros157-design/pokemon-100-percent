@@ -6026,3 +6026,12 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Power Plant: rozpisano 14 wpisów według pomieszczeń, w tym cztery ukryte Voltorb Candy i Pretty Wing. Usunięto Electrode jako rzekome znajdźki — to fałszywe Poké Balle, nie przedmioty do zebrania.
 - Silph Co.: dodano Blue’a na 1F (Exeggutor Lv. 38, Charizard Lv. 40) i zaktualizowano licznik trenerów.
 - Źródła: Altissimo — osobne przewodniki Let's Go dla Saffron, Lavender, Pokémon Tower, Power Plant i Silph Co.; dodatkowo Thonky i Bulbapedia dla nagród Fighting Dojo. Pozycje są opisane tekstowo, bez niezweryfikowanych pinezek. Flutter Analyzer, testy Flutter i APK nie zostały uruchomione.
+
+
+### Let's Go Kanto — ukryte przedmioty tras i uzupełnienie budynków Celadon (2026-11-09)
+
+- Route 7: dodano codzienną ukrytą Pinap Berry ×5 przy drzewie obok wejścia do Celadon City. Route 10: dodano dwa brakujące ukryte przedmioty — Super Lure na północnym odcinku i Nanab Berry ×5 przy wyjściu z Rock Tunnel.
+- Underground Path Routes 5–6 i 7–8: dodano wszystkie cztery potwierdzone dzienne losowe punkty na każdym przejściu, wraz z pozycją określoną liczbą pól od wyjścia i pełnymi pulami możliwych nagród (Pretty Wing/Pearl/Big Pearl/Nugget; repel/lure; napoje i Potiony).
+- Celadon Condominiums: dodano prezent Eevee Lv. 25 w Poké Ball na dachu, dostępny od tylnego wejścia. Celadon Game Corner: dodano dwa automaty z Fresh Water i Soda Pop. Celadon City: dopisano rzadkie znajdowanie Pretty Wing przez kwalifikujące się Pokémony chodzące za graczem w kwietniku na wschód od fontanny.
+- Ujednolicono liczniki ukrytych znajdziek dla Route 7, Route 10, obu Underground Paths, Pokémon Tower, Power Plant, Saffron City, Celadon Condominiums i Game Corner.
+- Źródła: Altissimo — pełny indeks ukrytych przedmiotów LGPE, przewodnik utility oraz przewodnik Celadon City. Współrzędne nadal nie są deklarowane jako dokładne. Flutter Analyzer, testy Flutter i APK nie zostały uruchomione.
