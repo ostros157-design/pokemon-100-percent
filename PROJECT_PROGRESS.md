@@ -6092,3 +6092,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 
 - Oznaczono trzy osobne Super Lure i trzy osobne Super Repel w Seafoam Islands numerami 1/3–3/3, aby nie wyglądały jak przypadkowe duplikaty listy.
 - Dane nadal opisują 35 pickupów, w tym 7 ukrytych; pozycje na mapie nie są jeszcze zatwierdzonymi współrzędnymi.
+
+
+### Mapy — interaktywne filtrowanie lokacji (2026-11-09)
+
+- Dodano na ekranie indeksu mapy filtry typów lokacji: wszystkie, miasta, trasy (w tym wodne i podziemne), jaskinie/lasy oraz budynki i obiekty.
+- Filtry działają równocześnie z wyszukiwarką tekstową; licznik pokazuje liczbę wyników po zastosowaniu obu warunków, a pusty wynik ma osobny komunikat.
+- Zmiana dotyczy UI aplikacji i wykorzystuje istniejące pole `kind` w danych regionalnych; nie zmienia danych map ani nie dopisuje niezweryfikowanych lokalizacji.
+- Nie uruchomiono Flutter Analyzer, testów Flutter ani kompilacji APK. Działanie filtrów wymaga sprawdzenia w aplikacji na kilku regionach.
