@@ -5904,3 +5904,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Wpis Championa rozróżnia partnera zależnego od wersji gry: Jolteon w Let's Go Pikachu oraz Raichu w Let's Go Eevee.
 - Źródła: Bulbapedia Parts 5, 13 i 16. Wpisy pozostają informacyjne — nie dodano niezweryfikowanych współrzędnych ani pinezek.
 - Nie uruchomiono Flutter Analyzer, testów ani APK; audyt trenerów w pozostałych lokacjach i ewentualnych trenerów postgame nadal trwa.
+
+
+### Let's Go Kanto — korekta Route 10 i trenerzy postgame (2026-11-09)
+
+- Przywrócono pełną listę pięciu trenerów Route 10: czterech z południowego odcinka oraz Poké Maniaca Marka z północnej części; wpisy mają kompletne drużyny i poziomy.
+- Dodano do widocznego panelu dwóch naukowców z Underground Path (Routes 5–6), którzy pojawiają się po ukończeniu głównej historii (Magnemite Lv. 70 i Magneton Lv. 75).
+- Uzupełniono rekord źródła Bulbapedia Part 16 używany przy składach Ligi Pokémon.
+- Nie uruchomiono Flutter Analyzer, testów ani APK.
