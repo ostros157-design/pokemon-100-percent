@@ -5794,9 +5794,9 @@ class _KantoMapPainter extends CustomPainter {
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [
-            Color(0xFFB9E4E7),
-            Color(0xFF8FCBD5),
-            Color(0xFFA9DDE0),
+            Color(0xFF087FAE),
+            Color(0xFF079BCB),
+            Color(0xFF056FA4),
           ],
         ).createShader(oceanRect),
     );
@@ -5822,9 +5822,9 @@ class _KantoMapPainter extends CustomPainter {
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [
-            Color(0xFFE4E9BD),
-            Color(0xFFC9DCA2),
-            Color(0xFFB9D38F),
+            Color(0xFFB9D88A),
+            Color(0xFF91C96D),
+            Color(0xFF78B85F),
           ],
         ).createShader(Rect.fromLTWH(0, 0, size.width, size.height)),
     );
@@ -5849,6 +5849,43 @@ class _KantoMapPainter extends CustomPainter {
         ..style = PaintingStyle.stroke
         ..strokeWidth = 1,
     );
+
+    // Tile-based surface treatment inspired by classic top-down Pokémon maps.
+    // The grid is a visual texture only; it does not claim exact game tile data.
+    final tileScale = size.width / 900;
+    final tileSize = 13.0 * tileScale;
+    canvas.save();
+    canvas.clipPath(coast);
+    final tileFillA = Paint()..isAntiAlias = false..color = const Color(0xFFB4D985).withValues(alpha: .22);
+    final tileFillB = Paint()..isAntiAlias = false..color = const Color(0xFF6FAE62).withValues(alpha: .13);
+    for (var row = 0; row < (size.height / tileSize).ceil(); row++) {
+      for (var column = 0; column < (size.width / tileSize).ceil(); column++) {
+        final rect = Rect.fromLTWH(column * tileSize, row * tileSize, tileSize, tileSize);
+        canvas.drawRect(rect, (row + column).isEven ? tileFillA : tileFillB);
+      }
+    }
+    final tileGrid = Paint()
+      ..color = const Color(0xFF477F58).withValues(alpha: .24)
+      ..strokeWidth = math.max(.45, .65 * tileScale);
+    for (double x = 0; x <= size.width; x += tileSize) {
+      canvas.drawLine(Offset(x, 0), Offset(x, size.height), tileGrid);
+    }
+    for (double y = 0; y <= size.height; y += tileSize) {
+      canvas.drawLine(Offset(0, y), Offset(size.width, y), tileGrid);
+    }
+    // Small grass highlights break up the regular tile pattern.
+    final grassHighlight = Paint()..color = const Color(0xFFD4EAA0).withValues(alpha: .55);
+    for (final patch in <(double, double)>[
+      (.18,.31),(.24,.39),(.31,.28),(.38,.62),(.47,.25),(.55,.67),
+      (.67,.42),(.74,.57),(.80,.35),(.29,.76),(.60,.82),(.83,.72),
+    ]) {
+      final center = p(patch.$1, patch.$2);
+      canvas.drawRect(
+        Rect.fromCenter(center: center, width: 3.2 * tileScale, height: 2.2 * tileScale),
+        grassHighlight,
+      );
+    }
+    canvas.restore();
 
     // Fine sea strokes sit only in the ocean, giving the coast a painted atlas
     // texture without putting wave marks over selectable land locations.
@@ -6685,8 +6722,36 @@ class _KantoMapPainter extends CustomPainter {
         _drawBerry(canvas, point + const Offset(13, -15));
         _drawPokeball(canvas, point + const Offset(-12, -15));
       }
-      canvas.drawCircle(point, isSelected ? 8 : 7, Paint()..isAntiAlias = true..color = route);
-      canvas.drawCircle(point, 3, Paint()..isAntiAlias = true..color = Colors.white);
+      final markerColor = isBuilding
+          ? const Color(0xFF168FC0)
+          : isTown
+              ? const Color(0xFFE5A52D)
+              : isCave
+                  ? const Color(0xFF9A5BC7)
+                  : const Color(0xFFE45B55);
+      if (isBuilding) {
+        final markerSize = (isSelected ? 10.0 : 8.0) * size.width / 900;
+        final diamond = Path()
+          ..moveTo(point.dx, point.dy - markerSize)
+          ..lineTo(point.dx + markerSize, point.dy)
+          ..lineTo(point.dx, point.dy + markerSize)
+          ..lineTo(point.dx - markerSize, point.dy)
+          ..close();
+        canvas.drawPath(diamond, Paint()..color = const Color(0xFF263D49));
+        canvas.drawPath(
+          diamond.shift(Offset.zero),
+          Paint()..color = markerColor..style = PaintingStyle.fill,
+        );
+        canvas.drawPath(
+          diamond,
+          Paint()..color = const Color(0xFFF8F1D9)..style = PaintingStyle.stroke..strokeWidth = 1.8 * size.width / 900,
+        );
+      } else {
+        final radius = (isSelected ? 8.5 : 6.5) * size.width / 900;
+        canvas.drawCircle(point, radius + 2 * size.width / 900, Paint()..color = const Color(0xFF263D49));
+        canvas.drawCircle(point, radius, Paint()..color = markerColor);
+        canvas.drawCircle(point, radius * .42, Paint()..color = const Color(0xFFFFF4D6));
+      }
       final labelName = place.name;
       final isMajorPlace = labelName.contains('City') ||
           labelName.contains('Town') ||
