@@ -84,7 +84,7 @@ Achievement(
 id: 'shiny',
 title: 'Błyszczący!',
 description: 'Złap swojego pierwszego Shiny Pokémona.',
-hidden: true,
+hidden: false,
 ),
 Achievement(
 id: 'full_team',
@@ -126,7 +126,7 @@ Achievement(
 id: 'all_games',
 title: 'Mistrz serii',
 description: 'Ukończ wszystkie gry dostępne w aplikacji.',
-hidden: true,
+hidden: false,
 ),
 Achievement(
 id: 'first_100',
@@ -153,24 +153,5 @@ description: 'Osiągnij co najmniej 75% postępu w wybranej grze.',
 hidden: false,
 ),
 
-// Ukryte osiągnięcia
-Achievement(
-id: 'hidden_team_rocket',
-title: '???',
-description: 'Pokonaj ukrytego przeciwnika.',
-hidden: true,
-),
-Achievement(
-id: 'hidden_legend',
-title: '???',
-description: 'Odkryj ukrytego Legendary Pokémona.',
-hidden: true,
-),
-Achievement(
-id: 'hidden_complete',
-title: '???',
-description: 'Odkryj sekret związany z pełnym ukończeniem gry.',
-hidden: true,
-),
 ];
 
