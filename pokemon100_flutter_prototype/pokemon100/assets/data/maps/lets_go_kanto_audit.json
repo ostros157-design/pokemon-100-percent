@@ -12844,7 +12844,19 @@
         "Gentleman Lamar — Sandshrew Lv. 18 (2F)."
       ],
       "trainerCount": 12,
-      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
+      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough",
+      "items": [
+        "Shalour Sable — od Blue’a przy wejściu na statek.",
+        "Paralyze Heal — 1F, druga kajuta od lewej.",
+        "Super Repel — 1F, kuchnia, południowo-zachodni narożnik.",
+        "Tiny Mushroom — 1F, kuchnia, trzeci kosz na śmieci od drzwi (ukryty).",
+        "Pinap Berry ×3 — 2F, pokład, pod stołem w prawym dolnym rogu (ukryte).",
+        "Revive — 2F, druga kajuta od lewej.",
+        "Nugget — 2F, czwarta kajuta od lewej, na krześle.",
+        "Full Heal i Elixir — B1F, trzecia kajuta od prawej.",
+        "Super Potion — B1F, czwarta kajuta od prawej.",
+        "Chop Down — nagroda od kapitana po pomocy w jego kajucie; to Secret Technique partnera, nie przedmiot do podniesienia."
+      ]
     },
     {
       "id": "power_plant",
@@ -13031,7 +13043,18 @@
         "Coach Trainer Mable — Omastar Lv. 44, Kabutops Lv. 44 i Aerodactyl Lv. 45."
       ],
       "trainerCount": 1,
-      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
+      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough",
+      "items": [
+        "Max Revive — na północ od pomieszczenia wejściowego.",
+        "Rare Candy ×5 — nagroda Coach Trainer Mable; dodatkowa Rare Candy znajduje się w południowo-centralnym pokoju przy dużej maszynie.",
+        "X Sp. Def — na południowy wschód od Coach Trainer Mable.",
+        "TM38 (Thunder) — południowo-wschodni pokój.",
+        "Thunder Stone — północno-wschodni pokój, północno-zachodni narożnik.",
+        "Max Potion ×2 — jedna w północno-wschodnim narożniku długiego poziomego korytarza w centrum, druga w północno-wschodnim pokoju.",
+        "Voltorb Candy — centralny pokój.",
+        "Paralyze Heal — centralny pokój, przy Electrode.",
+        "Electrode ×4 — fałszywe przedmioty wyglądające jak Poké Balle; występują w kilku wskazanych pomieszczeniach i nie są nagrodami do zebrania."
+      ]
     },
     {
       "id": "pokemon_tower",
@@ -13058,7 +13081,8 @@
       "notes": "Dane spotkań obejmują ogólną tabelę i piętra 3F–6F; pełny plan wieży, trenerzy i pozycje przedmiotów wymagają osobnego odwzorowania.",
       "sourceIds": [
         "bulbapedia-part9",
-        "rotomlabs-pokemon-tower"
+        "rotomlabs-pokemon-tower",
+        "bulbapedia-part8"
       ],
       "dataStatus": "encounter_rates_verified_from_rotomlabs_positions_not_mapped",
       "wildPokemonDetails": {
@@ -13378,7 +13402,18 @@
         "Channeler Jennifer — Haunter Lv. 25 (6F)."
       ],
       "trainerCount": 14,
-      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
+      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough",
+      "items": [
+        "Formal Set — 1F, od starszej kobiety siedzącej na sofie.",
+        "Elixir — 2F, południowo-zachodnia część piętra.",
+        "Pearl — 2F, przy południowej ścianie, na najbardziej wschodnim nagrobku (ukryty, codzienny).",
+        "X Attack — 2F, północno-zachodnia część piętra.",
+        "Pikachu Candy ×5 / Eevee Candy ×5 — 2F, nagroda Coach Trainer Holly zależnie od wersji gry.",
+        "Star Piece — 3F, na końcu ścieżki na wschód od Channeler Hope (ukryty).",
+        "Super Potion — 4F, na końcu ścieżki na północ od Full Heal (ukryty).",
+        "Big Pearl — 5F, na południowo-wschodnim nagrobku (ukryty).",
+        "PP Up — 6F, przy północno-zachodniej ścianie, na ścieżce na południe od Hyper Potion (ukryty)."
+      ]
     },
     {
       "id": "rocket_hideout",
@@ -13421,7 +13456,31 @@
         "Boss Team Rocket Giovanni — Persian Lv. 35 i Rhyhorn Lv. 35."
       ],
       "trainerCount": 11,
-      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
+      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough",
+      "items": [
+        "Team Rocket Set — B1F północ, od szpiega przebranego za Grunta, na południe od wejścia.",
+        "Ultra Ball ×3 — B1F północ, zachodni pokój.",
+        "Mighty Candy ×3 — B1F północ, wschodni pokój.",
+        "Hyper Potion — B1F południe, północno-zachodni narożnik.",
+        "Full Heal — B1F południe, karton przy północnym biurku (ukryty).",
+        "Great Ball ×5 — B1F południe, przy wschodniej ścianie.",
+        "Nugget — B2F, labirynt ruchomych pól, północno-wschodni narożnik.",
+        "Awakening — B2F, labirynt ruchomych pól, przy zachodniej ścianie.",
+        "TM05 (Rest) — B2F, środkowa część labiryntu.",
+        "X Accuracy — B2F, labirynt ruchomych pól, na południe od środkowego bloku (ukryty).",
+        "PP Up — B2F, południowo-zachodnia część labiryntu.",
+        "TM20 (Dark Pulse) — B3F, środkowo-wschodni pokój.",
+        "Guard Spec. — B3F, na skrzyniach elektronicznych na południe od maszyny z Poké Ballami (ukryty).",
+        "Revive — B3F, północno-zachodni narożnik.",
+        "X Speed — B3F, zachodnia część labiryntu ruchomych pól.",
+        "Rare Candy — B3F, wschodnia część labiryntu ruchomych pól.",
+        "Hyper Potion — B4F północny zachód, południowy pokój przy północnej ścianie.",
+        "PP Up — B4F północny zachód, południowo-zachodni narożnik południowego pokoju.",
+        "Lift Key — B4F północny zachód, zdobywany przez partnera Pokémon po walce z Gruntem.",
+        "Elixir — B4F południowy wschód, na zachód od windy.",
+        "Max Revive — B4F południowy wschód, za biurkiem Giovanniego, na szafce po prawej (ukryty, codzienny).",
+        "Silph Scope — B4F południowy wschód, od Giovanniego po zwycięstwie."
+      ]
     },
     {
       "id": "silph_co",
@@ -13492,7 +13551,53 @@
         "Boss Team Rocket Giovanni — Persian Lv. 39, Rhyhorn Lv. 39, Nidoqueen Lv. 39, Nidoking Lv. 39 i Rhydon Lv. 40."
       ],
       "trainerCount": 31,
-      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
+      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough",
+      "items": [
+        "X Sp. Atk — 1F, południowa strona dwóch fontann.",
+        "Super Potion — 2F, centralny pokój przy zachodniej ścianie.",
+        "Fresh Water — 2F, dystrybutor przy południowej ścianie (ukryty).",
+        "X Attack — 2F, południowo-wschodni pokój, za biurkiem.",
+        "TM42 (Self-Destruct) — 2F, od kobiety w północno-zachodnim pokoju.",
+        "X Sp. Def — 3F, wschodni pokój.",
+        "Silver Razz Berry ×3 — 3F, jedna z trzech roślin w północno-zachodnim narożniku (ukryte, codzienne).",
+        "Max Lure — 3F, pokój centralny przy Scientist Jose (wymaga Card Key).",
+        "Dire Hit — 4F, wschodni pokój.",
+        "Full Heal — 4F, północno-zachodni pokój.",
+        "Star Piece — 4F, południowo-zachodni pokój.",
+        "Escape Rope — 4F, północno-zachodni pokój.",
+        "Great Ball ×5 — 4F, południowo-zachodni pokój, zachodnia półka.",
+        "Revive — 4F, południowo-zachodni pokój, wschodnia półka.",
+        "Fresh Water — 4F, fontanna w pokoju centralnym (ukryty, codzienny).",
+        "TM54 (Flash Cannon) — 5F, południowo-zachodni pokój.",
+        "Poké Ball ×5 — 5F, południowo-zachodni pokój, dolna półka.",
+        "Card Key — 5F, od Trace’a po pokonaniu Archera i Grunta.",
+        "Silver Nanab Berry ×3 — 5F, roślina przy północnej ścianie na zachód od windy (ukryte, codzienne).",
+        "Max Ether — 5F, północno-zachodni pokój (wymaga Card Key).",
+        "Nugget — 5F, wschodni korytarz.",
+        "Guard Spec. — 5F, mniejszy centralny pokój (wymaga Card Key).",
+        "Fresh Water — 6F, fontanna w północno-zachodnim pokoju (ukryty).",
+        "Super Potion — 6F, zachodni korytarz, za najbardziej na południe wysuniętą rośliną.",
+        "Max Repel i Hyper Potion — 6F, południowo-zachodni pokój (wymaga Card Key).",
+        "X Sp. Atk — 6F, centralny pokój.",
+        "Silver Pinap Berry ×3 — 6F, roślina w południowo-wschodnim narożniku (ukryte, codzienne).",
+        "PP Up — 6F, wschodni korytarz.",
+        "TM34 (Dragon Pulse) — 7F, środkowo-wschodni pokój (wymaga Card Key).",
+        "Smart Candy ×3 — 7F, południowo-wschodni narożnik.",
+        "Nanab Berry ×3 — 7F, południowa roślina w centralnym korytarzu (ukryte).",
+        "PP Up — 7F, południowo-zachodni pokój za Scientist Joshua.",
+        "Rare Candy — 7F, centralny pokój.",
+        "Revive — 8F, północno-zachodni pokój przy Scientist Parker.",
+        "Silver Razz Berry ×3 — 8F, roślina w południowo-wschodnim narożniku (ukryte, codzienne).",
+        "X Attack — 8F, wschodni pokój, za rośliną w północno-wschodnim narożniku.",
+        "Great Ball ×3, Poké Ball ×3 i Ultra Ball ×3 — 9F, południowo-wschodni pokój, na półkach i podłodze.",
+        "Revive — 9F, między dwoma łóżkami w południowo-zachodnim narożniku.",
+        "Elixir — 9F, między dwoma północnymi łóżkami (ukryty, codzienny).",
+        "X Accuracy — 10F, północno-wschodni pokój, na skrzyni (ukryty, codzienny).",
+        "Full Heal — 10F, północno-zachodni narożnik.",
+        "TM37 (Flamethrower), Rare Candy i Max Revive — 10F, południowo-zachodni pokój.",
+        "Max Elixir — 11F, wschodni korytarz, na południowym końcu.",
+        "Master Ball — 11F, od prezesa w jego gabinecie po pokonaniu Giovanniego."
+      ]
     },
     {
       "id": "pokemon_mansion",
@@ -14287,7 +14392,8 @@
       "notes": "Wielopiętrowy sklep w Celadon City. Piętra, automaty, przedmioty i układ stoisk wymagają osobnego planu wnętrza.",
       "sourceIds": [
         "bulbapedia-celadon-store",
-        "pokemondb-mastertrainers"
+        "pokemondb-mastertrainers",
+        "bulbapedia-part9"
       ],
       "dataStatus": "schematic_interior_available_exact_layout_pending",
       "coordinateStatus": "unverified",
@@ -14300,7 +14406,14 @@
         "Master Trainer Ace Trainer Dax — Flareon Lv. 75 (4F)."
       ],
       "trainerCount": 3,
-      "trainerStatus": "postgame_master_trainer_teams_verified"
+      "trainerStatus": "postgame_master_trainer_teams_verified",
+      "items": [
+        "TM03 (Helping Hand) — 3F, od mężczyzny za ladą sklepu z grami.",
+        "TM06 (Light Screen) — dach, od dziewczyny w zamian za Fresh Water.",
+        "TM09 (Reflect) — dach, od dziewczyny w zamian za Soda Pop.",
+        "TM07 (Protect) — dach, od dziewczyny w zamian za Lemonade.",
+        "Sklep ma kilka pięter z artykułami i TM do kupienia; lista asortymentu i ceny nie są jeszcze rozpisane w danych."
+      ]
     },
     {
       "id": "celadon_game_corner",
@@ -14313,7 +14426,8 @@
       "sourceIds": [
         "bulbapedia-celadon-game-corner",
         "pokemondb-mastertrainers",
-        "bulbapedia-part9-celadon"
+        "bulbapedia-part9-celadon",
+        "bulbapedia-part9"
       ],
       "dataStatus": "schematic_interior_available_exact_layout_pending",
       "coordinateStatus": "unverified",
@@ -14325,7 +14439,16 @@
         "Master Trainer Scientist Jordan — Porygon Lv. 70 (wewnątrz Game Corner)."
       ],
       "trainerCount": 2,
-      "trainerStatus": "postgame_master_trainer_teams_verified"
+      "trainerStatus": "postgame_master_trainer_teams_verified",
+      "items": [
+        "Ukryte znajdźki odświeżają się codziennie; w sześciu punktach może pojawić się Gold Bottle Cap (1% na punkt), Bottle Cap, PP Max lub PP Up (2% na punkt).",
+        "Południowo-zachodni narożnik: Health Candy XL (5%), Health Candy L (10%) albo Health Candy (30%); w tym samym punkcie możliwa jest Razz Berry (50%).",
+        "Gaśnica w północno-zachodniej części: Mighty Candy XL (5%), Mighty Candy L (10%) albo Mighty Candy (30%); możliwa także Razz Berry (50%).",
+        "Przed najbardziej wysuniętą na północ maszyną po wschodniej stronie: Tough Candy XL (5%), Tough Candy L (10%) albo Tough Candy (30%); możliwa Nanab Berry (50%).",
+        "Przed najbardziej wysuniętą na północ maszyną po zachodniej stronie: Smart Candy XL (5%), Smart Candy L (10%) albo Smart Candy (30%); możliwa Nanab Berry (50%).",
+        "Między ladami oddzielającymi zachodnią i wschodnią część: Courage Candy XL (5%), Courage Candy L (10%) albo Courage Candy (30%); możliwa Pinap Berry (50%).",
+        "Na południe od kanapy w północno-wschodniej części: Quick Candy XL (5%), Quick Candy L (10%) albo Quick Candy (30%); możliwa Pinap Berry (50%)."
+      ]
     },
     {
       "id": "celadon_condominiums",
@@ -14353,7 +14476,14 @@
         "Coach Trainer Morimoto — Kangaskhan Lv. 54, Flareon Lv. 54, Vaporeon Lv. 54, Jolteon Lv. 54, Machamp Lv. 54 i Dragonite Lv. 54 (3F, po ukończeniu głównej historii)."
       ],
       "trainerCount": 3,
-      "trainerStatus": "postgame_master_trainer_teams_verified"
+      "trainerStatus": "postgame_master_trainer_teams_verified",
+      "items": [
+        "Fresh Water — 3F, z dystrybutora wody (ukryty; odradza się po 256 krokach).",
+        "Shiny Charm — 3F, od Game Director po złapaniu wszystkich Pokémonów poza Mew, Meltan i Melmetal.",
+        "PP Max ×10 — 3F, od Coach Trainer Morimoto po pokonaniu go po zostaniu Championem.",
+        "Health Candy ×3 — dach, ogrodzona wschodnia część.",
+        "TM44 (Play Rough) — dach, pomieszczenie po zachodniej stronie, dostępne od tylnego wejścia."
+      ]
     },
     {
       "id": "cinnabar_lab",
