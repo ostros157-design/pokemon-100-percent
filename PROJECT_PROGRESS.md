@@ -5869,3 +5869,12 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Skorygowano przypisanie przedmiotów: Route 132 — Rare Candy i Protein; Route 133 — Big Pearl, Max Revive i Star Piece; Route 134 — Carbos i Star Piece.
 - Źródła porównawcze: Dexfully, strony Route 132, Route 133 i Route 134 (listy trenerów, poziomy, spotkania i przedmioty); tabele metod wodnych porównano również z dokumentacją spotkań Emerald.
 - Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK. Audyt pozostałych tras i lokacji Hoenn nadal trwa.
+
+
+### Mapa Pokémon Let's Go — pełne panele informacji lokacji (2026-11-09)
+
+- Rozszerzono panel szczegółów wszystkich 76 wpisów indeksu Kanto (Let's Go): po wybraniu lokacji można rozwinąć listę trenerów i składów, budynków i charakterystycznych miejsc oraz wydarzeń, prezentów i spotkań.
+- Zachowano rozdzielenie wariantów Let's Go Pikachu i Let's Go Eevee w danych spotkań; listy Pokémonów nadal prowadzą do Pokédexu, a istniejące połączenia lokacji pozwalają przechodzić do sąsiednich punktów.
+- Przedmioty pozostają prezentowane jako lista opisowa. Nie dodano fikcyjnych współrzędnych ani pinezek — indeks nadal oznacza niezweryfikowane pozycje jako niezweryfikowane.
+- Dodano bezpieczne formatowanie zarówno prostych wpisów tekstowych, jak i rekordów trenerów z drużyną Pokémonów.
+- Zmiany zapisano na GitHubie. Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK; kompletność brakujących list trenerów i przedmiotów oraz dokładne pozycje na mapie nadal wymagają dalszej weryfikacji źródłowej.
