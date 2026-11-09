@@ -5887,3 +5887,12 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Skorygowano liczniki trenerów Mt. Moon i Rock Tunnel zgodnie z listami z poradnika; zachowano rozróżnienie trenerów głównej przygody i postgame.
 - Źródła sprawdzone: Bulbapedia Parts 3–14 (trenerzy, drużyny, poziomy i liderzy Gymów); porównawczo Serebii Coach Trainers. Nie dopisano pozycji na mapie ani współrzędnych.
 - Nie uruchomiono Flutter Analyzer, testów ani APK. Pozostałe puste listy w lokacjach miejskich, jaskiniach, Team Rocket Hideout, Silph Co., Victory Road i Route 23 nadal wymagają audytu — nie oznaczono ich jako kompletne.
+
+
+### Let's Go Kanto — trenerzy w kryjówkach, wieży i Victory Road (2026-11-09)
+
+- Dodano kolejne 70 pełne wpisy trenerów: Team Rocket Hideout (w tym Archer i Giovanni), Pokémon Tower, Silph Co. (wszystkie piętra oraz walki fabularne), Seafoam Islands i Victory Road.
+- Wpisy zawierają składy i poziomy Pokémonów zgodne z odpowiednimi sekcjami poradnika Bulbapedia; rekordy Silph Co. rozdzielają walki na piętrach i walki fabularne.
+- Zachowano rozróżnienie trenerów zwykłych, Coach Trainers i walk fabularnych; nie dodano pinezek ani współrzędnych.
+- Źródła: Bulbapedia Parts 9, 10, 12 i 15 (Let's Go, Pikachu! / Let's Go, Eevee!).
+- Nie uruchomiono Flutter Analyzer, testów ani APK. Nadal pozostają lokacje do sprawdzenia, w tym Route 2 i 23, Indigo Plateau, Pokémon Mansion, Cerulean Cave oraz pozostałe lokacje miejskie i budynki.
