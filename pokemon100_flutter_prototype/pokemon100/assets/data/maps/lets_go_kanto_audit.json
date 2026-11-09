@@ -8854,7 +8854,8 @@
         "GO Park / Playful Park"
       ],
       "items": [
-        "Super Lure"
+        "Super Lure",
+        "Nugget — od Digletta w domu Warden’a po użyciu Strong Push; codzienna nagroda."
       ],
       "gymLeader": {
         "name": "Koga",
@@ -8889,7 +8890,7 @@
         "Strong Push — Secret Technique uczona przez Warden'a po oddaniu Gold Teeth.",
         "Safari Set — otrzymywany od Warden'a po oddaniu Gold Teeth; w Let’s Go klasyczna Safari Zone jest zastąpiona kompleksem GO Park.",
         "Sea Skim — technika partnera uczona w Playful Park przez mężczyznę przy eksponacie Laprasa.",
-        "Fuchsia Gym — zwycięstwo z Kogą daje Soul Badge i TM27 (Toxic).",
+        "Fuchsia Gym — zwycięstwo z Kogą daje Soul Badge i TM06 (Toxic).",
         {
           "id": "warden_house_details",
           "name": "Dom Warden’a — Gold Teeth i Strong Push",
@@ -8938,7 +8939,8 @@
         "Master Trainer Ace Trainer Jaxson — Tauros Lv. 75 (północno-wschodnia część miasta)."
       ],
       "trainerCount": 4,
-      "trainerStatus": "postgame_master_trainer_teams_verified"
+      "trainerStatus": "postgame_master_trainer_teams_verified",
+      "itemsStatus": "Super Lure and daily Nugget verified from Bulbapedia Part 11"
     },
     {
       "id": "celadon_city",
@@ -14609,7 +14611,7 @@
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
         "Lider Koga — Weezing Lv. 43, Muk Lv. 43, Golbat Lv. 43 i Venomoth Lv. 44.",
-        "Nagroda po zwycięstwie: Soul Badge oraz TM27 (Toxic).",
+        "Nagroda po zwycięstwie: Soul Badge oraz TM06 (Toxic).",
         "Rewanż postgame — Koga: Tentacruel Lv. 56, Golbat Lv. 56, Weezing Lv. 56, Venomoth Lv. 56 i Muk Lv. 57."
       ],
       "trainers": [
@@ -14623,7 +14625,11 @@
         "Rewanż postgame — Koga: Tentacruel Lv. 56, Golbat Lv. 56, Weezing Lv. 56, Venomoth Lv. 56 i Muk Lv. 57."
       ],
       "trainerCount": 8,
-      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
+      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough",
+      "items": [
+        "TM06 (Toxic) — nagroda od Kogi po pokonaniu go."
+      ],
+      "itemsStatus": "TM06 reward verified from Bulbapedia Part 11"
     },
     {
       "id": "cinnabar_gym",
@@ -14731,7 +14737,12 @@
         "Master Trainer Hiker Valentino — Golem Lv. 75 (2F)."
       ],
       "trainerCount": 2,
-      "trainerStatus": "postgame_master_trainer_teams_verified"
+      "trainerStatus": "postgame_master_trainer_teams_verified",
+      "items": [
+        "Old Amber — od naukowca w zamkniętej części muzeum; dostęp po użyciu Chop Down.",
+        "Pretty Wing ×10 — od naukowca w zamkniętej części muzeum po pokazaniu Aerodactyla; wymaga Chop Down."
+      ],
+      "itemsStatus": "both museum rewards verified from Bulbapedia Part 3"
     },
     {
       "id": "pokemon_fan_club",
