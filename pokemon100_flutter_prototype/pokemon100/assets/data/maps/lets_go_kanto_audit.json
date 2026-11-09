@@ -2047,7 +2047,7 @@
         "Youngster Calvin — Spearow Lv. 6",
         "Camper Victor — Nidoran♂ Lv. 7",
         "Picnicker Robin — Nidoran♀ Lv. 7",
-        "Coach Trainer Kareem — Bulbasaur Lv. 11",
+        "Coach Trainer Kareem — Bulbasaur Lv. 11; nagroda: Revive (sprawdź wariant; w części tabel brak wpisu nagrody)",
         "Master Trainer Ace Trainer Ronnie — Nidoran♀ Lv. 65 (Route 3, środek)"
       ],
       "items": [
@@ -2063,7 +2063,8 @@
         "routepedia-route3-eevee",
         "bulbapedia-part4",
         "serebii-route3",
-        "pokemondb-mastertrainers"
+        "pokemondb-mastertrainers",
+        "serebii-coachtrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemon": {
@@ -2688,7 +2689,8 @@
         "routepedia-route4-eevee",
         "bulbapedia-part4",
         "serebii-route4",
-        "pokemondb-mastertrainers"
+        "pokemondb-mastertrainers",
+        "serebii-coachtrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemon": {
@@ -2791,7 +2793,8 @@
         "bulbapedia-part5",
         "pokemondb-mastertrainers",
         "supercheats-cerulean-postgame",
-        "bulbapedia-part16"
+        "bulbapedia-part16",
+        "serebii-coachtrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
@@ -2851,7 +2854,7 @@
         "Master Trainer Bird Keeper Barney — Doduo Lv. 70 (sklep rowerowy).",
         "Master Trainer Psychic Avery — Jynx Lv. 75 (zachód miasta, przy wejściu do Cerulean Cave).",
         "Master Trainer Ace Trainer Grayson — Dragonite Lv. 75 (dom).",
-        "Coach Trainer Harjit — Rhydon Lv. 52, Rapidash Lv. 52, Dewgong Lv. 52, Seaking Lv. 52 i Nidoking Lv. 52 (po odblokowaniu Cerulean Cave)."
+        "Coach Trainer Harjit — Rhydon Lv. 52, Rapidash Lv. 52, Dewgong Lv. 52, Seaking Lv. 52 i Nidoking Lv. 52 (po odblokowaniu Cerulean Cave).; nagroda TM60 (Megahorn)"
       ],
       "trainerCount": 10,
       "trainerStatus": "story_and_postgame_teams_verified"
@@ -3552,7 +3555,7 @@
         "Hiker Nob — Geodude Lv. 14 i Machop Lv. 14",
         "Youngster Chad — Diglett Lv. 12",
         "Lass Haley — Oddish Lv. 12 i Pidgey Lv. 12",
-        "Coach Trainer Amala — Machop Lv. 16",
+        "Coach Trainer Amala — Machop Lv. 16; nagroda TM15 (Seismic Toss)",
         "Master Trainer Psychic Harrison — Starmie Lv. 75 (Route 25, wschód)"
       ],
       "items": [
@@ -3572,7 +3575,8 @@
         "routepedia-route25-pikachu",
         "serebii-route25",
         "bulbapedia-part5",
-        "pokemondb-mastertrainers"
+        "pokemondb-mastertrainers",
+        "serebii-coachtrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemon": {
@@ -4438,7 +4442,8 @@
         "routepedia-route7-pikachu",
         "bulbapedia-part8",
         "serebii-route7",
-        "pokemondb-mastertrainers"
+        "pokemondb-mastertrainers",
+        "serebii-coachtrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemonDetails": {
@@ -5615,7 +5620,8 @@
         "bulbapedia-part8",
         "serebii-route10",
         "bulbapedia-part13",
-        "pokemondb-mastertrainers"
+        "pokemondb-mastertrainers",
+        "serebii-coachtrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemonDetails": {
@@ -6068,9 +6074,10 @@
         "Master Trainer Youngster Bret — Rattata Lv. 65 (Route 10, północny wschód)",
         "Master Trainer Psychic Frasier — Alakazam Lv. 80 (Route 10, południe)",
         "Master Trainer Scientist Levi — Electabuzz Lv. 75 (Route 10, północ, przy Power Plant)",
-        "Master Trainer Ace Trainer Christopher — Charmeleon Lv. 70 (Route 10, południowy zachód)"
+        "Master Trainer Ace Trainer Christopher — Charmeleon Lv. 70 (Route 10, południowy zachód)",
+        "Coach Trainer Tasha — Poliwhirl Lv. 25 i Primeape Lv. 26; nagroda TM13 (Brick Break)."
       ],
-      "trainerCount": 9,
+      "trainerCount": 10,
       "trainerStatus": "master_trainer_postgame_roster_cross_checked_pokemondb"
     },
     {
@@ -6939,7 +6946,8 @@
         "routepedia-route11-pikachu",
         "bulbapedia-part7",
         "serebii-route11",
-        "pokemondb-mastertrainers"
+        "pokemondb-mastertrainers",
+        "serebii-coachtrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemon": {
@@ -7134,7 +7142,8 @@
         "routepedia-route12-pikachu",
         "bulbapedia-part12",
         "serebii-route12",
-        "pokemondb-mastertrainers"
+        "pokemondb-mastertrainers",
+        "serebii-coachtrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemonDetails": {
@@ -7567,7 +7576,7 @@
         "Fisherman Andrew — Tentacool Lv. 36, Kingler Lv. 36.",
         "Rocker Luca — Electabuzz Lv. 36; wymaga Chop Down.",
         "Camper Justin — Nidoran♂ Lv. 35, Nidorino Lv. 35.",
-        "Coach Trainer Priya — Butterfree Lv. 38, Clefable Lv. 39.",
+        "Coach Trainer Priya — Butterfree Lv. 38, Clefable Lv. 39.; nagroda TM59 (Dream Eater)",
         "Master Trainer Beauty Suzy — Squirtle Lv. 65 (Route 12, północ)",
         "Master Trainer Bird Keeper Wyatt — Pidgeot Lv. 75 (brama Route 12)",
         "Master Trainer Lass Vicky — Poliwag Lv. 65 (Route 12, południe)",
@@ -8386,7 +8395,8 @@
       "sourceIds": [
         "bulbapedia-part12",
         "serebii-route15",
-        "pokemondb-mastertrainers"
+        "pokemondb-mastertrainers",
+        "serebii-coachtrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemonDetails": {
@@ -8731,7 +8741,7 @@
       },
       "encounterStatus": "text_verified",
       "trainers": [
-        "Coach Trainer Midge — Machoke Lv. 40, Magmar Lv. 41; północna ścieżka wymaga Chop Down.",
+        "Coach Trainer Midge — Machoke Lv. 40, Magmar Lv. 41; północna ścieżka wymaga Chop Down.; nagroda TM31 (Fire Punch)",
         "Picnicker Yazmin — Tangela Lv. 37, Seaking Lv. 37.",
         "Punk Guy Ernest — Primeape Lv. 38, Muk Lv. 38.",
         "Punk Guy Alex — Arbok Lv. 38.",
@@ -9383,7 +9393,8 @@
         "serebii-route17",
         "bulbapedia-part11",
         "bulbapedia-part18",
-        "pokemondb-mastertrainers"
+        "pokemondb-mastertrainers",
+        "serebii-coachtrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemonDetails": {
@@ -9773,7 +9784,7 @@
         "Lass Mila — Flareon Lv. 36.",
         "Ace Trainer Johnson — Wartortle Lv. 40, Magneton Lv. 39, Marowak Lv. 39.",
         "Punk Guy Corey — Primeape Lv. 38, Graveler Lv. 38.",
-        "Coach Trainer Grantley — Fearow Lv. 40, Beedrill Lv. 40, Sandslash Lv. 41.",
+        "Coach Trainer Grantley — Fearow Lv. 40, Beedrill Lv. 40, Sandslash Lv. 41.; nagroda TM58 (Drill Run)",
         "Beauty Samantha — Weepinbell Lv. 37.",
         "Gentleman Orson — Persian Lv. 38.",
         "Ace Trainer Maria — Exeggutor Lv. 40, Ninetales Lv. 39, Starmie Lv. 39.",
@@ -10791,7 +10802,8 @@
         "routepedia-seafoam-pikachu",
         "rotomlabs-seafoam-islands",
         "bulbapedia-part12",
-        "pokemondb-mastertrainers"
+        "pokemondb-mastertrainers",
+        "serebii-coachtrainers"
       ],
       "dataStatus": "encounter_rates_verified_from_rotomlabs_positions_not_mapped",
       "wildPokemonDetails": {
@@ -11058,7 +11070,7 @@
         "Zagadki z głazami zmieniają przepływ wody i otwierają przejścia między piętrami; dokładne kafelki nie są naniesione."
       ],
       "trainers": [
-        "Coach Trainer Yas — Vaporeon Lv. 45, Jolteon Lv. 46 i Flareon Lv. 47.",
+        "Coach Trainer Yas — Vaporeon Lv. 45, Jolteon Lv. 46 i Flareon Lv. 47.; nagroda Rare Candy",
         "Master Trainer Beauty Aina — Seel Lv. 70 (Seafoam Islands, 1F, wschód)",
         "Master Trainer Beauty Lois — Dewgong Lv. 75 (Seafoam Islands, B1F, południe)",
         "Master Trainer Ace Trainer Arjun — Dragonair Lv. 70 (Seafoam Islands, B3F, południe)",
@@ -11512,7 +11524,8 @@
         "routepedia-route21-pikachu",
         "serebii-route21",
         "bulbapedia-part13",
-        "pokemondb-mastertrainers"
+        "pokemondb-mastertrainers",
+        "serebii-coachtrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemon": {
@@ -11570,7 +11583,7 @@
         "Swimmer Jack — Tentacool Lv. 42, Golduck Lv. 42, Tentacruel Lv. 42.",
         "Swimmer Spencer — Seel Lv. 42, Seadra Lv. 42.",
         "Roughneck Martin — Raticate Lv. 42, Onix Lv. 42.",
-        "Coach Trainer Pam — Machoke Lv. 44, Jynx Lv. 44, Kangaskhan Lv. 45.",
+        "Coach Trainer Pam — Machoke Lv. 44, Jynx Lv. 44, Kangaskhan Lv. 45.; nagroda TM35 (Ice Punch)",
         "Fisherman Ronald — Seadra Lv. 42, Gyarados Lv. 42.",
         "Fisherman Wade — sześć Magikarp Lv. 42.",
         "Master Trainer Beauty Nicole — Psyduck Lv. 70 (Route 21, południowy zachód)",
@@ -12327,7 +12340,8 @@
         "routepedia-victory-road-pikachu",
         "rotomlabs-victory-road",
         "bulbapedia-part15",
-        "pokemondb-mastertrainers"
+        "pokemondb-mastertrainers",
+        "serebii-coachtrainers"
       ],
       "dataStatus": "encounter_rates_verified_from_rotomlabs_positions_not_mapped",
       "wildPokemonDetails": {
@@ -12572,7 +12586,7 @@
         "Głazy i przełączniki otwierają przejścia między piętrami; trenerzy i przedmioty nie mają jeszcze zweryfikowanych pinezek."
       ],
       "trainers": [
-        "Coach Trainer Alemana — Ditto Lv. 49.",
+        "Coach Trainer Alemana — Ditto Lv. 49.; nagroda zależna od wersji: Pikachu Candy / Eevee Candy",
         "Ace Trainer Naomi — Kangaskhan Lv. 47 i Venusaur Lv. 48.",
         "Ace Trainer Rolando — Rapidash Lv. 47, Starmie Lv. 47 i Victreebel Lv. 48.",
         "Juggler Nelson — Hypno Lv. 46 i Slowbro Lv. 46.",
@@ -12584,7 +12598,7 @@
         "Ace Trainer Colby — Electrode Lv. 47, Kingler Lv. 47, Pidgeot Lv. 47 i Rhydon Lv. 48.",
         "Ace Trainer Caroline — Jynx Lv. 47, Golbat Lv. 47 i Arcanine Lv. 48.",
         "Poké Maniac Dawson — Lickitung Lv. 46, Onix Lv. 46 i Blastoise Lv. 46.",
-        "Coach Trainer Ryan — Primeape Lv. 48, Gyarados Lv. 48, Arcanine Lv. 48 i Tauros Lv. 49.",
+        "Coach Trainer Ryan — Primeape Lv. 48, Gyarados Lv. 48, Arcanine Lv. 48 i Tauros Lv. 49.; nagroda TM39 (Outrage)",
         "Master Trainer Scientist Keaton — Golbat Lv. 75 (Victory Road, 3F, południowy wschód)",
         "Master Trainer Hiker Dillan — Graveler Lv. 70 (Victory Road, 1F, południe)",
         "Master Trainer Moltres Master — Moltres (bez walki; Victory Road, 2F, południe; pokaż Moltres o CP co najmniej 7500)"
@@ -13019,7 +13033,8 @@
       "sourceIds": [
         "bulbapedia-part14",
         "rotomlabs-power-plant",
-        "pokemondb-mastertrainers"
+        "pokemondb-mastertrainers",
+        "serebii-coachtrainers"
       ],
       "dataStatus": "encounter_rates_verified_from_rotomlabs_positions_not_mapped",
       "wildPokemonDetails": {
@@ -13186,7 +13201,7 @@
         "Elektrownia zawiera przedmioty i trenerów, ale ich dokładne położenie nie jest jeszcze naniesione na plan."
       ],
       "trainers": [
-        "Coach Trainer Mable — Omastar Lv. 44, Kabutops Lv. 44 i Aerodactyl Lv. 45.",
+        "Coach Trainer Mable — Omastar Lv. 44, Kabutops Lv. 44 i Aerodactyl Lv. 45.; nagroda Rare Candy",
         "Master Trainer Scientist Humphrey — Voltorb Lv. 70 (Power Plant, wschód)",
         "Master Trainer Zapdos Master — Zapdos (bez walki; Power Plant, północny zachód; pokaż Zapdos o CP co najmniej 7500)"
       ],
@@ -13231,7 +13246,8 @@
         "bulbapedia-part9",
         "rotomlabs-pokemon-tower",
         "bulbapedia-part8",
-        "pokemondb-mastertrainers"
+        "pokemondb-mastertrainers",
+        "serebii-coachtrainers"
       ],
       "dataStatus": "encounter_rates_verified_from_rotomlabs_positions_not_mapped",
       "wildPokemonDetails": {
@@ -13535,7 +13551,7 @@
         "Po uratowaniu Mr. Fuji gracz otrzymuje Poké Flute, potrzebną do obudzenia Snorlax na Route 12 i Route 16."
       ],
       "trainers": [
-        "Coach Trainer Holly — Geodude Lv. 28 (2F).",
+        "Coach Trainer Holly — Geodude Lv. 28 (2F).; nagroda zależna od wersji: Pikachu Candy / Eevee Candy",
         "Channeler Hope — Gastly Lv. 25 (3F).",
         "Channeler Patricia — Gastly Lv. 25 ×2 (3F).",
         "Channeler Carly — Gastly Lv. 25 (3F).",
@@ -13784,7 +13800,8 @@
         "bulbapedia-part13",
         "rotomlabs-pokemon-mansion",
         "pokemondb-mastertrainers",
-        "serebii-mastertrainers"
+        "serebii-mastertrainers",
+        "serebii-coachtrainers"
       ],
       "dataStatus": "encounter_rates_verified_from_rotomlabs_positions_not_mapped",
       "wildPokemonDetails": {
@@ -14035,7 +14052,7 @@
       ],
       "trainers": [
         "Burglar Arnie — Rapidash Lv. 44.",
-        "Coach Trainer Rita — Graveler Lv. 46, Dugtrio Lv. 46 i Poliwrath Lv. 47.",
+        "Coach Trainer Rita — Graveler Lv. 46, Dugtrio Lv. 46 i Poliwrath Lv. 47.; nagroda TM22 (Rock Slide)",
         "Burglar Simon — Magmar Lv. 44 i Muk Lv. 44.",
         "Scientist Braydon — Weezing Lv. 45, Magneton Lv. 45 i Magmar Lv. 45.",
         "Ace Trainer Louis — Kingler Lv. 45 i Primeape Lv. 46.",
@@ -14635,7 +14652,7 @@
       "trainers": [
         "Master Trainer Ace Trainer Tim — Charmander Lv. 65 (tylne wejście do budynku).",
         "Master Trainer Psychic Rui — Mr. Mime Lv. 70 (2F).",
-        "Coach Trainer Morimoto — Kangaskhan Lv. 54, Flareon Lv. 54, Vaporeon Lv. 54, Jolteon Lv. 54, Machamp Lv. 54 i Dragonite Lv. 54 (3F, po ukończeniu głównej historii)."
+        "Coach Trainer Morimoto — Kangaskhan Lv. 54, Flareon Lv. 54, Vaporeon Lv. 54, Jolteon Lv. 54, Machamp Lv. 54 i Dragonite Lv. 54 (3F, po ukończeniu głównej historii).; nagroda PP Max"
       ],
       "trainerCount": 3,
       "trainerStatus": "postgame_master_trainer_teams_verified",
@@ -14683,7 +14700,8 @@
         "bulbapedia-fighting-dojo",
         "bulbapedia-part10",
         "pokemondb-mastertrainers",
-        "supercheats-saffron-postgame"
+        "supercheats-saffron-postgame",
+        "serebii-coachtrainers"
       ],
       "dataStatus": "schematic_interior_available_exact_layout_pending",
       "coordinateStatus": "unverified",
@@ -14691,7 +14709,7 @@
         "Po pokonaniu lidera dojo można wybrać jednego z dwóch Pokémonów: Hitmonlee albo Hitmonchan."
       ],
       "trainers": [
-        "Coach Trainer Leona — Machoke Lv. 32 i Electabuzz Lv. 33.",
+        "Coach Trainer Leona — Machoke Lv. 32 i Electabuzz Lv. 33.; nagroda TM23 (Thunder Punch)",
         "Black Belt Hitoshi — Primeape Lv. 31.",
         "Black Belt Aaron — Graveler Lv. 31.",
         "Black Belt Hideki — Poliwhirl Lv. 31.",
