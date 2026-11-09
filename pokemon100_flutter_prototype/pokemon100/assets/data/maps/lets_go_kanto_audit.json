@@ -2510,20 +2510,20 @@
       },
       "items": [
         "Repel",
-        "Potion",
+        "Potion (1/2)",
         "Awakening",
         "Pearl",
         "Ether",
-        "5 Great Balls",
+        "Great Ball ×5",
         "Rare Candy",
         "Nugget",
-        "Revive",
-        "Potion",
-        "Revive",
-        "Stardust (ukryty)",
-        "Big Mushroom (ukryty)",
-        "Moon Stone (ukryty)",
-        "Moon Stone (ukryty)"
+        "Revive (1/2)",
+        "Potion (2/2)",
+        "Revive (2/2)",
+        "Stardust — ukryty, 1F, krater na wschód od Lass Miriam.",
+        "Big Mushroom — ukryty, B1F, obszar przy najbardziej wschodniej drabinie, między dwiema grupami skał.",
+        "Moon Stone (1/2) — ukryty, B2F, krater na wschód w obszarze dostępnym z najbardziej wschodniej drabiny na 1F.",
+        "Moon Stone (2/2) — ukryty, B2F, krater na wschód w obszarze dostępnym z drabiny przy Youngster Josh na 1F."
       ],
       "hiddenItemCount": 4,
       "trainerCount": 15,
@@ -2532,7 +2532,8 @@
         "routepedia-mt-moon-eevee",
         "bulbapedia-part4",
         "rotomlabs-mt-moon",
-        "pokemondb-mastertrainers"
+        "pokemondb-mastertrainers",
+        "altissimo-hidden-items-lgpe"
       ],
       "dataStatus": "encounter_rates_verified_from_rotomlabs_positions_not_mapped",
       "trainers": [
@@ -2552,7 +2553,8 @@
         "Master Trainer Hiker Colson — Omanyte Lv. 70 (Mt. Moon, B2F, środek)",
         "Master Trainer Hiker Barnaby — Kabuto Lv. 70 (Mt. Moon, B2F, północny wschód)"
       ],
-      "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb"
+      "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb",
+      "itemsStatus": "all four daily hidden pickups verified from Altissimo hidden-item index; repeated fixed item names distinguished by count"
     },
     {
       "id": "route_4",
