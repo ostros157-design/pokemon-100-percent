@@ -632,6 +632,16 @@
       "id": "bulbapedia-part16",
       "url": "https://bulbapedia.bulbagarden.net/wiki/Walkthrough:Pok%C3%A9mon:_Let's_Go,_Pikachu!_and_Let's_Go,_Eevee!/Part_16",
       "scope": "Elite Four and Champion Trace teams and levels"
+    },
+    {
+      "id": "bulbapedia-kanto-route2",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Kanto_Route_2",
+      "scope": "Generation VII Route 2 description; confirms no regular trainer battles in Let's Go and describes route NPCs"
+    },
+    {
+      "id": "bulbapedia-route23-master-trainers",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Kanto_Route_23",
+      "scope": "Generation VII Route 23 post-Champion Master Trainers and their Pokémon, levels and locations"
     }
   ],
   "locations": [
@@ -1353,7 +1363,9 @@
         "serebii-route2",
         "routepedia-route2-pikachu",
         "routepedia-route2-eevee",
-        "bulbapedia-part7"
+        "bulbapedia-part7",
+        "bulbapedia-kanto-route2",
+        "bulbapedia-part2"
       ],
       "features": [
         {
@@ -1422,7 +1434,10 @@
         "Leaf Stone — na południe od bramy i pierwszej półki skalnej; wymaga Chop Down.",
         "Super Potion — na południe od drugiej półki skalnej; wymaga Chop Down.",
         "Light Up — nagroda od pomocnika Profesora Oaka w domu na południe od Diglett's Cave po złapaniu co najmniej 10 różnych gatunków; to technika partnera, nie przedmiot do podniesienia."
-      ]
+      ],
+      "trainers": [],
+      "trainerCount": 0,
+      "trainerStatus": "verified_no_trainer_battles_in_lets_go"
     },
     {
       "id": "viridian_forest",
@@ -11214,7 +11229,8 @@
       "sourceIds": [
         "routepedia-route23-pikachu",
         "serebii-route23",
-        "bulbapedia-part15"
+        "bulbapedia-part15",
+        "bulbapedia-route23-master-trainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemonDetails": {
@@ -11645,7 +11661,16 @@
         "Golden Nanab Berry ×5 — w wysokiej trawie na południowy wschód od siódmego punktu kontroli; wymaga Sea Skim.",
         "Golden Pinap Berry ×3 — na zachód od piątego punktu kontroli; wymaga Sea Skim.",
         "Golden Pinap Berry ×5 — w wysokiej trawie na północ od siódmego punktu kontroli; wymaga Sea Skim."
-      ]
+      ],
+      "trainers": [
+        "Master Trainer Lass Sal — Venusaur Lv. 75 (po zostaniu Championem; północny odcinek Route 23).",
+        "Master Trainer Ace Trainer Edmund — Charizard Lv. 75 (po zostaniu Championem; północny odcinek Route 23).",
+        "Master Trainer Ace Trainer Percy — Nidoqueen Lv. 75 (po zostaniu Championem; południowy odcinek Route 23).",
+        "Master Trainer Ace Trainer Carlton — Nidoking Lv. 80 (po zostaniu Championem; południowy odcinek Route 23).",
+        "Master Trainer Ace Trainer Jirard — Dratini Lv. 65 (po zostaniu Championem; południowy odcinek Route 23)."
+      ],
+      "trainerCount": 5,
+      "trainerStatus": "postgame_master_trainer_teams_verified_from_bulbapedia_serebii"
     },
     {
       "id": "victory_road",
