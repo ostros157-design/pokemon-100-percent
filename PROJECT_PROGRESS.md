@@ -5896,3 +5896,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Zachowano rozróżnienie trenerów zwykłych, Coach Trainers i walk fabularnych; nie dodano pinezek ani współrzędnych.
 - Źródła: Bulbapedia Parts 9, 10, 12 i 15 (Let's Go, Pikachu! / Let's Go, Eevee!).
 - Nie uruchomiono Flutter Analyzer, testów ani APK. Nadal pozostają lokacje do sprawdzenia, w tym Route 2 i 23, Indigo Plateau, Pokémon Mansion, Cerulean Cave oraz pozostałe lokacje miejskie i budynki.
+
+
+### Let's Go Kanto — Pokémon Mansion i Liga Pokémon (2026-11-09)
+
+- Dodano drużyny trenerów Pokémon Mansion (8 wpisów), walkę Trace'a i Team Rocket Grunta w Cerulean City, Poké Maniaca Marka na północnym Route 10 oraz pięć głównych walk Ligi: Lorelei, Bruno, Agatha, Lance i Champion Trace.
+- Wpis Championa rozróżnia partnera zależnego od wersji gry: Jolteon w Let's Go Pikachu oraz Raichu w Let's Go Eevee.
+- Źródła: Bulbapedia Parts 5, 13 i 16. Wpisy pozostają informacyjne — nie dodano niezweryfikowanych współrzędnych ani pinezek.
+- Nie uruchomiono Flutter Analyzer, testów ani APK; audyt trenerów w pozostałych lokacjach i ewentualnych trenerów postgame nadal trwa.
