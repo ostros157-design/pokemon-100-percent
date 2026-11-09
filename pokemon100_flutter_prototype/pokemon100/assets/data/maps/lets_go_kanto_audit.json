@@ -817,6 +817,11 @@
       "id": "altissimo-utility-lgpe",
       "url": "https://altissimo1.github.io/Main-Series/LGPE/utility.html",
       "scope": "Let's Go access requirements for Chop Down, Sea Skim, Strong Push, Silph Scope and Poké Flute"
+    },
+    {
+      "id": "serebii-gym-leaders-lgpe",
+      "url": "https://www.serebii.net/letsgopikachueevee/gyms.shtml",
+      "scope": "Let's Go gym leader teams, levels, badges and TM rewards"
     }
   ],
   "locations": [
@@ -8936,7 +8941,8 @@
         "bulbapedia-part12",
         "bulbapedia-part11",
         "pokemondb-mastertrainers",
-        "supercheats-fuchsia-postgame"
+        "supercheats-fuchsia-postgame",
+        "serebii-gym-leaders-lgpe"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
@@ -8944,7 +8950,7 @@
         "Strong Push — Secret Technique uczona przez Warden'a po oddaniu Gold Teeth.",
         "Safari Set — otrzymywany od Warden'a po oddaniu Gold Teeth; w Let’s Go klasyczna Safari Zone jest zastąpiona kompleksem GO Park.",
         "Sea Skim — technika partnera uczona w Playful Park przez mężczyznę przy eksponacie Laprasa.",
-        "Fuchsia Gym — zwycięstwo z Kogą daje Soul Badge i TM06 (Toxic).",
+        "Fuchsia Gym — zwycięstwo z Kogą daje Soul Badge i TM27 (Toxic).",
         {
           "id": "warden_house_details",
           "name": "Dom Warden’a — Gold Teeth i Strong Push",
@@ -14590,7 +14596,8 @@
       "sourceIds": [
         "routepedia-vermilion-pikachu",
         "bulbapedia-part6",
-        "serebii-gym-rematches"
+        "serebii-gym-rematches",
+        "serebii-gym-leaders-lgpe"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
@@ -14606,7 +14613,12 @@
         "Rewanż postgame — Lt. Surge: Electrode Lv. 56, Jolteon Lv. 56, Electabuzz Lv. 56, Magneton Lv. 56 i Raichu Lv. 57."
       ],
       "trainerCount": 5,
-      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
+      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough",
+      "items": [
+        "Autograph — nagroda od Lt. Surge po pokonaniu go.",
+        "TM36 (Thunderbolt) — nagroda od Lt. Surge po pokonaniu go."
+      ],
+      "itemsStatus": "Autograph and TM36 rewards verified from Serebii Let's Go Gym Leaders reference"
     },
     {
       "id": "celadon_gym",
@@ -14666,11 +14678,12 @@
         "routepedia-saffron-pikachu",
         "bulbapedia-part10",
         "serebii-gym-rematches",
-        "altissimo-saffron-lgpe"
+        "altissimo-saffron-lgpe",
+        "serebii-gym-leaders-lgpe"
       ],
       "dataStatus": "leader_verified_team_needs_review",
       "events": [
-        "Lider Sabrina — Mr. Mime Lv. 38, Slowbro Lv. 38, Jynx Lv. 38 i Alakazam Lv. 39.",
+        "Lider Sabrina — Mr. Mime Lv. 43, Slowbro Lv. 43, Jynx Lv. 43 i Alakazam Lv. 44.",
         "Nagroda po zwycięstwie: Marsh Badge oraz TM33 (Calm Mind).",
         "Rewanż postgame — Sabrina: Mr. Mime Lv. 56, Jynx Lv. 56, Hypno Lv. 56, Slowbro Lv. 56 i Alakazam Lv. 57."
       ],
@@ -14724,12 +14737,13 @@
       "sourceIds": [
         "routepedia-fuchsia-pikachu",
         "bulbapedia-part11",
-        "serebii-gym-rematches"
+        "serebii-gym-rematches",
+        "serebii-gym-leaders-lgpe"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
         "Lider Koga — Weezing Lv. 43, Muk Lv. 43, Golbat Lv. 43 i Venomoth Lv. 44.",
-        "Nagroda po zwycięstwie: Soul Badge oraz TM06 (Toxic).",
+        "Nagroda po zwycięstwie: Soul Badge oraz TM27 (Toxic).",
         "Rewanż postgame — Koga: Tentacruel Lv. 56, Golbat Lv. 56, Weezing Lv. 56, Venomoth Lv. 56 i Muk Lv. 57."
       ],
       "trainers": [
@@ -14745,9 +14759,9 @@
       "trainerCount": 8,
       "trainerStatus": "teams_verified_from_bulbapedia_walkthrough",
       "items": [
-        "TM06 (Toxic) — nagroda od Kogi po pokonaniu go."
+        "TM27 (Toxic) — nagroda od Kogi po pokonaniu go."
       ],
-      "itemsStatus": "TM06 reward verified from Bulbapedia Part 11"
+      "itemsStatus": "TM27 (Toxic) reward verified from Serebii Let's Go Gym Leaders reference"
     },
     {
       "id": "cinnabar_gym",
