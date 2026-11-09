@@ -6008,3 +6008,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Uzupełniono Fuchsia City o codzienny Nugget od Digletta w domu Warden’a po odblokowaniu Strong Push.
 - Poprawiono błąd nazwy nagrody Kogi: w Let’s Go jest to TM06 (Toxic), a nie TM27. Zmianę naniesiono w opisie Fuchsia Gym i dodano nagrodę do listy przedmiotów tej lokacji.
 - Źródła: Bulbapedia walkthrough Parts 3 i 11 oraz Serebii Daily Events. Nie dodano niezweryfikowanych współrzędnych. Nie uruchomiono Flutter Analyzer, testów ani APK.
+
+
+### Let's Go Kanto — pełny audyt przedmiotów Celadon City i Department Store (2026-11-09)
+
+- Dodano sześć znajdziek/nagród w Celadon City: Nugget, Rare Candy, Razz Berry ×5, Pewter Crunchies, Tea oraz TM26 Poison Jab (wymaga Sea Skim).
+- Rozpisano asortyment Celadon Department Store według pięter i sprzedawców: 2F (artykuły i osiem TM z cenami), 4F (pięć kamieni ewolucyjnych), 5F (czapki, okulary, kokardy, bandany i kwiaty) oraz dach (automaty z napojami). Zachowano cztery nagrody fabularne TM03/TM06/TM09/TM07.
+- Dodano TM53 (Mega Drain) jako nagrodę od Eriki w Celadon Gym. Skorygowano też prawdopodobieństwa sześciu codziennych punktów w Game Corner: Berry 50%, Candy 30%, Candy L 10%, Candy XL 5%, PP Up 2%, PP Max 1%, Bottle Cap 1%, Gold Bottle Cap 1%.
+- Źródło: Altissimo, Kanto Locations — Celadon City, sekcje Let's Go Pikachu/Eevee. Nie dodano niepotwierdzonych współrzędnych. Flutter Analyzer, testy i APK nie zostały uruchomione.
