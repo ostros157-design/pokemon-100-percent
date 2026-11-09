@@ -729,7 +729,7 @@ class _MapsScreenState extends State<MapsScreen> {
         lines.add('$name$amount${location == null ? '' : ' — $location'}');
       }
     }
-    return lines.take(20).join('\n');
+    return lines.join('\n');
   }
 
   String _mapTrainersSummary(dynamic raw) {
@@ -755,17 +755,20 @@ class _MapsScreenState extends State<MapsScreen> {
         lines.add('$name${teamSummary.isEmpty ? '' : ' — $teamSummary'}${rewardSummary.isEmpty ? '' : ' • $rewardSummary'}');
       }
     }
-    return lines.take(20).join('\n');
+    return lines.join('\n');
   }
 
   String _mapEventsSummary(dynamic raw) {
     if (raw is! List) return '';
-    return raw.whereType<Map>().map((event) {
+    return raw.map((event) {
+      if (event is String) return event.trim();
+      if (event is! Map) return '';
       final name = event['name']?.toString() ?? '';
-      final note = event['note']?.toString() ?? '';
-      if (name.isEmpty) return '';
+      final note = event['note']?.toString() ??
+          event['description']?.toString() ?? '';
+      if (name.isEmpty) return note;
       return '$name${note.isEmpty ? '' : ' — $note'}';
-    }).where((line) => line.isNotEmpty).take(12).join('\n');
+    }).where((line) => line.isNotEmpty).join('\\n');
   }
 
   Map<String, dynamic>? get _selectedMapIndexLocation {
