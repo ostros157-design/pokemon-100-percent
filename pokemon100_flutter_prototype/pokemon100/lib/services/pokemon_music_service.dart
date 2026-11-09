@@ -1,4 +1,5 @@
 import 'package:audioplayers/audioplayers.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../data/pokemon_music_data.dart';
 
@@ -11,6 +12,7 @@ class PokemonMusicService {
   final AudioPlayer player = AudioPlayer();
   double volume = 0.65;
   bool _configured = false;
+  static const _autoStartKey = 'pokemon_background_music_autostart';
 
   Future<void> configure() async {
     if (_configured) return;
@@ -24,6 +26,19 @@ class PokemonMusicService {
     await player.setVolume(volume);
   }
 
+  Future<bool> getAutoStartEnabled() async {
+    final preferences = await SharedPreferences.getInstance();
+    return preferences.getBool(_autoStartKey) ?? true;
+  }
+
+  Future<void> setAutoStartEnabled(bool enabled) async {
+    final preferences = await SharedPreferences.getInstance();
+    await preferences.setBool(_autoStartKey, enabled);
+  }
+
+  Future<void> startIfEnabled() async {
+    if (await getAutoStartEnabled()) await playOrResume();
+  }
   Future<void> playOrResume() async {
     await configure();
     if (player.state == PlayerState.paused) {
