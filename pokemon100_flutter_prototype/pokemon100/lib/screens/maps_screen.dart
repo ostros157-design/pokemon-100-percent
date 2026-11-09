@@ -459,7 +459,7 @@ class _MapsScreenState extends State<MapsScreen> {
                   Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      trainers.map((trainer) => '• $trainer').join('\\n'),
+                      trainers.map((trainer) => '• $trainer').join('\n'),
                     ),
                   ),
                 ],
@@ -474,7 +474,7 @@ class _MapsScreenState extends State<MapsScreen> {
                   Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      features.map((feature) => '• $feature').join('\\n'),
+                      features.map((feature) => '• $feature').join('\n'),
                     ),
                   ),
                 ],
@@ -489,7 +489,7 @@ class _MapsScreenState extends State<MapsScreen> {
                   Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      events.map((event) => '• $event').join('\\n'),
+                      events.map((event) => '• $event').join('\n'),
                     ),
                   ),
                 ],
