@@ -2137,14 +2137,28 @@
         "Moon Stone (ukryty)"
       ],
       "hiddenItemCount": 4,
-      "trainerCount": 17,
+      "trainerCount": 11,
       "sourceIds": [
         "routepedia-mt-moon-pikachu",
         "routepedia-mt-moon-eevee",
         "bulbapedia-part4",
         "rotomlabs-mt-moon"
       ],
-      "dataStatus": "encounter_rates_verified_from_rotomlabs_positions_not_mapped"
+      "dataStatus": "encounter_rates_verified_from_rotomlabs_positions_not_mapped",
+      "trainers": [
+        "Bug Catcher Kent — Butterfree Lv. 7 (1F).",
+        "Lass Evelyn — Bellsprout Lv. 8 (1F).",
+        "Super Nerd Jovan — Grimer Lv. 10 (1F).",
+        "Youngster Robby — Mankey Lv. 8 (1F).",
+        "Lass Miriam — Clefairy Lv. 8 (1F).",
+        "Youngster Josh — Sandshrew Lv. 8 (1F).",
+        "Hiker Marcos — Geodude Lv. 10 ×2 (1F).",
+        "Team Rocket Grunt — Rattata Lv. 9 (B2F).",
+        "Team Rocket Grunt — Drowzee Lv. 9 (B2F).",
+        "Team Rocket Grunt — Zubat Lv. 9 (B2F).",
+        "Super Nerd Miguel — Voltorb Lv. 10 i Magnemite Lv. 10 (B2F)."
+      ],
+      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
     },
     {
       "id": "route_4",
@@ -6062,13 +6076,31 @@
         "Dire Hit",
         "2 ukryte przedmioty: Revive i Super Potion"
       ],
-      "trainerCount": 17,
+      "trainerCount": 15,
       "sourceIds": [
         "routepedia-rock-tunnel-pikachu",
         "bulbapedia-part8",
         "rotomlabs-rock-tunnel"
       ],
-      "dataStatus": "encounter_rates_verified_from_rotomlabs_positions_not_mapped"
+      "dataStatus": "encounter_rates_verified_from_rotomlabs_positions_not_mapped",
+      "trainers": [
+        "Poké Maniac Ashton — Slowpoke Lv. 23 (1F, północny wschód).",
+        "Camper Lenny — Growlithe Lv. 22 (1F, zachód).",
+        "Hiker Oliver — Onix Lv. 23 i Sandslash Lv. 23 (1F).",
+        "Hiker Claus — Machop Lv. 23 i Rhyhorn Lv. 23 (1F).",
+        "Picnicker Leah — Nidorina Lv. 22 (1F, południe).",
+        "Camper Leroy — Nidorino Lv. 22 (1F).",
+        "Picnicker Dana — Meowth Lv. 22 i Vulpix Lv. 22 (1F).",
+        "Poké Maniac Winston — Kangaskhan Lv. 23 (B1F, południowy wschód).",
+        "Black Belt Dudley — Onix Lv. 24 (B1F).",
+        "Hiker Allen — Geodude Lv. 23, Onix Lv. 23 i Graveler Lv. 23 (B1F).",
+        "Black Belt Eric — Mankey Lv. 24 i Poliwhirl Lv. 24 (B1F).",
+        "Poké Maniac Cooper — Ivysaur Lv. 23 (B1F, północny zachód).",
+        "Ace Trainer Sofia — Vulpix Lv. 24 i Kadabra Lv. 25 (B1F).",
+        "Ace Trainer Charlie — Diglett Lv. 24 i Flareon Lv. 25 (B1F).",
+        "Black Belt Steve — Machop Lv. 24 ×2 (B1F)."
+      ],
+      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
     },
     {
       "id": "lavender_town",
@@ -12227,7 +12259,23 @@
       "events": [
         "Kapitan statku uczy partnera Secret Technique Chop Down po zakończeniu wydarzenia fabularnego.",
         "Po opuszczeniu statku po wydarzeniu statek odpływa; dostęp do pokładu nie pozostaje otwarty na stałe."
-      ]
+      ],
+      "trainers": [
+        "Gentleman Arthur — Growlithe Lv. 18 (1F).",
+        "Beauty Nickie — Pidgey Lv. 17 i Pikachu Lv. 17 (1F).",
+        "Youngster Tyler — Mankey Lv. 16 (1F).",
+        "Sailor Leonard — Slowpoke Lv. 18 (B1F).",
+        "Engineer Dylan — Magnemite Lv. 18 ×2 (B1F).",
+        "Sailor Huey — Psyduck Lv. 18 i Poliwag Lv. 18 (B1F).",
+        "Fisherman Barny — Goldeen Lv. 18 i Horsea Lv. 18 (B1F).",
+        "Sailor Trevor — Seel Lv. 18 i Machop Lv. 18 (pokład).",
+        "Sailor Edmond — Poliwag Lv. 18 (pokład).",
+        "Fisherman Dale — Magikarp Lv. 18 (2F).",
+        "Gentleman Brooks — Ponyta Lv. 18 (2F).",
+        "Gentleman Lamar — Sandshrew Lv. 18 (2F)."
+      ],
+      "trainerCount": 12,
+      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
     },
     {
       "id": "power_plant",
@@ -12409,7 +12457,12 @@
       "events": [
         "Zapdos — statyczne spotkanie na poziomie 50.",
         "Elektrownia zawiera przedmioty i trenerów, ale ich dokładne położenie nie jest jeszcze naniesione na plan."
-      ]
+      ],
+      "trainers": [
+        "Coach Trainer Mable — Omastar Lv. 44, Kabutops Lv. 44 i Aerodactyl Lv. 45."
+      ],
+      "trainerCount": 1,
+      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
     },
     {
       "id": "pokemon_tower",
@@ -13112,7 +13165,18 @@
       "events": [
         "Lider Giovanni — Dugtrio Lv. 49, Persian Lv. 49, Nidoqueen Lv. 49, Nidoking Lv. 49 i Rhydon Lv. 50.",
         "Nagroda po zwycięstwie: Earth Badge oraz TM41 (Earthquake)."
-      ]
+      ],
+      "trainers": [
+        "Ace Trainer Samuel — Nidoking Lv. 48.",
+        "Tamer Cole — Nidorino Lv. 47 i Rhyhorn Lv. 47.",
+        "Ace Trainer Kelly — Nidoqueen Lv. 48.",
+        "Ace Trainer Yuji — Dugtrio Lv. 47 i Rhyhorn Lv. 48.",
+        "Tamer Jason — Sandslash Lv. 47.",
+        "Black Belt Takashi — Graveler Lv. 47.",
+        "Lider Giovanni — Dugtrio Lv. 49, Nidoqueen Lv. 49, Nidoking Lv. 49, Persian Lv. 49 i Rhydon Lv. 50."
+      ],
+      "trainerCount": 7,
+      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
     },
     {
       "id": "pewter_gym",
@@ -13128,13 +13192,21 @@
       },
       "notes": "Pierwsza sala fabularna. W Let's Go Brock używa Geodude Lv. 11 i Onix Lv. 12.",
       "sourceIds": [
-        "routepedia-pewter-pikachu"
+        "routepedia-pewter-pikachu",
+        "bulbapedia-part3"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
         "Lider Brock — Geodude Lv. 11 i Onix Lv. 12.",
         "Nagroda po zwycięstwie: Boulder Badge oraz TM01 (Headbutt)."
-      ]
+      ],
+      "trainers": [
+        "Picnicker Amara — Geodude Lv. 7.",
+        "Camper Liam — Geodude Lv. 7.",
+        "Lider Brock — Geodude Lv. 11 i Onix Lv. 12."
+      ],
+      "trainerCount": 3,
+      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
     },
     {
       "id": "cerulean_gym",
@@ -13149,13 +13221,22 @@
         "name": "Misty"
       },
       "sourceIds": [
-        "routepedia-cerulean-pikachu"
+        "routepedia-cerulean-pikachu",
+        "bulbapedia-part5"
       ],
       "dataStatus": "leader_verified_team_needs_review",
       "events": [
         "Lider Misty — Psyduck Lv. 18 i Starmie Lv. 19.",
         "Nagroda po zwycięstwie: Cascade Badge oraz TM29 (Scald)."
-      ]
+      ],
+      "trainers": [
+        "Beauty Lily — Goldeen Lv. 16.",
+        "Beauty Violet — Shellder Lv. 16.",
+        "Beauty Daisy — Seel Lv. 16.",
+        "Lider Misty — Psyduck Lv. 18 i Starmie Lv. 19."
+      ],
+      "trainerCount": 4,
+      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
     },
     {
       "id": "vermilion_gym",
@@ -13184,13 +13265,22 @@
         ]
       },
       "sourceIds": [
-        "routepedia-vermilion-pikachu"
+        "routepedia-vermilion-pikachu",
+        "bulbapedia-part6"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
         "Lider Lt. Surge — Voltorb Lv. 25, Magnemite Lv. 25 i Raichu Lv. 26.",
         "Nagroda po zwycięstwie: Thunder Badge oraz TM36 (Thunderbolt)."
-      ]
+      ],
+      "trainers": [
+        "Sailor Dwayne — Magnemite Lv. 22.",
+        "Rocker Baily — Voltorb Lv. 22 ×2.",
+        "Gentleman Tucker — Pikachu Lv. 22.",
+        "Lider Lt. Surge — Voltorb Lv. 25, Magnemite Lv. 25 i Raichu Lv. 26."
+      ],
+      "trainerCount": 4,
+      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
     },
     {
       "id": "celadon_gym",
@@ -13205,13 +13295,26 @@
         "name": "Erika"
       },
       "sourceIds": [
-        "routepedia-celadon-pikachu"
+        "routepedia-celadon-pikachu",
+        "bulbapedia-part9"
       ],
       "dataStatus": "leader_verified_team_needs_review",
       "events": [
         "Lider Erika — Tangela Lv. 33, Weepinbell Lv. 33 i Vileplume Lv. 34.",
         "Nagroda po zwycięstwie: Rainbow Badge oraz TM53 (Mega Drain)."
-      ]
+      ],
+      "trainers": [
+        "Lass Kay — Oddish Lv. 28 (wymaga Chop Down).",
+        "Beauty Mai — Exeggcute Lv. 29.",
+        "Picnicker Tina — Gloom Lv. 29.",
+        "Beauty Tamia — Oddish Lv. 29 i Weepinbell Lv. 29.",
+        "Beauty Lori — Gloom Lv. 29.",
+        "Ace Trainer Mary — Weepinbell Lv. 31 i Tangela Lv. 32.",
+        "Lass Lina — Bellsprout Lv. 28 ×3.",
+        "Lider Erika — Tangela Lv. 33, Weepinbell Lv. 33 i Vileplume Lv. 34."
+      ],
+      "trainerCount": 8,
+      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
     },
     {
       "id": "saffron_gym",
@@ -13226,13 +13329,25 @@
         "name": "Sabrina"
       },
       "sourceIds": [
-        "routepedia-saffron-pikachu"
+        "routepedia-saffron-pikachu",
+        "bulbapedia-part10"
       ],
       "dataStatus": "leader_verified_team_needs_review",
       "events": [
         "Lider Sabrina — Mr. Mime Lv. 38, Slowbro Lv. 38, Jynx Lv. 38 i Alakazam Lv. 39.",
         "Nagroda po zwycięstwie: Marsh Badge oraz TM33 (Calm Mind)."
-      ]
+      ],
+      "trainers": [
+        "Psychic Johan — Slowbro Lv. 41 i Kadabra Lv. 41.",
+        "Channeler Stacy — Haunter Lv. 40 ×2.",
+        "Ace Trainer Amanda — Jynx Lv. 42.",
+        "Channeler Imari — Haunter Lv. 40 ×3.",
+        "Ace Trainer Cameron — Kadabra Lv. 41 i Kadabra Lv. 42.",
+        "Psychic Preston — Hypno Lv. 41.",
+        "Lider Sabrina — Mr. Mime Lv. 43, Slowbro Lv. 43, Jynx Lv. 43 i Alakazam Lv. 44."
+      ],
+      "trainerCount": 7,
+      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
     },
     {
       "id": "fuchsia_gym",
@@ -13265,13 +13380,25 @@
         ]
       },
       "sourceIds": [
-        "routepedia-fuchsia-pikachu"
+        "routepedia-fuchsia-pikachu",
+        "bulbapedia-part11"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
         "Lider Koga — Weezing Lv. 43, Muk Lv. 43, Golbat Lv. 43 i Venomoth Lv. 44.",
         "Nagroda po zwycięstwie: Soul Badge oraz TM27 (Toxic)."
-      ]
+      ],
+      "trainers": [
+        "Tamer Phil — Nidorina Lv. 41 i Nidorino Lv. 41.",
+        "Ace Trainer Kayden — Muk Lv. 41 i Beedrill Lv. 42.",
+        "Juggler Kirk — Haunter Lv. 40.",
+        "Juggler Harry — Haunter Lv. 40 ×3.",
+        "Ace Trainer Annie — Ivysaur Lv. 41 i Weezing Lv. 42.",
+        "Tamer Edgar — Arbok Lv. 41 ×3.",
+        "Lider Koga — Weezing Lv. 43, Muk Lv. 43, Golbat Lv. 43 i Venomoth Lv. 44."
+      ],
+      "trainerCount": 7,
+      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
     },
     {
       "id": "cinnabar_gym",
@@ -13286,13 +13413,23 @@
         "name": "Blaine"
       },
       "sourceIds": [
-        "routepedia-cinnabar-pikachu"
+        "routepedia-cinnabar-pikachu",
+        "bulbapedia-part13"
       ],
       "dataStatus": "leader_verified_team_needs_review",
       "events": [
         "Lider Blaine — Magmar Lv. 47, Rapidash Lv. 47, Ninetales Lv. 47 i Arcanine Lv. 48.",
         "Nagroda po zwycięstwie: Volcano Badge oraz TM46 (Fire Blast)."
-      ]
+      ],
+      "trainers": [
+        "Super Nerd Erik — Charmeleon Lv. 45.",
+        "Burglar Quinn — Ninetales Lv. 44.",
+        "Super Nerd Derek — Magmar Lv. 45.",
+        "Burglar Dusty — Growlithe Lv. 44 i Rapidash Lv. 44.",
+        "Lider Blaine — Magmar Lv. 47, Rapidash Lv. 47, Ninetales Lv. 47 i Arcanine Lv. 48."
+      ],
+      "trainerCount": 5,
+      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
     },
     {
       "id": "bills_house",
@@ -13500,13 +13637,24 @@
       ],
       "notes": "Dōjō w Saffron City, w którym można wybrać nagrodę Hitmonlee albo Hitmonchan. Wnętrze i trenerzy nie są jeszcze naniesieni.",
       "sourceIds": [
-        "bulbapedia-fighting-dojo"
+        "bulbapedia-fighting-dojo",
+        "bulbapedia-part10"
       ],
       "dataStatus": "schematic_interior_available_exact_layout_pending",
       "coordinateStatus": "unverified",
       "events": [
         "Po pokonaniu lidera dojo można wybrać jednego z dwóch Pokémonów: Hitmonlee albo Hitmonchan."
-      ]
+      ],
+      "trainers": [
+        "Coach Trainer Leona — Machoke Lv. 32 i Electabuzz Lv. 33.",
+        "Black Belt Hitoshi — Primeape Lv. 31.",
+        "Black Belt Aaron — Graveler Lv. 31.",
+        "Black Belt Hideki — Poliwhirl Lv. 31.",
+        "Black Belt Mike — Machoke Lv. 31.",
+        "Karate Master Koichi — Poliwrath Lv. 34."
+      ],
+      "trainerCount": 6,
+      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
     },
     {
       "id": "go_park",
