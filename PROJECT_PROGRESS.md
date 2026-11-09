@@ -6100,3 +6100,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Filtry działają równocześnie z wyszukiwarką tekstową; licznik pokazuje liczbę wyników po zastosowaniu obu warunków, a pusty wynik ma osobny komunikat.
 - Zmiana dotyczy UI aplikacji i wykorzystuje istniejące pole `kind` w danych regionalnych; nie zmienia danych map ani nie dopisuje niezweryfikowanych lokalizacji.
 - Nie uruchomiono Flutter Analyzer, testów Flutter ani kompilacji APK. Działanie filtrów wymaga sprawdzenia w aplikacji na kilku regionach.
+
+
+### Mapy Kanto — bardziej growy wygląd mapy regionu (2026-11-09)
+
+- W warstwie malowania mapy dodano drobne, wielowarstwowe kępki trawy na obszarach lądowych, z ograniczeniem rysowania do konturu wyspy.
+- Zmieniono środkowy kolor dróg na cieplejszy, ziemisty odcień i rozjaśniono ich obrys, aby lepiej przypominały ścieżki w mapie RPG.
+- Zmieniono podpis mapy z atlasowego na „LET’S GO • ADVENTURE MAP”. Wszystkie nowe elementy są dekoracyjne; nie oznaczają dokładnych biomów, spotkań ani współrzędnych z gry.
+- Nie uruchomiono Flutter Analyzer, testów Flutter ani kompilacji APK. Wygląd wymaga oceny na urządzeniu i ewentualnej korekty czytelności przy małym ekranie.
