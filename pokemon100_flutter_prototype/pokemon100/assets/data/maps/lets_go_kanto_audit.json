@@ -782,6 +782,31 @@
       "id": "altissimo-celadon-lgpe",
       "url": "https://altissimo1.github.io/Main-Series/Kanto-Locations/celadon-city.html",
       "scope": "Let's Go Pikachu/Eevee Celadon City field items, Department Store inventory by floor and prices, and Game Corner daily hidden-item probabilities"
+    },
+    {
+      "id": "altissimo-saffron-lgpe",
+      "url": "https://altissimo1.github.io/Main-Series/Kanto-Locations/saffron-city.html",
+      "scope": "Let's Go Saffron City items, gifts, hidden items, shops and Master Trainers"
+    },
+    {
+      "id": "altissimo-lavender-lgpe",
+      "url": "https://altissimo1.github.io/Main-Series/Kanto-Locations/lavender-town.html",
+      "scope": "Let's Go Lavender Town gifts, Poké Mart inventory and Master Trainers"
+    },
+    {
+      "id": "altissimo-pokemon-tower-lgpe",
+      "url": "https://altissimo1.github.io/Main-Series/Kanto-Locations/pokemon-tower.html",
+      "scope": "Let's Go Pokémon Tower items by floor, hidden items and trainers"
+    },
+    {
+      "id": "altissimo-power-plant-lgpe",
+      "url": "https://altissimo1.github.io/Main-Series/Kanto-Locations/power-plant.html",
+      "scope": "Let's Go Power Plant items by room, hidden items and Coach Trainer"
+    },
+    {
+      "id": "altissimo-silph-co-lgpe",
+      "url": "https://altissimo1.github.io/Main-Series/Kanto-Locations/silph-co.html",
+      "scope": "Let's Go Silph Co. items by floor and trainers"
     }
   ],
   "locations": [
@@ -6589,25 +6614,15 @@
         "Pokémon Tower"
       ],
       "items": [
-        "X Attack",
-        "Elixir",
-        "Awakening",
-        "Super Potion",
-        "Escape Rope",
-        "TM04",
-        "Full Heal",
-        "Ice Stone",
-        "Nugget",
-        "Revive",
-        "Rare Candy",
-        "3 Ultra Balls",
-        "Hyper Potion",
-        "ukryte: Pearl, Star Piece, Super Potion, Big Pearl, PP Up"
+        "Pretty Wing — z kwietnika na południe od Pokémon Tower; rzadki przedmiot znajdowany przez niektóre Pokémony chodzące za graczem.",
+        "Poké Flute — od Mr. Fuji w Volunteer Pokémon House po uratowaniu go z Pokémon Tower.",
+        "Great Ball ×20 — od mężczyzny po zachodniej stronie miasta po uratowaniu Cubone z Team Rocket Hideout."
       ],
       "sourceIds": [
         "routepedia-lavender-pikachu",
         "bulbapedia-part8",
-        "pokemondb-mastertrainers"
+        "pokemondb-mastertrainers",
+        "altissimo-lavender-lgpe"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "trainers": [
@@ -6659,7 +6674,8 @@
             "bulbapedia-part8"
           ]
         }
-      ]
+      ],
+      "itemsStatus": "Let's Go-specific town items and story gifts verified from Altissimo and Bulbapedia Part 8; legacy-game pickups removed"
     },
     {
       "id": "underground_path_7_8",
@@ -9059,7 +9075,8 @@
         "routepedia-saffron-pikachu",
         "pokemondb-mastertrainers",
         "supercheats-saffron-postgame",
-        "bulbapedia-part10"
+        "bulbapedia-part10",
+        "altissimo-saffron-lgpe"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
@@ -9114,7 +9131,15 @@
         "Master Trainer Psychic Jaime — Kadabra Lv. 75 (dom Mr. Psychic)."
       ],
       "trainerCount": 4,
-      "trainerStatus": "postgame_master_trainer_teams_verified"
+      "trainerStatus": "postgame_master_trainer_teams_verified",
+      "items": [
+        "TM08 (Substitute) — od Copycat w północno-zachodnim domu po pokazaniu Clefairy.",
+        "Moon Stone — ukryty, północna strona łóżka Copycat; codzienna znajdźka.",
+        "TM40 (Psychic) — od Mr. Psychic w domu w południowo-wschodniej części miasta.",
+        "X Sp. Def — przed Saffron Gym, po wschodniej stronie sali.",
+        "Police Set — od Officer Jenny na wschód od Saffron Gym po pokonaniu Giovanniego w Silph Co."
+      ],
+      "itemsStatus": "all five Let's Go city items and gifts verified from Altissimo Saffron guide"
     },
     {
       "id": "route_16",
@@ -13270,12 +13295,13 @@
       "notablePokemon": [
         "Zapdos"
       ],
-      "notes": "Zapdos jest statycznym spotkaniem na poziomie 50. Pozycje przedmiotów i wewnętrzny plan elektrowni nie są jeszcze naniesione.",
+      "notes": "Zapdos jest statycznym spotkaniem na poziomie 50. Lista przedmiotów rozpisana według pomieszczeń; cztery fałszywe Electrode wyglądające jak Poké Balle nie są przedmiotami do zebrania i zostały usunięte z listy znajdziek. Dokładne pinezki nadal nie są naniesione.",
       "sourceIds": [
         "bulbapedia-part14",
         "rotomlabs-power-plant",
         "pokemondb-mastertrainers",
-        "serebii-coachtrainers"
+        "serebii-coachtrainers",
+        "altissimo-power-plant-lgpe"
       ],
       "dataStatus": "encounter_rates_verified_from_rotomlabs_positions_not_mapped",
       "wildPokemonDetails": {
@@ -13449,16 +13475,22 @@
       "trainerCount": 3,
       "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb",
       "items": [
-        "Max Revive — na północ od pomieszczenia wejściowego.",
-        "Rare Candy ×5 — nagroda Coach Trainer Mable; dodatkowa Rare Candy znajduje się w południowo-centralnym pokoju przy dużej maszynie.",
+        "Max Revive — na północny wschód od wejścia.",
+        "Rare Candy ×5 — nagroda od Coach Trainer Mable po pokonaniu jej.",
+        "Max Potion — północno-wschodni narożnik poziomego korytarza w centrum.",
+        "Voltorb Candy — ukryta przy podstawie najbardziej wschodniej czerwonej beczki w dolnym rzędzie centralnego poziomego pomieszczenia.",
+        "Voltorb Candy — ukryta przy podstawie najbardziej wschodniej czerwonej beczki w środkowym rzędzie centralnego poziomego pomieszczenia.",
+        "Voltorb Candy — ukryta przy podstawie najbardziej wschodniej czerwonej beczki w górnym rzędzie centralnego poziomego pomieszczenia.",
+        "Voltorb Candy — ukryta przy podstawie najbardziej zachodniej czerwonej beczki w górnym rzędzie centralnego poziomego pomieszczenia.",
         "X Sp. Def — na południowy wschód od Coach Trainer Mable.",
-        "TM38 (Thunder) — południowo-wschodni pokój.",
-        "Thunder Stone — północno-wschodni pokój, północno-zachodni narożnik.",
-        "Max Potion ×2 — jedna w północno-wschodnim narożniku długiego poziomego korytarza w centrum, druga w północno-wschodnim pokoju.",
-        "Voltorb Candy — centralny pokój.",
-        "Paralyze Heal — centralny pokój, przy Electrode.",
-        "Electrode ×4 — fałszywe przedmioty wyglądające jak Poké Balle; występują w kilku wskazanych pomieszczeniach i nie są nagrodami do zebrania."
-      ]
+        "Rare Candy — w pomieszczeniu na wschód od południowego wejścia.",
+        "TM38 (Thunder) — w południowo-wschodniej części elektrowni.",
+        "Thunder Stone — północno-wschodni pokój.",
+        "Max Potion — północno-wschodni pokój.",
+        "Pretty Wing — ukryty na południe od wschodniego komputera w pokoju na wschód od Zapdos.",
+        "Paralyze Heal — w pomieszczeniu na północ od centralnego poziomego korytarza."
+      ],
+      "itemsStatus": "14 Let's Go item/reward entries verified by room from Altissimo; four hidden Voltorb Candy spots and Pretty Wing itemized; fake Electrode decoys excluded"
     },
     {
       "id": "pokemon_tower",
@@ -13482,13 +13514,14 @@
         "Pokémon Tower",
         "Mr. Fuji"
       ],
-      "notes": "Dane spotkań obejmują ogólną tabelę i piętra 3F–6F; pełny plan wieży, trenerzy i pozycje przedmiotów wymagają osobnego odwzorowania.",
+      "notes": "Dane spotkań obejmują ogólną tabelę i piętra 3F–6F. Przedmioty rozpisano na 1F–6F; 7F jest piętrem wydarzenia z Mr. Fuji, bez osobnego item pickup w tabeli. Pełny plan geometryczny, trenerzy i pinezki nadal wymagają odwzorowania.",
       "sourceIds": [
         "bulbapedia-part9",
         "rotomlabs-pokemon-tower",
         "bulbapedia-part8",
         "pokemondb-mastertrainers",
-        "serebii-coachtrainers"
+        "serebii-coachtrainers",
+        "altissimo-pokemon-tower-lgpe"
       ],
       "dataStatus": "encounter_rates_verified_from_rotomlabs_positions_not_mapped",
       "wildPokemonDetails": {
@@ -13814,16 +13847,28 @@
       "trainerCount": 18,
       "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb",
       "items": [
-        "Formal Set — 1F, od starszej kobiety siedzącej na sofie.",
+        "Formal Set — 1F, od starszej kobiety.",
+        "X Attack — 2F, na północny wschód od schodów na 3F.",
         "Elixir — 2F, południowo-zachodnia część piętra.",
-        "Pearl — 2F, przy południowej ścianie, na najbardziej wschodnim nagrobku (ukryty, codzienny).",
-        "X Attack — 2F, północno-zachodnia część piętra.",
-        "Pikachu Candy ×5 / Eevee Candy ×5 — 2F, nagroda Coach Trainer Holly zależnie od wersji gry.",
+        "Pearl — 2F, na najbardziej południowo-wschodnim nagrobku (ukryty, codzienny).",
+        "Pikachu Candy ×5 albo Eevee Candy ×5 — 2F, nagroda Coach Trainer Holly zależna od wersji gry.",
+        "Awakening — 3F, obok Channeler Hope.",
+        "Super Potion — 3F, centralna część piętra.",
         "Star Piece — 3F, na końcu ścieżki na wschód od Channeler Hope (ukryty).",
+        "Escape Rope — 4F, na zachód od schodów na 3F.",
+        "Full Heal — 4F, na północ od schodów na 3F.",
+        "TM04 (Teleport) — 4F, w pobliżu środka piętra.",
         "Super Potion — 4F, na końcu ścieżki na północ od Full Heal (ukryty).",
-        "Big Pearl — 5F, na południowo-wschodnim nagrobku (ukryty).",
-        "PP Up — 6F, przy północno-zachodniej ścianie, na ścieżce na południe od Hyper Potion (ukryty)."
-      ]
+        "Nugget — 5F, północno-zachodnia część piętra.",
+        "Ice Stone — 5F, południowo-zachodnia część piętra.",
+        "Big Pearl — 5F, na południowo-wschodnim nagrobku (ukryty, codzienny).",
+        "Revive — 6F, na południe od schodów na 5F.",
+        "Ultra Ball ×3 — 6F, na północ od schodów na 5F.",
+        "Hyper Potion — 6F, północno-zachodnia część piętra.",
+        "PP Up — 6F, północno-zachodni narożnik przy ścianie, na ścieżce na południe od Hyper Potion (ukryty, codzienny).",
+        "Rare Candy — 6F, w pobliżu schodów na 7F; dostęp wymaga Silph Scope."
+      ],
+      "itemsStatus": "20 Let's Go item/reward entries verified by floor from Altissimo; daily hidden items and Silph Scope gate noted"
     },
     {
       "id": "rocket_hideout",
@@ -13929,7 +13974,8 @@
       ],
       "sourceIds": [
         "bulbapedia-part10",
-        "pokemondb-mastertrainers"
+        "pokemondb-mastertrainers",
+        "altissimo-silph-co-lgpe"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
@@ -13937,6 +13983,7 @@
         "Budynek ma 11 pięter i teleporty; trasa przez teleporty jest informacyjna, nie dokładnie odwzorowana."
       ],
       "trainers": [
+        "Blue — Exeggutor Lv. 38 i Charizard Lv. 40 (1F).",
         "Team Rocket Grunt — Raticate Lv. 33 (2F).",
         "Team Rocket Grunt — Koffing Lv. 33 ×3 (2F).",
         "Scientist Jerry — Electabuzz Lv. 35 (2F).",
@@ -13972,8 +14019,8 @@
         "Master Trainer Black Belt Masahiro — Machop Lv. 65 (Silph Co., 4F, północny zachód)",
         "Master Trainer Ace Trainer Leopold — Kingler Lv. 75 (Silph Co., 1F)"
       ],
-      "trainerCount": 34,
-      "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb",
+      "trainerCount": 35,
+      "trainerStatus": "story teams and Blue's 1F battle cross-checked against Altissimo Let's Go Silph Co. guide; Master Trainer entries retained",
       "items": [
         "X Sp. Atk — 1F, południowa strona dwóch fontann.",
         "Super Potion — 2F, centralny pokój przy zachodniej ścianie.",
@@ -14572,7 +14619,8 @@
       "sourceIds": [
         "routepedia-saffron-pikachu",
         "bulbapedia-part10",
-        "serebii-gym-rematches"
+        "serebii-gym-rematches",
+        "altissimo-saffron-lgpe"
       ],
       "dataStatus": "leader_verified_team_needs_review",
       "events": [
@@ -14591,7 +14639,11 @@
         "Rewanż postgame — Sabrina: Mr. Mime Lv. 56, Jynx Lv. 56, Hypno Lv. 56, Slowbro Lv. 56 i Alakazam Lv. 57."
       ],
       "trainerCount": 8,
-      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
+      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough",
+      "items": [
+        "TM33 (Calm Mind) — nagroda od Sabriny po pokonaniu jej."
+      ],
+      "itemsStatus": "TM33 reward verified from Altissimo Saffron guide"
     },
     {
       "id": "fuchsia_gym",
@@ -15037,7 +15089,8 @@
         "bulbapedia-part10",
         "pokemondb-mastertrainers",
         "supercheats-saffron-postgame",
-        "serebii-coachtrainers"
+        "serebii-coachtrainers",
+        "altissimo-saffron-lgpe"
       ],
       "dataStatus": "schematic_interior_available_exact_layout_pending",
       "coordinateStatus": "unverified",
@@ -15055,7 +15108,16 @@
         "Master Trainer Black Belt Wong — Hitmonchan Lv. 75 (po ukończeniu głównej historii)."
       ],
       "trainerCount": 8,
-      "trainerStatus": "postgame_master_trainer_teams_verified"
+      "trainerStatus": "postgame_master_trainer_teams_verified",
+      "items": [
+        "TM23 (Thunder Punch) — nagroda od Coach Trainer Leona po walce.",
+        "Poké Ball ×3 — nagroda za pokonanie Black Belt Hitoshi.",
+        "Poké Ball ×3 — nagroda za pokonanie Black Belt Aaron.",
+        "Poké Ball ×3 — nagroda za pokonanie Black Belt Hideki.",
+        "Poké Ball ×3 — nagroda za pokonanie Black Belt Mike.",
+        "Hitmonlee albo Hitmonchan — wybierz jednego z dwóch Pokémonów po pokonaniu Karate Master Koichi."
+      ],
+      "itemsStatus": "dojo trainer rewards and one-time Hitmonlee/Hitmonchan choice verified from Thonky and Bulbapedia"
     },
     {
       "id": "go_park",
