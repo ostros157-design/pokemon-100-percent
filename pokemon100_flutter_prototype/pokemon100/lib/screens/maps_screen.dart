@@ -5867,6 +5867,55 @@ class _KantoMapPainter extends CustomPainter {
       );
     }
 
+    // Small, layered grass tufts give open fields the readable, lively look of
+    // an RPG overworld. They are decorative texture, not verified encounter
+    // patches or exact terrain from the game.
+    canvas.save();
+    canvas.clipPath(coast);
+    final grassBase = Paint()
+      ..isAntiAlias = true
+      ..color = const Color(0xFF6FA66B).withValues(alpha: .34);
+    final grassBlade = Paint()
+      ..isAntiAlias = true
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 1.8 * size.width / 900
+      ..strokeCap = StrokeCap.round;
+    for (final patch in <(double, double, double)>[
+      (.29, .43, 1.0), (.34, .48, .8), (.39, .59, .9),
+      (.48, .63, .75), (.54, .70, .9), (.72, .49, .8),
+      (.75, .62, 1.0), (.80, .52, .75), (.57, .25, .7),
+      (.31, .68, .8), (.27, .77, .65), (.70, .83, .7),
+      (.52, .18, .65), (.80, .25, .7), (.46, .45, .55),
+    ]) {
+      final center = p(patch.$1, patch.$2);
+      final scale = size.width / 900 * patch.$3;
+      canvas.drawOval(
+        Rect.fromCenter(
+          center: center,
+          width: 17 * scale,
+          height: 7 * scale,
+        ),
+        grassBase,
+      );
+      for (var blade = 0; blade < 3; blade++) {
+        final x = center.dx + (blade - 1) * 4 * scale;
+        final top = center.dy - (5 + (blade == 1 ? 3 : 0)) * scale;
+        grassBlade.color = blade.isEven
+            ? const Color(0xFF4F8C5A).withValues(alpha: .78)
+            : const Color(0xFF9BCB78).withValues(alpha: .9);
+        final tuft = Path()
+          ..moveTo(x, center.dy + 2 * scale)
+          ..quadraticBezierTo(
+            x - 1.5 * scale,
+            center.dy - 2 * scale,
+            x + (blade - 1) * 2 * scale,
+            top,
+          );
+        canvas.drawPath(tuft, grassBlade);
+      }
+    }
+    canvas.restore();
+
     // Decorative illustrated details only. These tree and hill motifs are
     // intentionally not data markers and do not identify real in-game biomes.
     final treeGroups = <(double, double, double)>[
@@ -6231,12 +6280,12 @@ class _KantoMapPainter extends CustomPainter {
       ..strokeWidth = 11
       ..strokeCap = StrokeCap.round;
     final roadEdge = Paint()..isAntiAlias = true
-      ..color = const Color(0xFFFAF1CE)
+      ..color = const Color(0xFFFFF0C2)
       ..style = PaintingStyle.stroke
       ..strokeWidth = 8
       ..strokeCap = StrokeCap.round;
     final roadCenter = Paint()..isAntiAlias = true
-      ..color = const Color(0xFFE5D49B)
+      ..color = const Color(0xFFC69A5B)
       ..style = PaintingStyle.stroke
       ..strokeWidth = 4.5
       ..strokeCap = StrokeCap.round;
@@ -6650,7 +6699,7 @@ class _KantoMapPainter extends CustomPainter {
     )..layout();
     final subtitle = TextPainter(
       text: const TextSpan(
-        text: 'REGIONAL ATLAS  •  SCHEMATIC',
+        text: 'LET’S GO  •  ADVENTURE MAP',
         style: TextStyle(
           color: Color(0xFF6F8068),
           fontSize: 6.5,
