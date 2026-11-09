@@ -6043,3 +6043,12 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Poprawiono również opis składu Sabriny w Saffron Gym z błędnych poziomów 38–39 na Mr. Mime 43, Slowbro 43, Jynx 43 i Alakazam 44.
 - Uzupełniono nagrody Lt. Surge: Autograph oraz TM36 (Thunderbolt).
 - Źródło weryfikacji: Serebii — Pokémon: Let's Go, Pikachu! & Let's Go, Eevee! Gyms; potwierdzenie składu Sabriny również w Bulbapedia i Pokémon Database. Nie uruchomiono testów Flutter ani APK.
+
+
+### Let's Go Kanto — Vermilion City i S.S. Anne: rozdzielenie znajdziek oraz brakująca walka Trace’a (2026-11-09)
+
+- Rozdzielono przedmioty miasta i statku: Pinap Berry ×3 oraz Tiny Mushroom pozostają na S.S. Anne; w Vermilion City pozostają siedem znajdziek item-ball, trzy potwierdzone ukryte znajdźki (Full Heal, Big Pearl, Revive) oraz Sailor Set za pokazanie S.S. Ticket marynarzowi.
+- Dodano brakującą walkę z Trace’em na 2F S.S. Anne: Pidgeotto Lv. 20, Oddish Lv. 20 oraz Eevee Lv. 21 w Let's Go Pikachu albo Pikachu Lv. 21 w Let's Go Eevee. Licznik statków wzrósł do 13 wpisów trenerów.
+- Poprawiono błąd wersji przy prezentach za złapanie pięciu Pokémonów: Persian Lv. 16 jest nagrodą w Let's Go Pikachu (po złapaniu Growlithe), a Arcanine Lv. 16 w Let's Go Eevee (po złapaniu Meowth).
+- Dodano Pretty Wing jako rzadki przedmiot znajdowany przez kwalifikujące się Pokémony chodzące za graczem przy wejściu na Route 11 oraz TM14 Fly do listy nagród Fuchsia City (ukryty dom, dostęp po Chop Down).
+- Źródła: Altissimo — przewodniki Vermilion City i S.S. Anne; Bulbapedia i Gamer Guides — walka Trace’a na statku. Nie deklarowano współrzędnych pinezek. Flutter Analyzer, testy i APK nadal nie zostały uruchomione.
