@@ -5309,7 +5309,35 @@ class _KantoRegionMapState extends State<_KantoRegionMap> {
     if (oldWidget.selectedLocation != widget.selectedLocation &&
         widget.selectedLocation.trim().isNotEmpty) {
       setState(() => _visibleLocation = widget.selectedLocation);
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (mounted) _centerOnNamedLocation(widget.selectedLocation);
+      });
     }
+  }
+
+  void _centerOnNamedLocation(String name) {
+    final viewport = _lastViewportSize;
+    if (viewport == null) return;
+    _MapPlace? target;
+    for (final place in _KantoMapPainter.places) {
+      if (place.name.toLowerCase() == name.trim().toLowerCase()) {
+        target = place;
+        break;
+      }
+    }
+    if (target == null) return;
+
+    final scale = _transformController.value
+        .getMaxScaleOnAxis()
+        .clamp(0.35, 4.0)
+        .toDouble();
+    _hasUserInteracted = true;
+    _transformController.value = Matrix4.identity()
+      ..translate(
+        viewport.width / 2 - target.x * _mapWidth * scale,
+        viewport.height / 2 - target.y * _mapHeight * scale,
+      )
+      ..scale(scale);
   }
 
   @override
