@@ -2928,13 +2928,125 @@
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "features": [
-        "Pokémon Center",
-        "Poké Mart",
-        "Cerulean Gym",
-        "Bicycle Shop",
-        "Herb Shop",
-        "dom z północnym wyjściem",
-        "dom złodzieja"
+        {
+          "id": "cerulean_city_pokemon_center",
+          "name": "Pokémon Center",
+          "category": "landmark",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "routepedia-cerulean-pikachu",
+            "routepedia-cerulean-eevee",
+            "bulbapedia-part5",
+            "pokemondb-mastertrainers",
+            "supercheats-cerulean-postgame",
+            "bulbapedia-part16",
+            "serebii-coachtrainers",
+            "serebii-green"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "cerulean_city_poke_mart",
+          "name": "Poké Mart",
+          "category": "landmark",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "routepedia-cerulean-pikachu",
+            "routepedia-cerulean-eevee",
+            "bulbapedia-part5",
+            "pokemondb-mastertrainers",
+            "supercheats-cerulean-postgame",
+            "bulbapedia-part16",
+            "serebii-coachtrainers",
+            "serebii-green"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "cerulean_city_cerulean_gym",
+          "name": "Cerulean Gym",
+          "category": "building",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "routepedia-cerulean-pikachu",
+            "routepedia-cerulean-eevee",
+            "bulbapedia-part5",
+            "pokemondb-mastertrainers",
+            "supercheats-cerulean-postgame",
+            "bulbapedia-part16",
+            "serebii-coachtrainers",
+            "serebii-green"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "cerulean_city_bicycle_shop",
+          "name": "Bicycle Shop",
+          "category": "building",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "routepedia-cerulean-pikachu",
+            "routepedia-cerulean-eevee",
+            "bulbapedia-part5",
+            "pokemondb-mastertrainers",
+            "supercheats-cerulean-postgame",
+            "bulbapedia-part16",
+            "serebii-coachtrainers",
+            "serebii-green"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "cerulean_city_herb_shop",
+          "name": "Herb Shop",
+          "category": "building",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "routepedia-cerulean-pikachu",
+            "routepedia-cerulean-eevee",
+            "bulbapedia-part5",
+            "pokemondb-mastertrainers",
+            "supercheats-cerulean-postgame",
+            "bulbapedia-part16",
+            "serebii-coachtrainers",
+            "serebii-green"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "cerulean_city_dom_z_po_nocnym_wyjsciem",
+          "name": "dom z północnym wyjściem",
+          "category": "building",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "routepedia-cerulean-pikachu",
+            "routepedia-cerulean-eevee",
+            "bulbapedia-part5",
+            "pokemondb-mastertrainers",
+            "supercheats-cerulean-postgame",
+            "bulbapedia-part16",
+            "serebii-coachtrainers",
+            "serebii-green"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "cerulean_city_dom_z_odzieja",
+          "name": "dom złodzieja",
+          "category": "building",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "routepedia-cerulean-pikachu",
+            "routepedia-cerulean-eevee",
+            "bulbapedia-part5",
+            "pokemondb-mastertrainers",
+            "supercheats-cerulean-postgame",
+            "bulbapedia-part16",
+            "serebii-coachtrainers",
+            "serebii-green"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        }
       ],
       "wildPokemonDetails": {
         "sky": [
@@ -3749,7 +3861,20 @@
         "S.S. Ticket ×2 — od Billa po zakończeniu wydarzenia w Sea Cottage."
       ],
       "features": [
-        "Bill's House"
+        {
+          "id": "route_25_bill_s_house",
+          "name": "Bill's House",
+          "category": "building",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "routepedia-route25-pikachu",
+            "serebii-route25",
+            "bulbapedia-part5",
+            "pokemondb-mastertrainers",
+            "serebii-coachtrainers"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        }
       ],
       "sourceIds": [
         "routepedia-route25-pikachu",
@@ -4002,8 +4127,34 @@
         ]
       },
       "features": [
-        "Day Care",
-        "Underground Path entrance"
+        {
+          "id": "route_5_day_care",
+          "name": "Day Care",
+          "category": "building",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "routepedia-route5-pikachu",
+            "routepedia-route5-eevee",
+            "serebii-route5",
+            "bulbapedia-part5",
+            "pokemondb-mastertrainers"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "route_5_underground_path_entrance",
+          "name": "Underground Path entrance",
+          "category": "entrance",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "routepedia-route5-pikachu",
+            "routepedia-route5-eevee",
+            "serebii-route5",
+            "bulbapedia-part5",
+            "pokemondb-mastertrainers"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        }
       ],
       "items": [
         "3 Great Balls",
@@ -4523,11 +4674,76 @@
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "features": [
-        "Pokémon Center",
-        "Poké Mart",
-        "Pokémon Fan Club",
-        "Vermilion Gym",
-        "port i S.S. Anne"
+        {
+          "id": "vermilion_city_pokemon_center",
+          "name": "Pokémon Center",
+          "category": "landmark",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "routepedia-vermilion-pikachu",
+            "routepedia-vermilion-eevee",
+            "pokemondb-mastertrainers",
+            "bulbapedia-part6",
+            "serebii-coachtrainers"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "vermilion_city_poke_mart",
+          "name": "Poké Mart",
+          "category": "landmark",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "routepedia-vermilion-pikachu",
+            "routepedia-vermilion-eevee",
+            "pokemondb-mastertrainers",
+            "bulbapedia-part6",
+            "serebii-coachtrainers"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "vermilion_city_pokemon_fan_club",
+          "name": "Pokémon Fan Club",
+          "category": "building",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "routepedia-vermilion-pikachu",
+            "routepedia-vermilion-eevee",
+            "pokemondb-mastertrainers",
+            "bulbapedia-part6",
+            "serebii-coachtrainers"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "vermilion_city_vermilion_gym",
+          "name": "Vermilion Gym",
+          "category": "building",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "routepedia-vermilion-pikachu",
+            "routepedia-vermilion-eevee",
+            "pokemondb-mastertrainers",
+            "bulbapedia-part6",
+            "serebii-coachtrainers"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "vermilion_city_port_i_s_s_anne",
+          "name": "port i S.S. Anne",
+          "category": "landmark",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "routepedia-vermilion-pikachu",
+            "routepedia-vermilion-eevee",
+            "pokemondb-mastertrainers",
+            "bulbapedia-part6",
+            "serebii-coachtrainers"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        }
       ],
       "items": [
         "Super Repel",
@@ -5819,9 +6035,54 @@
         "Nanab Berry ×5 — ukryte w kwiatach na południowej połowie trasy, na wschód od wyjścia z Rock Tunnel (znajdźka dzienna)."
       ],
       "features": [
-        "Pokémon Center",
-        "Power Plant",
-        "wejście do Rock Tunnel"
+        {
+          "id": "route_10_pokemon_center",
+          "name": "Pokémon Center",
+          "category": "landmark",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "routepedia-route10-pikachu",
+            "bulbapedia-part8",
+            "serebii-route10",
+            "bulbapedia-part13",
+            "pokemondb-mastertrainers",
+            "serebii-coachtrainers",
+            "altissimo-hidden-items-lgpe"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "route_10_power_plant",
+          "name": "Power Plant",
+          "category": "building",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "routepedia-route10-pikachu",
+            "bulbapedia-part8",
+            "serebii-route10",
+            "bulbapedia-part13",
+            "pokemondb-mastertrainers",
+            "serebii-coachtrainers",
+            "altissimo-hidden-items-lgpe"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "route_10_wejscie_do_rock_tunnel",
+          "name": "wejście do Rock Tunnel",
+          "category": "landmark",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "routepedia-route10-pikachu",
+            "bulbapedia-part8",
+            "serebii-route10",
+            "bulbapedia-part13",
+            "pokemondb-mastertrainers",
+            "serebii-coachtrainers",
+            "altissimo-hidden-items-lgpe"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        }
       ],
       "sourceIds": [
         "routepedia-route10-pikachu",
@@ -6710,10 +6971,58 @@
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "features": [
-        "Pokémon Center",
-        "Poké Mart",
-        "Mr. Fuji's House",
-        "Pokémon Tower"
+        {
+          "id": "lavender_town_pokemon_center",
+          "name": "Pokémon Center",
+          "category": "landmark",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "routepedia-lavender-pikachu",
+            "bulbapedia-part8",
+            "pokemondb-mastertrainers",
+            "altissimo-lavender-lgpe"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "lavender_town_poke_mart",
+          "name": "Poké Mart",
+          "category": "landmark",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "routepedia-lavender-pikachu",
+            "bulbapedia-part8",
+            "pokemondb-mastertrainers",
+            "altissimo-lavender-lgpe"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "lavender_town_mr_fuji_s_house",
+          "name": "Mr. Fuji's House",
+          "category": "building",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "routepedia-lavender-pikachu",
+            "bulbapedia-part8",
+            "pokemondb-mastertrainers",
+            "altissimo-lavender-lgpe"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "lavender_town_pokemon_tower",
+          "name": "Pokémon Tower",
+          "category": "landmark",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "routepedia-lavender-pikachu",
+            "bulbapedia-part8",
+            "pokemondb-mastertrainers",
+            "altissimo-lavender-lgpe"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        }
       ],
       "items": [
         "Pretty Wing — z kwietnika na południe od Pokémon Tower; rzadki przedmiot znajdowany przez niektóre Pokémony chodzące za graczem.",
@@ -7149,7 +7458,20 @@
         "Razz Berry / Silver Razz Berry / Golden Razz Berry — krzak w północno-zachodnim narożniku; partner Pokémon może znaleźć różne warianty."
       ],
       "features": [
-        "Route 11 Gate"
+        {
+          "id": "route_11_route_11_gate",
+          "name": "Route 11 Gate",
+          "category": "entrance",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "routepedia-route11-pikachu",
+            "bulbapedia-part7",
+            "serebii-route11",
+            "pokemondb-mastertrainers",
+            "serebii-coachtrainers"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        }
       ],
       "sourceIds": [
         "routepedia-route11-pikachu",
@@ -8977,11 +9299,76 @@
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "features": [
-        "Pokémon Center",
-        "Poké Mart",
-        "Fuchsia Gym",
-        "pokój Warden",
-        "GO Park / Playful Park"
+        {
+          "id": "fuchsia_city_pokemon_center",
+          "name": "Pokémon Center",
+          "category": "landmark",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "bulbapedia-part12",
+            "bulbapedia-part11",
+            "pokemondb-mastertrainers",
+            "supercheats-fuchsia-postgame",
+            "serebii-gym-leaders-lgpe"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "fuchsia_city_poke_mart",
+          "name": "Poké Mart",
+          "category": "landmark",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "bulbapedia-part12",
+            "bulbapedia-part11",
+            "pokemondb-mastertrainers",
+            "supercheats-fuchsia-postgame",
+            "serebii-gym-leaders-lgpe"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "fuchsia_city_fuchsia_gym",
+          "name": "Fuchsia Gym",
+          "category": "building",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "bulbapedia-part12",
+            "bulbapedia-part11",
+            "pokemondb-mastertrainers",
+            "supercheats-fuchsia-postgame",
+            "serebii-gym-leaders-lgpe"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "fuchsia_city_pokoj_warden",
+          "name": "pokój Warden",
+          "category": "landmark",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "bulbapedia-part12",
+            "bulbapedia-part11",
+            "pokemondb-mastertrainers",
+            "supercheats-fuchsia-postgame",
+            "serebii-gym-leaders-lgpe"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "fuchsia_city_go_park_playful_park",
+          "name": "GO Park / Playful Park",
+          "category": "building",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "bulbapedia-part12",
+            "bulbapedia-part11",
+            "pokemondb-mastertrainers",
+            "supercheats-fuchsia-postgame",
+            "serebii-gym-leaders-lgpe"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        }
       ],
       "items": [
         "Super Lure",
@@ -9091,13 +9478,104 @@
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "features": [
-        "Pokémon Center",
-        "Poké Mart",
-        "Celadon Department Store",
-        "Celadon Game Corner",
-        "Rocket Hideout",
-        "Celadon Gym",
-        "Celadon Restaurant"
+        {
+          "id": "celadon_city_pokemon_center",
+          "name": "Pokémon Center",
+          "category": "landmark",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "routepedia-celadon-pikachu",
+            "pokemondb-mastertrainers",
+            "supercheats-celadon-postgame",
+            "bulbapedia-part9",
+            "altissimo-celadon-lgpe"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "celadon_city_poke_mart",
+          "name": "Poké Mart",
+          "category": "landmark",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "routepedia-celadon-pikachu",
+            "pokemondb-mastertrainers",
+            "supercheats-celadon-postgame",
+            "bulbapedia-part9",
+            "altissimo-celadon-lgpe"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "celadon_city_celadon_department_store",
+          "name": "Celadon Department Store",
+          "category": "building",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "routepedia-celadon-pikachu",
+            "pokemondb-mastertrainers",
+            "supercheats-celadon-postgame",
+            "bulbapedia-part9",
+            "altissimo-celadon-lgpe"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "celadon_city_celadon_game_corner",
+          "name": "Celadon Game Corner",
+          "category": "building",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "routepedia-celadon-pikachu",
+            "pokemondb-mastertrainers",
+            "supercheats-celadon-postgame",
+            "bulbapedia-part9",
+            "altissimo-celadon-lgpe"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "celadon_city_rocket_hideout",
+          "name": "Rocket Hideout",
+          "category": "building",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "routepedia-celadon-pikachu",
+            "pokemondb-mastertrainers",
+            "supercheats-celadon-postgame",
+            "bulbapedia-part9",
+            "altissimo-celadon-lgpe"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "celadon_city_celadon_gym",
+          "name": "Celadon Gym",
+          "category": "building",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "routepedia-celadon-pikachu",
+            "pokemondb-mastertrainers",
+            "supercheats-celadon-postgame",
+            "bulbapedia-part9",
+            "altissimo-celadon-lgpe"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "celadon_city_celadon_restaurant",
+          "name": "Celadon Restaurant",
+          "category": "building",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "routepedia-celadon-pikachu",
+            "pokemondb-mastertrainers",
+            "supercheats-celadon-postgame",
+            "bulbapedia-part9",
+            "altissimo-celadon-lgpe"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        }
       ],
       "sourceIds": [
         "routepedia-celadon-pikachu",
@@ -9187,11 +9665,76 @@
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "features": [
-        "Pokémon Center",
-        "Poké Mart",
-        "Silph Co.",
-        "Saffron Gym",
-        "Fighting Dojo"
+        {
+          "id": "saffron_city_pokemon_center",
+          "name": "Pokémon Center",
+          "category": "landmark",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "routepedia-saffron-pikachu",
+            "pokemondb-mastertrainers",
+            "supercheats-saffron-postgame",
+            "bulbapedia-part10",
+            "altissimo-saffron-lgpe"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "saffron_city_poke_mart",
+          "name": "Poké Mart",
+          "category": "landmark",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "routepedia-saffron-pikachu",
+            "pokemondb-mastertrainers",
+            "supercheats-saffron-postgame",
+            "bulbapedia-part10",
+            "altissimo-saffron-lgpe"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "saffron_city_silph_co",
+          "name": "Silph Co.",
+          "category": "building",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "routepedia-saffron-pikachu",
+            "pokemondb-mastertrainers",
+            "supercheats-saffron-postgame",
+            "bulbapedia-part10",
+            "altissimo-saffron-lgpe"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "saffron_city_saffron_gym",
+          "name": "Saffron Gym",
+          "category": "building",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "routepedia-saffron-pikachu",
+            "pokemondb-mastertrainers",
+            "supercheats-saffron-postgame",
+            "bulbapedia-part10",
+            "altissimo-saffron-lgpe"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "saffron_city_fighting_dojo",
+          "name": "Fighting Dojo",
+          "category": "landmark",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "routepedia-saffron-pikachu",
+            "pokemondb-mastertrainers",
+            "supercheats-saffron-postgame",
+            "bulbapedia-part10",
+            "altissimo-saffron-lgpe"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        }
       ],
       "sourceIds": [
         "routepedia-saffron-pikachu",
@@ -10074,7 +10617,19 @@
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "features": [
-        "Route 18 Gate"
+        {
+          "id": "route_18_route_18_gate",
+          "name": "Route 18 Gate",
+          "category": "entrance",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "routepedia-route18-pikachu",
+            "serebii-route18",
+            "bulbapedia-part11",
+            "pokemondb-mastertrainers"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        }
       ],
       "sourceIds": [
         "routepedia-route18-pikachu",
@@ -11394,11 +11949,71 @@
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "features": [
-        "Pokémon Center",
-        "Poké Mart",
-        "Pokémon Lab",
-        "Pokémon Mansion",
-        "Cinnabar Gym"
+        {
+          "id": "cinnabar_island_pokemon_center",
+          "name": "Pokémon Center",
+          "category": "landmark",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "routepedia-cinnabar-pikachu",
+            "pokemondb-mastertrainers",
+            "supercheats-cinnabar-postgame",
+            "routepedia-cinnabar-eevee"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "cinnabar_island_poke_mart",
+          "name": "Poké Mart",
+          "category": "landmark",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "routepedia-cinnabar-pikachu",
+            "pokemondb-mastertrainers",
+            "supercheats-cinnabar-postgame",
+            "routepedia-cinnabar-eevee"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "cinnabar_island_pokemon_lab",
+          "name": "Pokémon Lab",
+          "category": "building",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "routepedia-cinnabar-pikachu",
+            "pokemondb-mastertrainers",
+            "supercheats-cinnabar-postgame",
+            "routepedia-cinnabar-eevee"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "cinnabar_island_pokemon_mansion",
+          "name": "Pokémon Mansion",
+          "category": "landmark",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "routepedia-cinnabar-pikachu",
+            "pokemondb-mastertrainers",
+            "supercheats-cinnabar-postgame",
+            "routepedia-cinnabar-eevee"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "cinnabar_island_cinnabar_gym",
+          "name": "Cinnabar Gym",
+          "category": "building",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "routepedia-cinnabar-pikachu",
+            "pokemondb-mastertrainers",
+            "supercheats-cinnabar-postgame",
+            "routepedia-cinnabar-eevee"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        }
       ],
       "sourceIds": [
         "routepedia-cinnabar-pikachu",
@@ -12950,9 +13565,45 @@
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "features": [
-        "Pokémon League",
-        "Elite Four",
-        "Champion battle"
+        {
+          "id": "indigo_plateau_pokemon_league",
+          "name": "Pokémon League",
+          "category": "landmark",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "routepedia-indigo-pikachu",
+            "bulbapedia-part16",
+            "serebii-red",
+            "serebii-pokearth-indigo-rematches"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "indigo_plateau_elite_four",
+          "name": "Elite Four",
+          "category": "landmark",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "routepedia-indigo-pikachu",
+            "bulbapedia-part16",
+            "serebii-red",
+            "serebii-pokearth-indigo-rematches"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "indigo_plateau_champion_battle",
+          "name": "Champion battle",
+          "category": "story_event",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "routepedia-indigo-pikachu",
+            "bulbapedia-part16",
+            "serebii-red",
+            "serebii-pokearth-indigo-rematches"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        }
       ],
       "sourceIds": [
         "routepedia-indigo-pikachu",
@@ -13363,10 +14014,50 @@
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "features": [
-        "pokład",
-        "kabiny",
-        "jadalnia",
-        "mostek"
+        {
+          "id": "ss_anne_pok_ad",
+          "name": "pokład",
+          "category": "landmark",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "bulbapedia-part6",
+            "altissimo-vermilion-lgpe"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "ss_anne_kabiny",
+          "name": "kabiny",
+          "category": "interior_area",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "bulbapedia-part6",
+            "altissimo-vermilion-lgpe"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "ss_anne_jadalnia",
+          "name": "jadalnia",
+          "category": "interior_area",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "bulbapedia-part6",
+            "altissimo-vermilion-lgpe"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "ss_anne_mostek",
+          "name": "mostek",
+          "category": "interior_area",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "bulbapedia-part6",
+            "altissimo-vermilion-lgpe"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        }
       ],
       "notes": "Statek w porcie Vermilion City; dostęp fabularny jest ograniczony i statek odpływa po wydarzeniach.",
       "sourceIds": [
@@ -13637,8 +14328,36 @@
         "7F"
       ],
       "features": [
-        "Pokémon Tower",
-        "Mr. Fuji"
+        {
+          "id": "pokemon_tower_pokemon_tower",
+          "name": "Pokémon Tower",
+          "category": "landmark",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-part9",
+            "rotomlabs-pokemon-tower",
+            "bulbapedia-part8",
+            "pokemondb-mastertrainers",
+            "serebii-coachtrainers",
+            "altissimo-pokemon-tower-lgpe"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "pokemon_tower_mr_fuji",
+          "name": "Mr. Fuji",
+          "category": "landmark",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-part9",
+            "rotomlabs-pokemon-tower",
+            "bulbapedia-part8",
+            "pokemondb-mastertrainers",
+            "serebii-coachtrainers",
+            "altissimo-pokemon-tower-lgpe"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        }
       ],
       "notes": "Dane spotkań obejmują ogólną tabelę i piętra 3F–6F. Przedmioty rozpisano na 1F–6F; 7F jest piętrem wydarzenia z Mr. Fuji, bez osobnego item pickup w tabeli. Pełny plan geometryczny, trenerzy i pinezki nadal wymagają odwzorowania.",
       "sourceIds": [
@@ -14013,8 +14732,30 @@
         "B4F"
       ],
       "features": [
-        "układ podziemny",
-        "walka z Giovannim"
+        {
+          "id": "rocket_hideout_uk_ad_podziemny",
+          "name": "układ podziemny",
+          "category": "landmark",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "bulbapedia-part9",
+            "pokemondb-mastertrainers",
+            "serebii-teamrocket"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "rocket_hideout_walka_z_giovannim",
+          "name": "walka z Giovannim",
+          "category": "story_event",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "bulbapedia-part9",
+            "pokemondb-mastertrainers",
+            "serebii-teamrocket"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        }
       ],
       "sourceIds": [
         "bulbapedia-part9",
@@ -14095,9 +14836,42 @@
         "11F"
       ],
       "features": [
-        "teleportery",
-        "ratowanie prezesa",
-        "walka z Giovannim"
+        {
+          "id": "silph_co_teleportery",
+          "name": "teleportery",
+          "category": "interior_area",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "bulbapedia-part10",
+            "pokemondb-mastertrainers",
+            "altissimo-silph-co-lgpe"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "silph_co_ratowanie_prezesa",
+          "name": "ratowanie prezesa",
+          "category": "story_event",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "bulbapedia-part10",
+            "pokemondb-mastertrainers",
+            "altissimo-silph-co-lgpe"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "silph_co_walka_z_giovannim",
+          "name": "walka z Giovannim",
+          "category": "story_event",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "bulbapedia-part10",
+            "pokemondb-mastertrainers",
+            "altissimo-silph-co-lgpe"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        }
       ],
       "sourceIds": [
         "bulbapedia-part10",
@@ -14531,8 +15305,26 @@
       "localMapAsset": null,
       "coordinateStatus": "not_applicable",
       "features": [
-        "GO Park (alias historyczny)",
-        "Playful Park"
+        {
+          "id": "safari_zone_go_park_alias_historyczny",
+          "name": "GO Park (alias historyczny)",
+          "category": "building",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-part11"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "safari_zone_playful_park",
+          "name": "Playful Park",
+          "category": "building",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-part11"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        }
       ],
       "notes": "Alias historycznej nazwy obszaru GO Park. W Pokémon: Let's Go, Pikachu!/Eevee! klasyczna Safari Zone nie jest osobną lokacją; użyj punktu GO Park, obejmującego również Playful Park.",
       "sourceIds": [
@@ -14897,8 +15689,26 @@
       "localMapAsset": null,
       "coordinateStatus": "not_applicable",
       "features": [
-        "Bill",
-        "S.S. Ticket"
+        {
+          "id": "bills_house_bill",
+          "name": "Bill",
+          "category": "landmark",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-part5"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "bills_house_s_s_ticket",
+          "name": "S.S. Ticket",
+          "category": "landmark",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-part5"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        }
       ],
       "notes": "Alias nazwy Sea Cottage — to ten sam fizyczny domek Billa przy Route 25, a nie osobna lokacja. Użyj punktu Sea Cottage na mapie; lokalny schemat i szczegóły są wspólne.",
       "sourceIds": [
@@ -14929,8 +15739,30 @@
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "features": [
-        "wystawy skamielin",
-        "laboratorium na piętrze"
+        {
+          "id": "pewter_museum_wystawy_skamielin",
+          "name": "wystawy skamielin",
+          "category": "interior_area",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "bulbapedia-part3",
+            "pokemondb-mastertrainers",
+            "bulbapedia-pewter-museum-masters"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "pewter_museum_laboratorium_na_pietrze",
+          "name": "laboratorium na piętrze",
+          "category": "building",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "bulbapedia-part3",
+            "pokemondb-mastertrainers",
+            "bulbapedia-pewter-museum-masters"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        }
       ],
       "notes": "Muzeum w Pewter City; zawiera elementy fabularne i możliwość ponownego odwiedzenia wystaw.",
       "sourceIds": [
@@ -14974,8 +15806,30 @@
       "localMapAsset": null,
       "coordinateStatus": "unverified",
       "features": [
-        "przewodniczący klubu",
-        "przedmiot za wysłuchanie opowieści"
+        {
+          "id": "pokemon_fan_club_przewodniczacy_klubu",
+          "name": "przewodniczący klubu",
+          "category": "landmark",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "bulbapedia-part6",
+            "pokemondb-mastertrainers",
+            "altissimo-vermilion-lgpe"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        },
+        {
+          "id": "pokemon_fan_club_przedmiot_za_wys_uchanie_opowiesci",
+          "name": "przedmiot za wysłuchanie opowieści",
+          "category": "landmark",
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": [
+            "bulbapedia-part6",
+            "pokemondb-mastertrainers",
+            "altissimo-vermilion-lgpe"
+          ],
+          "note": "Nazwa i przynależność do lokacji zachowane z wcześniejszego audytu. Dokładna pozycja na mapie lokalnej nie została potwierdzona."
+        }
       ],
       "sourceIds": [
         "bulbapedia-part6",
