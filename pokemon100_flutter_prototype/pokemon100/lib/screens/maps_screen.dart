@@ -186,6 +186,28 @@ class _MapsScreenState extends State<MapsScreen> {
     }
   }
 
+  String _formatLetsGoAuditEntry(dynamic entry) {
+    if (entry is String) return entry.trim();
+    if (entry is! Map) return entry.toString();
+    final name = entry['name']?.toString().trim() ?? '';
+    final team = entry['team'];
+    final teamText = team is List
+        ? team.whereType<Map>().map((pokemon) {
+            final pokemonName = pokemon['name']?.toString() ?? 'Pokémon';
+            final level = pokemon['level'];
+            return level == null ? pokemonName : '$pokemonName Lv. $level';
+          }).join(', ')
+        : '';
+    final note = entry['note']?.toString().trim() ??
+        entry['description']?.toString().trim() ??
+        '';
+    return <String>[
+      if (name.isNotEmpty) name,
+      if (teamText.isNotEmpty) teamText,
+      if (note.isNotEmpty) note,
+    ].join(' — ');
+  }
+
   Widget _buildLetsGoEncounterPanel(
     BuildContext context,
     String locationName,
@@ -265,6 +287,21 @@ class _MapsScreenState extends State<MapsScreen> {
             .toList() ??
         const <String>[];
     final locationNotes = location['notes']?.toString().trim() ?? '';
+    final trainers = (location['trainers'] as List?)
+            ?.map(_formatLetsGoAuditEntry)
+            .where((value) => value.isNotEmpty)
+            .toList() ??
+        const <String>[];
+    final features = (location['features'] as List?)
+            ?.map(_formatLetsGoAuditEntry)
+            .where((value) => value.isNotEmpty)
+            .toList() ??
+        const <String>[];
+    final events = (location['events'] as List?)
+            ?.map(_formatLetsGoAuditEntry)
+            .where((value) => value.isNotEmpty)
+            .toList() ??
+        const <String>[];
     final trainerCount = location['trainerCount'] is num
         ? (location['trainerCount'] as num).toInt()
         : (int.tryParse(location['trainerCount']?.toString() ?? '') ??
@@ -411,6 +448,52 @@ class _MapsScreenState extends State<MapsScreen> {
                 style: Theme.of(context).textTheme.bodySmall,
               ),
             ],
+            if (trainers.isNotEmpty)
+              ExpansionTile(
+                tilePadding: EdgeInsets.zero,
+                childrenPadding: const EdgeInsets.only(bottom: 8),
+                leading: const Icon(Icons.sports_martial_arts),
+                title: Text('Trenerzy i ich drużyny (${trainers.length})'),
+                subtitle: const Text('Lista trenerów zapisana dla tej lokacji'),
+                children: [
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      trainers.map((trainer) => '• $trainer').join('\\n'),
+                    ),
+                  ),
+                ],
+              ),
+            if (features.isNotEmpty)
+              ExpansionTile(
+                tilePadding: EdgeInsets.zero,
+                childrenPadding: const EdgeInsets.only(bottom: 8),
+                leading: const Icon(Icons.place_outlined),
+                title: Text('Budynki i charakterystyczne miejsca (${features.length})'),
+                children: [
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      features.map((feature) => '• $feature').join('\\n'),
+                    ),
+                  ),
+                ],
+              ),
+            if (events.isNotEmpty)
+              ExpansionTile(
+                tilePadding: EdgeInsets.zero,
+                childrenPadding: const EdgeInsets.only(bottom: 8),
+                leading: const Icon(Icons.event_note),
+                title: Text('Wydarzenia, prezenty i spotkania (${events.length})'),
+                children: [
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      events.map((event) => '• $event').join('\\n'),
+                    ),
+                  ),
+                ],
+              ),
             if (trainerCount != null || hiddenItemCount != null) ...[
               const SizedBox(height: 8),
               Wrap(
