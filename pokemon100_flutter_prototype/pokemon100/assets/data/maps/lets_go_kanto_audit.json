@@ -772,6 +772,11 @@
       "id": "serebii-green",
       "url": "https://www.serebii.net/letsgopikachueevee/green.shtml",
       "scope": "Pokémon Trainer Green initial battle and repeatable Cerulean City rematch"
+    },
+    {
+      "id": "serebii-pokearth-indigo-rematches",
+      "url": "https://www.serebii.net/pokearth/kanto/indigoplateau.shtml",
+      "scope": "Let's Go Pikachu/Eevee Elite Four and Champion rematch teams, levels and move sets"
     }
   ],
   "locations": [
@@ -12815,14 +12820,17 @@
       "sourceIds": [
         "routepedia-indigo-pikachu",
         "bulbapedia-part16",
-        "serebii-red"
+        "serebii-red",
+        "serebii-pokearth-indigo-rematches"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
         "Pokémon League — czterech członków Elite Four: Lorelei, Bruno, Agatha i Lance; po ich pokonaniu następuje walka z Championem.",
         "Przed wejściem do Victory Road i Ligi trzeba mieć komplet ośmiu odznak Gymów.",
         "Dokładne rozmieszczenie NPC i pełne drużyny walk ligowych wymagają osobnej weryfikacji; mapa nie oznacza ich pinezkami.",
-        "Postgame: Red pojawia się przed wejściem do Pokémon League po pokonaniu 6 różnych Master Trainers; wymaga pełnej drużyny sześciu Pokémonów. Po zwycięstwie przyznaje tytuł Battle Master."
+        "Postgame: Red pojawia się przed wejściem do Pokémon League po pokonaniu 6 różnych Master Trainers; wymaga pełnej drużyny sześciu Pokémonów. Po zwycięstwie przyznaje tytuł Battle Master.",
+        "Po pierwszym ukończeniu Pokémon League odblokowują się silniejsze rewanże Elite Four i Championa; składy i poziomy są zapisane w liście trenerów.",
+        "Sklep postgame Mega Stone Seller oferuje Beedrillite, Pidgeotite, Alakazite, Slowbronite, Gengarite, Kangaskhanite, Pinsirite, Gyaradosite i Aerodactylite (po 30 000 ₽ każda)."
       ],
       "trainers": [
         "Elite Four Lorelei — Dewgong Lv. 51, Jynx Lv. 51, Cloyster Lv. 51, Slowbro Lv. 51 i Lapras Lv. 52.",
@@ -12830,9 +12838,15 @@
         "Elite Four Agatha — Arbok Lv. 53, Gengar Lv. 53, Golbat Lv. 53, Weezing Lv. 53 i Gengar Lv. 54.",
         "Elite Four Lance — Seadra Lv. 54, Aerodactyl Lv. 54, Gyarados Lv. 54, Charizard Lv. 54 i Dragonite Lv. 55.",
         "Champion Trace — Pidgeot Lv. 56, Vileplume Lv. 56, Marowak Lv. 56, Rapidash Lv. 56, Slowbro Lv. 56 oraz Jolteon Lv. 57 (Let's Go Pikachu) / Raichu Lv. 57 (Let's Go Eevee).",
-        "Pokémon Trainer Red — Pikachu Lv. 85, Machamp Lv. 85, Arcanine Lv. 85, Lapras Lv. 85, Snorlax Lv. 85 i Venusaur Lv. 85 (Mega Venusaur; po pokonaniu co najmniej 6 różnych Master Trainers i posiadaniu pełnej drużyny 6 Pokémonów)."
+        "Pokémon Trainer Red — Pikachu Lv. 85, Machamp Lv. 85, Arcanine Lv. 85, Lapras Lv. 85, Snorlax Lv. 85 i Venusaur Lv. 85 (Mega Venusaur; po pokonaniu co najmniej 6 różnych Master Trainers i posiadaniu pełnej drużyny 6 Pokémonów).",
+        "Elite Four — Lorelei (rewanż postgame): Dewgong Lv. 61, Jynx Lv. 61, Cloyster Lv. 61, Slowbro Lv. 61, Sandslash Lv. 61 i Lapras Lv. 62.",
+        "Elite Four — Bruno (rewanż postgame): Onix Lv. 62, Hitmonlee Lv. 62, Hitmonchan Lv. 62, Poliwrath Lv. 62, Golem Lv. 62 i Machamp Lv. 63.",
+        "Elite Four — Agatha (rewanż postgame): Arbok Lv. 63, Gengar Lv. 63, Golbat Lv. 63, Weezing Lv. 63, Marowak Lv. 63 i Gengar Lv. 64.",
+        "Elite Four — Lance (rewanż postgame): Seadra Lv. 64, Aerodactyl Lv. 64, Gyarados Lv. 64, Exeggutor Lv. 64, Charizard Lv. 64 i Dragonite Lv. 65.",
+        "Champion Trace / Rival (rewanż postgame, Let's Go Pikachu): Pidgeot Lv. 66, Vileplume Lv. 66, Marowak Lv. 66, Rapidash Lv. 66, Slowbro Lv. 66 i Raichu Lv. 67.",
+        "Champion Trace / Rival (rewanż postgame, Let's Go Eevee): Pidgeot Lv. 66, Vileplume Lv. 66, Marowak Lv. 66, Rapidash Lv. 66, Slowbro Lv. 66 i Jolteon Lv. 67."
       ],
-      "trainerCount": 6,
+      "trainerCount": 12,
       "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
     },
     {
