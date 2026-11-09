@@ -10142,7 +10142,8 @@
       ],
       "sourceIds": [
         "routepedia-seafoam-pikachu",
-        "rotomlabs-seafoam-islands"
+        "rotomlabs-seafoam-islands",
+        "bulbapedia-part12"
       ],
       "dataStatus": "encounter_rates_verified_from_rotomlabs_positions_not_mapped",
       "wildPokemonDetails": {
@@ -10407,7 +10408,12 @@
       "events": [
         "Articuno — statyczne spotkanie na poziomie 50.",
         "Zagadki z głazami zmieniają przepływ wody i otwierają przejścia między piętrami; dokładne kafelki nie są naniesione."
-      ]
+      ],
+      "trainers": [
+        "Coach Trainer Yas — Vaporeon Lv. 45, Jolteon Lv. 46 i Flareon Lv. 47."
+      ],
+      "trainerCount": 1,
+      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
     },
     {
       "id": "cinnabar_island",
@@ -11643,7 +11649,8 @@
       ],
       "sourceIds": [
         "routepedia-victory-road-pikachu",
-        "rotomlabs-victory-road"
+        "rotomlabs-victory-road",
+        "bulbapedia-part15"
       ],
       "dataStatus": "encounter_rates_verified_from_rotomlabs_positions_not_mapped",
       "wildPokemonDetails": {
@@ -11886,7 +11893,24 @@
       "events": [
         "Moltres — statyczne spotkanie na poziomie 50.",
         "Głazy i przełączniki otwierają przejścia między piętrami; trenerzy i przedmioty nie mają jeszcze zweryfikowanych pinezek."
-      ]
+      ],
+      "trainers": [
+        "Coach Trainer Alemana — Ditto Lv. 49.",
+        "Ace Trainer Naomi — Kangaskhan Lv. 47 i Venusaur Lv. 48.",
+        "Ace Trainer Rolando — Rapidash Lv. 47, Starmie Lv. 47 i Victreebel Lv. 48.",
+        "Juggler Nelson — Hypno Lv. 46 i Slowbro Lv. 46.",
+        "Black Belt Daisuke — Hitmonlee Lv. 47 i Poliwrath Lv. 47.",
+        "Tamer Vincent — Primeape Lv. 47 i Tauros Lv. 47.",
+        "Juggler Gregory — Mr. Mime Lv. 46 i Alakazam Lv. 46.",
+        "Ace Trainer George — Scyther Lv. 48 i Marowak Lv. 47.",
+        "Ace Trainer Alexa — Dragonair Lv. 47, Wigglytuff Lv. 47 i Hitmonchan Lv. 48.",
+        "Ace Trainer Colby — Electrode Lv. 47, Kingler Lv. 47, Pidgeot Lv. 47 i Rhydon Lv. 48.",
+        "Ace Trainer Caroline — Jynx Lv. 47, Golbat Lv. 47 i Arcanine Lv. 48.",
+        "Poké Maniac Dawson — Lickitung Lv. 46, Onix Lv. 46 i Blastoise Lv. 46.",
+        "Coach Trainer Ryan — Primeape Lv. 48, Gyarados Lv. 48, Arcanine Lv. 48 i Tauros Lv. 49."
+      ],
+      "trainerCount": 13,
+      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
     },
     {
       "id": "indigo_plateau",
@@ -12791,7 +12815,25 @@
       "events": [
         "Silph Scope pozwala rozpoznawać duchy i kontynuować wspinaczkę po wieży.",
         "Po uratowaniu Mr. Fuji gracz otrzymuje Poké Flute, potrzebną do obudzenia Snorlax na Route 12 i Route 16."
-      ]
+      ],
+      "trainers": [
+        "Coach Trainer Holly — Geodude Lv. 28 (2F).",
+        "Channeler Hope — Gastly Lv. 25 (3F).",
+        "Channeler Patricia — Gastly Lv. 25 ×2 (3F).",
+        "Channeler Carly — Gastly Lv. 25 (3F).",
+        "Channeler Laurel — Haunter Lv. 25 (4F).",
+        "Channeler Jody — Gastly Lv. 25 i Haunter Lv. 25 (4F).",
+        "Channeler Paula — Gastly Lv. 25 ×2 (4F).",
+        "Channeler Ruth — Haunter Lv. 25 (5F).",
+        "Channeler Tammy — Haunter Lv. 25, Gastly Lv. 25 ×2 (5F).",
+        "Channeler Karina — Haunter Lv. 25 i Gastly Lv. 25 (5F).",
+        "Channeler Janae — Gastly Lv. 25 ×4 (5F).",
+        "Channeler Emilia — Haunter Lv. 32 ×3 (6F).",
+        "Channeler Angelica — Gastly Lv. 25, Haunter Lv. 25 i Gastly Lv. 25 (6F).",
+        "Channeler Jennifer — Haunter Lv. 25 (6F)."
+      ],
+      "trainerCount": 14,
+      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
     },
     {
       "id": "rocket_hideout",
@@ -12819,7 +12861,22 @@
       "events": [
         "Lift Key — klucz do windy zdobywany podczas eksploracji kryjówki Team Rocket.",
         "Po pokonaniu Giovanniego gracz otrzymuje Silph Scope, który pozwala rozpoznawać duchy w Pokémon Tower."
-      ]
+      ],
+      "trainers": [
+        "Team Rocket Grunt — Golbat Lv. 29 (B1F).",
+        "Team Rocket Grunt — Koffing Lv. 29 i Rattata Lv. 29 ×2 (B1F).",
+        "Team Rocket Grunt — Voltorb Lv. 29 (B1F).",
+        "Team Rocket Grunt — Ekans Lv. 29 i Arbok Lv. 29 (B1F).",
+        "Team Rocket Grunt — Zubat Lv. 29 i Gastly Lv. 29 (B1F, południowy wschód; Lift Key).",
+        "Team Rocket Grunt — Hypno Lv. 29 (B2F).",
+        "Team Rocket Grunt — Golbat Lv. 29 (B3F).",
+        "Team Rocket Grunt — Rattata Lv. 29 i Voltorb Lv. 29 (B3F).",
+        "Team Rocket Grunt — Grimer Lv. 29 (B4F).",
+        "Rocket Admin Archer — Weezing Lv. 33 i Golbat Lv. 33.",
+        "Boss Team Rocket Giovanni — Persian Lv. 35 i Rhyhorn Lv. 35."
+      ],
+      "trainerCount": 11,
+      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
     },
     {
       "id": "silph_co",
@@ -12855,7 +12912,42 @@
       "events": [
         "Po pokonaniu Giovanniego i uwolnieniu budynku prezes Silph Co. wręcza Master Ball.",
         "Budynek ma 11 pięter i teleporty; trasa przez teleporty jest informacyjna, nie dokładnie odwzorowana."
-      ]
+      ],
+      "trainers": [
+        "Team Rocket Grunt — Raticate Lv. 33 (2F).",
+        "Team Rocket Grunt — Koffing Lv. 33 ×3 (2F).",
+        "Scientist Jerry — Electabuzz Lv. 35 (2F).",
+        "Scientist Connor — Weezing Lv. 35 (2F).",
+        "Scientist Jose — Grimer Lv. 35 i Magmar Lv. 35 (3F).",
+        "Team Rocket Grunt — Haunter Lv. 33 (3F).",
+        "Team Rocket Grunt — Koffing Lv. 33 i Electrode Lv. 33 (4F).",
+        "Team Rocket Grunt — Rattata Lv. 33 i Grimer Lv. 33 (4F).",
+        "Scientist Rodney — Voltorb Lv. 35 ×2 i Electrode Lv. 35 (4F).",
+        "Juggler Dalton — Hypno Lv. 34, Haunter Lv. 34 i Kadabra Lv. 34 (5F).",
+        "Scientist Beau — Muk Lv. 35 (5F).",
+        "Team Rocket Grunt — Ekans Lv. 33 i Hypno Lv. 33 (5F).",
+        "Team Rocket Grunt — Zubat Lv. 33 i Arbok Lv. 33 (5F).",
+        "Team Rocket Grunt — Meowth Lv. 33 i Raticate Lv. 33 (6F).",
+        "Scientist Taylor — Magnemite Lv. 35 ×2 i Magmar Lv. 35 (6F).",
+        "Team Rocket Grunt — Raticate Lv. 33 i Golbat Lv. 33 (6F).",
+        "Team Rocket Grunt — Zubat Lv. 33 i Golbat Lv. 33 (7F).",
+        "Team Rocket Grunt — Voltorb Lv. 33 ×3 (7F).",
+        "Scientist Joshua — Koffing Lv. 35 i Magneton Lv. 35 (7F).",
+        "Team Rocket Grunt — Grimer Lv. 33 i Koffing Lv. 33 (8F).",
+        "Team Rocket Grunt — Gastly Lv. 33 i Persian Lv. 33 (8F).",
+        "Scientist Parker — Electrode Lv. 35 i Porygon Lv. 35 (8F).",
+        "Team Rocket Grunt — Persian Lv. 33 (9F).",
+        "Scientist Ed — Weezing Lv. 35, Electabuzz Lv. 35 i Electrode Lv. 35 (9F).",
+        "Team Rocket Grunt — Koffing Lv. 33 i Haunter Lv. 33 (9F).",
+        "Team Rocket Grunt — Voltorb Lv. 33 i Raticate Lv. 33 (10F).",
+        "Scientist Travis — Grimer Lv. 35 i Muk Lv. 35 (10F).",
+        "Team Rocket Grunt — Drowzee Lv. 33, Zubat Lv. 33 i Golbat Lv. 33 (11F).",
+        "Rocket Admin Archer — Weezing Lv. 36 i Golbat Lv. 36 (7F, wydarzenie fabularne).",
+        "Jessie i James — Arbok Lv. 36 i Weezing Lv. 36 (11F, wydarzenie fabularne).",
+        "Boss Team Rocket Giovanni — Persian Lv. 39, Rhyhorn Lv. 39, Nidoqueen Lv. 39, Nidoking Lv. 39 i Rhydon Lv. 40."
+      ],
+      "trainerCount": 31,
+      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
     },
     {
       "id": "pokemon_mansion",
