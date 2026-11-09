@@ -35,6 +35,7 @@ class _MapsScreenState extends State<MapsScreen> {
   final Map<String, Map<String, dynamic>> _mapIndexes = <String, Map<String, dynamic>>{};
   bool _mapIndexesLoading = true;
   bool _showMapPicker = true;
+  String _mapKindFilter = 'all';
 
   @override
   void dispose() {
@@ -162,7 +163,26 @@ class _MapsScreenState extends State<MapsScreen> {
     return searchable.any((value) => value.toLowerCase().contains(query));
   }
 
-  String _normalizePokemonName(String name) => name
+  bool _matchesMapKind(Map<String, dynamic> location) {
+    final kind = (location['kind'] as String? ?? '').toLowerCase();
+    switch (_mapKindFilter) {
+      case 'towns':
+        return kind == 'town';
+      case 'routes':
+        return const {'route', 'water_route', 'underground_path'}.contains(kind);
+      case 'caves':
+        return const {'cave', 'forest', 'hideout'}.contains(kind);
+      case 'buildings':
+        return const {
+          'building', 'house', 'gym', 'dojo', 'facility', 'museum',
+          'mansion', 'tower', 'ship', 'park', 'entrance', 'gate', 'league',
+        }.contains(kind);
+      default:
+        return true;
+    }
+  }
+
+  String _normalizePokemonName(String name) =>
       .toLowerCase()
       .replaceAll('’', "'")
       .replaceAll('‘', "'");
@@ -1139,6 +1159,11 @@ class _MapsScreenState extends State<MapsScreen> {
     final games = _gamesForGeneration;
     final selectedGame = _selectedGame;
     final normalizedQuery = _searchQuery.trim().toLowerCase();
+    final filteredMapLocations = _activeMapIndexLocations
+        .where((location) =>
+            _matchesMapLocation(location, normalizedQuery) &&
+            _matchesMapKind(location))
+        .toList(growable: false);
     // Every named node on the full Kanto schematic can be selected, not
     // only the first few tutorial locations.
     final localSchematicLocations = _KantoMapPainter.places
@@ -1729,11 +1754,52 @@ class _MapsScreenState extends State<MapsScreen> {
                           ),
                           const SizedBox(height: 4),
                           Text(
-                            '${_activeMapIndexLocations.length} lokacji w katalogu. To indeks źródłowy, nie gotowa mapa w skali; pozycje pinezek wymagają dalszej weryfikacji.',
+                            '${_activeMapIndexLocations.length} lokacji w katalogu • ${filteredMapLocations.length} pasuje do filtrów. To indeks źródłowy, nie gotowa mapa w skali; pozycje pinezek wymagają dalszej weryfikacji.',
+                          ),
+                          const SizedBox(height: 10),
+                          const Text(
+                            'Filtruj typ lokacji',
+                            style: TextStyle(fontWeight: FontWeight.w700),
+                          ),
+                          const SizedBox(height: 6),
+                          Wrap(
+                            spacing: 6,
+                            runSpacing: 4,
+                            children: [
+                              ChoiceChip(
+                                avatar: const Icon(Icons.apps, size: 16),
+                                label: const Text('Wszystkie'),
+                                selected: _mapKindFilter == 'all',
+                                onSelected: (_) => setState(() => _mapKindFilter = 'all'),
+                              ),
+                              ChoiceChip(
+                                avatar: const Icon(Icons.location_city_outlined, size: 16),
+                                label: const Text('Miasta'),
+                                selected: _mapKindFilter == 'towns',
+                                onSelected: (_) => setState(() => _mapKindFilter = 'towns'),
+                              ),
+                              ChoiceChip(
+                                avatar: const Icon(Icons.route_outlined, size: 16),
+                                label: const Text('Trasy'),
+                                selected: _mapKindFilter == 'routes',
+                                onSelected: (_) => setState(() => _mapKindFilter = 'routes'),
+                              ),
+                              ChoiceChip(
+                                avatar: const Icon(Icons.landscape_outlined, size: 16),
+                                label: const Text('Jaskinie i lasy'),
+                                selected: _mapKindFilter == 'caves',
+                                onSelected: (_) => setState(() => _mapKindFilter = 'caves'),
+                              ),
+                              ChoiceChip(
+                                avatar: const Icon(Icons.home_work_outlined, size: 16),
+                                label: const Text('Budynki i obiekty'),
+                                selected: _mapKindFilter == 'buildings',
+                                onSelected: (_) => setState(() => _mapKindFilter = 'buildings'),
+                              ),
+                            ],
                           ),
                           const SizedBox(height: 8),
-                          ..._activeMapIndexLocations
-                              .where((location) => _matchesMapLocation(location, normalizedQuery))
+                          ...filteredMapLocations
                               .take(normalizedQuery.isEmpty ? 8 : 15)
                               .map((location) {
                             final name = location['name'] as String? ?? 'Lokacja';
@@ -1752,10 +1818,8 @@ class _MapsScreenState extends State<MapsScreen> {
                               },
                             );
                           }),
-                          if (_activeMapIndexLocations
-                              .where((location) => _matchesMapLocation(location, normalizedQuery))
-                              .isEmpty)
-                            const Text('Brak lokacji o tej nazwie w indeksie regionu.'),
+                          if (filteredMapLocations.isEmpty)
+                            const Text('Brak lokacji pasujących do wyszukiwania i wybranego filtra.'),
                         ],
                       ),
                     ),
