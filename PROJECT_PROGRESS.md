@@ -5878,3 +5878,12 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Przedmioty pozostają prezentowane jako lista opisowa. Nie dodano fikcyjnych współrzędnych ani pinezek — indeks nadal oznacza niezweryfikowane pozycje jako niezweryfikowane.
 - Dodano bezpieczne formatowanie zarówno prostych wpisów tekstowych, jak i rekordów trenerów z drużyną Pokémonów.
 - Zmiany zapisano na GitHubie. Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK; kompletność brakujących list trenerów i przedmiotów oraz dokładne pozycje na mapie nadal wymagają dalszej weryfikacji źródłowej.
+
+
+### Let's Go Kanto — uzupełnienie drużyn trenerów (2026-11-09)
+
+- Uzupełniono indeks danych o pełne listy trenerów i składów dla Mt. Moon (11), Rock Tunnel (15), S.S. Anne (12), Power Plant (1), ośmiu Gymów (w tym liderzy) oraz Fighting Dojo — łącznie 90 rekordów.
+- Każdy nowy wpis zawiera gatunki i poziomy Pokémonów; przy wielokrotnych egzemplarzach zapisano ich liczbę. Dane przypisano do istniejących lokacji, a identyfikatory źródeł prowadzą do odpowiednich części poradnika Bulbapedia (Let's Go, Pikachu! / Let's Go, Eevee!).
+- Skorygowano liczniki trenerów Mt. Moon i Rock Tunnel zgodnie z listami z poradnika; zachowano rozróżnienie trenerów głównej przygody i postgame.
+- Źródła sprawdzone: Bulbapedia Parts 3–14 (trenerzy, drużyny, poziomy i liderzy Gymów); porównawczo Serebii Coach Trainers. Nie dopisano pozycji na mapie ani współrzędnych.
+- Nie uruchomiono Flutter Analyzer, testów ani APK. Pozostałe puste listy w lokacjach miejskich, jaskiniach, Team Rocket Hideout, Silph Co., Victory Road i Route 23 nadal wymagają audytu — nie oznaczono ich jako kompletne.
