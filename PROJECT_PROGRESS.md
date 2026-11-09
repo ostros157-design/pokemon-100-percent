@@ -5978,3 +5978,17 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Muzyka: statyczny przegląd potwierdził jeden współdzielony `AudioPlayer`, tryb pętli, autostart po uruchomieniu aplikacji (domyślnie włączony), ustawienie zapisywane w `SharedPreferences` oraz sterowanie odtwarzaniem i głośnością na ekranie Muzyka.
 - Ograniczenie: AndroidManifest nie deklaruje usługi `mediaPlayback` ani `FOREGROUND_SERVICE`; dlatego ciągłego odtwarzania po zminimalizowaniu aplikacji lub z wygaszonym ekranem nie można uznać za zapewnione. Do pełnego background audio potrzebna jest integracja z usługą audio/foreground service i test na urządzeniu.
 - To audyt kodu źródłowego. Nie wykonano testów widgetów/integracyjnych, Flutter Analyzer, testu audio na AYN Thor ani kompilacji APK.
+
+
+### Duży audyt danych mapy Let's Go Kanto — trenerzy, postgame i przedmioty (2026-11-09)
+
+- Pracowano na bezpiecznej gałęzi `work/map-achievements-music`; gałąź `fix/maps-screen-build-errors` nie była modyfikowana ani scalana.
+- Dane obejmują 76 lokacji, 511 wpisów trenerów, 443 wpisy przedmiotów oraz 45 wpisów oznaczonych jako ukryte. Wpisy trenerów mają zgodne liczniki `trainerCount`; wszystkie `sourceIds` wskazują istniejące źródła.
+- Master Trainers: uzupełniono i porównano pełny roster 153 gatunków z listą postgame; w tym Route 2, Route 5, Route 23 i pozostałe trasy, miasta oraz budynki. Route 2 ma dwóch Master Trainers, Route 23 pięciu.
+- Coach Trainers: roster zawiera 19 wpisów; dodano brakującą Tashę na Route 10 i dopisano nagrody tam, gdzie były potwierdzone. Niepewna nagroda Kareema nie została przedstawiona jako fakt.
+- Postgame: dodano drużyny Reda, Green (rematch w Cerulean City), Miny, Archera i Jessie/James; uzupełniono rewanże siedmiu Gym Leaderów oraz Blue, a także rewanże Elite Four i Championa na Indigo Plateau.
+- Przedmioty: uzupełniono spisy Route 20 (7), Seafoam Islands (35), Victory Road (17), Cerulean Cave (33), Cinnabar Island (29), Viridian City (2) i Pewter City (1). Route 22 (2) i Route 23 (6) zostały sprawdzone względem zestawień źródłowych. Dla losowych ukrytych przedmiotów zapisano pule możliwych nagród zamiast zgadywać wynik.
+- Cinnabar Island ma zbiorczą listę 29 przedmiotów obejmującą także wnętrza budynków; ich rozdzielenie na konkretne pomieszczenia i piętra pozostaje do wykonania. Podobnie niektóre listy sklepów i miejskie agregaty wymagają jeszcze deduplikacji z podlokacjami.
+- Ekran mapy: kontrola statyczna kodu nie wykazała limitu 20 pozycji na listach trenerów/przedmiotów; ograniczenia `take(8/15)` dotyczą wyłącznie podpowiedzi wyszukiwania. Obsługa wydarzeń tekstowych i obiektowych pozostaje w kodzie.
+- **Ważne ograniczenie:** nie dodano współrzędnych ani pinezek bez potwierdzenia. Część wpisów ma poprawną nazwę i lokację ogólną, ale dokładne położenie na mapie/konkretne piętro nadal wymaga weryfikacji. To nie jest jeszcze potwierdzenie kompletności wszystkich 76 lokacji.
+- **Testy:** JSON został ponownie sparsowany; sprawdzenie liczników trenerów i odwołań do źródeł przeszło (0 błędów). Nie uruchomiono Flutter Analyzer, testów Flutter ani kompilacji APK, ponieważ nie ma tutaj lokalnego środowiska projektu do wykonania tych komend.
