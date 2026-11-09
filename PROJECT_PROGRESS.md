@@ -6116,3 +6116,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Dodano przycisk „Całe Kanto”, który czyści wyszukiwanie i zaznaczenie, aby szybko wrócić do widoku całego regionu.
 - Pasek pojawia się tylko po wybraniu lokacji; nie zmienia indeksu danych ani nie sugeruje dokładności współrzędnych.
 - Flutter Analyzer, testy Flutter i kompilacja APK nie zostały uruchomione. Zmiana wymaga sprawdzenia wizualnego na telefonie i AYN Thor.
+
+
+### Mapy Kanto — automatyczne wyśrodkowanie wybranej lokacji (2026-11-09)
+
+- Po wybraniu lokacji z wyszukiwarki lub listy mapa Kanto automatycznie przesuwa widok tak, aby wskazany węzeł znalazł się na środku obszaru mapy.
+- Zachowywany jest aktualny poziom powiększenia; ręczne przesuwanie i przyciski zoomu nadal pozostają dostępne.
+- Funkcja działa dla nazw odpowiadających węzłom mapy. Nie dodaje pinezek ani nie zmienia schematycznych współrzędnych.
+- Flutter Analyzer, testy Flutter i kompilacja APK nie zostały uruchomione; wymagany test ręczny wyboru kilku lokacji na małym i dużym ekranie.
