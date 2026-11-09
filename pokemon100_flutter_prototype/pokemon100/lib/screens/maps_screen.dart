@@ -3090,7 +3090,7 @@ class _KantoLocalAreaPanelState extends State<_KantoLocalAreaPanel> {
       'Cerulean Cave': ['Głaz w komnacie', 'Zawalona odnoga'],
       'Victory Road': ['Głaz do przesunięcia', 'Blokada skalna'],
     }[location] ?? const <String>[];
-    final caveConnections = <(String, String)>{
+    final caveConnections = <String, List<(String, String)>>{
       'Mt. Moon': [('Wejście od Route 3', 'Wejście do jaskini'), ('Wyjście na Route 4', 'Wyjście w stronę Route 4')],
       'Rock Tunnel': [('Wejście od Route 10', 'Wejście północne'), ('Wyjście do Lavender Town', 'Wyjście południowe')],
       "Diglett's Cave": [('Wejście od Route 2', 'Wejście od Route 2'), ('Wyjście przy Route 11', 'Wyjście przy Route 11')],
