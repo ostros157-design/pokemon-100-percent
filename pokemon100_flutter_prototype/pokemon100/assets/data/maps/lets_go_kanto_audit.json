@@ -777,6 +777,11 @@
       "id": "serebii-pokearth-indigo-rematches",
       "url": "https://www.serebii.net/pokearth/kanto/indigoplateau.shtml",
       "scope": "Let's Go Pikachu/Eevee Elite Four and Champion rematch teams, levels and move sets"
+    },
+    {
+      "id": "altissimo-celadon-lgpe",
+      "url": "https://altissimo1.github.io/Main-Series/Kanto-Locations/celadon-city.html",
+      "scope": "Let's Go Pikachu/Eevee Celadon City field items, Department Store inventory by floor and prices, and Game Corner daily hidden-item probabilities"
     }
   ],
   "locations": [
@@ -8970,7 +8975,8 @@
         "routepedia-celadon-pikachu",
         "pokemondb-mastertrainers",
         "supercheats-celadon-postgame",
-        "bulbapedia-part9"
+        "bulbapedia-part9",
+        "altissimo-celadon-lgpe"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
@@ -9016,7 +9022,16 @@
         "Master Trainer Ace Trainer Dominic — Gyarados Lv. 75 (hotel)."
       ],
       "trainerCount": 4,
-      "trainerStatus": "postgame_master_trainer_teams_verified"
+      "trainerStatus": "postgame_master_trainer_teams_verified",
+      "items": [
+        "Nugget — na końcu ścieżki na północny wschód od Pokémon Center.",
+        "Rare Candy — na końcu ścieżki na północny zachód od Pokémon Center.",
+        "Razz Berry ×5 — na północnym końcu ścieżki na wschód od drzewa do ścięcia; ukryty przedmiot.",
+        "Pewter Crunchies — prezent od Brocka przed Celadon Condominiums.",
+        "Tea — prezent od Brocka przed Celadon Condominiums; wymagany do wejścia do Saffron City.",
+        "TM26 (Poison Jab) — od mężczyzny na północ od stawu; dostęp wymaga Sea Skim."
+      ],
+      "itemsStatus": "six field items and gifts verified from Altissimo LGPE location guide; exact map pins not approved"
     },
     {
       "id": "saffron_city",
@@ -14515,7 +14530,8 @@
       "sourceIds": [
         "routepedia-celadon-pikachu",
         "bulbapedia-part9",
-        "serebii-gym-rematches"
+        "serebii-gym-rematches",
+        "altissimo-celadon-lgpe"
       ],
       "dataStatus": "leader_verified_team_needs_review",
       "events": [
@@ -14535,7 +14551,11 @@
         "Rewanż postgame — Erika: Tangela Lv. 56, Parasect Lv. 56, Victreebel Lv. 56, Exeggutor Lv. 56 i Vileplume Lv. 57."
       ],
       "trainerCount": 9,
-      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
+      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough",
+      "items": [
+        "TM53 (Mega Drain) — nagroda od Eriki po pokonaniu jej."
+      ],
+      "itemsStatus": "TM53 reward verified from Altissimo LGPE location guide"
     },
     {
       "id": "saffron_gym",
@@ -14873,7 +14893,8 @@
       "sourceIds": [
         "bulbapedia-celadon-store",
         "pokemondb-mastertrainers",
-        "bulbapedia-part9"
+        "bulbapedia-part9",
+        "altissimo-celadon-lgpe"
       ],
       "dataStatus": "schematic_interior_available_exact_layout_pending",
       "coordinateStatus": "unverified",
@@ -14888,12 +14909,19 @@
       "trainerCount": 3,
       "trainerStatus": "postgame_master_trainer_teams_verified",
       "items": [
-        "TM03 (Helping Hand) — 3F, od mężczyzny za ladą sklepu z grami.",
+        "TM03 (Helping Hand) — 3F, od mężczyzny za ladą.",
         "TM06 (Light Screen) — dach, od dziewczyny w zamian za Fresh Water.",
         "TM09 (Reflect) — dach, od dziewczyny w zamian za Soda Pop.",
         "TM07 (Protect) — dach, od dziewczyny w zamian za Lemonade.",
-        "Sklep ma kilka pięter z artykułami i TM do kupienia; lista asortymentu i ceny nie są jeszcze rozpisane w danych."
-      ]
+        "2F — dolny sprzedawca: Poké Ball ₽100; Great Ball ₽300; Potion ₽200; Super Potion ₽700; Antidote ₽200; Burn Heal ₽300; Ice Heal ₽100; Awakening ₽100; Paralyze Heal ₽300; Full Heal ₽400; Revive ₽2,000; Escape Rope ₽300; Repel ₽400; Super Repel ₽700; Lure ₽400; X Attack ₽550; X Defense ₽500; X Sp. Atk ₽350; X Sp. Def ₽350; X Speed ₽350; X Accuracy ₽950; Dire Hit ₽650; Guard Spec. ₽700.",
+        "2F — górny sprzedawca TM: TM17 (Dragon Tail) ₽20,000; TM18 (U-turn) ₽20,000; TM19 (Iron Tail) ₽50,000; TM25 (Waterfall) ₽30,000; TM28 (Tri Attack) ₽30,000; TM30 (Bulk Up) ₽10,000; TM43 (Shadow Ball) ₽30,000; TM48 (Hyper Beam) ₽100,000.",
+        "4F — kamienie ewolucyjne: Fire Stone, Thunder Stone, Water Stone, Leaf Stone i Ice Stone; każdy ₽5,000.",
+        "5F — stoiska z akcesoriami: Diglett Cap ₽50; Straw Hat ₽10,000; Sweet Hat ₽20,000; Elegant Hat ₽20,000; Crown ₽999,999; okulary Black/Red/Green Framed ₽8,000, Brown Framed ₽12,000, Thick Glasses ₽5,000; Blue Sky/Dawn/Dusk/Midnight Sunglasses ₽10,000 każde.",
+        "5F — kokardy: Little Red/Green/Blue/Black/Plaid/Formal/Polka-Dot Bow i Little Bow — ₽1,000 każda; Fancy Red/Green/Blue/Black/Plaid/Cute/Polka-Dot/Frilly Bow — ₽2,000 każda.",
+        "5F — bandany i kwiaty: Sailor/Safari/Polka-Dot/Ruby/Sapphire/Emerald/Black/White Bandanna — ₽3,000 każda; Red/Pink/Blue/White/Orange/Purple/Pale Blue/Green Flowers — ₽5,000 każda.",
+        "Dach — automaty: Fresh Water ₽200, Soda Pop ₽300 i Lemonade ₽350."
+      ],
+      "itemsStatus": "field rewards and full Let's Go Department Store stock grouped by floor and vendor; prices verified from Altissimo LGPE guide"
     },
     {
       "id": "celadon_game_corner",
