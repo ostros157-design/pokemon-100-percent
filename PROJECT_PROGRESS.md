@@ -5912,3 +5912,12 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Dodano do widocznego panelu dwóch naukowców z Underground Path (Routes 5–6), którzy pojawiają się po ukończeniu głównej historii (Magnemite Lv. 70 i Magneton Lv. 75).
 - Uzupełniono rekord źródła Bulbapedia Part 16 używany przy składach Ligi Pokémon.
 - Nie uruchomiono Flutter Analyzer, testów ani APK.
+
+
+### Let's Go Kanto — audyt Route 2 i Route 23 (2026-11-09)
+
+- Zweryfikowano Route 2: w Let's Go nie ma tam trenerów do walki; postacie w domu przy Diglett's Cave i pomocnik Profesora Oaka nie są trenerami bitewnymi. Zapisano pustą listę z licznikiem 0 i statusem potwierdzonego braku walk.
+- Uzupełniono Route 23 o pięciu Master Trainers pojawiających się po zostaniu Championem: Lass Sal (Venusaur Lv. 75), Ace Trainer Edmund (Charizard Lv. 75), Ace Trainer Percy (Nidoqueen Lv. 75), Ace Trainer Carlton (Nidoking Lv. 80) i Ace Trainer Jirard (Dratini Lv. 65).
+- Dane Route 23 porównano z Bulbapedia i Serebii; dodano osobny rekord źródła Bulbapedia Route 23. Rozdzielono składy postgame od trenerów głównej historii.
+- Po zmianie indeks zawiera 337 rekordów trenerów w 76 lokacjach; liczniki list i identyfikatory źródeł są spójne.
+- Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK.
