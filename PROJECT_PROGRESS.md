@@ -6006,7 +6006,7 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 
 - Dodano do osobnego rekordu Pewter Museum of Science nagrody Old Amber oraz Pretty Wing ×10 wraz z warunkiem Chop Down i pokazania Aerodactyla.
 - Uzupełniono Fuchsia City o codzienny Nugget od Digletta w domu Warden’a po odblokowaniu Strong Push.
-- Poprawiono błąd nazwy nagrody Kogi: w Let’s Go jest to TM06 (Toxic), a nie TM27. Zmianę naniesiono w opisie Fuchsia Gym i dodano nagrodę do listy przedmiotów tej lokacji.
+- Ponownie zweryfikowano nagrodę Kogi: poprawna TM to TM27 (Toxic). Zmianę naniesiono w opisie Fuchsia Gym i dodano nagrodę do listy przedmiotów tej lokacji.
 - Źródła: Bulbapedia walkthrough Parts 3 i 11 oraz Serebii Daily Events. Nie dodano niezweryfikowanych współrzędnych. Nie uruchomiono Flutter Analyzer, testów ani APK.
 
 
@@ -6035,3 +6035,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Celadon Condominiums: dodano prezent Eevee Lv. 25 w Poké Ball na dachu, dostępny od tylnego wejścia. Celadon Game Corner: dodano dwa automaty z Fresh Water i Soda Pop. Celadon City: dopisano rzadkie znajdowanie Pretty Wing przez kwalifikujące się Pokémony chodzące za graczem w kwietniku na wschód od fontanny.
 - Ujednolicono liczniki ukrytych znajdziek dla Route 7, Route 10, obu Underground Paths, Pokémon Tower, Power Plant, Saffron City, Celadon Condominiums i Game Corner.
 - Źródła: Altissimo — pełny indeks ukrytych przedmiotów LGPE, przewodnik utility oraz przewodnik Celadon City. Współrzędne nadal nie są deklarowane jako dokładne. Flutter Analyzer, testy Flutter i APK nie zostały uruchomione.
+
+
+### Korekta danych Gymów — Koga i Sabrina (2026-11-09)
+
+- Korekta po dodatkowym sprawdzeniu źródeł: Koga w Let’s Go daje TM27 (Toxic), a nie TM06. Poprawiono opis Fuchsia Gym oraz Fuchsia City. Wcześniejszy wpis z TM06 był błędny.
+- Poprawiono również opis składu Sabriny w Saffron Gym z błędnych poziomów 38–39 na Mr. Mime 43, Slowbro 43, Jynx 43 i Alakazam 44.
+- Uzupełniono nagrody Lt. Surge: Autograph oraz TM36 (Thunderbolt).
+- Źródło weryfikacji: Serebii — Pokémon: Let's Go, Pikachu! & Let's Go, Eevee! Gyms; potwierdzenie składu Sabriny również w Bulbapedia i Pokémon Database. Nie uruchomiono testów Flutter ani APK.
