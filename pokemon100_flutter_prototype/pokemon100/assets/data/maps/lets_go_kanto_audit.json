@@ -8738,9 +8738,10 @@
         "Beauty Lana — trzy Growlithe Lv. 37.",
         "Bird Keeper Edwin — Dodrio Lv. 39.",
         "Master Trainer Bug Catcher Lajos — Venomoth Lv. 75 (Route 15, północ)",
-        "Master Trainer Bird Keeper Seymour — Dodrio Lv. 75 (Route 15, południowy wschód)"
+        "Master Trainer Bird Keeper Seymour — Dodrio Lv. 75 (Route 15, południowy wschód)",
+        "Master Trainer Lass Harleen — Tangela Lv. 75 (Route 15, północny zachód)"
       ],
-      "trainerCount": 8,
+      "trainerCount": 9,
       "trainerStatus": "master_trainer_postgame_roster_cross_checked_pokemondb"
     },
     {
@@ -9360,9 +9361,10 @@
         "Punk Guy Hideo — Arbok Lv. 36, Fearow Lv. 36; północna część wymaga Chop Down.",
         "Camper Ruben — dwa Psyduck Lv. 35.",
         "Master Trainer Bird Keeper Howie — Pidgeotto Lv. 70 (Route 16, zachód)",
-        "Master Trainer Youngster Cid — Lickitung Lv. 70 (brama Route 16)"
+        "Master Trainer Youngster Cid — Lickitung Lv. 70 (brama Route 16)",
+        "Master Trainer Ace Trainer Jay — Snorlax Lv. 75 (Route 16, wschód)"
       ],
-      "trainerCount": 6,
+      "trainerCount": 7,
       "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb"
     },
     {
@@ -14042,11 +14044,11 @@
         "Scientist Ivan — Electabuzz Lv. 45.",
         "Master Trainer Scientist Gordon — Muk Lv. 75 (2F, wschodnia część).",
         "Master Trainer Ace Trainer Jace — Magmar Lv. 75 (1F, wschodnia część).",
-        "Master Trainer Ditto — bez walki; wymaga pokazania Ditto o CP co najmniej 4000 (3F, północny wschód).",
-        "Master Trainer Mewtwo — bez walki; wymaga pokazania Mewtwo o CP co najmniej 9000 (B1F, południe).",
-        "Master Trainer Mew — bez walki; wymaga pokazania Mew o CP co najmniej 8000 (B1F, zachód).",
-        "Master Trainer Meltan — bez walki; wymaga pokazania Meltana o CP co najmniej 4000 (B1F, południowy zachód).",
-        "Master Trainer Melmetal — bez walki; wymaga pokazania Melmetala o CP co najmniej 8000 (B1F, północ)."
+        "Master Trainer Ditto — Ditto (bez walki); wymaga pokazania Ditto o CP co najmniej 4000 (3F, północny wschód).",
+        "Master Trainer Mewtwo — Mewtwo (bez walki); wymaga pokazania Mewtwo o CP co najmniej 9000 (B1F, południe).",
+        "Master Trainer Mew — Mew (bez walki); wymaga pokazania Mew o CP co najmniej 8000 (B1F, zachód).",
+        "Master Trainer Meltan — Meltan (bez walki); wymaga pokazania Meltana o CP co najmniej 4000 (B1F, południowy zachód).",
+        "Master Trainer Melmetal — Melmetal (bez walki); wymaga pokazania Melmetala o CP co najmniej 8000 (B1F, północ)."
       ],
       "trainerCount": 15,
       "trainerStatus": "postgame_master_trainer_teams_verified"
