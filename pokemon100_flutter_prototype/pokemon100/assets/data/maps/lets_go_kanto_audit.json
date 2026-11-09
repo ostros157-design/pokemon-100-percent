@@ -832,6 +832,11 @@
       "id": "altissimo-viridian-lgpe",
       "url": "https://altissimo1.github.io/Main-Series/Kanto-Locations/viridian-city.html",
       "scope": "Let's Go Viridian City items, hidden pickups, walking Pokémon finds and TM11 access"
+    },
+    {
+      "id": "altissimo-pallet-lgpe",
+      "url": "https://altissimo1.github.io/Main-Series/Kanto-Locations/pallet-town.html",
+      "scope": "Let's Go Pallet Town story items, Town Map, Pokédex, Razz Berries, Sportswear and postgame Mega Stones"
     }
   ],
   "locations": [
@@ -916,6 +921,16 @@
             "bulbapedia-part1-houses",
             "bulbapedia-part2"
           ]
+        },
+        {
+          "id": "blue_mega_stones",
+          "name": "Blue — Key Stone i Mega Stones",
+          "category": "postgame_reward",
+          "note": "Po zdobyciu siedmiu odznak spotkaj Blue’a przed Viridian Gym, aby otrzymać Key Stone, Venusaurite, Charizardite X, Charizardite Y i Blastoisinite.",
+          "status": "text_verified",
+          "sourceIds": [
+            "altissimo-pallet-lgpe"
+          ]
         }
       ],
       "encounters": {
@@ -944,15 +959,20 @@
         "routepedia-pallet-pikachu",
         "bulbapedia-part1-houses",
         "bulbapedia-part2",
-        "bulbapedia-start"
+        "bulbapedia-start",
+        "altissimo-pallet-lgpe"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "items": [
-        "Town Map — od mamy gracza w domu podczas sekwencji otwierającej.",
-        "Sportswear — od siostry Trace’a przy wyjściu na Route 1 po dostarczeniu Oak’s Parcel.",
-        "Razz Berry — od Profesora Oaka po dostarczeniu Oak’s Parcel."
+        "Town Map — od mamy gracza po otrzymaniu partnera Pokémon; przekazany przy wyjściu z laboratorium.",
+        "Sportswear — od siostry Trace’a przy Route 1 po dostarczeniu Oak’s Parcel.",
+        "Key Stone — od Blue’a po uzyskaniu siedmiu odznak i spotkaniu go przed Viridian Gym.",
+        "Venusaurite — od Blue’a po uzyskaniu siedmiu odznak.",
+        "Charizardite X — od Blue’a po uzyskaniu siedmiu odznak.",
+        "Charizardite Y — od Blue’a po uzyskaniu siedmiu odznak.",
+        "Blastoisinite — od Blue’a po uzyskaniu siedmiu odznak."
       ],
-      "itemsStatus": "opening sequence gifts and parcel reward verified from Bulbapedia Parts 1–2"
+      "itemsStatus": "opening story gifts and postgame Mega Stone rewards verified from Altissimo Pallet Town guide"
     },
     {
       "id": "route_1",
@@ -8964,9 +8984,8 @@
       "items": [
         "Super Lure",
         "Nugget — od Digletta w domu Warden’a po użyciu Strong Push; codzienna nagroda.",
-        "TM14 (Fly) — od dziewczyny w ukrytym domu w północnej części miasta; dostęp wymaga Chop Down.",
         "Safari Set — od Warden’a po oddaniu Gold Teeth.",
-        "TM14 (Fly) — od dziewczyny w ukrytym domu na północy miasta; wymaga Chop Down."
+        "TM14 (Fly) — od dziewczyny w ukrytym domu na północy miasta; dostęp wymaga Chop Down."
       ],
       "gymLeader": {
         "name": "Koga",
@@ -9052,7 +9071,7 @@
       ],
       "trainerCount": 4,
       "trainerStatus": "postgame_master_trainer_teams_verified",
-      "itemsStatus": "Super Lure, daily Nugget, Safari Set and TM14 hidden-house reward verified from Bulbapedia Part 11"
+      "itemsStatus": "Super Lure, daily Warden-house Nugget, Safari Set and TM14 hidden-house reward verified from Bulbapedia Part 11"
     },
     {
       "id": "celadon_city",
@@ -15051,10 +15070,8 @@
       "events": [
         "Początek przygody odbywa się w domu gracza w Pallet Town; wnętrze jest schematyczne, a nie odwzorowane kafelek po kafelku."
       ],
-      "items": [
-        "Town Map — od mamy gracza na początku przygody; nagroda w domu gracza."
-      ],
-      "itemsStatus": "Town Map opening gift verified from Bulbapedia Part 1"
+      "items": [],
+      "itemsStatus": "No separate collectible item pickup in the player's house; Town Map is received from Mom outside the lab"
     },
     {
       "id": "professor_oak_lab",
@@ -15065,7 +15082,9 @@
       ],
       "notes": "Laboratorium Profesora Oaka w Pallet Town, związane z rozpoczęciem przygody i Pokédexem. Wnętrze nie jest jeszcze odwzorowane.",
       "sourceIds": [
-        "bulbapedia-oak-lab"
+        "bulbapedia-oak-lab",
+        "altissimo-pallet-lgpe",
+        "bulbapedia-part2"
       ],
       "dataStatus": "schematic_interior_available_exact_layout_pending",
       "coordinateStatus": "unverified",
@@ -15073,9 +15092,10 @@
         "Po dostarczeniu Oak's Parcel z Viridian City gracz otrzymuje Pokédex od Profesora Oaka."
       ],
       "items": [
-        "Pokédex — od Profesora Oaka po wydarzeniu z partnerem Pokémonem i dostarczeniu Oak’s Parcel."
+        "Pokédex — od Profesora Oaka po otrzymaniu partnera Pokémon.",
+        "Razz Berry ×20 — od Profesora Oaka po dostarczeniu Oak’s Parcel."
       ],
-      "itemsStatus": "Pokédex story reward verified from Bulbapedia Parts 1–2"
+      "itemsStatus": "Pokédex and 20 Razz Berries story rewards verified from Bulbapedia Parts 1–2 and Altissimo"
     },
     {
       "id": "celadon_department_store",
