@@ -1525,6 +1525,74 @@ class _MapsScreenState extends State<MapsScreen> {
                                         '• Mapa regionu i schematy lokalne są autorskimi ilustracjami wektorowymi, a nie dokładnymi mapami kafelkowymi z gry. Aliasowe nazwy Bill’s House i Safari Zone korzystają ze wspólnych planów.\n• Węzły i strefy pięter są poglądowe; sieć 82 połączeń odpowiada indeksowi lokacji.\n• Dane spotkań i notatki są dostępne offline, ale dokładne pinezki Pokémonów, trenerów i przedmiotów pozostają niezweryfikowane.',
                                       ),
                                       const SizedBox(height: 12),
+                                      if (_searchQuery.trim().isNotEmpty) ...[
+                                        Container(
+                                          width: double.infinity,
+                                          padding: const EdgeInsets.symmetric(
+                                            horizontal: 12,
+                                            vertical: 10,
+                                          ),
+                                          decoration: BoxDecoration(
+                                            color: Theme.of(context)
+                                                .colorScheme
+                                                .secondaryContainer
+                                                .withValues(alpha: .72),
+                                            borderRadius: BorderRadius.circular(12),
+                                            border: Border.all(
+                                              color: Theme.of(context)
+                                                  .colorScheme
+                                                  .outlineVariant,
+                                            ),
+                                          ),
+                                          child: Row(
+                                            children: [
+                                              Icon(
+                                                Icons.my_location,
+                                                color: Theme.of(context)
+                                                    .colorScheme
+                                                    .onSecondaryContainer,
+                                              ),
+                                              const SizedBox(width: 10),
+                                              Expanded(
+                                                child: Column(
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
+                                                  children: [
+                                                    Text(
+                                                      'Wybrana lokacja',
+                                                      style: Theme.of(context)
+                                                          .textTheme
+                                                          .labelSmall,
+                                                    ),
+                                                    Text(
+                                                      _searchQuery.trim(),
+                                                      style: Theme.of(context)
+                                                          .textTheme
+                                                          .titleSmall
+                                                          ?.copyWith(
+                                                            fontWeight:
+                                                                FontWeight.w800,
+                                                          ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                              TextButton.icon(
+                                                onPressed: () {
+                                                  _locationSearchController.clear();
+                                                  setState(() => _searchQuery = '');
+                                                },
+                                                icon: const Icon(
+                                                  Icons.public,
+                                                  size: 17,
+                                                ),
+                                                label: const Text('Całe Kanto'),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                        const SizedBox(height: 8),
+                                      ],
                                       _KantoRegionMap(
                                         selectedLocation: _searchQuery,
                                         onLocationSelected: (location) {
