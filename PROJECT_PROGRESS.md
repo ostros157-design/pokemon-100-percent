@@ -6068,3 +6068,10 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Dodano późną nagrodę Blue’a po zdobyciu siedmiu odznak: Key Stone, Venusaurite, Charizardite X, Charizardite Y i Blastoisinite.
 - Usunięto powtórzony wpis TM14 Fly w Fuchsia City.
 - Źródła: Altissimo — Pallet Town; Bulbapedia walkthrough Parts 1–2. Nie dodano fikcyjnych pinezek; nagrody pozostają wpisami tekstowymi. Flutter Analyzer, testy i APK nie zostały uruchomione.
+
+
+### Let's Go Kanto — Mt. Moon: rozdzielenie powtarzających się przedmiotów (2026-11-09)
+
+- Uporządkowano listę Mt. Moon: rozróżniono dwa Potiony, dwa Revive i dwie ukryte Moon Stones jako osobne znaleziska; dopisano dokładne piętra i opisy miejsc dla czterech ukrytych znajdziek (Stardust, Big Mushroom, dwie Moon Stones).
+- Ustawiono hiddenItemCount na 4 i dodano odwołanie do pełnego indeksu ukrytych przedmiotów LGPE. Pozostałe wielokrotne przedmioty Seafoam Islands zachowują oznaczenia „kolejny”/numery, ponieważ są odrębnymi znajdźkami.
+- Nie dodano współrzędnych. Testy Flutter, Analyzer i APK nadal nie zostały uruchomione.
