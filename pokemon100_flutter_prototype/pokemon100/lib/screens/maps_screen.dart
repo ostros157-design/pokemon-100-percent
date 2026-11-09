@@ -768,7 +768,7 @@ class _MapsScreenState extends State<MapsScreen> {
           event['description']?.toString() ?? '';
       if (name.isEmpty) return note;
       return '$name${note.isEmpty ? '' : ' — $note'}';
-    }).where((line) => line.isNotEmpty).join('\\n');
+    }).where((line) => line.isNotEmpty).join('\n');
   }
 
   Map<String, dynamic>? get _selectedMapIndexLocation {
