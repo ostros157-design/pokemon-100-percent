@@ -627,6 +627,11 @@
       "id": "bulbapedia-part18",
       "url": "https://bulbapedia.bulbagarden.net/wiki/Appendix%3ALet%27s_Go,_Pikachu!_and_Let%27s_Go,_Eevee!/Part_18",
       "scope": "Post-game events and rematches in Let's Go Pikachu/Eevee"
+    },
+    {
+      "id": "bulbapedia-part16",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Walkthrough:Pok%C3%A9mon:_Let's_Go,_Pikachu!_and_Let's_Go,_Eevee!/Part_16",
+      "scope": "Elite Four and Champion Trace teams and levels"
     }
   ],
   "locations": [
@@ -3595,7 +3600,12 @@
         "routepedia-underground56-eevee",
         "serebii-underground56"
       ],
-      "dataStatus": "text_verified_positions_not_mapped"
+      "dataStatus": "text_verified_positions_not_mapped",
+      "trainers": [
+        "Scientist Murray — Magnemite Lv. 70 (postgame).",
+        "Scientist Julian — Magneton Lv. 75 (postgame)."
+      ],
+      "trainerStatus": "postgame_teams_verified_from_serebii"
     },
     {
       "id": "route_6",
@@ -5699,9 +5709,13 @@
       },
       "encounterStatus": "text_verified",
       "trainers": [
+        "Hiker Clark — Geodude Lv. 25 i Graveler Lv. 25 (południowa część Route 10).",
+        "Picnicker Carol — Pikachu Lv. 24 i Pidgeotto Lv. 24 (południowa część Route 10).",
+        "Camper Trent — Krabby Lv. 24 i Sandslash Lv. 24 (południowa część Route 10).",
+        "Poké Maniac Damian — Charmeleon Lv. 25 (południowa część Route 10).",
         "Poké Maniac Mark — Rhyhorn Lv. 42 i Lickitung Lv. 42 (północny odcinek, dostęp Sea Skim)."
       ],
-      "trainerCount": 1,
+      "trainerCount": 5,
       "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
     },
     {
