@@ -742,6 +742,21 @@
       "id": "routepedia-cinnabar-eevee",
       "url": "https://theroutepedia.com/pokemon-lets-go-eevee/cinnabar-island",
       "scope": "Let's Go Eevee Cinnabar Island aggregate item list (29 items, including 8 hidden), trainer roster, Blaine and rematch"
+    },
+    {
+      "id": "routepedia-viridian-eevee",
+      "url": "https://theroutepedia.com/pokemon-lets-go-eevee/viridian-city",
+      "scope": "Let's Go Eevee Viridian City two item locations and full trainer overview"
+    },
+    {
+      "id": "routepedia-pewter-eevee",
+      "url": "https://theroutepedia.com/pokemon-lets-go-eevee/pewter-city",
+      "scope": "Let's Go Eevee Pewter City item and trainer overview"
+    },
+    {
+      "id": "serebii-gym-rematches",
+      "url": "https://www.serebii.net/letsgopikachueevee/gymrematch.shtml",
+      "scope": "Postgame rematch teams and levels for the seven Kanto Gym Leaders"
     }
   ],
   "locations": [
@@ -1273,7 +1288,8 @@
         "routepedia-viridian-pikachu",
         "pokemondb-mastertrainers",
         "supercheats-viridian-postgame",
-        "bulbapedia-part2"
+        "bulbapedia-part2",
+        "routepedia-viridian-eevee"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "trainers": [
@@ -1284,7 +1300,13 @@
         "Master Trainer Psychic Anton — Drowzee Lv. 70 (Pokémon Center)."
       ],
       "trainerCount": 5,
-      "trainerStatus": "postgame_master_trainer_teams_verified"
+      "trainerStatus": "postgame_master_trainer_teams_verified",
+      "items": [
+        "Revive — item ball; dokładna pozycja nieprzypisana.",
+        "Potion — ukryty przedmiot; dokładna pozycja nieprzypisana."
+      ],
+      "hiddenItemCount": 1,
+      "itemsStatus": "2 item entries verified from Routepedia; exact positions not mapped"
     },
     {
       "id": "route_2",
@@ -1843,7 +1865,8 @@
         "routepedia-pewter-pikachu",
         "pokemondb-mastertrainers",
         "routepedia-pewter-city-trainers",
-        "supercheats-pewter-postgame"
+        "supercheats-pewter-postgame",
+        "routepedia-pewter-eevee"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "trainers": [
@@ -1855,7 +1878,12 @@
         "Master Trainer Hiker Kenji — Kabutops Lv. 75 (dom w północno-wschodniej części miasta)."
       ],
       "trainerCount": 6,
-      "trainerStatus": "story_and_postgame_teams_verified"
+      "trainerStatus": "story_and_postgame_teams_verified",
+      "items": [
+        "X Defense — item ball; dokładna pozycja nieprzypisana."
+      ],
+      "hiddenItemCount": 0,
+      "itemsStatus": "1 item entry verified from Routepedia; exact position not mapped"
     },
     {
       "id": "route_3",
@@ -14284,12 +14312,14 @@
         "name": "Giovanni"
       },
       "sourceIds": [
-        "bulbapedia-part14"
+        "bulbapedia-part14",
+        "serebii-gym-rematches"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
         "Lider Giovanni — Dugtrio Lv. 49, Persian Lv. 49, Nidoqueen Lv. 49, Nidoking Lv. 49 i Rhydon Lv. 50.",
-        "Nagroda po zwycięstwie: Earth Badge oraz TM41 (Earthquake)."
+        "Nagroda po zwycięstwie: Earth Badge oraz TM41 (Earthquake).",
+        "Postgame — Blue zastępuje Giovanniego jako lidera: Tauros Lv. 66, Gyarados Lv. 66, Aerodactyl Lv. 66, Alakazam Lv. 66, Exeggutor Lv. 66 i Charizard Lv. 68."
       ],
       "trainers": [
         "Ace Trainer Samuel — Nidoking Lv. 48.",
@@ -14298,9 +14328,10 @@
         "Ace Trainer Yuji — Dugtrio Lv. 47 i Rhyhorn Lv. 48.",
         "Tamer Jason — Sandslash Lv. 47.",
         "Black Belt Takashi — Graveler Lv. 47.",
-        "Lider Giovanni — Dugtrio Lv. 49, Nidoqueen Lv. 49, Nidoking Lv. 49, Persian Lv. 49 i Rhydon Lv. 50."
+        "Lider Giovanni — Dugtrio Lv. 49, Nidoqueen Lv. 49, Nidoking Lv. 49, Persian Lv. 49 i Rhydon Lv. 50.",
+        "Postgame — Blue zastępuje Giovanniego jako lidera: Tauros Lv. 66, Gyarados Lv. 66, Aerodactyl Lv. 66, Alakazam Lv. 66, Exeggutor Lv. 66 i Charizard Lv. 68."
       ],
-      "trainerCount": 7,
+      "trainerCount": 8,
       "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
     },
     {
@@ -14318,19 +14349,22 @@
       "notes": "Pierwsza sala fabularna. W Let's Go Brock używa Geodude Lv. 11 i Onix Lv. 12.",
       "sourceIds": [
         "routepedia-pewter-pikachu",
-        "bulbapedia-part3"
+        "bulbapedia-part3",
+        "serebii-gym-rematches"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
         "Lider Brock — Geodude Lv. 11 i Onix Lv. 12.",
-        "Nagroda po zwycięstwie: Boulder Badge oraz TM01 (Headbutt)."
+        "Nagroda po zwycięstwie: Boulder Badge oraz TM01 (Headbutt).",
+        "Rewanż postgame — Brock: Onix Lv. 56, Kabutops Lv. 56, Omastar Lv. 56, Aerodactyl Lv. 56 i Golem Lv. 57."
       ],
       "trainers": [
         "Picnicker Amara — Geodude Lv. 7.",
         "Camper Liam — Geodude Lv. 7.",
-        "Lider Brock — Geodude Lv. 11 i Onix Lv. 12."
+        "Lider Brock — Geodude Lv. 11 i Onix Lv. 12.",
+        "Rewanż postgame — Brock: Onix Lv. 56, Kabutops Lv. 56, Omastar Lv. 56, Aerodactyl Lv. 56 i Golem Lv. 57."
       ],
-      "trainerCount": 3,
+      "trainerCount": 4,
       "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
     },
     {
@@ -14347,20 +14381,23 @@
       },
       "sourceIds": [
         "routepedia-cerulean-pikachu",
-        "bulbapedia-part5"
+        "bulbapedia-part5",
+        "serebii-gym-rematches"
       ],
       "dataStatus": "leader_verified_team_needs_review",
       "events": [
         "Lider Misty — Psyduck Lv. 18 i Starmie Lv. 19.",
-        "Nagroda po zwycięstwie: Cascade Badge oraz TM29 (Scald)."
+        "Nagroda po zwycięstwie: Cascade Badge oraz TM29 (Scald).",
+        "Rewanż postgame — Misty: Golduck Lv. 56, Dewgong Lv. 56, Starmie Lv. 56, Vaporeon Lv. 56 i Gyarados Lv. 57."
       ],
       "trainers": [
         "Beauty Lily — Goldeen Lv. 16.",
         "Beauty Violet — Shellder Lv. 16.",
         "Beauty Daisy — Seel Lv. 16.",
-        "Lider Misty — Psyduck Lv. 18 i Starmie Lv. 19."
+        "Lider Misty — Psyduck Lv. 18 i Starmie Lv. 19.",
+        "Rewanż postgame — Misty: Golduck Lv. 56, Dewgong Lv. 56, Starmie Lv. 56, Vaporeon Lv. 56 i Gyarados Lv. 57."
       ],
-      "trainerCount": 4,
+      "trainerCount": 5,
       "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
     },
     {
@@ -14391,20 +14428,23 @@
       },
       "sourceIds": [
         "routepedia-vermilion-pikachu",
-        "bulbapedia-part6"
+        "bulbapedia-part6",
+        "serebii-gym-rematches"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
         "Lider Lt. Surge — Voltorb Lv. 25, Magnemite Lv. 25 i Raichu Lv. 26.",
-        "Nagroda po zwycięstwie: Thunder Badge oraz TM36 (Thunderbolt)."
+        "Nagroda po zwycięstwie: Thunder Badge oraz TM36 (Thunderbolt).",
+        "Rewanż postgame — Lt. Surge: Electrode Lv. 56, Jolteon Lv. 56, Electabuzz Lv. 56, Magneton Lv. 56 i Raichu Lv. 57."
       ],
       "trainers": [
         "Sailor Dwayne — Magnemite Lv. 22.",
         "Rocker Baily — Voltorb Lv. 22 ×2.",
         "Gentleman Tucker — Pikachu Lv. 22.",
-        "Lider Lt. Surge — Voltorb Lv. 25, Magnemite Lv. 25 i Raichu Lv. 26."
+        "Lider Lt. Surge — Voltorb Lv. 25, Magnemite Lv. 25 i Raichu Lv. 26.",
+        "Rewanż postgame — Lt. Surge: Electrode Lv. 56, Jolteon Lv. 56, Electabuzz Lv. 56, Magneton Lv. 56 i Raichu Lv. 57."
       ],
-      "trainerCount": 4,
+      "trainerCount": 5,
       "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
     },
     {
@@ -14421,12 +14461,14 @@
       },
       "sourceIds": [
         "routepedia-celadon-pikachu",
-        "bulbapedia-part9"
+        "bulbapedia-part9",
+        "serebii-gym-rematches"
       ],
       "dataStatus": "leader_verified_team_needs_review",
       "events": [
         "Lider Erika — Tangela Lv. 33, Weepinbell Lv. 33 i Vileplume Lv. 34.",
-        "Nagroda po zwycięstwie: Rainbow Badge oraz TM53 (Mega Drain)."
+        "Nagroda po zwycięstwie: Rainbow Badge oraz TM53 (Mega Drain).",
+        "Rewanż postgame — Erika: Tangela Lv. 56, Parasect Lv. 56, Victreebel Lv. 56, Exeggutor Lv. 56 i Vileplume Lv. 57."
       ],
       "trainers": [
         "Lass Kay — Oddish Lv. 28 (wymaga Chop Down).",
@@ -14436,9 +14478,10 @@
         "Beauty Lori — Gloom Lv. 29.",
         "Ace Trainer Mary — Weepinbell Lv. 31 i Tangela Lv. 32.",
         "Lass Lina — Bellsprout Lv. 28 ×3.",
-        "Lider Erika — Tangela Lv. 33, Weepinbell Lv. 33 i Vileplume Lv. 34."
+        "Lider Erika — Tangela Lv. 33, Weepinbell Lv. 33 i Vileplume Lv. 34.",
+        "Rewanż postgame — Erika: Tangela Lv. 56, Parasect Lv. 56, Victreebel Lv. 56, Exeggutor Lv. 56 i Vileplume Lv. 57."
       ],
-      "trainerCount": 8,
+      "trainerCount": 9,
       "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
     },
     {
@@ -14455,12 +14498,14 @@
       },
       "sourceIds": [
         "routepedia-saffron-pikachu",
-        "bulbapedia-part10"
+        "bulbapedia-part10",
+        "serebii-gym-rematches"
       ],
       "dataStatus": "leader_verified_team_needs_review",
       "events": [
         "Lider Sabrina — Mr. Mime Lv. 38, Slowbro Lv. 38, Jynx Lv. 38 i Alakazam Lv. 39.",
-        "Nagroda po zwycięstwie: Marsh Badge oraz TM33 (Calm Mind)."
+        "Nagroda po zwycięstwie: Marsh Badge oraz TM33 (Calm Mind).",
+        "Rewanż postgame — Sabrina: Mr. Mime Lv. 56, Jynx Lv. 56, Hypno Lv. 56, Slowbro Lv. 56 i Alakazam Lv. 57."
       ],
       "trainers": [
         "Psychic Johan — Slowbro Lv. 41 i Kadabra Lv. 41.",
@@ -14469,9 +14514,10 @@
         "Channeler Imari — Haunter Lv. 40 ×3.",
         "Ace Trainer Cameron — Kadabra Lv. 41 i Kadabra Lv. 42.",
         "Psychic Preston — Hypno Lv. 41.",
-        "Lider Sabrina — Mr. Mime Lv. 43, Slowbro Lv. 43, Jynx Lv. 43 i Alakazam Lv. 44."
+        "Lider Sabrina — Mr. Mime Lv. 43, Slowbro Lv. 43, Jynx Lv. 43 i Alakazam Lv. 44.",
+        "Rewanż postgame — Sabrina: Mr. Mime Lv. 56, Jynx Lv. 56, Hypno Lv. 56, Slowbro Lv. 56 i Alakazam Lv. 57."
       ],
-      "trainerCount": 7,
+      "trainerCount": 8,
       "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
     },
     {
@@ -14506,12 +14552,14 @@
       },
       "sourceIds": [
         "routepedia-fuchsia-pikachu",
-        "bulbapedia-part11"
+        "bulbapedia-part11",
+        "serebii-gym-rematches"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
         "Lider Koga — Weezing Lv. 43, Muk Lv. 43, Golbat Lv. 43 i Venomoth Lv. 44.",
-        "Nagroda po zwycięstwie: Soul Badge oraz TM27 (Toxic)."
+        "Nagroda po zwycięstwie: Soul Badge oraz TM27 (Toxic).",
+        "Rewanż postgame — Koga: Tentacruel Lv. 56, Golbat Lv. 56, Weezing Lv. 56, Venomoth Lv. 56 i Muk Lv. 57."
       ],
       "trainers": [
         "Tamer Phil — Nidorina Lv. 41 i Nidorino Lv. 41.",
@@ -14520,9 +14568,10 @@
         "Juggler Harry — Haunter Lv. 40 ×3.",
         "Ace Trainer Annie — Ivysaur Lv. 41 i Weezing Lv. 42.",
         "Tamer Edgar — Arbok Lv. 41 ×3.",
-        "Lider Koga — Weezing Lv. 43, Muk Lv. 43, Golbat Lv. 43 i Venomoth Lv. 44."
+        "Lider Koga — Weezing Lv. 43, Muk Lv. 43, Golbat Lv. 43 i Venomoth Lv. 44.",
+        "Rewanż postgame — Koga: Tentacruel Lv. 56, Golbat Lv. 56, Weezing Lv. 56, Venomoth Lv. 56 i Muk Lv. 57."
       ],
-      "trainerCount": 7,
+      "trainerCount": 8,
       "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
     },
     {
@@ -14539,21 +14588,24 @@
       },
       "sourceIds": [
         "routepedia-cinnabar-pikachu",
-        "bulbapedia-part13"
+        "bulbapedia-part13",
+        "serebii-gym-rematches"
       ],
       "dataStatus": "leader_verified_team_needs_review",
       "events": [
         "Lider Blaine — Magmar Lv. 47, Rapidash Lv. 47, Ninetales Lv. 47 i Arcanine Lv. 48.",
-        "Nagroda po zwycięstwie: Volcano Badge oraz TM46 (Fire Blast)."
+        "Nagroda po zwycięstwie: Volcano Badge oraz TM46 (Fire Blast).",
+        "Rewanż postgame — Blaine: Magmar Lv. 56, Rapidash Lv. 56, Ninetales Lv. 56, Flareon Lv. 56 i Arcanine Lv. 57."
       ],
       "trainers": [
         "Super Nerd Erik — Charmeleon Lv. 45.",
         "Burglar Quinn — Ninetales Lv. 44.",
         "Super Nerd Derek — Magmar Lv. 45.",
         "Burglar Dusty — Growlithe Lv. 44 i Rapidash Lv. 44.",
-        "Lider Blaine — Magmar Lv. 47, Rapidash Lv. 47, Ninetales Lv. 47 i Arcanine Lv. 48."
+        "Lider Blaine — Magmar Lv. 47, Rapidash Lv. 47, Ninetales Lv. 47 i Arcanine Lv. 48.",
+        "Rewanż postgame — Blaine: Magmar Lv. 56, Rapidash Lv. 56, Ninetales Lv. 56, Flareon Lv. 56 i Arcanine Lv. 57."
       ],
-      "trainerCount": 5,
+      "trainerCount": 6,
       "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
     },
     {
