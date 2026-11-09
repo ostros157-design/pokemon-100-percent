@@ -717,6 +717,31 @@
       "id": "bulbapedia-part1-houses",
       "url": "https://bulbapedia.bulbagarden.net/wiki/Walkthrough:_Pok%C3%A9mon:_Let's_Go,_Pikachu!_and_Let's_Go,_Eevee!/Part_1",
       "scope": "Pallet Town home, rival house, Oak's Lab and opening gifts"
+    },
+    {
+      "id": "routepedia-route20-eevee",
+      "url": "https://theroutepedia.com/pokemon-lets-go-eevee/route-20",
+      "scope": "Let's Go Eevee Route 20 complete item list (7 items, including 4 hidden), wild encounters and trainer roster"
+    },
+    {
+      "id": "routepedia-seafoam-eevee",
+      "url": "https://theroutepedia.com/pokemon-lets-go-eevee/seafoam-islands",
+      "scope": "Let's Go Eevee Seafoam Islands complete item list (35 items, including 7 hidden), floors, encounters and trainers"
+    },
+    {
+      "id": "routepedia-victory-road-eevee",
+      "url": "https://theroutepedia.com/pokemon-lets-go-eevee/victory-road",
+      "scope": "Let's Go Eevee Victory Road complete item list (17 items, including 5 hidden), floors, encounters and trainers"
+    },
+    {
+      "id": "routepedia-cerulean-cave-eevee",
+      "url": "https://theroutepedia.com/pokemon-lets-go-eevee/cerulean-cave",
+      "scope": "Let's Go Eevee Cerulean Cave complete item list (33 items, including 16 hidden), encounters, Mewtwo and Green's team"
+    },
+    {
+      "id": "routepedia-cinnabar-eevee",
+      "url": "https://theroutepedia.com/pokemon-lets-go-eevee/cinnabar-island",
+      "scope": "Let's Go Eevee Cinnabar Island aggregate item list (29 items, including 8 hidden), trainer roster, Blaine and rematch"
     }
   ],
   "locations": [
@@ -2047,7 +2072,7 @@
         "Youngster Calvin — Spearow Lv. 6",
         "Camper Victor — Nidoran♂ Lv. 7",
         "Picnicker Robin — Nidoran♀ Lv. 7",
-        "Coach Trainer Kareem — Bulbasaur Lv. 11; nagroda: Revive (sprawdź wariant; w części tabel brak wpisu nagrody)",
+        "Coach Trainer Kareem — Bulbasaur Lv. 11; brak jednoznacznie potwierdzonej nagrody w tabeli Serebii",
         "Master Trainer Ace Trainer Ronnie — Nidoran♀ Lv. 65 (Route 3, środek)"
       ],
       "items": [
@@ -10487,7 +10512,7 @@
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "notes": "Morska trasa rozdzielona przez Seafoam Islands; wymaga Sea Skim. Zakres 37–44 obejmuje poziomy spotkań wodnych z obu stron Seafoam Islands: 37–42 na wschodzie i 39–44 na zachodzie.",
+      "notes": "Morska trasa rozdzielona przez Seafoam Islands; wymaga Sea Skim. Zakres 37–44 obejmuje poziomy spotkań wodnych z obu stron Seafoam Islands: 37–42 na wschodzie i 39–44 na zachodzie. Uzupełniono pełny spis 7 przedmiotów (3 item balls, 4 ukryte) na podstawie listy Routepedia; strona źródłowa nie podaje pięter ani współrzędnych.",
       "wildPokemonDetails": {
         "lets_go_pikachu": [
           {
@@ -10723,7 +10748,8 @@
       "sourceIds": [
         "routepedia-route20-pikachu",
         "serebii-route20",
-        "pokemondb-mastertrainers"
+        "pokemondb-mastertrainers",
+        "routepedia-route20-eevee"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemon": {
@@ -10778,7 +10804,19 @@
         "Master Trainer Beauty Rose — Cloyster Lv. 75 (Route 20, południowy zachód od Seafoam Islands)"
       ],
       "trainerCount": 16,
-      "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb"
+      "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb",
+      "items": [
+        "Max Repel — item ball; dokładna pozycja nieprzypisana.",
+        "Ultra Ball ×3 — item ball; dokładna pozycja nieprzypisana.",
+        "Heart Scale — item ball; dokładna pozycja nieprzypisana.",
+        "Revive — ukryty przedmiot (1/3); pozycja nieprzypisana.",
+        "Revive — ukryty przedmiot (2/3); pozycja nieprzypisana.",
+        "Revive — ukryty przedmiot (3/3); pozycja nieprzypisana.",
+        "Stardust — ukryty przedmiot; pozycja nieprzypisana."
+      ],
+      "hiddenItemCount": 4,
+      "itemsStatus": "text_list_verified_from_Routepedia; exact pin coordinates not approved",
+      "hiddenItemsStatus": "4 hidden entries included in the text list; exact positions not mapped"
     },
     {
       "id": "seafoam_islands",
@@ -10803,7 +10841,8 @@
         "rotomlabs-seafoam-islands",
         "bulbapedia-part12",
         "pokemondb-mastertrainers",
-        "serebii-coachtrainers"
+        "serebii-coachtrainers",
+        "routepedia-seafoam-eevee"
       ],
       "dataStatus": "encounter_rates_verified_from_rotomlabs_positions_not_mapped",
       "wildPokemonDetails": {
@@ -11064,7 +11103,7 @@
           }
         ]
       },
-      "notes": "Spotkania na lądzie i podczas Surfowania mają zakres poziomów 39–44. Articuno jest statycznym spotkaniem na poziomie 50; wewnętrzne piętra i przesuwane głazy nie są jeszcze odwzorowane.",
+      "notes": "Spotkania na lądzie i podczas Surfowania mają zakres poziomów 39–44. Articuno jest statycznym spotkaniem na poziomie 50; wewnętrzne piętra i przesuwane głazy nie są jeszcze odwzorowane. Uzupełniono wszystkie 35 wpisów przedmiotów (28 item balls i 7 ukrytych); źródło nie udostępnia tu zatwierdzonych współrzędnych.",
       "events": [
         "Articuno — statyczne spotkanie na poziomie 50.",
         "Zagadki z głazami zmieniają przepływ wody i otwierają przejścia między piętrami; dokładne kafelki nie są naniesione."
@@ -11077,7 +11116,47 @@
         "Master Trainer Articuno Master — Articuno (bez walki; Seafoam Islands, B4F, zachód; pokaż Articuno o CP co najmniej 7500)"
       ],
       "trainerCount": 5,
-      "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb"
+      "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb",
+      "items": [
+        "Ice Heal — item ball.",
+        "Escape Rope — item ball.",
+        "Super Lure — item ball.",
+        "Great Ball ×5 — item ball.",
+        "Super Repel — item ball.",
+        "Max Potion — item ball.",
+        "TM55 — item ball.",
+        "Ice Stone — item ball.",
+        "Revive — item ball.",
+        "Ultra Ball ×3 — item ball.",
+        "Super Lure — item ball (kolejny).",
+        "Hyper Potion — item ball.",
+        "Super Repel — item ball (kolejny).",
+        "X Speed — item ball.",
+        "Revive — item ball (kolejny).",
+        "Ultra Ball ×3 — item ball (kolejny).",
+        "Super Lure — item ball (kolejny).",
+        "Hyper Potion — item ball (kolejny).",
+        "Super Repel — item ball (kolejny).",
+        "X Speed — item ball (kolejny).",
+        "Pretty Wing — item ball.",
+        "Big Pearl — item ball (1/6).",
+        "Big Pearl — item ball (2/6).",
+        "Big Pearl — item ball (3/6).",
+        "Pretty Wing — item ball (drugi).",
+        "Big Pearl — item ball (4/6).",
+        "Big Pearl — item ball (5/6).",
+        "Big Pearl — item ball (6/6).",
+        "Heart Scale — ukryty przedmiot (1/5).",
+        "Heart Scale — ukryty przedmiot (2/5).",
+        "Max Revive — ukryty przedmiot.",
+        "Pearl — ukryty przedmiot.",
+        "Heart Scale — ukryty przedmiot (3/5).",
+        "Heart Scale — ukryty przedmiot (4/5).",
+        "Heart Scale — ukryty przedmiot (5/5)."
+      ],
+      "hiddenItemCount": 7,
+      "itemsStatus": "text_list_verified_from_Routepedia; exact pin coordinates not approved",
+      "hiddenItemsStatus": "7 hidden entries included in the text list; exact positions not mapped"
     },
     {
       "id": "cinnabar_island",
@@ -11102,7 +11181,8 @@
       "sourceIds": [
         "routepedia-cinnabar-pikachu",
         "pokemondb-mastertrainers",
-        "supercheats-cinnabar-postgame"
+        "supercheats-cinnabar-postgame",
+        "routepedia-cinnabar-eevee"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
@@ -11114,7 +11194,42 @@
         "Master Trainer Lass Cindy — Exeggutor Lv. 75 (przy Pokémon Center)."
       ],
       "trainerCount": 1,
-      "trainerStatus": "postgame_master_trainer_teams_verified"
+      "trainerStatus": "postgame_master_trainer_teams_verified",
+      "items": [
+        "Antidote — item ball na obszarze Cinnabar Island; dokładny budynek/piętro nieprzypisane.",
+        "Max Elixir — item ball; dokładny budynek/piętro nieprzypisane.",
+        "Fire Stone — item ball; dokładny budynek/piętro nieprzypisane.",
+        "Max Repel — item ball; dokładny budynek/piętro nieprzypisane.",
+        "Silver Razz Berry ×5 — item ball; dokładny budynek/piętro nieprzypisane.",
+        "Max Lure — item ball; dokładny budynek/piętro nieprzypisane.",
+        "Max Revive — item ball; dokładny budynek/piętro nieprzypisane.",
+        "PP Up — item ball; dokładny budynek/piętro nieprzypisane.",
+        "Max Ether — item ball; dokładny budynek/piętro nieprzypisane.",
+        "Ultra Ball ×3 — item ball; dokładny budynek/piętro nieprzypisane.",
+        "Hyper Potion — item ball; dokładny budynek/piętro nieprzypisane.",
+        "Escape Rope — item ball; dokładny budynek/piętro nieprzypisane.",
+        "TM21 — item ball; dokładny budynek/piętro nieprzypisane.",
+        "Rare Candy — item ball (1/2); dokładny budynek/piętro nieprzypisane.",
+        "Full Heal — item ball; dokładny budynek/piętro nieprzypisane.",
+        "X Accuracy — item ball; dokładny budynek/piętro nieprzypisane.",
+        "Secret Key — item ball; lokalizacja w Pokémon Mansion.",
+        "Max Potion — item ball; dokładny budynek/piętro nieprzypisane.",
+        "Rare Candy — item ball (2/2); dokładny budynek/piętro nieprzypisane.",
+        "Max Elixir — item ball (drugi); dokładny budynek/piętro nieprzypisane.",
+        "TM52 — item ball; dokładny budynek/piętro nieprzypisane.",
+        "Health Candy — ukryty, losowy typ Candy (1/8).",
+        "Health Candy — ukryty, losowy typ Candy (2/8).",
+        "Health Candy — ukryty, losowy typ Candy (3/8).",
+        "Health Candy — ukryty, losowy typ Candy (4/8).",
+        "Health Candy — ukryty, losowy typ Candy (5/8).",
+        "Health Candy — ukryty, losowy typ Candy (6/8).",
+        "Health Candy — ukryty, losowy typ Candy (7/8).",
+        "Health Candy — ukryty, losowy typ Candy (8/8)."
+      ],
+      "hiddenItemCount": 8,
+      "itemsStatus": "text_list_verified_from_Routepedia; exact pin coordinates not approved",
+      "hiddenItemsStatus": "8 hidden entries included in the text list; exact positions not mapped",
+      "notes": "Lista 29 przedmiotów jest zbiorcza dla Cinnabar Island i obejmuje wnętrza; przypisanie wszystkich item balls do konkretnych budynków i pięter pozostaje do rozdzielenia."
     },
     {
       "id": "route_21",
@@ -12341,7 +12456,8 @@
         "rotomlabs-victory-road",
         "bulbapedia-part15",
         "pokemondb-mastertrainers",
-        "serebii-coachtrainers"
+        "serebii-coachtrainers",
+        "routepedia-victory-road-eevee"
       ],
       "dataStatus": "encounter_rates_verified_from_rotomlabs_positions_not_mapped",
       "wildPokemonDetails": {
@@ -12580,7 +12696,7 @@
           }
         ]
       },
-      "notes": "Moltres jest statycznym spotkaniem na poziomie 50. Wnętrze z przesuwanymi głazami, trenerami i przedmiotami wymaga osobnej mapy pięter.",
+      "notes": "Moltres jest statycznym spotkaniem na poziomie 50. Wnętrze z przesuwanymi głazami, trenerami i przedmiotami wymaga osobnej mapy pięter. Uzupełniono pełny spis 17 przedmiotów (12 item balls i 5 ukrytych); piętra są znane, ale dokładne pinezki nie zostały zatwierdzone.",
       "events": [
         "Moltres — statyczne spotkanie na poziomie 50.",
         "Głazy i przełączniki otwierają przejścia między piętrami; trenerzy i przedmioty nie mają jeszcze zweryfikowanych pinezek."
@@ -12604,7 +12720,29 @@
         "Master Trainer Moltres Master — Moltres (bez walki; Victory Road, 2F, południe; pokaż Moltres o CP co najmniej 7500)"
       ],
       "trainerCount": 16,
-      "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb"
+      "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb",
+      "items": [
+        "Leaf Stone — item ball.",
+        "TM56 — item ball.",
+        "Ultra Ball ×3 — item ball.",
+        "PP Max — item ball.",
+        "Full Restore — item ball (1/2).",
+        "TM49 — item ball.",
+        "TM45 — item ball.",
+        "TM51 — item ball.",
+        "Max Revive — item ball.",
+        "Golden Nanab Berry ×5 — item ball.",
+        "Full Restore — item ball (2/2).",
+        "Max Potion — item ball.",
+        "Health Candy — ukryty; losowo jeden z typów Candy (1/3).",
+        "Health Candy — ukryty; losowo jeden z typów Candy (2/3).",
+        "Pretty Wing — ukryty.",
+        "Fresh Water — ukryty.",
+        "Health Candy — ukryty; losowo jeden z typów Candy (3/3)."
+      ],
+      "hiddenItemCount": 5,
+      "itemsStatus": "text_list_verified_from_Routepedia; exact pin coordinates not approved",
+      "hiddenItemsStatus": "5 hidden entries included in the text list; exact positions not mapped"
     },
     {
       "id": "indigo_plateau",
@@ -12661,9 +12799,11 @@
       ],
       "sourceIds": [
         "routepedia-cerulean-cave-pikachu",
-        "rotomlabs-cerulean-cave"
+        "rotomlabs-cerulean-cave",
+        "routepedia-cerulean-cave-eevee",
+        "bulbapedia-part18"
       ],
-      "dataStatus": "encounter_rates_verified_from_rotomlabs_positions_not_mapped",
+      "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemonDetails": {
         "levels": [
           51,
@@ -12958,11 +13098,54 @@
           }
         ]
       },
-      "notes": "Podane są spotkania standardowe i wodne; Mewtwo to statyczne spotkanie na poziomie 70. Wewnętrzne piętra i pozycje przedmiotów nie są jeszcze odwzorowane.",
+      "notes": "Podane są spotkania standardowe i wodne; Mewtwo to statyczne spotkanie na poziomie 70. Wewnętrzne piętra i pozycje przedmiotów nie są jeszcze odwzorowane. Uzupełniono pełny spis 33 przedmiotów (17 item balls i 16 ukrytych); losowe przedmioty pozostawiono jako pule, nie przypisano fikcyjnych pinezek.",
       "events": [
         "Mewtwo — statyczne spotkanie na poziomie 70; lokacja staje się dostępna po zostaniu Championem.",
         "Jaskinia ma wiele pięter i rzadkie przedmioty; dokładny układ komnat i pinezki wymagają dalszej weryfikacji."
-      ]
+      ],
+      "items": [
+        "Max Revive — item ball.",
+        "Max Repel — item ball.",
+        "Full Heal — item ball.",
+        "PP Max — item ball.",
+        "Full Restore — item ball (1/3).",
+        "Rare Candy — item ball (1/2).",
+        "Max Revive — item ball (drugi).",
+        "Max Lure — item ball.",
+        "Ultra Ball ×5 — item ball.",
+        "Escape Rope — item ball.",
+        "Full Restore — item ball (2/3).",
+        "Max Elixir — item ball.",
+        "Poké Ball — item ball (1/5).",
+        "Poké Ball — item ball (2/5).",
+        "Poké Ball — item ball (3/5).",
+        "Poké Ball — item ball (4/5).",
+        "Poké Ball — item ball (5/5).",
+        "Full Restore — ukryty (3/3).",
+        "Rare Candy — ukryty (2/2).",
+        "Old Amber / Helix Fossil / Dome Fossil / Max Revive — ukryty, losowy przedmiot.",
+        "Golden Razz Berry / Golden Nanab Berry / Golden Pinap Berry — ukryty, losowy (1/5).",
+        "Golden Razz Berry / Golden Nanab Berry / Golden Pinap Berry — ukryty, losowy (2/5).",
+        "Golden Razz Berry / Golden Nanab Berry / Golden Pinap Berry — ukryty, losowy (3/5).",
+        "Golden Razz Berry / Golden Nanab Berry / Golden Pinap Berry — ukryty, losowy (4/5).",
+        "Golden Razz Berry / Golden Nanab Berry / Golden Pinap Berry — ukryty, losowy (5/5).",
+        "Poké Ball / Great Ball / Ultra Ball / Master Ball — ukryty, losowy (1/5).",
+        "Poké Ball / Great Ball / Ultra Ball / Master Ball — ukryty, losowy (2/5).",
+        "Poké Ball / Great Ball / Ultra Ball / Master Ball — ukryty, losowy (3/5).",
+        "Poké Ball / Great Ball / Ultra Ball / Master Ball — ukryty, losowy (4/5).",
+        "Poké Ball / Great Ball / Ultra Ball / Master Ball — ukryty, losowy (5/5).",
+        "Max Revive — ukryty.",
+        "Old Amber / Helix Fossil / Dome Fossil — ukryty, losowy przedmiot.",
+        "PP Max — ukryty."
+      ],
+      "hiddenItemCount": 16,
+      "itemsStatus": "text_list_verified_from_Routepedia; exact pin coordinates not approved",
+      "hiddenItemsStatus": "16 hidden entries included in the text list; exact positions not mapped",
+      "trainers": [
+        "Pokémon Trainer Green — Clefable Lv. 66, Gengar Lv. 66, Kangaskhan Lv. 66, Victreebel Lv. 66, Ninetales Lv. 66 i Blastoise Lv. 68 (postgame po zostaniu Championem)."
+      ],
+      "trainerCount": 1,
+      "trainerStatus": "postgame_team_verified_from_routepedia"
     },
     {
       "id": "ss_anne",
