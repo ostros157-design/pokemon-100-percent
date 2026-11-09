@@ -757,6 +757,21 @@
       "id": "serebii-gym-rematches",
       "url": "https://www.serebii.net/letsgopikachueevee/gymrematch.shtml",
       "scope": "Postgame rematch teams and levels for the seven Kanto Gym Leaders"
+    },
+    {
+      "id": "serebii-teamrocket",
+      "url": "https://www.serebii.net/letsgopikachueevee/teamrocket.shtml",
+      "scope": "Team Rocket story and postgame battles, including Archer and Jessie/James rematch teams"
+    },
+    {
+      "id": "serebii-red",
+      "url": "https://www.serebii.net/letsgopikachueevee/red.shtml",
+      "scope": "Pokémon Trainer Red postgame encounter requirements, location and Lv.85 team"
+    },
+    {
+      "id": "serebii-green",
+      "url": "https://www.serebii.net/letsgopikachueevee/green.shtml",
+      "scope": "Pokémon Trainer Green initial battle and repeatable Cerulean City rematch"
     }
   ],
   "locations": [
@@ -2847,7 +2862,8 @@
         "pokemondb-mastertrainers",
         "supercheats-cerulean-postgame",
         "bulbapedia-part16",
-        "serebii-coachtrainers"
+        "serebii-coachtrainers",
+        "serebii-green"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
@@ -2895,7 +2911,8 @@
           "sourceIds": [
             "bulbapedia-part5"
           ]
-        }
+        },
+        "Po pokonaniu Green w Cerulean Cave pojawia się ona przy Bike Shop; rewanż odblokowuje się po kolejnym zwycięstwie nad Elite Four."
       ],
       "trainers": [
         "Pokémon Trainer Trace — Pidgey Lv. 12, Oddish Lv. 12 oraz Eevee Lv. 13 (Let's Go Pikachu).",
@@ -2907,9 +2924,10 @@
         "Master Trainer Bird Keeper Barney — Doduo Lv. 70 (sklep rowerowy).",
         "Master Trainer Psychic Avery — Jynx Lv. 75 (zachód miasta, przy wejściu do Cerulean Cave).",
         "Master Trainer Ace Trainer Grayson — Dragonite Lv. 75 (dom).",
-        "Coach Trainer Harjit — Rhydon Lv. 52, Rapidash Lv. 52, Dewgong Lv. 52, Seaking Lv. 52 i Nidoking Lv. 52 (po odblokowaniu Cerulean Cave).; nagroda TM60 (Megahorn)"
+        "Coach Trainer Harjit — Rhydon Lv. 52, Rapidash Lv. 52, Dewgong Lv. 52, Seaking Lv. 52 i Nidoking Lv. 52 (po odblokowaniu Cerulean Cave).; nagroda TM60 (Megahorn)",
+        "Postgame — Pokémon Trainer Green (rematch po pokonaniu Green w Cerulean Cave; przy Bike Shop, po kolejnym wejściu do Hall of Fame): Clefable Lv. 66, Gengar Lv. 66, Kangaskhan Lv. 66, Victreebel Lv. 66, Ninetales Lv. 66 i Blastoise Lv. 68 (Mega Blastoise)."
       ],
-      "trainerCount": 10,
+      "trainerCount": 11,
       "trainerStatus": "story_and_postgame_teams_verified"
     },
     {
@@ -4434,7 +4452,8 @@
         "routepedia-vermilion-pikachu",
         "routepedia-vermilion-eevee",
         "pokemondb-mastertrainers",
-        "bulbapedia-part6"
+        "bulbapedia-part6",
+        "serebii-coachtrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
@@ -4470,13 +4489,15 @@
           "sourceIds": [
             "bulbapedia-part6"
           ]
-        }
+        },
+        "Mina przy dokach — pierwsza walka Jigglypuff Lv. 21 / Mr. Mime Lv. 22; po zostaniu Championem codzienny rewanż z Mr. Mime Lv. 54, Wigglytuff Lv. 54 i Alolan Ninetales Lv. 55; za wygraną Bottle Cap."
       ],
       "trainers": [
         "Master Trainer Bird Keeper Moe — Farfetch'd Lv. 70 (obok Pokémon Center).",
-        "Master Trainer Black Belt Randy — Machamp Lv. 75 (północno-wschodnia część miasta)."
+        "Master Trainer Black Belt Randy — Machamp Lv. 75 (północno-wschodnia część miasta).",
+        "Pokémon Trainer Mina — Jigglypuff Lv. 21 i Mr. Mime Lv. 22; nagroda Bottle Cap. Po zostaniu Championem codzienny rewanż: Mr. Mime Lv. 54, Wigglytuff Lv. 54 i Alolan Ninetales Lv. 55; nagroda Bottle Cap."
       ],
-      "trainerCount": 2,
+      "trainerCount": 3,
       "trainerStatus": "postgame_master_trainer_teams_verified"
     },
     {
@@ -9447,7 +9468,8 @@
         "bulbapedia-part11",
         "bulbapedia-part18",
         "pokemondb-mastertrainers",
-        "serebii-coachtrainers"
+        "serebii-coachtrainers",
+        "serebii-teamrocket"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemonDetails": {
@@ -9846,7 +9868,8 @@
         "Master Trainer Scientist Elton — Electrode Lv. 75 (Route 17, środek)",
         "Master Trainer Scientist Albert — Koffing Lv. 70 (Route 17, środek)",
         "Master Trainer Hiker Farkas — Rhyhorn Lv. 70 (Route 17, południe)",
-        "Master Trainer Lass Aoi — Eevee Lv. 75 (Route 17, północ)"
+        "Master Trainer Lass Aoi — Eevee Lv. 75 (Route 17, północ)",
+        "Postgame — Team Rocket Jessie: Arbok Lv. 52; James: Weezing Lv. 52 (podwójna walka; po zwycięstwie nagroda Blast-Off Set)."
       ],
       "items": [
         "Super Potion — przed dwiema północno-wschodnimi ławkami.",
@@ -9864,9 +9887,10 @@
         "Ukryte losowe jagody w żółtych krzakach: Razz / Nanab / Pinap oraz warianty Silver/Golden w różnych częściach trasy; opis tekstowy, bez pinezek."
       ],
       "events": [
-        "Po zostaniu Championem Jessie i James wracają na wschodnią część Route 17 i wyzywają gracza na ostatnią walkę; po zwycięstwie otrzymuje się Blast-Off Set."
+        "Po zostaniu Championem Jessie i James wracają na wschodnią część Route 17 i wyzywają gracza na ostatnią walkę; po zwycięstwie otrzymuje się Blast-Off Set.",
+        "Postgame: Jessie i James wracają na Route 17; ich ostatnia walka to Arbok Lv. 52 i Weezing Lv. 52. Nagroda: Blast-Off Set."
       ],
-      "trainerCount": 15,
+      "trainerCount": 16,
       "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb"
     },
     {
@@ -12790,22 +12814,25 @@
       ],
       "sourceIds": [
         "routepedia-indigo-pikachu",
-        "bulbapedia-part16"
+        "bulbapedia-part16",
+        "serebii-red"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
         "Pokémon League — czterech członków Elite Four: Lorelei, Bruno, Agatha i Lance; po ich pokonaniu następuje walka z Championem.",
         "Przed wejściem do Victory Road i Ligi trzeba mieć komplet ośmiu odznak Gymów.",
-        "Dokładne rozmieszczenie NPC i pełne drużyny walk ligowych wymagają osobnej weryfikacji; mapa nie oznacza ich pinezkami."
+        "Dokładne rozmieszczenie NPC i pełne drużyny walk ligowych wymagają osobnej weryfikacji; mapa nie oznacza ich pinezkami.",
+        "Postgame: Red pojawia się przed wejściem do Pokémon League po pokonaniu 6 różnych Master Trainers; wymaga pełnej drużyny sześciu Pokémonów. Po zwycięstwie przyznaje tytuł Battle Master."
       ],
       "trainers": [
         "Elite Four Lorelei — Dewgong Lv. 51, Jynx Lv. 51, Cloyster Lv. 51, Slowbro Lv. 51 i Lapras Lv. 52.",
         "Elite Four Bruno — Onix Lv. 52, Hitmonchan Lv. 52, Hitmonlee Lv. 52, Poliwrath Lv. 52 i Machamp Lv. 53.",
         "Elite Four Agatha — Arbok Lv. 53, Gengar Lv. 53, Golbat Lv. 53, Weezing Lv. 53 i Gengar Lv. 54.",
         "Elite Four Lance — Seadra Lv. 54, Aerodactyl Lv. 54, Gyarados Lv. 54, Charizard Lv. 54 i Dragonite Lv. 55.",
-        "Champion Trace — Pidgeot Lv. 56, Vileplume Lv. 56, Marowak Lv. 56, Rapidash Lv. 56, Slowbro Lv. 56 oraz Jolteon Lv. 57 (Let's Go Pikachu) / Raichu Lv. 57 (Let's Go Eevee)."
+        "Champion Trace — Pidgeot Lv. 56, Vileplume Lv. 56, Marowak Lv. 56, Rapidash Lv. 56, Slowbro Lv. 56 oraz Jolteon Lv. 57 (Let's Go Pikachu) / Raichu Lv. 57 (Let's Go Eevee).",
+        "Pokémon Trainer Red — Pikachu Lv. 85, Machamp Lv. 85, Arcanine Lv. 85, Lapras Lv. 85, Snorlax Lv. 85 i Venusaur Lv. 85 (Mega Venusaur; po pokonaniu co najmniej 6 różnych Master Trainers i posiadaniu pełnej drużyny 6 Pokémonów)."
       ],
-      "trainerCount": 5,
+      "trainerCount": 6,
       "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
     },
     {
@@ -13816,12 +13843,14 @@
       ],
       "sourceIds": [
         "bulbapedia-part9",
-        "pokemondb-mastertrainers"
+        "pokemondb-mastertrainers",
+        "serebii-teamrocket"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
         "Lift Key — klucz do windy zdobywany podczas eksploracji kryjówki Team Rocket.",
-        "Po pokonaniu Giovanniego gracz otrzymuje Silph Scope, który pozwala rozpoznawać duchy w Pokémon Tower."
+        "Po pokonaniu Giovanniego gracz otrzymuje Silph Scope, który pozwala rozpoznawać duchy w Pokémon Tower.",
+        "Postgame: po pokonaniu Elite Four można wrócić na B4F i zmierzyć się z Archerem (Electrode, Golbat, Magmar, Weezing — Lv. 54)."
       ],
       "trainers": [
         "Team Rocket Grunt — Golbat Lv. 29 (B1F).",
@@ -13838,9 +13867,10 @@
         "Master Trainer Scientist Adam — Arbok Lv. 75 (Team Rocket Hideout, B1F, południowy zachód)",
         "Master Trainer Hiker Eugine — Rhydon Lv. 75 (Team Rocket Hideout, B2F, południowy zachód)",
         "Master Trainer Youngster Shawn — Persian Lv. 75 (Team Rocket Hideout, B2F, zachód)",
-        "Master Trainer Scientist Donnie — Weezing Lv. 75 (Team Rocket Hideout, B3F, północ)"
+        "Master Trainer Scientist Donnie — Weezing Lv. 75 (Team Rocket Hideout, B3F, północ)",
+        "Postgame — Rocket Admin Archer: Electrode Lv. 54, Golbat Lv. 54, Magmar Lv. 54 i Weezing Lv. 54 (po zostaniu Championem; B4F, dawna sala Giovanniego)."
       ],
-      "trainerCount": 15,
+      "trainerCount": 16,
       "trainerStatus": "master_trainer_postgame_roster_cross_checked_pokemondb",
       "items": [
         "Team Rocket Set — B1F północ, od szpiega przebranego za Grunta, na południe od wejścia.",
