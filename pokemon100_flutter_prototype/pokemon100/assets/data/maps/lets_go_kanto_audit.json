@@ -827,6 +827,11 @@
       "id": "altissimo-vermilion-lgpe",
       "url": "https://altissimo1.github.io/Main-Series/Kanto-Locations/vermilion-city.html",
       "scope": "Let's Go Vermilion City hidden items, gifts, walking Pokémon finds and trainer details"
+    },
+    {
+      "id": "altissimo-viridian-lgpe",
+      "url": "https://altissimo1.github.io/Main-Series/Kanto-Locations/viridian-city.html",
+      "scope": "Let's Go Viridian City items, hidden pickups, walking Pokémon finds and TM11 access"
     }
   ],
   "locations": [
@@ -1352,6 +1357,16 @@
           "sourceIds": [
             "bulbapedia-part2"
           ]
+        },
+        {
+          "id": "walking_pokemon_pretty_wing_viridian",
+          "name": "Pretty Wing — kwietnik na wschód od Pokémon Center",
+          "category": "walking_pokemon_find",
+          "note": "Niektóre Pokémony chodzące za graczem mogą rzadko znaleźć Pretty Wing w kwietniku na wschód od Pokémon Center.",
+          "status": "text_verified",
+          "sourceIds": [
+            "altissimo-viridian-lgpe"
+          ]
         }
       ],
       "sourceIds": [
@@ -1359,7 +1374,8 @@
         "pokemondb-mastertrainers",
         "supercheats-viridian-postgame",
         "bulbapedia-part2",
-        "routepedia-viridian-eevee"
+        "routepedia-viridian-eevee",
+        "altissimo-viridian-lgpe"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "trainers": [
@@ -1373,10 +1389,11 @@
       "trainerStatus": "postgame_master_trainer_teams_verified",
       "items": [
         "Revive — item ball; dokładna pozycja nieprzypisana.",
-        "Potion — ukryty przedmiot; dokładna pozycja nieprzypisana."
+        "Potion — ukryty przedmiot; dokładna pozycja nieprzypisana.",
+        "TM11 (Will-O-Wisp) — od mężczyzny na południowy zachód od stawu; dostęp wymaga Chop Down."
       ],
       "hiddenItemCount": 1,
-      "itemsStatus": "2 item entries verified from Routepedia; exact positions not mapped"
+      "itemsStatus": "Potion hidden item and TM11 reward verified from Altissimo Viridian guide"
     },
     {
       "id": "route_2",
@@ -1950,10 +1967,12 @@
       "trainerCount": 6,
       "trainerStatus": "story_and_postgame_teams_verified",
       "items": [
-        "X Defense — item ball; dokładna pozycja nieprzypisana."
+        "X Defense — item ball; dokładna pozycja nieprzypisana.",
+        "Potion ×5 — od Trace’a przy pierwszym wejściu do miasta.",
+        "Great Ball ×5 — od Blue’a po pokonaniu Brocka."
       ],
       "hiddenItemCount": 0,
-      "itemsStatus": "1 item entry verified from Routepedia; exact position not mapped"
+      "itemsStatus": "X Defense plus Trace and Blue story gifts verified from Bulbapedia Part 3"
     },
     {
       "id": "route_3",
@@ -2904,7 +2923,10 @@
       },
       "items": [
         "Rare Candy",
-        "Burn Heal"
+        "Burn Heal",
+        "TM10 (Dig) — od Team Rocket Grunta po pokonaniu go w okradzionym domu.",
+        "Heart Scale ×5 — od Bike Maniaca po wysłuchaniu opisów wszystkich rowerów.",
+        "TM60 (Megahorn) — nagroda od Coach Trainer Harjit po zostaniu Championem."
       ],
       "notablePokemon": [
         "Bulbasaur Lv. 12 — gift",
@@ -2983,7 +3005,8 @@
         "Postgame — Pokémon Trainer Green (rematch po pokonaniu Green w Cerulean Cave; przy Bike Shop, po kolejnym wejściu do Hall of Fame): Clefable Lv. 66, Gengar Lv. 66, Kangaskhan Lv. 66, Victreebel Lv. 66, Ninetales Lv. 66 i Blastoise Lv. 68 (Mega Blastoise)."
       ],
       "trainerCount": 11,
-      "trainerStatus": "story_and_postgame_teams_verified"
+      "trainerStatus": "story_and_postgame_teams_verified",
+      "itemsStatus": "Rare Candy, Burn Heal, TM10, five Heart Scales and postgame TM60 rewards recorded from Bulbapedia Parts 5 and 16"
     },
     {
       "id": "route_24",
@@ -14500,7 +14523,8 @@
       },
       "sourceIds": [
         "bulbapedia-part14",
-        "serebii-gym-rematches"
+        "serebii-gym-rematches",
+        "altissimo-viridian-lgpe"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
@@ -14519,7 +14543,11 @@
         "Postgame — Blue zastępuje Giovanniego jako lidera: Tauros Lv. 66, Gyarados Lv. 66, Aerodactyl Lv. 66, Alakazam Lv. 66, Exeggutor Lv. 66 i Charizard Lv. 68."
       ],
       "trainerCount": 8,
-      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
+      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough",
+      "items": [
+        "TM41 (Earthquake) — nagroda od Giovanniego po pokonaniu go."
+      ],
+      "itemsStatus": "TM41 reward verified from Altissimo Viridian guide"
     },
     {
       "id": "pewter_gym",
@@ -14552,7 +14580,11 @@
         "Rewanż postgame — Brock: Onix Lv. 56, Kabutops Lv. 56, Omastar Lv. 56, Aerodactyl Lv. 56 i Golem Lv. 57."
       ],
       "trainerCount": 4,
-      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
+      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough",
+      "items": [
+        "TM01 (Headbutt) — nagroda od Brocka po pokonaniu go."
+      ],
+      "itemsStatus": "TM01 reward verified from Bulbapedia Part 3"
     },
     {
       "id": "cerulean_gym",
@@ -14585,7 +14617,11 @@
         "Rewanż postgame — Misty: Golduck Lv. 56, Dewgong Lv. 56, Starmie Lv. 56, Vaporeon Lv. 56 i Gyarados Lv. 57."
       ],
       "trainerCount": 5,
-      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
+      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough",
+      "items": [
+        "TM29 (Scald) — nagroda od Misty po pokonaniu jej."
+      ],
+      "itemsStatus": "TM29 reward verified from Bulbapedia Part 5"
     },
     {
       "id": "vermilion_gym",
