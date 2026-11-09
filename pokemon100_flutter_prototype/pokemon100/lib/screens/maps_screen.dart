@@ -208,6 +208,67 @@ class _MapsScreenState extends State<MapsScreen> {
     ].join(' — ');
   }
 
+  IconData _mapFeatureIcon(String category) {
+    switch (category) {
+      case 'building':
+      case 'gym':
+        return Icons.storefront_outlined;
+      case 'entrance':
+      case 'cave_access':
+        return Icons.door_front_door_outlined;
+      case 'story_event':
+      case 'story_gate':
+        return Icons.flag_outlined;
+      case 'interior_area':
+        return Icons.meeting_room_outlined;
+      case 'route_area':
+        return Icons.route_outlined;
+      default:
+        return Icons.place_outlined;
+    }
+  }
+
+  Widget _buildMapFeatureTile(dynamic entry) {
+    if (entry is! Map) {
+      return ListTile(
+        dense: true,
+        contentPadding: EdgeInsets.zero,
+        leading: const Icon(Icons.place_outlined),
+        title: Text(entry.toString()),
+      );
+    }
+
+    final name = entry['name']?.toString().trim() ?? 'Miejsce';
+    final category = entry['category']?.toString() ?? 'landmark';
+    final note = entry['note']?.toString().trim() ?? '';
+    final status = entry['status']?.toString() ?? '';
+    final isMapped = status == 'text_verified';
+    return ListTile(
+      dense: true,
+      contentPadding: EdgeInsets.zero,
+      leading: Icon(_mapFeatureIcon(category)),
+      title: Text(name),
+      subtitle: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          if (note.isNotEmpty) Text(note),
+          const SizedBox(height: 2),
+          Text(
+            isMapped
+                ? 'Informacja potwierdzona'
+                : 'Informacja potwierdzona, pozycja na mapie nieustalona',
+            style: TextStyle(
+              fontSize: 11,
+              color: isMapped
+                  ? Theme.of(context).colorScheme.primary
+                  : Theme.of(context).colorScheme.onSurfaceVariant,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
   Widget _buildLetsGoEncounterPanel(
     BuildContext context,
     String locationName,
@@ -292,11 +353,11 @@ class _MapsScreenState extends State<MapsScreen> {
             .where((value) => value.isNotEmpty)
             .toList() ??
         const <String>[];
-    final features = (location['features'] as List?)
-            ?.map(_formatLetsGoAuditEntry)
-            .where((value) => value.isNotEmpty)
-            .toList() ??
-        const <String>[];
+    final featureEntries = (location['features'] as List?) ?? const [];
+    final features = featureEntries
+        .map(_formatLetsGoAuditEntry)
+        .where((value) => value.isNotEmpty)
+        .toList();
     final events = (location['events'] as List?)
             ?.map(_formatLetsGoAuditEntry)
             .where((value) => value.isNotEmpty)
@@ -470,14 +531,9 @@ class _MapsScreenState extends State<MapsScreen> {
                 childrenPadding: const EdgeInsets.only(bottom: 8),
                 leading: const Icon(Icons.place_outlined),
                 title: Text('Budynki i charakterystyczne miejsca (${features.length})'),
-                children: [
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      features.map((feature) => '• $feature').join('\n'),
-                    ),
-                  ),
-                ],
+                children: featureEntries
+                    .map(_buildMapFeatureTile)
+                    .toList(growable: false),
               ),
             if (events.isNotEmpty)
               ExpansionTile(
