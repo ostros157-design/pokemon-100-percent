@@ -39,6 +39,7 @@ class PokemonMusicService {
   Future<void> startIfEnabled() async {
     if (await getAutoStartEnabled()) await playOrResume();
   }
+
   Future<void> playOrResume() async {
     await configure();
     if (player.state == PlayerState.paused) {
