@@ -2557,7 +2557,8 @@
       ],
       "sourceIds": [
         "routepedia-cerulean-pikachu",
-        "routepedia-cerulean-eevee"
+        "routepedia-cerulean-eevee",
+        "bulbapedia-part5"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
@@ -2566,7 +2567,14 @@
         "TM10 (Dig) — po pokonaniu Team Rocket Grunt, który włamał się do domu na południowym zachodzie miasta.",
         "Heart Scale ×5 — od Bike Maniaca po wysłuchaniu opisów wszystkich rowerów.",
         "Post-game: TM60 (Megahorn) — nagroda od Coach Trainer Harjit po zostaniu Championem."
-      ]
+      ],
+      "trainers": [
+        "Pokémon Trainer Trace — Pidgey Lv. 12, Oddish Lv. 12 oraz Eevee Lv. 13 (Let's Go Pikachu).",
+        "Pokémon Trainer Trace — Pidgey Lv. 12, Oddish Lv. 12 oraz Pikachu Lv. 13 (Let's Go Eevee).",
+        "Team Rocket Grunt — Raticate Lv. 15 (dom z włamanie, wydarzenie fabularne)."
+      ],
+      "trainerCount": 3,
+      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
     },
     {
       "id": "route_24",
@@ -5245,7 +5253,8 @@
       "sourceIds": [
         "routepedia-route10-pikachu",
         "bulbapedia-part8",
-        "serebii-route10"
+        "serebii-route10",
+        "bulbapedia-part13"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemonDetails": {
@@ -5690,15 +5699,10 @@
       },
       "encounterStatus": "text_verified",
       "trainers": [
-        "Route 10 (północ) — Team Rocket Grunt: Raticate Lv. 22.",
-        "Route 10 (północ) — Camper Vance: Eevee Lv. 22, Psyduck Lv. 22.",
-        "Route 10 (północ) — Coach Trainer Tasha: Poliwhirl Lv. 25, Primeape Lv. 26; nagroda TM13 (Brick Break).",
-        "Route 10 (południe) — Hiker Clark: Geodude Lv. 25, Graveler Lv. 25.",
-        "Route 10 (południe) — Picnicker Carol: Pikachu Lv. 24, Pidgeotto Lv. 24.",
-        "Route 10 (południe) — Camper Trent: Krabby Lv. 24, Sandslash Lv. 24.",
-        "Route 10 (południe) — Poké Maniac Damian: Charmeleon Lv. 25.",
-        "Post-game: Poké Maniac Mark w pobliżu Power Plant jest Master Trainerem; nie należy do głównego zestawu trenerów trasy."
-      ]
+        "Poké Maniac Mark — Rhyhorn Lv. 42 i Lickitung Lv. 42 (północny odcinek, dostęp Sea Skim)."
+      ],
+      "trainerCount": 1,
+      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
     },
     {
       "id": "rock_tunnel",
@@ -11929,14 +11933,24 @@
         "Champion battle"
       ],
       "sourceIds": [
-        "routepedia-indigo-pikachu"
+        "routepedia-indigo-pikachu",
+        "bulbapedia-part16"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
         "Pokémon League — czterech członków Elite Four: Lorelei, Bruno, Agatha i Lance; po ich pokonaniu następuje walka z Championem.",
         "Przed wejściem do Victory Road i Ligi trzeba mieć komplet ośmiu odznak Gymów.",
         "Dokładne rozmieszczenie NPC i pełne drużyny walk ligowych wymagają osobnej weryfikacji; mapa nie oznacza ich pinezkami."
-      ]
+      ],
+      "trainers": [
+        "Elite Four Lorelei — Dewgong Lv. 51, Jynx Lv. 51, Cloyster Lv. 51, Slowbro Lv. 51 i Lapras Lv. 52.",
+        "Elite Four Bruno — Onix Lv. 52, Hitmonchan Lv. 52, Hitmonlee Lv. 52, Poliwrath Lv. 52 i Machamp Lv. 53.",
+        "Elite Four Agatha — Arbok Lv. 53, Gengar Lv. 53, Golbat Lv. 53, Weezing Lv. 53 i Gengar Lv. 54.",
+        "Elite Four Lance — Seadra Lv. 54, Aerodactyl Lv. 54, Gyarados Lv. 54, Charizard Lv. 54 i Dragonite Lv. 55.",
+        "Champion Trace — Pidgeot Lv. 56, Vileplume Lv. 56, Marowak Lv. 56, Rapidash Lv. 56, Slowbro Lv. 56 oraz Jolteon Lv. 57 (Let's Go Pikachu) / Raichu Lv. 57 (Let's Go Eevee)."
+      ],
+      "trainerCount": 5,
+      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
     },
     {
       "id": "cerulean_cave",
@@ -13218,7 +13232,19 @@
       "events": [
         "Secret Key — klucz do Cinnabar Gym znajdowany podczas eksploracji rezydencji.",
         "Dzienniki naukowców opisują badania nad Mewtwo; Mewtwo nie występuje jako dzikie spotkanie w Mansion."
-      ]
+      ],
+      "trainers": [
+        "Burglar Arnie — Rapidash Lv. 44.",
+        "Coach Trainer Rita — Graveler Lv. 46, Dugtrio Lv. 46 i Poliwrath Lv. 47.",
+        "Burglar Simon — Magmar Lv. 44 i Muk Lv. 44.",
+        "Scientist Braydon — Weezing Lv. 45, Magneton Lv. 45 i Magmar Lv. 45.",
+        "Ace Trainer Louis — Kingler Lv. 45 i Primeape Lv. 46.",
+        "Scientist Ted — Electrode Lv. 45 i Muk Lv. 45.",
+        "Burglar Lewis — Koffing Lv. 44 ×3 i Weezing Lv. 44.",
+        "Scientist Ivan — Electabuzz Lv. 45."
+      ],
+      "trainerCount": 8,
+      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
     },
     {
       "id": "safari_zone",
