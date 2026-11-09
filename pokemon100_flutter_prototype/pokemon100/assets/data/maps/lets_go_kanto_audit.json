@@ -942,9 +942,17 @@
       },
       "sourceIds": [
         "routepedia-pallet-pikachu",
-        "bulbapedia-part1-houses"
+        "bulbapedia-part1-houses",
+        "bulbapedia-part2",
+        "bulbapedia-start"
       ],
-      "dataStatus": "text_verified_positions_not_mapped"
+      "dataStatus": "text_verified_positions_not_mapped",
+      "items": [
+        "Town Map — od mamy gracza w domu podczas sekwencji otwierającej.",
+        "Sportswear — od siostry Trace’a przy wyjściu na Route 1 po dostarczeniu Oak’s Parcel.",
+        "Razz Berry — od Profesora Oaka po dostarczeniu Oak’s Parcel."
+      ],
+      "itemsStatus": "opening sequence gifts and parcel reward verified from Bulbapedia Parts 1–2"
     },
     {
       "id": "route_1",
@@ -1390,10 +1398,11 @@
       "items": [
         "Revive — item ball; dokładna pozycja nieprzypisana.",
         "Potion — ukryty przedmiot; dokładna pozycja nieprzypisana.",
-        "TM11 (Will-O-Wisp) — od mężczyzny na południowy zachód od stawu; dostęp wymaga Chop Down."
+        "TM11 (Will-O-Wisp) — od mężczyzny na południowy zachód od stawu; dostęp wymaga Chop Down.",
+        "Oak’s Parcel — od sprzedawcy w Poké Mart; dostarcz Profesorowi Oakowi w Pallet Town."
       ],
       "hiddenItemCount": 1,
-      "itemsStatus": "Potion hidden item and TM11 reward verified from Altissimo Viridian guide"
+      "itemsStatus": "Potion hidden item, Oak's Parcel and TM11 reward verified from Altissimo and Bulbapedia"
     },
     {
       "id": "route_2",
@@ -8955,7 +8964,9 @@
       "items": [
         "Super Lure",
         "Nugget — od Digletta w domu Warden’a po użyciu Strong Push; codzienna nagroda.",
-        "TM14 (Fly) — od dziewczyny w ukrytym domu w północnej części miasta; dostęp wymaga Chop Down."
+        "TM14 (Fly) — od dziewczyny w ukrytym domu w północnej części miasta; dostęp wymaga Chop Down.",
+        "Safari Set — od Warden’a po oddaniu Gold Teeth.",
+        "TM14 (Fly) — od dziewczyny w ukrytym domu na północy miasta; wymaga Chop Down."
       ],
       "gymLeader": {
         "name": "Koga",
@@ -9041,7 +9052,7 @@
       ],
       "trainerCount": 4,
       "trainerStatus": "postgame_master_trainer_teams_verified",
-      "itemsStatus": "Super Lure, daily Warden-house Nugget and TM14 hidden-house reward text-verified"
+      "itemsStatus": "Super Lure, daily Nugget, Safari Set and TM14 hidden-house reward verified from Bulbapedia Part 11"
     },
     {
       "id": "celadon_city",
@@ -14947,7 +14958,8 @@
       ],
       "sourceIds": [
         "bulbapedia-part6",
-        "pokemondb-mastertrainers"
+        "pokemondb-mastertrainers",
+        "altissimo-vermilion-lgpe"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "trainers": [
@@ -14966,7 +14978,14 @@
             "bulbapedia-part6"
           ]
         }
-      ]
+      ],
+      "items": [
+        "Pikachu Set — od przewodniczącego klubu w Let’s Go Pikachu.",
+        "Eevee Set — od przewodniczącego klubu w Let’s Go Eevee.",
+        "Raichu Set — od przewodniczącego po osiągnięciu maksymalnej przyjaźni z partnerem Pikachu.",
+        "Eeveelution Sets — od przewodniczącego po osiągnięciu maksymalnej przyjaźni z partnerem Eevee."
+      ],
+      "itemsStatus": "version-specific Fan Club clothing rewards and max-partner-friendship rewards verified from Altissimo Vermilion guide"
     },
     {
       "id": "day_care",
@@ -15031,7 +15050,11 @@
       "coordinateStatus": "unverified",
       "events": [
         "Początek przygody odbywa się w domu gracza w Pallet Town; wnętrze jest schematyczne, a nie odwzorowane kafelek po kafelku."
-      ]
+      ],
+      "items": [
+        "Town Map — od mamy gracza na początku przygody; nagroda w domu gracza."
+      ],
+      "itemsStatus": "Town Map opening gift verified from Bulbapedia Part 1"
     },
     {
       "id": "professor_oak_lab",
@@ -15048,7 +15071,11 @@
       "coordinateStatus": "unverified",
       "events": [
         "Po dostarczeniu Oak's Parcel z Viridian City gracz otrzymuje Pokédex od Profesora Oaka."
-      ]
+      ],
+      "items": [
+        "Pokédex — od Profesora Oaka po wydarzeniu z partnerem Pokémonem i dostarczeniu Oak’s Parcel."
+      ],
+      "itemsStatus": "Pokédex story reward verified from Bulbapedia Parts 1–2"
     },
     {
       "id": "celadon_department_store",
@@ -15207,9 +15234,17 @@
       "trainerCount": 1,
       "trainerStatus": "postgame_master_trainer_teams_verified",
       "items": [
-        "TM02 (Taunt) — Research Room; odbierz od naukowca siedzącego przy biurku."
+        "TM02 (Taunt) — Research Room; odbierz od naukowca siedzącego przy biurku.",
+        "Omanyte — odtworzenie z Helix Fossil.",
+        "Kabuto — odtworzenie z Dome Fossil.",
+        "Aerodactyl — odtworzenie z Old Amber."
       ],
-      "itemsStatus": "TM02 reward location verified from Bulbapedia Part 13"
+      "itemsStatus": "TM02 reward and all three fossil restoration species documented from Bulbapedia Part 13",
+      "notablePokemon": [
+        "Omanyte — odtworzenie z Helix Fossil w laboratorium.",
+        "Kabuto — odtworzenie z Dome Fossil w laboratorium.",
+        "Aerodactyl — odtworzenie z Old Amber w laboratorium."
+      ]
     },
     {
       "id": "fighting_dojo",
@@ -15299,7 +15334,11 @@
             "bulbapedia-part5"
           ]
         }
-      ]
+      ],
+      "items": [
+        "S.S. Ticket ×2 — od Billa po uwolnieniu go z maszyny teleportacyjnej; jeden bilet można przekazać Trace’owi."
+      ],
+      "itemsStatus": "two S.S. Tickets story reward verified from Bulbapedia Part 5"
     },
     {
       "id": "digletts_cave_route2_entrance",
