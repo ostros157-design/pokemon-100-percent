@@ -4485,7 +4485,8 @@
         "Elixir",
         "Big Pearl (ukryty)",
         "Full Heal (ukryty)",
-        "Sailor Set — od marynarza przy wejściu na S.S. Anne po pokazaniu S.S. Ticket."
+        "Sailor Set — od marynarza przy wejściu na S.S. Anne po pokazaniu S.S. Ticket.",
+        "Revive — ukryty w porcie, bezpośrednio na południowy wschód od ciężarówki; wymaga Sea Skim."
       ],
       "notablePokemon": [
         "Squirtle Lv. 16 — gift",
@@ -4570,7 +4571,7 @@
       ],
       "trainerCount": 3,
       "trainerStatus": "postgame_master_trainer_teams_verified",
-      "itemsStatus": "seven town item balls, three town hidden pickups, and Sailor Set reward separated from S.S. Anne items; hidden locations verified from Altissimo",
+      "itemsStatus": "seven town item balls, three confirmed hidden pickups (Full Heal, Big Pearl, Revive), and Sailor Set reward; ship-only pickups are stored on S.S. Anne",
       "hiddenItemCount": 3
     },
     {
