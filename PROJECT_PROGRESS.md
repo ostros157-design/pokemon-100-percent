@@ -1,11 +1,12 @@
 ### Audyt mapy Let’s Go Kanto — ujednolicenie obiektów i budynków (2026-11-09)
 
 - Ujednolicono strukturę pól `features` w audycie `lets_go_kanto_audit.json`: 68 wcześniejszych wpisów tekstowych zamieniono na obiekty z identyfikatorem, nazwą, kategorią, statusem i odwołaniami do źródeł lokacji.
-- Po zmianie audyt zawiera 84 strukturalne wpisy `features` w 76 lokacjach; kategorie obejmują budynki, punkty orientacyjne, wejścia, obszary wnętrz i zdarzenia fabularne.
+- Po zmianie audyt zawiera 84 strukturalne wpisy `features` w 76 lokacjach; kategorie obejmują budynki, punkty orientacyjne, wejścia, obszary wnętrz i zdarzenia fabularne. Każdy wpis ma teraz tablicę `sourceIds`; tam, gdzie nie było osobnego przypisania źródła, pozostaje ona jawnie pusta.
 - Zachowano istniejące szczegóły domów, sklepów, centrów Pokémon, Gymów, muzeów, statku S.S. Anne, Silph Co., Pokémon Tower i pozostałych obiektów; nie dopisano fikcyjnych współrzędnych.
 - Status audytu pozostaje `research_only_no_coordinates`: nazwy i przynależność obiektów są uporządkowane, ale dokładne pozycje na lokalnej mapie nadal wymagają osobnej weryfikacji.
-- Walidacja JSON: poprawne parsowanie, 76 lokacji, 84 obiekty `features`, 0 pozostałych wpisów tekstowych. Kontrola referencji źródeł: wszystkie istniejące identyfikatory źródeł są poprawne.
-- Nie uruchomiono Flutter Analyzer, testów ani APK; zmiana dotyczy wyłącznie pliku audytu badawczego.
+- Dodano `test/kanto_map_audit_test.dart`, który sprawdza status research-only, strukturę wszystkich wpisów, referencje źródeł i brak starych wpisów tekstowych. Test został zapisany, ale nie uruchomiono jeszcze `flutter test`.
+- Walidacja JSON: poprawne parsowanie, 76 lokacji, 84 obiekty `features`, 0 pozostałych wpisów tekstowych; wszystkie niepuste identyfikatory źródeł istnieją w katalogu źródeł.
+- Nie uruchomiono Flutter Analyzer, testów ani APK; zmiana dotyczy pliku audytu badawczego i nowego testu kontraktowego.
 
 ### Poradnik Let's Go, Pikachu! — jaskinie, budynki i legendarne spotkania (2026-11-08)
 
