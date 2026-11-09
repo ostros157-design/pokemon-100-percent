@@ -6124,3 +6124,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Zachowywany jest aktualny poziom powiększenia; ręczne przesuwanie i przyciski zoomu nadal pozostają dostępne.
 - Funkcja działa dla nazw odpowiadających węzłom mapy. Nie dodaje pinezek ani nie zmienia schematycznych współrzędnych.
 - Flutter Analyzer, testy Flutter i kompilacja APK nie zostały uruchomione; wymagany test ręczny wyboru kilku lokacji na małym i dużym ekranie.
+
+
+### Mapa Kanto — pierwszy etap stylu kafelkowego (2026-11-09)
+
+- Rozpoczęto przebudowę wizualną mapy regionu w kierunku przesłanego wzoru: głębszy niebieski ocean, bardziej nasycony zielony ląd oraz regularna siatka kafelków na powierzchni lądu.
+- Znaczniki lokacji otrzymały rozróżnienie kształtem i kolorem: budynki/obiekty są rombami, miasta i pozostałe typy mają osobne kolory okrągłych znaczników.
+- To pierwszy etap stylizacji istniejącego schematu regionu. Układ geograficzny i współrzędne pozostają dotychczasowym schematem poglądowym; nie dodano niezweryfikowanych pozycji ani nie odtworzono jeszcze pełnej mapy kafelkowej z gry.
+- Flutter Analyzer, testy i APK nie zostały uruchomione; zmiana wymaga oceny wizualnej i dalszej przebudowy terenu, dróg, budynków oraz warstw znaczników.
