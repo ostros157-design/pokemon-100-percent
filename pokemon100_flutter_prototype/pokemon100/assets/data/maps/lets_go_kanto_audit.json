@@ -642,6 +642,76 @@
       "id": "bulbapedia-route23-master-trainers",
       "url": "https://bulbapedia.bulbagarden.net/wiki/Kanto_Route_23",
       "scope": "Generation VII Route 23 post-Champion Master Trainers and their Pokémon, levels and locations"
+    },
+    {
+      "id": "pokemondb-mastertrainers",
+      "url": "https://pokemondb.net/lets-go-pikachu-eevee/master-trainers",
+      "scope": "Complete postgame Master Trainer roster: locations, Pokémon, levels and movesets in Let's Go Pikachu/Eevee"
+    },
+    {
+      "id": "serebii-mastertrainers",
+      "url": "https://www.serebii.net/letsgopikachueevee/mastertrainers.shtml",
+      "scope": "Master Trainer species, trainers, locations, levels and movesets"
+    },
+    {
+      "id": "serebii-coachtrainers",
+      "url": "https://www.serebii.net/letsgopikachueevee/coachtrainers.shtml",
+      "scope": "Coach Trainer locations, full teams, levels and rewards"
+    },
+    {
+      "id": "bulbapedia-celadon-condominiums-masters",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Celadon_Condominiums",
+      "scope": "Post-Champion Master Trainer Psychic Rui and Coach Trainer Morimoto at Celadon Condominiums"
+    },
+    {
+      "id": "bulbapedia-pewter-museum-masters",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Pewter_Museum_of_Science",
+      "scope": "Post-Champion Master Trainers Hiker Hisato and Hiker Valentino at Pewter Museum"
+    },
+    {
+      "id": "supercheats-cerulean-postgame",
+      "url": "https://www.supercheats.com/lets-go-pikachu/walkthrough/cerulean-city",
+      "scope": "Cerulean City postgame Master Trainers and Coach Trainer Harjit teams and levels"
+    },
+    {
+      "id": "supercheats-celadon-postgame",
+      "url": "https://www.supercheats.com/lets-go-pikachu/walkthrough/celadon-city",
+      "scope": "Celadon City postgame Master Trainers and Coach Trainer Morimoto full team and levels"
+    },
+    {
+      "id": "routepedia-pewter-city-trainers",
+      "url": "https://theroutepedia.com/pokemon-lets-go-pikachu/pewter-city",
+      "scope": "Pewter City main-story trainers and postgame Master Trainers, parties and levels"
+    },
+    {
+      "id": "bulbapedia-part9-celadon",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Appendix%3ALet%27s_Go%2C_Pikachu%21_and_Let%27s_Go%2C_Eevee%21_walkthrough/Section_9",
+      "scope": "Celadon City Team Rocket Grunt encounter and story walkthrough"
+    },
+    {
+      "id": "supercheats-viridian-postgame",
+      "url": "https://www.supercheats.com/lets-go-pikachu/walkthrough/viridian-city",
+      "scope": "Viridian City postgame Master Trainers, species and levels"
+    },
+    {
+      "id": "supercheats-pewter-postgame",
+      "url": "https://www.supercheats.com/lets-go-pikachu/walkthrough/pewter-city",
+      "scope": "Pewter City postgame Master Trainers, species and levels"
+    },
+    {
+      "id": "supercheats-saffron-postgame",
+      "url": "https://www.supercheats.com/lets-go-pikachu/walkthrough/saffron-city",
+      "scope": "Saffron City postgame Master Trainers, species and levels"
+    },
+    {
+      "id": "supercheats-fuchsia-postgame",
+      "url": "https://www.supercheats.com/lets-go-pikachu/walkthrough/fuchsia-city",
+      "scope": "Fuchsia City postgame Master Trainers, species and levels"
+    },
+    {
+      "id": "supercheats-cinnabar-postgame",
+      "url": "https://www.supercheats.com/lets-go-pikachu/walkthrough/cinnabar-island",
+      "scope": "Cinnabar Island postgame Master Trainers and levels"
     }
   ],
   "locations": [
@@ -1039,7 +1109,8 @@
         "serebii-route1"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
-      "encounterStatus": "text_verified"
+      "encounterStatus": "text_verified",
+      "trainerCount": 1
     },
     {
       "id": "viridian_city",
@@ -1107,9 +1178,20 @@
         }
       ],
       "sourceIds": [
-        "routepedia-viridian-pikachu"
+        "routepedia-viridian-pikachu",
+        "pokemondb-mastertrainers",
+        "supercheats-viridian-postgame"
       ],
-      "dataStatus": "text_verified_positions_not_mapped"
+      "dataStatus": "text_verified_positions_not_mapped",
+      "trainers": [
+        "Master Trainer Lass Amy — Oddish Lv. 65 (wschodnia część miasta).",
+        "Master Trainer Youngster Ken — Meowth Lv. 70 (Poké Mart).",
+        "Master Trainer Psychic Angelo — Abra Lv. 70 (południowy zachód).",
+        "Master Trainer Lass Hana — Bellsprout Lv. 65 (szkoła trenerów).",
+        "Master Trainer Psychic Anton — Drowzee Lv. 70 (Pokémon Center)."
+      ],
+      "trainerCount": 5,
+      "trainerStatus": "postgame_master_trainer_teams_verified"
     },
     {
       "id": "route_2",
@@ -1550,7 +1632,8 @@
         "routepedia-forest-pikachu",
         "routepedia-forest-eevee"
       ],
-      "dataStatus": "text_verified_positions_not_mapped"
+      "dataStatus": "text_verified_positions_not_mapped",
+      "trainerCount": 7
     },
     {
       "id": "pewter_city",
@@ -1635,9 +1718,22 @@
       },
       "sourceIds": [
         "bulbapedia-part3",
-        "routepedia-pewter-pikachu"
+        "routepedia-pewter-pikachu",
+        "pokemondb-mastertrainers",
+        "routepedia-pewter-city-trainers",
+        "supercheats-pewter-postgame"
       ],
-      "dataStatus": "text_verified_positions_not_mapped"
+      "dataStatus": "text_verified_positions_not_mapped",
+      "trainers": [
+        "Picnicker Amara — Geodude Lv. 7.",
+        "Camper Liam — Geodude Lv. 7.",
+        "Master Trainer Bird Keeper Ralph — Spearow Lv. 70 (południowa część miasta).",
+        "Master Trainer Lass Marge — Jigglypuff Lv. 70 (Pokémon Center).",
+        "Master Trainer Lass Emma — Gloom Lv. 70 (zachodnia część miasta).",
+        "Master Trainer Hiker Kenji — Kabutops Lv. 75 (dom w północno-wschodniej części miasta)."
+      ],
+      "trainerCount": 6,
+      "trainerStatus": "story_and_postgame_teams_verified"
     },
     {
       "id": "route_3",
@@ -1897,7 +1993,8 @@
           "Zapdos"
         ]
       },
-      "encounterStatus": "text_verified"
+      "encounterStatus": "text_verified",
+      "trainerCount": 7
     },
     {
       "id": "mt_moon",
@@ -2526,7 +2623,8 @@
       "encounterStatus": "text_verified",
       "trainers": [
         "Coach Trainer Oberon — Meowth Lv. 13; nagroda $1,300."
-      ]
+      ],
+      "trainerCount": 1
     },
     {
       "id": "cerulean_city",
@@ -2578,7 +2676,10 @@
       "sourceIds": [
         "routepedia-cerulean-pikachu",
         "routepedia-cerulean-eevee",
-        "bulbapedia-part5"
+        "bulbapedia-part5",
+        "pokemondb-mastertrainers",
+        "supercheats-cerulean-postgame",
+        "bulbapedia-part16"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
@@ -2591,10 +2692,17 @@
       "trainers": [
         "Pokémon Trainer Trace — Pidgey Lv. 12, Oddish Lv. 12 oraz Eevee Lv. 13 (Let's Go Pikachu).",
         "Pokémon Trainer Trace — Pidgey Lv. 12, Oddish Lv. 12 oraz Pikachu Lv. 13 (Let's Go Eevee).",
-        "Team Rocket Grunt — Raticate Lv. 15 (dom z włamanie, wydarzenie fabularne)."
+        "Team Rocket Grunt — Raticate Lv. 15 (dom z włamanie, wydarzenie fabularne).",
+        "Master Trainer Youngster Denis — Raticate Lv. 75 (dom na północny wschód od Pokémon Center).",
+        "Master Trainer Lass Kimberly — Poliwhirl Lv. 70 (dom).",
+        "Master Trainer Black Belt Yuen — Poliwrath Lv. 75 (za domem w północnej części miasta).",
+        "Master Trainer Bird Keeper Barney — Doduo Lv. 70 (sklep rowerowy).",
+        "Master Trainer Psychic Avery — Jynx Lv. 75 (zachód miasta, przy wejściu do Cerulean Cave).",
+        "Master Trainer Ace Trainer Grayson — Dragonite Lv. 75 (dom).",
+        "Coach Trainer Harjit — Rhydon Lv. 52, Rapidash Lv. 52, Dewgong Lv. 52, Seaking Lv. 52 i Nidoking Lv. 52 (po odblokowaniu Cerulean Cave)."
       ],
-      "trainerCount": 3,
-      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
+      "trainerCount": 10,
+      "trainerStatus": "story_and_postgame_teams_verified"
     },
     {
       "id": "route_24",
@@ -2968,7 +3076,8 @@
       "encounterStatus": "text_verified",
       "events": [
         "Charmander Lv. 14 — prezent od chłopca na północno-zachodnim wzgórzu po złapaniu co najmniej 50 Pokémonów."
-      ]
+      ],
+      "trainerCount": 7
     },
     {
       "id": "route_25",
@@ -3345,7 +3454,8 @@
           "Tentacruel"
         ]
       },
-      "encounterStatus": "text_verified"
+      "encounterStatus": "text_verified",
+      "trainerCount": 10
     },
     {
       "id": "route_5",
@@ -4033,7 +4143,8 @@
           "Seaking"
         ]
       },
-      "encounterStatus": "text_verified"
+      "encounterStatus": "text_verified",
+      "trainerCount": 6
     },
     {
       "id": "vermilion_city",
@@ -4092,14 +4203,21 @@
       },
       "sourceIds": [
         "routepedia-vermilion-pikachu",
-        "routepedia-vermilion-eevee"
+        "routepedia-vermilion-eevee",
+        "pokemondb-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
         "S.S. Anne — kapitan statku uczy partnera techniki Chop Down po wydarzeniu fabularnym.",
         "Squirtle — prezent od Officer Jenny po złapaniu co najmniej 60 Pokémonów.",
         "Pokémon Fan Club — budynek z wydarzeniem fanowskim; dokładne położenie NPC nie jest naniesione."
-      ]
+      ],
+      "trainers": [
+        "Master Trainer Bird Keeper Moe — Farfetch'd Lv. 70 (obok Pokémon Center).",
+        "Master Trainer Black Belt Randy — Machamp Lv. 75 (północno-wschodnia część miasta)."
+      ],
+      "trainerCount": 2,
+      "trainerStatus": "postgame_master_trainer_teams_verified"
     },
     {
       "id": "route_7",
@@ -4489,7 +4607,8 @@
         "Elixir — na południe od bramy Saffron City.",
         "TM12 (Facade) — nagroda od Coach Trainer Alpesh po zwycięstwie.",
         "Nanab Berry / Silver Nanab Berry / Golden Nanab Berry — krzak po wschodniej stronie wejścia do Underground Path; partner Pokémon może znaleźć wariant zależny od dnia."
-      ]
+      ],
+      "trainerCount": 2
     },
     {
       "id": "route_8",
@@ -4888,7 +5007,8 @@
         "X Speed — na wschód od wejścia do Underground Path, przy krzaku po wschodniej stronie ogrodzenia.",
         "Big Mushroom — na południowy wschód od wejścia do Underground Path, między dwiema półkami.",
         "Pinap Berry / Silver Pinap Berry / Golden Pinap Berry — krzak na zachód od wejścia do Underground Path; partner Pokémon może znaleźć różne warianty."
-      ]
+      ],
+      "trainerCount": 9
     },
     {
       "id": "route_9",
@@ -5242,7 +5362,8 @@
         "Ether — północno-zachodni narożnik trasy.",
         "Poké Ball ×5 — środkowa część trasy, na południe od Youngster Chris.",
         "Pinap Berry ×5 — ukryte w południowo-wschodnim narożniku, na wschód od Hiker Alan."
-      ]
+      ],
+      "trainerCount": 7
     },
     {
       "id": "route_10",
@@ -6172,9 +6293,18 @@
       ],
       "sourceIds": [
         "routepedia-lavender-pikachu",
-        "bulbapedia-part8"
+        "bulbapedia-part8",
+        "pokemondb-mastertrainers"
       ],
-      "dataStatus": "text_verified_positions_not_mapped"
+      "dataStatus": "text_verified_positions_not_mapped",
+      "trainers": [
+        "Master Trainer Psychic Arin — Gastly Lv. 70 (za domem w centrum).",
+        "Master Trainer Psychic Danny — Haunter Lv. 75 (za domami w centrum).",
+        "Master Trainer Psychic Ross — Gengar Lv. 80 (za Poké Mart).",
+        "Master Trainer Hiker Julius — Marowak Lv. 75 (dom Mr. Fuji)."
+      ],
+      "trainerCount": 4,
+      "trainerStatus": "postgame_master_trainer_teams_verified"
     },
     {
       "id": "underground_path_7_8",
@@ -6586,7 +6716,8 @@
         "Gamer Hugo — Diglett Lv. 26.",
         "Sailor Yasu — Slowpoke Lv. 18.",
         "Lass Tomoe — Jigglypuff Lv. 16, Nidorina Lv. 16."
-      ]
+      ],
+      "trainerCount": 9
     },
     {
       "id": "digletts_cave",
@@ -7152,7 +7283,8 @@
         "Rocker Luca — Electabuzz Lv. 36; wymaga Chop Down.",
         "Camper Justin — Nidoran♂ Lv. 35, Nidorino Lv. 35.",
         "Coach Trainer Priya — Butterfree Lv. 38, Clefable Lv. 39."
-      ]
+      ],
+      "trainerCount": 9
     },
     {
       "id": "route_13",
@@ -7552,7 +7684,8 @@
         "Golden Pinap Berry — ukryta w szczelinie ogrodzenia na południowym skraju labiryntu.",
         "Silver Nanab Berry ×5 — ślepa ścieżka na południe od Punk Guy Jared; ukryte, dzienne.",
         "Full Heal — północno-zachodnia część trasy, na zachód od Camper Perry."
-      ]
+      ],
+      "trainerCount": 10
     },
     {
       "id": "route_14",
@@ -7928,7 +8061,8 @@
         "Nugget — zachodnia ścieżka, na półce na południe od kępy wysokiej trawy.",
         "Golden Razz Berry — ukryta przy północnej krawędzi wysokiej trawy (przedmiot dzienny).",
         "Nanab Berry / Silver Nanab Berry / Golden Nanab Berry — środkowy krzak po wschodniej stronie; partner Pokémon może znaleźć różne warianty."
-      ]
+      ],
+      "trainerCount": 10
     },
     {
       "id": "route_15",
@@ -8303,7 +8437,8 @@
         "Punk Guy Alex — Arbok Lv. 38.",
         "Beauty Lana — trzy Growlithe Lv. 37.",
         "Bird Keeper Edwin — Dodrio Lv. 39."
-      ]
+      ],
+      "trainerCount": 6
     },
     {
       "id": "fuchsia_city",
@@ -8351,7 +8486,9 @@
       },
       "sourceIds": [
         "bulbapedia-part12",
-        "bulbapedia-part11"
+        "bulbapedia-part11",
+        "pokemondb-mastertrainers",
+        "supercheats-fuchsia-postgame"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
@@ -8360,7 +8497,15 @@
         "Safari Set — otrzymywany od Warden'a po oddaniu Gold Teeth; w Let’s Go klasyczna Safari Zone jest zastąpiona kompleksem GO Park.",
         "Sea Skim — technika partnera uczona w Playful Park przez mężczyznę przy eksponacie Laprasa.",
         "Fuchsia Gym — zwycięstwo z Kogą daje Soul Badge i TM27 (Toxic)."
-      ]
+      ],
+      "trainers": [
+        "Master Trainer Black Belt Ryuji — Machoke Lv. 70 (dom w południowo-wschodniej części miasta).",
+        "Master Trainer Lass Mizuki — Chansey Lv. 75 (Pokémon Center).",
+        "Master Trainer Ace Trainer Mac — Kangaskhan Lv. 75 (północno-zachodnia część miasta).",
+        "Master Trainer Ace Trainer Jaxson — Tauros Lv. 75 (północno-wschodnia część miasta)."
+      ],
+      "trainerCount": 4,
+      "trainerStatus": "postgame_master_trainer_teams_verified"
     },
     {
       "id": "celadon_city",
@@ -8387,7 +8532,9 @@
         "Celadon Restaurant"
       ],
       "sourceIds": [
-        "routepedia-celadon-pikachu"
+        "routepedia-celadon-pikachu",
+        "pokemondb-mastertrainers",
+        "supercheats-celadon-postgame"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
@@ -8395,7 +8542,15 @@
         "Celadon Game Corner — wejście do Team Rocket Hideout znajduje się w salonie gier.",
         "Celadon Gym — sala Eriki; zwycięstwo daje Rainbow Badge i TM53 (Mega Drain).",
         "Celadon Condominiums — budynek mieszkalny z prezentami i interakcjami; rozmieszczenie pomieszczeń jest schematyczne."
-      ]
+      ],
+      "trainers": [
+        "Master Trainer Ace Trainer Satch — Arcanine Lv. 75 (hotel).",
+        "Master Trainer Lass Dianne — Victreebel Lv. 75 (przy Gymie).",
+        "Master Trainer Scientist Cory — Grimer Lv. 70 (przy basenie w centrum miasta).",
+        "Master Trainer Ace Trainer Dominic — Gyarados Lv. 75 (hotel)."
+      ],
+      "trainerCount": 4,
+      "trainerStatus": "postgame_master_trainer_teams_verified"
     },
     {
       "id": "saffron_city",
@@ -8420,14 +8575,24 @@
         "Fighting Dojo"
       ],
       "sourceIds": [
-        "routepedia-saffron-pikachu"
+        "routepedia-saffron-pikachu",
+        "pokemondb-mastertrainers",
+        "supercheats-saffron-postgame"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
         "Silph Co. — wydarzenie fabularne z Team Rocket obejmuje wiele pięter i teleportów; dokładna trasa po teleportach nie jest naniesiona.",
         "Fighting Dojo — po pokonaniu lidera można wybrać Hitmonlee albo Hitmonchan.",
         "Saffron Gym — sala Sabriny; zwycięstwo daje Marsh Badge i TM33 (Calm Mind)."
-      ]
+      ],
+      "trainers": [
+        "Master Trainer Lass Chel — Clefairy Lv. 70 (zachodnia część miasta).",
+        "Master Trainer Ace Trainer Garret — Ponyta Lv. 70 (wschodnia część miasta).",
+        "Master Trainer Ace Trainer Raymond — Rapidash Lv. 75 (północno-zachodnia część miasta).",
+        "Master Trainer Psychic Jaime — Kadabra Lv. 75 (dom Mr. Psychic)."
+      ],
+      "trainerCount": 4,
+      "trainerStatus": "postgame_master_trainer_teams_verified"
     },
     {
       "id": "route_16",
@@ -8778,7 +8943,8 @@
         "Roughneck Koji — Raticate Lv. 36, Rhyhorn Lv. 36, Koffing Lv. 36; północna część wymaga Chop Down.",
         "Punk Guy Hideo — Arbok Lv. 36, Fearow Lv. 36; północna część wymaga Chop Down.",
         "Camper Ruben — dwa Psyduck Lv. 35."
-      ]
+      ],
+      "trainerCount": 4
     },
     {
       "id": "route_17",
@@ -9209,7 +9375,8 @@
       ],
       "events": [
         "Po zostaniu Championem Jessie i James wracają na wschodnią część Route 17 i wyzywają gracza na ostatnią walkę; po zwycięstwie otrzymuje się Blast-Off Set."
-      ]
+      ],
+      "trainerCount": 11
     },
     {
       "id": "route_18",
@@ -9540,7 +9707,8 @@
         "Silver Razz Berry ×3 — ukryte w żółtych kwiatach przy wejściu od Route 17 (przedmiot dzienny).",
         "Elixir — na południe od bramy.",
         "Razz Berry / Silver Razz Berry / Golden Razz Berry — z krzaka przy wschodnim końcu trasy; wariant może zależeć od znaleziska partnera Pokémon."
-      ]
+      ],
+      "trainerCount": 3
     },
     {
       "id": "route_19",
@@ -9857,7 +10025,8 @@
         "Full Heal — na plaży między dwiema półkami.",
         "Revive ×2 — ukryte na skałach przy północno-zachodnim i południowo-wschodnim narożniku; dzienne, wymagają Sea Skim.",
         "Pearl / Big Pearl — po wschodniej stronie plaży; losowy przedmiot, czasem znajdowany przez chodzącego Pokémona typu Ground."
-      ]
+      ],
+      "trainerCount": 7
     },
     {
       "id": "route_20",
@@ -10153,7 +10322,8 @@
         "Route 20 (zachód) — Beauty Nora: Cloyster Lv. 41.",
         "Route 20 (zachód) — Beauty Melissa: Seaking Lv. 43, Jynx Lv. 43.",
         "Route 20 (zachód) — Ace Trainer Marty: Golem Lv. 45, Pinsir Lv. 46."
-      ]
+      ],
+      "trainerCount": 11
     },
     {
       "id": "seafoam_islands",
@@ -10469,14 +10639,21 @@
         "Cinnabar Gym"
       ],
       "sourceIds": [
-        "routepedia-cinnabar-pikachu"
+        "routepedia-cinnabar-pikachu",
+        "pokemondb-mastertrainers",
+        "supercheats-cinnabar-postgame"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
         "Cinnabar Lab — odtwarzanie Pokémonów z Helix Fossil, Dome Fossil i Old Amber.",
         "Pokémon Mansion — klucz do Cinnabar Gym jest związany z eksploracją rezydencji; dokumenty opisują historię Mewtwo.",
         "Cinnabar Gym — zwycięstwo z Blaine’em daje Volcano Badge i TM46 (Fire Blast)."
-      ]
+      ],
+      "trainers": [
+        "Master Trainer Lass Cindy — Exeggutor Lv. 75 (przy Pokémon Center)."
+      ],
+      "trainerCount": 1,
+      "trainerStatus": "postgame_master_trainer_teams_verified"
     },
     {
       "id": "route_21",
@@ -10954,7 +11131,8 @@
         "Revive — ukryty na samotnej skale na południowy zachód od Coach Trainer Pam (przedmiot dzienny).",
         "TM35 (Ice Punch) — nagroda od Coach Trainer Pam po zwycięstwie.",
         "Hyper Potion — na północno-wschodniej wysepce najbliżej Pallet Town."
-      ]
+      ],
+      "trainerCount": 10
     },
     {
       "id": "route_22",
@@ -11212,7 +11390,8 @@
         "Antidote — ukryty w krzaku na północ od wschodniej kępy trawy.",
         "Poké Ball ×5 — południowo-zachodni narożnik trasy."
       ],
-      "events": []
+      "events": [],
+      "trainerCount": 2
     },
     {
       "id": "route_23",
@@ -13023,7 +13202,9 @@
       "notes": "Spotkania rozdzielono według wersji. Mansion zawiera dokumenty fabularne o Mewtwo, ale Mewtwo nie jest tu dzikim spotkaniem.",
       "sourceIds": [
         "bulbapedia-part13",
-        "rotomlabs-pokemon-mansion"
+        "rotomlabs-pokemon-mansion",
+        "pokemondb-mastertrainers",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "encounter_rates_verified_from_rotomlabs_positions_not_mapped",
       "wildPokemonDetails": {
@@ -13280,10 +13461,17 @@
         "Ace Trainer Louis — Kingler Lv. 45 i Primeape Lv. 46.",
         "Scientist Ted — Electrode Lv. 45 i Muk Lv. 45.",
         "Burglar Lewis — Koffing Lv. 44 ×3 i Weezing Lv. 44.",
-        "Scientist Ivan — Electabuzz Lv. 45."
+        "Scientist Ivan — Electabuzz Lv. 45.",
+        "Master Trainer Scientist Gordon — Muk Lv. 75 (2F, wschodnia część).",
+        "Master Trainer Ace Trainer Jace — Magmar Lv. 75 (1F, wschodnia część).",
+        "Master Trainer Ditto — bez walki; wymaga pokazania Ditto o CP co najmniej 4000 (3F, północny wschód).",
+        "Master Trainer Mewtwo — bez walki; wymaga pokazania Mewtwo o CP co najmniej 9000 (B1F, południe).",
+        "Master Trainer Mew — bez walki; wymaga pokazania Mew o CP co najmniej 8000 (B1F, zachód).",
+        "Master Trainer Meltan — bez walki; wymaga pokazania Meltana o CP co najmniej 4000 (B1F, południowy zachód).",
+        "Master Trainer Melmetal — bez walki; wymaga pokazania Melmetala o CP co najmniej 8000 (B1F, północ)."
       ],
-      "trainerCount": 8,
-      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
+      "trainerCount": 15,
+      "trainerStatus": "postgame_master_trainer_teams_verified"
     },
     {
       "id": "safari_zone",
@@ -13621,12 +13809,20 @@
       ],
       "notes": "Muzeum w Pewter City; zawiera elementy fabularne i możliwość ponownego odwiedzenia wystaw.",
       "sourceIds": [
-        "bulbapedia-part3"
+        "bulbapedia-part3",
+        "pokemondb-mastertrainers",
+        "bulbapedia-pewter-museum-masters"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
         "Old Amber — od naukowca w części pracowniczej muzeum podczas ponownej wizyty; dostęp wymaga Chop Down."
-      ]
+      ],
+      "trainers": [
+        "Master Trainer Hiker Hisato — Aerodactyl Lv. 75 (1F).",
+        "Master Trainer Hiker Valentino — Golem Lv. 75 (2F)."
+      ],
+      "trainerCount": 2,
+      "trainerStatus": "postgame_master_trainer_teams_verified"
     },
     {
       "id": "pokemon_fan_club",
@@ -13642,9 +13838,15 @@
         "przedmiot za wysłuchanie opowieści"
       ],
       "sourceIds": [
-        "bulbapedia-part6"
+        "bulbapedia-part6",
+        "pokemondb-mastertrainers"
       ],
-      "dataStatus": "text_verified_positions_not_mapped"
+      "dataStatus": "text_verified_positions_not_mapped",
+      "trainers": [
+        "Master Trainer Ace Trainer Carl — Krabby Lv. 70 (wewnątrz Pokémon Fan Club)."
+      ],
+      "trainerCount": 1,
+      "trainerStatus": "postgame_master_trainer_teams_verified"
     },
     {
       "id": "day_care",
@@ -13726,13 +13928,21 @@
       ],
       "notes": "Wielopiętrowy sklep w Celadon City. Piętra, automaty, przedmioty i układ stoisk wymagają osobnego planu wnętrza.",
       "sourceIds": [
-        "bulbapedia-celadon-store"
+        "bulbapedia-celadon-store",
+        "pokemondb-mastertrainers"
       ],
       "dataStatus": "schematic_interior_available_exact_layout_pending",
       "coordinateStatus": "unverified",
       "events": [
         "Wielopiętrowy sklep oferuje przedmioty, kamienie ewolucyjne i TM; lista stoisk i półek wymaga osobnego planu pięter."
-      ]
+      ],
+      "trainers": [
+        "Master Trainer Lass Yue — Vaporeon Lv. 75 (2F).",
+        "Master Trainer Scientist Alphonse — Jolteon Lv. 75 (3F).",
+        "Master Trainer Ace Trainer Dax — Flareon Lv. 75 (4F)."
+      ],
+      "trainerCount": 3,
+      "trainerStatus": "postgame_master_trainer_teams_verified"
     },
     {
       "id": "celadon_game_corner",
@@ -13743,13 +13953,21 @@
       ],
       "notes": "Salon gier w Celadon City i wejście do Team Rocket Hideout. Wnętrze oraz pozycje obiektów nie są jeszcze naniesione.",
       "sourceIds": [
-        "bulbapedia-celadon-game-corner"
+        "bulbapedia-celadon-game-corner",
+        "pokemondb-mastertrainers",
+        "bulbapedia-part9-celadon"
       ],
       "dataStatus": "schematic_interior_available_exact_layout_pending",
       "coordinateStatus": "unverified",
       "events": [
         "Wejście do Team Rocket Hideout znajduje się w salonie gier; szczegółowe pozycje ukrytych obiektów nie są naniesione."
-      ]
+      ],
+      "trainers": [
+        "Team Rocket Grunt — Raticate Lv. 29 (walka fabularna).",
+        "Master Trainer Scientist Jordan — Porygon Lv. 70 (wewnątrz Game Corner)."
+      ],
+      "trainerCount": 2,
+      "trainerStatus": "postgame_master_trainer_teams_verified"
     },
     {
       "id": "celadon_condominiums",
@@ -13760,13 +13978,24 @@
       ],
       "notes": "Budynek mieszkalny w Celadon City. Poszczególne pomieszczenia i prezenty nie są jeszcze rozpisane na planie.",
       "sourceIds": [
-        "bulbapedia-celadon-condominiums"
+        "bulbapedia-celadon-condominiums",
+        "pokemondb-mastertrainers",
+        "bulbapedia-celadon-condominiums-masters",
+        "serebii-coachtrainers",
+        "supercheats-celadon-postgame"
       ],
       "dataStatus": "schematic_interior_available_exact_layout_pending",
       "coordinateStatus": "unverified",
       "events": [
         "Budynek mieszkalny obejmuje mieszkania i pomieszczenia związane z ekipą Game Freak; dokładny układ pięter i interakcje nie są odwzorowane."
-      ]
+      ],
+      "trainers": [
+        "Master Trainer Ace Trainer Tim — Charmander Lv. 65 (tylne wejście do budynku).",
+        "Master Trainer Psychic Rui — Mr. Mime Lv. 70 (2F).",
+        "Coach Trainer Morimoto — Kangaskhan Lv. 54, Flareon Lv. 54, Vaporeon Lv. 54, Jolteon Lv. 54, Machamp Lv. 54 i Dragonite Lv. 54 (3F, po ukończeniu głównej historii)."
+      ],
+      "trainerCount": 3,
+      "trainerStatus": "postgame_master_trainer_teams_verified"
     },
     {
       "id": "cinnabar_lab",
@@ -13777,13 +14006,20 @@
       ],
       "notes": "Laboratorium na Cinnabar Island związane z odtwarzaniem Pokémonów z fosyliów. Pomieszczenia i interakcje wymagają osobnego planu.",
       "sourceIds": [
-        "bulbapedia-cinnabar-lab"
+        "bulbapedia-cinnabar-lab",
+        "pokemondb-mastertrainers",
+        "supercheats-cinnabar-postgame"
       ],
       "dataStatus": "schematic_interior_available_exact_layout_pending",
       "coordinateStatus": "unverified",
       "events": [
         "Fossil restoration — naukowcy w laboratorium mogą odtworzyć Pokémony z Helix Fossil, Dome Fossil i Old Amber (Omanyte, Kabuto, Aerodactyl)."
-      ]
+      ],
+      "trainers": [
+        "Master Trainer Hiker Lionel — Omastar Lv. 75 (Pokémon Lab)."
+      ],
+      "trainerCount": 1,
+      "trainerStatus": "postgame_master_trainer_teams_verified"
     },
     {
       "id": "fighting_dojo",
@@ -13795,7 +14031,9 @@
       "notes": "Dōjō w Saffron City, w którym można wybrać nagrodę Hitmonlee albo Hitmonchan. Wnętrze i trenerzy nie są jeszcze naniesieni.",
       "sourceIds": [
         "bulbapedia-fighting-dojo",
-        "bulbapedia-part10"
+        "bulbapedia-part10",
+        "pokemondb-mastertrainers",
+        "supercheats-saffron-postgame"
       ],
       "dataStatus": "schematic_interior_available_exact_layout_pending",
       "coordinateStatus": "unverified",
@@ -13808,10 +14046,12 @@
         "Black Belt Aaron — Graveler Lv. 31.",
         "Black Belt Hideki — Poliwhirl Lv. 31.",
         "Black Belt Mike — Machoke Lv. 31.",
-        "Karate Master Koichi — Poliwrath Lv. 34."
+        "Karate Master Koichi — Poliwrath Lv. 34.",
+        "Master Trainer Black Belt Cheng — Hitmonlee Lv. 75 (po ukończeniu głównej historii).",
+        "Master Trainer Black Belt Wong — Hitmonchan Lv. 75 (po ukończeniu głównej historii)."
       ],
-      "trainerCount": 6,
-      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
+      "trainerCount": 8,
+      "trainerStatus": "postgame_master_trainer_teams_verified"
     },
     {
       "id": "go_park",
