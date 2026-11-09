@@ -5921,3 +5921,13 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Dane Route 23 porównano z Bulbapedia i Serebii; dodano osobny rekord źródła Bulbapedia Route 23. Rozdzielono składy postgame od trenerów głównej historii.
 - Po zmianie indeks zawiera 337 rekordów trenerów w 76 lokacjach; liczniki list i identyfikatory źródeł są spójne.
 - Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK.
+
+
+### Let's Go Kanto — audyt miast i budynków oraz trenerzy postgame (2026-11-09)
+
+- Uzupełniono potwierdzone walki Master Trainers w Viridian City, Pewter City, Cerulean City, Vermilion City, Lavender Town, Fuchsia City, Celadon City, Saffron City i Cinnabar Island; zachowano istniejące walki fabularne i dopisano brakujące składy.
+- Rozdzielono postgame'owe postacie według właściwych budynków: Pewter Museum of Science, Pokémon Fan Club, Celadon Department Store, Celadon Game Corner, Celadon Condominiums, Cinnabar Lab oraz Fighting Dojo. Dodano drużynę Coach Trainer Morimoto (6 Pokémonów Lv. 54) i Harjita (5 Pokémonów Lv. 52).
+- W Pokémon Mansion dodano dwóch Master Trainers z walkami oraz pięć prób Master Trainer bez walki (Ditto, Mewtwo, Mew, Meltan i Melmetal), z wymaganymi progami CP; wpisy zostały wyraźnie oznaczone jako interakcje bez walki.
+- Dodano potwierdzone składy dwóch wczesnych trenerów Pewter City (Picnicker Amara i Camper Liam) oraz Team Rocket Grunta w Celadon Game Corner. Źródła obejmują Pokémon Database, Serebii, Bulbapedia, Routepedia i poradniki SuperCheats.
+- Ujednolicono `trainerCount` z długością istniejących list trenerów; kontrola indeksu po aktualizacji: 76 lokacji, 395 wpisów trenerów, bez rozbieżności liczników i brakujących źródeł.
+- Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK.
