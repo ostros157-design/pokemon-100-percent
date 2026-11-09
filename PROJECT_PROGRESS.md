@@ -6052,3 +6052,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Poprawiono błąd wersji przy prezentach za złapanie pięciu Pokémonów: Persian Lv. 16 jest nagrodą w Let's Go Pikachu (po złapaniu Growlithe), a Arcanine Lv. 16 w Let's Go Eevee (po złapaniu Meowth).
 - Dodano Pretty Wing jako rzadki przedmiot znajdowany przez kwalifikujące się Pokémony chodzące za graczem przy wejściu na Route 11 oraz TM14 Fly do listy nagród Fuchsia City (ukryty dom, dostęp po Chop Down).
 - Źródła: Altissimo — przewodniki Vermilion City i S.S. Anne; Bulbapedia i Gamer Guides — walka Trace’a na statku. Nie deklarowano współrzędnych pinezek. Flutter Analyzer, testy i APK nadal nie zostały uruchomione.
+
+
+### Let's Go Kanto — Viridian, Pewter i Cerulean: brakujące nagrody miejskie i TM Gymów (2026-11-09)
+
+- Viridian City: dodano TM11 (Will-O-Wisp) od mężczyzny na południowy zachód od stawu (wymaga Chop Down) oraz rzadki Pretty Wing znajdowany przez kwalifikujące się Pokémony chodzące za graczem. Viridian Gym otrzymał TM41 (Earthquake) jako nagrodę Giovanniego.
+- Pewter City: dodano 5 Potions od Trace’a i 5 Great Balls od Blue’a; Pewter Gym otrzymał TM01 (Headbutt) jako nagrodę Brocka.
+- Cerulean City: dodano do listy przedmiotów TM10 (Dig) z wydarzenia w okradzionym domu, Heart Scale ×5 od Bike Maniaca oraz postgame TM60 (Megahorn) od Coach Trainer Harjita. Cerulean Gym otrzymał TM29 (Scald) jako nagrodę Misty.
+- Źródła: Altissimo — Viridian City; Bulbapedia walkthrough Parts 3, 5 i 16. Wpisy są opisami tekstowymi, nie zatwierdzonymi współrzędnymi. Flutter Analyzer, testy i APK nie zostały uruchomione.
