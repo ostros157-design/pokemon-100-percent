@@ -6016,3 +6016,13 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Rozpisano asortyment Celadon Department Store według pięter i sprzedawców: 2F (artykuły i osiem TM z cenami), 4F (pięć kamieni ewolucyjnych), 5F (czapki, okulary, kokardy, bandany i kwiaty) oraz dach (automaty z napojami). Zachowano cztery nagrody fabularne TM03/TM06/TM09/TM07.
 - Dodano TM53 (Mega Drain) jako nagrodę od Eriki w Celadon Gym. Skorygowano też prawdopodobieństwa sześciu codziennych punktów w Game Corner: Berry 50%, Candy 30%, Candy L 10%, Candy XL 5%, PP Up 2%, PP Max 1%, Bottle Cap 1%, Gold Bottle Cap 1%.
 - Źródło: Altissimo, Kanto Locations — Celadon City, sekcje Let's Go Pikachu/Eevee. Nie dodano niepotwierdzonych współrzędnych. Flutter Analyzer, testy i APK nie zostały uruchomione.
+
+
+### Let's Go Kanto — Saffron, Lavender, Pokémon Tower, Power Plant i Silph Co. (2026-11-09)
+
+- Saffron City: uzupełniono pięć potwierdzonych nagród/znajdziek (TM08, codzienny ukryty Moon Stone, TM40, X Sp. Def, Police Set). Saffron Gym otrzymał osobny wpis TM33 (Calm Mind), a Fighting Dojo — TM23, nagrody Poké Ball od czterech uczniów i wybór Hitmonlee/Hitmonchan.
+- Lavender Town: zastąpiono niepasującą listę przedmiotów z wcześniejszych gier listą właściwą dla Let’s Go: Pretty Wing, Poké Flute i Great Ball ×20 (nagrody zależne od wydarzeń fabularnych).
+- Pokémon Tower: rozszerzono listę do 20 pozycji z pięter 1F–6F, uwzględniając Coach Trainer, ukryte codzienne przedmioty oraz warunek Silph Scope dla Rare Candy.
+- Power Plant: rozpisano 14 wpisów według pomieszczeń, w tym cztery ukryte Voltorb Candy i Pretty Wing. Usunięto Electrode jako rzekome znajdźki — to fałszywe Poké Balle, nie przedmioty do zebrania.
+- Silph Co.: dodano Blue’a na 1F (Exeggutor Lv. 38, Charizard Lv. 40) i zaktualizowano licznik trenerów.
+- Źródła: Altissimo — osobne przewodniki Let's Go dla Saffron, Lavender, Pokémon Tower, Power Plant i Silph Co.; dodatkowo Thonky i Bulbapedia dla nagród Fighting Dojo. Pozycje są opisane tekstowo, bez niezweryfikowanych pinezek. Flutter Analyzer, testy Flutter i APK nie zostały uruchomione.
