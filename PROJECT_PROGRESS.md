@@ -5931,3 +5931,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Dodano potwierdzone składy dwóch wczesnych trenerów Pewter City (Picnicker Amara i Camper Liam) oraz Team Rocket Grunta w Celadon Game Corner. Źródła obejmują Pokémon Database, Serebii, Bulbapedia, Routepedia i poradniki SuperCheats.
 - Ujednolicono `trainerCount` z długością istniejących list trenerów; kontrola indeksu po aktualizacji: 76 lokacji, 395 wpisów trenerów, bez rozbieżności liczników i brakujących źródeł.
 - Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK.
+
+
+### Let's Go Kanto — audyt pozostałych domów i budynków (2026-11-09)
+
+- Uzupełniono opis potwierdzonych wnętrz i interakcji w Pallet Town, Viridian City, Pewter City, Cerulean City, Vermilion City, Lavender Town, Celadon City, Saffron City i Fuchsia City; dodano m.in. dom gracza i rywala, Trainers’ School, domy z Bulbasaurem, Bike Maniaca, Copycat i Mr. Psychic oraz Volunteer Pokémon House.
+- Dopisano konkretne nagrody, wymiany i warunki dostępu: TM08, TM11, TM14, TM40, TM10, Heart Scales, Big Pearl, Poké Flute, zestawy ubrań, Alolan trades, nagrody Warden’a oraz szczegóły Day Care i domu Billa. Zachowano istniejące rekordy, a nowe wpisy otrzymały identyfikatory źródeł Bulbapedia.
+- Dane pozostają opisowe; nie dodano niezweryfikowanych współrzędnych ani pinezek, a alias Bill’s House nadal wskazuje ten sam Sea Cottage.
+- Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK. Pozostałe budynki i lokacje wymagają dalszego przeglądu, a zmiany wymagają sprawdzenia w aplikacji.
