@@ -5939,3 +5939,13 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Dopisano konkretne nagrody, wymiany i warunki dostępu: TM08, TM11, TM14, TM40, TM10, Heart Scales, Big Pearl, Poké Flute, zestawy ubrań, Alolan trades, nagrody Warden’a oraz szczegóły Day Care i domu Billa. Zachowano istniejące rekordy, a nowe wpisy otrzymały identyfikatory źródeł Bulbapedia.
 - Dane pozostają opisowe; nie dodano niezweryfikowanych współrzędnych ani pinezek, a alias Bill’s House nadal wskazuje ten sam Sea Cottage.
 - Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK. Pozostałe budynki i lokacje wymagają dalszego przeglądu, a zmiany wymagają sprawdzenia w aplikacji.
+
+
+### Let's Go Kanto — szczegółowy audyt przedmiotów wewnątrz budynków (2026-11-09)
+
+- Uzupełniono listy przedmiotów i nagród dla S.S. Anne, Pokémon Tower, Team Rocket Hideout, Power Plant, Celadon Game Corner, Celadon Condominiums, Celadon Department Store i Silph Co.
+- Dodano rozpiski pięter i warunków dostępu dla Silph Co. (w tym Card Key, ukryte/dzienne znajdźki, TM-y i Master Ball), Team Rocket Hideout (B1F–B4F, Lift Key i Silph Scope), a także ukryte przedmioty i nagrody w Pokémon Tower oraz Power Plant.
+- Game Corner otrzymał opis sześciu punktów ukrytych, ich pul losowań i procentowych szans; Condominiums i Department Store mają dopisane nagrody TM, przedmioty z dachu, Shiny Charm, PP Max i wymiany za napoje.
+- Uzupełniono również przedmioty S.S. Anne, w tym Shalour Sable, ukryte Tiny Mushroom i Pinap Berries, Nugget, Revive, Elixir oraz przedmioty z kajut.
+- Dane oparto na istniejących źródłach Bulbapedia Part 6, 8, 9, 10 i 14 oraz stronie Celadon Condominiums. Wszystkie użyte sourceIds istnieją w katalogu 142 źródeł; JSON parsuje się poprawnie, indeks nadal obejmuje 76 lokacji.
+- Nie dodawano pinezek ani współrzędnych, ponieważ źródła podają opisy tekstowe. Flutter Analyzer, testy i APK nadal nie były uruchamiane; pełna lista zakupów Department Store wymaga osobnego rozpisania.
