@@ -6075,3 +6075,9 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Uporządkowano listę Mt. Moon: rozróżniono dwa Potiony, dwa Revive i dwie ukryte Moon Stones jako osobne znaleziska; dopisano dokładne piętra i opisy miejsc dla czterech ukrytych znajdziek (Stardust, Big Mushroom, dwie Moon Stones).
 - Ustawiono hiddenItemCount na 4 i dodano odwołanie do pełnego indeksu ukrytych przedmiotów LGPE. Pozostałe wielokrotne przedmioty Seafoam Islands zachowują oznaczenia „kolejny”/numery, ponieważ są odrębnymi znajdźkami.
 - Nie dodano współrzędnych. Testy Flutter, Analyzer i APK nadal nie zostały uruchomione.
+
+
+### Let's Go Kanto — Seafoam Islands: oznaczenie powtarzających się item balls (2026-11-09)
+
+- Oznaczono trzy osobne Super Lure i trzy osobne Super Repel w Seafoam Islands numerami 1/3–3/3, aby nie wyglądały jak przypadkowe duplikaty listy.
+- Dane nadal opisują 35 pickupów, w tym 7 ukrytych; pozycje na mapie nie są jeszcze zatwierdzonymi współrzędnymi.
