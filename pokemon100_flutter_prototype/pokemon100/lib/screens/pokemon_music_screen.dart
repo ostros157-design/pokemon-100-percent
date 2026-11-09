@@ -20,6 +20,7 @@ class _PokemonMusicScreenState extends State<PokemonMusicScreen> {
   Duration _position = Duration.zero;
   late double _volume;
   bool _loading = false;
+  bool _autoStartEnabled = true;
   StreamSubscription<PlayerState>? _stateSubscription;
   StreamSubscription<Duration>? _durationSubscription;
   StreamSubscription<Duration>? _positionSubscription;
@@ -41,8 +42,18 @@ class _PokemonMusicScreenState extends State<PokemonMusicScreen> {
       if (mounted) setState(() => _position = value);
     });
     unawaited(_music.configure());
+    unawaited(_loadAutoStartSetting());
   }
 
+  Future<void> _loadAutoStartSetting() async {
+    final enabled = await _music.getAutoStartEnabled();
+    if (mounted) setState(() => _autoStartEnabled = enabled);
+  }
+
+  Future<void> _setAutoStartEnabled(bool enabled) async {
+    setState(() => _autoStartEnabled = enabled);
+    await _music.setAutoStartEnabled(enabled);
+  }
   Future<void> _togglePlayback() async {
     if (_loading) return;
     setState(() => _loading = true);
@@ -129,7 +140,17 @@ class _PokemonMusicScreenState extends State<PokemonMusicScreen> {
             })),
             const Icon(Icons.volume_up),
           ]),
-          const SizedBox(height: 16),
+          const SizedBox(height: 12),
+          Card(
+            child: SwitchListTile(
+              value: _autoStartEnabled,
+              onChanged: _setAutoStartEnabled,
+              secondary: const Icon(Icons.music_note),
+              title: const Text('Automatyczna muzyka w tle'),
+              subtitle: const Text('Uruchamiaj melodię po otwarciu aplikacji.'),
+            ),
+          ),
+          const SizedBox(height: 8),
           const Card(child: Padding(padding: EdgeInsets.all(16), child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [Icon(Icons.offline_bolt_outlined), SizedBox(width: 12), Expanded(
