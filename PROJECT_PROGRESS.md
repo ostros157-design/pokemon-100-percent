@@ -5949,3 +5949,12 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Uzupełniono również przedmioty S.S. Anne, w tym Shalour Sable, ukryte Tiny Mushroom i Pinap Berries, Nugget, Revive, Elixir oraz przedmioty z kajut.
 - Dane oparto na istniejących źródłach Bulbapedia Part 6, 8, 9, 10 i 14 oraz stronie Celadon Condominiums. Wszystkie użyte sourceIds istnieją w katalogu 142 źródeł; JSON parsuje się poprawnie, indeks nadal obejmuje 76 lokacji.
 - Nie dodawano pinezek ani współrzędnych, ponieważ źródła podają opisy tekstowe. Flutter Analyzer, testy i APK nadal nie były uruchamiane; pełna lista zakupów Department Store wymaga osobnego rozpisania.
+
+
+### Mapa, osiągnięcia i muzyka w tle — aktualizacja (2026-11-09)
+
+- Mapa: poprawiono podsumowania danych lokacji, aby nie ucinały list przedmiotów i trenerów po 20 wpisach. Wydarzenia zapisane jako zwykły tekst są teraz również wyświetlane, a podziały linii są renderowane poprawnie.
+- Mapa Kanto Let's Go: zachowano audyt 76 lokacji, 395 wpisów trenerów i 319 opisów przedmiotów; wcześniejsze dopisanie list w S.S. Anne, Pokémon Tower, Team Rocket Hideout, Power Plant, Celadon Game Corner, Condominiums, Department Store i Silph Co. pozostaje zapisane w danych.
+- Osiągnięcia: usunięto osiągnięcia ukryte i oznaczenia ???; wszystkie 25 pozostałych osiągnięć jest widocznych. Dodano ręczne oznaczanie i cofanie oznaczenia dla osiągnięć, których aplikacja nie śledzi jeszcze automatycznie; wybory zapisują się w SharedPreferences.
+- Muzyka: dodano automatyczne uruchamianie wbudowanej melodii offline po otwarciu aplikacji (domyślnie włączone), z opcją wyłączenia automatycznego startu na ekranie Muzyka Pokémon. Wspólny odtwarzacz nadal pozwala zachować odtwarzanie przy przechodzeniu między ekranami.
+- Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK. Zmiany wymagają sprawdzenia na urządzeniu, szczególnie automatyczny start i zachowanie dźwięku po zminimalizowaniu aplikacji.
