@@ -6060,3 +6060,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Pewter City: dodano 5 Potions od Trace’a i 5 Great Balls od Blue’a; Pewter Gym otrzymał TM01 (Headbutt) jako nagrodę Brocka.
 - Cerulean City: dodano do listy przedmiotów TM10 (Dig) z wydarzenia w okradzionym domu, Heart Scale ×5 od Bike Maniaca oraz postgame TM60 (Megahorn) od Coach Trainer Harjita. Cerulean Gym otrzymał TM29 (Scald) jako nagrodę Misty.
 - Źródła: Altissimo — Viridian City; Bulbapedia walkthrough Parts 3, 5 i 16. Wpisy są opisami tekstowymi, nie zatwierdzonymi współrzędnymi. Flutter Analyzer, testy i APK nie zostały uruchomione.
+
+
+### Let's Go Kanto — Pallet Town, Oak's Lab i późne nagrody Blue'a (2026-11-09)
+
+- Poprawiono przypisanie nagród otwierających grę: Town Map jest przekazywany przez mamę poza laboratorium, Sportswear przez siostrę Trace’a przy Route 1, Pokédex przez Profesora Oaka, a 20 Razz Berries po dostarczeniu Oak’s Parcel. Usunięto Town Map z wnętrza Player’s House, ponieważ nie jest tam podnoszonym przedmiotem.
+- Dodano późną nagrodę Blue’a po zdobyciu siedmiu odznak: Key Stone, Venusaurite, Charizardite X, Charizardite Y i Blastoisinite.
+- Usunięto powtórzony wpis TM14 Fly w Fuchsia City.
+- Źródła: Altissimo — Pallet Town; Bulbapedia walkthrough Parts 1–2. Nie dodano fikcyjnych pinezek; nagrody pozostają wpisami tekstowymi. Flutter Analyzer, testy i APK nie zostały uruchomione.
