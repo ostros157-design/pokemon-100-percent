@@ -857,19 +857,22 @@
           "id": "player_home",
           "name": "Home",
           "category": "building",
-          "status": "text_verified"
+          "status": "text_verified",
+          "sourceIds": []
         },
         {
           "id": "rival_home",
           "name": "Rival’s House",
           "category": "building",
-          "status": "text_verified"
+          "status": "text_verified",
+          "sourceIds": []
         },
         {
           "id": "oak_lab",
           "name": "Oak’s Pokémon Lab",
           "category": "building",
-          "status": "text_verified"
+          "status": "text_verified",
+          "sourceIds": []
         }
       ],
       "events": [
@@ -1687,21 +1690,24 @@
           "name": "Southern section",
           "category": "route_area",
           "note": "Connects with Viridian City.",
-          "status": "text_verified"
+          "status": "text_verified",
+          "sourceIds": []
         },
         {
           "id": "forest_passage",
           "name": "Viridian Forest passage",
           "category": "route_area",
           "note": "Viridian Forest lies between the southern and northern parts of Route 2.",
-          "status": "text_verified"
+          "status": "text_verified",
+          "sourceIds": []
         },
         {
           "id": "north_section",
           "name": "Northern section",
           "category": "route_area",
           "note": "Continues toward Pewter City.",
-          "status": "text_verified"
+          "status": "text_verified",
+          "sourceIds": []
         },
         {
           "id": "diglett_cave_access",
@@ -1709,7 +1715,8 @@
           "category": "cave_access",
           "note": "Access is described in route references; no positioned pin is approved.",
           "coordinateStatus": "unverified",
-          "status": "text_verified_position_not_mapped"
+          "status": "text_verified_positions_not_mapped",
+          "sourceIds": []
         }
       ],
       "dataStatus": "text_verified_positions_not_mapped",
@@ -1892,25 +1899,29 @@
           "id": "pokemon_center",
           "name": "Pokémon Center",
           "category": "building",
-          "status": "text_verified"
+          "status": "text_verified",
+          "sourceIds": []
         },
         {
           "id": "poke_mart",
           "name": "Poké Mart",
           "category": "building",
-          "status": "text_verified"
+          "status": "text_verified",
+          "sourceIds": []
         },
         {
           "id": "museum",
           "name": "Pewter Museum of Science",
           "category": "building",
-          "status": "text_verified"
+          "status": "text_verified",
+          "sourceIds": []
         },
         {
           "id": "gym",
           "name": "Pewter Gym",
           "category": "gym",
-          "status": "text_verified"
+          "status": "text_verified",
+          "sourceIds": []
         }
       ],
       "events": [
@@ -16231,7 +16242,8 @@
           "id": "route2_entrance",
           "name": "Entrance from Route 2",
           "category": "entrance",
-          "status": "text_verified"
+          "status": "text_verified",
+          "sourceIds": []
         }
       ],
       "notes": "Separate map marker for the Route 2 entrance to Diglett's Cave. Its drawn position is schematic and does not claim exact tile coordinates.",
@@ -16256,7 +16268,8 @@
           "id": "route11_entrance",
           "name": "Entrance from Route 11",
           "category": "entrance",
-          "status": "text_verified"
+          "status": "text_verified",
+          "sourceIds": []
         }
       ],
       "notes": "Separate map marker for the Route 11 entrance to Diglett's Cave. The connection to the cave is drawn as an underground passage; no exact tile coordinates are claimed.",
