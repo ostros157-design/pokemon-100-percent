@@ -11253,40 +11253,12 @@
       "trainerCount": 1,
       "trainerStatus": "postgame_master_trainer_teams_verified",
       "items": [
-        "Antidote — item ball na obszarze Cinnabar Island; dokładny budynek/piętro nieprzypisane.",
-        "Max Elixir — item ball; dokładny budynek/piętro nieprzypisane.",
-        "Fire Stone — item ball; dokładny budynek/piętro nieprzypisane.",
-        "Max Repel — item ball; dokładny budynek/piętro nieprzypisane.",
-        "Silver Razz Berry ×5 — item ball; dokładny budynek/piętro nieprzypisane.",
-        "Max Lure — item ball; dokładny budynek/piętro nieprzypisane.",
-        "Max Revive — item ball; dokładny budynek/piętro nieprzypisane.",
-        "PP Up — item ball; dokładny budynek/piętro nieprzypisane.",
-        "Max Ether — item ball; dokładny budynek/piętro nieprzypisane.",
-        "Ultra Ball ×3 — item ball; dokładny budynek/piętro nieprzypisane.",
-        "Hyper Potion — item ball; dokładny budynek/piętro nieprzypisane.",
-        "Escape Rope — item ball; dokładny budynek/piętro nieprzypisane.",
-        "TM21 — item ball; dokładny budynek/piętro nieprzypisane.",
-        "Rare Candy — item ball (1/2); dokładny budynek/piętro nieprzypisane.",
-        "Full Heal — item ball; dokładny budynek/piętro nieprzypisane.",
-        "X Accuracy — item ball; dokładny budynek/piętro nieprzypisane.",
-        "Secret Key — item ball; lokalizacja w Pokémon Mansion.",
-        "Max Potion — item ball; dokładny budynek/piętro nieprzypisane.",
-        "Rare Candy — item ball (2/2); dokładny budynek/piętro nieprzypisane.",
-        "Max Elixir — item ball (drugi); dokładny budynek/piętro nieprzypisane.",
-        "TM52 — item ball; dokładny budynek/piętro nieprzypisane.",
-        "Health Candy — ukryty, losowy typ Candy (1/8).",
-        "Health Candy — ukryty, losowy typ Candy (2/8).",
-        "Health Candy — ukryty, losowy typ Candy (3/8).",
-        "Health Candy — ukryty, losowy typ Candy (4/8).",
-        "Health Candy — ukryty, losowy typ Candy (5/8).",
-        "Health Candy — ukryty, losowy typ Candy (6/8).",
-        "Health Candy — ukryty, losowy typ Candy (7/8).",
-        "Health Candy — ukryty, losowy typ Candy (8/8)."
+        "Antidote — item ball na zachód od wejścia do Pokémon Mansion."
       ],
-      "hiddenItemCount": 8,
-      "itemsStatus": "text_list_verified_from_Routepedia; exact pin coordinates not approved",
+      "hiddenItemCount": 0,
+      "itemsStatus": "single_outdoor_item_verified_from_Bulbapedia_Part_13; building_items_split_to_individual_locations",
       "hiddenItemsStatus": "8 hidden entries included in the text list; exact positions not mapped",
-      "notes": "Lista 29 przedmiotów jest zbiorcza dla Cinnabar Island i obejmuje wnętrza; przypisanie wszystkich item balls do konkretnych budynków i pięter pozostaje do rozdzielenia."
+      "notes": "Przedmioty z wnętrz zostały rozdzielone do osobnych lokacji: Pokémon Mansion, Cinnabar Lab i Cinnabar Gym. Na zewnątrz wyspy pozostaje Antidote na zachód od wejścia do Mansion. Dokładne współrzędne pinezki nadal nie są zatwierdzone."
     },
     {
       "id": "route_21",
@@ -14050,7 +14022,7 @@
       "notablePokemon": [
         "Mewtwo (odblokowanie w Cerulean Cave po ukończeniu gry; nie w Mansion)"
       ],
-      "notes": "Spotkania rozdzielono według wersji. Mansion zawiera dokumenty fabularne o Mewtwo, ale Mewtwo nie jest tu dzikim spotkaniem.",
+      "notes": "Spotkania rozdzielono według wersji. Mansion zawiera dokumenty fabularne o Mewtwo, ale Mewtwo nie jest tu dzikim spotkaniem. Lista przedmiotów została rozpisana według pięter i pomieszczeń na podstawie tabeli Items oraz przebiegu eksploracji Bulbapedia Part 13. Osiem dziennych ukrytych znajdziek pozostaje losową pulą Candy; nie są pinezkami o zatwierdzonych współrzędnych.",
       "sourceIds": [
         "bulbapedia-part13",
         "rotomlabs-pokemon-mansion",
@@ -14323,7 +14295,42 @@
         "Master Trainer Melmetal — Melmetal (bez walki); wymaga pokazania Melmetala o CP co najmniej 8000 (B1F, północ)."
       ],
       "trainerCount": 15,
-      "trainerStatus": "postgame_master_trainer_teams_verified"
+      "trainerStatus": "postgame_master_trainer_teams_verified",
+      "items": [
+        "Max Repel — 1F, północno-zachodni pokój, południowo-zachodni narożnik.",
+        "Max Elixir — 1F, centralny pokój, na południe od czterech kolumn.",
+        "Max Lure — 1F, północno-wschodni pokój, pod stołem na niebieskim dywanie.",
+        "Silver Razz Berry ×5 — 1F, południowa część; dostęp przez drabinę z 3F.",
+        "Fire Stone — 1F, południowa część; dostęp przez drabinę z 3F.",
+        "PP Up — 2F, południowo-zachodni pokój.",
+        "Ultra Ball ×3 — 2F, balkon, mniej więcej środek piętra.",
+        "Max Ether — 2F, zachodnio-centralny pokój, obok Burglar Arnie.",
+        "Max Revive — 2F, północno-wschodni pokój.",
+        "Escape Rope — 2F, wewnętrzny pokój w północno-centralnej części.",
+        "Hyper Potion — 2F, wschodnio-centralny pokój, dostępny przez 3F.",
+        "Full Heal — 3F, północno-centralna część, za posągiem.",
+        "TM21 (Foul Play) — 3F, północno-wschodni pokój.",
+        "X Accuracy — 3F, na końcu wschodnio-centralnego korytarza.",
+        "Rare Candy — 3F, południowo-zachodnia część, obok Burglar Simon.",
+        "TM52 (Sludge Bomb) — B1F, południowy pokój, obok posągu.",
+        "Max Potion — B1F, południowo-zachodni narożnik.",
+        "Rare Candy — B1F, północno-centralny pokój.",
+        "Max Elixir — B1F, północno-zachodni pokój, obok dużego szklanego zbiornika.",
+        "Secret Key — B1F, zachodnio-centralny pokój."
+      ],
+      "hiddenItemCount": 8,
+      "hiddenItemsStatus": "8 daily hidden item spots verified by floor and room; each yields a randomly selected Candy type; exact pin coordinates not mapped",
+      "hiddenItems": [
+        "1F — przy trzeciej kolumnie na północ od wejścia, po wschodniej stronie korytarza (ukryta dzienna znajdźka; losowy typ Candy).",
+        "2F — przy drabinie w południowo-wschodniej części piętra, dostępnej z najbardziej południowych schodów na 3F (ukryta dzienna znajdźka; losowy typ Candy).",
+        "3F — na przewróconym regale w południowo-zachodniej części piętra (ukryta dzienna znajdźka; losowy typ Candy).",
+        "B1F — między dwoma łóżkami, na wschodniej komodzie z lampą (ukryta dzienna znajdźka; losowy typ Candy).",
+        "B1F — na południowy zachód od łóżek, na wschodniej komodzie z lampą (ukryta dzienna znajdźka; losowy typ Candy).",
+        "B1F — w północnym pokoju z regałami, na stosie książek przy zachodniej ścianie (ukryta dzienna znajdźka; losowy typ Candy).",
+        "B1F — w zachodniej części piętra, obok południowo-zachodniego zbiornika (ukryta dzienna znajdźka; losowy typ Candy).",
+        "B1F — w południowo-zachodnim narożniku piętra, na środkowej części wschodniego regału (ukryta dzienna znajdźka; losowy typ Candy)."
+      ],
+      "itemsStatus": "20 fixed item pickups verified by floor and room from Bulbapedia Part 13; hidden daily Candy spots separately listed"
     },
     {
       "id": "safari_zone",
@@ -14650,7 +14657,11 @@
         "Rewanż postgame — Blaine: Magmar Lv. 56, Rapidash Lv. 56, Ninetales Lv. 56, Flareon Lv. 56 i Arcanine Lv. 57."
       ],
       "trainerCount": 6,
-      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
+      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough",
+      "items": [
+        "TM46 (Fire Blast) — nagroda od Blaine’a po pokonaniu go."
+      ],
+      "itemsStatus": "TM46 gym reward location verified from Bulbapedia Part 13"
     },
     {
       "id": "bills_house",
@@ -14954,7 +14965,8 @@
       "sourceIds": [
         "bulbapedia-cinnabar-lab",
         "pokemondb-mastertrainers",
-        "supercheats-cinnabar-postgame"
+        "supercheats-cinnabar-postgame",
+        "bulbapedia-part13"
       ],
       "dataStatus": "schematic_interior_available_exact_layout_pending",
       "coordinateStatus": "unverified",
@@ -14965,7 +14977,11 @@
         "Master Trainer Hiker Lionel — Omastar Lv. 75 (Pokémon Lab)."
       ],
       "trainerCount": 1,
-      "trainerStatus": "postgame_master_trainer_teams_verified"
+      "trainerStatus": "postgame_master_trainer_teams_verified",
+      "items": [
+        "TM02 (Taunt) — Research Room; odbierz od naukowca siedzącego przy biurku."
+      ],
+      "itemsStatus": "TM02 reward location verified from Bulbapedia Part 13"
     },
     {
       "id": "fighting_dojo",
