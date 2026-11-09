@@ -3833,9 +3833,10 @@
       },
       "encounterStatus": "text_verified",
       "trainers": [
-        "Master Trainer Black Belt Tadashi — Mankey Lv. 70 (postgame po zostaniu Championem; na północ od Day Care)."
+        "Master Trainer Black Belt Tadashi — Mankey Lv. 70 (postgame po zostaniu Championem; na północ od Day Care).",
+        "Master Trainer Bug Catcher Louie — Scyther Lv. 75 (postgame po zostaniu Championem; brama na Route 5)."
       ],
-      "trainerCount": 1,
+      "trainerCount": 2,
       "trainerStatus": "postgame_master_trainer_teams_verified_from_pokemondb"
     },
     {
