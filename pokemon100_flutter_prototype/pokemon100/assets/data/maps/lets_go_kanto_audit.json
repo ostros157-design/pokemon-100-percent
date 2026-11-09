@@ -807,6 +807,16 @@
       "id": "altissimo-silph-co-lgpe",
       "url": "https://altissimo1.github.io/Main-Series/Kanto-Locations/silph-co.html",
       "scope": "Let's Go Silph Co. items by floor and trainers"
+    },
+    {
+      "id": "altissimo-hidden-items-lgpe",
+      "url": "https://altissimo1.github.io/Main-Series/LGPE/hidden-items.html",
+      "scope": "Complete Let's Go hidden-item index, daily/step regeneration rules, exact room and route descriptions, underground random item spots"
+    },
+    {
+      "id": "altissimo-utility-lgpe",
+      "url": "https://altissimo1.github.io/Main-Series/LGPE/utility.html",
+      "scope": "Let's Go access requirements for Chop Down, Sea Skim, Strong Push, Silph Scope and Poké Flute"
     }
   ],
   "locations": [
@@ -3990,7 +4000,11 @@
       "items": [
         "Repel",
         "Lure",
-        "5 ukrytych przedmiotów z losowej puli m.in. Lure/Repel, Fresh Water/Potions, Pearl/Big Pearl/Nugget, Nugget"
+        "5 ukrytych przedmiotów z losowej puli m.in. Lure/Repel, Fresh Water/Potions, Pearl/Big Pearl/Nugget, Nugget",
+        "Losowy przedmiot dzienny — 23. niebieskie pole od północnego wyjścia: Pretty Wing, Pearl, Big Pearl albo Nugget.",
+        "Losowy przedmiot dzienny — 31. niebieskie pole od południowego wyjścia: Pretty Wing, Pearl, Big Pearl albo Nugget.",
+        "Losowy przedmiot dzienny — 31. czerwone pole od południowego wyjścia: Repel, Super Repel, Max Repel, Lure, Super Lure albo Max Lure.",
+        "Losowy przedmiot dzienny — 12. czerwone pole od południowego wyjścia: Fresh Water, Potion, Super Potion albo Hyper Potion."
       ],
       "trainerCount": 4,
       "postGameTrainers": [
@@ -4000,7 +4014,8 @@
       "sourceIds": [
         "routepedia-underground56-eevee",
         "serebii-underground56",
-        "pokemondb-mastertrainers"
+        "pokemondb-mastertrainers",
+        "altissimo-hidden-items-lgpe"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "trainers": [
@@ -4009,7 +4024,8 @@
         "Master Trainer Scientist Murray — Magnemite Lv. 70 (Underground Path 5–6)",
         "Master Trainer Scientist Julian — Magneton Lv. 75 (Underground Path 5–6)"
       ],
-      "trainerStatus": "master_trainer_postgame_roster_cross_checked_pokemondb"
+      "trainerStatus": "master_trainer_postgame_roster_cross_checked_pokemondb",
+      "itemsStatus": "all four daily random-item positions and possible pools verified from Altissimo hidden-item index"
     },
     {
       "id": "route_6",
@@ -4552,7 +4568,8 @@
         "bulbapedia-part8",
         "serebii-route7",
         "pokemondb-mastertrainers",
-        "serebii-coachtrainers"
+        "serebii-coachtrainers",
+        "altissimo-hidden-items-lgpe"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemonDetails": {
@@ -4926,10 +4943,12 @@
       "items": [
         "Elixir — na południe od bramy Saffron City.",
         "TM12 (Facade) — nagroda od Coach Trainer Alpesh po zwycięstwie.",
-        "Nanab Berry / Silver Nanab Berry / Golden Nanab Berry — krzak po wschodniej stronie wejścia do Underground Path; partner Pokémon może znaleźć wariant zależny od dnia."
+        "Nanab Berry / Silver Nanab Berry / Golden Nanab Berry — krzak po wschodniej stronie wejścia do Underground Path; partner Pokémon może znaleźć wariant zależny od dnia.",
+        "Pinap Berry ×5 — ukryte u podstawy drzewa w pobliżu wejścia do Celadon City (znajdźka dzienna)."
       ],
       "trainerCount": 4,
-      "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb"
+      "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb",
+      "itemsStatus": "field items plus daily hidden Pinap Berry verified from Altissimo hidden-item index"
     },
     {
       "id": "route_8",
@@ -5717,7 +5736,9 @@
         "Max Potion",
         "Paralyze Heal",
         "X Sp. Def",
-        "różne ukryte przedmioty"
+        "różne ukryte przedmioty",
+        "Super Lure — ukryty na północnej połowie trasy, na końcu ścieżki na południe od kępy trawy (znajdźka dzienna).",
+        "Nanab Berry ×5 — ukryte w kwiatach na południowej połowie trasy, na wschód od wyjścia z Rock Tunnel (znajdźka dzienna)."
       ],
       "features": [
         "Pokémon Center",
@@ -5730,7 +5751,8 @@
         "serebii-route10",
         "bulbapedia-part13",
         "pokemondb-mastertrainers",
-        "serebii-coachtrainers"
+        "serebii-coachtrainers",
+        "altissimo-hidden-items-lgpe"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemonDetails": {
@@ -6187,7 +6209,8 @@
         "Coach Trainer Tasha — Poliwhirl Lv. 25 i Primeape Lv. 26; nagroda TM13 (Brick Break)."
       ],
       "trainerCount": 10,
-      "trainerStatus": "master_trainer_postgame_roster_cross_checked_pokemondb"
+      "trainerStatus": "master_trainer_postgame_roster_cross_checked_pokemondb",
+      "itemsStatus": "existing item list supplemented with both confirmed daily hidden items from Altissimo"
     },
     {
       "id": "rock_tunnel",
@@ -6691,7 +6714,8 @@
       "sourceIds": [
         "routepedia-underground78-pikachu",
         "bulbapedia-part8",
-        "pokemondb-mastertrainers"
+        "pokemondb-mastertrainers",
+        "altissimo-hidden-items-lgpe"
       ],
       "dataStatus": "connection_verified_details_pending",
       "items": [
@@ -6699,7 +6723,11 @@
         "X Defense — przy wejściu od Route 7, przy południowej ścianie.",
         "Ukryty losowy przedmiot dzienny przy wejściu od Route 8: Pretty Wing albo Pearl / Big Pearl / Nugget; Fresh Water, Potion, Super Potion lub Hyper Potion.",
         "Ukryty losowy przedmiot dzienny przy południowej ścianie bliżej wejścia od Route 7: Repel, Super Repel, Max Repel, Lure, Super Lure lub Max Lure.",
-        "Pretty Wing albo Pearl / Big Pearl / Nugget — drugi losowy ukryty przedmiot przy wejściu od Route 7."
+        "Pretty Wing albo Pearl / Big Pearl / Nugget — drugi losowy ukryty przedmiot przy wejściu od Route 7.",
+        "Losowy przedmiot dzienny — 15. czerwone pole od wschodniego wyjścia: Pretty Wing, Pearl, Big Pearl albo Nugget.",
+        "Losowy przedmiot dzienny — 23. środkowe szare pole od zachodniego wyjścia: Pretty Wing, Pearl, Big Pearl albo Nugget.",
+        "Losowy przedmiot dzienny — 38. dolne szare pole od zachodniego wyjścia: Repel, Super Repel, Max Repel, Lure, Super Lure albo Max Lure.",
+        "Losowy przedmiot dzienny — 31. niebieskie pole od wschodniego wyjścia: Fresh Water, Potion, Super Potion albo Hyper Potion."
       ],
       "trainers": [
         "Master Trainer Ace Trainer Fred — Nidorina Lv. 70 (Underground Path 7–8)",
@@ -6707,7 +6735,8 @@
         "Master Trainer Hiker Jim — Onix Lv. 70 (Underground Path 7–8)"
       ],
       "trainerCount": 3,
-      "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb"
+      "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb",
+      "itemsStatus": "all four daily random-item positions and possible pools verified from Altissimo hidden-item index"
     },
     {
       "id": "route_11",
@@ -9028,6 +9057,16 @@
           "status": "text_verified",
           "sourceIds": [
             "bulbapedia-part9"
+          ]
+        },
+        {
+          "id": "walking_pokemon_pretty_wing",
+          "name": "Pretty Wing — kwietnik przy fontannie",
+          "category": "walking_pokemon_find",
+          "note": "Niektóre Pokémony chodzące za graczem mogą rzadko znaleźć Pretty Wing w kwietniku na wschód od fontanny.",
+          "status": "text_verified",
+          "sourceIds": [
+            "altissimo-celadon-lgpe"
           ]
         }
       ],
@@ -15008,7 +15047,9 @@
         "Przed najbardziej wysuniętą na północ maszyną po wschodniej stronie: Tough Candy XL (5%), Tough Candy L (10%) albo Tough Candy (30%); możliwa Nanab Berry (50%).",
         "Przed najbardziej wysuniętą na północ maszyną po zachodniej stronie: Smart Candy XL (5%), Smart Candy L (10%) albo Smart Candy (30%); możliwa Nanab Berry (50%).",
         "Między ladami oddzielającymi zachodnią i wschodnią część: Courage Candy XL (5%), Courage Candy L (10%) albo Courage Candy (30%); możliwa Pinap Berry (50%).",
-        "Na południe od kanapy w północno-wschodniej części: Quick Candy XL (5%), Quick Candy L (10%) albo Quick Candy (30%); możliwa Pinap Berry (50%)."
+        "Na południe od kanapy w północno-wschodniej części: Quick Candy XL (5%), Quick Candy L (10%) albo Quick Candy (30%); możliwa Pinap Berry (50%).",
+        "Fresh Water — automat po prawej stronie salonu gier, ₽200.",
+        "Soda Pop — automat po prawej stronie salonu gier, ₽300."
       ],
       "itemsStatus": "six daily hidden-item spots and per-item probabilities verified from Altissimo LGPE guide"
     },
@@ -15025,12 +15066,23 @@
         "pokemondb-mastertrainers",
         "bulbapedia-celadon-condominiums-masters",
         "serebii-coachtrainers",
-        "supercheats-celadon-postgame"
+        "supercheats-celadon-postgame",
+        "altissimo-celadon-lgpe"
       ],
       "dataStatus": "schematic_interior_available_exact_layout_pending",
       "coordinateStatus": "unverified",
       "events": [
-        "Budynek mieszkalny obejmuje mieszkania i pomieszczenia związane z ekipą Game Freak; dokładny układ pięter i interakcje nie są odwzorowane."
+        "Budynek mieszkalny obejmuje mieszkania i pomieszczenia związane z ekipą Game Freak; dokładny układ pięter i interakcje nie są odwzorowane.",
+        {
+          "id": "rooftop_eevee_gift",
+          "name": "Eevee — prezent na dachu",
+          "category": "gift_pokemon",
+          "note": "Poké Ball z Eevee Lv. 25 znajduje się w pokoju na dachu Celadon Condominiums; dostęp wyłącznie przez tylne wejście do budynku.",
+          "status": "text_verified",
+          "sourceIds": [
+            "altissimo-celadon-lgpe"
+          ]
+        }
       ],
       "trainers": [
         "Master Trainer Ace Trainer Tim — Charmander Lv. 65 (tylne wejście do budynku).",
@@ -15045,6 +15097,9 @@
         "PP Max ×10 — 3F, od Coach Trainer Morimoto po pokonaniu go po zostaniu Championem.",
         "Health Candy ×3 — dach, ogrodzona wschodnia część.",
         "TM44 (Play Rough) — dach, pomieszczenie po zachodniej stronie, dostępne od tylnego wejścia."
+      ],
+      "notablePokemon": [
+        "Eevee Lv. 25 — prezent w Poké Ball na dachu, dostęp przez tylne wejście."
       ]
     },
     {
