@@ -5958,3 +5958,14 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Osiągnięcia: usunięto osiągnięcia ukryte i oznaczenia ???; wszystkie 25 pozostałych osiągnięć jest widocznych. Dodano ręczne oznaczanie i cofanie oznaczenia dla osiągnięć, których aplikacja nie śledzi jeszcze automatycznie; wybory zapisują się w SharedPreferences.
 - Muzyka: dodano automatyczne uruchamianie wbudowanej melodii offline po otwarciu aplikacji (domyślnie włączone), z opcją wyłączenia automatycznego startu na ekranie Muzyka Pokémon. Wspólny odtwarzacz nadal pozwala zachować odtwarzanie przy przechodzeniu między ekranami.
 - Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK. Zmiany wymagają sprawdzenia na urządzeniu, szczególnie automatyczny start i zachowanie dźwięku po zminimalizowaniu aplikacji.
+
+
+### Let's Go Kanto — korekta Master Trainers na Route 2 i Route 5 (2026-11-09)
+
+- Ponowny audyt pełnej listy Master Trainers ujawnił, że wcześniejszy status „brak trenerów” na Route 2 dotyczył wyłącznie głównej historii i pomijał walki postgame. Dodano Bird Keeper Louey (Pidgey Lv. 65) i Bug Catcher Hans (Parasect Lv. 75).
+- Na Route 5 dodano brakujących postgame Master Trainers: Black Belt Tadashi (Mankey Lv. 70) oraz Bug Catcher Louie (Scyther Lv. 75, w bramie).
+- Wpisy oparte na zestawieniu Pokémon Database Master Trainers, zawierającym lokalizacje, gatunki i poziomy; dodano odwołania do istniejącego źródła `pokemondb-mastertrainers`. Nie dodano współrzędnych ani pinezek.
+- Po aktualizacji indeks obejmuje 76 lokacji i 399 rekordów trenerów. Kontrola JSON oraz zgodności liczników `trainerCount` z długością list przeszła; wszystkie odwołania źródeł istnieją.
+- **Audyt wszystkich Master Trainers nie jest jeszcze zakończony:** porównanie z pełnym rosterem wskazuje dalsze brakujące postgame wpisy w innych trasach i lokacjach. Nie oznaczono całej listy jako kompletnej.
+- Ekran mapy pokazuje wszystkie elementy list trenerów i przedmiotów bez limitu 20; obsługuje zarówno tekstowe wpisy trenerów, jak i rekordy ze składami Pokémonów. To kontrola kodu, nie test uruchomionej aplikacji.
+- Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK.
