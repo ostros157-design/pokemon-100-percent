@@ -5969,3 +5969,12 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - **Audyt wszystkich Master Trainers nie jest jeszcze zakończony:** porównanie z pełnym rosterem wskazuje dalsze brakujące postgame wpisy w innych trasach i lokacjach. Nie oznaczono całej listy jako kompletnej.
 - Ekran mapy pokazuje wszystkie elementy list trenerów i przedmiotów bez limitu 20; obsługuje zarówno tekstowe wpisy trenerów, jak i rekordy ze składami Pokémonów. To kontrola kodu, nie test uruchomionej aplikacji.
 - Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK.
+
+
+### Audyt statyczny osiągnięć i muzyki (2026-11-09)
+
+- Osiągnięcia: sprawdzono 25 definicji, wszystkie mają `hidden: false`; ekran ładuje ręczne ID z `SharedPreferences`, a zmiana stanu zapisuje listę ponownie. Karta udostępnia ręczne oznaczenie/cofnięcie dla osiągnięć bez aktywnego automatycznego warunku.
+- Automatyczne warunki obejmują m.in. progi Pokédexu, Shiny/Legendary, poradniki i procent postępu. Osiągnięcia wymagające sygnałów, których aplikacja jeszcze nie śledzi (np. odznaki, wygrane walki, skład drużyny i ewolucje), pozostają ręczne — nie dopisano pozornego automatycznego trackingu.
+- Muzyka: statyczny przegląd potwierdził jeden współdzielony `AudioPlayer`, tryb pętli, autostart po uruchomieniu aplikacji (domyślnie włączony), ustawienie zapisywane w `SharedPreferences` oraz sterowanie odtwarzaniem i głośnością na ekranie Muzyka.
+- Ograniczenie: AndroidManifest nie deklaruje usługi `mediaPlayback` ani `FOREGROUND_SERVICE`; dlatego ciągłego odtwarzania po zminimalizowaniu aplikacji lub z wygaszonym ekranem nie można uznać za zapewnione. Do pełnego background audio potrzebna jest integracja z usługą audio/foreground service i test na urządzeniu.
+- To audyt kodu źródłowego. Nie wykonano testów widgetów/integracyjnych, Flutter Analyzer, testu audio na AYN Thor ani kompilacji APK.
