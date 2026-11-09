@@ -5,16 +5,21 @@ import '../models/achievement.dart';
 class AchievementCard extends StatelessWidget {
   final Achievement achievement;
   final bool unlocked;
+  final bool manuallyUnlocked;
+  final bool canManuallyUnlock;
+  final VoidCallback onManualToggle;
 
   const AchievementCard({
     super.key,
     required this.achievement,
     required this.unlocked,
+    required this.manuallyUnlocked,
+    required this.canManuallyUnlock,
+    required this.onManualToggle,
   });
 
   @override
   Widget build(BuildContext context) {
-    final hiddenLocked = achievement.hidden && !unlocked;
     final unlockedColor = Theme.of(context).colorScheme.primary;
 
     return Card(
@@ -27,29 +32,40 @@ class AchievementCard extends StatelessWidget {
           child: Icon(
             unlocked
                 ? Icons.emoji_events
-                : hiddenLocked
-                    ? Icons.help_outline
-                    : Icons.lock_outline,
+                : Icons.lock_outline,
             color: unlocked ? unlockedColor : null,
           ),
         ),
         title: Text(
-          hiddenLocked ? '???' : achievement.title,
+          achievement.title,
           style: TextStyle(
             fontWeight: FontWeight.bold,
             color: unlocked ? unlockedColor : Colors.grey,
           ),
         ),
         subtitle: Text(
-          hiddenLocked ? 'Ukryte osiągnięcie' : achievement.description,
+          achievement.description,
           style: TextStyle(
             color: unlocked ? null : Colors.grey,
           ),
         ),
-        trailing: Icon(
-          unlocked ? Icons.check_circle : Icons.lock,
-          color: unlocked ? unlockedColor : null,
-        ),
+        trailing: canManuallyUnlock
+            ? IconButton(
+                tooltip: manuallyUnlocked
+                    ? 'Cofnij ręczne oznaczenie'
+                    : 'Oznacz jako zdobyte',
+                onPressed: onManualToggle,
+                icon: Icon(
+                  manuallyUnlocked
+                      ? Icons.check_circle
+                      : Icons.check_circle_outline,
+                  color: manuallyUnlocked ? unlockedColor : null,
+                ),
+              )
+            : Icon(
+                unlocked ? Icons.check_circle : Icons.lock,
+                color: unlocked ? unlockedColor : null,
+              ),
       ),
     );
   }
