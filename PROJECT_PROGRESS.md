@@ -5992,3 +5992,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Ekran mapy: kontrola statyczna kodu nie wykazała limitu 20 pozycji na listach trenerów/przedmiotów; ograniczenia `take(8/15)` dotyczą wyłącznie podpowiedzi wyszukiwania. Obsługa wydarzeń tekstowych i obiektowych pozostaje w kodzie.
 - **Ważne ograniczenie:** nie dodano współrzędnych ani pinezek bez potwierdzenia. Część wpisów ma poprawną nazwę i lokację ogólną, ale dokładne położenie na mapie/konkretne piętro nadal wymaga weryfikacji. To nie jest jeszcze potwierdzenie kompletności wszystkich 76 lokacji.
 - **Testy:** JSON został ponownie sparsowany; sprawdzenie liczników trenerów i odwołań do źródeł przeszło (0 błędów). Nie uruchomiono Flutter Analyzer, testów Flutter ani kompilacji APK, ponieważ nie ma tutaj lokalnego środowiska projektu do wykonania tych komend.
+
+
+### Let's Go Kanto — rozdzielenie przedmiotów Cinnabar Island na budynki i piętra (2026-11-09)
+
+- Rozdzielono zbiorczą listę przedmiotów Cinnabar Island: na zewnętrznym obszarze pozostał Antidote na zachód od wejścia do Pokémon Mansion; TM02 (Taunt) przypisano do Research Room w Cinnabar Lab, a TM46 (Fire Blast) do nagrody po pokonaniu Blaine’a w Cinnabar Gym.
+- Pokémon Mansion otrzymało 20 stałych znalezisk rozpisanych na 1F, 2F, 3F i B1F, z opisami pomieszczeń i dojść. Osiem dziennych ukrytych znajdziek Candy rozpisano osobno według piętra i charakterystycznego obiektu; zachowano informację, że typ Candy jest losowy.
+- Źródło: Bulbapedia, Let’s Go walkthrough Part 13 — tabele przedmiotów oraz opis przejścia przez Mansion, Cinnabar Lab i Gym. Nie dodano współrzędnych ani pinezek; tekstowe opisy pomieszczeń nie są jeszcze dokładnymi pozycjami na mapie.
+- Zmiany zapisano na gałęzi work/map-achievements-music. Wymaga dalszej kontroli pozostałych agregatów miejskich i testów w aplikacji; Flutter Analyzer, testy Flutter i APK nie zostały uruchomione.
