@@ -1689,7 +1689,9 @@
         "Lass Brittany — Nidoran♀ Lv. 4",
         "Bug Catcher Doug — Kakuna Lv. 3",
         "Lass Jocelyn — Pidgey Lv. 4",
-        "Bug Catcher Sammy — Metapod Lv. 3"
+        "Bug Catcher Sammy — Metapod Lv. 3",
+        "Master Trainer Bug Catcher Bobby — Butterfree Lv. 75 (Viridian Forest, północno-zachodnia brama)",
+        "Master Trainer Lass Ikue — Pikachu Lv. 75 (Viridian Forest, północny zachód)"
       ],
       "items": [
         "5 Poké Balls",
@@ -1702,10 +1704,12 @@
       "sourceIds": [
         "bulbapedia-part3",
         "routepedia-forest-pikachu",
-        "routepedia-forest-eevee"
+        "routepedia-forest-eevee",
+        "pokemondb-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
-      "trainerCount": 7
+      "trainerCount": 9,
+      "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb"
     },
     {
       "id": "pewter_city",
@@ -2346,12 +2350,13 @@
         "Moon Stone (ukryty)"
       ],
       "hiddenItemCount": 4,
-      "trainerCount": 11,
+      "trainerCount": 15,
       "sourceIds": [
         "routepedia-mt-moon-pikachu",
         "routepedia-mt-moon-eevee",
         "bulbapedia-part4",
-        "rotomlabs-mt-moon"
+        "rotomlabs-mt-moon",
+        "pokemondb-mastertrainers"
       ],
       "dataStatus": "encounter_rates_verified_from_rotomlabs_positions_not_mapped",
       "trainers": [
@@ -2365,9 +2370,13 @@
         "Team Rocket Grunt — Rattata Lv. 9 (B2F).",
         "Team Rocket Grunt — Drowzee Lv. 9 (B2F).",
         "Team Rocket Grunt — Zubat Lv. 9 (B2F).",
-        "Super Nerd Miguel — Voltorb Lv. 10 i Magnemite Lv. 10 (B2F)."
+        "Super Nerd Miguel — Voltorb Lv. 10 i Magnemite Lv. 10 (B2F).",
+        "Master Trainer Lass Alexandra — Clefable Lv. 80 (Mt. Moon, B1F, środek)",
+        "Master Trainer Bug Catcher Evan — Paras Lv. 70 (Mt. Moon, 1F, północny wschód)",
+        "Master Trainer Hiker Colson — Omanyte Lv. 70 (Mt. Moon, B2F, środek)",
+        "Master Trainer Hiker Barnaby — Kabuto Lv. 70 (Mt. Moon, B2F, północny wschód)"
       ],
-      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
+      "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb"
     },
     {
       "id": "route_4",
@@ -2674,7 +2683,8 @@
         "routepedia-route4-pikachu",
         "routepedia-route4-eevee",
         "bulbapedia-part4",
-        "serebii-route4"
+        "serebii-route4",
+        "pokemondb-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemon": {
@@ -2714,9 +2724,15 @@
       },
       "encounterStatus": "text_verified",
       "trainers": [
-        "Coach Trainer Oberon — Meowth Lv. 13; nagroda $1,300."
+        "Coach Trainer Oberon — Meowth Lv. 13; nagroda $1,300.",
+        "Master Trainer Lass Rena — Bulbasaur Lv. 65 (Route 4, północ)",
+        "Master Trainer Scientist Herbert — Ekans Lv. 70 (Route 4, wschód)",
+        "Master Trainer Ace Trainer Alvin — Nidoran♂ Lv. 70 (Route 4, wschód)",
+        "Master Trainer Beauty Camille — Golduck Lv. 75 (Route 4, wschód, przy wejściu do Cerulean Cave)",
+        "Master Trainer Youngster Easton — Magikarp Lv. 65 (Route 4, Pokémon Center)"
       ],
-      "trainerCount": 1
+      "trainerCount": 6,
+      "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb"
     },
     {
       "id": "cerulean_city",
@@ -3149,7 +3165,8 @@
         "Lass Reli — Meowth Lv. 10",
         "Camper Kevin — Growlithe Lv. 11",
         "Team Rocket Grunt — Zubat Lv. 11 i Koffing Lv. 11",
-        "Camper Shane — Spearow Lv. 11"
+        "Camper Shane — Spearow Lv. 11",
+        "Master Trainer Lass Summer — Exeggcute Lv. 70 (Route 24, na wschód od Nugget Bridge)"
       ],
       "items": [
         "X Sp. Def — na północny wschód od Nugget Bridge, po zachodniej stronie płaskowyżu dostępnego od Route 25; opis tekstowy, bez pinezki.",
@@ -3165,7 +3182,8 @@
         "routepedia-route24-pikachu",
         "routepedia-route24-eevee",
         "serebii-route24",
-        "bulbapedia-part5"
+        "bulbapedia-part5",
+        "pokemondb-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemon": {
@@ -3209,7 +3227,8 @@
       "events": [
         "Charmander Lv. 14 — prezent od chłopca na północno-zachodnim wzgórzu po złapaniu co najmniej 50 Pokémonów."
       ],
-      "trainerCount": 7
+      "trainerCount": 8,
+      "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb"
     },
     {
       "id": "route_25",
@@ -3528,7 +3547,8 @@
         "Hiker Nob — Geodude Lv. 14 i Machop Lv. 14",
         "Youngster Chad — Diglett Lv. 12",
         "Lass Haley — Oddish Lv. 12 i Pidgey Lv. 12",
-        "Coach Trainer Amala — Machop Lv. 16"
+        "Coach Trainer Amala — Machop Lv. 16",
+        "Master Trainer Psychic Harrison — Starmie Lv. 75 (Route 25, wschód)"
       ],
       "items": [
         "Super Potion — zachodnia strona żywopłotowego labiryntu, na północny zachód od Youngster Chad; pozycja opisana tekstowo, bez pinezki.",
@@ -3546,7 +3566,8 @@
       "sourceIds": [
         "routepedia-route25-pikachu",
         "serebii-route25",
-        "bulbapedia-part5"
+        "bulbapedia-part5",
+        "pokemondb-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemon": {
@@ -3587,7 +3608,8 @@
         ]
       },
       "encounterStatus": "text_verified",
-      "trainerCount": 10
+      "trainerCount": 11,
+      "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb"
     },
     {
       "id": "route_5",
@@ -4228,7 +4250,8 @@
         "Gentleman Edward — Eevee Lv. 16",
         "Picnicker Nancy — Nidoran♀ Lv. 15 i Jigglypuff Lv. 15",
         "Picnicker Isabelle — Charmander Lv. 15",
-        "Sailor Elijah — Tentacool Lv. 16"
+        "Sailor Elijah — Tentacool Lv. 16",
+        "Master Trainer Ace Trainer Finn — Vulpix Lv. 70 (Route 6, północny wschód)"
       ],
       "items": [
         "Super Potion",
@@ -4239,7 +4262,8 @@
       "sourceIds": [
         "routepedia-route6-pikachu",
         "routepedia-route6-eevee",
-        "serebii-route6"
+        "serebii-route6",
+        "pokemondb-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemon": {
@@ -4283,7 +4307,8 @@
         ]
       },
       "encounterStatus": "text_verified",
-      "trainerCount": 6
+      "trainerCount": 7,
+      "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb"
     },
     {
       "id": "vermilion_city",
@@ -4404,7 +4429,8 @@
       "sourceIds": [
         "routepedia-route7-pikachu",
         "bulbapedia-part8",
-        "serebii-route7"
+        "serebii-route7",
+        "pokemondb-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemonDetails": {
@@ -4771,14 +4797,17 @@
       "encounterStatus": "text_verified",
       "trainers": [
         "Ace Trainer Yvette — Raichu Lv. 28, Dugtrio Lv. 29, Seel Lv. 28; nagroda $2,800 i 5 Ultra Balls.",
-        "Coach Trainer Alpesh — Farfetch'd Lv. 29, Wigglytuff Lv. 30; nagroda $3,000 i TM12 (Facade)."
+        "Coach Trainer Alpesh — Farfetch'd Lv. 29, Wigglytuff Lv. 30; nagroda $3,000 i TM12 (Facade).",
+        "Master Trainer Hiker Benjamin — Sandslash Lv. 75 (brama Route 7)",
+        "Master Trainer Ace Trainer Austin — Growlithe Lv. 70 (Route 7, północny wschód)"
       ],
       "items": [
         "Elixir — na południe od bramy Saffron City.",
         "TM12 (Facade) — nagroda od Coach Trainer Alpesh po zwycięstwie.",
         "Nanab Berry / Silver Nanab Berry / Golden Nanab Berry — krzak po wschodniej stronie wejścia do Underground Path; partner Pokémon może znaleźć wariant zależny od dnia."
       ],
-      "trainerCount": 2
+      "trainerCount": 4,
+      "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb"
     },
     {
       "id": "route_8",
@@ -4795,7 +4824,8 @@
       "sourceIds": [
         "routepedia-route8-pikachu",
         "bulbapedia-part8",
-        "serebii-route8"
+        "serebii-route8",
+        "pokemondb-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemonDetails": {
@@ -5169,7 +5199,9 @@
         "Gamer Stan — Rhyhorn Lv. 35; nagroda $4,200 i 3 Poké Balls.",
         "Lass Andrea — trzy Meowth Lv. 25; nagroda $500 i 3 Poké Balls.",
         "Lass Megan — Pikachu Lv. 25; nagroda $500 i 3 Poké Balls.",
-        "Super Nerd Leslie — Magnemite Lv. 27; nagroda $1,080 i 3 Poké Balls."
+        "Super Nerd Leslie — Magnemite Lv. 27; nagroda $1,080 i 3 Poké Balls.",
+        "Master Trainer Bug Catcher Terry — Beedrill Lv. 75 (Route 8, wschód)",
+        "Master Trainer Hiker Richter — Cubone Lv. 70 (brama Route 8)"
       ],
       "items": [
         "Fire Stone — środek ogrodzonego obszaru traw; wymaga Chop Down.",
@@ -5178,7 +5210,8 @@
         "Big Mushroom — na południowy wschód od wejścia do Underground Path, między dwiema półkami.",
         "Pinap Berry / Silver Pinap Berry / Golden Pinap Berry — krzak na zachód od wejścia do Underground Path; partner Pokémon może znaleźć różne warianty."
       ],
-      "trainerCount": 9
+      "trainerCount": 11,
+      "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb"
     },
     {
       "id": "route_9",
@@ -5198,12 +5231,14 @@
         "Camper Drew — Sandshrew Lv. 21 i Raticate Lv. 21",
         "Youngster Chris — Diglett Lv. 20 i Fearow Lv. 20",
         "Black Belt Brice — Mankey Lv. 23",
-        "Picnicker Caitlin — Goldeen Lv. 21"
+        "Picnicker Caitlin — Goldeen Lv. 21",
+        "Master Trainer Ace Trainer Arnold — Ninetales Lv. 75 (Route 9, środek)"
       ],
       "sourceIds": [
         "routepedia-route9-pikachu",
         "bulbapedia-part8",
-        "serebii-route9"
+        "serebii-route9",
+        "pokemondb-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemonDetails": {
@@ -5533,7 +5568,8 @@
         "Poké Ball ×5 — środkowa część trasy, na południe od Youngster Chris.",
         "Pinap Berry ×5 — ukryte w południowo-wschodnim narożniku, na wschód od Hiker Alan."
       ],
-      "trainerCount": 7
+      "trainerCount": 8,
+      "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb"
     },
     {
       "id": "route_10",
@@ -5570,7 +5606,8 @@
         "routepedia-route10-pikachu",
         "bulbapedia-part8",
         "serebii-route10",
-        "bulbapedia-part13"
+        "bulbapedia-part13",
+        "pokemondb-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemonDetails": {
@@ -6019,10 +6056,13 @@
         "Picnicker Carol — Pikachu Lv. 24 i Pidgeotto Lv. 24 (południowa część Route 10).",
         "Camper Trent — Krabby Lv. 24 i Sandslash Lv. 24 (południowa część Route 10).",
         "Poké Maniac Damian — Charmeleon Lv. 25 (południowa część Route 10).",
-        "Poké Maniac Mark — Rhyhorn Lv. 42 i Lickitung Lv. 42 (północny odcinek, dostęp Sea Skim)."
+        "Poké Maniac Mark — Rhyhorn Lv. 42 i Lickitung Lv. 42 (północny odcinek, dostęp Sea Skim).",
+        "Master Trainer Youngster Bret — Rattata Lv. 65 (Route 10, północny wschód)",
+        "Master Trainer Psychic Frasier — Alakazam Lv. 80 (Route 10, południe)",
+        "Master Trainer Scientist Levi — Electabuzz Lv. 75 (Route 10, północ, przy Power Plant)"
       ],
-      "trainerCount": 5,
-      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
+      "trainerCount": 8,
+      "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb"
     },
     {
       "id": "rock_tunnel",
@@ -6400,11 +6440,12 @@
         "Dire Hit",
         "2 ukryte przedmioty: Revive i Super Potion"
       ],
-      "trainerCount": 15,
+      "trainerCount": 16,
       "sourceIds": [
         "routepedia-rock-tunnel-pikachu",
         "bulbapedia-part8",
-        "rotomlabs-rock-tunnel"
+        "rotomlabs-rock-tunnel",
+        "pokemondb-mastertrainers"
       ],
       "dataStatus": "encounter_rates_verified_from_rotomlabs_positions_not_mapped",
       "trainers": [
@@ -6422,9 +6463,10 @@
         "Poké Maniac Cooper — Ivysaur Lv. 23 (B1F, północny zachód).",
         "Ace Trainer Sofia — Vulpix Lv. 24 i Kadabra Lv. 25 (B1F).",
         "Ace Trainer Charlie — Diglett Lv. 24 i Flareon Lv. 25 (B1F).",
-        "Black Belt Steve — Machop Lv. 24 ×2 (B1F)."
+        "Black Belt Steve — Machop Lv. 24 ×2 (B1F).",
+        "Master Trainer Scientist West — Zubat Lv. 70 (Rock Tunnel, B1F, północ)"
       ],
-      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
+      "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb"
     },
     {
       "id": "lavender_town",
@@ -6531,7 +6573,8 @@
       "notes": "Przejście pod Saffron City łączy Route 7 i Route 8. Poza X Accuracy i X Defense występują tu ukryte, losowe przedmioty dzienne; dokładne kafelki nie są pinezkami na tej mapie.",
       "sourceIds": [
         "routepedia-underground78-pikachu",
-        "bulbapedia-part8"
+        "bulbapedia-part8",
+        "pokemondb-mastertrainers"
       ],
       "dataStatus": "connection_verified_details_pending",
       "items": [
@@ -6540,7 +6583,14 @@
         "Ukryty losowy przedmiot dzienny przy wejściu od Route 8: Pretty Wing albo Pearl / Big Pearl / Nugget; Fresh Water, Potion, Super Potion lub Hyper Potion.",
         "Ukryty losowy przedmiot dzienny przy południowej ścianie bliżej wejścia od Route 7: Repel, Super Repel, Max Repel, Lure, Super Lure lub Max Lure.",
         "Pretty Wing albo Pearl / Big Pearl / Nugget — drugi losowy ukryty przedmiot przy wejściu od Route 7."
-      ]
+      ],
+      "trainers": [
+        "Master Trainer Ace Trainer Fred — Nidorina Lv. 70 (Underground Path 7–8)",
+        "Master Trainer Ace Trainer Dave — Nidorino Lv. 75 (Underground Path 7–8)",
+        "Master Trainer Hiker Jim — Onix Lv. 70 (Underground Path 7–8)"
+      ],
+      "trainerCount": 3,
+      "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb"
     },
     {
       "id": "route_11",
@@ -6878,7 +6928,8 @@
       "sourceIds": [
         "routepedia-route11-pikachu",
         "bulbapedia-part7",
-        "serebii-route11"
+        "serebii-route11",
+        "pokemondb-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemon": {
@@ -6927,9 +6978,13 @@
         "Engineer Braxton — Voltorb Lv. 18.",
         "Gamer Hugo — Diglett Lv. 26.",
         "Sailor Yasu — Slowpoke Lv. 18.",
-        "Lass Tomoe — Jigglypuff Lv. 16, Nidorina Lv. 16."
+        "Lass Tomoe — Jigglypuff Lv. 16, Nidorina Lv. 16.",
+        "Master Trainer Bug Catcher Bryson — Metapod Lv. 65 (Route 11, wschód)",
+        "Master Trainer Hiker Paul — Sandshrew Lv. 70 (Route 11, zachód)",
+        "Master Trainer Black Belt Kano — Primeape Lv. 75 (brama Route 11)"
       ],
-      "trainerCount": 9
+      "trainerCount": 12,
+      "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb"
     },
     {
       "id": "digletts_cave",
@@ -7026,9 +7081,16 @@
       "sourceIds": [
         "routepedia-diglett-cave-pikachu",
         "bulbapedia-part7",
-        "rotomlabs-digletts-cave"
+        "rotomlabs-digletts-cave",
+        "pokemondb-mastertrainers"
       ],
-      "dataStatus": "encounter_rates_verified_from_rotomlabs_positions_not_mapped"
+      "dataStatus": "encounter_rates_verified_from_rotomlabs_positions_not_mapped",
+      "trainers": [
+        "Master Trainer Hiker Collin — Diglett Lv. 70 (Diglett's Cave, północ)",
+        "Master Trainer Hiker Dexter — Dugtrio Lv. 75 (Diglett's Cave, południe)"
+      ],
+      "trainerCount": 2,
+      "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb"
     },
     {
       "id": "route_12",
@@ -7061,7 +7123,8 @@
       "sourceIds": [
         "routepedia-route12-pikachu",
         "bulbapedia-part12",
-        "serebii-route12"
+        "serebii-route12",
+        "pokemondb-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemonDetails": {
@@ -7494,9 +7557,15 @@
         "Fisherman Andrew — Tentacool Lv. 36, Kingler Lv. 36.",
         "Rocker Luca — Electabuzz Lv. 36; wymaga Chop Down.",
         "Camper Justin — Nidoran♂ Lv. 35, Nidorino Lv. 35.",
-        "Coach Trainer Priya — Butterfree Lv. 38, Clefable Lv. 39."
+        "Coach Trainer Priya — Butterfree Lv. 38, Clefable Lv. 39.",
+        "Master Trainer Beauty Suzy — Squirtle Lv. 65 (Route 12, północ)",
+        "Master Trainer Bird Keeper Wyatt — Pidgeot Lv. 75 (brama Route 12)",
+        "Master Trainer Lass Vicky — Poliwag Lv. 65 (Route 12, południe)",
+        "Master Trainer Beauty Lucy — Seadra Lv. 75 (Route 12, północny wschód)",
+        "Master Trainer Beauty Evette — Goldeen Lv. 70 (Route 12, środek)"
       ],
-      "trainerCount": 9
+      "trainerCount": 14,
+      "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb"
     },
     {
       "id": "route_13",
@@ -7511,7 +7580,8 @@
       "notes": "Wąski labirynt ogrodzeń prowadzący na zachód do Route 14.",
       "sourceIds": [
         "bulbapedia-part12",
-        "serebii-route13"
+        "serebii-route13",
+        "pokemondb-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemonDetails": {
@@ -7889,7 +7959,9 @@
         "Picnicker Gwen — Raticate Lv. 37, Golduck Lv. 37.",
         "Beauty Sheila — Eevee Lv. 37, Persian Lv. 37.",
         "Camper Perry — Growlithe Lv. 37, Nidorino Lv. 37.",
-        "Punk Guy Jared — Golbat Lv. 38."
+        "Punk Guy Jared — Golbat Lv. 38.",
+        "Master Trainer Bug Catcher Kenny — Kakuna Lv. 65 (Route 13, wschód)",
+        "Master Trainer Beauty Arianna — Seaking Lv. 75 (Route 13, południe)"
       ],
       "items": [
         "PP Up — wschodni skraj kępy wysokiej trawy; wymaga Chop Down.",
@@ -7897,7 +7969,8 @@
         "Silver Nanab Berry ×5 — ślepa ścieżka na południe od Punk Guy Jared; ukryte, dzienne.",
         "Full Heal — północno-zachodnia część trasy, na zachód od Camper Perry."
       ],
-      "trainerCount": 10
+      "trainerCount": 12,
+      "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb"
     },
     {
       "id": "route_14",
@@ -7912,7 +7985,8 @@
       "notes": "Trasa łącząca labirynt Route 13 z Route 15.",
       "sourceIds": [
         "bulbapedia-part12",
-        "serebii-route14"
+        "serebii-route14",
+        "pokemondb-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemonDetails": {
@@ -8266,7 +8340,9 @@
         "Punk Guy Malik — Rhyhorn Lv. 38.",
         "Punk Guy Gerald — Magmar Lv. 38.",
         "Punk Guy Felix — Weezing Lv. 38.",
-        "Roughneck Zeek — Machoke Lv. 38."
+        "Roughneck Zeek — Machoke Lv. 38.",
+        "Master Trainer Lass Katrina — Ivysaur Lv. 70 (Route 14, południe)",
+        "Master Trainer Lass Satoko — Vileplume Lv. 75 (Route 14, północ)"
       ],
       "items": [
         "Hyper Potion — wschodnia ścieżka, pod północno-wschodnim krzakiem przy Bird Keeper Benny.",
@@ -8274,7 +8350,8 @@
         "Golden Razz Berry — ukryta przy północnej krawędzi wysokiej trawy (przedmiot dzienny).",
         "Nanab Berry / Silver Nanab Berry / Golden Nanab Berry — środkowy krzak po wschodniej stronie; partner Pokémon może znaleźć różne warianty."
       ],
-      "trainerCount": 10
+      "trainerCount": 12,
+      "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb"
     },
     {
       "id": "route_15",
@@ -8298,7 +8375,8 @@
       ],
       "sourceIds": [
         "bulbapedia-part12",
-        "serebii-route15"
+        "serebii-route15",
+        "pokemondb-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemonDetails": {
@@ -8648,9 +8726,11 @@
         "Punk Guy Ernest — Primeape Lv. 38, Muk Lv. 38.",
         "Punk Guy Alex — Arbok Lv. 38.",
         "Beauty Lana — trzy Growlithe Lv. 37.",
-        "Bird Keeper Edwin — Dodrio Lv. 39."
+        "Bird Keeper Edwin — Dodrio Lv. 39.",
+        "Master Trainer Bug Catcher Lajos — Venomoth Lv. 75 (Route 15, północ)"
       ],
-      "trainerCount": 6
+      "trainerCount": 7,
+      "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb"
     },
     {
       "id": "fuchsia_city",
@@ -8940,7 +9020,8 @@
       "sourceIds": [
         "routepedia-route16-pikachu",
         "serebii-route16",
-        "bulbapedia-part11"
+        "bulbapedia-part11",
+        "pokemondb-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemonDetails": {
@@ -9266,9 +9347,12 @@
         "Punk Guy Lao — Onix Lv. 36, Muk Lv. 36; północna część wymaga Chop Down.",
         "Roughneck Koji — Raticate Lv. 36, Rhyhorn Lv. 36, Koffing Lv. 36; północna część wymaga Chop Down.",
         "Punk Guy Hideo — Arbok Lv. 36, Fearow Lv. 36; północna część wymaga Chop Down.",
-        "Camper Ruben — dwa Psyduck Lv. 35."
+        "Camper Ruben — dwa Psyduck Lv. 35.",
+        "Master Trainer Bird Keeper Howie — Pidgeotto Lv. 70 (Route 16, zachód)",
+        "Master Trainer Youngster Cid — Lickitung Lv. 70 (brama Route 16)"
       ],
-      "trainerCount": 4
+      "trainerCount": 6,
+      "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb"
     },
     {
       "id": "route_17",
@@ -9285,7 +9369,8 @@
         "routepedia-route17-pikachu",
         "serebii-route17",
         "bulbapedia-part11",
-        "bulbapedia-part18"
+        "bulbapedia-part18",
+        "pokemondb-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemonDetails": {
@@ -9680,7 +9765,11 @@
         "Gentleman Orson — Persian Lv. 38.",
         "Ace Trainer Maria — Exeggutor Lv. 40, Ninetales Lv. 39, Starmie Lv. 39.",
         "Picnicker Misaki — Vulpix Lv. 37, Ivysaur Lv. 37, Wigglytuff Lv. 37.",
-        "Post-game double battle — Jessie i James po zostaniu Championem; nagroda Blast-Off Set."
+        "Post-game double battle — Jessie i James po zostaniu Championem; nagroda Blast-Off Set.",
+        "Master Trainer Scientist Elton — Electrode Lv. 75 (Route 17, środek)",
+        "Master Trainer Scientist Albert — Koffing Lv. 70 (Route 17, środek)",
+        "Master Trainer Hiker Farkas — Rhyhorn Lv. 70 (Route 17, południe)",
+        "Master Trainer Lass Aoi — Eevee Lv. 75 (Route 17, północ)"
       ],
       "items": [
         "Super Potion — przed dwiema północno-wschodnimi ławkami.",
@@ -9700,7 +9789,8 @@
       "events": [
         "Po zostaniu Championem Jessie i James wracają na wschodnią część Route 17 i wyzywają gracza na ostatnią walkę; po zwycięstwie otrzymuje się Blast-Off Set."
       ],
-      "trainerCount": 11
+      "trainerCount": 15,
+      "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb"
     },
     {
       "id": "route_18",
@@ -9718,7 +9808,8 @@
       "sourceIds": [
         "routepedia-route18-pikachu",
         "serebii-route18",
-        "bulbapedia-part11"
+        "bulbapedia-part11",
+        "pokemondb-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemonDetails": {
@@ -10025,14 +10116,17 @@
       "trainers": [
         "Bird Keeper Wilton — Fearow Lv. 39, Dodrio Lv. 39.",
         "Bird Keeper Ramiro — Pidgeot Lv. 39.",
-        "Bird Keeper Jacob — trzy Farfetch'd Lv. 39."
+        "Bird Keeper Jacob — trzy Farfetch'd Lv. 39.",
+        "Master Trainer Bug Catcher Jake — Caterpie Lv. 65 (Route 18, wschód)",
+        "Master Trainer Bug Catcher Ryouta — Pinsir Lv. 75 (brama Route 18)"
       ],
       "items": [
         "Silver Razz Berry ×3 — ukryte w żółtych kwiatach przy wejściu od Route 17 (przedmiot dzienny).",
         "Elixir — na południe od bramy.",
         "Razz Berry / Silver Razz Berry / Golden Razz Berry — z krzaka przy wschodnim końcu trasy; wariant może zależeć od znaleziska partnera Pokémon."
       ],
-      "trainerCount": 3
+      "trainerCount": 5,
+      "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb"
     },
     {
       "id": "route_19",
@@ -10297,7 +10391,8 @@
       },
       "sourceIds": [
         "routepedia-route19-pikachu",
-        "serebii-route19"
+        "serebii-route19",
+        "pokemondb-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemon": {
@@ -10342,7 +10437,10 @@
         "Swimmer Axle — Poliwhirl Lv. 42.",
         "Swimmer David — dwa Seel Lv. 42, Seadra Lv. 42.",
         "Beauty Connie — Vaporeon Lv. 41.",
-        "Beauty Anya — Seel Lv. 41, Seaking Lv. 41."
+        "Beauty Anya — Seel Lv. 41, Seaking Lv. 41.",
+        "Master Trainer Beauty Shelly — Shellder Lv. 70 (Route 19, południowy wschód)",
+        "Master Trainer Beauty Beverly — Horsea Lv. 70 (Route 19, wschód)",
+        "Master Trainer Beauty Jo — Staryu Lv. 70 (Route 19, północ)"
       ],
       "items": [
         "Gold Teeth — na północnej stronie plaży, otrzymane od Jessie podczas wydarzenia fabularnego.",
@@ -10350,7 +10448,8 @@
         "Revive ×2 — ukryte na skałach przy północno-zachodnim i południowo-wschodnim narożniku; dzienne, wymagają Sea Skim.",
         "Pearl / Big Pearl — po wschodniej stronie plaży; losowy przedmiot, czasem znajdowany przez chodzącego Pokémona typu Ground."
       ],
-      "trainerCount": 7
+      "trainerCount": 10,
+      "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb"
     },
     {
       "id": "route_20",
@@ -10598,7 +10697,8 @@
       },
       "sourceIds": [
         "routepedia-route20-pikachu",
-        "serebii-route20"
+        "serebii-route20",
+        "pokemondb-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemon": {
@@ -10645,9 +10745,15 @@
         "Route 20 (zachód) — Picnicker Missy: Jolteon Lv. 41.",
         "Route 20 (zachód) — Beauty Nora: Cloyster Lv. 41.",
         "Route 20 (zachód) — Beauty Melissa: Seaking Lv. 43, Jynx Lv. 43.",
-        "Route 20 (zachód) — Ace Trainer Marty: Golem Lv. 45, Pinsir Lv. 46."
+        "Route 20 (zachód) — Ace Trainer Marty: Golem Lv. 45, Pinsir Lv. 46.",
+        "Master Trainer Beauty Prita — Wartortle Lv. 70 (Route 20, północny zachód)",
+        "Master Trainer Beauty Tessa — Blastoise Lv. 80 (Route 20, południowy wschód od Seafoam Islands)",
+        "Master Trainer Scientist Francis — Tentacool Lv. 75 (Route 20, północny wschód od Seafoam Islands)",
+        "Master Trainer Scientist Melvin — Tentacruel Lv. 80 (Route 20, zachód)",
+        "Master Trainer Beauty Rose — Cloyster Lv. 75 (Route 20, południowy zachód od Seafoam Islands)"
       ],
-      "trainerCount": 11
+      "trainerCount": 16,
+      "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb"
     },
     {
       "id": "seafoam_islands",
@@ -10670,7 +10776,8 @@
       "sourceIds": [
         "routepedia-seafoam-pikachu",
         "rotomlabs-seafoam-islands",
-        "bulbapedia-part12"
+        "bulbapedia-part12",
+        "pokemondb-mastertrainers"
       ],
       "dataStatus": "encounter_rates_verified_from_rotomlabs_positions_not_mapped",
       "wildPokemonDetails": {
@@ -10937,10 +11044,16 @@
         "Zagadki z głazami zmieniają przepływ wody i otwierają przejścia między piętrami; dokładne kafelki nie są naniesione."
       ],
       "trainers": [
-        "Coach Trainer Yas — Vaporeon Lv. 45, Jolteon Lv. 46 i Flareon Lv. 47."
+        "Coach Trainer Yas — Vaporeon Lv. 45, Jolteon Lv. 46 i Flareon Lv. 47.",
+        "Master Trainer Beauty Aina — Seel Lv. 70 (Seafoam Islands, 1F, wschód)",
+        "Master Trainer Beauty Lois — Dewgong Lv. 75 (Seafoam Islands, B1F, południe)",
+        "Master Trainer Beauty Tessa — Blastoise Lv. 80 (Route 20, południowy wschód od Seafoam Islands)",
+        "Master Trainer Beauty Rose — Cloyster Lv. 75 (Route 20, południowy zachód od Seafoam Islands)",
+        "Master Trainer Ace Trainer Arjun — Dragonair Lv. 70 (Seafoam Islands, B3F, południe)",
+        "Master Trainer Articuno Master — Articuno (bez walki; Seafoam Islands, B4F, zachód; pokaż Articuno o CP co najmniej 7500)"
       ],
-      "trainerCount": 1,
-      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
+      "trainerCount": 7,
+      "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb"
     },
     {
       "id": "cinnabar_island",
@@ -11386,7 +11499,8 @@
       "sourceIds": [
         "routepedia-route21-pikachu",
         "serebii-route21",
-        "bulbapedia-part13"
+        "bulbapedia-part13",
+        "pokemondb-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemon": {
@@ -11446,7 +11560,9 @@
         "Roughneck Martin — Raticate Lv. 42, Onix Lv. 42.",
         "Coach Trainer Pam — Machoke Lv. 44, Jynx Lv. 44, Kangaskhan Lv. 45.",
         "Fisherman Ronald — Seadra Lv. 42, Gyarados Lv. 42.",
-        "Fisherman Wade — sześć Magikarp Lv. 42."
+        "Fisherman Wade — sześć Magikarp Lv. 42.",
+        "Master Trainer Beauty Nicole — Psyduck Lv. 70 (Route 21, południowy zachód)",
+        "Master Trainer Beauty Jill — Slowpoke Lv. 70 (Route 21, południe)"
       ],
       "items": [
         "PP Up — na południowej wysepce najbliżej Cinnabar Island.",
@@ -11456,7 +11572,8 @@
         "TM35 (Ice Punch) — nagroda od Coach Trainer Pam po zwycięstwie.",
         "Hyper Potion — na północno-wschodniej wysepce najbliżej Pallet Town."
       ],
-      "trainerCount": 10
+      "trainerCount": 12,
+      "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb"
     },
     {
       "id": "route_22",
@@ -12196,7 +12313,8 @@
       "sourceIds": [
         "routepedia-victory-road-pikachu",
         "rotomlabs-victory-road",
-        "bulbapedia-part15"
+        "bulbapedia-part15",
+        "pokemondb-mastertrainers"
       ],
       "dataStatus": "encounter_rates_verified_from_rotomlabs_positions_not_mapped",
       "wildPokemonDetails": {
@@ -12453,10 +12571,13 @@
         "Ace Trainer Colby — Electrode Lv. 47, Kingler Lv. 47, Pidgeot Lv. 47 i Rhydon Lv. 48.",
         "Ace Trainer Caroline — Jynx Lv. 47, Golbat Lv. 47 i Arcanine Lv. 48.",
         "Poké Maniac Dawson — Lickitung Lv. 46, Onix Lv. 46 i Blastoise Lv. 46.",
-        "Coach Trainer Ryan — Primeape Lv. 48, Gyarados Lv. 48, Arcanine Lv. 48 i Tauros Lv. 49."
+        "Coach Trainer Ryan — Primeape Lv. 48, Gyarados Lv. 48, Arcanine Lv. 48 i Tauros Lv. 49.",
+        "Master Trainer Scientist Keaton — Golbat Lv. 75 (Victory Road, 3F, południowy wschód)",
+        "Master Trainer Hiker Dillan — Graveler Lv. 70 (Victory Road, 1F, południe)",
+        "Master Trainer Moltres Master — Moltres (bez walki; Victory Road, 2F, południe; pokaż Moltres o CP co najmniej 7500)"
       ],
-      "trainerCount": 13,
-      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough"
+      "trainerCount": 16,
+      "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb"
     },
     {
       "id": "indigo_plateau",
@@ -12884,7 +13005,8 @@
       "notes": "Zapdos jest statycznym spotkaniem na poziomie 50. Pozycje przedmiotów i wewnętrzny plan elektrowni nie są jeszcze naniesione.",
       "sourceIds": [
         "bulbapedia-part14",
-        "rotomlabs-power-plant"
+        "rotomlabs-power-plant",
+        "pokemondb-mastertrainers"
       ],
       "dataStatus": "encounter_rates_verified_from_rotomlabs_positions_not_mapped",
       "wildPokemonDetails": {
@@ -13051,10 +13173,12 @@
         "Elektrownia zawiera przedmioty i trenerów, ale ich dokładne położenie nie jest jeszcze naniesione na plan."
       ],
       "trainers": [
-        "Coach Trainer Mable — Omastar Lv. 44, Kabutops Lv. 44 i Aerodactyl Lv. 45."
+        "Coach Trainer Mable — Omastar Lv. 44, Kabutops Lv. 44 i Aerodactyl Lv. 45.",
+        "Master Trainer Scientist Humphrey — Voltorb Lv. 70 (Power Plant, wschód)",
+        "Master Trainer Zapdos Master — Zapdos (bez walki; Power Plant, północny zachód; pokaż Zapdos o CP co najmniej 7500)"
       ],
-      "trainerCount": 1,
-      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough",
+      "trainerCount": 3,
+      "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb",
       "items": [
         "Max Revive — na północ od pomieszczenia wejściowego.",
         "Rare Candy ×5 — nagroda Coach Trainer Mable; dodatkowa Rare Candy znajduje się w południowo-centralnym pokoju przy dużej maszynie.",
@@ -13093,7 +13217,8 @@
       "sourceIds": [
         "bulbapedia-part9",
         "rotomlabs-pokemon-tower",
-        "bulbapedia-part8"
+        "bulbapedia-part8",
+        "pokemondb-mastertrainers"
       ],
       "dataStatus": "encounter_rates_verified_from_rotomlabs_positions_not_mapped",
       "wildPokemonDetails": {
@@ -13410,10 +13535,14 @@
         "Channeler Janae — Gastly Lv. 25 ×4 (5F).",
         "Channeler Emilia — Haunter Lv. 32 ×3 (6F).",
         "Channeler Angelica — Gastly Lv. 25, Haunter Lv. 25 i Gastly Lv. 25 (6F).",
-        "Channeler Jennifer — Haunter Lv. 25 (6F)."
+        "Channeler Jennifer — Haunter Lv. 25 (6F).",
+        "Master Trainer Lass Charlotte — Raichu Lv. 75 (Pokémon Tower, 6F)",
+        "Master Trainer Lass Emily — Weepinbell Lv. 70 (Pokémon Tower, 7F)",
+        "Master Trainer Psychic Vlad — Hypno Lv. 75 (Pokémon Tower, 5F)",
+        "Master Trainer Lass Hazel — Lapras Lv. 75 (Pokémon Tower, 4F)"
       ],
-      "trainerCount": 14,
-      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough",
+      "trainerCount": 18,
+      "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb",
       "items": [
         "Formal Set — 1F, od starszej kobiety siedzącej na sofie.",
         "Elixir — 2F, południowo-zachodnia część piętra.",
@@ -13446,7 +13575,8 @@
         "walka z Giovannim"
       ],
       "sourceIds": [
-        "bulbapedia-part9"
+        "bulbapedia-part9",
+        "pokemondb-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
@@ -13464,10 +13594,12 @@
         "Team Rocket Grunt — Rattata Lv. 29 i Voltorb Lv. 29 (B3F).",
         "Team Rocket Grunt — Grimer Lv. 29 (B4F).",
         "Rocket Admin Archer — Weezing Lv. 33 i Golbat Lv. 33.",
-        "Boss Team Rocket Giovanni — Persian Lv. 35 i Rhyhorn Lv. 35."
+        "Boss Team Rocket Giovanni — Persian Lv. 35 i Rhyhorn Lv. 35.",
+        "Master Trainer Scientist Adam — Arbok Lv. 75 (Team Rocket Hideout, B1F, południowy zachód)",
+        "Master Trainer Hiker Eugine — Rhydon Lv. 75 (Team Rocket Hideout, B2F, południowy zachód)"
       ],
-      "trainerCount": 11,
-      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough",
+      "trainerCount": 13,
+      "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb",
       "items": [
         "Team Rocket Set — B1F północ, od szpiega przebranego za Grunta, na południe od wejścia.",
         "Ultra Ball ×3 — B1F północ, zachodni pokój.",
@@ -13521,7 +13653,8 @@
         "walka z Giovannim"
       ],
       "sourceIds": [
-        "bulbapedia-part10"
+        "bulbapedia-part10",
+        "pokemondb-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
@@ -13559,10 +13692,13 @@
         "Team Rocket Grunt — Drowzee Lv. 33, Zubat Lv. 33 i Golbat Lv. 33 (11F).",
         "Rocket Admin Archer — Weezing Lv. 36 i Golbat Lv. 36 (7F, wydarzenie fabularne).",
         "Jessie i James — Arbok Lv. 36 i Weezing Lv. 36 (11F, wydarzenie fabularne).",
-        "Boss Team Rocket Giovanni — Persian Lv. 39, Rhyhorn Lv. 39, Nidoqueen Lv. 39, Nidoking Lv. 39 i Rhydon Lv. 40."
+        "Boss Team Rocket Giovanni — Persian Lv. 39, Rhyhorn Lv. 39, Nidoqueen Lv. 39, Nidoking Lv. 39 i Rhydon Lv. 40.",
+        "Master Trainer Lass Yumi — Wigglytuff Lv. 75 (Silph Co., 11F, południowy wschód; dostęp przez panel warp na 3F)",
+        "Master Trainer Black Belt Masahiro — Machop Lv. 65 (Silph Co., 4F, północny zachód)",
+        "Master Trainer Ace Trainer Leopold — Kingler Lv. 75 (Silph Co., 1F)"
       ],
-      "trainerCount": 31,
-      "trainerStatus": "teams_verified_from_bulbapedia_walkthrough",
+      "trainerCount": 34,
+      "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb",
       "items": [
         "X Sp. Atk — 1F, południowa strona dwóch fontann.",
         "Super Potion — 2F, centralny pokój przy zachodniej ścianie.",
