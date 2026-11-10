@@ -6140,3 +6140,12 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Obraz jest wyświetlany bezpośrednio z zasobów aplikacji, działa offline i można go przybliżać oraz przesuwać gestami.
 - Ekran wyraźnie oznacza go jako podgląd jednego obszaru, a nie kompletną mapę Hisui; nie dodano fikcyjnych pinezek ani lokalizacji.
 - Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK. Należy sprawdzić ścieżkę zasobu i zachowanie powiększania na urządzeniu.
+
+
+### Wyszukiwanie Pokémonów na mapie — pierwszy etap (2026-11-10)
+
+- W zakładce „Informacje” Pokédexu dodano przycisk „Poszukaj na mapie”, który otwiera ekran map z wybranym Pokémonem.
+- Ekran map pozwala dodawać i usuwać wiele Pokémonów, a następnie filtrować lokacje na podstawie wpisów spotkań w lokalnym indeksie.
+- W kartach lokacji dodano kolorowe znaczniki Poké Balla dla wybranych Pokémonów oraz ikony trenerów i przedmiotów do zdobycia.
+- Znaczniki lokacji bazują wyłącznie na nazwach znalezionych w danych spotkań; nie są dokładnymi współrzędnymi na grafice mapy. Brakujące dane nie są zastępowane zgadywanymi pinezkami.
+- Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK. Konieczna jest kontrola kompilacji, dopasowania nazw Pokémonów w indeksach regionów i późniejsze dodanie zweryfikowanych współrzędnych do map graficznych.
