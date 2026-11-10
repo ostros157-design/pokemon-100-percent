@@ -842,6 +842,16 @@
       "id": "bulbapedia-part1",
       "url": "https://bulbapedia.bulbagarden.net/wiki/Appendix%3ALGPE_walkthrough/Section_1",
       "scope": "Let's Go Pallet Town, Player's House, Professor Oak's Laboratory and opening story events"
+    },
+    {
+      "id": "pokemon-official-go-park",
+      "url": "https://www.pokemon.co.jp/ex/pika_vee/pokemongo/180919_01.html",
+      "scope": "Official Pokémon page: GO Park has 20 areas with up to 50 Pokémon in each"
+    },
+    {
+      "id": "serebii-gopark",
+      "url": "https://www.serebii.net/letsgopikachueevee/gopark.shtml",
+      "scope": "GO Park transfer mechanics and Play Yard mini-game unlock/rewards"
     }
   ],
   "locations": [
@@ -15399,12 +15409,15 @@
       "notes": "GO Park complex i Playful Park są dwiema częściami jednego kompleksu w Fuchsia City. Opis funkcji i transferu jest zapisany; dokładny plan obszaru i pozycje ekspozycji nie są pinezkami.",
       "sourceIds": [
         "bulbapedia-go-park",
-        "bulbapedia-part11"
+        "bulbapedia-part11",
+        "pokemon-official-go-park",
+        "serebii-gopark"
       ],
       "dataStatus": "schematic_interior_available_exact_layout_pending",
       "coordinateStatus": "unverified",
       "events": [
-        "Transfer Pokémonów z Pokémon GO do Let’s Go odbywa się przez GO Park complex; transfer jest częścią kolekcji gry.",
+        "Transfer Pokémonów z Pokémon GO do Let’s Go odbywa się przez GO Park complex; po transferze Pokémony trzeba ponownie złapać w kompleksie, aby dołączyły do drużyny.",
+        "Play Yard mini-game — odblokowuje się po transferze co najmniej 25 Pokémonów tego samego gatunku; zadaniem jest doprowadzenie całej grupy do wyjścia, a nagrodą są Candy.",
         "Playful Park — mężczyzna przy ekspozycji Laprasa uczy partnera Secret Technique Sea Skim."
       ],
       "features": [
