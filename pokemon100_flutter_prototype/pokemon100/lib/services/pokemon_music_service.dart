@@ -5,11 +5,13 @@ import '../data/pokemon_music_data.dart';
 
 /// One app-wide player: playback survives navigation between screens.
 class PokemonMusicService {
-  PokemonMusicService._();
+  PokemonMusicService._() : player = AudioPlayer();
+
+  PokemonMusicService.forTesting(AudioPlayer player) : player = player;
 
   static final PokemonMusicService instance = PokemonMusicService._();
 
-  final AudioPlayer player = AudioPlayer();
+  final AudioPlayer player;
   double volume = 0.65;
   bool _configured = false;
   bool _userPaused = false;
