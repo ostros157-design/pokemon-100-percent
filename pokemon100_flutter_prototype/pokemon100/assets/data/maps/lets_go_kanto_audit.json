@@ -1403,7 +1403,8 @@
         "supercheats-viridian-postgame",
         "bulbapedia-part2",
         "routepedia-viridian-eevee",
-        "altissimo-viridian-lgpe"
+        "altissimo-viridian-lgpe",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "trainers": [
@@ -1436,7 +1437,7 @@
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "notes": "Route 2 obejmuje zachodni odcinek przy Viridian Forest oraz wschodni odcinek odblokowywany przez Chop Down. Nie ma tu zwykłych walk trenerów w głównej historii; po zostaniu Championem pojawiają się dwaj Master Trainers: Bird Keeper Louey i Bug Catcher Hans. Lista łączy przedmioty z obu odcinków; dokładne pinezki pozostają niezweryfikowane.",
+      "notes": "Route 2 nie ma zwykłych walk fabularnych w Let’s Go; po zostaniu Championem spotyka się tu trzech Master Trainerów. Bobby (Butterfree) znajduje się na Route 2, nie w Viridian Forest. Dokładne współrzędne pinezek pozostają niezweryfikowane.",
       "wildPokemonDetails": {
         "lets_go_pikachu": [
           {
@@ -1679,7 +1680,8 @@
         "bulbapedia-part7",
         "bulbapedia-kanto-route2",
         "bulbapedia-part2",
-        "pokemondb-mastertrainers"
+        "pokemondb-mastertrainers",
+        "serebii-mastertrainers"
       ],
       "features": [
         {
@@ -1751,10 +1753,11 @@
       ],
       "trainers": [
         "Master Trainer Bird Keeper Louey — Pidgey Lv. 65 (postgame po zostaniu Championem; południowo-zachodnia część Route 2).",
-        "Master Trainer Bug Catcher Hans — Parasect Lv. 75 (postgame po zostaniu Championem; południowo-wschodnia część Route 2)."
+        "Master Trainer Bug Catcher Hans — Parasect Lv. 75 (postgame po zostaniu Championem; południowo-wschodnia część Route 2).",
+        "Master Trainer Bug Catcher Bobby — Butterfree Lv. 75 (postgame po zostaniu Championem; Route 2; dokładna część trasy niepotwierdzona)."
       ],
-      "trainerCount": 2,
-      "trainerStatus": "no_regular_story_trainer_battles;_postgame_master_trainer_teams_verified_from_pokemondb"
+      "trainerCount": 3,
+      "trainerStatus": "postgame_master_trainers_verified_from_serebii_and_pokemondb"
     },
     {
       "id": "viridian_forest",
@@ -1853,7 +1856,6 @@
         "Bug Catcher Doug — Kakuna Lv. 3",
         "Lass Jocelyn — Pidgey Lv. 4",
         "Bug Catcher Sammy — Metapod Lv. 3",
-        "Master Trainer Bug Catcher Bobby — Butterfree Lv. 75 (Viridian Forest, północno-zachodnia brama)",
         "Master Trainer Lass Ikue — Pikachu Lv. 75 (Viridian Forest, północny zachód)",
         "Master Trainer Bug Catcher Scott — Weedle Lv. 65 (Viridian Forest, południowy zachód)"
       ],
@@ -1869,11 +1871,12 @@
         "bulbapedia-part3",
         "routepedia-forest-pikachu",
         "routepedia-forest-eevee",
-        "pokemondb-mastertrainers"
+        "pokemondb-mastertrainers",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
-      "trainerCount": 10,
-      "trainerStatus": "master_trainer_postgame_roster_cross_checked_pokemondb"
+      "trainerCount": 9,
+      "trainerStatus": "story_and_postgame_master_trainers_verified_from_serebii"
     },
     {
       "id": "pewter_city",
@@ -1982,7 +1985,8 @@
         "pokemondb-mastertrainers",
         "routepedia-pewter-city-trainers",
         "supercheats-pewter-postgame",
-        "routepedia-pewter-eevee"
+        "routepedia-pewter-eevee",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "trainers": [
@@ -2235,7 +2239,8 @@
         "bulbapedia-part4",
         "serebii-route3",
         "pokemondb-mastertrainers",
-        "serebii-coachtrainers"
+        "serebii-coachtrainers",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemon": {
@@ -2533,7 +2538,8 @@
         "bulbapedia-part4",
         "rotomlabs-mt-moon",
         "pokemondb-mastertrainers",
-        "altissimo-hidden-items-lgpe"
+        "altissimo-hidden-items-lgpe",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "encounter_rates_verified_from_rotomlabs_positions_not_mapped",
       "trainers": [
@@ -2863,7 +2869,8 @@
         "bulbapedia-part4",
         "serebii-route4",
         "pokemondb-mastertrainers",
-        "serebii-coachtrainers"
+        "serebii-coachtrainers",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemon": {
@@ -2971,7 +2978,8 @@
         "supercheats-cerulean-postgame",
         "bulbapedia-part16",
         "serebii-coachtrainers",
-        "serebii-green"
+        "serebii-green",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
@@ -3030,13 +3038,12 @@
         "Master Trainer Lass Kimberly — Poliwhirl Lv. 70 (dom).",
         "Master Trainer Black Belt Yuen — Poliwrath Lv. 75 (za domem w północnej części miasta).",
         "Master Trainer Bird Keeper Barney — Doduo Lv. 70 (sklep rowerowy).",
-        "Master Trainer Psychic Avery — Jynx Lv. 75 (zachód miasta, przy wejściu do Cerulean Cave).",
         "Master Trainer Ace Trainer Grayson — Dragonite Lv. 75 (dom).",
         "Coach Trainer Harjit — Rhydon Lv. 52, Rapidash Lv. 52, Dewgong Lv. 52, Seaking Lv. 52 i Nidoking Lv. 52 (po odblokowaniu Cerulean Cave).; nagroda TM60 (Megahorn)",
         "Postgame — Pokémon Trainer Green (rematch po pokonaniu Green w Cerulean Cave; przy Bike Shop, po kolejnym wejściu do Hall of Fame): Clefable Lv. 66, Gengar Lv. 66, Kangaskhan Lv. 66, Victreebel Lv. 66, Ninetales Lv. 66 i Blastoise Lv. 68 (Mega Blastoise)."
       ],
-      "trainerCount": 11,
-      "trainerStatus": "story_and_postgame_teams_verified",
+      "trainerCount": 10,
+      "trainerStatus": "story_and_postgame_trainers_verified_from_bulbapedia_and_serebii",
       "itemsStatus": "Rare Candy, Burn Heal, TM10, five Heart Scales and postgame TM60 rewards recorded from Bulbapedia Parts 5 and 16"
     },
     {
@@ -3371,7 +3378,8 @@
         "routepedia-route24-eevee",
         "serebii-route24",
         "bulbapedia-part5",
-        "pokemondb-mastertrainers"
+        "pokemondb-mastertrainers",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemon": {
@@ -3756,7 +3764,8 @@
         "serebii-route25",
         "bulbapedia-part5",
         "pokemondb-mastertrainers",
-        "serebii-coachtrainers"
+        "serebii-coachtrainers",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemon": {
@@ -4017,7 +4026,8 @@
         "routepedia-route5-eevee",
         "serebii-route5",
         "bulbapedia-part5",
-        "pokemondb-mastertrainers"
+        "pokemondb-mastertrainers",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemon": {
@@ -4044,11 +4054,10 @@
       },
       "encounterStatus": "text_verified",
       "trainers": [
-        "Master Trainer Black Belt Tadashi — Mankey Lv. 70 (postgame po zostaniu Championem; na północ od Day Care).",
-        "Master Trainer Bug Catcher Louie — Scyther Lv. 75 (postgame po zostaniu Championem; brama na Route 5)."
+        "Master Trainer Black Belt Tadashi — Mankey Lv. 70 (postgame po zostaniu Championem; na północ od Day Care)."
       ],
-      "trainerCount": 2,
-      "trainerStatus": "postgame_master_trainer_teams_verified_from_pokemondb"
+      "trainerCount": 1,
+      "trainerStatus": "postgame_master_trainer_verified_from_serebii"
     },
     {
       "id": "underground_path_5_6",
@@ -4079,7 +4088,8 @@
         "routepedia-underground56-eevee",
         "serebii-underground56",
         "pokemondb-mastertrainers",
-        "altissimo-hidden-items-lgpe"
+        "altissimo-hidden-items-lgpe",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "trainers": [
@@ -4462,7 +4472,8 @@
         "routepedia-route6-pikachu",
         "routepedia-route6-eevee",
         "serebii-route6",
-        "pokemondb-mastertrainers"
+        "pokemondb-mastertrainers",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemon": {
@@ -4569,7 +4580,8 @@
         "routepedia-vermilion-eevee",
         "pokemondb-mastertrainers",
         "bulbapedia-part6",
-        "serebii-coachtrainers"
+        "serebii-coachtrainers",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
@@ -4646,7 +4658,8 @@
         "serebii-route7",
         "pokemondb-mastertrainers",
         "serebii-coachtrainers",
-        "altissimo-hidden-items-lgpe"
+        "altissimo-hidden-items-lgpe",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemonDetails": {
@@ -5044,7 +5057,8 @@
         "routepedia-route8-pikachu",
         "bulbapedia-part8",
         "serebii-route8",
-        "pokemondb-mastertrainers"
+        "pokemondb-mastertrainers",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemonDetails": {
@@ -5457,7 +5471,8 @@
         "routepedia-route9-pikachu",
         "bulbapedia-part8",
         "serebii-route9",
-        "pokemondb-mastertrainers"
+        "pokemondb-mastertrainers",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemonDetails": {
@@ -5830,7 +5845,8 @@
         "bulbapedia-part13",
         "pokemondb-mastertrainers",
         "serebii-coachtrainers",
-        "altissimo-hidden-items-lgpe"
+        "altissimo-hidden-items-lgpe",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemonDetails": {
@@ -6672,7 +6688,8 @@
         "routepedia-rock-tunnel-pikachu",
         "bulbapedia-part8",
         "rotomlabs-rock-tunnel",
-        "pokemondb-mastertrainers"
+        "pokemondb-mastertrainers",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "encounter_rates_verified_from_rotomlabs_positions_not_mapped",
       "trainers": [
@@ -6724,7 +6741,8 @@
         "routepedia-lavender-pikachu",
         "bulbapedia-part8",
         "pokemondb-mastertrainers",
-        "altissimo-lavender-lgpe"
+        "altissimo-lavender-lgpe",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "trainers": [
@@ -6794,7 +6812,8 @@
         "routepedia-underground78-pikachu",
         "bulbapedia-part8",
         "pokemondb-mastertrainers",
-        "altissimo-hidden-items-lgpe"
+        "altissimo-hidden-items-lgpe",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "connection_verified_details_pending",
       "items": [
@@ -7156,7 +7175,8 @@
         "bulbapedia-part7",
         "serebii-route11",
         "pokemondb-mastertrainers",
-        "serebii-coachtrainers"
+        "serebii-coachtrainers",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemon": {
@@ -7309,7 +7329,8 @@
         "routepedia-diglett-cave-pikachu",
         "bulbapedia-part7",
         "rotomlabs-digletts-cave",
-        "pokemondb-mastertrainers"
+        "pokemondb-mastertrainers",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "encounter_rates_verified_from_rotomlabs_positions_not_mapped",
       "trainers": [
@@ -7352,7 +7373,8 @@
         "bulbapedia-part12",
         "serebii-route12",
         "pokemondb-mastertrainers",
-        "serebii-coachtrainers"
+        "serebii-coachtrainers",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemonDetails": {
@@ -7809,7 +7831,8 @@
       "sourceIds": [
         "bulbapedia-part12",
         "serebii-route13",
-        "pokemondb-mastertrainers"
+        "pokemondb-mastertrainers",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemonDetails": {
@@ -8214,7 +8237,8 @@
       "sourceIds": [
         "bulbapedia-part12",
         "serebii-route14",
-        "pokemondb-mastertrainers"
+        "pokemondb-mastertrainers",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemonDetails": {
@@ -8605,7 +8629,8 @@
         "bulbapedia-part12",
         "serebii-route15",
         "pokemondb-mastertrainers",
-        "serebii-coachtrainers"
+        "serebii-coachtrainers",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemonDetails": {
@@ -8958,10 +8983,11 @@
         "Bird Keeper Edwin — Dodrio Lv. 39.",
         "Master Trainer Bug Catcher Lajos — Venomoth Lv. 75 (Route 15, północ)",
         "Master Trainer Bird Keeper Seymour — Dodrio Lv. 75 (Route 15, południowy wschód)",
-        "Master Trainer Lass Harleen — Tangela Lv. 75 (Route 15, północny zachód)"
+        "Master Trainer Lass Harleen — Tangela Lv. 75 (Route 15, północny zachód)",
+        "Master Trainer Psychic Avery — Jynx Lv. 75 (postgame po zostaniu Championem; Route 15; dokładne miejsce niepotwierdzone)."
       ],
-      "trainerCount": 9,
-      "trainerStatus": "master_trainer_postgame_roster_cross_checked_pokemondb"
+      "trainerCount": 10,
+      "trainerStatus": "story_and_postgame_master_trainers_verified_from_serebii"
     },
     {
       "id": "fuchsia_city",
@@ -9015,7 +9041,8 @@
         "bulbapedia-part11",
         "pokemondb-mastertrainers",
         "supercheats-fuchsia-postgame",
-        "serebii-gym-leaders-lgpe"
+        "serebii-gym-leaders-lgpe",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
@@ -9104,7 +9131,8 @@
         "pokemondb-mastertrainers",
         "supercheats-celadon-postgame",
         "bulbapedia-part9",
-        "altissimo-celadon-lgpe"
+        "altissimo-celadon-lgpe",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
@@ -9157,10 +9185,12 @@
         "Master Trainer Ace Trainer Satch — Arcanine Lv. 75 (hotel).",
         "Master Trainer Lass Dianne — Victreebel Lv. 75 (przy Gymie).",
         "Master Trainer Scientist Cory — Grimer Lv. 70 (przy basenie w centrum miasta).",
-        "Master Trainer Ace Trainer Dominic — Gyarados Lv. 75 (hotel)."
+        "Master Trainer Ace Trainer Dominic — Gyarados Lv. 75 (hotel).",
+        "Master Trainer Bug Catcher Louie — Scyther Lv. 75 (postgame po zostaniu Championem; Celadon City; dokładne miejsce niepotwierdzone).",
+        "Master Trainer Ace Trainer Jay — Snorlax Lv. 75 (postgame po zostaniu Championem; Celadon City; dokładne miejsce niepotwierdzone)."
       ],
-      "trainerCount": 4,
-      "trainerStatus": "postgame_master_trainer_teams_verified",
+      "trainerCount": 6,
+      "trainerStatus": "postgame_master_trainers_verified_from_serebii",
       "items": [
         "Nugget — na końcu ścieżki na północny wschód od Pokémon Center.",
         "Rare Candy — na końcu ścieżki na północny zachód od Pokémon Center.",
@@ -9198,7 +9228,8 @@
         "pokemondb-mastertrainers",
         "supercheats-saffron-postgame",
         "bulbapedia-part10",
-        "altissimo-saffron-lgpe"
+        "altissimo-saffron-lgpe",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
@@ -9287,7 +9318,8 @@
         "routepedia-route16-pikachu",
         "serebii-route16",
         "bulbapedia-part11",
-        "pokemondb-mastertrainers"
+        "pokemondb-mastertrainers",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemonDetails": {
@@ -9615,11 +9647,10 @@
         "Punk Guy Hideo — Arbok Lv. 36, Fearow Lv. 36; północna część wymaga Chop Down.",
         "Camper Ruben — dwa Psyduck Lv. 35.",
         "Master Trainer Bird Keeper Howie — Pidgeotto Lv. 70 (Route 16, zachód)",
-        "Master Trainer Youngster Cid — Lickitung Lv. 70 (brama Route 16)",
-        "Master Trainer Ace Trainer Jay — Snorlax Lv. 75 (Route 16, wschód)"
+        "Master Trainer Youngster Cid — Lickitung Lv. 70 (brama Route 16)"
       ],
-      "trainerCount": 7,
-      "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb"
+      "trainerCount": 6,
+      "trainerStatus": "story_and_postgame_master_trainers_verified_from_bulbapedia_and_serebii"
     },
     {
       "id": "route_17",
@@ -9631,7 +9662,7 @@
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "notes": "Pokémon Road — długa trasa rowerowa między Route 16 i Route 18.",
+      "notes": "Pokémon Road — długa trasa rowerowa między Route 16 i Route 18. Jessie i James występują tu w jednej końcowej podwójnej walce postgame; ich drużyny zapisano tylko raz w liście trenerów, a opis nagrody pozostaje w wydarzeniach.",
       "sourceIds": [
         "routepedia-route17-pikachu",
         "serebii-route17",
@@ -9639,7 +9670,8 @@
         "bulbapedia-part18",
         "pokemondb-mastertrainers",
         "serebii-coachtrainers",
-        "serebii-teamrocket"
+        "serebii-teamrocket",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemonDetails": {
@@ -10034,7 +10066,6 @@
         "Gentleman Orson — Persian Lv. 38.",
         "Ace Trainer Maria — Exeggutor Lv. 40, Ninetales Lv. 39, Starmie Lv. 39.",
         "Picnicker Misaki — Vulpix Lv. 37, Ivysaur Lv. 37, Wigglytuff Lv. 37.",
-        "Post-game double battle — Jessie i James po zostaniu Championem; nagroda Blast-Off Set.",
         "Master Trainer Scientist Elton — Electrode Lv. 75 (Route 17, środek)",
         "Master Trainer Scientist Albert — Koffing Lv. 70 (Route 17, środek)",
         "Master Trainer Hiker Farkas — Rhyhorn Lv. 70 (Route 17, południe)",
@@ -10060,8 +10091,8 @@
         "Po zostaniu Championem Jessie i James wracają na wschodnią część Route 17 i wyzywają gracza na ostatnią walkę; po zwycięstwie otrzymuje się Blast-Off Set.",
         "Postgame: Jessie i James wracają na Route 17; ich ostatnia walka to Arbok Lv. 52 i Weezing Lv. 52. Nagroda: Blast-Off Set."
       ],
-      "trainerCount": 16,
-      "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb"
+      "trainerCount": 15,
+      "trainerStatus": "story_and_postgame_double_battle_verified_from_bulbapedia_and_serebii"
     },
     {
       "id": "route_18",
@@ -10080,7 +10111,8 @@
         "routepedia-route18-pikachu",
         "serebii-route18",
         "bulbapedia-part11",
-        "pokemondb-mastertrainers"
+        "pokemondb-mastertrainers",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemonDetails": {
@@ -10664,7 +10696,8 @@
       "sourceIds": [
         "routepedia-route19-pikachu",
         "serebii-route19",
-        "pokemondb-mastertrainers"
+        "pokemondb-mastertrainers",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemon": {
@@ -10971,7 +11004,8 @@
         "routepedia-route20-pikachu",
         "serebii-route20",
         "pokemondb-mastertrainers",
-        "routepedia-route20-eevee"
+        "routepedia-route20-eevee",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemon": {
@@ -11064,7 +11098,8 @@
         "bulbapedia-part12",
         "pokemondb-mastertrainers",
         "serebii-coachtrainers",
-        "routepedia-seafoam-eevee"
+        "routepedia-seafoam-eevee",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "encounter_rates_verified_from_rotomlabs_positions_not_mapped",
       "wildPokemonDetails": {
@@ -11404,7 +11439,8 @@
         "routepedia-cinnabar-pikachu",
         "pokemondb-mastertrainers",
         "supercheats-cinnabar-postgame",
-        "routepedia-cinnabar-eevee"
+        "routepedia-cinnabar-eevee",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
@@ -11834,7 +11870,8 @@
         "serebii-route21",
         "bulbapedia-part13",
         "pokemondb-mastertrainers",
-        "serebii-coachtrainers"
+        "serebii-coachtrainers",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemon": {
@@ -12185,7 +12222,8 @@
         "routepedia-route23-pikachu",
         "serebii-route23",
         "bulbapedia-part15",
-        "bulbapedia-route23-master-trainers"
+        "bulbapedia-route23-master-trainers",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemonDetails": {
@@ -12651,7 +12689,8 @@
         "bulbapedia-part15",
         "pokemondb-mastertrainers",
         "serebii-coachtrainers",
-        "routepedia-victory-road-eevee"
+        "routepedia-victory-road-eevee",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "encounter_rates_verified_from_rotomlabs_positions_not_mapped",
       "wildPokemonDetails": {
@@ -13426,7 +13465,8 @@
         "rotomlabs-power-plant",
         "pokemondb-mastertrainers",
         "serebii-coachtrainers",
-        "altissimo-power-plant-lgpe"
+        "altissimo-power-plant-lgpe",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "encounter_rates_verified_from_rotomlabs_positions_not_mapped",
       "wildPokemonDetails": {
@@ -13647,7 +13687,8 @@
         "bulbapedia-part8",
         "pokemondb-mastertrainers",
         "serebii-coachtrainers",
-        "altissimo-pokemon-tower-lgpe"
+        "altissimo-pokemon-tower-lgpe",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "encounter_rates_verified_from_rotomlabs_positions_not_mapped",
       "wildPokemonDetails": {
@@ -14019,7 +14060,8 @@
       "sourceIds": [
         "bulbapedia-part9",
         "pokemondb-mastertrainers",
-        "serebii-teamrocket"
+        "serebii-teamrocket",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
@@ -14102,7 +14144,8 @@
       "sourceIds": [
         "bulbapedia-part10",
         "pokemondb-mastertrainers",
-        "altissimo-silph-co-lgpe"
+        "altissimo-silph-co-lgpe",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
@@ -14936,7 +14979,8 @@
       "sourceIds": [
         "bulbapedia-part3",
         "pokemondb-mastertrainers",
-        "bulbapedia-pewter-museum-masters"
+        "bulbapedia-pewter-museum-masters",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
@@ -14980,7 +15024,8 @@
       "sourceIds": [
         "bulbapedia-part6",
         "pokemondb-mastertrainers",
-        "altissimo-vermilion-lgpe"
+        "altissimo-vermilion-lgpe",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "trainers": [
@@ -15111,7 +15156,8 @@
         "bulbapedia-celadon-store",
         "pokemondb-mastertrainers",
         "bulbapedia-part9",
-        "altissimo-celadon-lgpe"
+        "altissimo-celadon-lgpe",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "schematic_interior_available_exact_layout_pending",
       "coordinateStatus": "unverified",
@@ -15153,7 +15199,8 @@
         "pokemondb-mastertrainers",
         "bulbapedia-part9-celadon",
         "bulbapedia-part9",
-        "altissimo-celadon-lgpe"
+        "altissimo-celadon-lgpe",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "schematic_interior_available_exact_layout_pending",
       "coordinateStatus": "unverified",
@@ -15194,7 +15241,8 @@
         "bulbapedia-celadon-condominiums-masters",
         "serebii-coachtrainers",
         "supercheats-celadon-postgame",
-        "altissimo-celadon-lgpe"
+        "altissimo-celadon-lgpe",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "schematic_interior_available_exact_layout_pending",
       "coordinateStatus": "unverified",
@@ -15243,7 +15291,8 @@
         "bulbapedia-cinnabar-lab",
         "pokemondb-mastertrainers",
         "supercheats-cinnabar-postgame",
-        "bulbapedia-part13"
+        "bulbapedia-part13",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "schematic_interior_available_exact_layout_pending",
       "coordinateStatus": "unverified",
@@ -15282,7 +15331,8 @@
         "pokemondb-mastertrainers",
         "supercheats-saffron-postgame",
         "serebii-coachtrainers",
-        "altissimo-saffron-lgpe"
+        "altissimo-saffron-lgpe",
+        "serebii-mastertrainers"
       ],
       "dataStatus": "schematic_interior_available_exact_layout_pending",
       "coordinateStatus": "unverified",
