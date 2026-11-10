@@ -8,6 +8,7 @@ import '../data/evolution_data.dart';
 import '../data/type_effectiveness.dart';
 import '../data/move_data.dart';
 import '../data/pokemon_learnset_data.dart';
+import 'maps_screen.dart';
 
 class PokemonDetailsScreen extends StatefulWidget {
   final Pokemon pokemon;
@@ -882,6 +883,24 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
                 child: Text(_caught ? 'Cofnij' : 'Złapany'),
               ),
             ],
+          ),
+        ),
+      ),
+      const SizedBox(height: 16),
+      Card(
+        clipBehavior: Clip.antiAlias,
+        child: ListTile(
+          leading: const CircleAvatar(child: Icon(Icons.map_outlined)),
+          title: const Text('Poszukaj na mapie',
+              style: TextStyle(fontWeight: FontWeight.w700)),
+          subtitle: const Text(
+            'Znajdź obszary, w których można spotkać tego Pokémona. Na mapie możesz dodać też kolejne Pokémony.',
+          ),
+          trailing: const Icon(Icons.chevron_right),
+          onTap: () => Navigator.of(context).push(
+            MaterialPageRoute<void>(
+              builder: (_) => MapsScreen(initialPokemonIds: <int>[pokemon.id]),
+            ),
           ),
         ),
       ),
