@@ -1539,24 +1539,32 @@ class _MapsScreenState extends State<MapsScreen> {
                                     location,
                                     selectedPokemonNames,
                                   ).isNotEmpty)
-                                    Builder(builder: (context) {
-                                      final pokemonId = _selectedPokemonIdsForLocation(
-                                        location,
-                                        selectedPokemonNames,
-                                      ).first;
-                                      final color = _pokemonHighlightColor(pokemonId);
-                                      return Container(
-                                        width: 38,
-                                        height: 38,
-                                        margin: const EdgeInsets.only(right: 10),
-                                        decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                          color: color.withOpacity(.22),
-                                          border: Border.all(color: color, width: 3),
-                                        ),
-                                        child: Icon(Icons.catching_pokemon, color: color),
-                                      );
-                                    }),
+                                    Padding(
+                                      padding: const EdgeInsets.only(right: 8),
+                                      child: Wrap(
+                                        spacing: 3,
+                                        children: _selectedPokemonIdsForLocation(
+                                          location,
+                                          selectedPokemonNames,
+                                        ).map((pokemonId) {
+                                          final color = _pokemonHighlightColor(pokemonId);
+                                          return Container(
+                                            width: 34,
+                                            height: 34,
+                                            decoration: BoxDecoration(
+                                              shape: BoxShape.circle,
+                                              color: color.withOpacity(.22),
+                                              border: Border.all(color: color, width: 2.5),
+                                            ),
+                                            child: Icon(
+                                              Icons.catching_pokemon,
+                                              color: color,
+                                              size: 19,
+                                            ),
+                                          );
+                                        }).toList(),
+                                      ),
+                                    ),
                                   Expanded(
                                     child: Text(locationName,
                                         style: Theme.of(context).textTheme.titleLarge),
