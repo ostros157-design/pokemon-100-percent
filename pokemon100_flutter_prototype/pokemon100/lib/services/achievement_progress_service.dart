@@ -107,7 +107,7 @@ class AchievementProgressService {
     final championByGame = <String, bool>{};
 
     final badgePattern =
-        RegExp(r'\\b(?:badge|odznak\\w*)\\b', caseSensitive: false);
+        RegExp(r'\b(?:badge|odznak\w*)\b', caseSensitive: false);
 
     for (final guide in guidesList) {
       final saved = preferences.getStringList(
