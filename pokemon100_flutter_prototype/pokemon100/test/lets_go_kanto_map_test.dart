@@ -111,6 +111,18 @@ void main() {
         )
         .toList();
     expect(masterTrainers.length, 153);
+    final masterTrainerSpecies = masterTrainers
+        .map((trainer) {
+          final entry = trainer as String;
+          final pokemon = entry.split(' — ').last;
+          return pokemon.split(RegExp(r'\\s+Lv\\.|\\s+\\(bez walki')).first.trim();
+        })
+        .toSet();
+    expect(
+      masterTrainerSpecies.length,
+      153,
+      reason: 'Every Kanto species plus Meltan and Melmetal should have one Master Trainer.',
+    );
   });
 
   testWidgets('Kanto map displays complete Route 2 and Route 23 trainer lists',
