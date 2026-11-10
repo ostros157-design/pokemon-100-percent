@@ -1641,7 +1641,7 @@ class _MapsScreenState extends State<MapsScreen> {
                               if (itemsSummary.isNotEmpty) ...[
                                 const SizedBox(height: 8),
                                 const Text('Przedmioty do zdobycia', style: TextStyle(fontWeight: FontWeight.w700)),
-                                ...itemsSummary.split('\\n').map((item) => ListTile(
+                                ...itemsSummary.split('\n').map((item) => ListTile(
                                   dense: true,
                                   contentPadding: EdgeInsets.zero,
                                   leading: const Icon(Icons.catching_pokemon),
@@ -1651,7 +1651,7 @@ class _MapsScreenState extends State<MapsScreen> {
                               if (trainersSummary.isNotEmpty) ...[
                                 const SizedBox(height: 8),
                                 const Text('Trenerzy i walki', style: TextStyle(fontWeight: FontWeight.w700)),
-                                ...trainersSummary.split('\\n').map((trainer) => ListTile(
+                                ...trainersSummary.split('\n').map((trainer) => ListTile(
                                   dense: true,
                                   contentPadding: EdgeInsets.zero,
                                   leading: const Icon(Icons.sports_martial_arts),
