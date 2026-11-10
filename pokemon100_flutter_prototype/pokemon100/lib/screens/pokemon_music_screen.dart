@@ -41,7 +41,7 @@ class _PokemonMusicScreenState extends State<PokemonMusicScreen> {
     _positionSubscription = _player.onPositionChanged.listen((value) {
       if (mounted) setState(() => _position = value);
     });
-    unawaited(_music.configure());
+    unawaited(_music.configure().catchError((_) {}));
     unawaited(_loadAutoStartSetting());
   }
 
@@ -136,7 +136,7 @@ class _PokemonMusicScreenState extends State<PokemonMusicScreen> {
             const Icon(Icons.volume_down),
             Expanded(child: Slider(value: _volume, onChanged: (value) {
               setState(() => _volume = value);
-              unawaited(_music.setVolume(value));
+              unawaited(_music.setVolume(value).catchError((_) {}));
             })),
             const Icon(Icons.volume_up),
           ]),
