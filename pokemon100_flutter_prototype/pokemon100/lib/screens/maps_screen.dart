@@ -437,11 +437,11 @@ class _MapsScreenState extends State<MapsScreen> {
     );
   }
 
-  Widget _buildLetsGoEncounterPanel(
+  Widget _buildRegionalEncounterPanel(
     BuildContext context,
     String locationName,
   ) {
-    final index = _mapIndexes["Kanto (Let's Go)"];
+    final index = _activeMapIndex;
     final rawLocations = index?['locations'];
     if (rawLocations is! List) return const SizedBox.shrink();
 
@@ -515,6 +515,26 @@ class _MapsScreenState extends State<MapsScreen> {
             .where((value) => value.trim().isNotEmpty)
             .toList() ??
         const <String>[];
+    final berryTrees = (location['berryTrees'] as List?)
+            ?.whereType<Map>()
+            .where((tree) {
+              final games = tree['availableIn'];
+              return games is! List ||
+                  games.isEmpty ||
+                  games.contains(_selectedGameId);
+            })
+            .map((tree) {
+              final berry = tree['berry']?.toString() ?? 'Berry';
+              final description =
+                  tree['locationDescription']?.toString().trim() ?? '';
+              return description.isEmpty
+                  ? 'Berry tree — $berry'
+                  : 'Berry tree — $berry — $description';
+            })
+            .toList() ??
+        const <String>[];
+    items.addAll(berryTrees);
+
     final locationNotes = location['notes']?.toString().trim() ?? '';
     final trainers = (location['trainers'] as List?)
             ?.map(_formatLetsGoAuditEntry)
@@ -2964,8 +2984,9 @@ class _MapsScreenState extends State<MapsScreen> {
                               'Wybierz lokację z mapy albo wpisz jej dokładną nazwę, aby zobaczyć schemat lokalny i informacje powiązane z poradnikiem. Nie pokazujemy dokładnych pinezek przedmiotów bez zweryfikowanych współrzędnych.',
                             ),
                           const SizedBox(height: 12),
-                          if (_isLetsGoKanto && selectedLocalLocation != null)
-                            _buildLetsGoEncounterPanel(
+                          if (selectedLocalLocation != null &&
+                              _activeMapIndex != null)
+                            _buildRegionalEncounterPanel(
                               context,
                               selectedLocalLocation,
                             ),
