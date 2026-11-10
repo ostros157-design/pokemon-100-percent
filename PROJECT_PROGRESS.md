@@ -6132,3 +6132,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Znaczniki lokacji otrzymały rozróżnienie kształtem i kolorem: budynki/obiekty są rombami, miasta i pozostałe typy mają osobne kolory okrągłych znaczników.
 - To pierwszy etap stylizacji istniejącego schematu regionu. Układ geograficzny i współrzędne pozostają dotychczasowym schematem poglądowym; nie dodano niezweryfikowanych pozycji ani nie odtworzono jeszcze pełnej mapy kafelkowej z gry.
 - Flutter Analyzer, testy i APK nie zostały uruchomione; zmiana wymaga oceny wizualnej i dalszej przebudowy terenu, dróg, budynków oraz warstw znaczników.
+
+
+### Mapy Hisui — podłączenie pierwszego obrazu offline (2026-11-10)
+
+- Podłączono dodany plik podglądu obszaru Hisui do ekranu map dla Pokémon Legends: Arceus.
+- Obraz jest wyświetlany bezpośrednio z zasobów aplikacji, działa offline i można go przybliżać oraz przesuwać gestami.
+- Ekran wyraźnie oznacza go jako podgląd jednego obszaru, a nie kompletną mapę Hisui; nie dodano fikcyjnych pinezek ani lokalizacji.
+- Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK. Należy sprawdzić ścieżkę zasobu i zachowanie powiększania na urządzeniu.
