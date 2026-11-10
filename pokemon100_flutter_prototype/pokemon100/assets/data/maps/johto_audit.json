@@ -1057,5 +1057,15 @@
     "gold_silver": "Johto base game. Do not show Route 47, Route 48, Cliff Cave, Cliff Edge Gate or the Johto Safari Zone, which were introduced in HeartGold/SoulSilver.",
     "crystal": "Johto base game with Crystal-specific content; do not show HeartGold/SoulSilver-only western Johto expansion locations.",
     "heart_gold_soul_silver": "Includes the expanded western Johto area with Routes 47–48, Cliff Cave and Safari Zone."
+  },
+  "audit": {
+    "lastReviewed": "2026-11-10",
+    "locationCount": 62,
+    "numberedRouteCount": 23,
+    "unresolvedInternalConnections": 0,
+    "heartGoldSoulSilverExclusiveLocationCount": 6,
+    "coordinateCoverage": "0% — coordinates remain unverified",
+    "imageCoverage": "0% — no Silver-specific Johto map asset connected",
+    "note": "Connectivity audit checks only that every connectsTo ID points to an entry in this regional index. Cross-region links such as Route 27 to New Bark Town are intentionally handled as regional boundaries."
   }
 }
