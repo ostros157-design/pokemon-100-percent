@@ -837,6 +837,11 @@
       "id": "altissimo-pallet-lgpe",
       "url": "https://altissimo1.github.io/Main-Series/Kanto-Locations/pallet-town.html",
       "scope": "Let's Go Pallet Town story items, Town Map, Pokédex, Razz Berries, Sportswear and postgame Mega Stones"
+    },
+    {
+      "id": "bulbapedia-part1",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Appendix%3ALGPE_walkthrough/Section_1",
+      "scope": "Let's Go Pallet Town, Player's House, Professor Oak's Laboratory and opening story events"
     }
   ],
   "locations": [
@@ -14599,7 +14604,8 @@
       "sourceIds": [
         "bulbapedia-part14",
         "serebii-gym-rematches",
-        "altissimo-viridian-lgpe"
+        "altissimo-viridian-lgpe",
+        "serebii-gym-leaders-lgpe"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
@@ -14640,7 +14646,8 @@
       "sourceIds": [
         "routepedia-pewter-pikachu",
         "bulbapedia-part3",
-        "serebii-gym-rematches"
+        "serebii-gym-rematches",
+        "serebii-gym-leaders-lgpe"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "events": [
@@ -14676,9 +14683,10 @@
       "sourceIds": [
         "routepedia-cerulean-pikachu",
         "bulbapedia-part5",
-        "serebii-gym-rematches"
+        "serebii-gym-rematches",
+        "serebii-gym-leaders-lgpe"
       ],
-      "dataStatus": "leader_verified_team_needs_review",
+      "dataStatus": "text_verified_positions_not_mapped",
       "events": [
         "Lider Misty — Psyduck Lv. 18 i Starmie Lv. 19.",
         "Nagroda po zwycięstwie: Cascade Badge oraz TM29 (Scald).",
@@ -14767,9 +14775,10 @@
         "routepedia-celadon-pikachu",
         "bulbapedia-part9",
         "serebii-gym-rematches",
-        "altissimo-celadon-lgpe"
+        "altissimo-celadon-lgpe",
+        "serebii-gym-leaders-lgpe"
       ],
-      "dataStatus": "leader_verified_team_needs_review",
+      "dataStatus": "text_verified_positions_not_mapped",
       "events": [
         "Lider Erika — Tangela Lv. 33, Weepinbell Lv. 33 i Vileplume Lv. 34.",
         "Nagroda po zwycięstwie: Rainbow Badge oraz TM53 (Mega Drain).",
@@ -14812,7 +14821,7 @@
         "altissimo-saffron-lgpe",
         "serebii-gym-leaders-lgpe"
       ],
-      "dataStatus": "leader_verified_team_needs_review",
+      "dataStatus": "text_verified_positions_not_mapped",
       "events": [
         "Lider Sabrina — Mr. Mime Lv. 43, Slowbro Lv. 43, Jynx Lv. 43 i Alakazam Lv. 44.",
         "Nagroda po zwycięstwie: Marsh Badge oraz TM33 (Calm Mind).",
@@ -14909,9 +14918,10 @@
       "sourceIds": [
         "routepedia-cinnabar-pikachu",
         "bulbapedia-part13",
-        "serebii-gym-rematches"
+        "serebii-gym-rematches",
+        "serebii-gym-leaders-lgpe"
       ],
-      "dataStatus": "leader_verified_team_needs_review",
+      "dataStatus": "text_verified_positions_not_mapped",
       "events": [
         "Lider Blaine — Magmar Lv. 47, Rapidash Lv. 47, Ninetales Lv. 47 i Arcanine Lv. 48.",
         "Nagroda po zwycięstwie: Volcano Badge oraz TM46 (Fire Blast).",
@@ -15108,17 +15118,23 @@
       "connectsTo": [
         "pallet_town"
       ],
-      "notes": "Dom gracza w Pallet Town. Wnętrze i interakcje nie są jeszcze odwzorowane na osobnym planie.",
+      "notes": "Opis 1F i 2F oraz funkcje Mom są potwierdzone dla Let’s Go; dokładny plan wnętrza i pozycje obiektów nie są jeszcze odwzorowane.",
       "sourceIds": [
-        "bulbapedia-player-house"
+        "bulbapedia-player-house",
+        "bulbapedia-part1"
       ],
-      "dataStatus": "schematic_interior_available_exact_layout_pending",
+      "dataStatus": "text_verified_positions_not_mapped",
       "coordinateStatus": "unverified",
       "events": [
-        "Początek przygody odbywa się w domu gracza w Pallet Town; wnętrze jest schematyczne, a nie odwzorowane kafelek po kafelku."
+        "Start przygody — Trace odwiedza gracza w sypialni na 2F i przypomina o otrzymaniu pierwszego partnera Pokémon.",
+        "Mom na 1F przypomina o spotkaniu z Profesorem Oakiem; po pierwszym opuszczeniu Pallet Town rozmowa z nią może w pełni uleczyć drużynę."
       ],
       "items": [],
-      "itemsStatus": "No separate collectible item pickup in the player's house; Town Map is received from Mom outside the lab"
+      "itemsStatus": "No separate collectible item pickup in the player's house; Town Map is received from Mom outside the lab",
+      "features": [
+        "2F — sypialnia gracza z komputerem, łóżkiem i telewizorem; tutaj rozpoczyna się przygoda.",
+        "1F — kuchnia i część mieszkalna Mom."
+      ]
     },
     {
       "id": "professor_oak_lab",
@@ -15127,7 +15143,7 @@
       "connectsTo": [
         "pallet_town"
       ],
-      "notes": "Laboratorium Profesora Oaka w Pallet Town, związane z rozpoczęciem przygody i Pokédexem. Wnętrze nie jest jeszcze odwzorowane.",
+      "notes": "Pokédex po otrzymaniu partnera oraz Razz Berry ×20 po dostarczeniu Oak’s Parcel są zapisane; dokładny układ pomieszczeń nie jest jeszcze odwzorowany.",
       "sourceIds": [
         "bulbapedia-oak-lab",
         "altissimo-pallet-lgpe",
@@ -15151,7 +15167,7 @@
       "connectsTo": [
         "celadon_city"
       ],
-      "notes": "Wielopiętrowy sklep w Celadon City. Piętra, automaty, przedmioty i układ stoisk wymagają osobnego planu wnętrza.",
+      "notes": "Asortyment i nagrody zostały rozpisane według pięter i sprzedawców; dokładny plan pomieszczeń oraz pozycje stoisk nie są jeszcze odwzorowane.",
       "sourceIds": [
         "bulbapedia-celadon-store",
         "pokemondb-mastertrainers",
@@ -15193,7 +15209,7 @@
       "connectsTo": [
         "celadon_city"
       ],
-      "notes": "Salon gier w Celadon City i wejście do Team Rocket Hideout. Wnętrze oraz pozycje obiektów nie są jeszcze naniesione.",
+      "notes": "Zapisano sześć dziennych punktów ukrytych przedmiotów, ich pule nagród, automaty z napojami i wejście do Rocket Hideout; dokładny plan wnętrza i pinezki pozostają do odwzorowania.",
       "sourceIds": [
         "bulbapedia-celadon-game-corner",
         "pokemondb-mastertrainers",
@@ -15234,7 +15250,7 @@
       "connectsTo": [
         "celadon_city"
       ],
-      "notes": "Budynek mieszkalny w Celadon City. Poszczególne pomieszczenia i prezenty nie są jeszcze rozpisane na planie.",
+      "notes": "Zapisano nagrody, Eevee na dachu, Coach Trainer Morimoto oraz Master Trainerów; dokładny układ mieszkań i pozycje trenerów nie są jeszcze odwzorowane.",
       "sourceIds": [
         "bulbapedia-celadon-condominiums",
         "pokemondb-mastertrainers",
@@ -15286,7 +15302,7 @@
       "connectsTo": [
         "cinnabar_island"
       ],
-      "notes": "Laboratorium na Cinnabar Island związane z odtwarzaniem Pokémonów z fosyliów. Pomieszczenia i interakcje wymagają osobnego planu.",
+      "notes": "Zapisano TM02, odtwarzanie Omanyte/Kabuto/Aerodactyla z fosyliów i Master Trainera Omastara; dokładny plan pomieszczeń nie jest jeszcze odwzorowany.",
       "sourceIds": [
         "bulbapedia-cinnabar-lab",
         "pokemondb-mastertrainers",
@@ -15324,7 +15340,7 @@
       "connectsTo": [
         "saffron_city"
       ],
-      "notes": "Dōjō w Saffron City, w którym można wybrać nagrodę Hitmonlee albo Hitmonchan. Wnętrze i trenerzy nie są jeszcze naniesieni.",
+      "notes": "Lista czterech Black Beltów, Coach Trainer, Koichiego, dwóch postgame Master Trainerów i nagród (TM23 oraz wybór Hitmonlee/Hitmonchan) jest zapisana; dokładny plan sali i pinezki trenerów nie są odwzorowane.",
       "sourceIds": [
         "bulbapedia-fighting-dojo",
         "bulbapedia-part10",
@@ -15368,7 +15384,7 @@
       "connectsTo": [
         "fuchsia_city"
       ],
-      "notes": "Kompleks GO Park w Fuchsia City, obejmujący Playful Park i obszar dawnej Safari Zone. W Let’s Go to jedna fizyczna lokacja; Safari Zone pozostaje aliasem nazwy.",
+      "notes": "GO Park complex i Playful Park są dwiema częściami jednego kompleksu w Fuchsia City. Opis funkcji i transferu jest zapisany; dokładny plan obszaru i pozycje ekspozycji nie są pinezkami.",
       "sourceIds": [
         "bulbapedia-go-park",
         "bulbapedia-part11"
@@ -15376,7 +15392,12 @@
       "dataStatus": "schematic_interior_available_exact_layout_pending",
       "coordinateStatus": "unverified",
       "events": [
-        "Transfer Pokémonów z Pokémon GO do Let’s Go odbywa się przez kompleks GO Park; Playful Park jest częścią tej samej lokacji."
+        "Transfer Pokémonów z Pokémon GO do Let’s Go odbywa się przez GO Park complex; transfer jest częścią kolekcji gry.",
+        "Playful Park — mężczyzna przy ekspozycji Laprasa uczy partnera Secret Technique Sea Skim."
+      ],
+      "features": [
+        "Playful Park — część wystawowa z Pokémonami; przy ekspozycji Laprasa uczy się partnera techniki Sea Skim.",
+        "GO Park complex — 20 Play Yards do przenoszenia i przechowywania Pokémonów z Pokémon GO; każde Play Yard mieści do 50 Pokémonów."
       ]
     },
     {
