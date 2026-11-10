@@ -6185,3 +6185,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Dodano `assets/data/maps/map_marker_legend.json` jako wspólny słownik symboli dla map offline: mała roślinka dla krzewów i miejsc sadzenia jagód, buteleczka w stylu Pokémon dla sprayów/mikstur, Poké Ball dla znajdziek oraz osobny symbol trenera.
 - Słownik określa znaczenie i kategorie symboli, ale nie tworzy pinezek ani współrzędnych. Oznaczenia będą rysowane dopiero przy lokacjach potwierdzonych w danych konkretnej gry.
 - To przygotowanie standardu wizualnego; nie jest jeszcze podłączeniem ikon do interfejsu. Nie uruchomiono Flutter Analyzer, testów ani APK. Postęp mapy Pokémon Silver pozostaje 35%.
+
+
+### Mapy — pierwsze ikony przedmiotów w panelu lokacji (2026-11-10)
+- W panelu przedmiotów dodano osobne symbole: roślinkę dla wyraźnie opisanych miejsc sadzenia/krzewów jagodowych, buteleczkę dla sprayów i mikstur oraz Poké Balla dla pozostałych znajdziek.
+- Zwykłe podnoszone jagody nie są automatycznie mylone z miejscem sadzenia — ikona rośliny pojawia się tylko wtedy, gdy opis wskazuje na krzew, grządkę lub miejsce sadzenia.
+- Lista trenerów nadal ma oddzielny symbol trenera. Ikony występują obecnie w panelu szczegółów lokacji, nie jako pinezki na obrazie mapy.
+- Nie dodano współrzędnych ani nie zgadywano lokalizacji. Flutter Analyzer, testy i APK nie zostały uruchomione; trzeba sprawdzić, czy nazwy i opisy w danych są wystarczająco jednoznaczne.
+- Postęp mapy Pokémon Silver pozostaje 35% — ta zmiana jest wspólnym elementem UI i nie uzupełnia jeszcze brakujących danych Johto.
