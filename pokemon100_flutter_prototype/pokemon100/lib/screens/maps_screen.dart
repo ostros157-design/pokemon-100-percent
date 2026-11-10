@@ -18,13 +18,16 @@ import 'pokemon_details_screen.dart';
 /// Offline regional location indexes are loaded from bundled, source-tracked JSON.
 /// A schematic or decorative view is never presented as a scale-accurate game map.
 class MapsScreen extends StatefulWidget {
-  const MapsScreen({super.key});
+  final List<int> initialPokemonIds;
+
+  const MapsScreen({super.key, this.initialPokemonIds = const <int>[]});
 
   @override
   State<MapsScreen> createState() => _MapsScreenState();
 }
 
 class _MapsScreenState extends State<MapsScreen> {
+  late final Set<int> _selectedPokemonIds = widget.initialPokemonIds.toSet();
   int _generation = 1;
   String? _selectedGameId;
   String? _selectedMapRegionOverride;
@@ -163,6 +166,120 @@ class _MapsScreenState extends State<MapsScreen> {
     return searchable.any((value) => value.toLowerCase().contains(query));
   }
 
+  bool _containsPokemonName(dynamic value, String pokemonName) {
+    final target = _normalizePokemonName(pokemonName);
+    if (value is String) return _normalizePokemonName(value) == target;
+    if (value is List) {
+      return value.any((entry) => _containsPokemonName(entry, pokemonName));
+    }
+    if (value is Map) {
+      return value.values.any((entry) => _containsPokemonName(entry, pokemonName));
+    }
+    return false;
+  }
+
+  Color _pokemonHighlightColor(int pokemonId) {
+    const colors = <Color>[
+      Color(0xFFE53935), Color(0xFF1E88E5), Color(0xFF43A047),
+      Color(0xFF8E24AA), Color(0xFFFB8C00), Color(0xFF00897B),
+      Color(0xFFD81B60),
+    ];
+    return colors[pokemonId % colors.length];
+  }
+
+  List<int> _selectedPokemonIdsForLocation(
+    Map<String, dynamic> location,
+    List<String> names,
+  ) => names
+      .where((name) => _containsPokemonName(
+            location['wildPokemonDetails'] ??
+                location['wildPokemon'] ??
+                location['encounters'],
+            name,
+          ))
+      .map((name) => pokemonList.firstWhere((pokemon) => pokemon.name == name).id)
+      .toList(growable: false);
+
+  Future<void> _showPokemonPicker() async {
+    final searchController = TextEditingController();
+    final workingSelection = Set<int>.from(_selectedPokemonIds);
+    await showModalBottomSheet<void>(
+      context: context,
+      isScrollControlled: true,
+      showDragHandle: true,
+      builder: (sheetContext) => StatefulBuilder(
+        builder: (context, refreshSheet) {
+          final query = searchController.text.trim().toLowerCase();
+          final matches = pokemonList
+              .where((pokemon) => query.isEmpty ||
+                  pokemon.name.toLowerCase().contains(query) ||
+                  pokemon.id.toString() == query)
+              .take(100)
+              .toList(growable: false);
+          return SafeArea(
+            child: SizedBox(
+              height: MediaQuery.of(context).size.height * .78,
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(18, 4, 18, 12),
+                    child: TextField(
+                      controller: searchController,
+                      decoration: const InputDecoration(
+                        prefixIcon: Icon(Icons.search),
+                        labelText: 'Szukaj Pokémona',
+                        border: OutlineInputBorder(),
+                      ),
+                      onChanged: (_) => refreshSheet(() {}),
+                    ),
+                  ),
+                  Expanded(
+                    child: ListView.builder(
+                      itemCount: matches.length,
+                      itemBuilder: (context, index) {
+                        final pokemon = matches[index];
+                        return CheckboxListTile(
+                          value: workingSelection.contains(pokemon.id),
+                          title: Text(pokemon.name),
+                          secondary: CircleAvatar(child: Text('#${pokemon.id}')),
+                          onChanged: (selected) => refreshSheet(() {
+                            if (selected == true) {
+                              workingSelection.add(pokemon.id);
+                            } else {
+                              workingSelection.remove(pokemon.id);
+                            }
+                          }),
+                        );
+                      },
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(16),
+                    child: SizedBox(
+                      width: double.infinity,
+                      child: FilledButton(
+                        onPressed: () {
+                          setState(() {
+                            _selectedPokemonIds
+                              ..clear()
+                              ..addAll(workingSelection);
+                          });
+                          Navigator.of(sheetContext).pop();
+                        },
+                        child: Text('Pokaż na mapie (${workingSelection.length})'),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          );
+        },
+      ),
+    );
+    searchController.dispose();
+  }
+
   bool _matchesMapKind(Map<String, dynamic> location) {
     final kind = (location['kind'] as String? ?? '').toLowerCase();
     switch (_mapKindFilter) {
@@ -183,7 +300,7 @@ class _MapsScreenState extends State<MapsScreen> {
   }
 
   String _normalizePokemonName(String name) =>
-      .toLowerCase()
+      name.toLowerCase()
       .replaceAll('’', "'")
       .replaceAll('‘', "'");
 
@@ -1159,10 +1276,22 @@ class _MapsScreenState extends State<MapsScreen> {
     final games = _gamesForGeneration;
     final selectedGame = _selectedGame;
     final normalizedQuery = _searchQuery.trim().toLowerCase();
+    final selectedPokemonNames = _selectedPokemonIds
+        .map((id) => pokemonList.where((pokemon) => pokemon.id == id))
+        .where((matches) => matches.isNotEmpty)
+        .map((matches) => matches.first.name)
+        .toList(growable: false);
     final filteredMapLocations = _activeMapIndexLocations
         .where((location) =>
             _matchesMapLocation(location, normalizedQuery) &&
-            _matchesMapKind(location))
+            _matchesMapKind(location) &&
+            (selectedPokemonNames.isEmpty ||
+                selectedPokemonNames.any((name) => _containsPokemonName(
+                      location['wildPokemonDetails'] ??
+                          location['wildPokemon'] ??
+                          location['encounters'],
+                      name,
+                    ))))
         .toList(growable: false);
     // Every named node on the full Kanto schematic can be selected, not
     // only the first few tutorial locations.
@@ -1196,6 +1325,58 @@ class _MapsScreenState extends State<MapsScreen> {
               : ListView(
               padding: const EdgeInsets.all(16),
               children: [
+                Card(
+                  child: Padding(
+                    padding: const EdgeInsets.all(12),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+                            const Expanded(
+                              child: Text('Pokémony do wyszukania',
+                                  style: TextStyle(fontWeight: FontWeight.w700)),
+                            ),
+                            TextButton.icon(
+                              onPressed: _showPokemonPicker,
+                              icon: const Icon(Icons.add),
+                              label: const Text('Dodaj Pokémony'),
+                            ),
+                          ],
+                        ),
+                        if (_selectedPokemonIds.isEmpty)
+                          const Text('Dodaj jednego lub kilka Pokémonów, aby odfiltrować lokacje z zapisanymi miejscami spotkań.')
+                        else
+                          Wrap(
+                            spacing: 6,
+                            runSpacing: 6,
+                            children: selectedPokemonNames.map((name) {
+                              final pokemon = pokemonList.firstWhere((entry) => entry.name == name);
+                              final color = _pokemonHighlightColor(pokemon.id);
+                              return InputChip(
+                                avatar: Icon(Icons.catching_pokemon, color: color, size: 18),
+                                label: Text(name),
+                                side: BorderSide(color: color, width: 1.5),
+                                onDeleted: () => setState(
+                                  () => _selectedPokemonIds.remove(pokemon.id),
+                                ),
+                              );
+                            }).toList(),
+                          ),
+                        if (_selectedPokemonIds.isNotEmpty) ...[
+                          const SizedBox(height: 6),
+                          Text(
+                            filteredMapLocations.isEmpty
+                                ? 'Brak potwierdzonych wpisów spotkań tych Pokémonów w indeksie tej mapy. Nie pokazujemy zgadywanych pinezek.'
+                                : 'Znalezione lokacje: ${filteredMapLocations.length}. Kolorowe znaczniki wskazują wybrane Pokémony w kartach lokacji poniżej.',
+                            style: Theme.of(context).textTheme.bodySmall,
+                          ),
+                        ],
+                      ],
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 12),
                 Text(
                   'Regiony Pokémon',
                   style: Theme.of(context).textTheme.headlineSmall,
@@ -1352,7 +1533,48 @@ class _MapsScreenState extends State<MapsScreen> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(locationName, style: Theme.of(context).textTheme.titleLarge),
+                              Row(
+                                children: [
+                                  if (_selectedPokemonIdsForLocation(
+                                    location,
+                                    selectedPokemonNames,
+                                  ).isNotEmpty)
+                                    Builder(builder: (context) {
+                                      final pokemonId = _selectedPokemonIdsForLocation(
+                                        location,
+                                        selectedPokemonNames,
+                                      ).first;
+                                      final color = _pokemonHighlightColor(pokemonId);
+                                      return Container(
+                                        width: 38,
+                                        height: 38,
+                                        margin: const EdgeInsets.only(right: 10),
+                                        decoration: BoxDecoration(
+                                          shape: BoxShape.circle,
+                                          color: color.withOpacity(.22),
+                                          border: Border.all(color: color, width: 3),
+                                        ),
+                                        child: Icon(Icons.catching_pokemon, color: color),
+                                      );
+                                    }),
+                                  Expanded(
+                                    child: Text(locationName,
+                                        style: Theme.of(context).textTheme.titleLarge),
+                                  ),
+                                  if (location['trainers'] is List &&
+                                      (location['trainers'] as List).isNotEmpty)
+                                    const Tooltip(
+                                      message: 'Trenerzy',
+                                      child: Icon(Icons.sports_martial_arts),
+                                    ),
+                                  if (location['items'] is List &&
+                                      (location['items'] as List).isNotEmpty)
+                                    const Tooltip(
+                                      message: 'Przedmioty do zdobycia',
+                                      child: Icon(Icons.catching_pokemon),
+                                    ),
+                                ],
+                              ),
                               const SizedBox(height: 4),
                               Text('Typ: $kind • Status: $status'),
                               if (notes != null && notes.isNotEmpty) ...[
@@ -1410,13 +1632,23 @@ class _MapsScreenState extends State<MapsScreen> {
                               ],
                               if (itemsSummary.isNotEmpty) ...[
                                 const SizedBox(height: 8),
-                                const Text('Przedmioty', style: TextStyle(fontWeight: FontWeight.w700)),
-                                Text(itemsSummary),
+                                const Text('Przedmioty do zdobycia', style: TextStyle(fontWeight: FontWeight.w700)),
+                                ...itemsSummary.split('\\n').map((item) => ListTile(
+                                  dense: true,
+                                  contentPadding: EdgeInsets.zero,
+                                  leading: const Icon(Icons.catching_pokemon),
+                                  title: Text(item),
+                                )),
                               ],
                               if (trainersSummary.isNotEmpty) ...[
                                 const SizedBox(height: 8),
                                 const Text('Trenerzy i walki', style: TextStyle(fontWeight: FontWeight.w700)),
-                                Text(trainersSummary),
+                                ...trainersSummary.split('\\n').map((trainer) => ListTile(
+                                  dense: true,
+                                  contentPadding: EdgeInsets.zero,
+                                  leading: const Icon(Icons.sports_martial_arts),
+                                  title: Text(trainer),
+                                )),
                               ],
                               if (eventsSummary.isNotEmpty) ...[
                                 const SizedBox(height: 8),
