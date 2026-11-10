@@ -189,7 +189,7 @@ class AchievementProgressService {
       final completed = (guideCompleted[gameId] ?? 0) + caughtCount;
       progressByGame[gameId] = total == 0
           ? 0
-          : (completed * 100 / total).round().clamp(0, 100);
+          : (completed * 100 / total).round().clamp(0, 100).toInt();
     }
 
     final selectedGameTotalGuideSteps = guideTotals[selectedGameId] ?? 0;
