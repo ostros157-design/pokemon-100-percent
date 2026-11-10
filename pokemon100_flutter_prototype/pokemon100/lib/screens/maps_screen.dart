@@ -276,7 +276,12 @@ class _MapsScreenState extends State<MapsScreen> {
                     ? '$name ×${quantity.toInt()}'
                     : name;
                 final locationDescription =
-                    value['locationDescription']?.toString().trim() ?? '';
+                    (value['locationDescription'] ??
+                            value['note'] ??
+                            value['description'])
+                        ?.toString()
+                        .trim() ??
+                    '';
                 return locationDescription.isEmpty
                     ? label
                     : '$label — $locationDescription';
@@ -284,6 +289,11 @@ class _MapsScreenState extends State<MapsScreen> {
               return value.toString();
             })
             .where((value) => value.trim().isNotEmpty)
+            .toList() ??
+        const <String>[];
+    final hiddenItems = (location['hiddenItems'] as List?)
+            ?.map(_formatLetsGoAuditEntry)
+            .where((value) => value.isNotEmpty)
             .toList() ??
         const <String>[];
     final locationNotes = location['notes']?.toString().trim() ?? '';
@@ -306,15 +316,21 @@ class _MapsScreenState extends State<MapsScreen> {
         ? (location['trainerCount'] as num).toInt()
         : (int.tryParse(location['trainerCount']?.toString() ?? '') ??
             (location['trainers'] as List?)?.length);
+    final parsedHiddenItemCount =
+        int.tryParse(location['hiddenItemCount']?.toString() ?? '');
     final hiddenItemCount = location['hiddenItemCount'] is num
         ? (location['hiddenItemCount'] as num).toInt()
-        : int.tryParse(location['hiddenItemCount']?.toString() ?? '');
+        : parsedHiddenItemCount ?? (hiddenItems.isEmpty ? null : hiddenItems.length);
     final dataStatus = location['dataStatus']?.toString() ?? '';
     final coordinateStatus = location['coordinateStatus']?.toString() ?? 'unverified';
     if (encounters.isEmpty &&
         notablePokemon.isEmpty &&
         notableNotes.isEmpty &&
         items.isEmpty &&
+        hiddenItems.isEmpty &&
+        trainers.isEmpty &&
+        features.isEmpty &&
+        events.isEmpty &&
         locationNotes.isEmpty &&
         trainerCount == null) {
       return Card(
@@ -460,6 +476,24 @@ class _MapsScreenState extends State<MapsScreen> {
                     alignment: Alignment.centerLeft,
                     child: Text(
                       trainers.map((trainer) => '• $trainer').join('\n'),
+                    ),
+                  ),
+                ],
+              ),
+            if (hiddenItems.isNotEmpty)
+              ExpansionTile(
+                tilePadding: EdgeInsets.zero,
+                childrenPadding: const EdgeInsets.only(bottom: 8),
+                leading: const Icon(Icons.search),
+                title: Text('Ukryte przedmioty (${hiddenItems.length})'),
+                subtitle: const Text(
+                  'Dziennie odnawiane lub ukryte znajdźki — bez zgadywanych pinezek',
+                ),
+                children: [
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      hiddenItems.map((item) => '• $item').join('\\n'),
                     ),
                   ),
                 ],
