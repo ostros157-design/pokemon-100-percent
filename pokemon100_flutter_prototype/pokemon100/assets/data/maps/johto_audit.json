@@ -30,6 +30,11 @@
       "id": "bulbapedia-gs-walkthrough-parts-1-4",
       "url": "https://bulbapedia.bulbagarden.net/wiki/Walkthrough:Pok%C3%A9mon_Gold_and_Silver",
       "scope": "Original Game Boy Color Gold/Silver item lists and descriptive locations for Routes 29 and 32 and Union Cave"
+    },
+    {
+      "id": "bulbapedia-gs-walkthrough-parts-3-4",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Appendix:Gold_and_Silver_walkthrough/Section_4",
+      "scope": "Original Game Boy Color Gold/Silver trainer rosters and floor details for Route 32, Union Cave and Route 33; Route 31 roster from Part 3"
     }
   ],
   "locations": [
@@ -190,6 +195,37 @@
             "bulbapedia-berry-tree-generation-ii"
           ]
         }
+      ],
+      "trainers": [
+        {
+          "name": "Bug Catcher Wade",
+          "team": [
+            {
+              "name": "Caterpie",
+              "level": 2
+            },
+            {
+              "name": "Caterpie",
+              "level": 2
+            },
+            {
+              "name": "Weedle",
+              "level": 3
+            },
+            {
+              "name": "Caterpie",
+              "level": 2
+            }
+          ],
+          "note": "Route 31",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-walkthrough-parts-3-4"
+          ]
+        }
       ]
     },
     {
@@ -298,6 +334,164 @@
             "bulbapedia-gs-walkthrough-parts-1-4"
           ]
         }
+      ],
+      "trainers": [
+        {
+          "name": "Youngster Albert",
+          "team": [
+            {
+              "name": "Rattata",
+              "level": 6
+            },
+            {
+              "name": "Zubat",
+              "level": 8
+            }
+          ],
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-walkthrough-parts-3-4"
+          ]
+        },
+        {
+          "name": "Picnicker Liz",
+          "team": [
+            {
+              "name": "Nidoran♀",
+              "level": 9
+            }
+          ],
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-walkthrough-parts-3-4"
+          ]
+        },
+        {
+          "name": "Camper Roland",
+          "team": [
+            {
+              "name": "Nidoran♂",
+              "level": 9
+            }
+          ],
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-walkthrough-parts-3-4"
+          ]
+        },
+        {
+          "name": "Fisher Henry",
+          "team": [
+            {
+              "name": "Poliwag",
+              "level": 8
+            },
+            {
+              "name": "Poliwag",
+              "level": 8
+            }
+          ],
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-walkthrough-parts-3-4"
+          ]
+        },
+        {
+          "name": "Fisher Justin",
+          "team": [
+            {
+              "name": "Magikarp",
+              "level": 5
+            },
+            {
+              "name": "Magikarp",
+              "level": 5
+            },
+            {
+              "name": "Magikarp",
+              "level": 15
+            },
+            {
+              "name": "Magikarp",
+              "level": 5
+            }
+          ],
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-walkthrough-parts-3-4"
+          ]
+        },
+        {
+          "name": "Fisher Ralph",
+          "team": [
+            {
+              "name": "Goldeen",
+              "level": 10
+            }
+          ],
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-walkthrough-parts-3-4"
+          ]
+        },
+        {
+          "name": "Youngster Gordon",
+          "team": [
+            {
+              "name": "Wooper",
+              "level": 10
+            }
+          ],
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-walkthrough-parts-3-4"
+          ]
+        },
+        {
+          "name": "Bird Keeper Peter",
+          "team": [
+            {
+              "name": "Pidgey",
+              "level": 6
+            },
+            {
+              "name": "Pidgey",
+              "level": 6
+            },
+            {
+              "name": "Spearow",
+              "level": 8
+            }
+          ],
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-walkthrough-parts-3-4"
+          ]
+        }
       ]
     },
     {
@@ -368,6 +562,260 @@
             "bulbapedia-gs-walkthrough-parts-1-4"
           ]
         }
+      ],
+      "trainers": [
+        {
+          "name": "Hiker Daniel",
+          "team": [
+            {
+              "name": "Onix",
+              "level": 11
+            }
+          ],
+          "note": "1F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-walkthrough-parts-3-4"
+          ]
+        },
+        {
+          "name": "Hiker Russell",
+          "team": [
+            {
+              "name": "Geodude",
+              "level": 4
+            },
+            {
+              "name": "Geodude",
+              "level": 6
+            },
+            {
+              "name": "Geodude",
+              "level": 8
+            }
+          ],
+          "note": "1F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-walkthrough-parts-3-4"
+          ]
+        },
+        {
+          "name": "Firebreather Bill",
+          "team": [
+            {
+              "name": "Koffing",
+              "level": 6
+            },
+            {
+              "name": "Koffing",
+              "level": 6
+            }
+          ],
+          "note": "1F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-walkthrough-parts-3-4"
+          ]
+        },
+        {
+          "name": "PokéManiac Larry",
+          "team": [
+            {
+              "name": "Slowpoke",
+              "level": 10
+            }
+          ],
+          "note": "1F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-walkthrough-parts-3-4"
+          ]
+        },
+        {
+          "name": "Firebreather Ray",
+          "team": [
+            {
+              "name": "Vulpix",
+              "level": 9
+            }
+          ],
+          "note": "1F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-walkthrough-parts-3-4"
+          ]
+        },
+        {
+          "name": "Hiker Leonard",
+          "team": [
+            {
+              "name": "Geodude",
+              "level": 23
+            },
+            {
+              "name": "Machop",
+              "level": 25
+            }
+          ],
+          "note": "B1F — północ",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-walkthrough-parts-3-4"
+          ]
+        },
+        {
+          "name": "Hiker Phillip",
+          "team": [
+            {
+              "name": "Geodude",
+              "level": 23
+            },
+            {
+              "name": "Geodude",
+              "level": 23
+            },
+            {
+              "name": "Graveler",
+              "level": 23
+            }
+          ],
+          "note": "B1F — północ",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-walkthrough-parts-3-4"
+          ]
+        },
+        {
+          "name": "PokéManiac Calvin",
+          "team": [
+            {
+              "name": "Kangaskhan",
+              "level": 26
+            }
+          ],
+          "note": "B1F — południe",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-walkthrough-parts-3-4"
+          ]
+        },
+        {
+          "name": "PokéManiac Andrew",
+          "team": [
+            {
+              "name": "Marowak",
+              "level": 24
+            },
+            {
+              "name": "Marowak",
+              "level": 24
+            }
+          ],
+          "note": "B1F — południe",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-walkthrough-parts-3-4"
+          ]
+        },
+        {
+          "name": "Cooltrainer Nick",
+          "team": [
+            {
+              "name": "Charmander",
+              "level": 26
+            },
+            {
+              "name": "Bulbasaur",
+              "level": 26
+            },
+            {
+              "name": "Squirtle",
+              "level": 26
+            }
+          ],
+          "note": "B2F — dostęp po Surf",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-walkthrough-parts-3-4"
+          ]
+        },
+        {
+          "name": "Cooltrainer Gwen",
+          "team": [
+            {
+              "name": "Eevee",
+              "level": 26
+            },
+            {
+              "name": "Vaporeon",
+              "level": 22
+            },
+            {
+              "name": "Jolteon",
+              "level": 22
+            },
+            {
+              "name": "Flareon",
+              "level": 22
+            }
+          ],
+          "note": "B2F — dostęp po Surf",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-walkthrough-parts-3-4"
+          ]
+        },
+        {
+          "name": "Cooltrainer Emma",
+          "team": [
+            {
+              "name": "Poliwhirl",
+              "level": 28
+            }
+          ],
+          "note": "B2F — dostęp po Surf",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-walkthrough-parts-3-4"
+          ]
+        }
       ]
     },
     {
@@ -398,6 +846,28 @@
           "coordinateStatus": "unverified",
           "sourceIds": [
             "bulbapedia-berry-tree-generation-ii"
+          ]
+        }
+      ],
+      "trainers": [
+        {
+          "name": "Hiker Anthony",
+          "team": [
+            {
+              "name": "Geodude",
+              "level": 11
+            },
+            {
+              "name": "Machop",
+              "level": 11
+            }
+          ],
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-walkthrough-parts-3-4"
           ]
         }
       ]
@@ -1410,7 +1880,7 @@
     "heart_gold_soul_silver": "Includes the expanded western Johto area with Routes 47–48, Cliff Cave and Safari Zone."
   },
   "audit": {
-    "lastReviewed": "2026-11-10",
+    "lastReviewed": "2026-11-11",
     "locationCount": 62,
     "numberedRouteCount": 23,
     "unresolvedInternalConnections": 0,
@@ -1420,6 +1890,8 @@
     "note": "Connectivity audit checks only that every connectsTo ID points to an entry in this regional index. Cross-region links such as Route 27 to New Bark Town are intentionally handled as regional boundaries.",
     "berryTreeCoverage": "15 berry trees recorded across 13 Johto locations; exact map coordinates remain unverified",
     "itemPickupCount": 8,
-    "itemPickupCoverage": "8 przedmiotów do podniesienia w 3 lokacjach; opisy źródłowe, współrzędne niezweryfikowane"
+    "itemPickupCoverage": "8 przedmiotów do podniesienia w 3 lokacjach; opisy źródłowe, współrzędne niezweryfikowane",
+    "trainerRecordCount": 22,
+    "trainerCoverage": "22 potwierdzone wpisy trenerów w Route 31, Route 32, Union Cave i Route 33; piętra i drużyny zapisane, współrzędne niezweryfikowane"
   }
 }
