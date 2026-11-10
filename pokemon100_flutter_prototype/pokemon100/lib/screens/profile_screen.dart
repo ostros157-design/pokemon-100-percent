@@ -31,7 +31,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
     'lets_go_pikachu': "Pokémon: Let's Go, Pikachu!",
     'lets_go_eevee': "Pokémon: Let's Go, Eevee!",
     'sword_shield': 'Pokémon Sword / Shield',
-    'brilliant_diamond_shining_pearl': 'Pokémon Brilliant Diamond / Shining Pearl',
+    'brilliant_diamond_shining_pearl':
+        'Pokémon Brilliant Diamond / Shining Pearl',
     'legends_arceus': 'Pokémon Legends: Arceus',
     'scarlet_violet': 'Pokémon Scarlet / Violet',
   };
@@ -93,7 +94,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   child: ListTile(
                     leading: const Icon(Icons.track_changes),
                     title: const Text('Postęp Pokémon 100%'),
-                    subtitle: Text('$_progressPercent% — poradniki i Pokédex dla wybranej gry'),
+                    subtitle: Text(
+                        '$_progressPercent% — poradniki i Pokédex dla wybranej gry'),
                   ),
                 ),
                 Card(

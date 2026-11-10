@@ -54,6 +54,7 @@ class _PokemonMusicScreenState extends State<PokemonMusicScreen> {
     setState(() => _autoStartEnabled = enabled);
     await _music.setAutoStartEnabled(enabled);
   }
+
   Future<void> _togglePlayback() async {
     if (_loading) return;
     setState(() => _loading = true);
@@ -66,7 +67,8 @@ class _PokemonMusicScreenState extends State<PokemonMusicScreen> {
     } catch (_) {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Nie udało się uruchomić muzyki offline.')),
+          const SnackBar(
+              content: Text('Nie udało się uruchomić muzyki offline.')),
         );
       }
     } finally {
@@ -91,7 +93,9 @@ class _PokemonMusicScreenState extends State<PokemonMusicScreen> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final max = _duration.inMilliseconds > 0 ? _duration.inMilliseconds.toDouble() : 1.0;
+    final max = _duration.inMilliseconds > 0
+        ? _duration.inMilliseconds.toDouble()
+        : 1.0;
     final current = _position.inMilliseconds.clamp(0, max.toInt()).toDouble();
     return Scaffold(
       appBar: AppBar(title: const Text('Muzyka Pokémon')),
@@ -106,38 +110,68 @@ class _PokemonMusicScreenState extends State<PokemonMusicScreen> {
               gradient: const LinearGradient(
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
-                colors: [Color(0xFF283E75), Color(0xFF7654A8), Color(0xFFDB8B78)],
+                colors: [
+                  Color(0xFF283E75),
+                  Color(0xFF7654A8),
+                  Color(0xFFDB8B78)
+                ],
               ),
             ),
-            child: const Center(child: Icon(Icons.graphic_eq_rounded, size: 104, color: Colors.white)),
+            child: const Center(
+                child: Icon(Icons.graphic_eq_rounded,
+                    size: 104, color: Colors.white)),
           ),
           const SizedBox(height: 24),
-          Text('Pokémon 100% — spokojna podróż', textAlign: TextAlign.center,
-              style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
+          Text('Pokémon 100% — spokojna podróż',
+              textAlign: TextAlign.center,
+              style: theme.textTheme.titleLarge
+                  ?.copyWith(fontWeight: FontWeight.bold)),
           const SizedBox(height: 8),
-          Text('Oryginalna melodia • działa całkowicie offline', textAlign: TextAlign.center,
-              style: theme.textTheme.bodyMedium),
+          Text('Oryginalna melodia • działa całkowicie offline',
+              textAlign: TextAlign.center, style: theme.textTheme.bodyMedium),
           const SizedBox(height: 24),
-          Slider(value: current, max: max, onChanged: _duration == Duration.zero ? null : (value) async {
-            await _player.seek(Duration(milliseconds: value.round()));
-          }),
-          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Text(_time(_position)), Text(_time(_duration))]),
+          Slider(
+              value: current,
+              max: max,
+              onChanged: _duration == Duration.zero
+                  ? null
+                  : (value) async {
+                      await _player.seek(Duration(milliseconds: value.round()));
+                    }),
+          Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [Text(_time(_position)), Text(_time(_duration))]),
           const SizedBox(height: 18),
-          Center(child: FilledButton.tonalIcon(
+          Center(
+              child: FilledButton.tonalIcon(
             onPressed: _loading ? null : _togglePlayback,
             icon: _loading
-                ? const SizedBox(width: 20, height: 20, child: CircularProgressIndicator(strokeWidth: 2))
-                : Icon(_isPlaying ? Icons.pause_rounded : Icons.play_arrow_rounded, size: 30),
-            label: Text(_loading ? 'Uruchamianie…' : _isPlaying ? 'Pauza' : 'Odtwórz'),
-            style: FilledButton.styleFrom(padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 16)),
+                ? const SizedBox(
+                    width: 20,
+                    height: 20,
+                    child: CircularProgressIndicator(strokeWidth: 2))
+                : Icon(
+                    _isPlaying ? Icons.pause_rounded : Icons.play_arrow_rounded,
+                    size: 30),
+            label: Text(_loading
+                ? 'Uruchamianie…'
+                : _isPlaying
+                    ? 'Pauza'
+                    : 'Odtwórz'),
+            style: FilledButton.styleFrom(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 28, vertical: 16)),
           )),
           const SizedBox(height: 24),
           Row(children: [
             const Icon(Icons.volume_down),
-            Expanded(child: Slider(value: _volume, onChanged: (value) {
-              setState(() => _volume = value);
-              unawaited(_music.setVolume(value).catchError((_) {}));
-            })),
+            Expanded(
+                child: Slider(
+                    value: _volume,
+                    onChanged: (value) {
+                      setState(() => _volume = value);
+                      unawaited(_music.setVolume(value).catchError((_) {}));
+                    })),
             const Icon(Icons.volume_up),
           ]),
           const SizedBox(height: 12),
@@ -147,17 +181,26 @@ class _PokemonMusicScreenState extends State<PokemonMusicScreen> {
               onChanged: _setAutoStartEnabled,
               secondary: const Icon(Icons.music_note),
               title: const Text('Automatyczna muzyka w tle'),
-              subtitle: const Text('Uruchamiaj melodię po otwarciu aplikacji; ręczną pauzę kontrolujesz przyciskiem odtwarzania.'),
+              subtitle: const Text(
+                  'Uruchamiaj melodię po otwarciu aplikacji; ręczną pauzę kontrolujesz przyciskiem odtwarzania.'),
             ),
           ),
           const SizedBox(height: 8),
-          const Card(child: Padding(padding: EdgeInsets.all(16), child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [Icon(Icons.offline_bolt_outlined), SizedBox(width: 12), Expanded(
-              child: Text('Utwór jest zapisany wewnątrz aplikacji. Nie używa transmisji danych, nie wymaga konta ani pobierania muzyki. Po przejściu aplikacji do tła muzyka pauzuje się; po powrocie wznowi się tylko wtedy, gdy wcześniej grała.',
-                  style: TextStyle(height: 1.45)),
-            )],
-          ))),
+          const Card(
+              child: Padding(
+                  padding: EdgeInsets.all(16),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Icon(Icons.offline_bolt_outlined),
+                      SizedBox(width: 12),
+                      Expanded(
+                        child: Text(
+                            'Utwór jest zapisany wewnątrz aplikacji. Nie używa transmisji danych, nie wymaga konta ani pobierania muzyki. Po przejściu aplikacji do tła muzyka pauzuje się; po powrocie wznowi się tylko wtedy, gdy wcześniej grała.',
+                            style: TextStyle(height: 1.45)),
+                      )
+                    ],
+                  ))),
         ],
       ),
     );

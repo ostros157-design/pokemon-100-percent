@@ -104,24 +104,24 @@ void main() {
     }
 
     final masterTrainers = locations
-        .expand((raw) => (raw as Map<String, dynamic>)['trainers'] as List? ?? [])
+        .expand(
+            (raw) => (raw as Map<String, dynamic>)['trainers'] as List? ?? [])
         .where(
           (trainer) =>
               trainer is String && trainer.startsWith('Master Trainer'),
         )
         .toList();
     expect(masterTrainers.length, 153);
-    final masterTrainerSpecies = masterTrainers
-        .map((trainer) {
-          final entry = trainer as String;
-          final pokemon = entry.split(' — ').last;
-          return pokemon.split(RegExp(r'\s+Lv\.|\s+\(bez walki')).first.trim();
-        })
-        .toSet();
+    final masterTrainerSpecies = masterTrainers.map((trainer) {
+      final entry = trainer as String;
+      final pokemon = entry.split(' — ').last;
+      return pokemon.split(RegExp(r'\s+Lv\.|\s+\(bez walki')).first.trim();
+    }).toSet();
     expect(
       masterTrainerSpecies.length,
       153,
-      reason: 'Every Kanto species plus Meltan and Melmetal should have one Master Trainer.',
+      reason:
+          'Every Kanto species plus Meltan and Melmetal should have one Master Trainer.',
     );
   });
 
@@ -162,7 +162,8 @@ void main() {
     expect(find.textContaining('Lass Sal'), findsOneWidget);
   });
 
-  testWidgets('locations with only features and events still show their details',
+  testWidgets(
+      'locations with only features and events still show their details',
       (tester) async {
     tester.view.physicalSize = const Size(1200, 2200);
     tester.view.devicePixelRatio = 1;

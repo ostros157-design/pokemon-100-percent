@@ -18,7 +18,8 @@ void main() {
 
   test('all achievements are visible and have unique ids', () {
     expect(achievementsList, isNotEmpty);
-    expect(achievementsList.every((achievement) => !achievement.hidden), isTrue);
+    expect(
+        achievementsList.every((achievement) => !achievement.hidden), isTrue);
     expect(
       achievementsList.map((achievement) => achievement.id).toSet().length,
       achievementsList.length,
@@ -62,9 +63,12 @@ void main() {
         reason: 'Expected $id after all Emerald guide steps were completed.',
       );
     }
-    expect(progress.automaticallyUnlockedIds, isNot(contains('first_evolution')));
-    expect(progress.automaticallyUnlockedIds, isNot(contains('trade_evolution')));
-    expect(progress.automaticallyUnlockedIds, isNot(contains('games_complete')));
+    expect(
+        progress.automaticallyUnlockedIds, isNot(contains('first_evolution')));
+    expect(
+        progress.automaticallyUnlockedIds, isNot(contains('trade_evolution')));
+    expect(
+        progress.automaticallyUnlockedIds, isNot(contains('games_complete')));
     expect(progress.automaticallyUnlockedIds, isNot(contains('all_games')));
   });
 
@@ -101,10 +105,12 @@ void main() {
     }
     expect(progress.globalCaughtCount, 101);
     expect(progress.selectedGamePokemonTotal, 153);
-    expect(progress.automaticallyUnlockedIds, isNot(contains('pokedex_complete')));
+    expect(
+        progress.automaticallyUnlockedIds, isNot(contains('pokedex_complete')));
   });
 
-  test('a completed game uses its verified availability list for 100%', () async {
+  test('a completed game uses its verified availability list for 100%',
+      () async {
     final guide = guidesList.firstWhere(
       (candidate) => candidate.gameId == 'lets_go_pikachu',
     );

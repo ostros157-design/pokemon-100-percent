@@ -52,7 +52,8 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
     final updated = Set<String>.from(_manualUnlockedIds);
     if (!updated.add(achievementId)) updated.remove(achievementId);
     final preferences = await SharedPreferences.getInstance();
-    await preferences.setStringList(_manualUnlockedKey, updated.toList()..sort());
+    await preferences.setStringList(
+        _manualUnlockedKey, updated.toList()..sort());
     if (!mounted) return;
     setState(() => _manualUnlockedIds = updated);
   }
@@ -104,9 +105,12 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
                             return AchievementCard(
                               achievement: achievement,
                               unlocked: _isUnlocked(achievement),
-                              manuallyUnlocked: _manualUnlockedIds.contains(achievement.id),
-                              canManuallyUnlock: !_isAutomaticallyUnlocked(achievement),
-                              onManualToggle: () => _toggleManualUnlock(achievement.id),
+                              manuallyUnlocked:
+                                  _manualUnlockedIds.contains(achievement.id),
+                              canManuallyUnlock:
+                                  !_isAutomaticallyUnlocked(achievement),
+                              onManualToggle: () =>
+                                  _toggleManualUnlock(achievement.id),
                             );
                           },
                         ),

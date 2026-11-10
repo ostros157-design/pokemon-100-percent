@@ -53,9 +53,8 @@ class AchievementProgressService {
     };
 
     final caughtByGame = <String, Set<int>>{};
-    final caughtKeys = preferences
-        .getKeys()
-        .where((key) => key.startsWith(_caughtKeyPrefix));
+    final caughtKeys =
+        preferences.getKeys().where((key) => key.startsWith(_caughtKeyPrefix));
     for (final key in caughtKeys) {
       final gameId = key.substring(_caughtKeyPrefix.length);
       if (gameId.isEmpty) continue;
@@ -67,14 +66,12 @@ class AchievementProgressService {
     if (caughtByGame.isEmpty) {
       final legacyIds = preferences.getStringList(_legacyCaughtKey);
       if (legacyIds != null) {
-        caughtByGame[selectedGameId] =
-            _parseIds(legacyIds)..retainAll(validPokemonIds);
+        caughtByGame[selectedGameId] = _parseIds(legacyIds)
+          ..retainAll(validPokemonIds);
       }
     }
 
-    final allCaughtIds = caughtByGame.values
-        .expand((ids) => ids)
-        .toSet()
+    final allCaughtIds = caughtByGame.values.expand((ids) => ids).toSet()
       ..retainAll(validPokemonIds);
     final selectedGameIds =
         Set<int>.from(caughtByGame[selectedGameId] ?? const <int>{});
@@ -186,10 +183,9 @@ class AchievementProgressService {
       final availableIds = _availablePokemonIds(gameId);
       if (availableIds.isEmpty) continue;
       final total = (guideTotals[gameId] ?? 0) + availableIds.length;
-      final caughtCount =
-          (caughtByGame[gameId] ?? const <int>{})
-              .intersection(availableIds)
-              .length;
+      final caughtCount = (caughtByGame[gameId] ?? const <int>{})
+          .intersection(availableIds)
+          .length;
       final completed = (guideCompleted[gameId] ?? 0) + caughtCount;
       progressByGame[gameId] = total == 0
           ? 0
@@ -197,10 +193,8 @@ class AchievementProgressService {
     }
 
     final selectedGameTotalGuideSteps = guideTotals[selectedGameId] ?? 0;
-    final selectedGameCompletedGuideSteps =
-        guideCompleted[selectedGameId] ?? 0;
-    final selectedGameProgressPercent =
-        progressByGame[selectedGameId] ?? 0;
+    final selectedGameCompletedGuideSteps = guideCompleted[selectedGameId] ?? 0;
+    final selectedGameProgressPercent = progressByGame[selectedGameId] ?? 0;
 
     final automaticallyUnlocked = <String>{};
     if (allCaughtIds.isNotEmpty) automaticallyUnlocked.add('first_pokemon');
@@ -253,9 +247,7 @@ class AchievementProgressService {
 
     final savedTeams = _readSavedTeamIds(preferences);
     for (final teamIds in savedTeams) {
-      final validTeamIds = teamIds
-          .where(validPokemonIds.contains)
-          .toSet();
+      final validTeamIds = teamIds.where(validPokemonIds.contains).toSet();
       if (validTeamIds.length >= 6) {
         automaticallyUnlocked.add('full_team');
       }
@@ -276,8 +268,7 @@ class AchievementProgressService {
       selectedGameCompletedGuideSteps: selectedGameCompletedGuideSteps,
       selectedGameTotalGuideSteps: selectedGameTotalGuideSteps,
       selectedGameProgressPercent: selectedGameProgressPercent,
-      automaticallyUnlockedIds:
-          Set<String>.unmodifiable(automaticallyUnlocked),
+      automaticallyUnlockedIds: Set<String>.unmodifiable(automaticallyUnlocked),
     );
   }
 
@@ -311,10 +302,8 @@ class AchievementProgressService {
         .toSet();
   }
 
-  static Set<int> _parseIds(List<String> values) => values
-      .map(int.tryParse)
-      .whereType<int>()
-      .toSet();
+  static Set<int> _parseIds(List<String> values) =>
+      values.map(int.tryParse).whereType<int>().toSet();
 
   static List<Set<int>> _readSavedTeamIds(
     SharedPreferences preferences,
