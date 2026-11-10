@@ -108,7 +108,7 @@ class _MapsScreenState extends State<MapsScreen> {
     if (gameId == 'legends_arceus') return 'Hisui';
     if ({'red', 'blue', 'yellow', 'fire_red', 'leaf_green'}
         .contains(gameId)) return 'Kanto';
-    if ({'gold', 'silver', 'crystal'}.contains(gameId)) return 'Johto';
+    if ({'gold_silver', 'crystal', 'heart_gold_soul_silver'}.contains(gameId)) return 'Johto';
     if ({'ruby', 'sapphire', 'emerald', 'omega_ruby', 'alpha_sapphire'}
         .contains(gameId)) return 'Hoenn';
     if ({'brilliant_diamond', 'shining_pearl'}.contains(gameId)) return 'Sinnoh';
@@ -125,7 +125,7 @@ class _MapsScreenState extends State<MapsScreen> {
       _selectedMapRegionOverride ?? _defaultMapIndexRegionName;
 
   List<String> get _availableMapRegionsForSelectedGame {
-    if ({'gold', 'silver', 'crystal'}.contains(_selectedGameId)) {
+    if ({'gold_silver', 'crystal', 'heart_gold_soul_silver'}.contains(_selectedGameId)) {
       return const <String>['Johto', 'Kanto'];
     }
     if ({'fire_red', 'leaf_green'}.contains(_selectedGameId)) {
