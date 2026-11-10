@@ -1727,6 +1727,69 @@ class _MapsScreenState extends State<MapsScreen> {
                                     ],
                                   ),
                                 ),
+                              ] else if (_selectedGameId == 'legends_arceus') ...[
+                                const SizedBox(height: 12),
+                                Container(
+                                  width: double.infinity,
+                                  padding: const EdgeInsets.all(14),
+                                  decoration: BoxDecoration(
+                                    border: Border.all(
+                                      color: Theme.of(context).colorScheme.outlineVariant,
+                                    ),
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      const Row(
+                                        children: [
+                                          Icon(Icons.map_outlined),
+                                          SizedBox(width: 8),
+                                          Expanded(
+                                            child: Text(
+                                              'Mapa offline Hisui — podgląd obszaru',
+                                              style: TextStyle(fontWeight: FontWeight.w700),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      const SizedBox(height: 8),
+                                      const Text(
+                                        'Dodany plik przedstawia podgląd jednego obszaru Hisui. Nie jest jeszcze pełną mapą wszystkich pięciu obszarów i nie zawiera pinezek z danymi aplikacji.',
+                                      ),
+                                      const SizedBox(height: 10),
+                                      ClipRRect(
+                                        borderRadius: BorderRadius.circular(10),
+                                        child: ColoredBox(
+                                          color: const Color(0xFFF0E9D6),
+                                          child: AspectRatio(
+                                            aspectRatio: 1,
+                                            child: InteractiveViewer(
+                                              minScale: 1,
+                                              maxScale: 5,
+                                              child: Image.asset(
+                                                'assets/maps/gen1/pokemon-legends-arceus-hisui-area00-preview.webp',
+                                                fit: BoxFit.contain,
+                                                width: double.infinity,
+                                                errorBuilder: (context, error, stackTrace) =>
+                                                    const Center(
+                                                  child: Text(
+                                                    'Nie udało się wczytać pliku mapy Hisui.',
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      const SizedBox(height: 8),
+                                      const Text(
+                                        'Przybliżaj i przesuwaj mapę gestami. Kolejne obszary oraz dokładne lokalizacje Pokémonów, przedmiotów i trenerów wymagają osobnych plików i weryfikacji.',
+                                        style: TextStyle(fontSize: 12),
+                                      ),
+                                    ],
+                                  ),
+                                ),
                               ] else if (_generation == 1) ...[
                                 const SizedBox(height: 12),
                                 const Text(
