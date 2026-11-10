@@ -140,9 +140,18 @@ class _MapsScreenState extends State<MapsScreen> {
   List<Map<String, dynamic>> get _activeMapIndexLocations {
     final raw = _activeMapIndex?['locations'];
     if (raw is! List) return const <Map<String, dynamic>>[];
-    return raw
-        .whereType<Map<String, dynamic>>()
-        .toList(growable: false);
+
+    final isOriginalJohtoGame = {'gold_silver', 'crystal'}
+        .contains(_selectedGameId);
+    return raw.whereType<Map<String, dynamic>>().where((location) {
+      final availableIn = location['availableIn'];
+      if (availableIn is! List || availableIn.isEmpty) return true;
+      if (isOriginalJohtoGame) return false;
+      if (_selectedGameId == 'heart_gold_soul_silver') {
+        return availableIn.contains('heart_gold_soul_silver');
+      }
+      return true;
+    }).toList(growable: false);
   }
 
   bool _matchesMapLocation(
