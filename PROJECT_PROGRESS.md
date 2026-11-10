@@ -6173,3 +6173,9 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 | Flutter analyze, testy i APK | 5% | Do zrobienia — nie uruchomiono |
 
 **Bieżący wynik: 35/100 punktów.** Audyt indeksu Johto zapisano również w pliku assets/data/maps/johto_audit.json. Wynik nie oznacza ukończenia mapy ani przetestowania aplikacji.
+
+
+### Dodatkowa kontrola danych Johto — 2026-11-10
+- Dodano test regresyjny `test/johto_map_audit_test.dart`: sprawdza 62 lokacje, 23 trasy, integralność połączeń, brak niezweryfikowanych współrzędnych oraz sześć lokacji dostępnych wyłącznie w HeartGold/SoulSilver.
+- Test został zapisany w repozytorium, ale nie został uruchomiony. Nie podnoszę za niego procentu ukończenia — etap walidacji zaliczę dopiero po rzeczywistym uruchomieniu testów Flutter.
+- Aktualny postęp mapy Pokémon Silver pozostaje **35%**.
