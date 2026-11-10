@@ -112,4 +112,29 @@ void main() {
     }
   });
 
+
+  test('Silver Johto berry trees are source-tracked without guessed coordinates', () {
+    final locations = audit['locations'] as List<dynamic>;
+    final trees = <Map<String, dynamic>>[];
+
+    for (final value in locations) {
+      final location = value as Map<String, dynamic>;
+      final rawTrees = location['berryTrees'] as List<dynamic>? ?? const [];
+      for (final tree in rawTrees) {
+        trees.add(tree as Map<String, dynamic>);
+        expect(tree['coordinateStatus'], 'unverified');
+        expect(tree['sourceIds'], contains('bulbapedia-berry-tree-generation-ii'));
+        expect(tree['availableIn'], contains('gold_silver'));
+      }
+    }
+
+    expect(trees, hasLength(15));
+    expect(
+      locations.where((value) =>
+          ((value as Map<String, dynamic>)['berryTrees'] as List?)?.isNotEmpty ??
+          false),
+      hasLength(13),
+    );
+  });
+
 }
