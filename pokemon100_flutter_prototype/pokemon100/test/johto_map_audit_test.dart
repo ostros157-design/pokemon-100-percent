@@ -88,4 +88,28 @@ void main() {
       }
     }
   });
+  
+  test('shared map marker legend defines all requested marker categories', () async {
+    final json = await rootBundle.loadString(
+      'assets/data/maps/map_marker_legend.json',
+    );
+    final legend = jsonDecode(json) as Map<String, dynamic>;
+    final markers = (legend['markers'] as List<dynamic>)
+        .cast<Map<String, dynamic>>();
+    final ids = markers.map((marker) => marker['id']).toSet();
+
+    expect(ids, containsAll(<String>{
+      'berry_plant',
+      'spray_bottle',
+      'pokeball_item',
+      'trainer',
+    }));
+
+    for (final marker in markers) {
+      expect(marker['label'], isA<String>());
+      expect(marker['visual'], isA<String>());
+      expect(marker['appliesTo'], isA<List<dynamic>>());
+    }
+  });
+
 }
