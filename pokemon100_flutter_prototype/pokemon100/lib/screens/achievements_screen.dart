@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../data/achievements_data.dart';
+import '../data/games_data.dart';
 import '../data/pokemon_data.dart';
 import '../data/guides_data.dart';
 import '../models/achievement.dart';
@@ -28,6 +29,7 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
   bool _hasCompletedGuide = false;
   bool _hasShiny = false;
   bool _hasLegendary = false;
+  bool _hasCompletedAnyGame = false;
   int _selectedGameProgressPercent = 0;
   Set<String> _manualUnlockedIds = <String>{};
 
@@ -129,6 +131,49 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
         ? 0
         : (completedObjectives * 100 / totalObjectives).round();
 
+    var hasCompletedAnyGame = progressPercent >= 100;
+    if (!hasCompletedAnyGame) {
+      for (final game in gamesList) {
+        if (game.id == gameId) continue;
+        final savedCaughtIds = preferences.getStringList(
+              '$_caughtKeyPrefix${game.id}',
+            ) ??
+            (!hasPerGameCollections && game.id == gameId
+                ? preferences.getStringList(_legacyCaughtKey)
+                : null) ??
+            const <String>[];
+        final gameCaughtIds = savedCaughtIds
+            .map(int.tryParse)
+            .whereType<int>()
+            .toSet()
+          ..retainAll(validPokemonIds);
+
+        var gameGuideTotal = 0;
+        var gameGuideCompleted = 0;
+        for (final guide in guidesList.where((item) => item.gameId == game.id)) {
+          gameGuideTotal += guide.steps.length;
+          final savedSteps = preferences.getStringList(
+                'guide_progress_${guide.gameId}_${guide.id}',
+              ) ??
+              const <String>[];
+          gameGuideCompleted += savedSteps
+              .map(int.tryParse)
+              .whereType<int>()
+              .where((index) => index >= 0 && index < guide.steps.length)
+              .toSet()
+              .length;
+        }
+
+        final gameTotalObjectives = pokemonList.length + gameGuideTotal;
+        final gameCompletedObjectives = gameCaughtIds.length + gameGuideCompleted;
+        if (gameTotalObjectives > 0 &&
+            gameCompletedObjectives >= gameTotalObjectives) {
+          hasCompletedAnyGame = true;
+          break;
+        }
+      }
+    }
+
     if (!mounted) return;
     setState(() {
       _selectedGameId = gameId;
@@ -138,6 +183,7 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
       _hasCompletedGuide = hasCompletedGuide;
       _hasShiny = hasShiny;
       _hasLegendary = hasLegendary;
+      _hasCompletedAnyGame = hasCompletedAnyGame;
       _selectedGameProgressPercent = progressPercent;
       _manualUnlockedIds = manualUnlockedIds;
       _loading = false;
@@ -173,7 +219,7 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
       case 'three_quarters':
         return _selectedGameProgressPercent >= 75;
       case 'first_100':
-        return _selectedGameProgressPercent >= 100;
+        return _hasCompletedAnyGame;
       case 'game_complete':
         return _selectedGameProgressPercent >= 100;
       default:
