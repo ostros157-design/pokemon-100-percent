@@ -6156,3 +6156,20 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Added game-variant availability metadata to Johto locations that were introduced in HeartGold/SoulSilver: Route 47, Route 48, Cliff Cave, Cliff Edge Gate, Safari Zone Gate, and Safari Zone.
 - The offline Johto location index now hides those remake-only locations when Pokémon Gold/Silver or Crystal is selected, preventing them from appearing in the original Pokémon Silver map.
 - Exact geographic coordinates and a Silver-specific map image are still missing. No map pins were guessed. Flutter analyze, tests, and APK build have not been run.
+
+
+## Pokémon Silver / Johto — postęp prac (2026-11-10)
+
+**Postęp mapy Pokémon Silver: 35%** (ważony postęp zakresu mapy Johto, nie całej aplikacji).
+
+| Etap | Udział | Status |
+|---|---:|---|
+| Indeks 62 lokacji i połączeń Johto | 20% | Ukończone — 23 numerowane trasy; audyt wykazał 0 błędnych odwołań wewnętrznych |
+| Rozdzielenie oryginalnego Gold/Silver od Crystal i HG/SS | 15% | Ukończone — oznaczono 6 lokacji dostępnych tylko w HeartGold/SoulSilver i dodano filtr wersji |
+| Podłączenie obrazu mapy Johto dla Silvera | 20% | Do zrobienia — brak zatwierdzonego pliku mapy Silvera |
+| Zweryfikowane współrzędne miast, tras i pinezek | 20% | Do zrobienia — nie dodano pozycji na oko |
+| Warstwa spotkań Pokémonów | 10% | Do zrobienia — potrzebne dane właściwe dla Pokémon Silver |
+| Przedmioty, trenerzy i znajdźki | 10% | Do zrobienia — potrzebne dane i zweryfikowane położenia |
+| Flutter analyze, testy i APK | 5% | Do zrobienia — nie uruchomiono |
+
+**Bieżący wynik: 35/100 punktów.** Audyt indeksu Johto zapisano również w pliku assets/data/maps/johto_audit.json. Wynik nie oznacza ukończenia mapy ani przetestowania aplikacji.
