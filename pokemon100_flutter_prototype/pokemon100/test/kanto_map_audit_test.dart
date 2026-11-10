@@ -145,8 +145,8 @@ void main() {
     test('event-only reception gate retains its event data', () {
       final gate = location('pokemon_league_reception_gate');
       expect(gate['events'], isNotEmpty);
-      expect(gate['items'], isEmpty);
-      expect(gate['trainers'], isEmpty);
+      expect(gate['items'] ?? const <dynamic>[], isEmpty);
+      expect(gate['trainers'] ?? const <dynamic>[], isEmpty);
     });
   });
 
@@ -208,10 +208,10 @@ void main() {
       await tester.tap(eventsTile);
       await tester.pumpAndSettle();
 
-      final eventName = (location('pokemon_league_reception_gate')['events'] as List)
-          .cast<Map<String, dynamic>>()
-          .single['name'] as String;
-      expect(find.textContaining(eventName), findsOneWidget);
+      final eventText = (location('pokemon_league_reception_gate')['events'] as List)
+          .single
+          .toString();
+      expect(find.textContaining(eventText), findsOneWidget);
     });
   });
 }
