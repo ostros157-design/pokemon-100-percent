@@ -6149,3 +6149,10 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - W kartach lokacji dodano kolorowe znaczniki Poké Balla dla wybranych Pokémonów oraz ikony trenerów i przedmiotów do zdobycia.
 - Znaczniki lokacji bazują wyłącznie na nazwach znalezionych w danych spotkań; nie są dokładnymi współrzędnymi na grafice mapy. Brakujące dane nie są zastępowane zgadywanymi pinezkami.
 - Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK. Konieczna jest kontrola kompilacji, dopasowania nazw Pokémonów w indeksach regionów i późniejsze dodanie zweryfikowanych współrzędnych do map graficznych.
+
+
+## Pokémon Silver / Johto map work — 2026-11-10
+- Corrected map-region selection to use the actual game catalog IDs for Gold/Silver, Crystal, and HeartGold/SoulSilver. Gold/Silver and Crystal can switch between Johto and Kanto; HeartGold/SoulSilver can do the same.
+- Added game-variant availability metadata to Johto locations that were introduced in HeartGold/SoulSilver: Route 47, Route 48, Cliff Cave, Cliff Edge Gate, Safari Zone Gate, and Safari Zone.
+- The offline Johto location index now hides those remake-only locations when Pokémon Gold/Silver or Crystal is selected, preventing them from appearing in the original Pokémon Silver map.
+- Exact geographic coordinates and a Silver-specific map image are still missing. No map pins were guessed. Flutter analyze, tests, and APK build have not been run.
