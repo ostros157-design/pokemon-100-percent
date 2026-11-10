@@ -356,8 +356,11 @@ class _MapsScreenState extends State<MapsScreen> {
 
   IconData _mapItemMarkerIcon(String itemLabel) {
     final normalized = itemLabel.toLowerCase();
-    if (normalized.contains('berry') ||
-        normalized.contains('jag')) {
+    if (normalized.contains('berry tree') ||
+        normalized.contains('berry patch') ||
+        normalized.contains('planting') ||
+        normalized.contains('krzew jagodowy') ||
+        normalized.contains('miejsce sadzenia')) {
       // A sprout-like symbol represents a berry plant, not a berry pickup.
       return Icons.grass;
     }
@@ -772,9 +775,12 @@ class _MapsScreenState extends State<MapsScreen> {
                         leading: Icon(_mapItemMarkerIcon(item)),
                         title: Text(item),
                         subtitle: Text(
-                          item.toLowerCase().contains('berry') ||
-                                  item.toLowerCase().contains('jag')
-                              ? 'Oznaczenie rośliny jagodowej / miejsca jagód'
+                          item.toLowerCase().contains('berry tree') ||
+                                  item.toLowerCase().contains('berry patch') ||
+                                  item.toLowerCase().contains('planting') ||
+                                  item.toLowerCase().contains('krzew jagodowy') ||
+                                  item.toLowerCase().contains('miejsce sadzenia')
+                              ? 'Oznaczenie rośliny jagodowej / miejsca sadzenia'
                               : item.toLowerCase().contains('spray') ||
                                       item.toLowerCase().contains('repel') ||
                                       item.toLowerCase().contains('potion') ||
