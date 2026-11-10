@@ -6193,3 +6193,12 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Lista trenerów nadal ma oddzielny symbol trenera. Ikony występują obecnie w panelu szczegółów lokacji, nie jako pinezki na obrazie mapy.
 - Nie dodano współrzędnych ani nie zgadywano lokalizacji. Flutter Analyzer, testy i APK nie zostały uruchomione; trzeba sprawdzić, czy nazwy i opisy w danych są wystarczająco jednoznaczne.
 - Postęp mapy Pokémon Silver pozostaje 35% — ta zmiana jest wspólnym elementem UI i nie uzupełnia jeszcze brakujących danych Johto.
+
+
+### Pokémon Silver / Johto — drzewka jagodowe i panel lokacji (2026-11-10)
+- Uzupełniono indeks Johto o 15 potwierdzonych drzewek jagodowych w 13 lokacjach: m.in. Route 29–31, Violet City, Route 33, 35–39 oraz Route 43–46.
+- Każdy wpis zawiera rodzaj jagody, opis położenia w obrębie lokacji, informację o codziennym odrastaniu, źródło oraz status współrzędnych `unverified`. Dane są ograniczone do Gold/Silver i Crystal; nie są automatycznie przypisywane do HeartGold/SoulSilver, gdzie system drzewek jest inny.
+- Panel wybranej lokacji korzysta teraz z aktywnego indeksu regionu, a nie wyłącznie z indeksu Let's Go Kanto. Dzięki temu może pokazać również zapisane dane Johto; drzewka są wyświetlane z ikoną roślinki.
+- Dodano test sprawdzający liczbę 15 drzewek, 13 lokacji, źródła i brak deklaracji dokładnych współrzędnych.
+- Źródła danych: Bulbapedia — Berry tree (Generation II); Serebii Gold/Silver Items; Altissimo — Route 44. Pozycje opisowe nie są współrzędnymi na obrazie mapy.
+- Flutter Analyzer, testy i APK nadal nie zostały uruchomione. Postęp mapy Pokémon Silver pozostaje 35%, ponieważ nadal brakuje obrazu mapy, zweryfikowanych współrzędnych, spotkań Pokémonów i pełnych danych trenerów/przedmiotów.
