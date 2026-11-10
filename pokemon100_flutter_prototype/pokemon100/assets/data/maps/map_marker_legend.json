@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Shared visual marker vocabulary for offline regional maps.",
+  "coordinatePolicy": "Marker definitions do not create map positions. A marker is drawn only when its source-backed location is known.",
+  "markers": [
+    {
+      "id": "berry_plant",
+      "label": "Krzew jagodowy",
+      "visual": "small_sprout",
+      "description": "Mała roślinka wyrastająca z ziemi; oznacza potwierdzone miejsce zbierania lub sadzenia jagód.",
+      "appliesTo": ["berry_tree", "berry_patch", "berry_planting_spot"]
+    },
+    {
+      "id": "spray_bottle",
+      "label": "Spray / Potion",
+      "visual": "pokemon_bottle",
+      "description": "Mała buteleczka w stylu przedmiotów Pokémon; oznacza potwierdzony przedmiot z kategorii spray lub mikstura.",
+      "appliesTo": ["spray", "repel", "potion", "medicine"]
+    },
+    {
+      "id": "pokeball_item",
+      "label": "Poké Ball",
+      "visual": "pokeball",
+      "description": "Klasyczny symbol Poké Balla dla potwierdzonych znajdziek w formie kuli lub przedmiotów do zebrania.",
+      "appliesTo": ["item_ball", "pokeball_item", "collectible"]
+    },
+    {
+      "id": "trainer",
+      "label": "Trener",
+      "visual": "trainer_badge",
+      "description": "Osobny symbol trenera, odróżniony od przedmiotów i znajdziek.",
+      "appliesTo": ["trainer", "trainer_battle"]
+    }
+  ]
+}
