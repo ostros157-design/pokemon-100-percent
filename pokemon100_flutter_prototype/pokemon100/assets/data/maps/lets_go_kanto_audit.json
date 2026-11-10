@@ -1753,8 +1753,7 @@
       "items": [
         "Great Ball ×5 — na północ od wejścia do Diglett's Cave po wschodniej stronie Route 2; pozycja opisana tekstowo, bez pinezki.",
         "Leaf Stone — na południe od bramy i pierwszej półki skalnej; wymaga Chop Down.",
-        "Super Potion — na południe od drugiej półki skalnej; wymaga Chop Down.",
-        "Light Up — nagroda od pomocnika Profesora Oaka w domu na południe od Diglett's Cave po złapaniu co najmniej 10 różnych gatunków; to technika partnera, nie przedmiot do podniesienia."
+        "Super Potion — na południe od drugiej półki skalnej; wymaga Chop Down."
       ],
       "trainers": [
         "Master Trainer Bird Keeper Louey — Pidgey Lv. 65 (postgame po zostaniu Championem; południowo-zachodnia część Route 2).",
@@ -1762,7 +1761,21 @@
         "Master Trainer Bug Catcher Bobby — Butterfree Lv. 75 (postgame po zostaniu Championem; Route 2; dokładna część trasy niepotwierdzona)."
       ],
       "trainerCount": 3,
-      "trainerStatus": "postgame_master_trainers_verified_from_serebii_and_pokemondb"
+      "trainerStatus": "postgame_master_trainers_verified_from_serebii_and_pokemondb",
+      "itemsStatus": "three physical item pickups verified from Routepedia and Bulbapedia; Light Up moved to story events because it is a partner Secret Technique, not a pickup",
+      "events": [
+        {
+          "id": "light_up_secret_technique",
+          "name": "Light Up — Secret Technique",
+          "category": "story_reward",
+          "note": "Po złapaniu co najmniej 10 różnych gatunków porozmawiaj z pomocnikiem Profesora Oaka w domu na południe od Diglett’s Cave; partner nauczy się Secret Technique Light Up.",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-part7",
+            "bulbapedia-kanto-route2"
+          ]
+        }
+      ]
     },
     {
       "id": "viridian_forest",
@@ -9667,7 +9680,7 @@
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "notes": "Pokémon Road — długa trasa rowerowa między Route 16 i Route 18. Jessie i James występują tu w jednej końcowej podwójnej walce postgame; ich drużyny zapisano tylko raz w liście trenerów, a opis nagrody pozostaje w wydarzeniach.",
+      "notes": "Pokémon Road — długa trasa rowerowa między Route 16 i Route 18. Jessie i James występują tu w jednej końcowej podwójnej walce postgame; ich drużyny zapisano tylko raz w liście trenerów.",
       "sourceIds": [
         "routepedia-route17-pikachu",
         "serebii-route17",
@@ -10093,8 +10106,7 @@
         "Ukryte losowe jagody w żółtych krzakach: Razz / Nanab / Pinap oraz warianty Silver/Golden w różnych częściach trasy; opis tekstowy, bez pinezek."
       ],
       "events": [
-        "Po zostaniu Championem Jessie i James wracają na wschodnią część Route 17 i wyzywają gracza na ostatnią walkę; po zwycięstwie otrzymuje się Blast-Off Set.",
-        "Postgame: Jessie i James wracają na Route 17; ich ostatnia walka to Arbok Lv. 52 i Weezing Lv. 52. Nagroda: Blast-Off Set."
+        "Po zostaniu Championem Jessie i James wracają na wschodnią część Route 17. Ostatnia podwójna walka: Jessie używa Arbok Lv. 52, a James Weezing Lv. 52; zwycięstwo daje Blast-Off Set."
       ],
       "trainerCount": 15,
       "trainerStatus": "story_and_postgame_double_battle_verified_from_bulbapedia_and_serebii"
