@@ -354,6 +354,25 @@ class _MapsScreenState extends State<MapsScreen> {
     ].join(' — ');
   }
 
+  IconData _mapItemMarkerIcon(String itemLabel) {
+    final normalized = itemLabel.toLowerCase();
+    if (normalized.contains('berry') ||
+        normalized.contains('jag')) {
+      // A sprout-like symbol represents a berry plant, not a berry pickup.
+      return Icons.grass;
+    }
+    if (normalized.contains('spray') ||
+        normalized.contains('repel') ||
+        normalized.contains('potion') ||
+        normalized.contains('medicine') ||
+        normalized.contains('mikstur')) {
+      // Flask symbol for spray bottles and medicinal items.
+      return Icons.science_outlined;
+    }
+    // Poké Ball is the default marker for ordinary item-ball pickups.
+    return Icons.catching_pokemon;
+  }
+
   IconData _mapFeatureIcon(String category) {
     switch (category) {
       case 'building':
@@ -747,10 +766,24 @@ class _MapsScreenState extends State<MapsScreen> {
                   'Lista tekstowa — bez niepotwierdzonych pinezek',
                 ),
                 children: [
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(items.map((item) => '• $item').join('\n')),
-                  ),
+                  ...items.map((item) => ListTile(
+                        dense: true,
+                        contentPadding: EdgeInsets.zero,
+                        leading: Icon(_mapItemMarkerIcon(item)),
+                        title: Text(item),
+                        subtitle: Text(
+                          item.toLowerCase().contains('berry') ||
+                                  item.toLowerCase().contains('jag')
+                              ? 'Oznaczenie rośliny jagodowej / miejsca jagód'
+                              : item.toLowerCase().contains('spray') ||
+                                      item.toLowerCase().contains('repel') ||
+                                      item.toLowerCase().contains('potion') ||
+                                      item.toLowerCase().contains('medicine')
+                                  ? 'Oznaczenie buteleczki / sprayu'
+                                  : 'Znajdźka — symbol Poké Balla',
+                          style: Theme.of(context).textTheme.labelSmall,
+                        ),
+                      )),
                 ],
               ),
             if (dataStatus.isNotEmpty) ...[
