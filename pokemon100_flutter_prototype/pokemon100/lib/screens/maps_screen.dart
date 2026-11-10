@@ -316,7 +316,11 @@ class _MapsScreenState extends State<MapsScreen> {
         notableNotes.isEmpty &&
         items.isEmpty &&
         locationNotes.isEmpty &&
-        trainerCount == null) {
+        trainers.isEmpty &&
+        features.isEmpty &&
+        events.isEmpty &&
+        trainerCount == null &&
+        hiddenItemCount == null) {
       return Card(
         child: Padding(
           padding: const EdgeInsets.all(16),
@@ -1085,13 +1089,14 @@ class _MapsScreenState extends State<MapsScreen> {
     final normalizedQuery = _searchQuery.trim().toLowerCase();
     // Every named node on the full Kanto schematic can be selected, not
     // only the first few tutorial locations.
-    final localSchematicLocations = _KantoMapPainter.places
-        .map((place) => place.name)
-        .toList(growable: false);
     String? selectedLocalLocation;
-    for (final location in localSchematicLocations) {
-      if (location.toLowerCase() == normalizedQuery) {
-        selectedLocalLocation = location;
+    for (final place in _KantoMapPainter.places) {
+      final matchesName = place.name.toLowerCase() == normalizedQuery;
+      final matchesAlias = place.aliases.any(
+        (alias) => alias.toLowerCase() == normalizedQuery,
+      );
+      if (matchesName || matchesAlias) {
+        selectedLocalLocation = place.name;
         break;
       }
     }
