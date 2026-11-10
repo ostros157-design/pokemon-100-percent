@@ -493,7 +493,7 @@ class _MapsScreenState extends State<MapsScreen> {
                   Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      hiddenItems.map((item) => '• $item').join('\\n'),
+                      hiddenItems.map((item) => '• $item').join('\n'),
                     ),
                   ),
                 ],
