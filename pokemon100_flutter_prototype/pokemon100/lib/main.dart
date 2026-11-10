@@ -22,15 +22,55 @@ class PokemonGuideApp extends StatefulWidget {
   State<PokemonGuideApp> createState() => _PokemonGuideAppState();
 }
 
-class _PokemonGuideAppState extends State<PokemonGuideApp> {
+class _PokemonGuideAppState extends State<PokemonGuideApp>
+    with WidgetsBindingObserver {
+  bool _musicWasPlayingBeforeBackground = false;
   @override
   void initState() {
     super.initState();
+    WidgetsBinding.instance.addObserver(this);
     WidgetsBinding.instance.addPostFrameCallback((_) {
       unawaited(NotificationService.initialize());
-      unawaited(PokemonMusicService.instance.startIfEnabled());
+      unawaited(_startMusicSafely());
       AppUpdateService.startDailyChecks();
     });
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    final music = PokemonMusicService.instance;
+    if (state == AppLifecycleState.hidden || state == AppLifecycleState.paused) {
+      if (music.isPlaying) _musicWasPlayingBeforeBackground = true;
+      return;
+    }
+
+    if (state == AppLifecycleState.resumed &&
+        _musicWasPlayingBeforeBackground) {
+      _musicWasPlayingBeforeBackground = false;
+      unawaited(_resumeMusicSafely());
+    }
+  }
+
+  Future<void> _startMusicSafely() async {
+    try {
+      await PokemonMusicService.instance.startIfEnabled();
+    } catch (_) {
+      // Music must never prevent the app from opening when audio is unavailable.
+    }
+  }
+
+  Future<void> _resumeMusicSafely() async {
+    try {
+      await PokemonMusicService.instance.resumeIfInterrupted();
+    } catch (_) {
+      // The next explicit play action can retry if the platform interrupted audio.
+    }
+  }
+
+  @override
+  void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    super.dispose();
   }
 
   @override
