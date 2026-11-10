@@ -6202,3 +6202,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Dodano test sprawdzający liczbę 15 drzewek, 13 lokacji, źródła i brak deklaracji dokładnych współrzędnych.
 - Źródła danych: Bulbapedia — Berry tree (Generation II); Serebii Gold/Silver Items; Altissimo — Route 44. Pozycje opisowe nie są współrzędnymi na obrazie mapy.
 - Flutter Analyzer, testy i APK nadal nie zostały uruchomione. Postęp mapy Pokémon Silver pozostaje 35%, ponieważ nadal brakuje obrazu mapy, zweryfikowanych współrzędnych, spotkań Pokémonów i pełnych danych trenerów/przedmiotów.
+
+
+### Pokémon Silver / Johto — pierwsze zwykłe znajdźki (2026-11-10)
+- Dodano 8 źródłowo potwierdzonych przedmiotów w 3 lokacjach: Potion na Route 29; Miracle Seed, Potion i ukryty Super Potion na Route 32; Potion, Great Ball, X Attack i Awakening na 1F Union Cave.
+- Wpisy są ograniczone do oryginalnego Gold/Silver (availableIn: [gold_silver]), zawierają opisy z walkthrough oraz źródło Bulbapedia. Wszystkie mają coordinateStatus: unverified — opis lokacji nie jest udawany jako współrzędne ani pinezka.
+- Rozszerzono johto_map_audit_test.dart o kontrolę liczby 8 znajdziek, 3 lokacji, źródeł i ograniczenia wersji gry. Test został zapisany, ale nie został uruchomiony.
+- Źródła: Bulbapedia — oryginalny walkthrough Gold/Silver, część 1 (Route 29), część 4 (Route 32 i Union Cave).
+- Nie uruchomiono Flutter Analyzer, testów ani APK. Postęp mapy Pokémon Silver pozostaje 35% — to częściowe uzupełnienie kategorii przedmiotów; nadal brakuje pełnej listy znajdziek, trenerów, spotkań Pokémonów, mapy graficznej i zweryfikowanych współrzędnych.
