@@ -6179,3 +6179,9 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Dodano test regresyjny `test/johto_map_audit_test.dart`: sprawdza 62 lokacje, 23 trasy, integralność połączeń, brak niezweryfikowanych współrzędnych oraz sześć lokacji dostępnych wyłącznie w HeartGold/SoulSilver.
 - Test został zapisany w repozytorium, ale nie został uruchomiony. Nie podnoszę za niego procentu ukończenia — etap walidacji zaliczę dopiero po rzeczywistym uruchomieniu testów Flutter.
 - Aktualny postęp mapy Pokémon Silver pozostaje **35%**.
+
+
+### Wspólny słownik oznaczeń map — 2026-11-10
+- Dodano `assets/data/maps/map_marker_legend.json` jako wspólny słownik symboli dla map offline: mała roślinka dla krzewów i miejsc sadzenia jagód, buteleczka w stylu Pokémon dla sprayów/mikstur, Poké Ball dla znajdziek oraz osobny symbol trenera.
+- Słownik określa znaczenie i kategorie symboli, ale nie tworzy pinezek ani współrzędnych. Oznaczenia będą rysowane dopiero przy lokacjach potwierdzonych w danych konkretnej gry.
+- To przygotowanie standardu wizualnego; nie jest jeszcze podłączeniem ikon do interfejsu. Nie uruchomiono Flutter Analyzer, testów ani APK. Postęp mapy Pokémon Silver pozostaje 35%.
