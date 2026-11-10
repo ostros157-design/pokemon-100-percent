@@ -92,7 +92,12 @@ class PokemonMusicService with WidgetsBindingObserver {
   }
 
   Future<void> startIfEnabled() async {
-    if (await getAutoStartEnabled()) await playOrResume();
+    if (!await getAutoStartEnabled()) return;
+    try {
+      await playOrResume();
+    } catch (_) {
+      // A missing or interrupted audio backend must not block app startup.
+    }
   }
 
   Future<void> playOrResume() async {
