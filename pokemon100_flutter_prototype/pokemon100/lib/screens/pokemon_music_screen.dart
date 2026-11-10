@@ -147,14 +147,14 @@ class _PokemonMusicScreenState extends State<PokemonMusicScreen> {
               onChanged: _setAutoStartEnabled,
               secondary: const Icon(Icons.music_note),
               title: const Text('Automatyczna muzyka w tle'),
-              subtitle: const Text('Uruchamiaj melodię po otwarciu aplikacji.'),
+              subtitle: const Text('Uruchamiaj melodię po otwarciu aplikacji; ręczną pauzę kontrolujesz przyciskiem odtwarzania.'),
             ),
           ),
           const SizedBox(height: 8),
           const Card(child: Padding(padding: EdgeInsets.all(16), child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [Icon(Icons.offline_bolt_outlined), SizedBox(width: 12), Expanded(
-              child: Text('Utwór jest zapisany wewnątrz aplikacji. Nie używa transmisji danych, nie wymaga konta ani pobierania muzyki.',
+              child: Text('Utwór jest zapisany wewnątrz aplikacji. Nie używa transmisji danych, nie wymaga konta ani pobierania muzyki. Po przejściu aplikacji do tła muzyka pauzuje się; po powrocie wznowi się tylko wtedy, gdy wcześniej grała.',
                   style: TextStyle(height: 1.45)),
             )],
           ))),
