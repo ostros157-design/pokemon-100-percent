@@ -792,7 +792,10 @@
         "bulbapedia-johto-region",
         "bulbapedia-route-list"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit"
+      "dataStatus": "topology_index_needs_game_variant_audit",
+      "availableIn": [
+        "heart_gold_soul_silver"
+      ]
     },
     {
       "id": "route_48",
@@ -809,7 +812,10 @@
         "bulbapedia-johto-region",
         "bulbapedia-route-list"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit"
+      "dataStatus": "topology_index_needs_game_variant_audit",
+      "availableIn": [
+        "heart_gold_soul_silver"
+      ]
     },
     {
       "id": "cliff_cave",
@@ -824,7 +830,10 @@
         "bulbapedia-johto-region",
         "bulbapedia-route-list"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit"
+      "dataStatus": "topology_index_needs_game_variant_audit",
+      "availableIn": [
+        "heart_gold_soul_silver"
+      ]
     },
     {
       "id": "safari_zone_gate",
@@ -840,7 +849,10 @@
         "bulbapedia-johto-region",
         "bulbapedia-route-list"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit"
+      "dataStatus": "topology_index_needs_game_variant_audit",
+      "availableIn": [
+        "heart_gold_soul_silver"
+      ]
     },
     {
       "id": "safari_zone",
@@ -856,7 +868,10 @@
         "bulbapedia-johto-region",
         "bulbapedia-route-list"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit"
+      "dataStatus": "topology_index_needs_game_variant_audit",
+      "availableIn": [
+        "heart_gold_soul_silver"
+      ]
     },
     {
       "id": "mt_silver",
@@ -1001,7 +1016,10 @@
         "bulbapedia-route-list",
         "bulbapedia-johto-region"
       ],
-      "dataStatus": "connection_verified_details_pending"
+      "dataStatus": "connection_verified_details_pending",
+      "availableIn": [
+        "heart_gold_soul_silver"
+      ]
     },
     {
       "id": "pokemon_league_reception_gate",
@@ -1034,5 +1052,10 @@
       ],
       "dataStatus": "cross_region_connection_reference"
     }
-  ]
+  ],
+  "gameVariantNotes": {
+    "gold_silver": "Johto base game. Do not show Route 47, Route 48, Cliff Cave, Cliff Edge Gate or the Johto Safari Zone, which were introduced in HeartGold/SoulSilver.",
+    "crystal": "Johto base game with Crystal-specific content; do not show HeartGold/SoulSilver-only western Johto expansion locations.",
+    "heart_gold_soul_silver": "Includes the expanded western Johto area with Routes 47–48, Cliff Cave and Safari Zone."
+  }
 }
