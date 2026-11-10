@@ -115,7 +115,7 @@ void main() {
         .map((trainer) {
           final entry = trainer as String;
           final pokemon = entry.split(' — ').last;
-          return pokemon.split(RegExp(r'\\s+Lv\\.|\\s+\\(bez walki')).first.trim();
+          return pokemon.split(RegExp(r'\s+Lv\.|\s+\(bez walki')).first.trim();
         })
         .toSet();
     expect(
