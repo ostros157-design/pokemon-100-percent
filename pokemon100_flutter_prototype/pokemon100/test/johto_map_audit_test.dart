@@ -137,4 +137,28 @@ void main() {
     );
   });
 
+  test('Silver item pickups are source-tracked and not assigned guessed coordinates', () {
+    final locations = audit['locations'] as List<dynamic>;
+    final pickups = <Map<String, dynamic>>[];
+
+    for (final value in locations) {
+      final location = value as Map<String, dynamic>;
+      final rawItems = location['items'] as List<dynamic>? ?? const [];
+      for (final item in rawItems) {
+        final entry = item as Map<String, dynamic>;
+        pickups.add(entry);
+        expect(entry['coordinateStatus'], 'unverified');
+        expect(entry['sourceIds'], contains('bulbapedia-gs-walkthrough-parts-1-4'));
+        expect(entry['availableIn'], contains('gold_silver'));
+      }
+    }
+
+    expect(pickups, hasLength(8));
+    expect(
+      locations.where((value) =>
+          ((value as Map<String, dynamic>)['items'] as List?)?.isNotEmpty ?? false),
+      hasLength(3),
+    );
+  });
+
 }
