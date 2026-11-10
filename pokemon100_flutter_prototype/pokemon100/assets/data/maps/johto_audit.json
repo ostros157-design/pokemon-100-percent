@@ -59,7 +59,23 @@
         "bulbapedia-johto-region",
         "bulbapedia-route-list"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit"
+      "dataStatus": "topology_index_needs_game_variant_audit",
+      "berryTrees": [
+        {
+          "id": "route_29_berry_tree_1",
+          "berry": "Berry",
+          "locationDescription": "Na północno-zachodnim wzgórzu, za północno-zachodnim skrajem traw.",
+          "availableIn": [
+            "gold_silver",
+            "crystal"
+          ],
+          "respawns": "daily",
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-berry-tree-generation-ii"
+          ]
+        }
+      ]
     },
     {
       "id": "cherrygrove_city",
@@ -91,7 +107,37 @@
         "bulbapedia-johto-region",
         "bulbapedia-route-list"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit"
+      "dataStatus": "topology_index_needs_game_variant_audit",
+      "berryTrees": [
+        {
+          "id": "route_30_berry_tree_1",
+          "berry": "Berry",
+          "locationDescription": "Przy południowym domu.",
+          "availableIn": [
+            "gold_silver",
+            "crystal"
+          ],
+          "respawns": "daily",
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-berry-tree-generation-ii"
+          ]
+        },
+        {
+          "id": "route_30_berry_tree_2",
+          "berry": "PSNCureBerry",
+          "locationDescription": "Na zachód od domu Mr. Pokémon.",
+          "availableIn": [
+            "gold_silver",
+            "crystal"
+          ],
+          "respawns": "daily",
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-berry-tree-generation-ii"
+          ]
+        }
+      ]
     },
     {
       "id": "route_31",
@@ -108,7 +154,23 @@
         "bulbapedia-johto-region",
         "bulbapedia-route-list"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit"
+      "dataStatus": "topology_index_needs_game_variant_audit",
+      "berryTrees": [
+        {
+          "id": "route_31_berry_tree_1",
+          "berry": "Bitter Berry",
+          "locationDescription": "Obok śpiącego mężczyzny.",
+          "availableIn": [
+            "gold_silver",
+            "crystal"
+          ],
+          "respawns": "daily",
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-berry-tree-generation-ii"
+          ]
+        }
+      ]
     },
     {
       "id": "violet_city",
@@ -127,7 +189,23 @@
         "bulbapedia-johto-region",
         "bulbapedia-route-list"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit"
+      "dataStatus": "topology_index_needs_game_variant_audit",
+      "berryTrees": [
+        {
+          "id": "violet_city_berry_tree_1",
+          "berry": "PRZCureBerry",
+          "locationDescription": "W pobliżu wyjścia na Route 32.",
+          "availableIn": [
+            "gold_silver",
+            "crystal"
+          ],
+          "respawns": "daily",
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-berry-tree-generation-ii"
+          ]
+        }
+      ]
     },
     {
       "id": "sprout_tower",
@@ -191,7 +269,23 @@
         "bulbapedia-johto-region",
         "bulbapedia-route-list"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit"
+      "dataStatus": "topology_index_needs_game_variant_audit",
+      "berryTrees": [
+        {
+          "id": "route_33_berry_tree_1",
+          "berry": "PSNCureBerry",
+          "locationDescription": "Przed wejściem do Union Cave.",
+          "availableIn": [
+            "gold_silver",
+            "crystal"
+          ],
+          "respawns": "daily",
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-berry-tree-generation-ii"
+          ]
+        }
+      ]
     },
     {
       "id": "azalea_town",
@@ -289,7 +383,23 @@
         "bulbapedia-johto-region",
         "bulbapedia-route-list"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit"
+      "dataStatus": "topology_index_needs_game_variant_audit",
+      "berryTrees": [
+        {
+          "id": "route_35_berry_tree_1",
+          "berry": "MysteryBerry",
+          "locationDescription": "Po drugiej stronie małego stawu.",
+          "availableIn": [
+            "gold_silver",
+            "crystal"
+          ],
+          "respawns": "daily",
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-berry-tree-generation-ii"
+          ]
+        }
+      ]
     },
     {
       "id": "national_park",
@@ -323,7 +433,23 @@
         "bulbapedia-johto-region",
         "bulbapedia-route-list"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit"
+      "dataStatus": "topology_index_needs_game_variant_audit",
+      "berryTrees": [
+        {
+          "id": "route_36_berry_tree_1",
+          "berry": "Ice Berry",
+          "locationDescription": "Obok bramy prowadzącej do National Park.",
+          "availableIn": [
+            "gold_silver",
+            "crystal"
+          ],
+          "respawns": "daily",
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-berry-tree-generation-ii"
+          ]
+        }
+      ]
     },
     {
       "id": "route_37",
@@ -404,7 +530,23 @@
         "bulbapedia-johto-region",
         "bulbapedia-route-list"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit"
+      "dataStatus": "topology_index_needs_game_variant_audit",
+      "berryTrees": [
+        {
+          "id": "route_38_berry_tree_1",
+          "berry": "Berry",
+          "locationDescription": "Na zachód od ogrodzonego fragmentu środkowej części trasy.",
+          "availableIn": [
+            "gold_silver",
+            "crystal"
+          ],
+          "respawns": "daily",
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-berry-tree-generation-ii"
+          ]
+        }
+      ]
     },
     {
       "id": "route_39",
@@ -420,7 +562,23 @@
         "bulbapedia-johto-region",
         "bulbapedia-route-list"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit"
+      "dataStatus": "topology_index_needs_game_variant_audit",
+      "berryTrees": [
+        {
+          "id": "route_39_berry_tree_1",
+          "berry": "Mint Berry",
+          "locationDescription": "Obok Moomoo Farm.",
+          "availableIn": [
+            "gold_silver",
+            "crystal"
+          ],
+          "respawns": "daily",
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-berry-tree-generation-ii"
+          ]
+        }
+      ]
     },
     {
       "id": "olivine_city",
@@ -584,7 +742,23 @@
         "bulbapedia-johto-region",
         "bulbapedia-route-list"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit"
+      "dataStatus": "topology_index_needs_game_variant_audit",
+      "berryTrees": [
+        {
+          "id": "route_43_berry_tree_1",
+          "berry": "Bitter Berry",
+          "locationDescription": "Po drugiej stronie dużego jeziora.",
+          "availableIn": [
+            "gold_silver",
+            "crystal"
+          ],
+          "respawns": "daily",
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-berry-tree-generation-ii"
+          ]
+        }
+      ]
     },
     {
       "id": "lake_of_rage",
@@ -616,7 +790,23 @@
         "bulbapedia-johto-region",
         "bulbapedia-route-list"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit"
+      "dataStatus": "topology_index_needs_game_variant_audit",
+      "berryTrees": [
+        {
+          "id": "route_44_berry_tree_1",
+          "berry": "Burnt Berry",
+          "locationDescription": "Na północny wschód od wejścia do Mahogany Town.",
+          "availableIn": [
+            "gold_silver",
+            "crystal"
+          ],
+          "respawns": "daily",
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-berry-tree-generation-ii"
+          ]
+        }
+      ]
     },
     {
       "id": "ice_path",
@@ -680,7 +870,23 @@
         "bulbapedia-johto-region",
         "bulbapedia-route-list"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit"
+      "dataStatus": "topology_index_needs_game_variant_audit",
+      "berryTrees": [
+        {
+          "id": "route_45_berry_tree_1",
+          "berry": "MysteryBerry",
+          "locationDescription": "Przy stawie na południowym krańcu trasy.",
+          "availableIn": [
+            "gold_silver",
+            "crystal"
+          ],
+          "respawns": "daily",
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-berry-tree-generation-ii"
+          ]
+        }
+      ]
     },
     {
       "id": "route_46",
@@ -697,7 +903,37 @@
         "bulbapedia-johto-region",
         "bulbapedia-route-list"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit"
+      "dataStatus": "topology_index_needs_game_variant_audit",
+      "berryTrees": [
+        {
+          "id": "route_46_berry_tree_1",
+          "berry": "PRZCureBerry",
+          "locationDescription": "Na zachód od wejścia do Dark Cave.",
+          "availableIn": [
+            "gold_silver",
+            "crystal"
+          ],
+          "respawns": "daily",
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-berry-tree-generation-ii"
+          ]
+        },
+        {
+          "id": "route_46_berry_tree_2",
+          "berry": "Berry",
+          "locationDescription": "Na zachód od wejścia do Dark Cave, osobne drzewko.",
+          "availableIn": [
+            "gold_silver",
+            "crystal"
+          ],
+          "respawns": "daily",
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-berry-tree-generation-ii"
+          ]
+        }
+      ]
     },
     {
       "id": "dark_cave",
@@ -1066,6 +1302,7 @@
     "heartGoldSoulSilverExclusiveLocationCount": 6,
     "coordinateCoverage": "0% — coordinates remain unverified",
     "imageCoverage": "0% — no Silver-specific Johto map asset connected",
-    "note": "Connectivity audit checks only that every connectsTo ID points to an entry in this regional index. Cross-region links such as Route 27 to New Bark Town are intentionally handled as regional boundaries."
+    "note": "Connectivity audit checks only that every connectsTo ID points to an entry in this regional index. Cross-region links such as Route 27 to New Bark Town are intentionally handled as regional boundaries.",
+    "berryTreeCoverage": "15 berry trees recorded across 13 Johto locations; exact map coordinates remain unverified"
   }
 }
