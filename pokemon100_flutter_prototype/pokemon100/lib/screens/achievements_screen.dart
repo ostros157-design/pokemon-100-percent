@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../data/achievements_data.dart';
-import '../services/achievement_progress_service.dart';
 import '../models/achievement.dart';
+import '../services/achievement_progress_service.dart';
 import '../widgets/achievement_card.dart';
 
 class AchievementsScreen extends StatefulWidget {
@@ -75,7 +75,7 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
                       leading: const Icon(Icons.catching_pokemon),
                       title: const Text('Kolekcja ze wszystkich gier'),
                       subtitle: Text(
-                        '${progress?.globalCaughtCount ?? 0} różnych Pokémonów zarejestrowanych łącznie',
+                        '${progress.globalCaughtCount} różnych Pokémonów zarejestrowanych łącznie',
                       ),
                     ),
                   ),
