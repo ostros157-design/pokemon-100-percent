@@ -837,6 +837,16 @@
       "id": "altissimo-pallet-lgpe",
       "url": "https://altissimo1.github.io/Main-Series/Kanto-Locations/pallet-town.html",
       "scope": "Let's Go Pallet Town story items, Town Map, Pokédex, Razz Berries, Sportswear and postgame Mega Stones"
+    },
+    {
+      "id": "supercheats-coachtrainers",
+      "url": "https://www.supercheats.com/lets-go-eevee/walkthrough/where-to-find-all-coach-trainers",
+      "scope": "Coach Trainer roster and rewards, including Kareem's Revive."
+    },
+    {
+      "id": "gamersheroes-coach-trainers",
+      "url": "https://www.gamersheroes.com/game-guides/pokemon-lets-go-coach-trainer-location-guide/",
+      "scope": "Independent cross-check of Coach Trainer locations and rewards, including Kareem's Revive."
     }
   ],
   "locations": [
@@ -1436,7 +1446,7 @@
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "notes": "Route 2 obejmuje zachodni odcinek przy Viridian Forest oraz wschodni odcinek odblokowywany przez Chop Down. Nie ma tu zwykłych walk trenerów w głównej historii; po zostaniu Championem pojawiają się dwaj Master Trainers: Bird Keeper Louey i Bug Catcher Hans. Lista łączy przedmioty z obu odcinków; dokładne pinezki pozostają niezweryfikowane.",
+      "notes": "Route 2 obejmuje zachodni odcinek przy Viridian Forest oraz wschodni odcinek odblokowywany przez Chop Down. Nie ma tu zwykłych walk trenerów w głównej historii; po zostaniu Championem pojawiają się dwaj Master Trainers: Bird Keeper Louey i Bug Catcher Hans. Lista łączy przedmioty z obu odcinków; dokładne pinezki pozostają niezweryfikowane. Master Trainer Bug Catcher Bobby znajduje się w północno-zachodniej bramie Viridian Forest i pozostaje przypisany do rekordu Viridian Forest; Route 2 obejmuje dwóch własnych Master Trainers: Loueya i Hansa.",
       "wildPokemonDetails": {
         "lets_go_pikachu": [
           {
@@ -1746,15 +1756,28 @@
       "items": [
         "Great Ball ×5 — na północ od wejścia do Diglett's Cave po wschodniej stronie Route 2; pozycja opisana tekstowo, bez pinezki.",
         "Leaf Stone — na południe od bramy i pierwszej półki skalnej; wymaga Chop Down.",
-        "Super Potion — na południe od drugiej półki skalnej; wymaga Chop Down.",
-        "Light Up — nagroda od pomocnika Profesora Oaka w domu na południe od Diglett's Cave po złapaniu co najmniej 10 różnych gatunków; to technika partnera, nie przedmiot do podniesienia."
+        "Super Potion — na południe od drugiej półki skalnej; wymaga Chop Down."
       ],
       "trainers": [
         "Master Trainer Bird Keeper Louey — Pidgey Lv. 65 (postgame po zostaniu Championem; południowo-zachodnia część Route 2).",
         "Master Trainer Bug Catcher Hans — Parasect Lv. 75 (postgame po zostaniu Championem; południowo-wschodnia część Route 2)."
       ],
       "trainerCount": 2,
-      "trainerStatus": "no_regular_story_trainer_battles;_postgame_master_trainer_teams_verified_from_pokemondb"
+      "trainerStatus": "no_regular_story_trainer_battles;_postgame_master_trainer_teams_verified_from_pokemondb",
+      "events": [
+        {
+          "id": "light_up_secret_technique",
+          "name": "Light Up — Secret Technique partnera",
+          "category": "story_reward",
+          "note": "Pomocnik Profesora Oaka w domu na południe od Diglett’s Cave uczy partnera techniki Light Up po złapaniu co najmniej 10 różnych gatunków Pokémonów. To technika partnera, nie przedmiot do podniesienia.",
+          "status": "text_verified",
+          "sourceIds": [
+            "bulbapedia-part7",
+            "bulbapedia-part2"
+          ]
+        }
+      ],
+      "itemsStatus": "three collectible item entries verified; Light Up correctly catalogued as a story/partner technique reward, not a pickup"
     },
     {
       "id": "viridian_forest",
@@ -1765,7 +1788,7 @@
       ],
       "localMapAsset": null,
       "coordinateStatus": "unverified",
-      "notes": "Leśny labirynt na Route 2; pozycje elementów nie są przypisane do współrzędnych.",
+      "notes": "Leśny labirynt na Route 2; pozycje elementów nie są przypisane do współrzędnych. Master Trainer Bug Catcher Bobby stoi w północno-zachodniej bramie prowadzącej do Viridian Forest (nie na właściwej ścieżce Route 2).",
       "encounters": {
         "lets_go_pikachu": [
           [
@@ -2218,16 +2241,22 @@
         "Youngster Calvin — Spearow Lv. 6",
         "Camper Victor — Nidoran♂ Lv. 7",
         "Picnicker Robin — Nidoran♀ Lv. 7",
-        "Coach Trainer Kareem — Bulbasaur Lv. 11; brak jednoznacznie potwierdzonej nagrody w tabeli Serebii",
+        "Coach Trainer Kareem — Bulbasaur Lv. 11; nagroda: Revive.",
         "Master Trainer Ace Trainer Ronnie — Nidoran♀ Lv. 65 (Route 3, środek)"
       ],
       "items": [
-        "Potion",
-        "Revive",
-        "Lure",
-        "3 Poké Balls",
-        "Razz Berry (ukryta)",
-        "nagrody za walki: Poké Balls, Great Balls i Revive"
+        "Revive — nagroda od Coach Trainer Kareem po zwycięstwie.",
+        "3 Poké Balls — nagroda od Lass Janice.",
+        "3 Poké Balls — przedmiot przy krzaku na południowy wschód od Lass Janice.",
+        "3 Poké Balls — nagroda od Youngster Calvin.",
+        "Potion — na południe od Youngster Calvin, między dwiema półkami skalnymi.",
+        "2 Great Balls — nagroda od Camper Victor.",
+        "2 Great Balls — nagroda od Picnicker Robin.",
+        "Lure — w krzaku na północny wschód od Picnicker Robin.",
+        "3 Poké Balls — nagroda od Youngster Ben.",
+        "3 Poké Balls — nagroda od Bug Catcher Greg.",
+        "Razz Berry — ukryta w krzaku przy Bug Catcher Greg; znajduje ją partner Pokémon.",
+        "Revive — w trawie na południe od Pokémon Center."
       ],
       "sourceIds": [
         "routepedia-route3-pikachu",
@@ -2235,7 +2264,9 @@
         "bulbapedia-part4",
         "serebii-route3",
         "pokemondb-mastertrainers",
-        "serebii-coachtrainers"
+        "serebii-coachtrainers",
+        "supercheats-coachtrainers",
+        "gamersheroes-coach-trainers"
       ],
       "dataStatus": "text_verified_positions_not_mapped",
       "wildPokemon": {
@@ -2266,7 +2297,8 @@
       },
       "encounterStatus": "text_verified",
       "trainerCount": 8,
-      "trainerStatus": "master_trainer_postgame_roster_cross_checked_pokemondb"
+      "trainerStatus": "story_and_postgame_teams_verified; Coach Trainer Kareem reward cross-checked from Supercheats and Gamers Heroes",
+      "itemsStatus": "all 12 pickup and trainer-reward entries itemized from Routepedia/Bulbapedia; no unverified coordinates added"
     },
     {
       "id": "mt_moon",
@@ -11331,14 +11363,14 @@
         "Zagadki z głazami zmieniają przepływ wody i otwierają przejścia między piętrami; dokładne kafelki nie są naniesione."
       ],
       "trainers": [
-        "Coach Trainer Yas — Vaporeon Lv. 45, Jolteon Lv. 46 i Flareon Lv. 47.; nagroda Rare Candy",
+        "Coach Trainer Yas — Vaporeon Lv. 46, Jolteon Lv. 46 i Flareon Lv. 47.; nagroda Rare Candy",
         "Master Trainer Beauty Aina — Seel Lv. 70 (Seafoam Islands, 1F, wschód)",
         "Master Trainer Beauty Lois — Dewgong Lv. 75 (Seafoam Islands, B1F, południe)",
         "Master Trainer Ace Trainer Arjun — Dragonair Lv. 70 (Seafoam Islands, B3F, południe)",
         "Master Trainer Articuno Master — Articuno (bez walki; Seafoam Islands, B4F, zachód; pokaż Articuno o CP co najmniej 7500)"
       ],
       "trainerCount": 5,
-      "trainerStatus": "master_trainer_postgame_roster_partially_cross_checked_pokemondb",
+      "trainerStatus": "coach_trainer_team_levels_cross_checked_against_Serebii; master_trainer_postgame_roster_partially_cross_checked_pokemondb",
       "items": [
         "Ice Heal — item ball.",
         "Escape Rope — item ball.",
