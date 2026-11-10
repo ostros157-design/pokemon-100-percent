@@ -25,6 +25,11 @@
       "id": "pokedb-johto",
       "url": "https://pokedb.org/locations/johto",
       "scope": "Johto settlements, landmarks and route list"
+    },
+    {
+      "id": "bulbapedia-gs-walkthrough-parts-1-4",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Walkthrough:Pok%C3%A9mon_Gold_and_Silver",
+      "scope": "Original Game Boy Color Gold/Silver item lists and descriptive locations for Routes 29 and 32 and Union Cave"
     }
   ],
   "locations": [
@@ -73,6 +78,21 @@
           "coordinateStatus": "unverified",
           "sourceIds": [
             "bulbapedia-berry-tree-generation-ii"
+          ]
+        }
+      ],
+      "items": [
+        {
+          "id": "route_29_potion_1",
+          "name": "Potion",
+          "locationDescription": "Na wschód od najbardziej wysuniętego na północny wschód pola wysokiej trawy.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-walkthrough-parts-1-4"
           ]
         }
       ]
@@ -237,7 +257,48 @@
         "bulbapedia-johto-region",
         "bulbapedia-route-list"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit"
+      "dataStatus": "topology_index_needs_game_variant_audit",
+      "items": [
+        {
+          "id": "route_32_miracle_seed_1",
+          "name": "Miracle Seed",
+          "locationDescription": "Od mężczyzny w północno-wschodniej części trasy, na północ od pierwszego pola trawy.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-walkthrough-parts-1-4"
+          ]
+        },
+        {
+          "id": "route_32_potion_1",
+          "name": "Potion",
+          "locationDescription": "W południowo-zachodniej części trasy, w polu trawy na zachód od Picnicker Liz.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-walkthrough-parts-1-4"
+          ]
+        },
+        {
+          "id": "route_32_super_potion_hidden_1",
+          "name": "Super Potion",
+          "locationDescription": "Ukryty przedmiot w wysokiej trawie na północ od pomostu.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-walkthrough-parts-1-4"
+          ]
+        }
+      ]
     },
     {
       "id": "union_cave",
@@ -253,7 +314,61 @@
         "bulbapedia-johto-region",
         "bulbapedia-route-list"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit"
+      "dataStatus": "topology_index_needs_game_variant_audit",
+      "items": [
+        {
+          "id": "union_cave_potion_1",
+          "name": "Potion",
+          "locationDescription": "1F — w północno-zachodnim narożniku, na zachód od wejścia od Route 32.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-walkthrough-parts-1-4"
+          ]
+        },
+        {
+          "id": "union_cave_great_ball_1",
+          "name": "Great Ball",
+          "locationDescription": "1F — na południowy wschód od Firebreather Bill.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-walkthrough-parts-1-4"
+          ]
+        },
+        {
+          "id": "union_cave_x_attack_1",
+          "name": "X Attack",
+          "locationDescription": "1F — w środkowo-zachodniej części jaskini.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-walkthrough-parts-1-4"
+          ]
+        },
+        {
+          "id": "union_cave_awakening_1",
+          "name": "Awakening",
+          "locationDescription": "1F — na zachód od wyjścia prowadzącego na Route 33.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-walkthrough-parts-1-4"
+          ]
+        }
+      ]
     },
     {
       "id": "route_33",
@@ -1303,6 +1418,8 @@
     "coordinateCoverage": "0% — coordinates remain unverified",
     "imageCoverage": "0% — no Silver-specific Johto map asset connected",
     "note": "Connectivity audit checks only that every connectsTo ID points to an entry in this regional index. Cross-region links such as Route 27 to New Bark Town are intentionally handled as regional boundaries.",
-    "berryTreeCoverage": "15 berry trees recorded across 13 Johto locations; exact map coordinates remain unverified"
+    "berryTreeCoverage": "15 berry trees recorded across 13 Johto locations; exact map coordinates remain unverified",
+    "itemPickupCount": 8,
+    "itemPickupCoverage": "8 przedmiotów do podniesienia w 3 lokacjach; opisy źródłowe, współrzędne niezweryfikowane"
   }
 }
