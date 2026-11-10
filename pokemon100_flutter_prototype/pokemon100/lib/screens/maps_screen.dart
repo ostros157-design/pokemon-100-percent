@@ -800,7 +800,7 @@ class _MapsScreenState extends State<MapsScreen> {
                                   item.toLowerCase().contains('planting') ||
                                   item.toLowerCase().contains('krzew jagodowy') ||
                                   item.toLowerCase().contains('miejsce sadzenia')
-                              ? 'Oznaczenie rośliny jagodowej / miejsca sadzenia'
+                              ? 'Drzewko jagodowe — można zebrać odrastającą jagodę'
                               : item.toLowerCase().contains('spray') ||
                                       item.toLowerCase().contains('repel') ||
                                       item.toLowerCase().contains('potion') ||
