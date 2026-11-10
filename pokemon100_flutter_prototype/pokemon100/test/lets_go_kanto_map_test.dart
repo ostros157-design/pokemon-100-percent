@@ -162,6 +162,28 @@ void main() {
     expect(find.textContaining('Lass Sal'), findsOneWidget);
   });
 
+  testWidgets('locations with only features and events still show their details',
+      (tester) async {
+    tester.view.physicalSize = const Size(1200, 2200);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+
+    await _openLocation(tester, 'GO Park');
+
+    final features = find.text('Ważne miejsca (2)');
+    await tester.ensureVisible(features);
+    await tester.tap(features);
+    await tester.pumpAndSettle();
+    expect(find.textContaining('20 Play Yards'), findsOneWidget);
+
+    final events = find.text('Wydarzenia, prezenty i spotkania (3)');
+    await tester.ensureVisible(events);
+    await tester.tap(events);
+    await tester.pumpAndSettle();
+    expect(find.textContaining('Play Yard mini-game'), findsOneWidget);
+  });
+
   testWidgets('Kanto map displays all fixed and hidden Mansion items',
       (tester) async {
     tester.view.physicalSize = const Size(1200, 2200);
