@@ -12,6 +12,7 @@ class PokemonMusicService {
   final AudioPlayer player = AudioPlayer();
   double volume = 0.65;
   bool _configured = false;
+  bool _userPaused = false;
   static const _autoStartKey = 'pokemon_background_music_autostart';
 
   Future<void> configure() async {
@@ -40,7 +41,15 @@ class PokemonMusicService {
     if (await getAutoStartEnabled()) await playOrResume();
   }
 
+  bool get isPlaying => player.state == PlayerState.playing;
+
+  Future<void> resumeIfInterrupted() async {
+    if (_userPaused || isPlaying) return;
+    await playOrResume();
+  }
+
   Future<void> playOrResume() async {
+    _userPaused = false;
     await configure();
     if (player.state == PlayerState.paused) {
       await player.resume();
@@ -49,5 +58,8 @@ class PokemonMusicService {
     }
   }
 
-  Future<void> pause() => player.pause();
+  Future<void> pause() async {
+    _userPaused = true;
+    await player.pause();
+  }
 }
