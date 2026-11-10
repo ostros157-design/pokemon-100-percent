@@ -174,7 +174,11 @@ class AchievementProgressService {
     final progressByGame = <String, int>{};
     final candidateGameIds = <String>{
       ...guidesList.map((guide) => guide.gameId),
-      ...caughtByGame.keys.where(TeamGameAvailability.supports),
+      ...caughtByGame.keys.where(
+        (gameId) => TeamGameAvailability.hasVerifiedData(
+          _availabilityGameId(gameId),
+        ),
+      ),
     };
     candidateGameIds.add(selectedGameId);
 
@@ -277,11 +281,28 @@ class AchievementProgressService {
     );
   }
 
+  static String _availabilityGameId(String gameId) {
+    switch (gameId) {
+      case 'fire_red':
+        return 'firered';
+      case 'leaf_green':
+        return 'leafgreen';
+      default:
+        return gameId;
+    }
+  }
+
   static Set<int> _availablePokemonIds(String gameId) {
+    final availabilityGameId = _availabilityGameId(gameId);
+    if (!TeamGameAvailability.hasVerifiedData(availabilityGameId)) {
+      return <int>{};
+    }
     return pokemonList
         .where((pokemon) {
-          final availability =
-              TeamGameAvailability.forPokemon(gameId, pokemon.id);
+          final availability = TeamGameAvailability.forPokemon(
+            availabilityGameId,
+            pokemon.id,
+          );
           return availability.canBeAdded ||
               availability.canBeRecommended ||
               availability.kind == TeamAvailabilityKind.specialAccess;
