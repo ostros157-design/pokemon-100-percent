@@ -29,6 +29,36 @@ class _SettingsScreenState extends State<SettingsScreen> {
             child: Text('Wygląd aplikacji',
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
           ),
+          ValueListenableBuilder<String>(
+            valueListenable: AppAppearance.visualStyle,
+            builder: (context, selectedStyle, _) => Column(
+              children: AppAppearance.visualStyles.entries.map((entry) {
+                final description = switch (entry.key) {
+                  'modern' => 'Obecny, nowoczesny wygląd aplikacji.',
+                  'retro' => 'Nowoczesny układ z pikselowymi ramkami i przyciskami.',
+                  'pixel' => 'Kanciaste elementy i monospace w całej aplikacji.',
+                  _ => '',
+                };
+                return RadioListTile<String>(
+                  value: entry.key,
+                  groupValue: selectedStyle,
+                  title: Text(entry.value),
+                  subtitle: Text(description),
+                  secondary: Icon(
+                    entry.key == 'modern'
+                        ? Icons.auto_awesome
+                        : entry.key == 'retro'
+                            ? Icons.videogame_asset
+                            : Icons.grid_4x4,
+                  ),
+                  onChanged: (value) {
+                    if (value != null) AppAppearance.setVisualStyle(value);
+                  },
+                );
+              }).toList(),
+            ),
+          ),
+          const Divider(),
           ValueListenableBuilder<bool>(
             valueListenable: AppAppearance.darkBackground,
             builder: (context, isDark, _) => SwitchListTile(
