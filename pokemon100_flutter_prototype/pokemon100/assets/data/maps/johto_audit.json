@@ -255,6 +255,11 @@
       "id": "bulbapedia-new-bark-town",
       "url": "https://bulbapedia.bulbagarden.net/wiki/New_Bark_Town",
       "scope": "New Bark Town Generation II item gifts, Pokégear, starter held Berry and progression requirements"
+    },
+    {
+      "id": "serebii-gs-cherrygrove-city",
+      "url": "https://www.serebii.net/pokearth/johto/2nd/cherrygrovecity.shtml",
+      "scope": "Pokémon Gold/Silver/Crystal Generation II Cherrygrove City surfing and fishing encounter rates, Rival Silver starter variants and Mystic Water gift"
     }
   ],
   "locations": [
@@ -728,9 +733,302 @@
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-johto-region",
-        "bulbapedia-route-list"
+        "bulbapedia-route-list",
+        "serebii-gs-cherrygrove-city"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit"
+      "dataStatus": "verified_gen2_silver_water_encounters_rival_and_gift",
+      "wildPokemonDetails": {
+        "surfing": [
+          {
+            "name": "Tentacool",
+            "levelRange": [
+              15,
+              24
+            ],
+            "ratePercent": 90,
+            "method": "Surfing"
+          },
+          {
+            "name": "Tentacruel",
+            "levelRange": [
+              20,
+              40
+            ],
+            "ratePercent": 10,
+            "method": "Surfing"
+          }
+        ],
+        "old_rod": [
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 85,
+            "method": "Old Rod"
+          },
+          {
+            "name": "Krabby",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "Old Rod"
+          }
+        ],
+        "good_rod_morning": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 55,
+            "method": "Good Rod · rano"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 35,
+            "method": "Good Rod · rano"
+          },
+          {
+            "name": "Corsola",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 10,
+            "method": "Good Rod · rano"
+          }
+        ],
+        "good_rod_day": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 55,
+            "method": "Good Rod · dzień"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 35,
+            "method": "Good Rod · dzień"
+          },
+          {
+            "name": "Corsola",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 10,
+            "method": "Good Rod · dzień"
+          }
+        ],
+        "good_rod_night": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 55,
+            "method": "Good Rod · noc"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 35,
+            "method": "Good Rod · noc"
+          },
+          {
+            "name": "Staryu",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 10,
+            "method": "Good Rod · noc"
+          }
+        ],
+        "super_rod_morning": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 60,
+            "method": "Super Rod · rano"
+          },
+          {
+            "name": "Kingler",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 10,
+            "method": "Super Rod · rano"
+          },
+          {
+            "name": "Corsola",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 30,
+            "method": "Super Rod · rano"
+          }
+        ],
+        "super_rod_day": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 60,
+            "method": "Super Rod · dzień"
+          },
+          {
+            "name": "Kingler",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 10,
+            "method": "Super Rod · dzień"
+          },
+          {
+            "name": "Corsola",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 30,
+            "method": "Super Rod · dzień"
+          }
+        ],
+        "super_rod_night": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 60,
+            "method": "Super Rod · noc"
+          },
+          {
+            "name": "Kingler",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 10,
+            "method": "Super Rod · noc"
+          },
+          {
+            "name": "Staryu",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 30,
+            "method": "Super Rod · noc"
+          }
+        ]
+      },
+      "wildPokemonSourceIds": [
+        "serebii-gs-cherrygrove-city"
+      ],
+      "wildPokemonStatus": "verified_gen2_silver_rates_and_levels",
+      "trainers": [
+        {
+          "name": "Rival Silver — Chikorita",
+          "team": [
+            {
+              "name": "Chikorita",
+              "level": 5
+            }
+          ],
+          "note": "Wariant pierwszej walki, gdy gracz wybrał Totodile.",
+          "availableIn": [
+            "gold_silver",
+            "crystal"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-cherrygrove-city"
+          ]
+        },
+        {
+          "name": "Rival Silver — Cyndaquil",
+          "team": [
+            {
+              "name": "Cyndaquil",
+              "level": 5
+            }
+          ],
+          "note": "Wariant pierwszej walki, gdy gracz wybrał Chikorita.",
+          "availableIn": [
+            "gold_silver",
+            "crystal"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-cherrygrove-city"
+          ]
+        },
+        {
+          "name": "Rival Silver — Totodile",
+          "team": [
+            {
+              "name": "Totodile",
+              "level": 5
+            }
+          ],
+          "note": "Wariant pierwszej walki, gdy gracz wybrał Cyndaquil.",
+          "availableIn": [
+            "gold_silver",
+            "crystal"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-cherrygrove-city"
+          ]
+        }
+      ],
+      "items": [
+        {
+          "id": "cherrygrove_mystic_water_fisherman",
+          "name": "Mystic Water",
+          "locationDescription": "Prezent od Rybaka na małej wyspie w zatoce; wymaga Surf. Dokładna kratka niezweryfikowana.",
+          "category": "gift",
+          "availableIn": [
+            "gold_silver",
+            "crystal"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-cherrygrove-city"
+          ]
+        }
+      ]
     },
     {
       "id": "route_30",
