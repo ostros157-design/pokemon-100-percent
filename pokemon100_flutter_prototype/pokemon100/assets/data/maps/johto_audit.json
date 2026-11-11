@@ -3477,7 +3477,7 @@
         "route_33",
         "slowpoke_well"
       ],
-      "tableCount": 48,
+      "tableCount": 49,
       "note": "Partially expanded verified Gen II Silver encounter tables; route and cave tables remain separately keyed by time, method and floor. Each percentage group sums to 100%."
     }
   }
