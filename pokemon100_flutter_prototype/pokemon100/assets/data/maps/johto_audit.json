@@ -35,6 +35,31 @@
       "id": "bulbapedia-gs-walkthrough-parts-3-4",
       "url": "https://bulbapedia.bulbagarden.net/wiki/Appendix:Gold_and_Silver_walkthrough/Section_4",
       "scope": "Original Game Boy Color Gold/Silver trainer rosters and floor details for Route 32, Union Cave and Route 33; Route 31 roster from Part 3"
+    },
+    {
+      "id": "rotomlabs-gs-route29",
+      "url": "https://rotomlabs.net/locations/gold-silver/route-29",
+      "scope": "Gold/Silver Route 29 time-of-day walking and headbutt encounter tables"
+    },
+    {
+      "id": "rotomlabs-gs-route30",
+      "url": "https://rotomlabs.net/locations/gold-silver/route-30",
+      "scope": "Gold/Silver Route 30 time-of-day walking and water encounter tables"
+    },
+    {
+      "id": "rotomlabs-gs-route31",
+      "url": "https://rotomlabs.net/locations/gold-silver/route-31",
+      "scope": "Gold/Silver Route 31 time-of-day walking and water encounter tables"
+    },
+    {
+      "id": "serebii-gs-route32",
+      "url": "https://www.serebii.net/pokearth/johto/2nd/route32.shtml",
+      "scope": "Pokémon Silver Generation II Route 32 walking, surfing and fishing encounters"
+    },
+    {
+      "id": "serebii-gs-union-cave",
+      "url": "https://www.serebii.net/pokearth/johto/2nd/unioncave.shtml",
+      "scope": "Pokémon Silver Generation II Union Cave floor-by-floor walking and water encounters"
     }
   ],
   "locations": [
@@ -100,7 +125,120 @@
             "bulbapedia-gs-walkthrough-parts-1-4"
           ]
         }
-      ]
+      ],
+      "wildPokemonDetails": {
+        "walking_morning": [
+          {
+            "name": "Pidgey",
+            "levelRange": [
+              2,
+              4
+            ],
+            "ratePercent": 55,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Sentret",
+            "levelRange": [
+              2,
+              3
+            ],
+            "ratePercent": 40,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Rattata",
+            "levelRange": [
+              4,
+              4
+            ],
+            "ratePercent": 5,
+            "method": "Trawa · rano"
+          }
+        ],
+        "walking_day": [
+          {
+            "name": "Pidgey",
+            "levelRange": [
+              2,
+              4
+            ],
+            "ratePercent": 55,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Sentret",
+            "levelRange": [
+              2,
+              3
+            ],
+            "ratePercent": 40,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Rattata",
+            "levelRange": [
+              4,
+              4
+            ],
+            "ratePercent": 5,
+            "method": "Trawa · dzień"
+          }
+        ],
+        "walking_night": [
+          {
+            "name": "Hoothoot",
+            "levelRange": [
+              2,
+              4
+            ],
+            "ratePercent": 85,
+            "method": "Trawa · noc"
+          },
+          {
+            "name": "Rattata",
+            "levelRange": [
+              2,
+              4
+            ],
+            "ratePercent": 15,
+            "method": "Trawa · noc"
+          }
+        ],
+        "headbutt": [
+          {
+            "name": "Spearow",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 50,
+            "method": "Headbutt"
+          },
+          {
+            "name": "Heracross",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 30,
+            "method": "Headbutt"
+          },
+          {
+            "name": "Aipom",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 20,
+            "method": "Headbutt"
+          }
+        ]
+      },
+      "wildPokemonSourceIds": [
+        "rotomlabs-gs-route29"
+      ],
+      "wildPokemonStatus": "verified_gen2_silver_rates_and_levels"
     },
     {
       "id": "cherrygrove_city",
@@ -162,7 +300,189 @@
             "bulbapedia-berry-tree-generation-ii"
           ]
         }
-      ]
+      ],
+      "wildPokemonDetails": {
+        "walking_morning": [
+          {
+            "name": "Weedle",
+            "levelRange": [
+              3,
+              4
+            ],
+            "ratePercent": 50,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Ledyba",
+            "levelRange": [
+              3,
+              3
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Pidgey",
+            "levelRange": [
+              4,
+              4
+            ],
+            "ratePercent": 10,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Kakuna",
+            "levelRange": [
+              4,
+              4
+            ],
+            "ratePercent": 10,
+            "method": "Trawa · rano"
+          }
+        ],
+        "walking_day": [
+          {
+            "name": "Pidgey",
+            "levelRange": [
+              2,
+              4
+            ],
+            "ratePercent": 50,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Weedle",
+            "levelRange": [
+              3,
+              4
+            ],
+            "ratePercent": 35,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Kakuna",
+            "levelRange": [
+              4,
+              5
+            ],
+            "ratePercent": 15,
+            "method": "Trawa · dzień"
+          }
+        ],
+        "walking_night": [
+          {
+            "name": "Hoothoot",
+            "levelRange": [
+              4,
+              4
+            ],
+            "ratePercent": 60,
+            "method": "Trawa · noc"
+          },
+          {
+            "name": "Rattata",
+            "levelRange": [
+              3,
+              4
+            ],
+            "ratePercent": 40,
+            "method": "Trawa · noc"
+          }
+        ],
+        "surfing": [
+          {
+            "name": "Poliwag",
+            "levelRange": [
+              15,
+              24
+            ],
+            "ratePercent": 90,
+            "method": "Surfing"
+          },
+          {
+            "name": "Poliwhirl",
+            "levelRange": [
+              20,
+              24
+            ],
+            "ratePercent": 10,
+            "method": "Surfing"
+          }
+        ],
+        "old_rod": [
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 85,
+            "method": "Old Rod"
+          },
+          {
+            "name": "Poliwag",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "Old Rod"
+          }
+        ],
+        "good_rod": [
+          {
+            "name": "Poliwag",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 65,
+            "method": "Good Rod"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 35,
+            "method": "Good Rod"
+          }
+        ],
+        "super_rod": [
+          {
+            "name": "Poliwag",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 70,
+            "method": "Super Rod"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 20,
+            "method": "Super Rod"
+          },
+          {
+            "name": "Poliwhirl",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 10,
+            "method": "Super Rod"
+          }
+        ]
+      },
+      "wildPokemonSourceIds": [
+        "rotomlabs-gs-route30"
+      ],
+      "wildPokemonStatus": "verified_gen2_silver_rates_and_levels"
     },
     {
       "id": "route_31",
@@ -226,7 +546,245 @@
             "bulbapedia-gs-walkthrough-parts-3-4"
           ]
         }
-      ]
+      ],
+      "wildPokemonDetails": {
+        "walking_morning": [
+          {
+            "name": "Weedle",
+            "levelRange": [
+              4,
+              5
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Ledyba",
+            "levelRange": [
+              4,
+              4
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Bellsprout",
+            "levelRange": [
+              3,
+              3
+            ],
+            "ratePercent": 20,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Pidgey",
+            "levelRange": [
+              5,
+              5
+            ],
+            "ratePercent": 10,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Kakuna",
+            "levelRange": [
+              5,
+              5
+            ],
+            "ratePercent": 10,
+            "method": "Trawa · rano"
+          }
+        ],
+        "walking_day": [
+          {
+            "name": "Weedle",
+            "levelRange": [
+              4,
+              5
+            ],
+            "ratePercent": 35,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Pidgey",
+            "levelRange": [
+              3,
+              3
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Bellsprout",
+            "levelRange": [
+              3,
+              3
+            ],
+            "ratePercent": 20,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Kakuna",
+            "levelRange": [
+              5,
+              6
+            ],
+            "ratePercent": 15,
+            "method": "Trawa · dzień"
+          }
+        ],
+        "walking_night": [
+          {
+            "name": "Hoothoot",
+            "levelRange": [
+              3,
+              5
+            ],
+            "ratePercent": 40,
+            "method": "Trawa · noc"
+          },
+          {
+            "name": "Rattata",
+            "levelRange": [
+              4,
+              5
+            ],
+            "ratePercent": 40,
+            "method": "Trawa · noc"
+          },
+          {
+            "name": "Bellsprout",
+            "levelRange": [
+              3,
+              3
+            ],
+            "ratePercent": 20,
+            "method": "Trawa · noc"
+          }
+        ],
+        "surfing": [
+          {
+            "name": "Poliwag",
+            "levelRange": [
+              15,
+              24
+            ],
+            "ratePercent": 90,
+            "method": "Surfing"
+          },
+          {
+            "name": "Poliwhirl",
+            "levelRange": [
+              20,
+              24
+            ],
+            "ratePercent": 10,
+            "method": "Surfing"
+          }
+        ],
+        "old_rod": [
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 85,
+            "method": "Old Rod"
+          },
+          {
+            "name": "Poliwag",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "Old Rod"
+          }
+        ],
+        "good_rod": [
+          {
+            "name": "Poliwag",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 65,
+            "method": "Good Rod"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 35,
+            "method": "Good Rod"
+          }
+        ],
+        "super_rod": [
+          {
+            "name": "Poliwag",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 70,
+            "method": "Super Rod"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 20,
+            "method": "Super Rod"
+          },
+          {
+            "name": "Poliwhirl",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 10,
+            "method": "Super Rod"
+          }
+        ],
+        "headbutt": [
+          {
+            "name": "Spearow",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 50,
+            "method": "Headbutt"
+          },
+          {
+            "name": "Heracross",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 30,
+            "method": "Headbutt"
+          },
+          {
+            "name": "Aipom",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 20,
+            "method": "Headbutt"
+          }
+        ]
+      },
+      "wildPokemonSourceIds": [
+        "rotomlabs-gs-route31"
+      ],
+      "wildPokemonStatus": "verified_gen2_silver_rates_and_levels"
     },
     {
       "id": "violet_city",
@@ -492,7 +1050,299 @@
             "bulbapedia-gs-walkthrough-parts-3-4"
           ]
         }
-      ]
+      ],
+      "wildPokemonDetails": {
+        "walking_morning": [
+          {
+            "name": "Bellsprout",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Ekans",
+            "levelRange": [
+              4,
+              4
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Mareep",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 20,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Hoppip",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 10,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Rattata",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 5,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Wooper",
+            "levelRange": [
+              4,
+              4
+            ],
+            "ratePercent": 4,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              4,
+              4
+            ],
+            "ratePercent": 1,
+            "method": "Trawa · rano"
+          }
+        ],
+        "walking_day": [
+          {
+            "name": "Bellsprout",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Ekans",
+            "levelRange": [
+              4,
+              4
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Mareep",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 20,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Rattata",
+            "levelRange": [
+              6,
+              8
+            ],
+            "ratePercent": 10,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Hoppip",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 10,
+            "method": "Trawa · dzień"
+          }
+        ],
+        "walking_night": [
+          {
+            "name": "Wooper",
+            "levelRange": [
+              6,
+              8
+            ],
+            "ratePercent": 35,
+            "method": "Trawa · noc"
+          },
+          {
+            "name": "Ekans",
+            "levelRange": [
+              4,
+              4
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · noc"
+          },
+          {
+            "name": "Bellsprout",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 20,
+            "method": "Trawa · noc"
+          },
+          {
+            "name": "Mareep",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 10,
+            "method": "Trawa · noc"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              8,
+              8
+            ],
+            "ratePercent": 5,
+            "method": "Trawa · noc"
+          }
+        ],
+        "surfing": [
+          {
+            "name": "Tentacool",
+            "levelRange": [
+              15,
+              19
+            ],
+            "ratePercent": 60,
+            "method": "Surfing"
+          },
+          {
+            "name": "Quagsire",
+            "levelRange": [
+              20,
+              24
+            ],
+            "ratePercent": 30,
+            "method": "Surfing"
+          },
+          {
+            "name": "Tentacruel",
+            "levelRange": [
+              20,
+              24
+            ],
+            "ratePercent": 10,
+            "method": "Surfing"
+          }
+        ],
+        "old_rod": [
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 85,
+            "method": "Old Rod"
+          },
+          {
+            "name": "Tentacool",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "Old Rod"
+          }
+        ],
+        "good_rod": [
+          {
+            "name": "Tentacool",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 65,
+            "method": "Good Rod"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 35,
+            "method": "Good Rod"
+          }
+        ],
+        "super_rod": [
+          {
+            "name": "Tentacool",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 70,
+            "method": "Super Rod"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 20,
+            "method": "Super Rod"
+          },
+          {
+            "name": "Qwilfish",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 10,
+            "method": "Super Rod"
+          }
+        ],
+        "headbutt": [
+          {
+            "name": "Spearow",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 50,
+            "method": "Headbutt"
+          },
+          {
+            "name": "Heracross",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 30,
+            "method": "Headbutt"
+          },
+          {
+            "name": "Aipom",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 20,
+            "method": "Headbutt"
+          }
+        ]
+      },
+      "wildPokemonSourceIds": [
+        "serebii-gs-route32"
+      ],
+      "wildPokemonStatus": "verified_gen2_silver_rates_and_levels"
     },
     {
       "id": "union_cave",
@@ -816,7 +1666,225 @@
             "bulbapedia-gs-walkthrough-parts-3-4"
           ]
         }
-      ]
+      ],
+      "wildPokemonDetails": {
+        "1F": [
+          {
+            "name": "Geodude",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 30,
+            "method": "1F · jaskinia"
+          },
+          {
+            "name": "Rattata",
+            "levelRange": [
+              4,
+              6
+            ],
+            "ratePercent": 40,
+            "method": "1F · jaskinia"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              5,
+              7
+            ],
+            "ratePercent": 25,
+            "method": "1F · jaskinia"
+          },
+          {
+            "name": "Onix",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 5,
+            "method": "1F · jaskinia"
+          }
+        ],
+        "B1F": [
+          {
+            "name": "Geodude",
+            "levelRange": [
+              8,
+              8
+            ],
+            "ratePercent": 30,
+            "method": "B1F · jaskinia"
+          },
+          {
+            "name": "Rattata",
+            "levelRange": [
+              6,
+              8
+            ],
+            "ratePercent": 35,
+            "method": "B1F · jaskinia"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              7,
+              9
+            ],
+            "ratePercent": 25,
+            "method": "B1F · jaskinia"
+          },
+          {
+            "name": "Onix",
+            "levelRange": [
+              8,
+              8
+            ],
+            "ratePercent": 10,
+            "method": "B1F · jaskinia"
+          }
+        ],
+        "B2F": [
+          {
+            "name": "Zubat",
+            "levelRange": [
+              22,
+              22
+            ],
+            "ratePercent": 30,
+            "method": "B2F · jaskinia"
+          },
+          {
+            "name": "Rattata",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 35,
+            "method": "B2F · jaskinia"
+          },
+          {
+            "name": "Golbat",
+            "levelRange": [
+              22,
+              22
+            ],
+            "ratePercent": 20,
+            "method": "B2F · jaskinia"
+          },
+          {
+            "name": "Geodude",
+            "levelRange": [
+              21,
+              21
+            ],
+            "ratePercent": 10,
+            "method": "B2F · jaskinia"
+          },
+          {
+            "name": "Onix",
+            "levelRange": [
+              23,
+              23
+            ],
+            "ratePercent": 5,
+            "method": "B2F · jaskinia"
+          }
+        ],
+        "surfing": [
+          {
+            "name": "Wooper",
+            "levelRange": [
+              15,
+              19
+            ],
+            "ratePercent": 60,
+            "method": "Surfing"
+          },
+          {
+            "name": "Quagsire",
+            "levelRange": [
+              15,
+              24
+            ],
+            "ratePercent": 40,
+            "method": "Surfing"
+          }
+        ],
+        "old_rod": [
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 85,
+            "method": "Old Rod"
+          },
+          {
+            "name": "Goldeen",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "Old Rod"
+          }
+        ],
+        "good_rod": [
+          {
+            "name": "Goldeen",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 65,
+            "method": "Good Rod"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 35,
+            "method": "Good Rod"
+          }
+        ],
+        "super_rod": [
+          {
+            "name": "Goldeen",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 70,
+            "method": "Super Rod"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 20,
+            "method": "Super Rod"
+          },
+          {
+            "name": "Seaking",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 10,
+            "method": "Super Rod"
+          }
+        ]
+      },
+      "wildPokemonSourceIds": [
+        "serebii-gs-union-cave"
+      ],
+      "wildPokemonStatus": "verified_gen2_silver_rates_and_levels"
     },
     {
       "id": "route_33",
@@ -1892,6 +2960,19 @@
     "itemPickupCount": 8,
     "itemPickupCoverage": "8 przedmiotów do podniesienia w 3 lokacjach; opisy źródłowe, współrzędne niezweryfikowane",
     "trainerRecordCount": 22,
-    "trainerCoverage": "22 potwierdzone wpisy trenerów w Route 31, Route 32, Union Cave i Route 33; piętra i drużyny zapisane, współrzędne niezweryfikowane"
+    "trainerCoverage": "22 potwierdzone wpisy trenerów w Route 31, Route 32, Union Cave i Route 33; piętra i drużyny zapisane, współrzędne niezweryfikowane",
+    "wildEncounterCoverage": {
+      "status": "partial_verified",
+      "game": "Pokémon Silver (Generation II)",
+      "locations": [
+        "route_29",
+        "route_30",
+        "route_31",
+        "route_32",
+        "union_cave"
+      ],
+      "tableCount": 34,
+      "note": "Rates and levels transcribed from Gen II Gold/Silver encounter tables. Tables are separated by time of day, fishing/surfing method and cave floor. All included rate groups sum to 100%; no spatial coordinates are implied."
+    }
   }
 }
