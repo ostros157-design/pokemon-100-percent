@@ -6330,3 +6330,12 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Dane pochodzą z tabel Serebii Pokéarth Generation II i są ograniczone do Pokémon Gold/Silver. Warianty Crystal i HG/SS nie zostały przeniesione; opisy miejsc nadal nie są dokładnymi współrzędnymi.
 - Rozszerzono testy o obie trasy i zaktualizowano łączne liczby trenerów oraz przedmiotów. Testy Flutter, Analyzer i APK nie zostały uruchomione.
 - Postęp mapy Pokémon Silver pozostaje 40% — wzrosła zawartość danych dwóch kolejnych tras, ale grafika mapy i zweryfikowane współrzędne nadal są główną brakującą częścią.
+
+
+### Pokémon Silver / Johto — Ecruteak City i Burned Tower (2026-11-11)
+- Ecruteak City: dodano cztery tabele spotkań z wody i wędkowania, pięć Kimono Girls oraz pięciu trenerów Gymu, w tym Morty'ego z pełną drużyną (Gastly, Haunter, Gengar, Haunter). Dodano Itemfinder, HM03 Surf, Rainbow Wing po złapaniu trzech bestii oraz TM30 Shadow Ball jako nagrodę Gymu.
+- Burned Tower: dodano tabelę spotkań 1F i trzy tabele B1F (rano/dzień/noc), pięć wariantów/trenerów w tym trzy drużyny rywala zależne od startera, oraz cztery znajdźki: Burn Heal, X Speed, TM20 Endure i HP Up.
+- Zapisano też wydarzenie fabularne ucieczki Entei, Raikou i Suicune z B1F jako usługę/zdarzenie, a nie jako przedmiot ani stałą pinezkę.
+- Źródła: Serebii Pokéarth Generation II — Ecruteak City i Burned Tower. Dane ograniczono do Pokémon Gold/Silver; pominięto warianty Crystal i remake'owe elementy HG/SS. Współrzędne nie zostały zgadywane.
+- Dodano testy dla czterech tabel w Ecruteak i Burned Tower, trenerów, przedmiotów, drużyn Morty'ego i wariantów rywala; zaktualizowano łączne liczniki. Testy Flutter, Analyzer i APK nadal nie zostały uruchomione.
+- Postęp mapy Pokémon Silver pozostaje 40% — dane dwóch ważnych lokacji są znacznie pełniejsze, lecz grafika mapy, dokładne współrzędne i testy uruchomieniowe wciąż wymagają pracy.
