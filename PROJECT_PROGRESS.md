@@ -6522,3 +6522,13 @@ Kontrola repozytorium: 64 lokacje, 30 lokacji z tabelami spotkań, 222 grupy spo
 - Dodano test Route 29 i zwiększono globalny oczekiwany licznik przedmiotów do 179. Kontrola JSON wykazała 64 lokacje, 33 lokacje ze spotkaniami, 239 grup spotkań (wszystkie sumują się do 100%), 195 trenerów w 33 lokacjach, 179 wpisów przedmiotów w 33 lokacjach i 16 drzewek jagodowych.
 - Testów Flutter, Flutter Analyzer ani APK nie uruchomiono; postęp mapy pozostaje szacunkowo **53%**. Nadal brakuje grafiki mapy, zweryfikowanych współrzędnych i uruchomionych testów.
 - Następny logiczny obszar: New Bark Town. Dark Cave nadal pozostaje pominięta zgodnie z decyzją użytkownika.
+
+
+### Pokémon Silver / Johto — New Bark Town (2026-11-11)
+- Uzupełniono cztery grupy spotkań wodnych: Surfing, Old Rod, Good Rod i Super Rod. Każda grupa zawiera poziomy oraz procenty sumujące się do 100%.
+- Dodano wybór jednego startera na poziomie 5 (Chikorita, Cyndaquil albo Totodile) jako prezent Pokémon, a nie dzikie spotkanie; Berry trzymaną przez startera zapisano oddzielnie jako held item, nie jako znajdźkę na mapie.
+- Dodano sześć przedmiotów/prezentów z warunkami: Pokégear od mamy, Potion od pomocnika Elma, 5 Poké Ball po pokonaniu rywala, Everstone po pokazaniu Togepi, Master Ball po zdobyciu ośmiu odznak i S.S. Ticket po wejściu do Hall of Fame. Nie dodano zakupów mamy z HGSS ani innych elementów czwartej generacji.
+- Źródła: [Serebii Pokéarth — New Bark Town Generation II](https://www.serebii.net/pokearth/johto/2nd/newbarktown.shtml) i [Bulbapedia — New Bark Town](https://bulbapedia.bulbagarden.net/wiki/New_Bark_Town). Prezenty mają status współrzędnych niezweryfikowanych; nie są oznaczane jako zwykłe znajdźki na ziemi.
+- Dodano test New Bark Town i zwiększono globalny oczekiwany licznik do 185 wpisów przedmiotów w 34 lokacjach. Kontrola JSON wykazała 64 lokacje, 34 lokacje ze spotkaniami, 243 grupy spotkań (wszystkie sumują się do 100%), 195 trenerów w 33 lokacjach, 185 wpisów przedmiotów w 34 lokacjach i 16 drzewek jagodowych.
+- Testów Flutter, Flutter Analyzer ani APK nie uruchomiono; postęp mapy pozostaje szacunkowo **53%**. Nadal brakuje grafiki mapy, zweryfikowanych współrzędnych i uruchomionych testów.
+- Następny obszar: Cherrygrove City. Dark Cave nadal pozostaje pominięta zgodnie z decyzją użytkownika.
