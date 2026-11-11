@@ -419,7 +419,7 @@ void main() {
       (value) => value['id'] == 'goldenrod_department_store',
     );
     expect(store['dataStatus'], 'verified_gen2_silver_store_floors_2f_6f');
-    expect(store['items'], hasLength(32));
+    expect(store['items'], hasLength(35));
     expect(store['basementItems'], hasLength(3));
     expect(store['specialServices'], hasLength(4));
     for (final value in [...store['items'], ...store['basementItems'], ...store['specialServices']]) {
