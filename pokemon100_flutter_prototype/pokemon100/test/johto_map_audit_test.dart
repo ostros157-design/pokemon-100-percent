@@ -856,4 +856,43 @@ void main() {
     }
   });
 
+
+  test('Silver Route 45 encounters, trainer teams and item pickups are source-tracked', () {
+    final locations = audit['locations'] as List<dynamic>;
+    final route = locations.cast<Map<String, dynamic>>().firstWhere((value) => value['id'] == 'route_45');
+    expect(route['wildPokemonSourceIds'], contains('serebii-gs-route45'));
+    final groups = route['wildPokemonDetails'] as Map<String, dynamic>;
+    expect(groups, hasLength(7));
+    for (final group in groups.entries) {
+      expect((group.value as List).fold<int>(0, (sum, value) => sum + ((value as Map<String, dynamic>)['ratePercent'] as num).toInt()), 100);
+    }
+    expect(route['trainers'], hasLength(7));
+    expect(route['items'], hasLength(5));
+    final skarmory = (groups['walking'] as List).cast<Map<String, dynamic>>().firstWhere((value) => value['name'] == 'Skarmory');
+    expect(skarmory['ratePercent'], 5);
+    for (final value in [...route['trainers'], ...route['items']]) {
+      expect(value['sourceIds'], contains('serebii-gs-route45'));
+      expect(value['availableIn'], contains('gold_silver'));
+      expect(value['coordinateStatus'], 'unverified');
+    }
+  });
+
+  test('Silver Dragon\\'s Den fishing, Dragon Fang and Clair reward are version-specific', () {
+    final locations = audit['locations'] as List<dynamic>;
+    final den = locations.cast<Map<String, dynamic>>().firstWhere((value) => value['id'] == 'dragons_den');
+    expect(den['wildPokemonSourceIds'], contains('serebii-gs-dragons-den'));
+    final groups = den['wildPokemonDetails'] as Map<String, dynamic>;
+    expect(groups, hasLength(4));
+    for (final group in groups.entries) {
+      expect((group.value as List).fold<int>(0, (sum, value) => sum + ((value as Map<String, dynamic>)['ratePercent'] as num).toInt()), 100);
+    }
+    expect(den['items'], hasLength(5));
+    expect(den['specialServices'].single['category'], 'story_event');
+    expect(den['notes'], contains('Crystal'));
+    for (final value in [...den['items'], ...den['specialServices']]) {
+      expect(value['sourceIds'], contains('serebii-gs-dragons-den'));
+      expect(value['availableIn'], contains('gold_silver'));
+    }
+  });
+
 }
