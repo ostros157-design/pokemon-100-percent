@@ -18,7 +18,7 @@ void main() {
   test('Johto audit contains the expected regional location index', () {
     final locations = audit['locations'] as List<dynamic>;
     expect(audit['region'], 'Johto');
-    expect(locations, hasLength(62));
+    expect(locations, hasLength(64));
     expect(
       locations.where((value) {
         final location = value as Map<String, dynamic>;
