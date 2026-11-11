@@ -9,7 +9,7 @@ class PokemonSpriteCache {
     try {
       await Future.wait([
         DefaultCacheManager().downloadFile('$_base$pokemonId.png'),
-        DefaultCacheManager().downloadFile('$_base' 'shiny/$pokemonId.png'),
+        DefaultCacheManager().downloadFile('${_base}shiny/$pokemonId.png'),
       ]);
     } catch (_) {
       // The visible normal sprite still renders through CachedNetworkImage;
