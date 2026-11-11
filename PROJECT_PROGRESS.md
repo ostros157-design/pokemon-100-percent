@@ -6365,3 +6365,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 | **Razem** | **100%** | **45%** | **55% pozostaje** |
 
 Kontrola repozytorium po ostatnich zmianach: JSON poprawnie się parsuje; wszystkie grupy spotkań mają sumę 100%; liczniki testowe odpowiadają danym (16 drzewek jagodowych, 121 trenerów, 101 wpisów na liście przedmiotów). To kontrola danych i spójności zapisanych oczekiwań, a nie wynik uruchomienia testów Flutter. Następny obszar do opracowania: Olivine City i okolice, zaczynając od pełnych danych miasta oraz latarni morskiej.
+
+
+### Pokémon Silver / Johto — Olivine City i Shining Lighthouse (2026-11-11)
+- Olivine City: dodano 9 tabel spotkań Silvera (surfing, Old Rod, Good Rod w porach dnia oraz osobne tabele portu), Jasmine z Magnemite Lv. 30, Magnemite Lv. 30 i Steelix Lv. 35, Good Rod, HM04 Strength oraz TM23 Iron Tail jako nagrodę.
+- Shining Lighthouse: dodano 9 trenerów z pięter 2F–5F, pełne składy i poziomy, 6 przedmiotów (Ether, TM34 Swagger, Great Ball, Rare Candy, ukryty Hyper Potion, Super Potion) oraz wydarzenie fabularne z chorym Ampharosem i SecretPotion.
+- Źródła Serebii Pokéarth Generation II. Zapis ograniczony do Gold/Silver; nie dodano elementów remake'owych. Dokładne współrzędne i kratki przedmiotów pozostają niezweryfikowane.
+- Dodano testy sum procentowych spotkań, drużyny Jasmine, 9 trenerów latarni, 9 tabel spotkań i 9 przedmiotów/źródeł. Testy Flutter, Analyzer i APK nie zostały uruchomione.
+- Następny pakiet: Route 40–41 i Cianwood City, w tym dane spotkań morskich i Gym Chucka.
