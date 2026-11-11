@@ -1,4 +1,6 @@
+import 'dart:async';
 import 'package:cached_network_image/cached_network_image.dart';
+import '../services/pokemon_sprite_cache.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../data/pokemon_data.dart';
@@ -436,6 +438,7 @@ class _PokemonCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    unawaited(PokemonSpriteCache.prefetchPair(pokemon.id));
     return Card(
       elevation: 2,
       clipBehavior: Clip.antiAlias,
