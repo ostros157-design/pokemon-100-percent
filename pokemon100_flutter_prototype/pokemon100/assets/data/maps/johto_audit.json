@@ -165,6 +165,21 @@
       "id": "serebii-gs-shining-lighthouse",
       "url": "https://www.serebii.net/pokearth/johto/2nd/shininglighthouse.shtml",
       "scope": "Pokémon Silver Generation II Shining Lighthouse floors 1F-6F, trainers and item pickups"
+    },
+    {
+      "id": "serebii-gs-route40",
+      "url": "https://www.serebii.net/pokearth/johto/2nd/route40.shtml",
+      "scope": "Pokémon Silver Generation II Route 40 surfing, fishing, Rock Smash encounters, trainers and items"
+    },
+    {
+      "id": "serebii-gs-route41",
+      "url": "https://www.serebii.net/pokearth/johto/2nd/route41.shtml",
+      "scope": "Pokémon Silver Generation II Route 41 surfing and fishing encounters, swimmer trainers around Whirl Islands"
+    },
+    {
+      "id": "serebii-gs-cianwood-city",
+      "url": "https://www.serebii.net/pokearth/johto/2nd/cianwoodcity.shtml",
+      "scope": "Pokémon Silver Generation II Cianwood City encounters, Rock Smash, gifts, hidden items and Gym trainer teams"
     }
   ],
   "locations": [
@@ -8248,9 +8263,377 @@
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-johto-region",
-        "bulbapedia-route-list"
+        "bulbapedia-route-list",
+        "serebii-gs-route40"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit"
+      "dataStatus": "verified_gen2_silver_sea_rock_smash_trainers_and_items",
+      "wildPokemonDetails": {
+        "route40_surf": [
+          {
+            "name": "Tentacool",
+            "levelRange": [
+              15,
+              24
+            ],
+            "ratePercent": 90,
+            "method": "Surfing"
+          },
+          {
+            "name": "Tentacruel",
+            "levelRange": [
+              20,
+              24
+            ],
+            "ratePercent": 10,
+            "method": "Surfing"
+          }
+        ],
+        "route40_old_rod": [
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 85,
+            "method": "Old Rod"
+          },
+          {
+            "name": "Krabby",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "Old Rod"
+          }
+        ],
+        "route40_good_rod_morning": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 55,
+            "method": "Good Rod · rano"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 35,
+            "method": "Good Rod · rano"
+          },
+          {
+            "name": "Corsola",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 10,
+            "method": "Good Rod · rano"
+          }
+        ],
+        "route40_good_rod_day": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 55,
+            "method": "Good Rod · dzień"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 35,
+            "method": "Good Rod · dzień"
+          },
+          {
+            "name": "Corsola",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 10,
+            "method": "Good Rod · dzień"
+          }
+        ],
+        "route40_good_rod_night": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 55,
+            "method": "Good Rod · noc"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 35,
+            "method": "Good Rod · noc"
+          },
+          {
+            "name": "Staryu",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 10,
+            "method": "Good Rod · noc"
+          }
+        ],
+        "route40_super_rod_morning": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 60,
+            "method": "Super Rod · rano"
+          },
+          {
+            "name": "Kingler",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 10,
+            "method": "Super Rod · rano"
+          },
+          {
+            "name": "Corsola",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 30,
+            "method": "Super Rod · rano"
+          }
+        ],
+        "route40_super_rod_day": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 60,
+            "method": "Super Rod · dzień"
+          },
+          {
+            "name": "Kingler",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 10,
+            "method": "Super Rod · dzień"
+          },
+          {
+            "name": "Corsola",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 30,
+            "method": "Super Rod · dzień"
+          }
+        ],
+        "route40_super_rod_night": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 60,
+            "method": "Super Rod · noc"
+          },
+          {
+            "name": "Kingler",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 10,
+            "method": "Super Rod · noc"
+          },
+          {
+            "name": "Staryu",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 30,
+            "method": "Super Rod · noc"
+          }
+        ],
+        "rock_smash": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              15,
+              15
+            ],
+            "ratePercent": 90,
+            "method": "Rock Smash"
+          },
+          {
+            "name": "Shuckle",
+            "levelRange": [
+              15,
+              15
+            ],
+            "ratePercent": 10,
+            "method": "Rock Smash"
+          }
+        ]
+      },
+      "wildPokemonSourceIds": [
+        "serebii-gs-route40"
+      ],
+      "wildPokemonStatus": "verified_gen2_silver_rates_and_levels",
+      "trainers": [
+        {
+          "name": "Swimmer Simon",
+          "team": [
+            {
+              "name": "Tentacool",
+              "level": 20
+            },
+            {
+              "name": "Tentacool",
+              "level": 20
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route40"
+          ]
+        },
+        {
+          "name": "Swimmer Elaine",
+          "team": [
+            {
+              "name": "Staryu",
+              "level": 21
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route40"
+          ]
+        },
+        {
+          "name": "Swimmer Paula",
+          "team": [
+            {
+              "name": "Staryu",
+              "level": 19
+            },
+            {
+              "name": "Shellder",
+              "level": 19
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route40"
+          ]
+        },
+        {
+          "name": "Swimmer Randall",
+          "team": [
+            {
+              "name": "Shellder",
+              "level": 18
+            },
+            {
+              "name": "Wartortle",
+              "level": 20
+            },
+            {
+              "name": "Shellder",
+              "level": 18
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route40"
+          ]
+        }
+      ],
+      "items": [
+        {
+          "id": "route_40_sharp_beak",
+          "name": "Sharp Beak",
+          "locationDescription": "Prezent od Moniki w poniedziałek.",
+          "category": "gift",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route40"
+          ]
+        },
+        {
+          "id": "route_40_hyper_potion",
+          "name": "Hyper Potion",
+          "locationDescription": "Ukryty przedmiot wykrywany przez Itemfinder.",
+          "category": "hidden",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route40"
+          ]
+        },
+        {
+          "id": "route_40_max_ether",
+          "name": "Max Ether",
+          "locationDescription": "Ukryty przedmiot wykrywany przez Itemfinder.",
+          "category": "hidden",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route40"
+          ]
+        }
+      ]
     },
     {
       "id": "route_41",
@@ -8265,9 +8648,454 @@
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-johto-region",
-        "bulbapedia-route-list"
+        "bulbapedia-route-list",
+        "serebii-gs-route41"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit"
+      "dataStatus": "verified_gen2_silver_sea_encounters_and_swimmer_trainers",
+      "wildPokemonDetails": {
+        "route41_surf": [
+          {
+            "name": "Tentacool",
+            "levelRange": [
+              15,
+              24
+            ],
+            "ratePercent": 70,
+            "method": "Surfing"
+          },
+          {
+            "name": "Tentacruel",
+            "levelRange": [
+              20,
+              24
+            ],
+            "ratePercent": 30,
+            "method": "Surfing"
+          }
+        ],
+        "route41_old_rod": [
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 85,
+            "method": "Old Rod"
+          },
+          {
+            "name": "Krabby",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "Old Rod"
+          }
+        ],
+        "route41_good_rod_morning": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 55,
+            "method": "Good Rod · rano"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 35,
+            "method": "Good Rod · rano"
+          },
+          {
+            "name": "Corsola",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 10,
+            "method": "Good Rod · rano"
+          }
+        ],
+        "route41_good_rod_day": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 55,
+            "method": "Good Rod · dzień"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 35,
+            "method": "Good Rod · dzień"
+          },
+          {
+            "name": "Corsola",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 10,
+            "method": "Good Rod · dzień"
+          }
+        ],
+        "route41_good_rod_night": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 55,
+            "method": "Good Rod · noc"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 35,
+            "method": "Good Rod · noc"
+          },
+          {
+            "name": "Staryu",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 10,
+            "method": "Good Rod · noc"
+          }
+        ],
+        "route41_super_rod_morning": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 60,
+            "method": "Super Rod · rano"
+          },
+          {
+            "name": "Kingler",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 10,
+            "method": "Super Rod · rano"
+          },
+          {
+            "name": "Corsola",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 30,
+            "method": "Super Rod · rano"
+          }
+        ],
+        "route41_super_rod_day": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 60,
+            "method": "Super Rod · dzień"
+          },
+          {
+            "name": "Kingler",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 10,
+            "method": "Super Rod · dzień"
+          },
+          {
+            "name": "Corsola",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 30,
+            "method": "Super Rod · dzień"
+          }
+        ],
+        "route41_super_rod_night": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 60,
+            "method": "Super Rod · noc"
+          },
+          {
+            "name": "Kingler",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 10,
+            "method": "Super Rod · noc"
+          },
+          {
+            "name": "Staryu",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 30,
+            "method": "Super Rod · noc"
+          }
+        ]
+      },
+      "wildPokemonSourceIds": [
+        "serebii-gs-route41"
+      ],
+      "wildPokemonStatus": "verified_gen2_silver_rates_and_levels",
+      "trainers": [
+        {
+          "name": "Swimmer George",
+          "team": [
+            {
+              "name": "Tentacool",
+              "level": 16
+            },
+            {
+              "name": "Tentacool",
+              "level": 17
+            },
+            {
+              "name": "Tentacool",
+              "level": 16
+            },
+            {
+              "name": "Staryu",
+              "level": 19
+            },
+            {
+              "name": "Tentacool",
+              "level": 17
+            },
+            {
+              "name": "Remoraid",
+              "level": 19
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route41"
+          ]
+        },
+        {
+          "name": "Swimmer Charlie",
+          "team": [
+            {
+              "name": "Shellder",
+              "level": 21
+            },
+            {
+              "name": "Tentacool",
+              "level": 19
+            },
+            {
+              "name": "Tentacruel",
+              "level": 19
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route41"
+          ]
+        },
+        {
+          "name": "Swimmer Kaylee",
+          "team": [
+            {
+              "name": "Goldeen",
+              "level": 18
+            },
+            {
+              "name": "Goldeen",
+              "level": 20
+            },
+            {
+              "name": "Seaking",
+              "level": 20
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route41"
+          ]
+        },
+        {
+          "name": "Swimmer Susie",
+          "team": [
+            {
+              "name": "Psyduck",
+              "level": 20
+            },
+            {
+              "name": "Goldeen",
+              "level": 22
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route41"
+          ]
+        },
+        {
+          "name": "Swimmer Kara",
+          "team": [
+            {
+              "name": "Staryu",
+              "level": 20
+            },
+            {
+              "name": "Starmie",
+              "level": 20
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route41"
+          ]
+        },
+        {
+          "name": "Swimmer Kirk",
+          "team": [
+            {
+              "name": "Gyarados",
+              "level": 20
+            },
+            {
+              "name": "Gyarados",
+              "level": 20
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route41"
+          ]
+        },
+        {
+          "name": "Swimmer Denise",
+          "team": [
+            {
+              "name": "Seel",
+              "level": 22
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route41"
+          ]
+        },
+        {
+          "name": "Swimmer Berke",
+          "team": [
+            {
+              "name": "Qwilfish",
+              "level": 23
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route41"
+          ]
+        },
+        {
+          "name": "Swimmer Mathew",
+          "team": [
+            {
+              "name": "Krabby",
+              "level": 23
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route41"
+          ]
+        },
+        {
+          "name": "Swimmer Wendy",
+          "team": [
+            {
+              "name": "Horsea",
+              "level": 21
+            },
+            {
+              "name": "Horsea",
+              "level": 21
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route41"
+          ]
+        }
+      ]
     },
     {
       "id": "whirl_islands",
@@ -8296,9 +9124,433 @@
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-johto-region",
-        "bulbapedia-route-list"
+        "bulbapedia-route-list",
+        "serebii-gs-cianwood-city"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit"
+      "dataStatus": "verified_gen2_silver_encounters_rock_smash_gifts_gym_and_hidden_items",
+      "wildPokemonDetails": {
+        "cianwood_surf": [
+          {
+            "name": "Tentacool",
+            "levelRange": [
+              15,
+              24
+            ],
+            "ratePercent": 90,
+            "method": "Surfing"
+          },
+          {
+            "name": "Tentacruel",
+            "levelRange": [
+              20,
+              40
+            ],
+            "ratePercent": 10,
+            "method": "Surfing"
+          }
+        ],
+        "cianwood_old_rod": [
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 85,
+            "method": "Old Rod"
+          },
+          {
+            "name": "Krabby",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "Old Rod"
+          }
+        ],
+        "cianwood_good_rod_morning": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 55,
+            "method": "Good Rod · rano"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 35,
+            "method": "Good Rod · rano"
+          },
+          {
+            "name": "Corsola",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 10,
+            "method": "Good Rod · rano"
+          }
+        ],
+        "cianwood_good_rod_day": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 55,
+            "method": "Good Rod · dzień"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 35,
+            "method": "Good Rod · dzień"
+          },
+          {
+            "name": "Corsola",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 10,
+            "method": "Good Rod · dzień"
+          }
+        ],
+        "cianwood_good_rod_night": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 55,
+            "method": "Good Rod · noc"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 35,
+            "method": "Good Rod · noc"
+          },
+          {
+            "name": "Staryu",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 10,
+            "method": "Good Rod · noc"
+          }
+        ],
+        "cianwood_super_rod_morning": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 60,
+            "method": "Super Rod · rano"
+          },
+          {
+            "name": "Kingler",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 10,
+            "method": "Super Rod · rano"
+          },
+          {
+            "name": "Corsola",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 30,
+            "method": "Super Rod · rano"
+          }
+        ],
+        "cianwood_super_rod_day": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 60,
+            "method": "Super Rod · dzień"
+          },
+          {
+            "name": "Kingler",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 10,
+            "method": "Super Rod · dzień"
+          },
+          {
+            "name": "Corsola",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 30,
+            "method": "Super Rod · dzień"
+          }
+        ],
+        "cianwood_super_rod_night": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 60,
+            "method": "Super Rod · noc"
+          },
+          {
+            "name": "Kingler",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 10,
+            "method": "Super Rod · noc"
+          },
+          {
+            "name": "Staryu",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 30,
+            "method": "Super Rod · noc"
+          }
+        ],
+        "cianwood_rock_smash": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              15,
+              15
+            ],
+            "ratePercent": 90,
+            "method": "Rock Smash"
+          },
+          {
+            "name": "Shuckle",
+            "levelRange": [
+              15,
+              15
+            ],
+            "ratePercent": 10,
+            "method": "Rock Smash"
+          }
+        ]
+      },
+      "wildPokemonSourceIds": [
+        "serebii-gs-cianwood-city"
+      ],
+      "wildPokemonStatus": "verified_gen2_silver_rates_and_levels",
+      "trainers": [
+        {
+          "name": "Black Belt Yoshi",
+          "team": [
+            {
+              "name": "Hitmonlee",
+              "level": 27
+            }
+          ],
+          "note": "Cianwood Gym",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-cianwood-city"
+          ]
+        },
+        {
+          "name": "Black Belt Lao",
+          "team": [
+            {
+              "name": "Hitmonchan",
+              "level": 27
+            }
+          ],
+          "note": "Cianwood Gym",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-cianwood-city"
+          ]
+        },
+        {
+          "name": "Black Belt Nob",
+          "team": [
+            {
+              "name": "Machop",
+              "level": 25
+            },
+            {
+              "name": "Machoke",
+              "level": 25
+            }
+          ],
+          "note": "Cianwood Gym",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-cianwood-city"
+          ]
+        },
+        {
+          "name": "Black Belt Lung",
+          "team": [
+            {
+              "name": "Mankey",
+              "level": 23
+            },
+            {
+              "name": "Mankey",
+              "level": 23
+            },
+            {
+              "name": "Primeape",
+              "level": 25
+            }
+          ],
+          "note": "Cianwood Gym",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-cianwood-city"
+          ]
+        },
+        {
+          "name": "Gym Leader Chuck",
+          "team": [
+            {
+              "name": "Primeape",
+              "level": 27
+            },
+            {
+              "name": "Poliwrath",
+              "level": 30
+            }
+          ],
+          "note": "Nagroda: Storm Badge i TM01 Dynamic Punch.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-cianwood-city"
+          ]
+        }
+      ],
+      "items": [
+        {
+          "id": "cianwood_hm02_fly",
+          "name": "HM02 — Fly",
+          "locationDescription": "Prezent od żony Chucka po pokonaniu Chucka.",
+          "category": "gift",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-cianwood-city"
+          ]
+        },
+        {
+          "id": "cianwood_secret_potion",
+          "name": "SecretPotion",
+          "locationDescription": "Prezent z apteki w Cianwood City; potrzebna do wyleczenia Amphy w latarni.",
+          "category": "key_item",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-cianwood-city"
+          ]
+        },
+        {
+          "id": "cianwood_berry_juice",
+          "name": "Berry Juice",
+          "locationDescription": "Przedmiot trzymany przez Shuckle otrzymanego od mieszkańca.",
+          "category": "held_item_gift",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "serebii-gs-cianwood-city"
+          ]
+        },
+        {
+          "id": "cianwood_max_ether_hidden",
+          "name": "Max Ether",
+          "locationDescription": "Ukryty przedmiot wykrywany przez Itemfinder.",
+          "category": "hidden",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-cianwood-city"
+          ]
+        },
+        {
+          "id": "cianwood_revive_hidden",
+          "name": "Revive",
+          "locationDescription": "Ukryty przedmiot wykrywany przez Itemfinder.",
+          "category": "hidden",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-cianwood-city"
+          ]
+        },
+        {
+          "id": "cianwood_tm01_dynamic_punch",
+          "name": "TM01 — Dynamic Punch",
+          "locationDescription": "Nagroda od żony Chucka po pokonaniu Gym Leadera.",
+          "category": "gym_reward",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "serebii-gs-cianwood-city"
+          ]
+        }
+      ]
     },
     {
       "id": "route_42",
