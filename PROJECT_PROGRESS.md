@@ -6417,3 +6417,21 @@ Kontrola repozytorium po tej serii zmian: 64 lokacje, 23 lokacje z tabelami spot
 - Źródła Serebii Pokéarth Generation II; dane Silver odseparowane od Gold/Crystal i remake'ów. Nie dodano współrzędnych ani pinezek bez potwierdzenia.
 - Dodano testy sum procentowych, drużyn, przedmiotów i źródeł dla obu lokacji; zaktualizowano globalne liczniki. Testów Flutter, Analyzer i APK nie uruchomiono.
 - Następny etap: Mahogany Town, Lake of Rage i Route 43.
+
+
+## Aktualizacja szacunku po Route 42 i Mt. Mortar — 2026-11-11
+
+**Postęp mapy Pokémon Silver: 48% ukończone / 52% pozostało.** Uzasadnienie zmiany: uzupełniono kolejne dwie lokacje, w tym 16 dodatkowych grup spotkań, trenerów i przedmiotów; kontrola danych potwierdziła poprawne sumy procentów.
+
+| Obszar | Waga | Zaliczone |
+|---|---:|---:|
+| Indeks lokacji i połączeń | 20% | 20% |
+| Rozdzielenie Gold/Silver, Crystal i HG/SS | 15% | 15% |
+| Grafika mapy Silver | 20% | 0% |
+| Zweryfikowane współrzędne i pinezki | 20% | 0% |
+| Spotkania Pokémonów | 10% | 7% |
+| Przedmioty, trenerzy i zdarzenia | 10% | 6% |
+| Uruchomione testy Flutter, Analyzer i APK | 5% | 0% |
+| **Razem** | **100%** | **48%** |
+
+Ostatnia kontrola repozytorium: 64 lokacje, 25 lokacji z tabelami spotkań, 184 grupy spotkań — każda daje 100% — 156 wpisów trenerów w 26 lokacjach, 141 wpisów przedmiotów w 24 lokacjach i 16 drzewek jagodowych. JSON poprawnie się parsuje, a globalne liczniki w testach odpowiadają zawartości; nie uruchomiono jednak testów Flutter ani APK. Następny pakiet do opracowania: Mahogany Town, Lake of Rage i Route 43.
