@@ -1,3 +1,15 @@
+### Mapa Pokémon Silver — Route 33 i Slowpoke Well (2026-11-11)
+
+- Route 33: dodano osobne tabele spotkań dla rana, dnia i nocy oraz dwie metody Headbutt, z uwzględnieniem specjalnych drzew. Uwzględniono wariant Silver, w którym poranne spotkania obejmują m.in. Ekans.
+- Slowpoke Well: dodano spotkania 1F i B1F — chodzenie, Surf, Old Rod, Good Rod i Super Rod; poziomy i procenty są rozdzielone według piętra oraz metody.
+- Dodano czterech Rocket Gruntów z drużynami i poziomami oraz Super Potion na 1F.
+- Wpis Route 33 zachowuje osobny wpis PSNCureBerry; nie zastąpiono go przedmiotem do podniesienia.
+- Wszystkie 15 nowych grup procentowych sumuje się do 100%. Łącznie audyt obejmuje teraz 49 grup spotkań w 7 lokacjach, 26 wpisów trenerów i 9 wpisów przedmiotów.
+- Źródło: Serebii Pokéarth — osobne strony Generation II Route 33 i Slowpoke Well. Dane HG/SS nie zostały użyte.
+- Test kontraktowy rozszerzono o Route 33 i Slowpoke Well, źródła, sumy procentowe, czterech Rocket Gruntów i Super Potion.
+- Współrzędne pozostają niezweryfikowane. Nie uruchomiono Flutter Analyzer, testów ani APK.
+- Szacowany postęp mapy Silver/Johto: **38% ukończone, 62% pozostało**. Podniesiono go z 35% o częściowe uzupełnienie spotkań, trenerów i przedmiotów; obrazy mapy, pozycje na mapie i walidacja aplikacji nadal są nieukończone.
+
 ### Mapa Pokémon Silver — dzikie spotkania Johto (2026-11-11)
 
 - Dodano zweryfikowane tabele dzikich spotkań dla Route 29, Route 30, Route 31, Route 32 oraz Union Cave.
