@@ -394,4 +394,54 @@ void main() {
       containsAll(['TM11 — Sunny Day', 'Pink Bow', 'Basement Key']));
   });
 
+
+  test('Silver Goldenrod Game Corner games and prize tables are version-specific', () {
+    final locations = audit['locations'] as List<dynamic>;
+    final corner = locations.cast<Map<String, dynamic>>().firstWhere(
+      (value) => value['id'] == 'goldenrod_game_corner',
+    );
+    expect(corner['dataStatus'], 'verified_gen2_silver_games_and_prizes');
+    expect(corner['specialServices'], hasLength(4));
+    expect(corner['items'], hasLength(6));
+    final prizes = (corner['items'] as List).cast<Map<String, dynamic>>();
+    expect(prizes.map((value) => value['name']),
+      containsAll(['TM25 — Thunder', 'TM14 — Blizzard', 'TM38 — Fire Blast', 'Abra Lv. 10', 'Sandshrew Lv. 10', 'Dratini Lv. 10']));
+    final sandshrew = prizes.firstWhere((value) => value['name'] == 'Sandshrew Lv. 10');
+    expect(sandshrew['availableIn'], contains('gold_silver'));
+    for (final value in [...corner['specialServices'], ...prizes]) {
+      expect(value['sourceIds'], contains('serebii-gs-game-corner'));
+    }
+  });
+
+  test('Silver Goldenrod Department Store has Generation II stock and basement pickups', () {
+    final locations = audit['locations'] as List<dynamic>;
+    final store = locations.cast<Map<String, dynamic>>().firstWhere(
+      (value) => value['id'] == 'goldenrod_department_store',
+    );
+    expect(store['dataStatus'], 'verified_gen2_silver_store_floors_2f_6f');
+    expect(store['items'], hasLength(32));
+    expect(store['basementItems'], hasLength(3));
+    expect(store['specialServices'], hasLength(4));
+    for (final value in [...store['items'], ...store['basementItems'], ...store['specialServices']]) {
+      expect(value['sourceIds'], contains('bulbapedia-gs-department-store'));
+      expect(value['availableIn'], contains('gold_silver'));
+    }
+    final shopStock = (store['items'] as List).cast<Map<String, dynamic>>();
+    expect(shopStock.where((value) => value['floor'] == '3F'), hasLength(7));
+    expect(shopStock.where((value) => value['floor'] == '4F'), hasLength(5));
+    expect(shopStock.where((value) => value['floor'] == '5F'), hasLength(5));
+    expect(shopStock.where((value) => value['floor'] == '6F'), hasLength(3));
+  });
+
+  test('Silver Goldenrod trade list excludes the Crystal-only Abra trade', () {
+    final locations = audit['locations'] as List<dynamic>;
+    final city = locations.cast<Map<String, dynamic>>().firstWhere(
+      (value) => value['id'] == 'goldenrod_city',
+    );
+    expect((city['items'] as List).map((value) => value['id']),
+      isNot(contains('goldenrod_gold_berry_trade_abra')));
+    expect((city['items'] as List).where((value) => value['id'] == 'goldenrod_gold_berry_trade_drowzee'),
+      hasLength(1));
+  });
+
 }
