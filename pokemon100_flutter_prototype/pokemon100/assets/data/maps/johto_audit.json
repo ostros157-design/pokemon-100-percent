@@ -405,7 +405,7 @@
             "gold_silver",
             "crystal"
           ],
-          "coordinateStatus": "not_a_map_pickup",
+          "coordinateStatus": "unverified",
           "sourceIds": [
             "bulbapedia-new-bark-town"
           ]
@@ -419,7 +419,7 @@
             "gold_silver",
             "crystal"
           ],
-          "coordinateStatus": "not_a_map_pickup",
+          "coordinateStatus": "unverified",
           "sourceIds": [
             "serebii-gs-new-bark-town",
             "bulbapedia-new-bark-town"
@@ -434,7 +434,7 @@
             "gold_silver",
             "crystal"
           ],
-          "coordinateStatus": "not_a_map_pickup",
+          "coordinateStatus": "unverified",
           "sourceIds": [
             "serebii-gs-new-bark-town",
             "bulbapedia-new-bark-town"
@@ -449,7 +449,7 @@
             "gold_silver",
             "crystal"
           ],
-          "coordinateStatus": "not_a_map_pickup",
+          "coordinateStatus": "unverified",
           "sourceIds": [
             "serebii-gs-new-bark-town",
             "bulbapedia-new-bark-town"
@@ -464,7 +464,7 @@
             "gold_silver",
             "crystal"
           ],
-          "coordinateStatus": "not_a_map_pickup",
+          "coordinateStatus": "unverified",
           "sourceIds": [
             "serebii-gs-new-bark-town",
             "bulbapedia-new-bark-town"
@@ -479,7 +479,7 @@
             "gold_silver",
             "crystal"
           ],
-          "coordinateStatus": "not_a_map_pickup",
+          "coordinateStatus": "unverified",
           "sourceIds": [
             "serebii-gs-new-bark-town",
             "bulbapedia-new-bark-town"
