@@ -6409,3 +6409,11 @@ Kontrola repozytorium po ostatnich zmianach: JSON poprawnie się parsuje; wszyst
 | **Razem** | **100%** | **47%** |
 
 Kontrola repozytorium po tej serii zmian: 64 lokacje, 23 lokacje z tabelami spotkań, 168 grup spotkań (każda sumuje się do 100%), 150 wpisów trenerów w 24 lokacjach, 127 wpisów przedmiotów w 22 lokacjach i 16 drzewek jagodowych. JSON parsuje się poprawnie, a zapisane liczniki testów odpowiadają danym; testów Flutter nie uruchomiono. Największe brakujące części nadal stanowią grafika mapy, dokładne współrzędne i uruchomienie testów.
+
+
+### Pokémon Silver / Johto — Route 42 i Mt. Mortar (2026-11-11)
+- Route 42: dodano 9 tabel spotkań Silvera (trawa rano/dzień/noc, surfing, trzy wędki i Headbutt w zwykłych/specjalnych drzewach), 3 trenerów oraz 6 przedmiotów: Ultra Ball, Super Potion, Pink/Yellow/Green Apricorn i ukryty Max Potion. Rematche Fishermana Chrisa zapisano jako notatkę, a nie fałszywe osobne osoby.
+- Mt. Mortar: dodano 7 tabel spotkań dla 1F, 1F-2, 1F-3 i B1F, 3 trenerów oraz 8 przedmiotów (Ether, Guard Spec., ukryty Hyper Potion, Max Revive, ukryty Max Repel, Escape Rope, Hyper Potion i ukryty Max Revive).
+- Źródła Serebii Pokéarth Generation II; dane Silver odseparowane od Gold/Crystal i remake'ów. Nie dodano współrzędnych ani pinezek bez potwierdzenia.
+- Dodano testy sum procentowych, drużyn, przedmiotów i źródeł dla obu lokacji; zaktualizowano globalne liczniki. Testów Flutter, Analyzer i APK nie uruchomiono.
+- Następny etap: Mahogany Town, Lake of Rage i Route 43.
