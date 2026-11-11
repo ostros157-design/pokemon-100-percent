@@ -153,11 +153,11 @@ void main() {
       }
     }
 
-    expect(pickups, hasLength(101));
+    expect(pickups, hasLength(110));
     expect(
       locations.where((value) =>
           ((value as Map<String, dynamic>)['items'] as List?)?.isNotEmpty ?? false),
-      hasLength(17),
+      hasLength(19),
     );
   });
 
@@ -178,11 +178,11 @@ void main() {
       }
     }
 
-    expect(trainers, hasLength(121));
+    expect(trainers, hasLength(131));
     expect(
       locations.where((value) =>
           ((value as Map<String, dynamic>)['trainers'] as List?)?.isNotEmpty ?? false),
-      hasLength(19),
+      hasLength(21),
     );
   });
 
@@ -600,6 +600,41 @@ void main() {
     expect(route['items'].first['name'], 'TM13 — Snore');
     for (final value in [...route['trainers'], ...route['items']]) {
       expect(value['sourceIds'], contains('serebii-gs-route39'));
+      expect(value['availableIn'], contains('gold_silver'));
+    }
+  });
+
+
+  test('Silver Olivine City encounter tables, Jasmine and gifts are source-tracked', () {
+    final locations = audit['locations'] as List<dynamic>;
+    final city = locations.cast<Map<String, dynamic>>().firstWhere((value) => value['id'] == 'olivine_city');
+    expect(city['wildPokemonSourceIds'], contains('serebii-gs-olivine-city'));
+    final groups = city['wildPokemonDetails'] as Map<String, dynamic>;
+    expect(groups, hasLength(9));
+    for (final group in groups.entries) {
+      expect((group.value as List).fold<int>(0, (sum, value) => sum + ((value as Map<String, dynamic>)['ratePercent'] as num).toInt()), 100);
+    }
+    expect(city['trainers'], hasLength(1));
+    expect(city['trainers'].single['name'], 'Gym Leader Jasmine');
+    expect(city['trainers'].single['team'], hasLength(3));
+    expect(city['items'], hasLength(3));
+    for (final value in [...city['trainers'], ...city['items']]) {
+      expect(value['sourceIds'], contains('serebii-gs-olivine-city'));
+      expect(value['availableIn'], contains('gold_silver'));
+    }
+  });
+
+  test('Silver Olivine Lighthouse floors, trainers and items are source-tracked', () {
+    final locations = audit['locations'] as List<dynamic>;
+    final lighthouse = locations.cast<Map<String, dynamic>>().firstWhere((value) => value['id'] == 'olivine_lighthouse');
+    expect(lighthouse['sourceIds'], contains('serebii-gs-shining-lighthouse'));
+    expect(lighthouse['trainers'], hasLength(9));
+    expect(lighthouse['items'], hasLength(6));
+    expect(lighthouse['specialServices'].single['category'], 'story_event');
+    final floors = (lighthouse['trainers'] as List).map((value) => (value as Map<String, dynamic>)['note'].toString().split(' · ').first).toSet();
+    expect(floors, containsAll(['2F', '3F', '4F', '5F']));
+    for (final value in [...lighthouse['trainers'], ...lighthouse['items'], ...lighthouse['specialServices']]) {
+      expect(value['sourceIds'], contains('serebii-gs-shining-lighthouse'));
       expect(value['availableIn'], contains('gold_silver'));
     }
   });
