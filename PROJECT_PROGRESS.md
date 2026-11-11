@@ -6542,3 +6542,13 @@ Kontrola repozytorium: 64 lokacje, 30 lokacji z tabelami spotkań, 222 grupy spo
 - Dodano test sum procentowych, wariantów rywala, prezentu Mystic Water i źródeł; globalny licznik przedmiotów zwiększono do 186 w 35 lokacjach. Kontrola JSON wykazała 64 lokacje, 35 lokacji ze spotkaniami, 251 grup spotkań (wszystkie sumują się do 100%), 198 wpisów trenerów w 34 lokacjach, 186 wpisów przedmiotów w 35 lokacjach i 16 drzewek jagodowych.
 - Testów Flutter, Flutter Analyzer ani APK nie uruchomiono; postęp mapy pozostaje szacunkowo **53%**. Nadal brakuje grafiki mapy, zweryfikowanych współrzędnych i uruchomionych testów.
 - Następny obszar: Route 30. Dark Cave nadal pozostaje pominięta zgodnie z decyzją użytkownika.
+
+
+### Pokémon Silver / Johto — Route 30 (2026-11-11)
+- Uzupełniono spotkania Headbutt dla zwykłych i specjalnych drzew: zwykłe 50% Spearow / 30% Heracross / 20% Aipom, specjalne 80% Spearow / 20% Aipom. Dotychczasowe tabele trawy i wody zachowano.
+- Dodano Youngster Joey (Rattata Lv.4) wraz z dwoma potwierdzonymi etapami rematchu (Rattata Lv.15 i Raticate Lv.21), Youngster Mikey (Pidgey Lv.2, Rattata Lv.4) oraz Bug Catcher Don (dwa Caterpie Lv.3). Rematche Crystal/HGSS o wyższych poziomach nie zostały pomieszane z Gold/Silver.
+- Dodano ukrytą Potion wykrywaną Itemfinderem, Berry od mieszkańca południowego domu, Mystery Egg od Mr. Pokémon, Pokédex od Profesora Oaka oraz Exp. Share wymieniany za Red Scale. Dwie istniejące jagodowe rośliny pozostają osobnymi wpisami berryTrees; nie zdublowano ich w zwykłych przedmiotach.
+- Źródła: [Serebii Pokéarth — Route 30 Generation II](https://www.serebii.net/pokearth/johto/2nd/route30.shtml) i [Bulbapedia — Johto Route 30](https://bulbapedia.bulbagarden.net/wiki/Johto_Route_30). Nie dodano przedmiotów wyłącznie z HGSS ani Crystal-only Antidote/HP Up. Współrzędne pozostają niezweryfikowane.
+- Dodano testy grup Headbutt, składów trenerów, ukrytej Potion i prezentów; globalny licznik wzrósł do 191 wpisów przedmiotów w 36 lokacjach i 203 wpisów trenerów w 35 lokacjach. Kontrola JSON wykazała 64 lokacje, 35 lokacji ze spotkaniami, 253 grupy spotkań (wszystkie sumują się do 100%), 203 wpisy trenerów w 35 lokacjach, 191 wpisów przedmiotów w 36 lokacjach i 16 drzewek jagodowych.
+- Testów Flutter, Flutter Analyzer ani APK nie uruchomiono; postęp mapy pozostaje szacunkowo **53%**. Nadal brakuje grafiki mapy, zweryfikowanych współrzędnych i uruchomionych testów.
+- Następny obszar: Route 31. Dark Cave nadal pozostaje pominięta zgodnie z decyzją użytkownika.
