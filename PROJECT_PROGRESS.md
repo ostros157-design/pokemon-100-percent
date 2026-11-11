@@ -6532,3 +6532,13 @@ Kontrola repozytorium: 64 lokacje, 30 lokacji z tabelami spotkań, 222 grupy spo
 - Dodano test New Bark Town i zwiększono globalny oczekiwany licznik do 185 wpisów przedmiotów w 34 lokacjach. Kontrola JSON wykazała 64 lokacje, 34 lokacje ze spotkaniami, 243 grupy spotkań (wszystkie sumują się do 100%), 195 trenerów w 33 lokacjach, 185 wpisów przedmiotów w 34 lokacjach i 16 drzewek jagodowych.
 - Testów Flutter, Flutter Analyzer ani APK nie uruchomiono; postęp mapy pozostaje szacunkowo **53%**. Nadal brakuje grafiki mapy, zweryfikowanych współrzędnych i uruchomionych testów.
 - Następny obszar: Cherrygrove City. Dark Cave nadal pozostaje pominięta zgodnie z decyzją użytkownika.
+
+
+### Pokémon Silver / Johto — Cherrygrove City (2026-11-11)
+- Dodano osiem tabel spotkań wodnych dla Silvera: Surfing, Old Rod, Good Rod rano/dzień/noc i Super Rod rano/dzień/noc. Wszystkie mają poziomy i sumę 100%; różnice nocne (Staryu zamiast Corsoli) są zachowane.
+- Dodano trzy warianty pierwszej walki z Rival Silver — Chikorita, Cyndaquil lub Totodile na poziomie 5, zależnie od startera wybranego przez gracza. To alternatywne składy tej samej walki, a nie trzy niezależne postacie.
+- Dodano Mystic Water jako prezent od Rybaka na wyspie, dostępny po zdobyciu Surf; nie oznaczono go jako zwykłej znajdźki. Współrzędne i dokładna kratka pozostają niezweryfikowane.
+- Źródło: [Serebii Pokéarth — Cherrygrove City Generation II](https://www.serebii.net/pokearth/johto/2nd/cherrygrovecity.shtml). Zakres wersji: Gold/Silver/Crystal; nie przenoszono Nugget ani Headbutt z HGSS.
+- Dodano test sum procentowych, wariantów rywala, prezentu Mystic Water i źródeł; globalny licznik przedmiotów zwiększono do 186 w 35 lokacjach. Kontrola JSON wykazała 64 lokacje, 35 lokacji ze spotkaniami, 251 grup spotkań (wszystkie sumują się do 100%), 198 wpisów trenerów w 34 lokacjach, 186 wpisów przedmiotów w 35 lokacjach i 16 drzewek jagodowych.
+- Testów Flutter, Flutter Analyzer ani APK nie uruchomiono; postęp mapy pozostaje szacunkowo **53%**. Nadal brakuje grafiki mapy, zweryfikowanych współrzędnych i uruchomionych testów.
+- Następny obszar: Route 30. Dark Cave nadal pozostaje pominięta zgodnie z decyzją użytkownika.
