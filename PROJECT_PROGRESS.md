@@ -6391,3 +6391,21 @@ Kontrola repozytorium po ostatnich zmianach: JSON poprawnie się parsuje; wszyst
 - Źródło: Serebii Pokéarth Generation II. Wersje Silver odseparowane od Gold/Crystal; współrzędne i dokładne kratki przedmiotów pozostają niezweryfikowane.
 - Dodano testy 20 tabel spotkań, 8 przedmiotów i zdarzenia Lugii; zaktualizowano liczniki zbiorcze. Testów Flutter, Analyzer i APK nie uruchomiono.
 - Następny etap: Route 42 i Mt. Mortar.
+
+
+## Aktualizacja szacunku postępu mapy Pokémon Silver — 2026-11-11
+
+**Postęp: 47% ukończone / 53% pozostało.** Wzrost z 45% wynika z uzupełnienia Olivine City, Shining Lighthouse, Route 40, Route 41, Cianwood City i Whirl Islands.
+
+| Obszar | Waga | Zaliczone |
+|---|---:|---:|
+| Indeks lokacji i połączeń | 20% | 20% |
+| Rozdzielenie Gold/Silver, Crystal i HG/SS | 15% | 15% |
+| Grafika mapy Silver | 20% | 0% |
+| Zweryfikowane współrzędne i pinezki | 20% | 0% |
+| Spotkania Pokémonów | 10% | 6% |
+| Przedmioty, trenerzy i zdarzenia | 10% | 6% |
+| Uruchomione testy Flutter, Analyzer i APK | 5% | 0% |
+| **Razem** | **100%** | **47%** |
+
+Kontrola repozytorium po tej serii zmian: 64 lokacje, 23 lokacje z tabelami spotkań, 168 grup spotkań (każda sumuje się do 100%), 150 wpisów trenerów w 24 lokacjach, 127 wpisów przedmiotów w 22 lokacjach i 16 drzewek jagodowych. JSON parsuje się poprawnie, a zapisane liczniki testów odpowiadają danym; testów Flutter nie uruchomiono. Największe brakujące części nadal stanowią grafika mapy, dokładne współrzędne i uruchomienie testów.
