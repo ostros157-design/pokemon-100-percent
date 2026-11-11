@@ -270,6 +270,16 @@
       "id": "bulbapedia-johto-route30",
       "url": "https://bulbapedia.bulbagarden.net/wiki/Johto_Route_30",
       "scope": "Generation II Route 30 item locations, Mystery Egg and Pokédex story gifts, Youngster Joey rematch progression, trainer teams"
+    },
+    {
+      "id": "serebii-gs-route31",
+      "url": "https://www.serebii.net/pokearth/johto/2nd/route31.shtml",
+      "scope": "Generation II Route 31 encounters, Headbutt tables, Bug Catcher Wade rematches and item list"
+    },
+    {
+      "id": "bulbapedia-gs-route31-walkthrough",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Walkthrough:Pok%C3%A9mon_Gold_and_Silver/Part_3",
+      "scope": "Original Gold/Silver Route 31 item locations, Bitter Berry tree, TM50 delivery condition and Bug Catcher Wade's first team"
     }
   ],
   "locations": [
@@ -1504,9 +1514,11 @@
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-johto-region",
-        "bulbapedia-route-list"
+        "bulbapedia-route-list",
+        "serebii-gs-route31",
+        "bulbapedia-gs-route31-walkthrough"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit",
+      "dataStatus": "verified_gen2_silver_encounters_trainers_and_items",
       "berryTrees": [
         {
           "id": "route_31_berry_tree_1",
@@ -1551,6 +1563,66 @@
           "coordinateStatus": "unverified",
           "sourceIds": [
             "bulbapedia-gs-walkthrough-parts-3-4"
+          ]
+        },
+        {
+          "name": "Bug Catcher Wade — rematch 1",
+          "team": [
+            {
+              "name": "Metapod",
+              "level": 9
+            },
+            {
+              "name": "Metapod",
+              "level": 9
+            },
+            {
+              "name": "Kakuna",
+              "level": 10
+            },
+            {
+              "name": "Metapod",
+              "level": 9
+            }
+          ],
+          "note": "Rewanż przez Pokégear po dotarciu do Goldenrod City i pokonaniu poprzedniego składu.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route31",
+            "rotomlabs-gs-route31"
+          ]
+        },
+        {
+          "name": "Bug Catcher Wade — rematch 2",
+          "team": [
+            {
+              "name": "Butterfree",
+              "level": 14
+            },
+            {
+              "name": "Butterfree",
+              "level": 14
+            },
+            {
+              "name": "Beedrill",
+              "level": 15
+            },
+            {
+              "name": "Butterfree",
+              "level": 14
+            }
+          ],
+          "note": "Kolejny rewanż przez Pokégear po dotarciu do Mahogany Town i pokonaniu poprzedniego składu.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route31",
+            "rotomlabs-gs-route31"
           ]
         }
       ],
@@ -1789,9 +1861,54 @@
         ]
       },
       "wildPokemonSourceIds": [
-        "rotomlabs-gs-route31"
+        "rotomlabs-gs-route31",
+        "serebii-gs-route31"
       ],
-      "wildPokemonStatus": "verified_gen2_silver_rates_and_levels"
+      "wildPokemonStatus": "verified_gen2_silver_rates_and_levels",
+      "items": [
+        {
+          "id": "route_31_antidote",
+          "name": "Antidote",
+          "locationDescription": "Na ziemi w pobliżu tabliczki przy wejściu do Dark Cave; to przedmiot na zewnątrz jaskini, nie część jej wnętrza.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-route31-walkthrough",
+            "serebii-gs-route31"
+          ]
+        },
+        {
+          "id": "route_31_pokeball",
+          "name": "Poké Ball",
+          "locationDescription": "Na ziemi na południe od stawu i krawędzi terenu.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-route31-walkthrough",
+            "serebii-gs-route31"
+          ]
+        },
+        {
+          "id": "route_31_tm50_nightmare",
+          "name": "TM50 — Nightmare",
+          "locationDescription": "Prezent od mężczyzny stojącego przy wodzie po dostarczeniu mu Spearowa o imieniu Kenya z Route 35; to nagroda za zadanie, nie zwykły przedmiot leżący na ziemi.",
+          "category": "gift",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-route31-walkthrough",
+            "serebii-gs-route31"
+          ]
+        }
+      ]
     },
     {
       "id": "violet_city",
