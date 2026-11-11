@@ -153,7 +153,7 @@ void main() {
       }
     }
 
-    expect(pickups, hasLength(194));
+    expect(pickups, hasLength(199));
     expect(
       locations.where((value) =>
           ((value as Map<String, dynamic>)['items'] as List?)?.isNotEmpty ?? false),
@@ -178,7 +178,7 @@ void main() {
       }
     }
 
-    expect(trainers, hasLength(205));
+    expect(trainers, hasLength(212));
     expect(
       locations.where((value) =>
           ((value as Map<String, dynamic>)['trainers'] as List?)?.isNotEmpty ?? false),
@@ -1174,6 +1174,61 @@ void main() {
       expect(item['sourceIds'], contains('serebii-gs-route31'));
     }
     expect(route['berryTrees'], hasLength(1));
+  });
+
+
+  test('Johto Route 32 has variant-specific encounters, rematches and sourced items', () {
+    final locations = audit['locations'] as List<dynamic>;
+    final route = locations.cast<Map<String, dynamic>>()
+        .firstWhere((value) => value['id'] == 'route_32');
+    final groups = route['wildPokemonDetails'] as Map<String, dynamic>;
+    expect(groups, hasLength(16));
+    for (final group in groups.entries) {
+      final encounters = (group.value as List).cast<Map<String, dynamic>>();
+      expect(
+        encounters.fold<int>(0, (sum, value) => sum + (value['ratePercent'] as int)),
+        100,
+        reason: 'route_32/${group.key} must total 100%',
+      );
+    }
+    expect(groups['walking_morning_gold'].first['name'], 'Rattata');
+    expect(groups['walking_morning'].first['name'], 'Bellsprout');
+    expect(groups['walking_morning_crystal'].first['name'], 'Rattata');
+    expect(groups['headbutt_crystal'].map((value) => value['ratePercent']), [65, 20, 15]);
+    expect(route['wildPokemonSourceIds'], contains('serebii-gs-route32'));
+
+    final trainers = (route['trainers'] as List).cast<Map<String, dynamic>>();
+    expect(trainers, hasLength(15));
+    expect(trainers.map((value) => value['name']), containsAll([
+      'Picnicker Liz — rewanż 1',
+      'Picnicker Liz — rewanż 2',
+      'Fisherman Ralph — rewanż 1',
+      'Fisherman Ralph — rewanż 2',
+      'Picnicker Liz — rewanż Crystal',
+      'Fisherman Ralph — rewanż Crystal 1',
+      'Fisherman Ralph — rewanż Crystal 2',
+    ]));
+    final lizCrystal = trainers.firstWhere(
+      (value) => value['name'] == 'Picnicker Liz — rewanż Crystal',
+    );
+    expect(lizCrystal['availableIn'], ['crystal']);
+
+    final items = (route['items'] as List).cast<Map<String, dynamic>>();
+    expect(items, hasLength(8));
+    expect(items.map((value) => value['id']), containsAll([
+      'route_32_great_ball_floor',
+      'route_32_great_ball_hidden',
+      'route_32_poison_barb_frieda',
+      'route_32_old_rod',
+      'route_32_tm05_roar',
+    ]));
+    expect(items.firstWhere((value) => value['id'] == 'route_32_miracle_seed_1')['category'], 'gift');
+    expect(items.firstWhere((value) => value['id'] == 'route_32_super_potion_hidden_1')['category'], 'hidden');
+    for (final item in items) {
+      expect(item['coordinateStatus'], 'unverified');
+      expect(item['sourceIds'], isNotEmpty);
+      expect(item['availableIn'], contains('gold_silver'));
+    }
   });
 
 }
