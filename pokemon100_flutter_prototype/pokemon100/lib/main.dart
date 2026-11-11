@@ -44,6 +44,12 @@ class _PokemonGuideAppState extends State<PokemonGuideApp> {
             return ValueListenableBuilder<Color>(
               valueListenable: AppAppearance.badgeColor,
               builder: (context, badgeColor, _) {
+                return ValueListenableBuilder<String>(
+                  valueListenable: AppAppearance.visualStyle,
+                  builder: (context, visualStyle, _) {
+                final isRetro = visualStyle == 'retro';
+                final isPixel = visualStyle == 'pixel';
+                final isPixelStyled = isRetro || isPixel;
                 final background = isDark ? const Color(0xFF121212) : Colors.white;
                 final foreground = isDark && textColor == const Color(0xFF202124)
                     ? Colors.white
@@ -68,6 +74,7 @@ class _PokemonGuideAppState extends State<PokemonGuideApp> {
                       backgroundColor: background,
                       foregroundColor: foreground,
                     ),
+                    fontFamily: isPixel ? 'monospace' : null,
                     textTheme: ThemeData(
                       brightness: isDark ? Brightness.dark : Brightness.light,
                     ).textTheme.apply(
@@ -81,6 +88,39 @@ class _PokemonGuideAppState extends State<PokemonGuideApp> {
                     listTileTheme: ListTileThemeData(textColor: foreground),
                     cardTheme: CardThemeData(
                       color: isDark ? const Color(0xFF1E1E1E) : const Color(0xFFF8F8F8),
+                      elevation: isPixelStyled ? 0 : 1,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(isPixelStyled ? 0 : 12),
+                        side: isPixelStyled
+                            ? BorderSide(color: badgeColor, width: isPixel ? 2 : 1.5)
+                            : BorderSide.none,
+                      ),
+                    ),
+                    dividerTheme: DividerThemeData(
+                      thickness: isPixelStyled ? 2 : 1,
+                      color: isPixelStyled ? badgeColor.withOpacity(0.55) : null,
+                    ),
+                    elevatedButtonTheme: ElevatedButtonThemeData(
+                      style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(isPixelStyled ? 0 : 12),
+                          side: isPixelStyled
+                              ? BorderSide(color: badgeColor, width: isPixel ? 2 : 1)
+                              : BorderSide.none,
+                        ),
+                        elevation: isPixelStyled ? 0 : 1,
+                      ),
+                    ),
+                    outlinedButtonTheme: OutlinedButtonThemeData(
+                      style: OutlinedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(isPixelStyled ? 0 : 12),
+                          side: BorderSide(
+                            color: badgeColor,
+                            width: isPixel ? 2 : 1,
+                          ),
+                        ),
+                      ),
                     ),
                   ),
                   home: const HomeScreen(),
