@@ -6210,3 +6210,12 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Rozszerzono johto_map_audit_test.dart o kontrolę liczby 8 znajdziek, 3 lokacji, źródeł i ograniczenia wersji gry. Test został zapisany, ale nie został uruchomiony.
 - Źródła: Bulbapedia — oryginalny walkthrough Gold/Silver, część 1 (Route 29), część 4 (Route 32 i Union Cave).
 - Nie uruchomiono Flutter Analyzer, testów ani APK. Postęp mapy Pokémon Silver pozostaje 35% — to częściowe uzupełnienie kategorii przedmiotów; nadal brakuje pełnej listy znajdziek, trenerów, spotkań Pokémonów, mapy graficznej i zweryfikowanych współrzędnych.
+
+
+### Pokémon Silver / Johto — trenerzy w początkowej części regionu (2026-11-11)
+- Dodano 22 wpisy trenerów wraz z drużynami i poziomami Pokémonów: Bug Catcher Wade (Route 31), ośmiu trenerów na Route 32, dwunastu trenerów w Union Cave (z rozdzieleniem pięter i stron B1F) oraz Hiker Anthony (Route 33).
+- Dane ograniczono do oryginalnego Gold/Silver. Każdy wpis ma źródło Bulbapedia i status współrzędnych unverified; nazwy pięter są opisami, a nie pinezkami na mapie.
+- Ekran lokacji korzysta już z listy trainers i formatuje nazwę oraz drużynę, więc nowe wpisy powinny pojawić się w panelu trenerów po wybraniu lokacji. Nie wykonano jeszcze testu wizualnego.
+- Dodano test sprawdzający 22 wpisy, 4 lokacje, źródła, wersję gry i brak zgadywanych współrzędnych. Test zapisano, ale nie uruchomiono.
+- Źródła: Bulbapedia — Gold/Silver walkthrough, Parts 3–4. Zawartość drużyn i poziomy są oparte na tabelach trenerów w tych częściach.
+- Flutter Analyzer, testy i APK nie zostały uruchomione. Postęp mapy Pokémon Silver pozostaje 35%; nadal brakuje kompletnej grafiki mapy, zweryfikowanych współrzędnych i danych dzikich spotkań.
