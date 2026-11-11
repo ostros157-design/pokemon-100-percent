@@ -6512,3 +6512,13 @@ Kontrola repozytorium: 64 lokacje, 30 lokacji z tabelami spotkań, 222 grupy spo
 - Dodano test Route 46 oraz test pilnujący, że Dark Cave pozostaje nieuzupełniona; skorygowano globalne oczekiwane liczniki. Kontrola JSON i danych wykazała 64 lokacje, 33 lokacje ze spotkaniami, 238 grup spotkań (wszystkie sumują się do 100%), 195 trenerów w 33 lokacjach, 178 wpisów przedmiotów w 33 lokacjach i 16 drzewek jagodowych.
 - Testów Flutter, Flutter Analyzer ani APK nie uruchomiono. Szacunkowy postęp mapy pozostaje **53%** — nadal brakuje grafiki mapy, zweryfikowanych współrzędnych i uruchomionych testów.
 - Następny obszar: Route 46 jest uzupełniona; kontynuować od kolejnej nieukończonej lokacji Johto, z pominięciem Dark Cave do czasu dostarczenia jej przez użytkownika.
+
+
+### Pokémon Silver / Johto — Route 29 (2026-11-11)
+- Zachowano istniejące tabele trawy rano, w dzień i w nocy oraz zwykły Headbutt; dodano brakującą grupę Headbutt ze specjalnych drzew: Spearow 80%, Aipom 20% (poziom 10).
+- Dodano Pink Bow jako prezent od Tuscany — pojawia się we wtorek po pokonaniu Falknera i zdobyciu Zephyr Badge. Oznaczono go jako prezent (gift), a nie zwykłą znajdźkę; nagroda występuje w Gold/Silver i Crystal.
+- Potion pozostaje zwykłą znajdźką, a codzienne drzewko Berry zachowano oddzielnie. Route 29 nie ma trenerów do dodania w zestawieniu Generation II; nie przenoszono postaci z anime ani trenerów z HGSS.
+- Źródła: [Serebii Pokéarth — Route 29 Generation II](https://www.serebii.net/pokearth/johto/2nd/route29.shtml) i [Bulbapedia — Johto Route 29](https://bulbapedia.bulbagarden.net/wiki/Johto_Route_29). Współrzędne przedmiotów i drzewa pozostają niezweryfikowane.
+- Dodano test Route 29 i zwiększono globalny oczekiwany licznik przedmiotów do 179. Kontrola JSON wykazała 64 lokacje, 33 lokacje ze spotkaniami, 239 grup spotkań (wszystkie sumują się do 100%), 195 trenerów w 33 lokacjach, 179 wpisów przedmiotów w 33 lokacjach i 16 drzewek jagodowych.
+- Testów Flutter, Flutter Analyzer ani APK nie uruchomiono; postęp mapy pozostaje szacunkowo **53%**. Nadal brakuje grafiki mapy, zweryfikowanych współrzędnych i uruchomionych testów.
+- Następny logiczny obszar: New Bark Town. Dark Cave nadal pozostaje pominięta zgodnie z decyzją użytkownika.
