@@ -6562,3 +6562,13 @@ Kontrola repozytorium: 64 lokacje, 30 lokacji z tabelami spotkań, 222 grupy spo
 - Źródła: [Serebii Pokéarth — Route 31 Generation II](https://www.serebii.net/pokearth/johto/2nd/route31.shtml), [Bulbapedia — Gold/Silver walkthrough, Route 31](https://bulbapedia.bulbagarden.net/wiki/Walkthrough:Pok%C3%A9mon_Gold_and_Silver/Part_3) oraz [RotomLabs — Gold/Silver Route 31](https://rotomlabs.net/locations/gold-silver/route-31). Wszystkie współrzędne trenerów i przedmiotów pozostają niezweryfikowane; Dark Cave nie została zmieniona.
 - Dodano test obejmujący rematche, przedmioty, źródła i sumy procentów spotkań. Liczniki audytu: 64 lokacje, 253 grupy spotkań, 205 wpisów trenerów, 194 wpisy przedmiotów i 16 drzewek jagodowych.
 - Testów Flutter, Flutter Analyzer ani APK nie uruchomiono.
+
+ 
+## Johto — Route 32 (Generation II, Gold/Silver/Crystal)
+
+- Zachowano dotychczasowe tabele Silver i dodano osobne poranne/dzienne/nocne spotkania dla Gold oraz Crystal. Dodano też dwa osobne zestawy Headbutt dla Crystal (zwykłe i specjalne drzewa); Surf i wędkowanie pozostają wspólne, ponieważ tabele są identyczne w tych wersjach.
+- Uzupełniono rewanże Picnicker Liz i Fisherman Ralph: dwa etapy Gold/Silver oraz dodatkowe późniejsze składy dostępne wyłącznie w Crystal. Nie przenoszono danych HGSS.
+- Poprawiono klasyfikację Miracle Seed na prezent i Super Potion na ukryty przedmiot. Dodano Great Ball (zwykły i ukryty), Poison Barb od Friedy w piątek, Old Rod od Fishing Guru oraz TM05 (Roar) od mężczyzny po uzyskaniu Cut.
+- Źródła: [Serebii Pokéarth — Route 32 Generation II](https://www.serebii.net/pokearth/johto/2nd/route32.shtml) i [Bulbapedia — Gold/Silver walkthrough, Route 32](https://bulbapedia.bulbagarden.net/wiki/Appendix:Gold_and_Silver_walkthrough/Section_4). Wszystkie współrzędne przedmiotów i trenerów pozostają niezweryfikowane.
+- Dodano testy wszystkich 16 grup spotkań (każda sumuje się do 100%), wariantów Crystal/Gold, rewanżów i kategorii przedmiotów. Liczniki audytu: 64 lokacje, 212 wpisów trenerów, 199 wpisów przedmiotów i 16 drzewek jagodowych.
+- Testów Flutter, Flutter Analyzer ani APK nie uruchomiono.
