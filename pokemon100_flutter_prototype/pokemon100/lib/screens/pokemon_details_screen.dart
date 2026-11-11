@@ -257,6 +257,7 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
                     const Icon(Icons.arrow_forward, color: Colors.grey),
                   ActionChip(
                     avatar: CachedNetworkImage(
+                      cacheManager: PokemonSpriteCache.manager,
                       imageUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${family[i].id}.png',
                       width: 38,
                       height: 38,
