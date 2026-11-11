@@ -6471,3 +6471,21 @@ Kontrola repozytorium: 64 lokacje, 27 lokacji z tabelami spotkań, 196 grup spot
 - Źródła Serebii Pokéarth Generation II; dane ograniczone do Gold/Silver, bez remake'ów. Nie dodano współrzędnych ani niepotwierdzonych pinezek.
 - Dodano testy sum procentowych, pięter, drużyn, itemów i źródeł oraz zaktualizowano globalne liczniki. Testy Flutter, Analyzer i APK nie zostały uruchomione.
 - Następny etap: Route 45, Dragon's Den i Dark Cave.
+
+
+## Aktualizacja szacunku mapy Pokémon Silver — 2026-11-11
+
+**Postęp: 52% ukończone / 48% pozostało.** Zwiększono szacunkowy postęp o 2 punkty za uzupełnienie Route 44, pięter Ice Path i Blackthorn City — w tym 26 grup spotkań, 13 wpisów trenerów i 13 przedmiotów/nagród.
+
+| Obszar | Waga | Zaliczone |
+|---|---:|---:|
+| Indeks lokacji i połączeń | 20% | 20% |
+| Rozdzielenie Gold/Silver, Crystal i HG/SS | 15% | 15% |
+| Grafika mapy Silver | 20% | 0% |
+| Zweryfikowane współrzędne i pinezki | 20% | 0% |
+| Spotkania Pokémonów | 10% | 9% |
+| Przedmioty, trenerzy i zdarzenia | 10% | 8% |
+| Uruchomione testy Flutter, Analyzer i APK | 5% | 0% |
+| **Razem** | **100%** | **52%** |
+
+Kontrola repozytorium: 64 lokacje, 30 lokacji z tabelami spotkań, 222 grupy spotkań (wszystkie sumują się do 100%), 185 wpisów trenerów w 31 lokacjach, 167 wpisów przedmiotów w 30 lokacjach i 16 drzewek jagodowych. JSON poprawnie się parsuje, globalne liczniki w testach odpowiadają zawartości, a nowe testy trzech lokacji są zapisane; nie uruchomiono jednak testów Flutter, Analyzer ani APK. Następny pakiet: Route 45, Dragon's Den i Dark Cave.
