@@ -310,4 +310,51 @@ void main() {
     expect(ruins['localMapAsset'], isNull);
   });
 
+
+  test('Silver Route 34 encounter tables, trainers and pickups are source-tracked', () {
+    final locations = audit['locations'] as List<dynamic>;
+    final route = locations.cast<Map<String, dynamic>>().firstWhere(
+      (value) => value['id'] == 'route_34',
+    );
+    expect(route['wildPokemonSourceIds'], contains('serebii-gs-route34'));
+    final groups = route['wildPokemonDetails'] as Map<String, dynamic>;
+    expect(groups, hasLength(11));
+    for (final group in groups.entries) {
+      final entries = group.value as List<dynamic>;
+      expect(
+        entries.fold<int>(0, (sum, value) =>
+            sum + ((value as Map<String, dynamic>)['ratePercent'] as num).toInt()),
+        100,
+        reason: 'route_34/${group.key} must total 100%',
+      );
+    }
+    expect(route['trainers'], hasLength(9));
+    expect(route['items'], hasLength(3));
+    for (final entry in [...route['trainers'], ...route['items']]) {
+      expect(entry['sourceIds'], contains('serebii-gs-route34'));
+      expect(entry['availableIn'], contains('gold_silver'));
+      expect(entry['coordinateStatus'], 'unverified');
+    }
+  });
+
+  test('Silver Goldenrod City Gym and main-area rewards are source-tracked', () {
+    final locations = audit['locations'] as List<dynamic>;
+    final city = locations.cast<Map<String, dynamic>>().firstWhere(
+      (value) => value['id'] == 'goldenrod_city',
+    );
+    expect(city['dataStatus'], 'partial_gen2_silver_main_area_and_gym_data');
+    expect(city['trainers'], hasLength(5));
+    expect(city['items'], hasLength(6));
+    final whitney = (city['trainers'] as List)
+        .cast<Map<String, dynamic>>()
+        .firstWhere((value) => value['name'] == 'Gym Leader Whitney');
+    expect(whitney['team'], hasLength(2));
+    expect(whitney['team'][1]['name'], 'Miltank');
+    expect(whitney['team'][1]['level'], 20);
+    for (final entry in [...city['trainers'], ...city['items']]) {
+      expect(entry['sourceIds'], contains('serebii-gs-goldenrod-city'));
+      expect(entry['availableIn'], contains('gold_silver'));
+    }
+  });
+
 }
