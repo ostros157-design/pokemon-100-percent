@@ -208,16 +208,16 @@ class _GuideScreenState extends State<GuideScreen> {
 
   Widget _buildProgressHeader() {
     final percent = (progress * 100).round();
+    final colorScheme = Theme.of(context).colorScheme;
+    final textTheme = Theme.of(context).textTheme;
 
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.fromLTRB(14, 10, 14, 12),
       decoration: BoxDecoration(
-        color: Colors.green.shade50,
+        color: colorScheme.surface,
         border: Border(
-          bottom: BorderSide(
-            color: Colors.green.shade100,
-          ),
+          bottom: BorderSide(color: colorScheme.outlineVariant),
         ),
       ),
       child: Column(
@@ -226,17 +226,15 @@ class _GuideScreenState extends State<GuideScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Text(
+              Text(
                 'Postęp poradnika',
-                style: TextStyle(
-                  fontSize: 16,
+                style: textTheme.titleMedium?.copyWith(
                   fontWeight: FontWeight.bold,
                 ),
               ),
               Text(
                 '$percent%',
-                style: const TextStyle(
-                  fontSize: 18,
+                style: textTheme.titleLarge?.copyWith(
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -248,13 +246,15 @@ class _GuideScreenState extends State<GuideScreen> {
             child: LinearProgressIndicator(
               value: progress,
               minHeight: 7,
+              color: colorScheme.primary,
+              backgroundColor: colorScheme.surfaceContainerHighest,
             ),
           ),
           const SizedBox(height: 5),
           Text(
             '$completedCount / ${widget.guide.steps.length} kroków ukończonych',
-            style: TextStyle(
-              color: Colors.grey.shade700,
+            style: textTheme.bodySmall?.copyWith(
+              color: colorScheme.onSurfaceVariant,
             ),
           ),
         ],
