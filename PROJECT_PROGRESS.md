@@ -6382,3 +6382,12 @@ Kontrola repozytorium po ostatnich zmianach: JSON poprawnie się parsuje; wszyst
 - Dane oparte na stronach Serebii Pokéarth Generation II i ograniczone do Pokémon Gold/Silver. Nie dodano postaci Eusine ani innych elementów Crystal-only; współrzędne ukrytych przedmiotów pozostają niezweryfikowane.
 - Dodano testy dla trzech lokacji, sum procentowych, drużyn trenerów i źródeł; zaktualizowano liczniki globalne. Testy Flutter, Analyzer i APK nie zostały uruchomione.
 - Następny etap: Whirl Islands — piętra, spotkania, przedmioty i dostęp do Lugii w Silver.
+
+
+### Pokémon Silver / Johto — Whirl Islands (2026-11-11)
+- Dodano 20 tabel spotkań dla Upper Left, Upper Right, Lower Left, Lower Right, B1F, B1F Middle, B2F i B2F Inner; osobno chodzenie, surfing i wędki tam, gdzie są dostępne.
+- Dodano 8 przedmiotów: Ultra Ball, Rare Candy, Guard Spec., Full Restore, drugi Ultra Ball, Full Restore, Nugget i Escape Rope.
+- Dodano Lugie Lv. 40 jako jednorazowe spotkanie legendarne w Pokémon Silver oraz wymóg Whirlpool do wejścia w głębsze sekcje. Lugia nie jest traktowana jako losowe spotkanie.
+- Źródło: Serebii Pokéarth Generation II. Wersje Silver odseparowane od Gold/Crystal; współrzędne i dokładne kratki przedmiotów pozostają niezweryfikowane.
+- Dodano testy 20 tabel spotkań, 8 przedmiotów i zdarzenia Lugii; zaktualizowano liczniki zbiorcze. Testów Flutter, Analyzer i APK nie uruchomiono.
+- Następny etap: Route 42 i Mt. Mortar.
