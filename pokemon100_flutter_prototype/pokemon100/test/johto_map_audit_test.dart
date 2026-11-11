@@ -340,6 +340,54 @@ void main() {
   });
 
 
+  test('Union Cave has verified floor-specific Gold, Silver and Crystal data', () {
+    final locations = audit['locations'] as List<dynamic>;
+    final cave = locations.cast<Map<String, dynamic>>()
+        .firstWhere((value) => value['id'] == 'union_cave');
+    expect(cave['dataStatus'],
+        'verified_gen2_gold_silver_crystal_encounters_trainers_items_and_friday_lapras');
+    expect(cave['wildPokemonSourceIds'], contains('serebii-gs-union-cave'));
+    final groups = cave['wildPokemonDetails'] as Map<String, dynamic>;
+    expect(groups, hasLength(27));
+    expect(groups.keys, containsAll([
+      '1F_walking', '1F_walking_gold', '1F_walking_crystal_night',
+      'B1F_walking', 'B1F_walking_crystal_night',
+      'B2F_walking', 'B2F_walking_gold', 'B2F_walking_crystal_night',
+      '1F_surfing', 'B1F_surfing', 'B2F_surfing',
+      '1F_old_rod', 'B1F_good_rod', 'B2F_super_rod',
+    ]));
+    for (final group in groups.entries) {
+      final encounters = (group.value as List).cast<Map<String, dynamic>>();
+      expect(
+        encounters.fold<int>(0, (sum, value) => sum + (value['ratePercent'] as int)),
+        100,
+        reason: 'union_cave/${group.key} must total 100%',
+      );
+    }
+    expect(groups['1F_walking'].map((value) => value['name']),
+        ['Geodude', 'Rattata', 'Zubat', 'Onix']);
+    expect(groups['B2F_walking_crystal_night'].map((value) => value['name']),
+        ['Zubat', 'Golbat', 'Quagsire', 'Raticate', 'Geodude', 'Onix']);
+    final trainers = (cave['trainers'] as List).cast<Map<String, dynamic>>();
+    expect(trainers, hasLength(12));
+    expect(trainers.every((value) =>
+        (value['availableIn'] as List).containsAll(['gold_silver', 'crystal'])), isTrue);
+    expect(cave['trainers'].firstWhere((value) => value['name'] == 'Cooltrainer Nick')['team']
+        .map((value) => value['name']), ['Charmander', 'Squirtle', 'Bulbasaur']);
+    final items = (cave['items'] as List).cast<Map<String, dynamic>>();
+    expect(items, hasLength(8));
+    expect(items.map((value) => value['id']), containsAll([
+      'union_cave_tm39_swift', 'union_cave_x_defend',
+      'union_cave_ether', 'union_cave_hyper_potion',
+    ]));
+    expect(items.every((value) => value['coordinateStatus'] == 'unverified'), isTrue);
+    final lapras = (cave['interactablePokemon'] as List).single;
+    expect(lapras['name'], 'Lapras');
+    expect(lapras['level'], 20);
+    expect(lapras['locationDescription'], contains('piątki'));
+    expect(lapras['availableIn'], ['gold_silver', 'crystal']);
+  });
+
   test('Silver Ruins of Alph encounters, puzzle chambers and special reward are sourced', () {
     final locations = audit['locations'] as List<dynamic>;
     final ruins = locations.cast<Map<String, dynamic>>().firstWhere(
