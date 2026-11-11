@@ -6444,3 +6444,21 @@ Ostatnia kontrola repozytorium: 64 lokacje, 25 lokacji z tabelami spotkań, 184 
 - Źródła Serebii Pokéarth Generation II oraz Bulbapedia Gold/Silver; dane ograniczone do Gold/Silver, bez remake'owych elementów. Nie wymyślano współrzędnych ani położeń pinezek.
 - Dodano testy sum procentowych, drużyn, sklepu, przedmiotów i źródeł; zaktualizowano liczniki globalne. Testy Flutter, Analyzer i APK nie zostały uruchomione.
 - Następny etap: Route 44, Ice Path i Blackthorn City.
+
+
+## Aktualizacja szacunku mapy Pokémon Silver — 2026-11-11
+
+**Postęp: 50% ukończone / 50% pozostało.** Podniesiono ocenę o 2 punkty po uzupełnieniu Mahogany Town, Route 43 i Lake of Rage wraz z tabelami spotkań, trenerami, nagrodami i sklepem.
+
+| Obszar | Waga | Zaliczone |
+|---|---:|---:|
+| Indeks lokacji i połączeń | 20% | 20% |
+| Rozdzielenie Gold/Silver, Crystal i HG/SS | 15% | 15% |
+| Grafika mapy Silver | 20% | 0% |
+| Zweryfikowane współrzędne i pinezki | 20% | 0% |
+| Spotkania Pokémonów | 10% | 8% |
+| Przedmioty, trenerzy i zdarzenia | 10% | 7% |
+| Uruchomione testy Flutter, Analyzer i APK | 5% | 0% |
+| **Razem** | **100%** | **50%** |
+
+Kontrola repozytorium: 64 lokacje, 27 lokacji z tabelami spotkań, 196 grup spotkań (wszystkie sumują się do 100%), 172 wpisy trenerów w 29 lokacjach, 154 wpisy przedmiotów w 27 lokacjach i 16 drzewek jagodowych. JSON parsuje się poprawnie, a globalne liczniki w pliku testowym zgadzają się z danymi; Flutter testy, Analyzer i APK nadal nie zostały uruchomione. Następny etap: Route 44, Ice Path i Blackthorn City.
