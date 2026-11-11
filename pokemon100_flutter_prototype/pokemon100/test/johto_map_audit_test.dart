@@ -153,11 +153,11 @@ void main() {
       }
     }
 
-    expect(pickups, hasLength(9));
+    expect(pickups, hasLength(13));
     expect(
       locations.where((value) =>
           ((value as Map<String, dynamic>)['items'] as List?)?.isNotEmpty ?? false),
-      hasLength(4),
+      hasLength(5),
     );
   });
 
@@ -178,11 +178,11 @@ void main() {
       }
     }
 
-    expect(trainers, hasLength(26));
+    expect(trainers, hasLength(33));
     expect(
       locations.where((value) =>
           ((value as Map<String, dynamic>)['trainers'] as List?)?.isNotEmpty ?? false),
-      hasLength(5),
+      hasLength(6),
     );
   });
 
@@ -215,6 +215,32 @@ void main() {
     );
     expect(well['trainers'], hasLength(4));
     expect(well['items'], hasLength(1));
+  });
+
+  test('Silver Sprout Tower encounter tables, trainers and item pickups are source-tracked', () {
+    final locations = audit['locations'] as List<dynamic>;
+    final tower = locations.cast<Map<String, dynamic>>().firstWhere(
+      (value) => value['id'] == 'sprout_tower',
+    );
+    expect(tower['wildPokemonSourceIds'], contains('serebii-gs-sprout-tower'));
+    final groups = tower['wildPokemonDetails'] as Map<String, dynamic>;
+    expect(groups, hasLength(6));
+    for (final group in groups.entries) {
+      final entries = group.value as List<dynamic>;
+      expect(
+        entries.fold<int>(0, (sum, value) =>
+            sum + ((value as Map<String, dynamic>)['ratePercent'] as num).toInt()),
+        100,
+        reason: 'sprout_tower/${group.key} must total 100%',
+      );
+    }
+    expect(tower['trainers'], hasLength(7));
+    expect(tower['items'], hasLength(4));
+    for (final entry in [...tower['trainers'], ...tower['items']]) {
+      expect(entry['sourceIds'], contains('serebii-gs-sprout-tower'));
+      expect(entry['coordinateStatus'], 'unverified');
+      expect(entry['availableIn'], contains('gold_silver'));
+    }
   });
 
   test('Silver wild encounter tables are sourced and each rate group totals 100%', () {
