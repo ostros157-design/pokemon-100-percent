@@ -153,7 +153,7 @@ void main() {
       }
     }
 
-    expect(pickups, hasLength(167));
+    expect(pickups, hasLength(177));
     expect(
       locations.where((value) =>
           ((value as Map<String, dynamic>)['items'] as List?)?.isNotEmpty ?? false),
@@ -178,7 +178,7 @@ void main() {
       }
     }
 
-    expect(trainers, hasLength(185));
+    expect(trainers, hasLength(192));
     expect(
       locations.where((value) =>
           ((value as Map<String, dynamic>)['trainers'] as List?)?.isNotEmpty ?? false),
