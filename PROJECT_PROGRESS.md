@@ -6435,3 +6435,12 @@ Kontrola repozytorium po tej serii zmian: 64 lokacje, 23 lokacje z tabelami spot
 | **Razem** | **100%** | **48%** |
 
 Ostatnia kontrola repozytorium: 64 lokacje, 25 lokacji z tabelami spotkań, 184 grupy spotkań — każda daje 100% — 156 wpisów trenerów w 26 lokacjach, 141 wpisów przedmiotów w 24 lokacjach i 16 drzewek jagodowych. JSON poprawnie się parsuje, a globalne liczniki w testach odpowiadają zawartości; nie uruchomiono jednak testów Flutter ani APK. Następny pakiet do opracowania: Mahogany Town, Lake of Rage i Route 43.
+
+
+### Pokémon Silver / Johto — Mahogany Town, Route 43 i Lake of Rage (2026-11-11)
+- Mahogany Town: dodano 6 trenerów Gymu z pełnymi drużynami i poziomami, TM16 Icy Wind od Pryce'a, RageCandyBar za 300 ₽ oraz 13 pozycji sklepu rozdzielonych na stan przed i po pokonaniu Team Rocket (4 + 9). Dodano informację o wejściu do Team Rocket HQ pod złotą szafą.
+- Route 43: dodano 6 tabel spotkań Silvera (trawa rano/dzień/noc, Surfing i dwa warianty Headbutt), 6 trenerów, Max Ether, TM36 Sludge Bomb od strażnika po pokonaniu Team Rocket. Zachowano wcześniej zapisane drzewo Bitter Berry.
+- Lake of Rage: dodano 6 tabel spotkań (Surfing, trzy wędki i dwa warianty Headbutt), 4 trenerów, 9 przedmiotów/nagród oraz osobne jednorazowe spotkanie Shiny Red Gyarados Lv. 30 i środowy prezent Wesleya.
+- Źródła Serebii Pokéarth Generation II oraz Bulbapedia Gold/Silver; dane ograniczone do Gold/Silver, bez remake'owych elementów. Nie wymyślano współrzędnych ani położeń pinezek.
+- Dodano testy sum procentowych, drużyn, sklepu, przedmiotów i źródeł; zaktualizowano liczniki globalne. Testy Flutter, Analyzer i APK nie zostały uruchomione.
+- Następny etap: Route 44, Ice Path i Blackthorn City.
