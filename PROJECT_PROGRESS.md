@@ -6609,3 +6609,9 @@ Kontrola repozytorium: 64 lokacje, 30 lokacji z tabelami spotkań, 222 grupy spo
 - Testów Flutter, Flutter Analyzer ani APK nie uruchomiono; współrzędne i grafika mapy Union Cave nadal wymagają weryfikacji. Sam test jednostkowy został zaktualizowany, ale nie został uruchomiony.
 - Następny obszar do uzupełnienia: Azalea Town; Dark Cave pozostaje pominięta zgodnie z wcześniejszą decyzją.
 
+
+
+### Style wyglądu aplikacji — 2026-11-12
+- Dodano zapisany wybór jednego z trzech stylów w Ustawieniach: Nowoczesny, Retro Pokémon i Pełny Pixel Art. Wybór jest przechowywany w SharedPreferences i odtwarzany po ponownym uruchomieniu.
+- Motyw Retro i Pixel zmienia globalne kształty kart, przycisków i separatorów na kanciaste, z obramowaniami w kolorze akcentu; Pixel używa dodatkowo kroju monospace. Styl Nowoczesny zachowuje dotychczasowe ustawienia.
+- To pierwsza warstwa motywu, nie pełny pakiet grafiki pixel-art: dedykowana czcionka pikselowa, ikony, tła, animacje i grafiki wymagają osobnego etapu. Testów Flutter, Analyzer ani APK nie uruchomiono.
