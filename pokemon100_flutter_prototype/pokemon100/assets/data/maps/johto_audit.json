@@ -105,6 +105,16 @@
       "id": "serebii-gs-radio-tower",
       "url": "https://www.serebii.net/pokearth/johto/2nd/radiotower.shtml",
       "scope": "Pokémon Silver Generation II Radio Tower 1F–5F Rocket takeover trainers and rewards"
+    },
+    {
+      "id": "serebii-gs-game-corner",
+      "url": "https://www.serebii.net/gs/gamecorner.shtml",
+      "scope": "Gold/Silver Goldenrod Game Corner slot and card-flip games, coin exchange and Generation II prize tables"
+    },
+    {
+      "id": "bulbapedia-gs-department-store",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Goldenrod_Department_Store",
+      "scope": "Generation II Goldenrod Department Store floors 2F–6F, stock, prices, TM sales, basement pickups and special services"
     }
   ],
   "locations": [
@@ -3482,19 +3492,6 @@
           ]
         },
         {
-          "id": "goldenrod_gold_berry_trade_abra",
-          "name": "Gold Berry",
-          "locationDescription": "Nagroda za wymianę Abra na Machopa na 5. piętrze Department Store.",
-          "category": "trade",
-          "availableIn": [
-            "gold_silver"
-          ],
-          "coordinateStatus": "unverified",
-          "sourceIds": [
-            "serebii-gs-goldenrod-city"
-          ]
-        },
-        {
           "id": "goldenrod_gym_tm45",
           "name": "TM45 — Attract",
           "locationDescription": "Nagroda od liderki Whitney po wygraniu walki w Goldenrod Gym.",
@@ -3616,6 +3613,750 @@
           "coordinateStatus": "unverified",
           "sourceIds": [
             "serebii-gs-goldenrod-city"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "goldenrod_game_corner",
+      "name": "Goldenrod Game Corner",
+      "region": "Johto",
+      "kind": "facility",
+      "connectsTo": [
+        "goldenrod_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "serebii-gs-game-corner"
+      ],
+      "dataStatus": "verified_gen2_silver_games_and_prizes",
+      "specialServices": [
+        {
+          "id": "coin_purchase_50",
+          "name": "Kupno 50 żetonów",
+          "description": "1 000 ₽; wymagany Coin Case",
+          "category": "service",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "sourceIds": [
+            "serebii-gs-game-corner"
+          ]
+        },
+        {
+          "id": "coin_purchase_500",
+          "name": "Kupno 500 żetonów",
+          "description": "10 000 ₽; wymagany Coin Case",
+          "category": "service",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "sourceIds": [
+            "serebii-gs-game-corner"
+          ]
+        },
+        {
+          "id": "slot_machines",
+          "name": "Automaty do gry",
+          "description": "Wygrane zależą od symboli: trzy 7 — 300 żetonów; Poké Balle — 50; Staryu — 15; Squirtle — 10; Pikachu — 8; wiśnie — 6.",
+          "category": "minigame",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "sourceIds": [
+            "serebii-gs-game-corner"
+          ]
+        },
+        {
+          "id": "card_flip",
+          "name": "Card Flip",
+          "description": "Gra karciana dostępna w Gold/Silver.",
+          "category": "minigame",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "sourceIds": [
+            "serebii-gs-game-corner"
+          ]
+        }
+      ],
+      "items": [
+        {
+          "name": "TM25 — Thunder",
+          "category": "exchange_prize",
+          "priceCoins": 5500,
+          "locationDescription": "Nagroda wymieniana za 5 500 żetonów; to nie jest znajdźka.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "serebii-gs-game-corner"
+          ]
+        },
+        {
+          "name": "TM14 — Blizzard",
+          "category": "exchange_prize",
+          "priceCoins": 5500,
+          "locationDescription": "Nagroda wymieniana za 5 500 żetonów; to nie jest znajdźka.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "serebii-gs-game-corner"
+          ]
+        },
+        {
+          "name": "TM38 — Fire Blast",
+          "category": "exchange_prize",
+          "priceCoins": 5500,
+          "locationDescription": "Nagroda wymieniana za 5 500 żetonów; to nie jest znajdźka.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "serebii-gs-game-corner"
+          ]
+        },
+        {
+          "name": "Abra Lv. 10",
+          "category": "pokemon_prize",
+          "priceCoins": 200,
+          "locationDescription": "Pokémon do odebrania za 200 żetonów.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "serebii-gs-game-corner"
+          ]
+        },
+        {
+          "name": "Sandshrew Lv. 10",
+          "category": "pokemon_prize",
+          "priceCoins": 700,
+          "locationDescription": "Nagroda dostępna w Pokémon Silver (w Gold zamiast niego jest Ekans).",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "serebii-gs-game-corner"
+          ]
+        },
+        {
+          "name": "Dratini Lv. 10",
+          "category": "pokemon_prize",
+          "priceCoins": 2100,
+          "locationDescription": "Pokémon do odebrania za 2 100 żetonów.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "serebii-gs-game-corner"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "goldenrod_department_store",
+      "name": "Goldenrod Department Store",
+      "region": "Johto",
+      "kind": "building",
+      "connectsTo": [
+        "goldenrod_city"
+      ],
+      "localMapAsset": null,
+      "coordinateStatus": "unverified",
+      "sourceIds": [
+        "bulbapedia-gs-department-store"
+      ],
+      "dataStatus": "verified_gen2_silver_store_floors_2f_6f",
+      "items": [
+        {
+          "name": "Potion",
+          "category": "shop_stock",
+          "price": 300,
+          "locationDescription": "Towar sklepu — piętro 2F; kupowany u sprzedawcy, nie leży na mapie.",
+          "floor": "2F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "bulbapedia-gs-department-store"
+          ]
+        },
+        {
+          "name": "Super Potion",
+          "category": "shop_stock",
+          "price": 700,
+          "locationDescription": "Towar sklepu — piętro 2F; kupowany u sprzedawcy, nie leży na mapie.",
+          "floor": "2F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "bulbapedia-gs-department-store"
+          ]
+        },
+        {
+          "name": "Antidote",
+          "category": "shop_stock",
+          "price": 100,
+          "locationDescription": "Towar sklepu — piętro 2F; kupowany u sprzedawcy, nie leży na mapie.",
+          "floor": "2F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "bulbapedia-gs-department-store"
+          ]
+        },
+        {
+          "name": "Parlyz Heal",
+          "category": "shop_stock",
+          "price": 200,
+          "locationDescription": "Towar sklepu — piętro 2F; kupowany u sprzedawcy, nie leży na mapie.",
+          "floor": "2F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "bulbapedia-gs-department-store"
+          ]
+        },
+        {
+          "name": "Awakening",
+          "category": "shop_stock",
+          "price": 250,
+          "locationDescription": "Towar sklepu — piętro 2F; kupowany u sprzedawcy, nie leży na mapie.",
+          "floor": "2F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "bulbapedia-gs-department-store"
+          ]
+        },
+        {
+          "name": "Burn Heal",
+          "category": "shop_stock",
+          "price": 250,
+          "locationDescription": "Towar sklepu — piętro 2F; kupowany u sprzedawcy, nie leży na mapie.",
+          "floor": "2F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "bulbapedia-gs-department-store"
+          ]
+        },
+        {
+          "name": "Ice Heal",
+          "category": "shop_stock",
+          "price": 250,
+          "locationDescription": "Towar sklepu — piętro 2F; kupowany u sprzedawcy, nie leży na mapie.",
+          "floor": "2F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "bulbapedia-gs-department-store"
+          ]
+        },
+        {
+          "name": "Poké Ball",
+          "category": "shop_stock",
+          "price": 200,
+          "locationDescription": "Towar sklepu — piętro 2F; kupowany u sprzedawcy, nie leży na mapie.",
+          "floor": "2F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "bulbapedia-gs-department-store"
+          ]
+        },
+        {
+          "name": "Great Ball",
+          "category": "shop_stock",
+          "price": 600,
+          "locationDescription": "Towar sklepu — piętro 2F; kupowany u sprzedawcy, nie leży na mapie.",
+          "floor": "2F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "bulbapedia-gs-department-store"
+          ]
+        },
+        {
+          "name": "Escape Rope",
+          "category": "shop_stock",
+          "price": 550,
+          "locationDescription": "Towar sklepu — piętro 2F; kupowany u sprzedawcy, nie leży na mapie.",
+          "floor": "2F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "bulbapedia-gs-department-store"
+          ]
+        },
+        {
+          "name": "Repel",
+          "category": "shop_stock",
+          "price": 350,
+          "locationDescription": "Towar sklepu — piętro 2F; kupowany u sprzedawcy, nie leży na mapie.",
+          "floor": "2F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "bulbapedia-gs-department-store"
+          ]
+        },
+        {
+          "name": "Revive",
+          "category": "shop_stock",
+          "price": 1500,
+          "locationDescription": "Towar sklepu — piętro 2F; kupowany u sprzedawcy, nie leży na mapie.",
+          "floor": "2F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "bulbapedia-gs-department-store"
+          ]
+        },
+        {
+          "name": "Full Heal",
+          "category": "shop_stock",
+          "price": 600,
+          "locationDescription": "Towar sklepu — piętro 2F; kupowany u sprzedawcy, nie leży na mapie.",
+          "floor": "2F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "bulbapedia-gs-department-store"
+          ]
+        },
+        {
+          "name": "Poké Doll",
+          "category": "shop_stock",
+          "price": 1000,
+          "locationDescription": "Towar sklepu — piętro 2F; kupowany u sprzedawcy, nie leży na mapie.",
+          "floor": "2F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "bulbapedia-gs-department-store"
+          ]
+        },
+        {
+          "name": "Flower Mail",
+          "category": "shop_stock",
+          "price": 50,
+          "locationDescription": "Towar sklepu — piętro 2F; kupowany u sprzedawcy, nie leży na mapie.",
+          "floor": "2F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "bulbapedia-gs-department-store"
+          ]
+        },
+        {
+          "name": "X Speed",
+          "category": "shop_stock",
+          "price": 350,
+          "locationDescription": "Towar sklepu — piętro 3F; kupowany u sprzedawcy, nie leży na mapie.",
+          "floor": "3F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "bulbapedia-gs-department-store"
+          ]
+        },
+        {
+          "name": "X Special",
+          "category": "shop_stock",
+          "price": 350,
+          "locationDescription": "Towar sklepu — piętro 3F; kupowany u sprzedawcy, nie leży na mapie.",
+          "floor": "3F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "bulbapedia-gs-department-store"
+          ]
+        },
+        {
+          "name": "X Defend",
+          "category": "shop_stock",
+          "price": 550,
+          "locationDescription": "Towar sklepu — piętro 3F; kupowany u sprzedawcy, nie leży na mapie.",
+          "floor": "3F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "bulbapedia-gs-department-store"
+          ]
+        },
+        {
+          "name": "X Attack",
+          "category": "shop_stock",
+          "price": 500,
+          "locationDescription": "Towar sklepu — piętro 3F; kupowany u sprzedawcy, nie leży na mapie.",
+          "floor": "3F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "bulbapedia-gs-department-store"
+          ]
+        },
+        {
+          "name": "Dire Hit",
+          "category": "shop_stock",
+          "price": 650,
+          "locationDescription": "Towar sklepu — piętro 3F; kupowany u sprzedawcy, nie leży na mapie.",
+          "floor": "3F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "bulbapedia-gs-department-store"
+          ]
+        },
+        {
+          "name": "Guard Spec.",
+          "category": "shop_stock",
+          "price": 700,
+          "locationDescription": "Towar sklepu — piętro 3F; kupowany u sprzedawcy, nie leży na mapie.",
+          "floor": "3F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "bulbapedia-gs-department-store"
+          ]
+        },
+        {
+          "name": "X Accuracy",
+          "category": "shop_stock",
+          "price": 950,
+          "locationDescription": "Towar sklepu — piętro 3F; kupowany u sprzedawcy, nie leży na mapie.",
+          "floor": "3F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "bulbapedia-gs-department-store"
+          ]
+        },
+        {
+          "name": "Protein",
+          "category": "shop_stock",
+          "price": 9800,
+          "locationDescription": "Towar sklepu — piętro 4F; kupowany u sprzedawcy, nie leży na mapie.",
+          "floor": "4F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "bulbapedia-gs-department-store"
+          ]
+        },
+        {
+          "name": "Iron",
+          "category": "shop_stock",
+          "price": 9800,
+          "locationDescription": "Towar sklepu — piętro 4F; kupowany u sprzedawcy, nie leży na mapie.",
+          "floor": "4F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "bulbapedia-gs-department-store"
+          ]
+        },
+        {
+          "name": "Carbos",
+          "category": "shop_stock",
+          "price": 9800,
+          "locationDescription": "Towar sklepu — piętro 4F; kupowany u sprzedawcy, nie leży na mapie.",
+          "floor": "4F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "bulbapedia-gs-department-store"
+          ]
+        },
+        {
+          "name": "Calcium",
+          "category": "shop_stock",
+          "price": 9800,
+          "locationDescription": "Towar sklepu — piętro 4F; kupowany u sprzedawcy, nie leży na mapie.",
+          "floor": "4F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "bulbapedia-gs-department-store"
+          ]
+        },
+        {
+          "name": "HP Up",
+          "category": "shop_stock",
+          "price": 9800,
+          "locationDescription": "Towar sklepu — piętro 4F; kupowany u sprzedawcy, nie leży na mapie.",
+          "floor": "4F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "bulbapedia-gs-department-store"
+          ]
+        },
+        {
+          "name": "TM41 — ThunderPunch",
+          "category": "shop_stock",
+          "price": 3000,
+          "locationDescription": "Towar sklepu — piętro 5F; kupowany u sprzedawcy, nie leży na mapie.",
+          "floor": "5F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "bulbapedia-gs-department-store"
+          ]
+        },
+        {
+          "name": "TM48 — Fire Punch",
+          "category": "shop_stock",
+          "price": 3000,
+          "locationDescription": "Towar sklepu — piętro 5F; kupowany u sprzedawcy, nie leży na mapie.",
+          "floor": "5F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "bulbapedia-gs-department-store"
+          ]
+        },
+        {
+          "name": "TM33 — Ice Punch",
+          "category": "shop_stock",
+          "price": 3000,
+          "locationDescription": "Towar sklepu — piętro 5F; kupowany u sprzedawcy, nie leży na mapie.",
+          "floor": "5F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "bulbapedia-gs-department-store"
+          ]
+        },
+        {
+          "name": "TM02 — Headbutt",
+          "category": "shop_stock",
+          "price": 2000,
+          "locationDescription": "Towar sklepu — piętro 5F; kupowany u sprzedawcy, nie leży na mapie.",
+          "floor": "5F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "bulbapedia-gs-department-store"
+          ]
+        },
+        {
+          "name": "TM08 — Rock Smash",
+          "category": "shop_stock",
+          "price": 1000,
+          "locationDescription": "Towar sklepu — piętro 5F; kupowany u sprzedawcy, nie leży na mapie.",
+          "floor": "5F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "bulbapedia-gs-department-store"
+          ]
+        },
+        {
+          "name": "Fresh Water",
+          "category": "shop_stock",
+          "price": 200,
+          "locationDescription": "Towar sklepu — piętro 6F; kupowany u sprzedawcy, nie leży na mapie.",
+          "floor": "6F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "bulbapedia-gs-department-store"
+          ]
+        },
+        {
+          "name": "Soda Pop",
+          "category": "shop_stock",
+          "price": 300,
+          "locationDescription": "Towar sklepu — piętro 6F; kupowany u sprzedawcy, nie leży na mapie.",
+          "floor": "6F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "bulbapedia-gs-department-store"
+          ]
+        },
+        {
+          "name": "Lemonade",
+          "category": "shop_stock",
+          "price": 350,
+          "locationDescription": "Towar sklepu — piętro 6F; kupowany u sprzedawcy, nie leży na mapie.",
+          "floor": "6F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "bulbapedia-gs-department-store"
+          ]
+        }
+      ],
+      "specialServices": [
+        {
+          "id": "tm21_frustration_sunday",
+          "name": "TM21 — Frustration",
+          "description": "Prezent w niedzielę, gdy prowadzący Pokémon ma niski poziom przyjaźni.",
+          "category": "weekly_gift",
+          "floor": "5F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "sourceIds": [
+            "bulbapedia-gs-department-store"
+          ]
+        },
+        {
+          "id": "tm27_return_sunday",
+          "name": "TM27 — Return",
+          "description": "Prezent w niedzielę, gdy prowadzący Pokémon ma wysoki poziom przyjaźni.",
+          "category": "weekly_gift",
+          "floor": "5F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "sourceIds": [
+            "bulbapedia-gs-department-store"
+          ]
+        },
+        {
+          "id": "drowzee_machop_trade",
+          "name": "Wymiana Drowzee na Machopa",
+          "description": "Jednorazowa wymiana na 5F; Machop trzyma Gold Berry. W Gold/Silver wymagany jest Drowzee; wymiana Abra dotyczy Crystal.",
+          "category": "trade",
+          "floor": "5F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "sourceIds": [
+            "bulbapedia-gs-department-store"
+          ]
+        },
+        {
+          "id": "mystery_gift_unlock",
+          "name": "Odblokowanie Mystery Gift",
+          "description": "Porozmawiaj z dziewczynką na 5F, aby odblokować funkcję Mystery Gift.",
+          "category": "feature_unlock",
+          "floor": "5F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "sourceIds": [
+            "bulbapedia-gs-department-store"
+          ]
+        }
+      ],
+      "basementItems": [
+        {
+          "name": "Ultra Ball",
+          "locationDescription": "Piwnica Department Store — wschodnia część.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-department-store"
+          ]
+        },
+        {
+          "name": "Ether",
+          "locationDescription": "Piwnica Department Store — południowa część.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-department-store"
+          ]
+        },
+        {
+          "name": "Burn Heal",
+          "locationDescription": "Piwnica Department Store — północna część.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-department-store"
           ]
         }
       ]
