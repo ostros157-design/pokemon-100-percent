@@ -115,6 +115,16 @@
       "id": "bulbapedia-gs-department-store",
       "url": "https://bulbapedia.bulbagarden.net/wiki/Goldenrod_Department_Store",
       "scope": "Generation II Goldenrod Department Store floors 2F–6F, stock, prices, TM sales, basement pickups and special services"
+    },
+    {
+      "id": "serebii-gs-route35",
+      "url": "https://www.serebii.net/pokearth/johto/2nd/route35.shtml",
+      "scope": "Pokémon Silver Generation II Route 35 walking, surfing, fishing, Headbutt, gift Spearow and trainer teams"
+    },
+    {
+      "id": "serebii-gs-national-park",
+      "url": "https://www.serebii.net/pokearth/johto/2nd/nationalpark.shtml",
+      "scope": "Pokémon Silver Generation II National Park encounters, Bug-Catching Contest encounters, trainers and items"
     }
   ],
   "locations": [
@@ -4373,9 +4383,10 @@
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-johto-region",
-        "bulbapedia-route-list"
+        "bulbapedia-route-list",
+        "serebii-gs-route35"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit",
+      "dataStatus": "verified_gen2_silver_encounters_trainers_and_gift",
       "berryTrees": [
         {
           "id": "route_35_berry_tree_1",
@@ -4389,6 +4400,578 @@
           "coordinateStatus": "unverified",
           "sourceIds": [
             "bulbapedia-berry-tree-generation-ii"
+          ]
+        }
+      ],
+      "wildPokemonDetails": {
+        "walking_morning": [
+          {
+            "name": "Nidoran♂",
+            "levelRange": [
+              12,
+              12
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Nidoran♀",
+            "levelRange": [
+              12,
+              12
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Drowzee",
+            "levelRange": [
+              14,
+              14
+            ],
+            "ratePercent": 20,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Abra",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 10,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Pidgey",
+            "levelRange": [
+              14,
+              14
+            ],
+            "ratePercent": 5,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Ditto",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 4,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Yanma",
+            "levelRange": [
+              12,
+              12
+            ],
+            "ratePercent": 1,
+            "method": "Trawa · rano"
+          }
+        ],
+        "walking_day": [
+          {
+            "name": "Nidoran♂",
+            "levelRange": [
+              12,
+              12
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Nidoran♀",
+            "levelRange": [
+              12,
+              12
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Drowzee",
+            "levelRange": [
+              14,
+              14
+            ],
+            "ratePercent": 20,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Abra",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 10,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Pidgey",
+            "levelRange": [
+              14,
+              14
+            ],
+            "ratePercent": 5,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Ditto",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 4,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Yanma",
+            "levelRange": [
+              12,
+              12
+            ],
+            "ratePercent": 1,
+            "method": "Trawa · dzień"
+          }
+        ],
+        "walking_night": [
+          {
+            "name": "Nidoran♂",
+            "levelRange": [
+              12,
+              12
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · noc"
+          },
+          {
+            "name": "Nidoran♀",
+            "levelRange": [
+              12,
+              12
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · noc"
+          },
+          {
+            "name": "Drowzee",
+            "levelRange": [
+              14,
+              14
+            ],
+            "ratePercent": 20,
+            "method": "Trawa · noc"
+          },
+          {
+            "name": "Abra",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 10,
+            "method": "Trawa · noc"
+          },
+          {
+            "name": "Hoothoot",
+            "levelRange": [
+              14,
+              14
+            ],
+            "ratePercent": 5,
+            "method": "Trawa · noc"
+          },
+          {
+            "name": "Ditto",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 4,
+            "method": "Trawa · noc"
+          },
+          {
+            "name": "Yanma",
+            "levelRange": [
+              12,
+              12
+            ],
+            "ratePercent": 1,
+            "method": "Trawa · noc"
+          }
+        ],
+        "surfing": [
+          {
+            "name": "Psyduck",
+            "levelRange": [
+              15,
+              24
+            ],
+            "ratePercent": 90,
+            "method": "Surfing"
+          },
+          {
+            "name": "Golduck",
+            "levelRange": [
+              20,
+              24
+            ],
+            "ratePercent": 10,
+            "method": "Surfing"
+          }
+        ],
+        "old_rod": [
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 85,
+            "method": "Old Rod"
+          },
+          {
+            "name": "Poliwag",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "Old Rod"
+          }
+        ],
+        "good_rod": [
+          {
+            "name": "Poliwag",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 65,
+            "method": "Good Rod"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 35,
+            "method": "Good Rod"
+          }
+        ],
+        "super_rod": [
+          {
+            "name": "Poliwag",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 70,
+            "method": "Super Rod"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 20,
+            "method": "Super Rod"
+          },
+          {
+            "name": "Poliwhirl",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 10,
+            "method": "Super Rod"
+          }
+        ],
+        "headbutt_special_trees": [
+          {
+            "name": "Weedle",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 65,
+            "method": "Headbutt · specjalne drzewa"
+          },
+          {
+            "name": "Kakuna",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "Headbutt · specjalne drzewa"
+          },
+          {
+            "name": "Exeggcute",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "Headbutt · specjalne drzewa"
+          },
+          {
+            "name": "Beedrill",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 5,
+            "method": "Headbutt · specjalne drzewa"
+          }
+        ],
+        "headbutt": [
+          {
+            "name": "Weedle",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 50,
+            "method": "Headbutt"
+          },
+          {
+            "name": "Pineco",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 30,
+            "method": "Headbutt"
+          },
+          {
+            "name": "Exeggcute",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "Headbutt"
+          },
+          {
+            "name": "Beedrill",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 5,
+            "method": "Headbutt"
+          }
+        ]
+      },
+      "wildPokemonSourceIds": [
+        "serebii-gs-route35"
+      ],
+      "wildPokemonStatus": "verified_gen2_silver_rates_and_levels",
+      "trainers": [
+        {
+          "name": "Picnicker Kim",
+          "team": [
+            {
+              "name": "Vulpix",
+              "level": 15
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route35"
+          ]
+        },
+        {
+          "name": "Camper Elliot",
+          "team": [
+            {
+              "name": "Sandshrew",
+              "level": 13
+            },
+            {
+              "name": "Marill",
+              "level": 15
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route35"
+          ]
+        },
+        {
+          "name": "Picnicker Brooke",
+          "team": [
+            {
+              "name": "Pikachu",
+              "level": 16
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route35"
+          ]
+        },
+        {
+          "name": "Camper Ivan",
+          "team": [
+            {
+              "name": "Diglett",
+              "level": 10
+            },
+            {
+              "name": "Zubat",
+              "level": 10
+            },
+            {
+              "name": "Diglett",
+              "level": 14
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route35"
+          ]
+        },
+        {
+          "name": "Bug Catcher Walt",
+          "team": [
+            {
+              "name": "Magmar",
+              "level": 13
+            },
+            {
+              "name": "Magmar",
+              "level": 13
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route35"
+          ]
+        },
+        {
+          "name": "Juggler Irwin",
+          "team": [
+            {
+              "name": "Voltorb",
+              "level": 2
+            },
+            {
+              "name": "Voltorb",
+              "level": 6
+            },
+            {
+              "name": "Voltorb",
+              "level": 10
+            },
+            {
+              "name": "Voltorb",
+              "level": 14
+            }
+          ],
+          "note": "Telefoniczne rewanże: Voltorb Lv. 6/10/14/18; później Voltorb Lv. 18/22/26 i Electrode Lv. 30.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route35"
+          ]
+        },
+        {
+          "name": "Bug Catcher Arnie",
+          "team": [
+            {
+              "name": "Venonat",
+              "level": 15
+            }
+          ],
+          "note": "Telefoniczne rewanże: Venonat Lv. 19, następnie Venomoth Lv. 28.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route35"
+          ]
+        },
+        {
+          "name": "Bird Keeper Bryan",
+          "team": [
+            {
+              "name": "Pidgey",
+              "level": 12
+            },
+            {
+              "name": "Pidgeotto",
+              "level": 14
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route35"
+          ]
+        },
+        {
+          "name": "Officer Dirk",
+          "team": [
+            {
+              "name": "Growlithe",
+              "level": 14
+            },
+            {
+              "name": "Growlithe",
+              "level": 14
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route35"
+          ]
+        }
+      ],
+      "specialServices": [
+        {
+          "id": "route_35_kenya_spearow_delivery",
+          "name": "Spearow Lv. 10 (Kenya)",
+          "category": "gift_pokemon",
+          "description": "Odbierz przesyłkę Spearowa z południowej bramy i dostarcz ją odbiorcy wskazanemu w liście; Pokémon jest prezentem, nie dzikim spotkaniem.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "serebii-gs-route35"
           ]
         }
       ]
@@ -4405,9 +4988,339 @@
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-johto-region",
-        "bulbapedia-route-list"
+        "bulbapedia-route-list",
+        "serebii-gs-national-park"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit"
+      "dataStatus": "verified_gen2_silver_main_area_contest_trainers_and_items",
+      "wildPokemonDetails": {
+        "walking_morning": [
+          {
+            "name": "Weedle",
+            "levelRange": [
+              10,
+              12
+            ],
+            "ratePercent": 50,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Kakuna",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Pidgey",
+            "levelRange": [
+              10,
+              14
+            ],
+            "ratePercent": 20,
+            "method": "Trawa · rano"
+          }
+        ],
+        "walking_day": [
+          {
+            "name": "Weedle",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Kakuna",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Sunkern",
+            "levelRange": [
+              11,
+              13
+            ],
+            "ratePercent": 25,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Pidgey",
+            "levelRange": [
+              12,
+              14
+            ],
+            "ratePercent": 15,
+            "method": "Trawa · dzień"
+          }
+        ],
+        "walking_night": [
+          {
+            "name": "Hoothoot",
+            "levelRange": [
+              10,
+              14
+            ],
+            "ratePercent": 100,
+            "method": "Trawa · noc"
+          }
+        ],
+        "bug_catching_contest": [
+          {
+            "name": "Caterpie",
+            "levelRange": [
+              7,
+              18
+            ],
+            "ratePercent": 20,
+            "method": "Konkurs łapania robaków · wtorek/czwartek/sobota"
+          },
+          {
+            "name": "Weedle",
+            "levelRange": [
+              7,
+              18
+            ],
+            "ratePercent": 20,
+            "method": "Konkurs łapania robaków · wtorek/czwartek/sobota"
+          },
+          {
+            "name": "Metapod",
+            "levelRange": [
+              9,
+              18
+            ],
+            "ratePercent": 10,
+            "method": "Konkurs łapania robaków · wtorek/czwartek/sobota"
+          },
+          {
+            "name": "Kakuna",
+            "levelRange": [
+              9,
+              18
+            ],
+            "ratePercent": 10,
+            "method": "Konkurs łapania robaków · wtorek/czwartek/sobota"
+          },
+          {
+            "name": "Venonat",
+            "levelRange": [
+              10,
+              16
+            ],
+            "ratePercent": 10,
+            "method": "Konkurs łapania robaków · wtorek/czwartek/sobota"
+          },
+          {
+            "name": "Paras",
+            "levelRange": [
+              10,
+              17
+            ],
+            "ratePercent": 10,
+            "method": "Konkurs łapania robaków · wtorek/czwartek/sobota"
+          },
+          {
+            "name": "Butterfree",
+            "levelRange": [
+              12,
+              15
+            ],
+            "ratePercent": 5,
+            "method": "Konkurs łapania robaków · wtorek/czwartek/sobota"
+          },
+          {
+            "name": "Beedrill",
+            "levelRange": [
+              12,
+              15
+            ],
+            "ratePercent": 5,
+            "method": "Konkurs łapania robaków · wtorek/czwartek/sobota"
+          },
+          {
+            "name": "Scyther",
+            "levelRange": [
+              13,
+              14
+            ],
+            "ratePercent": 5,
+            "method": "Konkurs łapania robaków · wtorek/czwartek/sobota"
+          },
+          {
+            "name": "Pinsir",
+            "levelRange": [
+              13,
+              14
+            ],
+            "ratePercent": 5,
+            "method": "Konkurs łapania robaków · wtorek/czwartek/sobota"
+          }
+        ]
+      },
+      "wildPokemonSourceIds": [
+        "serebii-gs-national-park"
+      ],
+      "wildPokemonStatus": "verified_gen2_silver_rates_and_levels",
+      "trainers": [
+        {
+          "name": "PokéFan Beverly",
+          "team": [
+            {
+              "name": "Snubbull",
+              "level": 14
+            }
+          ],
+          "note": "Telefoniczne rewanże: Snubbull Lv. 18, następnie Granbull Lv. 30.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-national-park"
+          ]
+        },
+        {
+          "name": "School Kid Jack",
+          "team": [
+            {
+              "name": "Oddish",
+              "level": 12
+            },
+            {
+              "name": "Voltorb",
+              "level": 15
+            }
+          ],
+          "note": "Telefoniczne rewanże: Oddish Lv. 14 + Voltorb Lv. 17; później Gloom Lv. 28 + Electrode Lv. 31.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-national-park"
+          ]
+        },
+        {
+          "name": "Lass Krise",
+          "team": [
+            {
+              "name": "Oddish",
+              "level": 12
+            },
+            {
+              "name": "Cubone",
+              "level": 15
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-national-park"
+          ]
+        },
+        {
+          "name": "PokéFan William",
+          "team": [
+            {
+              "name": "Raichu",
+              "level": 14
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-national-park"
+          ]
+        }
+      ],
+      "items": [
+        {
+          "id": "national_park_quick_claw_gift",
+          "name": "Quick Claw",
+          "locationDescription": "Prezent od kobiety przy wejściu do National Park.",
+          "category": "gift",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-national-park"
+          ]
+        },
+        {
+          "id": "national_park_tm28_dig",
+          "name": "TM28 — Dig",
+          "locationDescription": "Leży na ziemi na terenie parku; dokładna kratka niezweryfikowana.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-national-park"
+          ]
+        },
+        {
+          "id": "national_park_paralyze_heal",
+          "name": "Paralyze Heal",
+          "locationDescription": "Leży na ziemi na terenie parku; dokładna kratka niezweryfikowana.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-national-park"
+          ]
+        },
+        {
+          "id": "national_park_full_heal_hidden",
+          "name": "Full Heal",
+          "locationDescription": "Ukryty przedmiot wykrywany przez Itemfinder.",
+          "category": "hidden",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-national-park"
+          ]
+        }
+      ],
+      "specialServices": [
+        {
+          "id": "national_park_bug_contest_prizes",
+          "name": "Nagrody Konkursu Łapania Robaków",
+          "category": "contest_rewards",
+          "description": "Wtorek, czwartek i sobota. 1. miejsce: Sun Stone; 2. miejsce: Everstone; 3. miejsce: Gold Berry; nagroda pocieszenia: Berry.",
+          "prizes": [
+            "Sun Stone — 1. miejsce",
+            "Everstone — 2. miejsce",
+            "Gold Berry — 3. miejsce",
+            "Berry — nagroda pocieszenia"
+          ],
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "serebii-gs-national-park"
+          ]
+        }
+      ]
     },
     {
       "id": "route_36",
