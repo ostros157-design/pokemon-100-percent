@@ -195,6 +195,21 @@
       "id": "serebii-gs-mt-mortar",
       "url": "https://www.serebii.net/pokearth/johto/2nd/mt.mortar.shtml",
       "scope": "Pokémon Silver Generation II Mt. Mortar 1F, 1F-2, 1F-3 and B1F encounters, trainers and item pickups"
+    },
+    {
+      "id": "bulbapedia-gs-mahogany-town",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Mahogany_Town",
+      "scope": "Pokémon Gold and Silver Mahogany Town RageCandyBar, souvenir shop stock before and after Team Rocket, Gym and Pryce reward"
+    },
+    {
+      "id": "serebii-gs-route43",
+      "url": "https://www.serebii.net/pokearth/johto/2nd/route43.shtml",
+      "scope": "Pokémon Silver Generation II Route 43 time-based grass, Surfing, Headbutt, trainers and items"
+    },
+    {
+      "id": "serebii-gs-lake-of-rage",
+      "url": "https://www.serebii.net/pokearth/johto/2nd/lakeofrage.shtml",
+      "scope": "Pokémon Silver Generation II Lake of Rage water and fishing encounters, Headbutt, Red Gyarados, trainers and items"
     }
   ],
   "locations": [
@@ -11188,9 +11203,330 @@
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-johto-region",
-        "bulbapedia-route-list"
+        "bulbapedia-route-list",
+        "bulbapedia-gs-mahogany-town"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit"
+      "dataStatus": "verified_gen2_gold_silver_shop_gym_and_items",
+      "trainers": [
+        {
+          "name": "Boarder Ronald",
+          "team": [
+            {
+              "name": "Seel",
+              "level": 24
+            },
+            {
+              "name": "Dewgong",
+              "level": 25
+            },
+            {
+              "name": "Seel",
+              "level": 24
+            }
+          ],
+          "note": "Mahogany Gym",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-mahogany-town"
+          ]
+        },
+        {
+          "name": "Skier Roxanne",
+          "team": [
+            {
+              "name": "Jynx",
+              "level": 28
+            }
+          ],
+          "note": "Mahogany Gym",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-mahogany-town"
+          ]
+        },
+        {
+          "name": "Skier Clarissa",
+          "team": [
+            {
+              "name": "Dewgong",
+              "level": 28
+            }
+          ],
+          "note": "Mahogany Gym",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-mahogany-town"
+          ]
+        },
+        {
+          "name": "Boarder Brad",
+          "team": [
+            {
+              "name": "Swinub",
+              "level": 26
+            },
+            {
+              "name": "Swinub",
+              "level": 26
+            }
+          ],
+          "note": "Mahogany Gym",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-mahogany-town"
+          ]
+        },
+        {
+          "name": "Boarder Douglas",
+          "team": [
+            {
+              "name": "Shellder",
+              "level": 24
+            },
+            {
+              "name": "Cloyster",
+              "level": 25
+            },
+            {
+              "name": "Shellder",
+              "level": 24
+            }
+          ],
+          "note": "Mahogany Gym",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-mahogany-town"
+          ]
+        },
+        {
+          "name": "Gym Leader Pryce",
+          "team": [
+            {
+              "name": "Seel",
+              "level": 27
+            },
+            {
+              "name": "Dewgong",
+              "level": 29
+            },
+            {
+              "name": "Piloswine",
+              "level": 31
+            }
+          ],
+          "note": "Nagroda: Glacier Badge i TM16 Icy Wind.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-mahogany-town"
+          ]
+        }
+      ],
+      "items": [
+        {
+          "id": "mahogany_tm16_icy_wind",
+          "name": "TM16 — Icy Wind",
+          "locationDescription": "Nagroda od Pryce'a po wygraniu walki w Gymie.",
+          "category": "gym_reward",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "bulbapedia-gs-mahogany-town"
+          ]
+        },
+        {
+          "id": "mahogany_rage_candy_bar",
+          "name": "RageCandyBar",
+          "locationDescription": "Kupowany za 300 ₽ od sprzedawcy przy wschodnim wyjściu przed pokonaniem Team Rocket; później dostępny w sklepie z pamiątkami.",
+          "category": "shop_item",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "bulbapedia-gs-mahogany-town"
+          ]
+        }
+      ],
+      "shopStock": [
+        {
+          "name": "TinyMushroom",
+          "price": 500,
+          "phase": "before_team_rocket_defeated",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "sourceIds": [
+            "bulbapedia-gs-mahogany-town"
+          ]
+        },
+        {
+          "name": "SlowpokeTail",
+          "price": 9800,
+          "phase": "before_team_rocket_defeated",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "sourceIds": [
+            "bulbapedia-gs-mahogany-town"
+          ]
+        },
+        {
+          "name": "Poké Ball",
+          "price": 200,
+          "phase": "before_team_rocket_defeated",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "sourceIds": [
+            "bulbapedia-gs-mahogany-town"
+          ]
+        },
+        {
+          "name": "Potion",
+          "price": 300,
+          "phase": "before_team_rocket_defeated",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "sourceIds": [
+            "bulbapedia-gs-mahogany-town"
+          ]
+        },
+        {
+          "name": "RageCandyBar",
+          "price": 300,
+          "phase": "after_team_rocket_defeated",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "sourceIds": [
+            "bulbapedia-gs-mahogany-town"
+          ]
+        },
+        {
+          "name": "Great Ball",
+          "price": 600,
+          "phase": "after_team_rocket_defeated",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "sourceIds": [
+            "bulbapedia-gs-mahogany-town"
+          ]
+        },
+        {
+          "name": "Super Potion",
+          "price": 700,
+          "phase": "after_team_rocket_defeated",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "sourceIds": [
+            "bulbapedia-gs-mahogany-town"
+          ]
+        },
+        {
+          "name": "Hyper Potion",
+          "price": 1200,
+          "phase": "after_team_rocket_defeated",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "sourceIds": [
+            "bulbapedia-gs-mahogany-town"
+          ]
+        },
+        {
+          "name": "Antidote",
+          "price": 100,
+          "phase": "after_team_rocket_defeated",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "sourceIds": [
+            "bulbapedia-gs-mahogany-town"
+          ]
+        },
+        {
+          "name": "Parlyz Heal",
+          "price": 200,
+          "phase": "after_team_rocket_defeated",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "sourceIds": [
+            "bulbapedia-gs-mahogany-town"
+          ]
+        },
+        {
+          "name": "Super Repel",
+          "price": 500,
+          "phase": "after_team_rocket_defeated",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "sourceIds": [
+            "bulbapedia-gs-mahogany-town"
+          ]
+        },
+        {
+          "name": "Revive",
+          "price": 1500,
+          "phase": "after_team_rocket_defeated",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "sourceIds": [
+            "bulbapedia-gs-mahogany-town"
+          ]
+        },
+        {
+          "name": "Flower Mail",
+          "price": 50,
+          "phase": "after_team_rocket_defeated",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "sourceIds": [
+            "bulbapedia-gs-mahogany-town"
+          ]
+        }
+      ],
+      "specialServices": [
+        {
+          "id": "mahogany_rocket_hideout_access",
+          "name": "Wejście do Team Rocket HQ",
+          "category": "story_access",
+          "description": "Wejście do kryjówki znajduje się pod złotą szafą w sklepie; dostęp do fabuły i sklepów zmienia się po wydarzeniach Team Rocket.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "bulbapedia-gs-mahogany-town"
+          ]
+        }
+      ]
     },
     {
       "id": "route_43",
@@ -11204,9 +11540,10 @@
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-johto-region",
-        "bulbapedia-route-list"
+        "bulbapedia-route-list",
+        "serebii-gs-route43"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit",
+      "dataStatus": "verified_gen2_silver_encounters_trainers_and_items",
       "berryTrees": [
         {
           "id": "route_43_berry_tree_1",
@@ -11220,6 +11557,356 @@
           "coordinateStatus": "unverified",
           "sourceIds": [
             "bulbapedia-berry-tree-generation-ii"
+          ]
+        }
+      ],
+      "wildPokemonDetails": {
+        "walking_morning": [
+          {
+            "name": "Flaaffy",
+            "levelRange": [
+              15,
+              15
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Girafarig",
+            "levelRange": [
+              15,
+              15
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Pidgeotto",
+            "levelRange": [
+              17,
+              17
+            ],
+            "ratePercent": 25,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Mareep",
+            "levelRange": [
+              15,
+              15
+            ],
+            "ratePercent": 10,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Venonat",
+            "levelRange": [
+              16,
+              16
+            ],
+            "ratePercent": 5,
+            "method": "Trawa · rano"
+          }
+        ],
+        "walking_day": [
+          {
+            "name": "Flaaffy",
+            "levelRange": [
+              15,
+              15
+            ],
+            "ratePercent": 40,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Girafarig",
+            "levelRange": [
+              15,
+              15
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Pidgeotto",
+            "levelRange": [
+              17,
+              17
+            ],
+            "ratePercent": 20,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Mareep",
+            "levelRange": [
+              15,
+              15
+            ],
+            "ratePercent": 10,
+            "method": "Trawa · dzień"
+          }
+        ],
+        "walking_night": [
+          {
+            "name": "Flaaffy",
+            "levelRange": [
+              15,
+              15
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · noc"
+          },
+          {
+            "name": "Girafarig",
+            "levelRange": [
+              15,
+              15
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · noc"
+          },
+          {
+            "name": "Noctowl",
+            "levelRange": [
+              17,
+              17
+            ],
+            "ratePercent": 20,
+            "method": "Trawa · noc"
+          },
+          {
+            "name": "Venonat",
+            "levelRange": [
+              16,
+              16
+            ],
+            "ratePercent": 15,
+            "method": "Trawa · noc"
+          },
+          {
+            "name": "Mareep",
+            "levelRange": [
+              15,
+              15
+            ],
+            "ratePercent": 5,
+            "method": "Trawa · noc"
+          }
+        ],
+        "surfing": [
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              15,
+              24
+            ],
+            "ratePercent": 100,
+            "method": "Surfing"
+          }
+        ],
+        "headbutt_special_trees": [
+          {
+            "name": "Spearow",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 80,
+            "method": "Headbutt · specjalne drzewa"
+          },
+          {
+            "name": "Aipom",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 20,
+            "method": "Headbutt · specjalne drzewa"
+          }
+        ],
+        "headbutt": [
+          {
+            "name": "Spearow",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 50,
+            "method": "Headbutt"
+          },
+          {
+            "name": "Heracross",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 30,
+            "method": "Headbutt"
+          },
+          {
+            "name": "Aipom",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 20,
+            "method": "Headbutt"
+          }
+        ]
+      },
+      "wildPokemonSourceIds": [
+        "serebii-gs-route43"
+      ],
+      "wildPokemonStatus": "verified_gen2_silver_rates_and_levels",
+      "trainers": [
+        {
+          "name": "Camper Spencer",
+          "team": [
+            {
+              "name": "Sandshrew",
+              "level": 17
+            },
+            {
+              "name": "Sandslash",
+              "level": 17
+            },
+            {
+              "name": "Zubat",
+              "level": 19
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route43"
+          ]
+        },
+        {
+          "name": "Fisherman Marvin",
+          "team": [
+            {
+              "name": "Magikarp",
+              "level": 10
+            },
+            {
+              "name": "Gyarados",
+              "level": 10
+            },
+            {
+              "name": "Magikarp",
+              "level": 15
+            },
+            {
+              "name": "Gyarados",
+              "level": 15
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route43"
+          ]
+        },
+        {
+          "name": "Picnicker Tiffany",
+          "team": [
+            {
+              "name": "Clefairy",
+              "level": 20
+            }
+          ],
+          "note": "Telefoniczne rewanże: Clefairy Lv. 31 i Lv. 37; wpisy rematch nie są nowymi trenerami.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route43"
+          ]
+        },
+        {
+          "name": "PokéManiac Brent",
+          "team": [
+            {
+              "name": "Lickitung",
+              "level": 19
+            }
+          ],
+          "note": "Telefoniczne rewanże: Nidoran♀ Lv. 19 i Nidoking Lv. 23; później Nidoran♂ Lv. 28, Nidoran♀ Lv. 28, Nidorina Lv. 30, Nidoking Lv. 32.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route43"
+          ]
+        },
+        {
+          "name": "PokéManiac Ron",
+          "team": [
+            {
+              "name": "Nidoking",
+              "level": 19
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route43"
+          ]
+        },
+        {
+          "name": "PokéManiac Ben",
+          "team": [
+            {
+              "name": "Slowbro",
+              "level": 19
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route43"
+          ]
+        }
+      ],
+      "items": [
+        {
+          "id": "route_43_max_ether",
+          "name": "Max Ether",
+          "locationDescription": "Znajdźka na podłodze.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route43"
+          ]
+        },
+        {
+          "id": "route_43_tm36_sludge_bomb",
+          "name": "TM36 — Sludge Bomb",
+          "locationDescription": "Prezent od strażnika bramy po pokonaniu Team Rocket.",
+          "category": "gift",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "serebii-gs-route43"
           ]
         }
       ]
@@ -11236,9 +11923,404 @@
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-johto-region",
-        "bulbapedia-route-list"
+        "bulbapedia-route-list",
+        "serebii-gs-lake-of-rage"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit"
+      "dataStatus": "verified_gen2_silver_water_headbutt_red_gyarados_trainers_and_items",
+      "wildPokemonDetails": {
+        "surfing": [
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              10,
+              19
+            ],
+            "ratePercent": 90,
+            "method": "Surfing"
+          },
+          {
+            "name": "Gyarados",
+            "levelRange": [
+              15,
+              19
+            ],
+            "ratePercent": 10,
+            "method": "Surfing"
+          }
+        ],
+        "old_rod": [
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 100,
+            "method": "Old Rod"
+          }
+        ],
+        "good_rod": [
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 90,
+            "method": "Good Rod"
+          },
+          {
+            "name": "Gyarados",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 10,
+            "method": "Good Rod"
+          }
+        ],
+        "super_rod": [
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 70,
+            "method": "Super Rod"
+          },
+          {
+            "name": "Gyarados",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 30,
+            "method": "Super Rod"
+          }
+        ],
+        "headbutt_special_trees": [
+          {
+            "name": "Weedle",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 65,
+            "method": "Headbutt · specjalne drzewa"
+          },
+          {
+            "name": "Kakuna",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "Headbutt · specjalne drzewa"
+          },
+          {
+            "name": "Exeggcute",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "Headbutt · specjalne drzewa"
+          },
+          {
+            "name": "Beedrill",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 5,
+            "method": "Headbutt · specjalne drzewa"
+          }
+        ],
+        "headbutt": [
+          {
+            "name": "Weedle",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 50,
+            "method": "Headbutt"
+          },
+          {
+            "name": "Pineco",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 30,
+            "method": "Headbutt"
+          },
+          {
+            "name": "Exeggcute",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "Headbutt"
+          },
+          {
+            "name": "Beedrill",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 5,
+            "method": "Headbutt"
+          }
+        ]
+      },
+      "wildPokemonSourceIds": [
+        "serebii-gs-lake-of-rage"
+      ],
+      "wildPokemonStatus": "verified_gen2_silver_rates_and_levels",
+      "trainers": [
+        {
+          "name": "Fisherman Raymond",
+          "team": [
+            {
+              "name": "Magikarp",
+              "level": 22
+            },
+            {
+              "name": "Magikarp",
+              "level": 22
+            },
+            {
+              "name": "Magikarp",
+              "level": 22
+            },
+            {
+              "name": "Magikarp",
+              "level": 22
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-lake-of-rage"
+          ]
+        },
+        {
+          "name": "Fisherman Andre",
+          "team": [
+            {
+              "name": "Gyarados",
+              "level": 27
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-lake-of-rage"
+          ]
+        },
+        {
+          "name": "Cool Trainer Lois",
+          "team": [
+            {
+              "name": "Skiploom",
+              "level": 25
+            },
+            {
+              "name": "Ninetales",
+              "level": 25
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-lake-of-rage"
+          ]
+        },
+        {
+          "name": "Cool Trainer Aaron",
+          "team": [
+            {
+              "name": "Ivysaur",
+              "level": 24
+            },
+            {
+              "name": "Charmeleon",
+              "level": 24
+            },
+            {
+              "name": "Wartortle",
+              "level": 24
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-lake-of-rage"
+          ]
+        }
+      ],
+      "items": [
+        {
+          "id": "lake_of_rage_tm10_hidden_power",
+          "name": "TM10 — Hidden Power",
+          "locationDescription": "Znajdźka na podłodze.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-lake-of-rage"
+          ]
+        },
+        {
+          "id": "lake_of_rage_max_ether",
+          "name": "Max Ether",
+          "locationDescription": "Znajdźka na podłodze.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-lake-of-rage"
+          ]
+        },
+        {
+          "id": "lake_of_rage_tm43_detect",
+          "name": "TM43 — Detect",
+          "locationDescription": "Znajdźka na podłodze.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-lake-of-rage"
+          ]
+        },
+        {
+          "id": "lake_of_rage_ether",
+          "name": "Ether",
+          "locationDescription": "Znajdźka na podłodze.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-lake-of-rage"
+          ]
+        },
+        {
+          "id": "lake_of_rage_red_scale",
+          "name": "Red Scale",
+          "locationDescription": "Otrzymujesz po spotkaniu z czerwonym Gyaradosem.",
+          "category": "story_reward",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "serebii-gs-lake-of-rage"
+          ]
+        },
+        {
+          "id": "lake_of_rage_black_belt",
+          "name": "Black Belt",
+          "locationDescription": "Prezent od Wesleya w środę.",
+          "category": "gift",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "serebii-gs-lake-of-rage"
+          ]
+        },
+        {
+          "id": "lake_of_rage_full_restore_hidden",
+          "name": "Full Restore",
+          "locationDescription": "Ukryty przedmiot wykrywany przez Itemfinder.",
+          "category": "hidden",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-lake-of-rage"
+          ]
+        },
+        {
+          "id": "lake_of_rage_rare_candy_hidden",
+          "name": "Rare Candy",
+          "locationDescription": "Ukryty przedmiot wykrywany przez Itemfinder.",
+          "category": "hidden",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-lake-of-rage"
+          ]
+        },
+        {
+          "id": "lake_of_rage_max_potion_hidden",
+          "name": "Max Potion",
+          "locationDescription": "Ukryty przedmiot wykrywany przez Itemfinder.",
+          "category": "hidden",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-lake-of-rage"
+          ]
+        }
+      ],
+      "specialServices": [
+        {
+          "id": "lake_of_rage_red_gyarados",
+          "name": "Red Gyarados Lv. 30",
+          "category": "static_encounter",
+          "description": "Gwarantowane jednorazowe spotkanie z czerwonym, Shiny Gyaradosem na poziomie 30; nie jest częścią losowej tabeli Surfingu.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "serebii-gs-lake-of-rage"
+          ]
+        },
+        {
+          "id": "lake_of_rage_wesley_wednesday",
+          "name": "Wesley — środa",
+          "category": "weekly_gift",
+          "description": "Wesley pojawia się w środę po północnej stronie jeziora i daje Black Belt.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "serebii-gs-lake-of-rage"
+          ]
+        }
+      ]
     },
     {
       "id": "route_44",
