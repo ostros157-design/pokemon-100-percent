@@ -6296,3 +6296,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Źródła: Serebii Pokéarth Generation II — Route 34 i Goldenrod City. Dane ograniczono do Gold/Silver; nie przeniesiono wariantów Crystal ani HG/SS. Opisy nie są współrzędnymi: brak pinezek i położeń na oko.
 - Dodano testy struktury, liczby wpisów, źródeł i sum procentowych. Testy zapisano, ale nie uruchomiono; Flutter Analyzer i APK również nie zostały uruchomione.
 - Postęp mapy Pokémon Silver pozostaje 40% do czasu walidacji oraz uzupełnienia grafiki i współrzędnych.
+
+
+### Pokémon Silver / Johto — Goldenrod Underground i Radio Tower (2026-11-11)
+- Goldenrod Underground: uzupełniono 1F–3F o 16 wpisów trenerów, w tym trzy warianty drużyny rywala zależne od startera, oraz 15 wpisów przedmiotów/nagród. Uwzględniono Coin Case, cztery ukryte przedmioty na 1F/3F, nagrodę Card Key i znajdźki z 2F–3F.
+- Radio Tower: dodano 16 trenerów Zespołu Rocket i naukowców na piętrach 1F–5F oraz trzy nagrody dostępne w Gold/Silver: TM11 Sunny Day, Pink Bow i Basement Key. Nie dodano Blue Card (Crystal only), Rainbow Wing (Gold only) ani Clear Bell (Crystal only).
+- Dane dotyczą oryginalnego Pokémon Gold/Silver; wpisy mają źródła Serebii Pokéarth Gen II i nie mają wymyślonych współrzędnych. Trenerzy pojawiają się w związku z przejęciem miasta przez Team Rocket, a nie jako stale dostępni przeciwnicy.
+- Testy kontrolują liczbę wpisów, warianty rywala, źródła i brak deklaracji dokładnych współrzędnych. Testy zapisano, ale nie uruchomiono; Flutter Analyzer i APK również nie zostały uruchomione.
+- Goldenrod Underground i Radio Tower mają dane trenerów/przedmiotów; dokładne rozmieszczenie pięter i pozycje na grafice nadal wymagają zweryfikowanej mapy. Postęp mapy Pokémon Silver pozostaje 40%.
