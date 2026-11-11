@@ -75,6 +75,16 @@
       "id": "serebii-gs-sprout-tower",
       "url": "https://www.serebii.net/pokearth/johto/2nd/sprouttower.shtml",
       "scope": "Pokémon Silver Generation II Sprout Tower 2F/3F encounter rates, trainer teams and floor items"
+    },
+    {
+      "id": "serebii-gs-ruins-of-alph",
+      "url": "https://www.serebii.net/pokearth/johto/2nd/ruinsofalph.shtml",
+      "scope": "Pokémon Silver Generation II Ruins of Alph outside walking, surfing, fishing, Unown encounters and puzzle access"
+    },
+    {
+      "id": "bulbapedia-gs-ruins-of-alph",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Appendix:Gold_and_Silver_walkthrough/Section_4",
+      "scope": "Original Gold/Silver Ruins of Alph puzzle chambers, Unown unlocks, Psychic Nathan team and Unown Mode reward"
     }
   ],
   "locations": [
@@ -3428,9 +3438,202 @@
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-johto-region",
-        "bulbapedia-route-list"
+        "bulbapedia-route-list",
+        "serebii-gs-ruins-of-alph",
+        "bulbapedia-gs-ruins-of-alph"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit"
+      "dataStatus": "partial_verified_gen2_silver",
+      "wildPokemonStatus": "verified_gen2_silver_rates_and_levels",
+      "wildPokemonSourceIds": [
+        "serebii-gs-ruins-of-alph"
+      ],
+      "wildPokemonDetails": {
+        "outside_walking": [
+          {
+            "name": "Natu",
+            "levelRange": [
+              18,
+              24
+            ],
+            "ratePercent": 90,
+            "method": "Trawa na zewnątrz · dostęp przez przejście z Union Cave"
+          },
+          {
+            "name": "Smeargle",
+            "levelRange": [
+              20,
+              22
+            ],
+            "ratePercent": 10,
+            "method": "Trawa na zewnątrz · dostęp przez przejście z Union Cave"
+          }
+        ],
+        "outside_surfing": [
+          {
+            "name": "Wooper",
+            "levelRange": [
+              15,
+              19
+            ],
+            "ratePercent": 60,
+            "method": "Surfing"
+          },
+          {
+            "name": "Quagsire",
+            "levelRange": [
+              15,
+              24
+            ],
+            "ratePercent": 40,
+            "method": "Surfing"
+          }
+        ],
+        "outside_old_rod": [
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 85,
+            "method": "Old Rod"
+          },
+          {
+            "name": "Poliwag",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "Old Rod"
+          }
+        ],
+        "outside_good_rod": [
+          {
+            "name": "Poliwag",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 65,
+            "method": "Good Rod"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 35,
+            "method": "Good Rod"
+          }
+        ],
+        "outside_super_rod": [
+          {
+            "name": "Poliwag",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 70,
+            "method": "Super Rod"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 20,
+            "method": "Super Rod"
+          },
+          {
+            "name": "Poliwhirl",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 10,
+            "method": "Super Rod"
+          }
+        ],
+        "inside_unown_after_puzzle": [
+          {
+            "name": "Unown",
+            "levelRange": [
+              5,
+              5
+            ],
+            "ratePercent": 100,
+            "method": "Podziemna sala · po rozwiązaniu co najmniej jednej układanki"
+          }
+        ]
+      },
+      "trainers": [
+        {
+          "name": "Psychic Nathan",
+          "team": [
+            {
+              "name": "Girafarig",
+              "level": 26
+            }
+          ],
+          "note": "Dostęp przez Union Cave po użyciu Surf. Bulbapedia podaje Lv. 26, a strona Serebii Lv. 16 — zachowano wartość z walkthrough i oznaczono rozbieżność źródeł.",
+          "rewardMoney": 832,
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-ruins-of-alph"
+          ]
+        }
+      ],
+      "puzzleChambers": [
+        {
+          "id": "north_chamber",
+          "name": "Komnata północna",
+          "puzzlePokemon": "Kabuto",
+          "unownForms": "A–K",
+          "access": "Dostępna od początku"
+        },
+        {
+          "id": "southeast_chamber",
+          "name": "Komnata południowo-wschodnia",
+          "puzzlePokemon": "Aerodactyl",
+          "unownForms": "S–W",
+          "access": "Wymaga Surf"
+        },
+        {
+          "id": "west_chamber",
+          "name": "Komnata zachodnia",
+          "puzzlePokemon": "Ho-Oh",
+          "unownForms": "X–Z",
+          "access": "Dostęp przez Union Cave; wymaga Surf"
+        },
+        {
+          "id": "southwest_chamber",
+          "name": "Komnata południowo-zachodnia",
+          "puzzlePokemon": "Omanyte",
+          "unownForms": "L–R",
+          "access": "Dostęp przez Union Cave; wymaga Surf i Strength"
+        }
+      ],
+      "specialRewards": [
+        {
+          "id": "ruins_of_alph_unown_mode",
+          "name": "Unown Mode",
+          "type": "pokedex_upgrade",
+          "description": "Badacz w ośrodku badawczym odblokowuje tryb Unown w Pokédexie po złapaniu co najmniej trzech różnych form Unown.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "bulbapedia-gs-ruins-of-alph"
+          ]
+        }
+      ]
     },
     {
       "id": "radio_tower",
