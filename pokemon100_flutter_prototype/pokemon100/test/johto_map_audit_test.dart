@@ -153,11 +153,11 @@ void main() {
       }
     }
 
-    expect(pickups, hasLength(91));
+    expect(pickups, hasLength(99));
     expect(
       locations.where((value) =>
           ((value as Map<String, dynamic>)['items'] as List?)?.isNotEmpty ?? false),
-      hasLength(14),
+      hasLength(16),
     );
   });
 
@@ -178,11 +178,11 @@ void main() {
       }
     }
 
-    expect(trainers, hasLength(97));
+    expect(trainers, hasLength(112));
     expect(
       locations.where((value) =>
           ((value as Map<String, dynamic>)['trainers'] as List?)?.isNotEmpty ?? false),
-      hasLength(15),
+      hasLength(17),
     );
   });
 
@@ -525,6 +525,47 @@ void main() {
       expect(value['sourceIds'], contains('serebii-gs-route37'));
       expect(value['availableIn'], contains('gold_silver'));
       expect(value['coordinateStatus'], 'unverified');
+    }
+  });
+
+
+  test('Silver Ecruteak City fishing, Kimono Girls and Gym teams are source-tracked', () {
+    final locations = audit['locations'] as List<dynamic>;
+    final city = locations.cast<Map<String, dynamic>>().firstWhere((value) => value['id'] == 'ecruteak_city');
+    expect(city['wildPokemonSourceIds'], contains('serebii-gs-ecruteak-city'));
+    final groups = city['wildPokemonDetails'] as Map<String, dynamic>;
+    expect(groups, hasLength(4));
+    for (final group in groups.entries) {
+      expect((group.value as List).fold<int>(0, (sum, value) => sum + ((value as Map<String, dynamic>)['ratePercent'] as num).toInt()), 100);
+    }
+    expect(city['trainers'], hasLength(10));
+    expect(city['items'], hasLength(4));
+    final morty = (city['trainers'] as List).cast<Map<String, dynamic>>().firstWhere((value) => value['name'] == 'Gym Leader Morty');
+    expect(morty['team'], hasLength(4));
+    expect(morty['team'][2]['name'], 'Gengar');
+    for (final value in [...city['trainers'], ...city['items']]) {
+      expect(value['sourceIds'], contains('serebii-gs-ecruteak-city'));
+      expect(value['availableIn'], contains('gold_silver'));
+    }
+  });
+
+  test('Silver Burned Tower 1F and B1F encounters, rival variants and items are sourced', () {
+    final locations = audit['locations'] as List<dynamic>;
+    final tower = locations.cast<Map<String, dynamic>>().firstWhere((value) => value['id'] == 'burned_tower');
+    expect(tower['wildPokemonSourceIds'], contains('serebii-gs-burned-tower'));
+    final groups = tower['wildPokemonDetails'] as Map<String, dynamic>;
+    expect(groups, hasLength(4));
+    for (final group in groups.entries) {
+      expect((group.value as List).fold<int>(0, (sum, value) => sum + ((value as Map<String, dynamic>)['ratePercent'] as num).toInt()), 100);
+    }
+    expect(tower['trainers'], hasLength(5));
+    expect(tower['items'], hasLength(4));
+    expect(tower['specialServices'].single['category'], 'story_event');
+    final rivals = (tower['trainers'] as List).where((value) => (value as Map<String, dynamic>)['name'].toString().startsWith('Rival Silver'));
+    expect(rivals, hasLength(3));
+    for (final value in [...tower['trainers'], ...tower['items'], ...tower['specialServices']]) {
+      expect(value['sourceIds'], contains('serebii-gs-burned-tower'));
+      expect(value['availableIn'], contains('gold_silver'));
     }
   });
 
