@@ -19085,9 +19085,9 @@
     "note": "Connectivity audit checks only that every connectsTo ID points to an entry in this regional index. Cross-region links such as Route 27 to New Bark Town are intentionally handled as regional boundaries.",
     "berryTreeCoverage": "15 berry trees recorded across 13 Johto locations; exact map coordinates remain unverified",
     "itemPickupCount": 203,
-    "itemPickupCoverage": "13 przedmiotów do podniesienia w 5 lokacjach; opisy źródłowe, współrzędne niezweryfikowane",
+    "itemPickupCoverage": "203 wpisy przedmiotów i nagród w 37 lokacjach; typy i opisy źródłowe zapisane, współrzędne niezweryfikowane",
     "trainerRecordCount": 216,
-    "trainerCoverage": "33 potwierdzone wpisy trenerów w 6 lokacjach; piętra i drużyny zapisane, współrzędne niezweryfikowane",
+    "trainerCoverage": "216 wpisów trenerów w 35 lokacjach; składy i dostępność wersji zapisane, współrzędne niezweryfikowane",
     "wildEncounterCoverage": {
       "status": "partial_verified",
       "game": "Pokémon Silver (Generation II)",
@@ -19102,7 +19102,7 @@
         "sprout_tower"
       ],
       "tableCount": 291,
-      "note": "Zweryfikowane tabele Silver oraz różnice Gold/Crystal; grupy rozdzielone według piętra, pory dnia i metody. Każda grupa procentowa sumuje się do 100%."
+      "note": "Zweryfikowane grupy spotkań Silver oraz różnice Gold/Crystal w wybranych lokacjach; tabele są rozdzielone według pory, metody i piętra. Każda grupa sumuje się do 100%."
     }
   }
 }
