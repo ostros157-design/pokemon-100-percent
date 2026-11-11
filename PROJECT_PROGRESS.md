@@ -6347,3 +6347,21 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Dane pochodzą z Serebii Pokéarth Generation II i dotyczą oryginalnego Pokémon Silver. Wariantów Crystal i HG/SS nie przeniesiono do tabel Silver; nie dodano pinezek ani współrzędnych na oko.
 - Dodano testy sum procentowych, trenerów, przedmiotów i źródeł oraz zaktualizowano liczniki zbiorcze. Testy Flutter, Analyzer i APK nie zostały uruchomione.
 - Postęp mapy Pokémon Silver pozostaje 40% — uzupełniono kolejne dwie trasy, ale mapa graficzna i dokładne współrzędne wciąż są największym brakującym elementem.
+
+
+## Pokémon Silver / Johto — aktualizacja szacunku postępu (2026-11-11)
+
+**Nowy szacunek: 45% ukończenia / 55% pozostało.** Podniosłem wynik z 40% dopiero po dodaniu i ponownej kontroli dużego pakietu danych dla Route 35–39, National Park, Ecruteak City i Burned Tower.
+
+| Obszar | Waga | Zaliczone teraz | Uzasadnienie |
+|---|---:|---:|---|
+| Indeks lokacji i połączeń | 20% | 20% | 64 lokacje w indeksie; połączenia są sprawdzane testem |
+| Rozdzielenie Gold/Silver, Crystal i HG/SS | 15% | 15% | Oznaczenia wersji i filtr lokacji remake'owych |
+| Grafika mapy Silver | 20% | 0% | Nadal brak zatwierdzonego obrazu mapy |
+| Zweryfikowane współrzędne i pinezki | 20% | 0% | Nie dodano pozycji na oko |
+| Spotkania Pokémonów | 10% | 5% | Tabele spotkań istnieją w 18 lokacjach; wszystkie zapisane grupy sumują się do 100%, ale nie cały region jest jeszcze pokryty |
+| Przedmioty, trenerzy i zdarzenia | 10% | 5% | 121 wpisów trenerów w 19 lokacjach i 101 wpisów przedmiotów w 17 lokacjach; pozostałe obszary wymagają danych i kontroli |
+| Flutter Analyzer, testy i APK | 5% | 0% | Testy są zapisane i statycznie sprawdzone pod kątem liczników; nie zostały uruchomione |
+| **Razem** | **100%** | **45%** | **55% pozostaje** |
+
+Kontrola repozytorium po ostatnich zmianach: JSON poprawnie się parsuje; wszystkie grupy spotkań mają sumę 100%; liczniki testowe odpowiadają danym (16 drzewek jagodowych, 121 trenerów, 101 wpisów na liście przedmiotów). To kontrola danych i spójności zapisanych oczekiwań, a nie wynik uruchomienia testów Flutter. Następny obszar do opracowania: Olivine City i okolice, zaczynając od pełnych danych miasta oraz latarni morskiej.
