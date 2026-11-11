@@ -260,6 +260,16 @@
       "id": "serebii-gs-cherrygrove-city",
       "url": "https://www.serebii.net/pokearth/johto/2nd/cherrygrovecity.shtml",
       "scope": "Pokémon Gold/Silver/Crystal Generation II Cherrygrove City surfing and fishing encounter rates, Rival Silver starter variants and Mystic Water gift"
+    },
+    {
+      "id": "serebii-gs-route30",
+      "url": "https://www.serebii.net/pokearth/johto/2nd/route30.shtml",
+      "scope": "Pokémon Gold/Silver/Crystal Generation II Route 30 encounter rates, headbutt tables, trainers and item list"
+    },
+    {
+      "id": "bulbapedia-johto-route30",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Johto_Route_30",
+      "scope": "Generation II Route 30 item locations, Mystery Egg and Pokédex story gifts, Youngster Joey rematch progression, trainer teams"
     }
   ],
   "locations": [
@@ -1042,9 +1052,11 @@
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-johto-region",
-        "bulbapedia-route-list"
+        "bulbapedia-route-list",
+        "serebii-gs-route30",
+        "bulbapedia-johto-route30"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit",
+      "dataStatus": "verified_gen2_silver_encounters_headbutt_trainers_and_items",
       "berryTrees": [
         {
           "id": "route_30_berry_tree_1",
@@ -1251,12 +1263,233 @@
             "ratePercent": 10,
             "method": "Super Rod"
           }
+        ],
+        "headbutt": [
+          {
+            "name": "Spearow",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 50,
+            "method": "Headbutt · zwykłe drzewa"
+          },
+          {
+            "name": "Heracross",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 30,
+            "method": "Headbutt · zwykłe drzewa"
+          },
+          {
+            "name": "Aipom",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 20,
+            "method": "Headbutt · zwykłe drzewa"
+          }
+        ],
+        "headbutt_special_trees": [
+          {
+            "name": "Spearow",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 80,
+            "method": "Headbutt · specjalne drzewa"
+          },
+          {
+            "name": "Aipom",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 20,
+            "method": "Headbutt · specjalne drzewa"
+          }
         ]
       },
       "wildPokemonSourceIds": [
-        "rotomlabs-gs-route30"
+        "rotomlabs-gs-route30",
+        "serebii-gs-route30"
       ],
-      "wildPokemonStatus": "verified_gen2_silver_rates_and_levels"
+      "wildPokemonStatus": "verified_gen2_silver_rates_and_levels",
+      "trainers": [
+        {
+          "name": "Youngster Joey",
+          "team": [
+            {
+              "name": "Rattata",
+              "level": 4
+            }
+          ],
+          "note": "Pierwsza walka; późniejsze rematche przez Pokégear.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route30",
+            "bulbapedia-johto-route30"
+          ]
+        },
+        {
+          "name": "Youngster Joey — rematch 1",
+          "team": [
+            {
+              "name": "Rattata",
+              "level": 15
+            }
+          ],
+          "note": "Rematch po dotarciu do Goldenrod City i pokonaniu poprzedniego składu.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-johto-route30"
+          ]
+        },
+        {
+          "name": "Youngster Joey — rematch 2",
+          "team": [
+            {
+              "name": "Raticate",
+              "level": 21
+            }
+          ],
+          "note": "Rematch po dotarciu do Olivine City i pokonaniu poprzedniego składu.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route30",
+            "bulbapedia-johto-route30"
+          ]
+        },
+        {
+          "name": "Youngster Mikey",
+          "team": [
+            {
+              "name": "Pidgey",
+              "level": 2
+            },
+            {
+              "name": "Rattata",
+              "level": 4
+            }
+          ],
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route30",
+            "bulbapedia-johto-route30"
+          ]
+        },
+        {
+          "name": "Bug Catcher Don",
+          "team": [
+            {
+              "name": "Caterpie",
+              "level": 3
+            },
+            {
+              "name": "Caterpie",
+              "level": 3
+            }
+          ],
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route30",
+            "bulbapedia-johto-route30"
+          ]
+        }
+      ],
+      "items": [
+        {
+          "id": "route_30_potion_hidden_mr_pokemon",
+          "name": "Potion",
+          "locationDescription": "Ukryty w rabatce kwiatowej, cztery pola na południe i trzy na zachód od wejścia do domu Mr. Pokémon; do wykrycia Itemfinderem.",
+          "category": "hidden",
+          "availableIn": [
+            "gold_silver",
+            "crystal"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route30",
+            "bulbapedia-johto-route30"
+          ]
+        },
+        {
+          "id": "route_30_berry_house_gift",
+          "name": "Berry",
+          "locationDescription": "Prezent od mężczyzny mieszkającego w domu na południu Route 30; nie jest to jagoda z drzewa.",
+          "category": "gift",
+          "availableIn": [
+            "gold_silver",
+            "crystal"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-johto-route30"
+          ]
+        },
+        {
+          "id": "route_30_mystery_egg",
+          "name": "Mystery Egg",
+          "locationDescription": "Prezent od Mr. Pokémon w jego domu; należy dostarczyć je Profesorowi Elmowi.",
+          "category": "key_item",
+          "availableIn": [
+            "gold_silver",
+            "crystal"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-johto-route30"
+          ]
+        },
+        {
+          "id": "route_30_pokedex_oak",
+          "name": "Pokédex",
+          "locationDescription": "Otrzymywany od Profesora Oaka po odebraniu Mystery Egg od Mr. Pokémon.",
+          "category": "key_item",
+          "availableIn": [
+            "gold_silver",
+            "crystal"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-johto-route30"
+          ]
+        },
+        {
+          "id": "route_30_exp_share_red_scale",
+          "name": "Exp. Share",
+          "locationDescription": "Prezent od Mr. Pokémon w zamian za Red Scale.",
+          "category": "trade",
+          "availableIn": [
+            "gold_silver",
+            "crystal"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route30",
+            "bulbapedia-johto-route30"
+          ]
+        }
+      ]
     },
     {
       "id": "route_31",
