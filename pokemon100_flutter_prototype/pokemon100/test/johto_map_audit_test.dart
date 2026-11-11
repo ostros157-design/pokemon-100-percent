@@ -153,11 +153,11 @@ void main() {
       }
     }
 
-    expect(pickups, hasLength(119));
+    expect(pickups, hasLength(127));
     expect(
       locations.where((value) =>
           ((value as Map<String, dynamic>)['items'] as List?)?.isNotEmpty ?? false),
-      hasLength(21),
+      hasLength(22),
     );
   });
 
@@ -689,6 +689,25 @@ void main() {
     expect(chuck['team'][1]['name'], 'Poliwrath');
     for (final value in [...city['trainers'], ...city['items']]) {
       expect(value['sourceIds'], contains('serebii-gs-cianwood-city'));
+      expect(value['availableIn'], contains('gold_silver'));
+    }
+  });
+
+
+  test('Silver Whirl Islands sections, encounters, items and Lugia are source-tracked', () {
+    final locations = audit['locations'] as List<dynamic>;
+    final island = locations.cast<Map<String, dynamic>>().firstWhere((value) => value['id'] == 'whirl_islands');
+    expect(island['wildPokemonSourceIds'], contains('serebii-gs-whirl-islands'));
+    final groups = island['wildPokemonDetails'] as Map<String, dynamic>;
+    expect(groups, hasLength(20));
+    for (final group in groups.entries) {
+      expect((group.value as List).fold<int>(0, (sum, value) => sum + ((value as Map<String, dynamic>)['ratePercent'] as num).toInt()), 100);
+    }
+    expect(island['items'], hasLength(8));
+    expect(island['specialServices'].first['name'], 'Lugia Lv. 40');
+    expect(island['specialServices'].first['category'], 'legendary_encounter');
+    for (final value in [...island['items'], ...island['specialServices']]) {
+      expect(value['sourceIds'], contains('serebii-gs-whirl-islands'));
       expect(value['availableIn'], contains('gold_silver'));
     }
   });
