@@ -186,4 +186,42 @@ void main() {
     );
   });
 
+
+  test('Silver wild encounter tables are sourced and each rate group totals 100%', () {
+    final locations = audit['locations'] as List<dynamic>;
+    const expectedSources = <String, String>{
+      'route_29': 'rotomlabs-gs-route29',
+      'route_30': 'rotomlabs-gs-route30',
+      'route_31': 'rotomlabs-gs-route31',
+      'route_32': 'serebii-gs-route32',
+      'union_cave': 'serebii-gs-union-cave',
+    };
+    for (final expected in expectedSources.entries) {
+      final location = locations.cast<Map<String, dynamic>>().firstWhere(
+        (value) => value['id'] == expected.key,
+      );
+      expect(location['wildPokemonStatus'], 'verified_gen2_silver_rates_and_levels');
+      expect(location['wildPokemonSourceIds'], contains(expected.value));
+      final tables = location['wildPokemonDetails'] as Map<String, dynamic>;
+      expect(tables, isNotEmpty);
+      for (final table in tables.entries) {
+        final entries = table.value as List<dynamic>;
+        expect(entries, isNotEmpty);
+        expect(
+          entries.fold<int>(0, (sum, value) =>
+              sum + ((value as Map<String, dynamic>)['ratePercent'] as num).toInt()),
+          100,
+          reason: '${expected.key}/${table.key} must total 100%',
+        );
+        for (final value in entries) {
+          final entry = value as Map<String, dynamic>;
+          expect(entry['name'], isA<String>());
+          expect(entry['levelRange'], hasLength(2));
+          expect(entry['method'], isA<String>());
+        }
+      }
+    }
+    expect(expectedSources, hasLength(5));
+  });
+
 }
