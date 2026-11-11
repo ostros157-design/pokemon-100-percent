@@ -6339,3 +6339,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Źródła: Serebii Pokéarth Generation II — Ecruteak City i Burned Tower. Dane ograniczono do Pokémon Gold/Silver; pominięto warianty Crystal i remake'owe elementy HG/SS. Współrzędne nie zostały zgadywane.
 - Dodano testy dla czterech tabel w Ecruteak i Burned Tower, trenerów, przedmiotów, drużyn Morty'ego i wariantów rywala; zaktualizowano łączne liczniki. Testy Flutter, Analyzer i APK nadal nie zostały uruchomione.
 - Postęp mapy Pokémon Silver pozostaje 40% — dane dwóch ważnych lokacji są znacznie pełniejsze, lecz grafika mapy, dokładne współrzędne i testy uruchomieniowe wciąż wymagają pracy.
+
+
+### Pokémon Silver / Johto — Route 38 i Route 39 (2026-11-11)
+- Route 38: dodano pięć tabel spotkań (rano/dzień/noc oraz dwa warianty Headbutt) i pięciu trenerów z drużynami; rematche telefoniczne Lass Dana i School Kid Chad opisano w notatkach, bez tworzenia sztucznych dodatkowych trenerów.
+- Route 39: dodano pięć tabel spotkań, czterech trenerów i dwie nagrody/znajdźki: TM13 Snore po wyleczeniu Miltanka oraz ukryty Nugget. Uzupełniono też drugie drzewko Berry obok istniejącego Mint Berry; dokładna pozycja pozostaje niezweryfikowana.
+- Dane pochodzą z Serebii Pokéarth Generation II i dotyczą oryginalnego Pokémon Silver. Wariantów Crystal i HG/SS nie przeniesiono do tabel Silver; nie dodano pinezek ani współrzędnych na oko.
+- Dodano testy sum procentowych, trenerów, przedmiotów i źródeł oraz zaktualizowano liczniki zbiorcze. Testy Flutter, Analyzer i APK nie zostały uruchomione.
+- Postęp mapy Pokémon Silver pozostaje 40% — uzupełniono kolejne dwie trasy, ale mapa graficzna i dokładne współrzędne wciąż są największym brakującym elementem.
