@@ -153,7 +153,7 @@ void main() {
       }
     }
 
-    expect(pickups, hasLength(17));
+    expect(pickups, hasLength(84));
     expect(
       locations.where((value) =>
           ((value as Map<String, dynamic>)['items'] as List?)?.isNotEmpty ?? false),
@@ -178,7 +178,7 @@ void main() {
       }
     }
 
-    expect(trainers, hasLength(47));
+    expect(trainers, hasLength(93));
     expect(
       locations.where((value) =>
           ((value as Map<String, dynamic>)['trainers'] as List?)?.isNotEmpty ?? false),
@@ -442,6 +442,53 @@ void main() {
       isNot(contains('goldenrod_gold_berry_trade_abra')));
     expect((city['items'] as List).where((value) => value['id'] == 'goldenrod_gold_berry_trade_drowzee'),
       hasLength(1));
+  });
+
+
+  test('Silver Route 35 encounter tables and trainers are fully source-tracked', () {
+    final locations = audit['locations'] as List<dynamic>;
+    final route = locations.cast<Map<String, dynamic>>().firstWhere(
+      (value) => value['id'] == 'route_35',
+    );
+    expect(route['wildPokemonSourceIds'], contains('serebii-gs-route35'));
+    final groups = route['wildPokemonDetails'] as Map<String, dynamic>;
+    expect(groups, hasLength(9));
+    for (final group in groups.entries) {
+      final entries = group.value as List<dynamic>;
+      expect(entries.fold<int>(0, (sum, value) =>
+        sum + ((value as Map<String, dynamic>)['ratePercent'] as num).toInt()),
+        100, reason: 'route_35/${group.key} must total 100%');
+    }
+    expect(route['trainers'], hasLength(9));
+    expect(route['specialServices'].single['name'], contains('Spearow'));
+    for (final entry in [...route['trainers'], ...route['specialServices']]) {
+      expect(entry['sourceIds'], contains('serebii-gs-route35'));
+      expect(entry['availableIn'], contains('gold_silver'));
+    }
+  });
+
+  test('Silver National Park main encounters, contest, trainers and items are sourced', () {
+    final locations = audit['locations'] as List<dynamic>;
+    final park = locations.cast<Map<String, dynamic>>().firstWhere(
+      (value) => value['id'] == 'national_park',
+    );
+    expect(park['wildPokemonSourceIds'], contains('serebii-gs-national-park'));
+    final groups = park['wildPokemonDetails'] as Map<String, dynamic>;
+    expect(groups, hasLength(4));
+    for (final group in groups.entries) {
+      final entries = group.value as List<dynamic>;
+      expect(entries.fold<int>(0, (sum, value) =>
+        sum + ((value as Map<String, dynamic>)['ratePercent'] as num).toInt()),
+        100, reason: 'national_park/${group.key} must total 100%');
+    }
+    expect(groups['bug_catching_contest'], hasLength(10));
+    expect(park['trainers'], hasLength(4));
+    expect(park['items'], hasLength(4));
+    expect(park['specialServices'].single['prizes'], hasLength(4));
+    for (final entry in [...park['trainers'], ...park['items'], ...park['specialServices']]) {
+      expect(entry['sourceIds'], contains('serebii-gs-national-park'));
+      expect(entry['availableIn'], contains('gold_silver'));
+    }
   });
 
 }
