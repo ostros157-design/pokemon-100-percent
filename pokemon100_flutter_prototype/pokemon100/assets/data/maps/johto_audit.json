@@ -280,6 +280,11 @@
       "id": "bulbapedia-gs-route31-walkthrough",
       "url": "https://bulbapedia.bulbagarden.net/wiki/Walkthrough:Pok%C3%A9mon_Gold_and_Silver/Part_3",
       "scope": "Original Gold/Silver Route 31 item locations, Bitter Berry tree, TM50 delivery condition and Bug Catcher Wade's first team"
+    },
+    {
+      "id": "bulbapedia-johto-route33",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Johto_Route_33",
+      "scope": "Generation II Route 33 layout, daily PSNCureBerry tree, Gold/Silver/Crystal encounter differences and Hiker Anthony rematch rosters"
     }
   ],
   "locations": [
@@ -3903,9 +3908,11 @@
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-johto-region",
-        "bulbapedia-route-list"
+        "bulbapedia-route-list",
+        "serebii-gs-route33",
+        "bulbapedia-johto-route33"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit",
+      "dataStatus": "verified_gen2_all_variants_encounters_trainer_rematches_and_berry",
       "berryTrees": [
         {
           "id": "route_33_berry_tree_1",
@@ -3918,7 +3925,9 @@
           "respawns": "daily",
           "coordinateStatus": "unverified",
           "sourceIds": [
-            "bulbapedia-berry-tree-generation-ii"
+            "bulbapedia-berry-tree-generation-ii",
+            "serebii-gs-route33",
+            "bulbapedia-johto-route33"
           ]
         }
       ],
@@ -3936,11 +3945,116 @@
             }
           ],
           "availableIn": [
-            "gold_silver"
+            "gold_silver",
+            "crystal"
           ],
           "coordinateStatus": "unverified",
           "sourceIds": [
-            "serebii-gs-route33"
+            "serebii-gs-route33",
+            "bulbapedia-johto-route33"
+          ],
+          "note": "Po walce można wymienić się numerami Pokégear; jego telefon może uruchomić rój Dunsparce w Dark Cave (nie dodajemy tu zawartości jaskini)."
+        },
+        {
+          "name": "Hiker Anthony — rewanż 1",
+          "team": [
+            {
+              "name": "Geodude",
+              "level": 16
+            },
+            {
+              "name": "Machamp",
+              "level": 18
+            }
+          ],
+          "note": "Rewanż przez Pokégear po dotarciu do Olivine City i pokonaniu poprzedniego składu.",
+          "availableIn": [
+            "gold_silver",
+            "crystal"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route33",
+            "bulbapedia-johto-route33"
+          ]
+        },
+        {
+          "name": "Hiker Anthony — rewanż 2",
+          "team": [
+            {
+              "name": "Graveler",
+              "level": 25
+            },
+            {
+              "name": "Graveler",
+              "level": 27
+            },
+            {
+              "name": "Machoke",
+              "level": 29
+            }
+          ],
+          "note": "Rewanż przez Pokégear po incydencie w Goldenrod Radio Tower i pokonaniu poprzedniego składu.",
+          "availableIn": [
+            "gold_silver",
+            "crystal"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route33",
+            "bulbapedia-johto-route33"
+          ]
+        },
+        {
+          "name": "Hiker Anthony — rewanż Crystal 3",
+          "team": [
+            {
+              "name": "Graveler",
+              "level": 30
+            },
+            {
+              "name": "Graveler",
+              "level": 30
+            },
+            {
+              "name": "Machoke",
+              "level": 32
+            }
+          ],
+          "note": "Crystal-only; po zostaniu Championem i pokonaniu poprzedniego składu.",
+          "availableIn": [
+            "crystal"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route33",
+            "bulbapedia-johto-route33"
+          ]
+        },
+        {
+          "name": "Hiker Anthony — rewanż Crystal 4",
+          "team": [
+            {
+              "name": "Graveler",
+              "level": 34
+            },
+            {
+              "name": "Golem",
+              "level": 36
+            },
+            {
+              "name": "Machoke",
+              "level": 34
+            }
+          ],
+          "note": "Crystal-only; po oddaniu Machine Part i pokonaniu poprzedniego składu.",
+          "availableIn": [
+            "crystal"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route33",
+            "bulbapedia-johto-route33"
           ]
         }
       ],
@@ -4107,12 +4221,330 @@
             "ratePercent": 20,
             "method": "Headbutt · specjalne drzewa"
           }
+        ],
+        "walking_morning_gold": [
+          {
+            "name": "Rattata",
+            "levelRange": [
+              6,
+              7
+            ],
+            "ratePercent": 40,
+            "method": "Trawa · rano · Gold"
+          },
+          {
+            "name": "Hoppip",
+            "levelRange": [
+              6,
+              8
+            ],
+            "ratePercent": 35,
+            "method": "Trawa · rano · Gold"
+          },
+          {
+            "name": "Spearow",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 20,
+            "method": "Trawa · rano · Gold"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              4,
+              4
+            ],
+            "ratePercent": 5,
+            "method": "Trawa · rano · Gold"
+          }
+        ],
+        "walking_day_gold": [
+          {
+            "name": "Rattata",
+            "levelRange": [
+              6,
+              7
+            ],
+            "ratePercent": 45,
+            "method": "Trawa · dzień · Gold"
+          },
+          {
+            "name": "Hoppip",
+            "levelRange": [
+              6,
+              8
+            ],
+            "ratePercent": 35,
+            "method": "Trawa · dzień · Gold"
+          },
+          {
+            "name": "Spearow",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 20,
+            "method": "Trawa · dzień · Gold"
+          }
+        ],
+        "walking_night_gold": [
+          {
+            "name": "Rattata",
+            "levelRange": [
+              6,
+              7
+            ],
+            "ratePercent": 60,
+            "method": "Trawa · noc · Gold"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              6,
+              8
+            ],
+            "ratePercent": 40,
+            "method": "Trawa · noc · Gold"
+          }
+        ],
+        "walking_morning_crystal": [
+          {
+            "name": "Rattata",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · rano · Crystal"
+          },
+          {
+            "name": "Spearow",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · rano · Crystal"
+          },
+          {
+            "name": "Geodude",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 20,
+            "method": "Trawa · rano · Crystal"
+          },
+          {
+            "name": "Hoppip",
+            "levelRange": [
+              6,
+              7
+            ],
+            "ratePercent": 15,
+            "method": "Trawa · rano · Crystal"
+          },
+          {
+            "name": "Ekans",
+            "levelRange": [
+              7,
+              7
+            ],
+            "ratePercent": 5,
+            "method": "Trawa · rano · Crystal"
+          }
+        ],
+        "walking_day_crystal": [
+          {
+            "name": "Rattata",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · dzień · Crystal"
+          },
+          {
+            "name": "Spearow",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · dzień · Crystal"
+          },
+          {
+            "name": "Geodude",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 20,
+            "method": "Trawa · dzień · Crystal"
+          },
+          {
+            "name": "Hoppip",
+            "levelRange": [
+              6,
+              7
+            ],
+            "ratePercent": 15,
+            "method": "Trawa · dzień · Crystal"
+          },
+          {
+            "name": "Ekans",
+            "levelRange": [
+              7,
+              7
+            ],
+            "ratePercent": 5,
+            "method": "Trawa · dzień · Crystal"
+          }
+        ],
+        "walking_night_crystal": [
+          {
+            "name": "Zubat",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 40,
+            "method": "Trawa · noc · Crystal"
+          },
+          {
+            "name": "Rattata",
+            "levelRange": [
+              7,
+              7
+            ],
+            "ratePercent": 40,
+            "method": "Trawa · noc · Crystal"
+          },
+          {
+            "name": "Geodude",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 20,
+            "method": "Trawa · noc · Crystal"
+          }
+        ],
+        "headbutt_gold": [
+          {
+            "name": "Spearow",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 50,
+            "method": "Headbutt · Gold"
+          },
+          {
+            "name": "Heracross",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 30,
+            "method": "Headbutt · Gold"
+          },
+          {
+            "name": "Aipom",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 20,
+            "method": "Headbutt · Gold"
+          }
+        ],
+        "headbutt_special_trees_gold": [
+          {
+            "name": "Spearow",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 80,
+            "method": "Headbutt · specjalne drzewa · Gold"
+          },
+          {
+            "name": "Aipom",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 20,
+            "method": "Headbutt · specjalne drzewa · Gold"
+          }
+        ],
+        "headbutt_crystal": [
+          {
+            "name": "Spearow",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 65,
+            "method": "Headbutt · Crystal"
+          },
+          {
+            "name": "Aipom",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 20,
+            "method": "Headbutt · Crystal"
+          },
+          {
+            "name": "Ekans",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "Headbutt · Crystal"
+          }
+        ],
+        "headbutt_special_trees_crystal": [
+          {
+            "name": "Spearow",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 50,
+            "method": "Headbutt · specjalne drzewa · Crystal"
+          },
+          {
+            "name": "Heracross",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 30,
+            "method": "Headbutt · specjalne drzewa · Crystal"
+          },
+          {
+            "name": "Aipom",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 20,
+            "method": "Headbutt · specjalne drzewa · Crystal"
+          }
         ]
       },
       "wildPokemonSourceIds": [
-        "serebii-gs-route33"
+        "serebii-gs-route33",
+        "bulbapedia-johto-route33"
       ],
-      "wildPokemonStatus": "verified_gen2_silver_rates_and_levels"
+      "wildPokemonStatus": "verified_gen2_gold_silver_crystal_rates_and_levels"
     },
     {
       "id": "azalea_town",
