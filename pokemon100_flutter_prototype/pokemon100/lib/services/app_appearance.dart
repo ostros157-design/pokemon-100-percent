@@ -8,6 +8,14 @@ class AppAppearance {
   static const _backgroundKey = 'appearance_background_dark';
   static const _textKey = 'appearance_text_color';
   static const _badgeKey = 'appearance_badge_color';
+  static const _styleKey = 'appearance_visual_style';
+
+  static const visualStyles = <String, String>{
+    'modern': 'Nowoczesny',
+    'retro': 'Retro Pokémon',
+    'pixel': 'Pełny Pixel Art',
+  };
+  static final ValueNotifier<String> visualStyle = ValueNotifier<String>('modern');
 
   static final ValueNotifier<bool> darkBackground = ValueNotifier<bool>(false);
   static final ValueNotifier<Color> textColor = ValueNotifier<Color>(const Color(0xFF202124));
@@ -30,6 +38,15 @@ class AppAppearance {
     darkBackground.value = prefs.getBool(_backgroundKey) ?? false;
     textColor.value = Color(prefs.getInt(_textKey) ?? const Color(0xFF202124).value);
     badgeColor.value = Color(prefs.getInt(_badgeKey) ?? const Color(0xFF2E7D32).value);
+    final savedStyle = prefs.getString(_styleKey) ?? 'modern';
+    visualStyle.value = visualStyles.containsKey(savedStyle) ? savedStyle : 'modern';
+  }
+
+  static Future<void> setVisualStyle(String value) async {
+    if (!visualStyles.containsKey(value)) return;
+    visualStyle.value = value;
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString(_styleKey, value);
   }
 
   static Future<void> setDarkBackground(bool value) async {
