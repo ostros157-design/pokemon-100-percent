@@ -4,6 +4,7 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import '../services/game_data_download_service.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -83,7 +84,7 @@ class _MapsScreenState extends State<MapsScreen> {
     final loaded = <String, Map<String, dynamic>>{};
     for (final asset in assets) {
       try {
-        final decoded = jsonDecode(await rootBundle.loadString(asset));
+        final decoded = jsonDecode(await GameDataDownloadService.loadMapJson(asset));
         if (decoded is Map<String, dynamic> &&
             decoded['region'] is String &&
             decoded['locations'] is List) {
