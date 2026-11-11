@@ -155,6 +155,16 @@
       "id": "serebii-gs-route39",
       "url": "https://www.serebii.net/pokearth/johto/2nd/route39.shtml",
       "scope": "Pokémon Silver Generation II Route 39 time-of-day and Headbutt encounters, trainer teams, MooMoo Farm reward and hidden item"
+    },
+    {
+      "id": "serebii-gs-olivine-city",
+      "url": "https://www.serebii.net/pokearth/johto/2nd/olivinecity.shtml",
+      "scope": "Pokémon Silver Generation II Olivine City main area, harbor, fishing encounter tables, Jasmine Gym, gifts and rewards"
+    },
+    {
+      "id": "serebii-gs-shining-lighthouse",
+      "url": "https://www.serebii.net/pokearth/johto/2nd/shininglighthouse.shtml",
+      "scope": "Pokémon Silver Generation II Shining Lighthouse floors 1F-6F, trainers and item pickups"
     }
   ],
   "locations": [
@@ -7594,9 +7604,327 @@
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-johto-region",
-        "bulbapedia-route-list"
+        "bulbapedia-route-list",
+        "serebii-gs-olivine-city"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit"
+      "dataStatus": "verified_gen2_silver_city_harbor_encounters_gym_and_gifts",
+      "wildPokemonDetails": {
+        "city_surfing": [
+          {
+            "name": "Tentacool",
+            "levelRange": [
+              15,
+              24
+            ],
+            "ratePercent": 90,
+            "method": "Surfing · miasto"
+          },
+          {
+            "name": "Tentacruel",
+            "levelRange": [
+              20,
+              40
+            ],
+            "ratePercent": 10,
+            "method": "Surfing · miasto"
+          }
+        ],
+        "city_old_rod": [
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 85,
+            "method": "Old Rod · miasto"
+          },
+          {
+            "name": "Krabby",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "Old Rod · miasto"
+          }
+        ],
+        "city_good_rod_morning": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 55,
+            "method": "Good Rod · rano · miasto"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 35,
+            "method": "Good Rod · rano · miasto"
+          },
+          {
+            "name": "Corsola",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 10,
+            "method": "Good Rod · rano · miasto"
+          }
+        ],
+        "city_good_rod_day": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 55,
+            "method": "Good Rod · dzień · miasto"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 35,
+            "method": "Good Rod · dzień · miasto"
+          },
+          {
+            "name": "Corsola",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 10,
+            "method": "Good Rod · dzień · miasto"
+          }
+        ],
+        "city_good_rod_night": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 55,
+            "method": "Good Rod · noc · miasto"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 35,
+            "method": "Good Rod · noc · miasto"
+          },
+          {
+            "name": "Staryu",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 10,
+            "method": "Good Rod · noc · miasto"
+          }
+        ],
+        "harbor_surfing": [
+          {
+            "name": "Tentacool",
+            "levelRange": [
+              15,
+              24
+            ],
+            "ratePercent": 90,
+            "method": "Surfing · port"
+          },
+          {
+            "name": "Tentacruel",
+            "levelRange": [
+              20,
+              24
+            ],
+            "ratePercent": 10,
+            "method": "Surfing · port"
+          }
+        ],
+        "harbor_old_rod": [
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 85,
+            "method": "Old Rod · port"
+          },
+          {
+            "name": "Tentacool",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "Old Rod · port"
+          }
+        ],
+        "harbor_good_rod": [
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 35,
+            "method": "Good Rod · port"
+          },
+          {
+            "name": "Tentacool",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 35,
+            "method": "Good Rod · port"
+          },
+          {
+            "name": "Chinchou",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 20,
+            "method": "Good Rod · port"
+          },
+          {
+            "name": "Shellder",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 10,
+            "method": "Good Rod · port"
+          }
+        ],
+        "harbor_super_rod": [
+          {
+            "name": "Chinchou",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 40,
+            "method": "Super Rod · port"
+          },
+          {
+            "name": "Shellder",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 30,
+            "method": "Super Rod · port"
+          },
+          {
+            "name": "Tentacruel",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 20,
+            "method": "Super Rod · port"
+          },
+          {
+            "name": "Lanturn",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 10,
+            "method": "Super Rod · port"
+          }
+        ]
+      },
+      "wildPokemonSourceIds": [
+        "serebii-gs-olivine-city"
+      ],
+      "wildPokemonStatus": "verified_gen2_silver_rates_and_levels",
+      "trainers": [
+        {
+          "name": "Gym Leader Jasmine",
+          "team": [
+            {
+              "name": "Magnemite",
+              "level": 30
+            },
+            {
+              "name": "Magnemite",
+              "level": 30
+            },
+            {
+              "name": "Steelix",
+              "level": 35
+            }
+          ],
+          "note": "Olivine Gym · nagroda: Mineral Badge i TM23 Iron Tail.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-olivine-city"
+          ]
+        }
+      ],
+      "items": [
+        {
+          "id": "olivine_good_rod",
+          "name": "Good Rod",
+          "locationDescription": "Prezent od Fishing Guru w domu obok Poké Mart.",
+          "category": "gift",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-olivine-city"
+          ]
+        },
+        {
+          "id": "olivine_hm04_strength",
+          "name": "HM04 — Strength",
+          "locationDescription": "Prezent od marynarza w domu obok Pokémon Center.",
+          "category": "gift",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-olivine-city"
+          ]
+        },
+        {
+          "id": "olivine_tm23_iron_tail",
+          "name": "TM23 — Iron Tail",
+          "locationDescription": "Nagroda od Jasmine za pokonanie jej w Gymie.",
+          "category": "gym_reward",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "serebii-gs-olivine-city"
+          ]
+        }
+      ]
     },
     {
       "id": "olivine_lighthouse",
@@ -7609,9 +7937,304 @@
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-johto-region",
-        "bulbapedia-route-list"
+        "bulbapedia-route-list",
+        "serebii-gs-shining-lighthouse"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit"
+      "dataStatus": "verified_gen2_silver_floor_trainers_and_items",
+      "trainers": [
+        {
+          "name": "Gentleman Alfred",
+          "team": [
+            {
+              "name": "Noctowl",
+              "level": 20
+            }
+          ],
+          "note": "2F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-shining-lighthouse"
+          ]
+        },
+        {
+          "name": "Sailor Huey",
+          "team": [
+            {
+              "name": "Poliwag",
+              "level": 18
+            },
+            {
+              "name": "Poliwhirl",
+              "level": 18
+            }
+          ],
+          "note": "2F · rematche telefoniczne: Poliwhirl Lv. 28; Poliwhirl + Poliwrath Lv. 34; Politoed + Poliwrath Lv. 36.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-shining-lighthouse"
+          ]
+        },
+        {
+          "name": "Bird Keeper Theo",
+          "team": [
+            {
+              "name": "Pidgey",
+              "level": 17
+            },
+            {
+              "name": "Pidgey",
+              "level": 15
+            },
+            {
+              "name": "Pidgey",
+              "level": 19
+            },
+            {
+              "name": "Pidgey",
+              "level": 15
+            },
+            {
+              "name": "Pidgey",
+              "level": 15
+            }
+          ],
+          "note": "3F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-shining-lighthouse"
+          ]
+        },
+        {
+          "name": "Gentleman Preston",
+          "team": [
+            {
+              "name": "Growlithe",
+              "level": 18
+            },
+            {
+              "name": "Growlithe",
+              "level": 18
+            }
+          ],
+          "note": "3F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-shining-lighthouse"
+          ]
+        },
+        {
+          "name": "Sailor Terrell",
+          "team": [
+            {
+              "name": "Poliwhirl",
+              "level": 20
+            }
+          ],
+          "note": "3F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-shining-lighthouse"
+          ]
+        },
+        {
+          "name": "Lass Connie",
+          "team": [
+            {
+              "name": "Marill",
+              "level": 21
+            }
+          ],
+          "note": "4F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-shining-lighthouse"
+          ]
+        },
+        {
+          "name": "Sailor Kent",
+          "team": [
+            {
+              "name": "Krabby",
+              "level": 18
+            },
+            {
+              "name": "Krabby",
+              "level": 20
+            }
+          ],
+          "note": "4F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-shining-lighthouse"
+          ]
+        },
+        {
+          "name": "Bird Keeper Denis",
+          "team": [
+            {
+              "name": "Spearow",
+              "level": 18
+            },
+            {
+              "name": "Fearow",
+              "level": 20
+            },
+            {
+              "name": "Spearow",
+              "level": 18
+            }
+          ],
+          "note": "5F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-shining-lighthouse"
+          ]
+        },
+        {
+          "name": "Sailor Ernest",
+          "team": [
+            {
+              "name": "Machop",
+              "level": 18
+            },
+            {
+              "name": "Machop",
+              "level": 18
+            },
+            {
+              "name": "Poliwhirl",
+              "level": 18
+            }
+          ],
+          "note": "5F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-shining-lighthouse"
+          ]
+        }
+      ],
+      "items": [
+        {
+          "id": "lighthouse_ether",
+          "name": "Ether",
+          "locationDescription": "3F — znajdźka na podłodze.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-shining-lighthouse"
+          ]
+        },
+        {
+          "id": "lighthouse_tm34_swagger",
+          "name": "TM34 — Swagger",
+          "locationDescription": "5F — znajdźka na podłodze.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-shining-lighthouse"
+          ]
+        },
+        {
+          "id": "lighthouse_great_ball",
+          "name": "Great Ball",
+          "locationDescription": "5F — znajdźka na podłodze.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-shining-lighthouse"
+          ]
+        },
+        {
+          "id": "lighthouse_rare_candy",
+          "name": "Rare Candy",
+          "locationDescription": "5F — znajdźka na podłodze.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-shining-lighthouse"
+          ]
+        },
+        {
+          "id": "lighthouse_hyper_potion_hidden",
+          "name": "Hyper Potion",
+          "locationDescription": "5F — ukryty przedmiot wykrywany przez Itemfinder.",
+          "category": "hidden",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-shining-lighthouse"
+          ]
+        },
+        {
+          "id": "lighthouse_super_potion",
+          "name": "Super Potion",
+          "locationDescription": "6F — znajdźka na podłodze.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-shining-lighthouse"
+          ]
+        }
+      ],
+      "specialServices": [
+        {
+          "id": "lighthouse_ampharos_story",
+          "name": "Ampharos „Amphy” i SecretPotion",
+          "category": "story_event",
+          "description": "Na szczycie latarni Jasmine opiekuje się chorym Ampharosem. Trzeba zdobyć SecretPotion w Cianwood City i przynieść ją z powrotem; dopiero wtedy latarnia znów świeci i można później walczyć z Jasmine.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "serebii-gs-shining-lighthouse"
+          ]
+        }
+      ]
     },
     {
       "id": "route_40",
