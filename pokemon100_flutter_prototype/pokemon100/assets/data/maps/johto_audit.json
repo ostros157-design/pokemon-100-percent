@@ -135,6 +135,16 @@
       "id": "serebii-gs-route37",
       "url": "https://www.serebii.net/pokearth/johto/2nd/route37.shtml",
       "scope": "Pokémon Silver Generation II Route 37 walking and Headbutt encounters, trainers and items"
+    },
+    {
+      "id": "serebii-gs-ecruteak-city",
+      "url": "https://www.serebii.net/pokearth/johto/2nd/ecruteakcity.shtml",
+      "scope": "Pokémon Silver Generation II Ecruteak City fishing encounters, Kimono Girls, Gym trainers, Morty and rewards"
+    },
+    {
+      "id": "serebii-gs-burned-tower",
+      "url": "https://www.serebii.net/pokearth/johto/2nd/burnedtower.shtml",
+      "scope": "Pokémon Silver Generation II Burned Tower 1F/B1F encounters, rival starter variants, trainers and item pickups"
     }
   ],
   "locations": [
@@ -6003,9 +6013,371 @@
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-johto-region",
-        "bulbapedia-route-list"
+        "bulbapedia-route-list",
+        "serebii-gs-ecruteak-city"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit"
+      "dataStatus": "verified_gen2_silver_fishing_kimono_girls_and_gym",
+      "wildPokemonDetails": {
+        "surfing": [
+          {
+            "name": "Poliwag",
+            "levelRange": [
+              15,
+              24
+            ],
+            "ratePercent": 90,
+            "method": "Surfing"
+          },
+          {
+            "name": "Poliwhirl",
+            "levelRange": [
+              20,
+              24
+            ],
+            "ratePercent": 10,
+            "method": "Surfing"
+          }
+        ],
+        "old_rod": [
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 85,
+            "method": "Old Rod"
+          },
+          {
+            "name": "Poliwag",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "Old Rod"
+          }
+        ],
+        "good_rod": [
+          {
+            "name": "Poliwag",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 65,
+            "method": "Good Rod"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 35,
+            "method": "Good Rod"
+          }
+        ],
+        "super_rod": [
+          {
+            "name": "Poliwag",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 70,
+            "method": "Super Rod"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 20,
+            "method": "Super Rod"
+          },
+          {
+            "name": "Poliwhirl",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 10,
+            "method": "Super Rod"
+          }
+        ]
+      },
+      "wildPokemonSourceIds": [
+        "serebii-gs-ecruteak-city"
+      ],
+      "wildPokemonStatus": "verified_gen2_silver_rates_and_levels",
+      "trainers": [
+        {
+          "name": "Kimono Girl Naoko",
+          "team": [
+            {
+              "name": "Flareon",
+              "level": 17
+            }
+          ],
+          "note": "Główna część miasta · Kimono Theatre.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-ecruteak-city"
+          ]
+        },
+        {
+          "name": "Kimono Girl Sayo",
+          "team": [
+            {
+              "name": "Espeon",
+              "level": 17
+            }
+          ],
+          "note": "Główna część miasta · Kimono Theatre.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-ecruteak-city"
+          ]
+        },
+        {
+          "name": "Kimono Girl Suki",
+          "team": [
+            {
+              "name": "Umbreon",
+              "level": 17
+            }
+          ],
+          "note": "Główna część miasta · Kimono Theatre.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-ecruteak-city"
+          ]
+        },
+        {
+          "name": "Kimono Girl Kuni",
+          "team": [
+            {
+              "name": "Vaporeon",
+              "level": 17
+            }
+          ],
+          "note": "Główna część miasta · Kimono Theatre.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-ecruteak-city"
+          ]
+        },
+        {
+          "name": "Kimono Girl Miki",
+          "team": [
+            {
+              "name": "Jolteon",
+              "level": 17
+            }
+          ],
+          "note": "Główna część miasta · Kimono Theatre.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-ecruteak-city"
+          ]
+        },
+        {
+          "name": "Sage Ping",
+          "team": [
+            {
+              "name": "Gastly",
+              "level": 16
+            },
+            {
+              "name": "Gastly",
+              "level": 16
+            },
+            {
+              "name": "Gastly",
+              "level": 16
+            },
+            {
+              "name": "Gastly",
+              "level": 16
+            },
+            {
+              "name": "Gastly",
+              "level": 16
+            }
+          ],
+          "note": "Ecruteak Gym.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-ecruteak-city"
+          ]
+        },
+        {
+          "name": "Medium Grace",
+          "team": [
+            {
+              "name": "Haunter",
+              "level": 20
+            },
+            {
+              "name": "Haunter",
+              "level": 20
+            }
+          ],
+          "note": "Ecruteak Gym.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-ecruteak-city"
+          ]
+        },
+        {
+          "name": "Sage Jeffrey",
+          "team": [
+            {
+              "name": "Haunter",
+              "level": 22
+            }
+          ],
+          "note": "Ecruteak Gym.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-ecruteak-city"
+          ]
+        },
+        {
+          "name": "Medium Martha",
+          "team": [
+            {
+              "name": "Gastly",
+              "level": 18
+            },
+            {
+              "name": "Haunter",
+              "level": 20
+            },
+            {
+              "name": "Gastly",
+              "level": 20
+            }
+          ],
+          "note": "Ecruteak Gym.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-ecruteak-city"
+          ]
+        },
+        {
+          "name": "Gym Leader Morty",
+          "team": [
+            {
+              "name": "Gastly",
+              "level": 21
+            },
+            {
+              "name": "Haunter",
+              "level": 21
+            },
+            {
+              "name": "Gengar",
+              "level": 25
+            },
+            {
+              "name": "Haunter",
+              "level": 23
+            }
+          ],
+          "note": "Nagroda: Fog Badge i TM30 Shadow Ball.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-ecruteak-city"
+          ]
+        }
+      ],
+      "items": [
+        {
+          "id": "ecruteak_itemfinder_gift",
+          "name": "Itemfinder",
+          "locationDescription": "Prezent z domu na prawo od Ecruteak Gym.",
+          "category": "gift",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-ecruteak-city"
+          ]
+        },
+        {
+          "id": "ecruteak_hm03_surf",
+          "name": "HM03 — Surf",
+          "locationDescription": "Prezent od starszego mężczyzny po pokonaniu pięciu Kimono Girls.",
+          "category": "gift",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-ecruteak-city"
+          ]
+        },
+        {
+          "id": "ecruteak_rainbow_wing",
+          "name": "Rainbow Wing",
+          "locationDescription": "Prezent od Wise Trio po złapaniu wszystkich trzech legendarnych bestii.",
+          "category": "gift",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-ecruteak-city"
+          ]
+        },
+        {
+          "id": "ecruteak_tm30_shadow_ball",
+          "name": "TM30 — Shadow Ball",
+          "locationDescription": "Nagroda od Morty'ego za zdobycie Fog Badge.",
+          "category": "gym_reward",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "serebii-gs-ecruteak-city"
+          ]
+        }
+      ]
     },
     {
       "id": "burned_tower",
@@ -6018,9 +6390,368 @@
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-johto-region",
-        "bulbapedia-route-list"
+        "bulbapedia-route-list",
+        "serebii-gs-burned-tower"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit"
+      "dataStatus": "verified_gen2_silver_1f_b1f_encounters_trainers_and_items",
+      "wildPokemonDetails": {
+        "1F_walking": [
+          {
+            "name": "Rattata",
+            "levelRange": [
+              13,
+              15
+            ],
+            "ratePercent": 50,
+            "method": "1F · chodzenie"
+          },
+          {
+            "name": "Koffing",
+            "levelRange": [
+              14,
+              16
+            ],
+            "ratePercent": 35,
+            "method": "1F · chodzenie"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              14,
+              14
+            ],
+            "ratePercent": 10,
+            "method": "1F · chodzenie"
+          },
+          {
+            "name": "Raticate",
+            "levelRange": [
+              15,
+              15
+            ],
+            "ratePercent": 5,
+            "method": "1F · chodzenie"
+          }
+        ],
+        "B1F_morning": [
+          {
+            "name": "Koffing",
+            "levelRange": [
+              14,
+              16
+            ],
+            "ratePercent": 50,
+            "method": "B1F · rano"
+          },
+          {
+            "name": "Rattata",
+            "levelRange": [
+              14,
+              16
+            ],
+            "ratePercent": 40,
+            "method": "B1F · rano"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              15,
+              15
+            ],
+            "ratePercent": 5,
+            "method": "B1F · rano"
+          },
+          {
+            "name": "Magmar",
+            "levelRange": [
+              14,
+              14
+            ],
+            "ratePercent": 5,
+            "method": "B1F · rano"
+          }
+        ],
+        "B1F_day": [
+          {
+            "name": "Koffing",
+            "levelRange": [
+              14,
+              16
+            ],
+            "ratePercent": 50,
+            "method": "B1F · dzień"
+          },
+          {
+            "name": "Rattata",
+            "levelRange": [
+              14,
+              16
+            ],
+            "ratePercent": 35,
+            "method": "B1F · dzień"
+          },
+          {
+            "name": "Magmar",
+            "levelRange": [
+              16,
+              16
+            ],
+            "ratePercent": 10,
+            "method": "B1F · dzień"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              15,
+              15
+            ],
+            "ratePercent": 5,
+            "method": "B1F · dzień"
+          }
+        ],
+        "B1F_night": [
+          {
+            "name": "Koffing",
+            "levelRange": [
+              14,
+              16
+            ],
+            "ratePercent": 50,
+            "method": "B1F · noc"
+          },
+          {
+            "name": "Rattata",
+            "levelRange": [
+              14,
+              16
+            ],
+            "ratePercent": 40,
+            "method": "B1F · noc"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              15,
+              15
+            ],
+            "ratePercent": 5,
+            "method": "B1F · noc"
+          },
+          {
+            "name": "Magmar",
+            "levelRange": [
+              14,
+              14
+            ],
+            "ratePercent": 5,
+            "method": "B1F · noc"
+          }
+        ]
+      },
+      "wildPokemonSourceIds": [
+        "serebii-gs-burned-tower"
+      ],
+      "wildPokemonStatus": "verified_gen2_silver_rates_and_levels",
+      "trainers": [
+        {
+          "name": "Rival Silver — Bayleef",
+          "team": [
+            {
+              "name": "Haunter",
+              "level": 20
+            },
+            {
+              "name": "Magnemite",
+              "level": 18
+            },
+            {
+              "name": "Zubat",
+              "level": 20
+            },
+            {
+              "name": "Bayleef",
+              "level": 22
+            }
+          ],
+          "note": "Wariant rywala, gdy gracz wybrał Totodile.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-burned-tower"
+          ]
+        },
+        {
+          "name": "Rival Silver — Quilava",
+          "team": [
+            {
+              "name": "Haunter",
+              "level": 20
+            },
+            {
+              "name": "Magnemite",
+              "level": 18
+            },
+            {
+              "name": "Zubat",
+              "level": 20
+            },
+            {
+              "name": "Quilava",
+              "level": 22
+            }
+          ],
+          "note": "Wariant rywala, gdy gracz wybrał Chikorita.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-burned-tower"
+          ]
+        },
+        {
+          "name": "Rival Silver — Croconaw",
+          "team": [
+            {
+              "name": "Haunter",
+              "level": 20
+            },
+            {
+              "name": "Magnemite",
+              "level": 18
+            },
+            {
+              "name": "Zubat",
+              "level": 20
+            },
+            {
+              "name": "Croconaw",
+              "level": 22
+            }
+          ],
+          "note": "Wariant rywala, gdy gracz wybrał Cyndaquil.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-burned-tower"
+          ]
+        },
+        {
+          "name": "Firebreather Ned",
+          "team": [
+            {
+              "name": "Koffing",
+              "level": 15
+            },
+            {
+              "name": "Growlithe",
+              "level": 16
+            },
+            {
+              "name": "Koffing",
+              "level": 15
+            }
+          ],
+          "note": "1F.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-burned-tower"
+          ]
+        },
+        {
+          "name": "Firebreather Dick",
+          "team": [
+            {
+              "name": "Charmeleon",
+              "level": 17
+            }
+          ],
+          "note": "1F.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-burned-tower"
+          ]
+        }
+      ],
+      "items": [
+        {
+          "id": "burned_tower_burn_heal",
+          "name": "Burn Heal",
+          "locationDescription": "1F — znajdźka na podłodze; dokładna kratka niezweryfikowana.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-burned-tower"
+          ]
+        },
+        {
+          "id": "burned_tower_x_speed",
+          "name": "X Speed",
+          "locationDescription": "1F — znajdźka na podłodze; dokładna kratka niezweryfikowana.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-burned-tower"
+          ]
+        },
+        {
+          "id": "burned_tower_tm20_endure",
+          "name": "TM20 — Endure",
+          "locationDescription": "B1F — znajdźka na podłodze; dokładna kratka niezweryfikowana.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-burned-tower"
+          ]
+        },
+        {
+          "id": "burned_tower_hp_up",
+          "name": "HP Up",
+          "locationDescription": "B1F — znajdźka na podłodze; dokładna kratka niezweryfikowana.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-burned-tower"
+          ]
+        }
+      ],
+      "specialServices": [
+        {
+          "id": "burned_tower_beast_escape_event",
+          "name": "Ucieczka trzech legendarnych bestii",
+          "category": "story_event",
+          "description": "Po pierwszym wejściu do B1F Entei, Raikou i Suicune uciekają z wieży; później przemieszczają się po Johto. To zdarzenie fabularne, nie znajdźka ani stałe spotkanie w lokacji.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "serebii-gs-burned-tower"
+          ]
+        }
+      ]
     },
     {
       "id": "bell_tower",
