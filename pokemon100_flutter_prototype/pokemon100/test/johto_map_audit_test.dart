@@ -153,11 +153,11 @@ void main() {
       }
     }
 
-    expect(pickups, hasLength(191));
+    expect(pickups, hasLength(194));
     expect(
       locations.where((value) =>
           ((value as Map<String, dynamic>)['items'] as List?)?.isNotEmpty ?? false),
-      hasLength(36),
+      hasLength(37),
     );
   });
 
@@ -178,7 +178,7 @@ void main() {
       }
     }
 
-    expect(trainers, hasLength(203));
+    expect(trainers, hasLength(205));
     expect(
       locations.where((value) =>
           ((value as Map<String, dynamic>)['trainers'] as List?)?.isNotEmpty ?? false),
@@ -1131,6 +1131,49 @@ void main() {
       expect(item['coordinateStatus'], 'unverified');
     }
     expect(route['berryTrees'], hasLength(2));
+  });
+
+
+  test('Silver Route 31 Wade rematches and item rewards are source-tracked', () {
+    final locations = audit['locations'] as List<dynamic>;
+    final route = locations.cast<Map<String, dynamic>>()
+        .firstWhere((value) => value['id'] == 'route_31');
+    expect(route['wildPokemonSourceIds'], contains('serebii-gs-route31'));
+    final groups = route['wildPokemonDetails'] as Map<String, dynamic>;
+    for (final group in groups.entries) {
+      final encounters = (group.value as List).cast<Map<String, dynamic>>();
+      expect(
+        encounters.fold<int>(0, (sum, value) => sum + (value['ratePercent'] as int)),
+        100,
+        reason: 'route_31/${group.key} must total 100%',
+      );
+    }
+    final trainers = (route['trainers'] as List).cast<Map<String, dynamic>>();
+    expect(trainers, hasLength(3));
+    final rematch1 = trainers.firstWhere(
+      (value) => value['name'] == 'Bug Catcher Wade — rematch 1',
+    );
+    expect(rematch1['team'].map((value) => value['name']),
+        ['Metapod', 'Metapod', 'Kakuna', 'Metapod']);
+    final rematch2 = trainers.firstWhere(
+      (value) => value['name'] == 'Bug Catcher Wade — rematch 2',
+    );
+    expect(rematch2['team'].map((value) => value['name']),
+        ['Butterfree', 'Butterfree', 'Beedrill', 'Butterfree']);
+    final items = (route['items'] as List).cast<Map<String, dynamic>>();
+    expect(items.map((value) => value['id']), containsAll([
+      'route_31_antidote',
+      'route_31_pokeball',
+      'route_31_tm50_nightmare',
+    ]));
+    expect(items.first['category'], 'pickup');
+    expect(items.last['category'], 'gift');
+    for (final item in items) {
+      expect(item['availableIn'], contains('gold_silver'));
+      expect(item['coordinateStatus'], 'unverified');
+      expect(item['sourceIds'], contains('serebii-gs-route31'));
+    }
+    expect(route['berryTrees'], hasLength(1));
   });
 
 }
