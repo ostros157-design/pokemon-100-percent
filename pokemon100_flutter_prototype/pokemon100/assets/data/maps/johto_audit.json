@@ -3368,7 +3368,7 @@
         "bulbapedia-johto-region",
         "bulbapedia-route-list"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit",
+      "dataStatus": "verified_gen2_gold_silver_crystal_encounters_trainers_items_and_friday_lapras",
       "items": [
         {
           "id": "union_cave_potion_1",
@@ -3421,6 +3421,62 @@
           "sourceIds": [
             "bulbapedia-gs-walkthrough-parts-1-4"
           ]
+        },
+        {
+          "id": "union_cave_tm39_swift",
+          "name": "TM39 — Swift",
+          "locationDescription": "B1F — znajdźka na ziemi.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver",
+            "crystal"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-union-cave"
+          ]
+        },
+        {
+          "id": "union_cave_x_defend",
+          "name": "X Defend",
+          "locationDescription": "B1F — znajdźka na ziemi.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver",
+            "crystal"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-union-cave"
+          ]
+        },
+        {
+          "id": "union_cave_ether",
+          "name": "Ether",
+          "locationDescription": "B2F — znajdźka na ziemi.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver",
+            "crystal"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-union-cave"
+          ]
+        },
+        {
+          "id": "union_cave_hyper_potion",
+          "name": "Hyper Potion",
+          "locationDescription": "B2F — znajdźka na ziemi.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver",
+            "crystal"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-union-cave"
+          ]
         }
       ],
       "trainers": [
@@ -3434,11 +3490,12 @@
           ],
           "note": "1F",
           "availableIn": [
-            "gold_silver"
+            "gold_silver",
+            "crystal"
           ],
           "coordinateStatus": "unverified",
           "sourceIds": [
-            "bulbapedia-gs-walkthrough-parts-3-4"
+            "serebii-gs-union-cave"
           ]
         },
         {
@@ -3459,11 +3516,12 @@
           ],
           "note": "1F",
           "availableIn": [
-            "gold_silver"
+            "gold_silver",
+            "crystal"
           ],
           "coordinateStatus": "unverified",
           "sourceIds": [
-            "bulbapedia-gs-walkthrough-parts-3-4"
+            "serebii-gs-union-cave"
           ]
         },
         {
@@ -3480,11 +3538,12 @@
           ],
           "note": "1F",
           "availableIn": [
-            "gold_silver"
+            "gold_silver",
+            "crystal"
           ],
           "coordinateStatus": "unverified",
           "sourceIds": [
-            "bulbapedia-gs-walkthrough-parts-3-4"
+            "serebii-gs-union-cave"
           ]
         },
         {
@@ -3497,11 +3556,12 @@
           ],
           "note": "1F",
           "availableIn": [
-            "gold_silver"
+            "gold_silver",
+            "crystal"
           ],
           "coordinateStatus": "unverified",
           "sourceIds": [
-            "bulbapedia-gs-walkthrough-parts-3-4"
+            "serebii-gs-union-cave"
           ]
         },
         {
@@ -3514,11 +3574,12 @@
           ],
           "note": "1F",
           "availableIn": [
-            "gold_silver"
+            "gold_silver",
+            "crystal"
           ],
           "coordinateStatus": "unverified",
           "sourceIds": [
-            "bulbapedia-gs-walkthrough-parts-3-4"
+            "serebii-gs-union-cave"
           ]
         },
         {
@@ -3535,11 +3596,12 @@
           ],
           "note": "B1F — północ",
           "availableIn": [
-            "gold_silver"
+            "gold_silver",
+            "crystal"
           ],
           "coordinateStatus": "unverified",
           "sourceIds": [
-            "bulbapedia-gs-walkthrough-parts-3-4"
+            "serebii-gs-union-cave"
           ]
         },
         {
@@ -3560,11 +3622,12 @@
           ],
           "note": "B1F — północ",
           "availableIn": [
-            "gold_silver"
+            "gold_silver",
+            "crystal"
           ],
           "coordinateStatus": "unverified",
           "sourceIds": [
-            "bulbapedia-gs-walkthrough-parts-3-4"
+            "serebii-gs-union-cave"
           ]
         },
         {
@@ -3577,11 +3640,12 @@
           ],
           "note": "B1F — południe",
           "availableIn": [
-            "gold_silver"
+            "gold_silver",
+            "crystal"
           ],
           "coordinateStatus": "unverified",
           "sourceIds": [
-            "bulbapedia-gs-walkthrough-parts-3-4"
+            "serebii-gs-union-cave"
           ]
         },
         {
@@ -3598,11 +3662,12 @@
           ],
           "note": "B1F — południe",
           "availableIn": [
-            "gold_silver"
+            "gold_silver",
+            "crystal"
           ],
           "coordinateStatus": "unverified",
           "sourceIds": [
-            "bulbapedia-gs-walkthrough-parts-3-4"
+            "serebii-gs-union-cave"
           ]
         },
         {
@@ -3613,21 +3678,22 @@
               "level": 26
             },
             {
-              "name": "Bulbasaur",
+              "name": "Squirtle",
               "level": 26
             },
             {
-              "name": "Squirtle",
+              "name": "Bulbasaur",
               "level": 26
             }
           ],
           "note": "B2F — dostęp po Surf",
           "availableIn": [
-            "gold_silver"
+            "gold_silver",
+            "crystal"
           ],
           "coordinateStatus": "unverified",
           "sourceIds": [
-            "bulbapedia-gs-walkthrough-parts-3-4"
+            "serebii-gs-union-cave"
           ]
         },
         {
@@ -3638,25 +3704,26 @@
               "level": 26
             },
             {
+              "name": "Flareon",
+              "level": 22
+            },
+            {
               "name": "Vaporeon",
               "level": 22
             },
             {
               "name": "Jolteon",
               "level": 22
-            },
-            {
-              "name": "Flareon",
-              "level": 22
             }
           ],
           "note": "B2F — dostęp po Surf",
           "availableIn": [
-            "gold_silver"
+            "gold_silver",
+            "crystal"
           ],
           "coordinateStatus": "unverified",
           "sourceIds": [
-            "bulbapedia-gs-walkthrough-parts-3-4"
+            "serebii-gs-union-cave"
           ]
         },
         {
@@ -3669,16 +3736,17 @@
           ],
           "note": "B2F — dostęp po Surf",
           "availableIn": [
-            "gold_silver"
+            "gold_silver",
+            "crystal"
           ],
           "coordinateStatus": "unverified",
           "sourceIds": [
-            "bulbapedia-gs-walkthrough-parts-3-4"
+            "serebii-gs-union-cave"
           ]
         }
       ],
       "wildPokemonDetails": {
-        "1F": [
+        "1F_walking": [
           {
             "name": "Geodude",
             "levelRange": [
@@ -3686,7 +3754,7 @@
               6
             ],
             "ratePercent": 30,
-            "method": "1F · jaskinia"
+            "method": "1F · chodzenie · Silver"
           },
           {
             "name": "Rattata",
@@ -3695,7 +3763,7 @@
               6
             ],
             "ratePercent": 40,
-            "method": "1F · jaskinia"
+            "method": "1F · chodzenie · Silver"
           },
           {
             "name": "Zubat",
@@ -3704,7 +3772,7 @@
               7
             ],
             "ratePercent": 25,
-            "method": "1F · jaskinia"
+            "method": "1F · chodzenie · Silver"
           },
           {
             "name": "Onix",
@@ -3713,10 +3781,198 @@
               6
             ],
             "ratePercent": 5,
-            "method": "1F · jaskinia"
+            "method": "1F · chodzenie · Silver"
           }
         ],
-        "B1F": [
+        "1F_walking_gold": [
+          {
+            "name": "Geodude",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 30,
+            "method": "1F · chodzenie · Gold"
+          },
+          {
+            "name": "Sandshrew",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 30,
+            "method": "1F · chodzenie · Gold"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              5,
+              7
+            ],
+            "ratePercent": 25,
+            "method": "1F · chodzenie · Gold"
+          },
+          {
+            "name": "Rattata",
+            "levelRange": [
+              4,
+              4
+            ],
+            "ratePercent": 10,
+            "method": "1F · chodzenie · Gold"
+          },
+          {
+            "name": "Onix",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 5,
+            "method": "1F · chodzenie · Gold"
+          }
+        ],
+        "1F_walking_crystal_morning": [
+          {
+            "name": "Geodude",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 30,
+            "method": "1F · chodzenie · Crystal rano/dzień"
+          },
+          {
+            "name": "Sandshrew",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 30,
+            "method": "1F · chodzenie · Crystal rano/dzień"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              5,
+              7
+            ],
+            "ratePercent": 25,
+            "method": "1F · chodzenie · Crystal rano/dzień"
+          },
+          {
+            "name": "Rattata",
+            "levelRange": [
+              4,
+              4
+            ],
+            "ratePercent": 10,
+            "method": "1F · chodzenie · Crystal rano/dzień"
+          },
+          {
+            "name": "Onix",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 5,
+            "method": "1F · chodzenie · Crystal rano/dzień"
+          }
+        ],
+        "1F_walking_crystal_day": [
+          {
+            "name": "Geodude",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 30,
+            "method": "1F · chodzenie · Crystal rano/dzień"
+          },
+          {
+            "name": "Sandshrew",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 30,
+            "method": "1F · chodzenie · Crystal rano/dzień"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              5,
+              7
+            ],
+            "ratePercent": 25,
+            "method": "1F · chodzenie · Crystal rano/dzień"
+          },
+          {
+            "name": "Rattata",
+            "levelRange": [
+              4,
+              4
+            ],
+            "ratePercent": 10,
+            "method": "1F · chodzenie · Crystal rano/dzień"
+          },
+          {
+            "name": "Onix",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 5,
+            "method": "1F · chodzenie · Crystal rano/dzień"
+          }
+        ],
+        "1F_walking_crystal_night": [
+          {
+            "name": "Rattata",
+            "levelRange": [
+              4,
+              6
+            ],
+            "ratePercent": 40,
+            "method": "1F · chodzenie · Crystal noc"
+          },
+          {
+            "name": "Geodude",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 30,
+            "method": "1F · chodzenie · Crystal noc"
+          },
+          {
+            "name": "Wooper",
+            "levelRange": [
+              5,
+              5
+            ],
+            "ratePercent": 20,
+            "method": "1F · chodzenie · Crystal noc"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              7,
+              7
+            ],
+            "ratePercent": 5,
+            "method": "1F · chodzenie · Crystal noc"
+          },
+          {
+            "name": "Onix",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 5,
+            "method": "1F · chodzenie · Crystal noc"
+          }
+        ],
+        "B1F_walking": [
           {
             "name": "Geodude",
             "levelRange": [
@@ -3724,7 +3980,7 @@
               8
             ],
             "ratePercent": 30,
-            "method": "B1F · jaskinia"
+            "method": "B1F · chodzenie · Silver"
           },
           {
             "name": "Rattata",
@@ -3733,7 +3989,7 @@
               8
             ],
             "ratePercent": 35,
-            "method": "B1F · jaskinia"
+            "method": "B1F · chodzenie · Silver"
           },
           {
             "name": "Zubat",
@@ -3742,7 +3998,7 @@
               9
             ],
             "ratePercent": 25,
-            "method": "B1F · jaskinia"
+            "method": "B1F · chodzenie · Silver"
           },
           {
             "name": "Onix",
@@ -3751,10 +4007,180 @@
               8
             ],
             "ratePercent": 10,
-            "method": "B1F · jaskinia"
+            "method": "B1F · chodzenie · Silver"
           }
         ],
-        "B2F": [
+        "B1F_walking_gold": [
+          {
+            "name": "Geodude",
+            "levelRange": [
+              8,
+              8
+            ],
+            "ratePercent": 30,
+            "method": "B1F · chodzenie · Gold"
+          },
+          {
+            "name": "Sandshrew",
+            "levelRange": [
+              8,
+              8
+            ],
+            "ratePercent": 30,
+            "method": "B1F · chodzenie · Gold"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              7,
+              9
+            ],
+            "ratePercent": 25,
+            "method": "B1F · chodzenie · Gold"
+          },
+          {
+            "name": "Onix",
+            "levelRange": [
+              8,
+              8
+            ],
+            "ratePercent": 10,
+            "method": "B1F · chodzenie · Gold"
+          },
+          {
+            "name": "Rattata",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 5,
+            "method": "B1F · chodzenie · Gold"
+          }
+        ],
+        "B1F_walking_crystal_morning": [
+          {
+            "name": "Zubat",
+            "levelRange": [
+              6,
+              8
+            ],
+            "ratePercent": 50,
+            "method": "B1F · chodzenie · Crystal rano/dzień"
+          },
+          {
+            "name": "Geodude",
+            "levelRange": [
+              8,
+              8
+            ],
+            "ratePercent": 30,
+            "method": "B1F · chodzenie · Crystal rano/dzień"
+          },
+          {
+            "name": "Onix",
+            "levelRange": [
+              8,
+              8
+            ],
+            "ratePercent": 10,
+            "method": "B1F · chodzenie · Crystal rano/dzień"
+          },
+          {
+            "name": "Rattata",
+            "levelRange": [
+              6,
+              8
+            ],
+            "ratePercent": 10,
+            "method": "B1F · chodzenie · Crystal rano/dzień"
+          }
+        ],
+        "B1F_walking_crystal_day": [
+          {
+            "name": "Zubat",
+            "levelRange": [
+              6,
+              8
+            ],
+            "ratePercent": 50,
+            "method": "B1F · chodzenie · Crystal rano/dzień"
+          },
+          {
+            "name": "Geodude",
+            "levelRange": [
+              8,
+              8
+            ],
+            "ratePercent": 30,
+            "method": "B1F · chodzenie · Crystal rano/dzień"
+          },
+          {
+            "name": "Onix",
+            "levelRange": [
+              8,
+              8
+            ],
+            "ratePercent": 10,
+            "method": "B1F · chodzenie · Crystal rano/dzień"
+          },
+          {
+            "name": "Rattata",
+            "levelRange": [
+              6,
+              8
+            ],
+            "ratePercent": 10,
+            "method": "B1F · chodzenie · Crystal rano/dzień"
+          }
+        ],
+        "B1F_walking_crystal_night": [
+          {
+            "name": "Geodude",
+            "levelRange": [
+              8,
+              8
+            ],
+            "ratePercent": 30,
+            "method": "B1F · chodzenie · Crystal noc"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 30,
+            "method": "B1F · chodzenie · Crystal noc"
+          },
+          {
+            "name": "Wooper",
+            "levelRange": [
+              8,
+              8
+            ],
+            "ratePercent": 20,
+            "method": "B1F · chodzenie · Crystal noc"
+          },
+          {
+            "name": "Onix",
+            "levelRange": [
+              8,
+              8
+            ],
+            "ratePercent": 10,
+            "method": "B1F · chodzenie · Crystal noc"
+          },
+          {
+            "name": "Rattata",
+            "levelRange": [
+              6,
+              8
+            ],
+            "ratePercent": 10,
+            "method": "B1F · chodzenie · Crystal noc"
+          }
+        ],
+        "B2F_walking": [
           {
             "name": "Zubat",
             "levelRange": [
@@ -3762,7 +4188,7 @@
               22
             ],
             "ratePercent": 30,
-            "method": "B2F · jaskinia"
+            "method": "B2F · chodzenie · Silver"
           },
           {
             "name": "Rattata",
@@ -3771,7 +4197,7 @@
               20
             ],
             "ratePercent": 35,
-            "method": "B2F · jaskinia"
+            "method": "B2F · chodzenie · Silver"
           },
           {
             "name": "Golbat",
@@ -3780,7 +4206,7 @@
               22
             ],
             "ratePercent": 20,
-            "method": "B2F · jaskinia"
+            "method": "B2F · chodzenie · Silver"
           },
           {
             "name": "Geodude",
@@ -3789,7 +4215,7 @@
               21
             ],
             "ratePercent": 10,
-            "method": "B2F · jaskinia"
+            "method": "B2F · chodzenie · Silver"
           },
           {
             "name": "Onix",
@@ -3798,10 +4224,216 @@
               23
             ],
             "ratePercent": 5,
-            "method": "B2F · jaskinia"
+            "method": "B2F · chodzenie · Silver"
           }
         ],
-        "surfing": [
+        "B2F_walking_gold": [
+          {
+            "name": "Zubat",
+            "levelRange": [
+              22,
+              22
+            ],
+            "ratePercent": 30,
+            "method": "B2F · chodzenie · Gold"
+          },
+          {
+            "name": "Raticate",
+            "levelRange": [
+              22,
+              22
+            ],
+            "ratePercent": 30,
+            "method": "B2F · chodzenie · Gold"
+          },
+          {
+            "name": "Golbat",
+            "levelRange": [
+              22,
+              22
+            ],
+            "ratePercent": 20,
+            "method": "B2F · chodzenie · Gold"
+          },
+          {
+            "name": "Geodude",
+            "levelRange": [
+              21,
+              21
+            ],
+            "ratePercent": 10,
+            "method": "B2F · chodzenie · Gold"
+          },
+          {
+            "name": "Rattata",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 5,
+            "method": "B2F · chodzenie · Gold"
+          },
+          {
+            "name": "Onix",
+            "levelRange": [
+              23,
+              23
+            ],
+            "ratePercent": 5,
+            "method": "B2F · chodzenie · Gold"
+          }
+        ],
+        "B2F_walking_crystal_morning": [
+          {
+            "name": "Zubat",
+            "levelRange": [
+              22,
+              22
+            ],
+            "ratePercent": 50,
+            "method": "B2F · chodzenie · Crystal rano/dzień"
+          },
+          {
+            "name": "Golbat",
+            "levelRange": [
+              22,
+              22
+            ],
+            "ratePercent": 30,
+            "method": "B2F · chodzenie · Crystal rano/dzień"
+          },
+          {
+            "name": "Raticate",
+            "levelRange": [
+              21,
+              21
+            ],
+            "ratePercent": 10,
+            "method": "B2F · chodzenie · Crystal rano/dzień"
+          },
+          {
+            "name": "Geodude",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 5,
+            "method": "B2F · chodzenie · Crystal rano/dzień"
+          },
+          {
+            "name": "Onix",
+            "levelRange": [
+              23,
+              23
+            ],
+            "ratePercent": 5,
+            "method": "B2F · chodzenie · Crystal rano/dzień"
+          }
+        ],
+        "B2F_walking_crystal_day": [
+          {
+            "name": "Zubat",
+            "levelRange": [
+              22,
+              22
+            ],
+            "ratePercent": 50,
+            "method": "B2F · chodzenie · Crystal rano/dzień"
+          },
+          {
+            "name": "Golbat",
+            "levelRange": [
+              22,
+              22
+            ],
+            "ratePercent": 30,
+            "method": "B2F · chodzenie · Crystal rano/dzień"
+          },
+          {
+            "name": "Raticate",
+            "levelRange": [
+              21,
+              21
+            ],
+            "ratePercent": 10,
+            "method": "B2F · chodzenie · Crystal rano/dzień"
+          },
+          {
+            "name": "Geodude",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 5,
+            "method": "B2F · chodzenie · Crystal rano/dzień"
+          },
+          {
+            "name": "Onix",
+            "levelRange": [
+              23,
+              23
+            ],
+            "ratePercent": 5,
+            "method": "B2F · chodzenie · Crystal rano/dzień"
+          }
+        ],
+        "B2F_walking_crystal_night": [
+          {
+            "name": "Zubat",
+            "levelRange": [
+              22,
+              22
+            ],
+            "ratePercent": 30,
+            "method": "B2F · chodzenie · Crystal noc"
+          },
+          {
+            "name": "Golbat",
+            "levelRange": [
+              22,
+              22
+            ],
+            "ratePercent": 30,
+            "method": "B2F · chodzenie · Crystal noc"
+          },
+          {
+            "name": "Quagsire",
+            "levelRange": [
+              22,
+              22
+            ],
+            "ratePercent": 20,
+            "method": "B2F · chodzenie · Crystal noc"
+          },
+          {
+            "name": "Raticate",
+            "levelRange": [
+              21,
+              21
+            ],
+            "ratePercent": 10,
+            "method": "B2F · chodzenie · Crystal noc"
+          },
+          {
+            "name": "Geodude",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 5,
+            "method": "B2F · chodzenie · Crystal noc"
+          },
+          {
+            "name": "Onix",
+            "levelRange": [
+              23,
+              23
+            ],
+            "ratePercent": 5,
+            "method": "B2F · chodzenie · Crystal noc"
+          }
+        ],
+        "1F_surfing": [
           {
             "name": "Wooper",
             "levelRange": [
@@ -3809,7 +4441,7 @@
               19
             ],
             "ratePercent": 60,
-            "method": "Surfing"
+            "method": "Surfing · 1F/B1F"
           },
           {
             "name": "Quagsire",
@@ -3818,10 +4450,30 @@
               24
             ],
             "ratePercent": 40,
-            "method": "Surfing"
+            "method": "Surfing · 1F/B1F"
           }
         ],
-        "old_rod": [
+        "B1F_surfing": [
+          {
+            "name": "Wooper",
+            "levelRange": [
+              15,
+              19
+            ],
+            "ratePercent": 60,
+            "method": "Surfing · 1F/B1F"
+          },
+          {
+            "name": "Quagsire",
+            "levelRange": [
+              15,
+              24
+            ],
+            "ratePercent": 40,
+            "method": "Surfing · 1F/B1F"
+          }
+        ],
+        "1F_old_rod": [
           {
             "name": "Magikarp",
             "levelRange": [
@@ -3829,7 +4481,7 @@
               10
             ],
             "ratePercent": 85,
-            "method": "Old Rod"
+            "method": "Old Rod · 1F/B1F"
           },
           {
             "name": "Goldeen",
@@ -3838,10 +4490,30 @@
               10
             ],
             "ratePercent": 15,
-            "method": "Old Rod"
+            "method": "Old Rod · 1F/B1F"
           }
         ],
-        "good_rod": [
+        "B1F_old_rod": [
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 85,
+            "method": "Old Rod · 1F/B1F"
+          },
+          {
+            "name": "Goldeen",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "Old Rod · 1F/B1F"
+          }
+        ],
+        "1F_good_rod": [
           {
             "name": "Goldeen",
             "levelRange": [
@@ -3849,7 +4521,7 @@
               20
             ],
             "ratePercent": 65,
-            "method": "Good Rod"
+            "method": "Good Rod · 1F/B1F"
           },
           {
             "name": "Magikarp",
@@ -3858,10 +4530,30 @@
               20
             ],
             "ratePercent": 35,
-            "method": "Good Rod"
+            "method": "Good Rod · 1F/B1F"
           }
         ],
-        "super_rod": [
+        "B1F_good_rod": [
+          {
+            "name": "Goldeen",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 65,
+            "method": "Good Rod · 1F/B1F"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 35,
+            "method": "Good Rod · 1F/B1F"
+          }
+        ],
+        "1F_super_rod": [
           {
             "name": "Goldeen",
             "levelRange": [
@@ -3869,7 +4561,7 @@
               40
             ],
             "ratePercent": 70,
-            "method": "Super Rod"
+            "method": "Super Rod · 1F/B1F"
           },
           {
             "name": "Magikarp",
@@ -3878,7 +4570,7 @@
               40
             ],
             "ratePercent": 20,
-            "method": "Super Rod"
+            "method": "Super Rod · 1F/B1F"
           },
           {
             "name": "Seaking",
@@ -3887,14 +4579,183 @@
               40
             ],
             "ratePercent": 10,
-            "method": "Super Rod"
+            "method": "Super Rod · 1F/B1F"
+          }
+        ],
+        "B1F_super_rod": [
+          {
+            "name": "Goldeen",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 70,
+            "method": "Super Rod · 1F/B1F"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 20,
+            "method": "Super Rod · 1F/B1F"
+          },
+          {
+            "name": "Seaking",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 10,
+            "method": "Super Rod · 1F/B1F"
+          }
+        ],
+        "B2F_surfing": [
+          {
+            "name": "Tentacool",
+            "levelRange": [
+              15,
+              19
+            ],
+            "ratePercent": 60,
+            "method": "Surfing · B2F"
+          },
+          {
+            "name": "Quagsire",
+            "levelRange": [
+              20,
+              24
+            ],
+            "ratePercent": 30,
+            "method": "Surfing · B2F"
+          },
+          {
+            "name": "Tentacruel",
+            "levelRange": [
+              20,
+              24
+            ],
+            "ratePercent": 10,
+            "method": "Surfing · B2F"
+          }
+        ],
+        "B2F_old_rod": [
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 85,
+            "method": "Old Rod · B2F"
+          },
+          {
+            "name": "Tentacool",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "Old Rod · B2F"
+          }
+        ],
+        "B2F_good_rod": [
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 35,
+            "method": "Good Rod · B2F"
+          },
+          {
+            "name": "Tentacool",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 35,
+            "method": "Good Rod · B2F"
+          },
+          {
+            "name": "Chinchou",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 20,
+            "method": "Good Rod · B2F"
+          },
+          {
+            "name": "Shellder",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 10,
+            "method": "Good Rod · B2F"
+          }
+        ],
+        "B2F_super_rod": [
+          {
+            "name": "Chinchou",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 40,
+            "method": "Super Rod · B2F"
+          },
+          {
+            "name": "Shellder",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 30,
+            "method": "Super Rod · B2F"
+          },
+          {
+            "name": "Tentacruel",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 20,
+            "method": "Super Rod · B2F"
+          },
+          {
+            "name": "Lanturn",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 10,
+            "method": "Super Rod · B2F"
           }
         ]
       },
       "wildPokemonSourceIds": [
         "serebii-gs-union-cave"
       ],
-      "wildPokemonStatus": "verified_gen2_silver_rates_and_levels"
+      "wildPokemonStatus": "verified_gen2_gold_silver_crystal_by_floor_and_method",
+      "interactablePokemon": [
+        {
+          "name": "Lapras",
+          "level": 20,
+          "locationDescription": "B2F — pojawia się w piątki przy podziemnym jeziorze; wymaga Surf.",
+          "availableIn": [
+            "gold_silver",
+            "crystal"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-union-cave"
+          ]
+        }
+      ]
     },
     {
       "id": "route_33",
@@ -18223,9 +19084,9 @@
     "imageCoverage": "0% — no Silver-specific Johto map asset connected",
     "note": "Connectivity audit checks only that every connectsTo ID points to an entry in this regional index. Cross-region links such as Route 27 to New Bark Town are intentionally handled as regional boundaries.",
     "berryTreeCoverage": "15 berry trees recorded across 13 Johto locations; exact map coordinates remain unverified",
-    "itemPickupCount": 13,
+    "itemPickupCount": 203,
     "itemPickupCoverage": "13 przedmiotów do podniesienia w 5 lokacjach; opisy źródłowe, współrzędne niezweryfikowane",
-    "trainerRecordCount": 33,
+    "trainerRecordCount": 216,
     "trainerCoverage": "33 potwierdzone wpisy trenerów w 6 lokacjach; piętra i drużyny zapisane, współrzędne niezweryfikowane",
     "wildEncounterCoverage": {
       "status": "partial_verified",
@@ -18240,8 +19101,8 @@
         "slowpoke_well",
         "sprout_tower"
       ],
-      "tableCount": 55,
-      "note": "Partially expanded verified Gen II Silver encounter tables; route, tower and cave tables remain separately keyed by time, method and floor. Each percentage group sums to 100%."
+      "tableCount": 291,
+      "note": "Zweryfikowane tabele Silver oraz różnice Gold/Crystal; grupy rozdzielone według piętra, pory dnia i metody. Każda grupa procentowa sumuje się do 100%."
     }
   }
 }
