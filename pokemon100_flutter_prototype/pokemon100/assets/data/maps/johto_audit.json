@@ -95,6 +95,16 @@
       "id": "serebii-gs-goldenrod-city",
       "url": "https://www.serebii.net/pokearth/johto/2nd/goldenrodcity.shtml",
       "scope": "Pokémon Silver Generation II Goldenrod City gifts, Gym trainers, Whitney team and TM45 reward"
+    },
+    {
+      "id": "serebii-gs-goldenrod-underground",
+      "url": "https://www.serebii.net/pokearth/johto/2nd/goldenrodunderground.shtml",
+      "scope": "Pokémon Silver Generation II Goldenrod Underground 1F/2F/3F trainer rosters and item pickups"
+    },
+    {
+      "id": "serebii-gs-radio-tower",
+      "url": "https://www.serebii.net/pokearth/johto/2nd/radiotower.shtml",
+      "scope": "Pokémon Silver Generation II Radio Tower 1F–5F Rocket takeover trainers and rewards"
     }
   ],
   "locations": [
@@ -4415,7 +4425,434 @@
         "bulbapedia-johto-region",
         "bulbapedia-route-list"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit"
+      "dataStatus": "verified_gen2_silver_rocket_takeover_trainers_and_rewards",
+      "trainers": [
+        {
+          "name": "Rocket Grunt — 1F",
+          "team": [
+            {
+              "name": "Raticate",
+              "level": 24
+            },
+            {
+              "name": "Raticate",
+              "level": 24
+            }
+          ],
+          "note": "Radio Tower 1F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-radio-tower"
+          ]
+        },
+        {
+          "name": "Rocket Grunt — 2F A",
+          "team": [
+            {
+              "name": "Arbok",
+              "level": 26
+            }
+          ],
+          "note": "Radio Tower 2F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-radio-tower"
+          ]
+        },
+        {
+          "name": "Rocket Grunt — 2F B",
+          "team": [
+            {
+              "name": "Rattata",
+              "level": 21
+            },
+            {
+              "name": "Rattata",
+              "level": 21
+            },
+            {
+              "name": "Rattata",
+              "level": 23
+            },
+            {
+              "name": "Rattata",
+              "level": 23
+            },
+            {
+              "name": "Rattata",
+              "level": 23
+            }
+          ],
+          "note": "Radio Tower 2F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-radio-tower"
+          ]
+        },
+        {
+          "name": "Rocket Grunt — 2F C",
+          "team": [
+            {
+              "name": "Zubat",
+              "level": 26
+            },
+            {
+              "name": "Zubat",
+              "level": 26
+            }
+          ],
+          "note": "Radio Tower 2F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-radio-tower"
+          ]
+        },
+        {
+          "name": "Rocket Grunt — 2F D",
+          "team": [
+            {
+              "name": "Grimer",
+              "level": 23
+            },
+            {
+              "name": "Grimer",
+              "level": 23
+            },
+            {
+              "name": "Muk",
+              "level": 25
+            }
+          ],
+          "note": "Radio Tower 2F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-radio-tower"
+          ]
+        },
+        {
+          "name": "Rocket Grunt — 3F A",
+          "team": [
+            {
+              "name": "Weezing",
+              "level": 26
+            }
+          ],
+          "note": "Radio Tower 3F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-radio-tower"
+          ]
+        },
+        {
+          "name": "Rocket Grunt — 3F B",
+          "team": [
+            {
+              "name": "Koffing",
+              "level": 23
+            },
+            {
+              "name": "Grimer",
+              "level": 23
+            },
+            {
+              "name": "Zubat",
+              "level": 23
+            },
+            {
+              "name": "Rattata",
+              "level": 23
+            }
+          ],
+          "note": "Radio Tower 3F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-radio-tower"
+          ]
+        },
+        {
+          "name": "Rocket Grunt — 3F C",
+          "team": [
+            {
+              "name": "Raticate",
+              "level": 24
+            },
+            {
+              "name": "Koffing",
+              "level": 26
+            }
+          ],
+          "note": "Radio Tower 3F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-radio-tower"
+          ]
+        },
+        {
+          "name": "Scientist Marc",
+          "team": [
+            {
+              "name": "Magnemite",
+              "level": 27
+            },
+            {
+              "name": "Magnemite",
+              "level": 27
+            },
+            {
+              "name": "Magnemite",
+              "level": 27
+            }
+          ],
+          "note": "Radio Tower 3F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-radio-tower"
+          ]
+        },
+        {
+          "name": "Rocket Grunt — 4F A",
+          "team": [
+            {
+              "name": "Zubat",
+              "level": 22
+            },
+            {
+              "name": "Golbat",
+              "level": 24
+            },
+            {
+              "name": "Grimer",
+              "level": 22
+            }
+          ],
+          "note": "Radio Tower 4F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-radio-tower"
+          ]
+        },
+        {
+          "name": "Scientist Rich",
+          "team": [
+            {
+              "name": "Porygon",
+              "level": 30
+            }
+          ],
+          "note": "Radio Tower 4F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-radio-tower"
+          ]
+        },
+        {
+          "name": "Rocket Executive — 4F",
+          "team": [
+            {
+              "name": "Golbat",
+              "level": 36
+            }
+          ],
+          "note": "Radio Tower 4F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-radio-tower"
+          ]
+        },
+        {
+          "name": "Rocket Grunt — 4F B",
+          "team": [
+            {
+              "name": "Ekans",
+              "level": 21
+            },
+            {
+              "name": "Oddish",
+              "level": 23
+            },
+            {
+              "name": "Ekans",
+              "level": 21
+            },
+            {
+              "name": "Gloom",
+              "level": 24
+            }
+          ],
+          "note": "Radio Tower 4F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-radio-tower"
+          ]
+        },
+        {
+          "name": "Rocket Executive — 5F A",
+          "team": [
+            {
+              "name": "Koffing",
+              "level": 30
+            },
+            {
+              "name": "Koffing",
+              "level": 30
+            },
+            {
+              "name": "Koffing",
+              "level": 30
+            },
+            {
+              "name": "Weezing",
+              "level": 32
+            },
+            {
+              "name": "Koffing",
+              "level": 30
+            },
+            {
+              "name": "Koffing",
+              "level": 30
+            }
+          ],
+          "note": "Radio Tower 5F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-radio-tower"
+          ]
+        },
+        {
+          "name": "Rocket Executive — 5F B",
+          "team": [
+            {
+              "name": "Arbok",
+              "level": 32
+            },
+            {
+              "name": "Vileplume",
+              "level": 32
+            },
+            {
+              "name": "Murkrow",
+              "level": 32
+            }
+          ],
+          "note": "Radio Tower 5F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-radio-tower"
+          ]
+        },
+        {
+          "name": "Rocket Executive — 5F C",
+          "team": [
+            {
+              "name": "Houndour",
+              "level": 33
+            },
+            {
+              "name": "Koffing",
+              "level": 33
+            },
+            {
+              "name": "Houndoom",
+              "level": 35
+            }
+          ],
+          "note": "Radio Tower 5F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-radio-tower"
+          ]
+        }
+      ],
+      "items": [
+        {
+          "id": "radio_tower_tm11",
+          "name": "TM11 — Sunny Day",
+          "locationDescription": "3F · nagroda od kobiety po pokonaniu Zespołu Rocket",
+          "category": "story_reward",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-radio-tower"
+          ]
+        },
+        {
+          "id": "radio_tower_pink_bow",
+          "name": "Pink Bow",
+          "locationDescription": "4F · nagroda od kobiety po pokonaniu Zespołu Rocket",
+          "category": "story_reward",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-radio-tower"
+          ]
+        },
+        {
+          "id": "radio_tower_basement_key",
+          "name": "Basement Key",
+          "locationDescription": "5F · od fałszywego dyrektora",
+          "category": "story_reward",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-radio-tower"
+          ]
+        }
+      ]
     },
     {
       "id": "goldenrod_tunnel",
@@ -4430,7 +4867,586 @@
         "bulbapedia-johto-region",
         "bulbapedia-route-list"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit"
+      "dataStatus": "verified_gen2_silver_trainers_and_items_1f_3f",
+      "trainers": [
+        {
+          "name": "Super Nerd Eric",
+          "team": [
+            {
+              "name": "Grimer",
+              "level": 11
+            },
+            {
+              "name": "Grimer",
+              "level": 11
+            }
+          ],
+          "note": "Goldenrod Underground 1F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-goldenrod-underground"
+          ]
+        },
+        {
+          "name": "PokéManiac Isaac",
+          "team": [
+            {
+              "name": "Lickitung",
+              "level": 12
+            }
+          ],
+          "note": "Goldenrod Underground 1F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-goldenrod-underground"
+          ]
+        },
+        {
+          "name": "Super Nerd Teru",
+          "team": [
+            {
+              "name": "Magnemite",
+              "level": 7
+            },
+            {
+              "name": "Voltorb",
+              "level": 11
+            },
+            {
+              "name": "Magnemite",
+              "level": 7
+            },
+            {
+              "name": "Magnemite",
+              "level": 9
+            }
+          ],
+          "note": "Goldenrod Underground 1F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-goldenrod-underground"
+          ]
+        },
+        {
+          "name": "PokéManiac Donald",
+          "team": [
+            {
+              "name": "Slowpoke",
+              "level": 10
+            },
+            {
+              "name": "Slowpoke",
+              "level": 10
+            }
+          ],
+          "note": "Goldenrod Underground 1F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-goldenrod-underground"
+          ]
+        },
+        {
+          "name": "Rival Silver — Chikorita starter",
+          "team": [
+            {
+              "name": "Golbat",
+              "level": 30
+            },
+            {
+              "name": "Magnemite",
+              "level": 28
+            },
+            {
+              "name": "Haunter",
+              "level": 30
+            },
+            {
+              "name": "Sneasel",
+              "level": 32
+            },
+            {
+              "name": "Quilava",
+              "level": 32
+            }
+          ],
+          "note": "Wariant drużyny zależy od wybranego startera gracza.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-goldenrod-underground"
+          ]
+        },
+        {
+          "name": "Rival Silver — Cyndaquil starter",
+          "team": [
+            {
+              "name": "Golbat",
+              "level": 30
+            },
+            {
+              "name": "Magnemite",
+              "level": 28
+            },
+            {
+              "name": "Haunter",
+              "level": 30
+            },
+            {
+              "name": "Sneasel",
+              "level": 32
+            },
+            {
+              "name": "Feraligatr",
+              "level": 32
+            }
+          ],
+          "note": "Wariant drużyny zależy od wybranego startera gracza.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-goldenrod-underground"
+          ]
+        },
+        {
+          "name": "Rival Silver — Totodile starter",
+          "team": [
+            {
+              "name": "Golbat",
+              "level": 30
+            },
+            {
+              "name": "Magnemite",
+              "level": 28
+            },
+            {
+              "name": "Haunter",
+              "level": 30
+            },
+            {
+              "name": "Sneasel",
+              "level": 32
+            },
+            {
+              "name": "Meganium",
+              "level": 32
+            }
+          ],
+          "note": "Wariant drużyny zależy od wybranego startera gracza.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-goldenrod-underground"
+          ]
+        },
+        {
+          "name": "Rocket Grunt A",
+          "team": [
+            {
+              "name": "Rattata",
+              "level": 27
+            }
+          ],
+          "note": "Goldenrod Underground 2F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-goldenrod-underground"
+          ]
+        },
+        {
+          "name": "Rocket Grunt B",
+          "team": [
+            {
+              "name": "Muk",
+              "level": 23
+            },
+            {
+              "name": "Koffing",
+              "level": 23
+            },
+            {
+              "name": "Rattata",
+              "level": 25
+            }
+          ],
+          "note": "Goldenrod Underground 2F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-goldenrod-underground"
+          ]
+        },
+        {
+          "name": "Rocket Grunt C",
+          "team": [
+            {
+              "name": "Koffing",
+              "level": 24
+            },
+            {
+              "name": "Muk",
+              "level": 24
+            }
+          ],
+          "note": "Goldenrod Underground 2F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-goldenrod-underground"
+          ]
+        },
+        {
+          "name": "Burglar Eddie",
+          "team": [
+            {
+              "name": "Growlithe",
+              "level": 24
+            },
+            {
+              "name": "Koffing",
+              "level": 24
+            }
+          ],
+          "note": "Goldenrod Underground 2F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-goldenrod-underground"
+          ]
+        },
+        {
+          "name": "Burglar Duncan",
+          "team": [
+            {
+              "name": "Koffing",
+              "level": 23
+            },
+            {
+              "name": "Magmar",
+              "level": 25
+            },
+            {
+              "name": "Koffing",
+              "level": 23
+            }
+          ],
+          "note": "Goldenrod Underground 2F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-goldenrod-underground"
+          ]
+        },
+        {
+          "name": "Rocket Grunt D",
+          "team": [
+            {
+              "name": "Gloom",
+              "level": 25
+            },
+            {
+              "name": "Gloom",
+              "level": 25
+            }
+          ],
+          "note": "Goldenrod Underground 2F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-goldenrod-underground"
+          ]
+        },
+        {
+          "name": "Rocket Grunt E",
+          "team": [
+            {
+              "name": "Raticate",
+              "level": 24
+            },
+            {
+              "name": "Golbat",
+              "level": 24
+            }
+          ],
+          "note": "Goldenrod Underground 3F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-goldenrod-underground"
+          ]
+        },
+        {
+          "name": "Rocket Grunt F",
+          "team": [
+            {
+              "name": "Grimer",
+              "level": 26
+            },
+            {
+              "name": "Weezing",
+              "level": 23
+            }
+          ],
+          "note": "Goldenrod Underground 3F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-goldenrod-underground"
+          ]
+        },
+        {
+          "name": "Rocket Grunt G",
+          "team": [
+            {
+              "name": "Koffing",
+              "level": 25
+            },
+            {
+              "name": "Koffing",
+              "level": 25
+            }
+          ],
+          "note": "Goldenrod Underground 3F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-goldenrod-underground"
+          ]
+        }
+      ],
+      "items": [
+        {
+          "id": "goldenrod_underground_coincase",
+          "name": "Coin Case",
+          "locationDescription": "Underground 1F",
+          "category": "key_item",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-goldenrod-underground"
+          ]
+        },
+        {
+          "id": "goldenrod_underground_super_potion",
+          "name": "Super Potion",
+          "locationDescription": "Underground 1F · ukryty przedmiot",
+          "category": "hidden",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-goldenrod-underground"
+          ]
+        },
+        {
+          "id": "goldenrod_underground_paralyze_heal",
+          "name": "Paralyze Heal",
+          "locationDescription": "Underground 1F · ukryty przedmiot",
+          "category": "hidden",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-goldenrod-underground"
+          ]
+        },
+        {
+          "id": "goldenrod_underground_antidote",
+          "name": "Antidote",
+          "locationDescription": "Underground 1F · ukryty przedmiot",
+          "category": "hidden",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-goldenrod-underground"
+          ]
+        },
+        {
+          "id": "goldenrod_underground_amulet_coin",
+          "name": "Amulet Coin",
+          "locationDescription": "Underground 2F",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-goldenrod-underground"
+          ]
+        },
+        {
+          "id": "goldenrod_underground_ultra_ball",
+          "name": "Ultra Ball",
+          "locationDescription": "Underground 2F",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-goldenrod-underground"
+          ]
+        },
+        {
+          "id": "goldenrod_underground_elixir",
+          "name": "Elixir",
+          "locationDescription": "Underground 2F",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-goldenrod-underground"
+          ]
+        },
+        {
+          "id": "goldenrod_underground_burn_heal",
+          "name": "Burn Heal",
+          "locationDescription": "Underground 2F",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-goldenrod-underground"
+          ]
+        },
+        {
+          "id": "goldenrod_underground_max_ether",
+          "name": "Max Ether",
+          "locationDescription": "Underground 3F",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-goldenrod-underground"
+          ]
+        },
+        {
+          "id": "goldenrod_underground_tm_sleep_talk",
+          "name": "TM35 — Sleep Talk",
+          "locationDescription": "Underground 3F",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-goldenrod-underground"
+          ]
+        },
+        {
+          "id": "goldenrod_underground_card_key",
+          "name": "Card Key",
+          "locationDescription": "Nagroda od kierownika magazynu po uratowaniu go",
+          "category": "story_reward",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-goldenrod-underground"
+          ]
+        },
+        {
+          "id": "goldenrod_underground_revive",
+          "name": "Revive",
+          "locationDescription": "Underground 3F · ukryty przedmiot",
+          "category": "hidden",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-goldenrod-underground"
+          ]
+        },
+        {
+          "id": "goldenrod_underground_max_potion",
+          "name": "Max Potion",
+          "locationDescription": "Underground 3F · ukryty przedmiot",
+          "category": "hidden",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-goldenrod-underground"
+          ]
+        },
+        {
+          "id": "goldenrod_underground_smoke_ball",
+          "name": "Smoke Ball",
+          "locationDescription": "Underground 3F",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-goldenrod-underground"
+          ]
+        },
+        {
+          "id": "goldenrod_underground_full_heal",
+          "name": "Full Heal",
+          "locationDescription": "Underground 3F",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-goldenrod-underground"
+          ]
+        }
+      ]
     },
     {
       "id": "team_rocket_hq",
