@@ -310,7 +310,12 @@ void main() {
       final location = locations.cast<Map<String, dynamic>>().firstWhere(
         (value) => value['id'] == expected.key,
       );
-      expect(location['wildPokemonStatus'], 'verified_gen2_silver_rates_and_levels');
+      expect(
+        location['wildPokemonStatus'],
+        expected.key == 'union_cave'
+            ? 'verified_gen2_gold_silver_crystal_by_floor_and_method'
+            : 'verified_gen2_silver_rates_and_levels',
+      );
       expect(location['wildPokemonSourceIds'], contains(expected.value));
       final tables = location['wildPokemonDetails'] as Map<String, dynamic>;
       expect(tables, isNotEmpty);
