@@ -225,6 +225,16 @@
       "id": "serebii-gs-blackthorn-city",
       "url": "https://www.serebii.net/pokearth/johto/2nd/blackthorncity.shtml",
       "scope": "Pokémon Silver Generation II Blackthorn City fishing, Santos gift and Gym trainer teams"
+    },
+    {
+      "id": "serebii-gs-route45",
+      "url": "https://www.serebii.net/pokearth/johto/2nd/route45.shtml",
+      "scope": "Pokémon Silver Generation II Route 45 encounters, trainer teams and item pickups"
+    },
+    {
+      "id": "serebii-gs-dragons-den",
+      "url": "https://www.serebii.net/pokearth/johto/2nd/dragon%27sden.shtml",
+      "scope": "Pokémon Silver Generation II Dragon's Den fishing and surfing encounters, items and Clair reward"
     }
   ],
   "locations": [
@@ -13802,9 +13812,177 @@
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-johto-region",
-        "bulbapedia-route-list"
+        "serebii-gs-dragons-den"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit"
+      "dataStatus": "verified_gen2_silver_fishing_encounters_and_items",
+      "wildPokemonDetails": {
+        "surfing": [
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              10,
+              19
+            ],
+            "ratePercent": 90,
+            "method": "Surfing"
+          },
+          {
+            "name": "Dratini",
+            "levelRange": [
+              10,
+              14
+            ],
+            "ratePercent": 10,
+            "method": "Surfing"
+          }
+        ],
+        "old_rod": [
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 100,
+            "method": "Old Rod"
+          }
+        ],
+        "good_rod": [
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 90,
+            "method": "Good Rod"
+          },
+          {
+            "name": "Dratini",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 10,
+            "method": "Good Rod"
+          }
+        ],
+        "super_rod": [
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 60,
+            "method": "Super Rod"
+          },
+          {
+            "name": "Dratini",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 30,
+            "method": "Super Rod"
+          },
+          {
+            "name": "Dragonair",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 10,
+            "method": "Super Rod"
+          }
+        ]
+      },
+      "wildPokemonSourceIds": [
+        "serebii-gs-dragons-den"
+      ],
+      "wildPokemonStatus": "verified_gen2_silver_rates_and_levels",
+      "items": [
+        {
+          "id": "dragons_den_dragon_fang",
+          "name": "Dragon Fang",
+          "locationDescription": "Na ziemi",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-dragons-den"
+          ]
+        },
+        {
+          "id": "dragons_den_tm24",
+          "name": "TM24 — Dragonbreath",
+          "locationDescription": "Nagroda od Clair po spełnieniu warunku fabularnego",
+          "category": "story_reward",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "serebii-gs-dragons-den"
+          ]
+        },
+        {
+          "id": "dragons_den_max_potion",
+          "name": "Max Potion",
+          "locationDescription": "Ukryty przedmiot — Itemfinder",
+          "category": "hidden_item",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-dragons-den"
+          ]
+        },
+        {
+          "id": "dragons_den_revive",
+          "name": "Revive",
+          "locationDescription": "Ukryty przedmiot — Itemfinder",
+          "category": "hidden_item",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-dragons-den"
+          ]
+        },
+        {
+          "id": "dragons_den_max_elixir",
+          "name": "Max Elixir",
+          "locationDescription": "Ukryty przedmiot — Itemfinder",
+          "category": "hidden_item",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-dragons-den"
+          ]
+        }
+      ],
+      "specialServices": [
+        {
+          "name": "Próba Starszego i Rising Badge",
+          "category": "story_event",
+          "note": "Po pokonaniu Clair przejdź próbę Starszego w Dragon's Den; po poprawnych odpowiedziach otrzymasz Rising Badge. Nie jest to znajdźka z pinezką.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "serebii-gs-dragons-den"
+          ]
+        }
+      ],
+      "notes": "Gift Dratini Lv. 15 z tej lokacji jest dostępny w Pokémon Crystal, dlatego nie został dodany do danych Pokémon Silver."
     },
     {
       "id": "route_45",
@@ -13820,7 +13998,7 @@
         "bulbapedia-johto-region",
         "bulbapedia-route-list"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit",
+      "dataStatus": "verified_gen2_silver_encounters_trainers_and_items",
       "berryTrees": [
         {
           "id": "route_45_berry_tree_1",
@@ -13834,6 +14012,390 @@
           "coordinateStatus": "unverified",
           "sourceIds": [
             "bulbapedia-berry-tree-generation-ii"
+          ]
+        }
+      ],
+      "wildPokemonSourceIds": [
+        "serebii-gs-route45"
+      ],
+      "wildPokemonStatus": "verified_gen2_silver_rates_and_levels",
+      "wildPokemonDetails": {
+        "walking": [
+          {
+            "name": "Graveler",
+            "levelRange": [
+              23,
+              25
+            ],
+            "ratePercent": 55,
+            "method": "Walking"
+          },
+          {
+            "name": "Geodude",
+            "levelRange": [
+              23,
+              23
+            ],
+            "ratePercent": 30,
+            "method": "Walking"
+          },
+          {
+            "name": "Phanpy",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 10,
+            "method": "Walking"
+          },
+          {
+            "name": "Skarmory",
+            "levelRange": [
+              27,
+              27
+            ],
+            "ratePercent": 5,
+            "method": "Walking"
+          }
+        ],
+        "surfing": [
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              15,
+              24
+            ],
+            "ratePercent": 100,
+            "method": "Surfing"
+          }
+        ],
+        "old_rod": [
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 100,
+            "method": "Old Rod"
+          }
+        ],
+        "good_rod": [
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 90,
+            "method": "Good Rod"
+          },
+          {
+            "name": "Dratini",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 10,
+            "method": "Good Rod"
+          }
+        ],
+        "super_rod": [
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 60,
+            "method": "Super Rod"
+          },
+          {
+            "name": "Dratini",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 30,
+            "method": "Super Rod"
+          },
+          {
+            "name": "Dragonair",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 10,
+            "method": "Super Rod"
+          }
+        ],
+        "headbutt_special_trees": [
+          {
+            "name": "Spearow",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 80,
+            "method": "Headbutt — special trees"
+          },
+          {
+            "name": "Aipom",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 20,
+            "method": "Headbutt — special trees"
+          }
+        ],
+        "headbutt": [
+          {
+            "name": "Spearow",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 50,
+            "method": "Headbutt"
+          },
+          {
+            "name": "Heracross",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 30,
+            "method": "Headbutt"
+          },
+          {
+            "name": "Aipom",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 20,
+            "method": "Headbutt"
+          }
+        ]
+      },
+      "trainers": [
+        {
+          "name": "Hiker Erik",
+          "team": [
+            {
+              "name": "Machop",
+              "level": 24
+            },
+            {
+              "name": "Geodude",
+              "level": 27
+            },
+            {
+              "name": "Machop",
+              "level": 27
+            }
+          ],
+          "note": "Pierwsza walka na Route 45",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route45"
+          ]
+        },
+        {
+          "name": "Cool Trainer Ryan",
+          "team": [
+            {
+              "name": "Pidgeot",
+              "level": 25
+            },
+            {
+              "name": "Electabuzz",
+              "level": 27
+            }
+          ],
+          "note": "Pojedynek na Route 45",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route45"
+          ]
+        },
+        {
+          "name": "Cool Trainer Kelly",
+          "team": [
+            {
+              "name": "Marill",
+              "level": 27
+            },
+            {
+              "name": "Wartortle",
+              "level": 24
+            },
+            {
+              "name": "Wartortle",
+              "level": 24
+            }
+          ],
+          "note": "Pojedynek na Route 45",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route45"
+          ]
+        },
+        {
+          "name": "Hiker Parry",
+          "team": [
+            {
+              "name": "Onix",
+              "level": 29
+            }
+          ],
+          "note": "Pierwsza walka; późniejsze rewanże PokéGear nie są liczone jako nowi trenerzy",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route45"
+          ]
+        },
+        {
+          "name": "Black Belt Kenji",
+          "team": [
+            {
+              "name": "Machoke",
+              "level": 28
+            }
+          ],
+          "note": "Pierwsza walka; późniejsze rewanże PokéGear nie są liczone jako nowi trenerzy",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route45"
+          ]
+        },
+        {
+          "name": "Hiker Timothy",
+          "team": [
+            {
+              "name": "Diglett",
+              "level": 27
+            },
+            {
+              "name": "Dugtrio",
+              "level": 27
+            }
+          ],
+          "note": "Pojedynek na Route 45",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route45"
+          ]
+        },
+        {
+          "name": "Hiker Michael",
+          "team": [
+            {
+              "name": "Geodude",
+              "level": 25
+            },
+            {
+              "name": "Graveler",
+              "level": 25
+            },
+            {
+              "name": "Golem",
+              "level": 25
+            }
+          ],
+          "note": "Pojedynek na Route 45",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route45"
+          ]
+        }
+      ],
+      "items": [
+        {
+          "id": "route45_elixir",
+          "name": "Elixir",
+          "locationDescription": "Na ziemi",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route45"
+          ]
+        },
+        {
+          "id": "route45_max_potion",
+          "name": "Max Potion",
+          "locationDescription": "Na ziemi",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route45"
+          ]
+        },
+        {
+          "id": "route45_x_special",
+          "name": "X Special",
+          "locationDescription": "Na ziemi",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route45"
+          ]
+        },
+        {
+          "id": "route45_revive",
+          "name": "Revive",
+          "locationDescription": "Na ziemi",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route45"
+          ]
+        },
+        {
+          "id": "route45_pp_up",
+          "name": "PP Up",
+          "locationDescription": "Ukryty przedmiot — Itemfinder",
+          "category": "hidden_item",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route45"
           ]
         }
       ]
