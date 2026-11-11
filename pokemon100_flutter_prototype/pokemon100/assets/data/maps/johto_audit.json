@@ -145,6 +145,16 @@
       "id": "serebii-gs-burned-tower",
       "url": "https://www.serebii.net/pokearth/johto/2nd/burnedtower.shtml",
       "scope": "Pokémon Silver Generation II Burned Tower 1F/B1F encounters, rival starter variants, trainers and item pickups"
+    },
+    {
+      "id": "serebii-gs-route38",
+      "url": "https://www.serebii.net/pokearth/johto/2nd/route38.shtml",
+      "scope": "Pokémon Silver Generation II Route 38 time-of-day and Headbutt encounters and trainer teams"
+    },
+    {
+      "id": "serebii-gs-route39",
+      "url": "https://www.serebii.net/pokearth/johto/2nd/route39.shtml",
+      "scope": "Pokémon Silver Generation II Route 39 time-of-day and Headbutt encounters, trainer teams, MooMoo Farm reward and hidden item"
     }
   ],
   "locations": [
@@ -6780,9 +6790,10 @@
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-johto-region",
-        "bulbapedia-route-list"
+        "bulbapedia-route-list",
+        "serebii-gs-route38"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit",
+      "dataStatus": "verified_gen2_silver_encounters_and_trainers",
       "berryTrees": [
         {
           "id": "route_38_berry_tree_1",
@@ -6796,6 +6807,377 @@
           "coordinateStatus": "unverified",
           "sourceIds": [
             "bulbapedia-berry-tree-generation-ii"
+          ]
+        }
+      ],
+      "wildPokemonDetails": {
+        "walking_morning": [
+          {
+            "name": "Meowth",
+            "levelRange": [
+              16,
+              16
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Raticate",
+            "levelRange": [
+              16,
+              16
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Magnemite",
+            "levelRange": [
+              16,
+              16
+            ],
+            "ratePercent": 20,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Farfetch'd",
+            "levelRange": [
+              16,
+              16
+            ],
+            "ratePercent": 10,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Miltank",
+            "levelRange": [
+              13,
+              15
+            ],
+            "ratePercent": 5,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Tauros",
+            "levelRange": [
+              13,
+              13
+            ],
+            "ratePercent": 4,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Snubbull",
+            "levelRange": [
+              13,
+              13
+            ],
+            "ratePercent": 1,
+            "method": "Trawa · rano"
+          }
+        ],
+        "walking_day": [
+          {
+            "name": "Meowth",
+            "levelRange": [
+              16,
+              16
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Raticate",
+            "levelRange": [
+              16,
+              16
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Magnemite",
+            "levelRange": [
+              16,
+              16
+            ],
+            "ratePercent": 20,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Farfetch'd",
+            "levelRange": [
+              16,
+              16
+            ],
+            "ratePercent": 10,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Miltank",
+            "levelRange": [
+              13,
+              15
+            ],
+            "ratePercent": 5,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Tauros",
+            "levelRange": [
+              13,
+              13
+            ],
+            "ratePercent": 4,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Snubbull",
+            "levelRange": [
+              13,
+              13
+            ],
+            "ratePercent": 1,
+            "method": "Trawa · dzień"
+          }
+        ],
+        "walking_night": [
+          {
+            "name": "Meowth",
+            "levelRange": [
+              16,
+              16
+            ],
+            "ratePercent": 40,
+            "method": "Trawa · noc"
+          },
+          {
+            "name": "Raticate",
+            "levelRange": [
+              16,
+              16
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · noc"
+          },
+          {
+            "name": "Magnemite",
+            "levelRange": [
+              16,
+              16
+            ],
+            "ratePercent": 20,
+            "method": "Trawa · noc"
+          },
+          {
+            "name": "Miltank",
+            "levelRange": [
+              13,
+              13
+            ],
+            "ratePercent": 5,
+            "method": "Trawa · noc"
+          },
+          {
+            "name": "Tauros",
+            "levelRange": [
+              13,
+              13
+            ],
+            "ratePercent": 4,
+            "method": "Trawa · noc"
+          },
+          {
+            "name": "Snubbull",
+            "levelRange": [
+              13,
+              13
+            ],
+            "ratePercent": 1,
+            "method": "Trawa · noc"
+          }
+        ],
+        "headbutt_special_trees": [
+          {
+            "name": "Weedle",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 65,
+            "method": "Headbutt · specjalne drzewa"
+          },
+          {
+            "name": "Kakuna",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "Headbutt · specjalne drzewa"
+          },
+          {
+            "name": "Exeggcute",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "Headbutt · specjalne drzewa"
+          },
+          {
+            "name": "Beedrill",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 5,
+            "method": "Headbutt · specjalne drzewa"
+          }
+        ],
+        "headbutt": [
+          {
+            "name": "Weedle",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 50,
+            "method": "Headbutt"
+          },
+          {
+            "name": "Pineco",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 30,
+            "method": "Headbutt"
+          },
+          {
+            "name": "Exeggcute",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "Headbutt"
+          },
+          {
+            "name": "Beedrill",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 5,
+            "method": "Headbutt"
+          }
+        ]
+      },
+      "wildPokemonSourceIds": [
+        "serebii-gs-route38"
+      ],
+      "wildPokemonStatus": "verified_gen2_silver_rates_and_levels",
+      "trainers": [
+        {
+          "name": "Bird Keeper Toby",
+          "team": [
+            {
+              "name": "Doduo",
+              "level": 15
+            },
+            {
+              "name": "Doduo",
+              "level": 16
+            },
+            {
+              "name": "Doduo",
+              "level": 17
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route38"
+          ]
+        },
+        {
+          "name": "Sailor Harry",
+          "team": [
+            {
+              "name": "Wooper",
+              "level": 19
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route38"
+          ]
+        },
+        {
+          "name": "Lass Dana",
+          "team": [
+            {
+              "name": "Flaaffy",
+              "level": 18
+            },
+            {
+              "name": "Psyduck",
+              "level": 18
+            }
+          ],
+          "note": "Telefoniczne rewanże mają silniejsze drużyny; zachowano tylko pierwszą walkę jako osobnego trenera na mapie.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route38"
+          ]
+        },
+        {
+          "name": "School Kid Chad",
+          "team": [
+            {
+              "name": "Mr. Mime",
+              "level": 19
+            }
+          ],
+          "note": "Telefoniczne rewanże: Mr. Mime + Magnemite, później Mr. Mime + Magneton.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route38"
+          ]
+        },
+        {
+          "name": "Beauty Valerie",
+          "team": [
+            {
+              "name": "Hoppip",
+              "level": 17
+            },
+            {
+              "name": "Skiploom",
+              "level": 17
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route38"
           ]
         }
       ]
@@ -6812,9 +7194,10 @@
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-johto-region",
-        "bulbapedia-route-list"
+        "bulbapedia-route-list",
+        "serebii-gs-route39"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit",
+      "dataStatus": "verified_gen2_silver_encounters_trainers_and_moomoo_farm_reward",
       "berryTrees": [
         {
           "id": "route_39_berry_tree_1",
@@ -6828,6 +7211,371 @@
           "coordinateStatus": "unverified",
           "sourceIds": [
             "bulbapedia-berry-tree-generation-ii"
+          ]
+        },
+        {
+          "id": "route_39_berry_tree_2",
+          "berry": "Berry",
+          "locationDescription": "Drzewo Apricorn/berry na Route 39; dokładna pozycja niezweryfikowana.",
+          "availableIn": [
+            "gold_silver",
+            "crystal"
+          ],
+          "respawns": "daily",
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-berry-tree-generation-ii"
+          ]
+        }
+      ],
+      "wildPokemonDetails": {
+        "walking_morning": [
+          {
+            "name": "Meowth",
+            "levelRange": [
+              16,
+              16
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Raticate",
+            "levelRange": [
+              17,
+              17
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Magnemite",
+            "levelRange": [
+              16,
+              16
+            ],
+            "ratePercent": 20,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Farfetch'd",
+            "levelRange": [
+              16,
+              16
+            ],
+            "ratePercent": 10,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Miltank",
+            "levelRange": [
+              15,
+              15
+            ],
+            "ratePercent": 5,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Tauros",
+            "levelRange": [
+              15,
+              15
+            ],
+            "ratePercent": 5,
+            "method": "Trawa · rano"
+          }
+        ],
+        "walking_day": [
+          {
+            "name": "Meowth",
+            "levelRange": [
+              16,
+              16
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Raticate",
+            "levelRange": [
+              17,
+              17
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Magnemite",
+            "levelRange": [
+              16,
+              16
+            ],
+            "ratePercent": 20,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Farfetch'd",
+            "levelRange": [
+              16,
+              16
+            ],
+            "ratePercent": 10,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Miltank",
+            "levelRange": [
+              15,
+              15
+            ],
+            "ratePercent": 5,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Tauros",
+            "levelRange": [
+              15,
+              15
+            ],
+            "ratePercent": 5,
+            "method": "Trawa · dzień"
+          }
+        ],
+        "walking_night": [
+          {
+            "name": "Meowth",
+            "levelRange": [
+              16,
+              16
+            ],
+            "ratePercent": 40,
+            "method": "Trawa · noc"
+          },
+          {
+            "name": "Raticate",
+            "levelRange": [
+              17,
+              17
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · noc"
+          },
+          {
+            "name": "Magnemite",
+            "levelRange": [
+              16,
+              16
+            ],
+            "ratePercent": 20,
+            "method": "Trawa · noc"
+          },
+          {
+            "name": "Miltank",
+            "levelRange": [
+              15,
+              15
+            ],
+            "ratePercent": 5,
+            "method": "Trawa · noc"
+          },
+          {
+            "name": "Tauros",
+            "levelRange": [
+              15,
+              15
+            ],
+            "ratePercent": 5,
+            "method": "Trawa · noc"
+          }
+        ],
+        "headbutt_special_trees": [
+          {
+            "name": "Weedle",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 65,
+            "method": "Headbutt · specjalne drzewa"
+          },
+          {
+            "name": "Kakuna",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "Headbutt · specjalne drzewa"
+          },
+          {
+            "name": "Exeggcute",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "Headbutt · specjalne drzewa"
+          },
+          {
+            "name": "Beedrill",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 5,
+            "method": "Headbutt · specjalne drzewa"
+          }
+        ],
+        "headbutt": [
+          {
+            "name": "Weedle",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 50,
+            "method": "Headbutt"
+          },
+          {
+            "name": "Pineco",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 30,
+            "method": "Headbutt"
+          },
+          {
+            "name": "Exeggcute",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "Headbutt"
+          },
+          {
+            "name": "Beedrill",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 5,
+            "method": "Headbutt"
+          }
+        ]
+      },
+      "wildPokemonSourceIds": [
+        "serebii-gs-route39"
+      ],
+      "wildPokemonStatus": "verified_gen2_silver_rates_and_levels",
+      "trainers": [
+        {
+          "name": "Psychic Norman",
+          "team": [
+            {
+              "name": "Slowpoke",
+              "level": 17
+            },
+            {
+              "name": "Slowpoke",
+              "level": 20
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route39"
+          ]
+        },
+        {
+          "name": "PokéFan Derek",
+          "team": [
+            {
+              "name": "Pikachu",
+              "level": 17
+            }
+          ],
+          "note": "Telefoniczne rewanże: Pikachu Lv. 19, następnie Pikachu Lv. 36.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route39"
+          ]
+        },
+        {
+          "name": "PokéFan Ruth",
+          "team": [
+            {
+              "name": "Pikachu",
+              "level": 17
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route39"
+          ]
+        },
+        {
+          "name": "Sailor Eugene",
+          "team": [
+            {
+              "name": "Poliwhirl",
+              "level": 17
+            },
+            {
+              "name": "Raticate",
+              "level": 17
+            },
+            {
+              "name": "Krabby",
+              "level": 19
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route39"
+          ]
+        }
+      ],
+      "items": [
+        {
+          "id": "route_39_tm13_snore",
+          "name": "TM13 — Snore",
+          "locationDescription": "Prezent od kobiety z Moomoo Farm po wyleczeniu chorego Miltanka.",
+          "category": "gift",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route39"
+          ]
+        },
+        {
+          "id": "route_39_nugget_hidden",
+          "name": "Nugget",
+          "locationDescription": "Ukryty przedmiot wykrywany przez Itemfinder.",
+          "category": "hidden",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route39"
           ]
         }
       ]
