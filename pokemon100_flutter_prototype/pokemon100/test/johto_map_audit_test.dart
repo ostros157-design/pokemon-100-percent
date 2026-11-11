@@ -153,11 +153,11 @@ void main() {
       }
     }
 
-    expect(pickups, hasLength(186));
+    expect(pickups, hasLength(191));
     expect(
       locations.where((value) =>
           ((value as Map<String, dynamic>)['items'] as List?)?.isNotEmpty ?? false),
-      hasLength(35),
+      hasLength(36),
     );
   });
 
@@ -178,11 +178,11 @@ void main() {
       }
     }
 
-    expect(trainers, hasLength(198));
+    expect(trainers, hasLength(203));
     expect(
       locations.where((value) =>
           ((value as Map<String, dynamic>)['trainers'] as List?)?.isNotEmpty ?? false),
-      hasLength(34),
+      hasLength(35),
     );
   });
 
@@ -1073,6 +1073,64 @@ void main() {
     expect(mysticWater['availableIn'], containsAll(['gold_silver', 'crystal']));
     expect(mysticWater['sourceIds'], contains('serebii-gs-cherrygrove-city'));
     expect(mysticWater['coordinateStatus'], 'unverified');
+  });
+
+
+  test('Silver Route 30 headbutt, trainers, hidden Potion and Mr. Pokemon gifts are sourced', () {
+    final locations = audit['locations'] as List<dynamic>;
+    final route = locations.cast<Map<String, dynamic>>().firstWhere(
+      (value) => value['id'] == 'route_30',
+    );
+    expect(route['dataStatus'], 'verified_gen2_silver_encounters_headbutt_trainers_and_items');
+    expect(route['wildPokemonSourceIds'], contains('serebii-gs-route30'));
+    final groups = route['wildPokemonDetails'] as Map<String, dynamic>;
+    expect(groups.keys, containsAll(['headbutt', 'headbutt_special_trees']));
+    expect(groups, hasLength(9));
+    for (final group in groups.entries) {
+      expect(
+        (group.value as List).fold<int>(
+          0,
+          (sum, value) => sum + ((value as Map<String, dynamic>)['ratePercent'] as num).toInt(),
+        ),
+        100,
+        reason: 'route_30/${group.key} must total 100%',
+      );
+    }
+    final regularTrees = (groups['headbutt'] as List).cast<Map<String, dynamic>>();
+    expect(regularTrees.map((value) => value['name']), ['Spearow', 'Heracross', 'Aipom']);
+    expect(regularTrees.map((value) => value['ratePercent']), [50, 30, 20]);
+    final specialTrees = (groups['headbutt_special_trees'] as List).cast<Map<String, dynamic>>();
+    expect(specialTrees.map((value) => value['ratePercent']), [80, 20]);
+
+    expect(route['trainers'], hasLength(5));
+    final joeyRematch = (route['trainers'] as List)
+        .cast<Map<String, dynamic>>()
+        .firstWhere((value) => value['name'] == 'Youngster Joey — rematch 2');
+    expect(joeyRematch['team'].single['name'], 'Raticate');
+    expect(joeyRematch['team'].single['level'], 21);
+    final mikey = (route['trainers'] as List)
+        .cast<Map<String, dynamic>>()
+        .firstWhere((value) => value['name'] == 'Youngster Mikey');
+    expect(mikey['team'].map((value) => value['name']), ['Pidgey', 'Rattata']);
+
+    final items = (route['items'] as List).cast<Map<String, dynamic>>();
+    expect(items, hasLength(5));
+    expect(items.map((value) => value['id']), containsAll([
+      'route_30_potion_hidden_mr_pokemon',
+      'route_30_berry_house_gift',
+      'route_30_mystery_egg',
+      'route_30_pokedex_oak',
+      'route_30_exp_share_red_scale',
+    ]));
+    expect(items.first['category'], 'hidden');
+    expect(items.first['locationDescription'], contains('Itemfinderem'));
+    expect(items.first['coordinateStatus'], 'unverified');
+    for (final item in items) {
+      expect(item['sourceIds'], isNotEmpty);
+      expect(item['availableIn'], contains('gold_silver'));
+      expect(item['coordinateStatus'], 'unverified');
+    }
+    expect(route['berryTrees'], hasLength(2));
   });
 
 }
