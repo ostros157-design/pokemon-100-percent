@@ -161,4 +161,29 @@ void main() {
     );
   });
 
+  test('Silver trainer rosters are source-tracked and have no guessed coordinates', () {
+    final locations = audit['locations'] as List<dynamic>;
+    final trainers = <Map<String, dynamic>>[];
+
+    for (final value in locations) {
+      final location = value as Map<String, dynamic>;
+      final rawTrainers = location['trainers'] as List<dynamic>? ?? const [];
+      for (final trainer in rawTrainers) {
+        final entry = trainer as Map<String, dynamic>;
+        trainers.add(entry);
+        expect(entry['coordinateStatus'], 'unverified');
+        expect(entry['sourceIds'], contains('bulbapedia-gs-walkthrough-parts-3-4'));
+        expect(entry['availableIn'], contains('gold_silver'));
+        expect(entry['team'], isA<List<dynamic>>());
+      }
+    }
+
+    expect(trainers, hasLength(22));
+    expect(
+      locations.where((value) =>
+          ((value as Map<String, dynamic>)['trainers'] as List?)?.isNotEmpty ?? false),
+      hasLength(4),
+    );
+  });
+
 }
