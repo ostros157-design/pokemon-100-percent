@@ -6582,3 +6582,10 @@ Kontrola repozytorium: 64 lokacje, 30 lokacji z tabelami spotkań, 222 grupy spo
 - Źródła: [Serebii Pokéarth — Route 33 Generation II](https://www.serebii.net/pokearth/johto/2nd/route33.shtml) oraz [Bulbapedia — Johto Route 33](https://bulbapedia.bulbagarden.net/wiki/Johto_Route_33). Wszystkie współrzędne pozostają niezweryfikowane.
 - Dodano testy rozdzielenia wariantów, procentów spotkań, składów rewanżowych i źródła drzewka. Łączna liczba wpisów trenerów w audycie wzrosła z 212 do 216; liczba wpisów przedmiotów pozostała 199.
 - Testów Flutter, Flutter Analyzer ani APK nie uruchomiono.
+
+
+### Języki testowe, pobieranie danych gier i pary sprite’ów — 2026-11-11
+- Dodano osobny ekran testowy z wyborem języka: polski, angielski, niemiecki, hiszpański, francuski i japoński. Wybrany kod języka jest zapisywany, a przykładowa etykieta i opis zmieniają się; nie jest to jeszcze globalne tłumaczenie całego interfejsu.
+- Dodano katalog 22 głównych gier i rzeczywiste pobieranie regionalnego indeksu mapy z repozytorium do katalogu danych aplikacji. Ekran map najpierw sprawdza pobrany plik, a gdy go nie ma, używa bezpiecznej kopii wbudowanej w APK. Gry współdzielące region korzystają z jednego pliku mapy.
+- Dodano usługę parowanego pobierania zwykłego i Shiny sprite’a dla Pokémona, gdy jego karta pojawia się w Pokédexie. Obydwa obrazy trafiają do cache; Shiny nie jest już odkładany do momentu ręcznego przełączenia widoku.
+- Nie uruchomiono komendy pub get, testów Flutter, Analyzer ani APK. Wymagana jest kontrola kompilacji oraz sprawdzenie pobierania offline i zachowania cache.
