@@ -6322,3 +6322,11 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Dane są ograniczone do oryginalnego Pokémon Gold/Silver i mają źródła Serebii Pokéarth Generation II. Nie przeniesiono spotkań Crystal ani HG/SS; opisy przedmiotów nie są współrzędnymi, a pozycje na mapie pozostają niezweryfikowane.
 - Dodano testy liczby tabel, sum procentowych, trenerów, przedmiotów, nagród i źródeł; zaktualizowano łączne oczekiwane liczby danych. Testy zapisano, ale nie uruchomiono. Flutter Analyzer i APK również nie zostały uruchomione.
 - Postęp mapy Pokémon Silver pozostaje 40% — etap dodaje dużo danych do dwóch lokacji, ale nie zastępuje brakującej grafiki mapy ani zweryfikowanych współrzędnych i testów uruchomieniowych.
+
+
+### Pokémon Silver / Johto — Route 36 i Route 37 (2026-11-11)
+- Route 36: dodano pięć tabel spotkań Silvera (trawa rano/dzień/noc oraz Headbutt w zwykłych i specjalnych drzewach), dwóch trenerów z drużynami i poziomami, TM08 Rock Smash, czwartkowy Hard Stone od Arthura oraz osobny wpis interaktywnego Sudowoodo Lv. 20.
+- Route 37: dodano pięć tabel spotkań (rano/dzień/noc i dwa warianty Headbutt), dwóch trenerów oraz pięć rzeczy do zdobycia: Magnet od Sunny w niedzielę, trzy Apricorny i ukryty Ether.
+- Dane pochodzą z tabel Serebii Pokéarth Generation II i są ograniczone do Pokémon Gold/Silver. Warianty Crystal i HG/SS nie zostały przeniesione; opisy miejsc nadal nie są dokładnymi współrzędnymi.
+- Rozszerzono testy o obie trasy i zaktualizowano łączne liczby trenerów oraz przedmiotów. Testy Flutter, Analyzer i APK nie zostały uruchomione.
+- Postęp mapy Pokémon Silver pozostaje 40% — wzrosła zawartość danych dwóch kolejnych tras, ale grafika mapy i zweryfikowane współrzędne nadal są główną brakującą częścią.
