@@ -6591,3 +6591,10 @@ Kontrola repozytorium: 64 lokacje, 30 lokacji z tabelami spotkań, 222 grupy spo
 - Nie uruchomiono komendy pub get, testów Flutter, Analyzer ani APK. Wymagana jest kontrola kompilacji oraz sprawdzenie pobierania offline i zachowania cache.
 
 - Dodano test jednostkowy katalogu pakietów: sprawdza liczbę 22 gier, unikalność identyfikatorów i poprawność ścieżek JSON; test nie został uruchomiony.
+
+
+### Pełne pobieranie sprite’ów National Pokédex — 2026-11-11
+- Dodano ręcznie uruchamiane pobieranie wszystkich 1025 numerów National Pokédex: dla każdego pobierany jest zwykły oraz Shiny sprite (maksymalnie 2050 obrazów). Pobieranie odbywa się partiami po sześć Pokémonów równolegle, pokazuje postęp i liczbę błędów; pojedynczy brakujący plik nie zatrzymuje całej operacji.
+- Zmieniono cache na osobny współdzielony magazyn dla sprite’ów z limitem 2500 plików i długim okresem ważności. Widoki Pokédexu, szczegółów i miniatur ewolucji korzystają z tego samego cache, więc pobrane obrazy mogą być wyświetlane offline; system może jednak wyczyścić cache aplikacji.
+- Automatyczne pobieranie pary zwykły/Shiny przy wejściu w kartę Pokémona nadal działa. Pełne pobieranie wszystkich gatunków jest opcjonalne, aby nie zużywać transferu i pamięci bez zgody użytkownika.
+- Dodano testy adresów URL sprite’ów i liczby 1025 gatunków. Testów nie uruchomiono; nie wykonano też pub get, Flutter Analyzer ani APK. Wymagana jest walidacja kompilacji oraz praktyczny test pobrania i użycia cache offline.
