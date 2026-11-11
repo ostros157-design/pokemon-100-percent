@@ -6373,3 +6373,12 @@ Kontrola repozytorium po ostatnich zmianach: JSON poprawnie się parsuje; wszyst
 - Źródła Serebii Pokéarth Generation II. Zapis ograniczony do Gold/Silver; nie dodano elementów remake'owych. Dokładne współrzędne i kratki przedmiotów pozostają niezweryfikowane.
 - Dodano testy sum procentowych spotkań, drużyny Jasmine, 9 trenerów latarni, 9 tabel spotkań i 9 przedmiotów/źródeł. Testy Flutter, Analyzer i APK nie zostały uruchomione.
 - Następny pakiet: Route 40–41 i Cianwood City, w tym dane spotkań morskich i Gym Chucka.
+
+
+### Pokémon Silver / Johto — Route 40, Route 41 i Cianwood City (2026-11-11)
+- Route 40: dodano 9 tabel spotkań obejmujących Surfing, Old Rod, Good Rod i Super Rod (z podziałem na pory dnia) oraz Rock Smash; 4 drużyny pływaków i 3 przedmioty: Sharp Beak od Moniki w poniedziałek, ukryty Hyper Potion i Max Ether.
+- Route 41: dodano 8 tabel spotkań Silvera (Surfing, Old Rod, Good Rod i Super Rod), w tym poprawną różnicę Silvera względem Gold/Crystal przy Surfingu: 70% Tentacool i 30% Tentacruel; wpisano 10 pływaków z drużynami i poziomami.
+- Cianwood City: dodano 9 tabel spotkań (Surfing, wędki i Rock Smash), 5 trenerów Gymu, Chucka z Primeape Lv. 27 i Poliwrath Lv. 30, oraz 6 przedmiotów/nagród: HM02 Fly, SecretPotion, Berry Juice z Shuckle, ukryty Max Ether i Revive oraz TM01 Dynamic Punch.
+- Dane oparte na stronach Serebii Pokéarth Generation II i ograniczone do Pokémon Gold/Silver. Nie dodano postaci Eusine ani innych elementów Crystal-only; współrzędne ukrytych przedmiotów pozostają niezweryfikowane.
+- Dodano testy dla trzech lokacji, sum procentowych, drużyn trenerów i źródeł; zaktualizowano liczniki globalne. Testy Flutter, Analyzer i APK nie zostały uruchomione.
+- Następny etap: Whirl Islands — piętra, spotkania, przedmioty i dostęp do Lugii w Silver.
