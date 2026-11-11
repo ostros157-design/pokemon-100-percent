@@ -60,6 +60,16 @@
       "id": "serebii-gs-union-cave",
       "url": "https://www.serebii.net/pokearth/johto/2nd/unioncave.shtml",
       "scope": "Pokémon Silver Generation II Union Cave floor-by-floor walking and water encounters"
+    },
+    {
+      "id": "serebii-gs-route33",
+      "url": "https://www.serebii.net/pokearth/johto/2nd/route33.shtml",
+      "scope": "Pokémon Silver Generation II Route 33 time-of-day, Headbutt and special-tree encounter rates, trainer and berry-tree listing"
+    },
+    {
+      "id": "serebii-gs-slowpoke-well",
+      "url": "https://www.serebii.net/pokearth/johto/2nd/slowpokewell.shtml",
+      "scope": "Pokémon Silver Generation II Slowpoke Well 1F/B1F walking, surfing, fishing, Rocket Grunt teams and item"
     }
   ],
   "locations": [
@@ -1935,10 +1945,179 @@
           ],
           "coordinateStatus": "unverified",
           "sourceIds": [
-            "bulbapedia-gs-walkthrough-parts-3-4"
+            "serebii-gs-route33"
           ]
         }
-      ]
+      ],
+      "wildPokemonDetails": {
+        "walking_morning": [
+          {
+            "name": "Hoppip",
+            "levelRange": [
+              6,
+              8
+            ],
+            "ratePercent": 35,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Ekans",
+            "levelRange": [
+              7,
+              7
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Spearow",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 20,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Rattata",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 10,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              4,
+              4
+            ],
+            "ratePercent": 5,
+            "method": "Trawa · rano"
+          }
+        ],
+        "walking_day": [
+          {
+            "name": "Hoppip",
+            "levelRange": [
+              6,
+              8
+            ],
+            "ratePercent": 35,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Ekans",
+            "levelRange": [
+              7,
+              7
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Spearow",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 20,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Rattata",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 15,
+            "method": "Trawa · dzień"
+          }
+        ],
+        "walking_night": [
+          {
+            "name": "Zubat",
+            "levelRange": [
+              6,
+              8
+            ],
+            "ratePercent": 40,
+            "method": "Trawa · noc"
+          },
+          {
+            "name": "Rattata",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · noc"
+          },
+          {
+            "name": "Ekans",
+            "levelRange": [
+              7,
+              7
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · noc"
+          }
+        ],
+        "headbutt": [
+          {
+            "name": "Spearow",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 50,
+            "method": "Headbutt"
+          },
+          {
+            "name": "Heracross",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 30,
+            "method": "Headbutt"
+          },
+          {
+            "name": "Aipom",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 20,
+            "method": "Headbutt"
+          }
+        ],
+        "headbutt_special_trees": [
+          {
+            "name": "Spearow",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 80,
+            "method": "Headbutt · specjalne drzewa"
+          },
+          {
+            "name": "Aipom",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 20,
+            "method": "Headbutt · specjalne drzewa"
+          }
+        ]
+      },
+      "wildPokemonSourceIds": [
+        "serebii-gs-route33"
+      ],
+      "wildPokemonStatus": "verified_gen2_silver_rates_and_levels"
     },
     {
       "id": "azalea_town",
@@ -1970,7 +2149,332 @@
         "bulbapedia-johto-region",
         "bulbapedia-route-list"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit"
+      "dataStatus": "topology_index_needs_game_variant_audit",
+      "wildPokemonDetails": {
+        "1F": [
+          {
+            "name": "Zubat",
+            "levelRange": [
+              5,
+              8
+            ],
+            "ratePercent": 85,
+            "method": "1F · chodzenie"
+          },
+          {
+            "name": "Slowpoke",
+            "levelRange": [
+              6,
+              8
+            ],
+            "ratePercent": 15,
+            "method": "1F · chodzenie"
+          }
+        ],
+        "1F_surfing": [
+          {
+            "name": "Slowpoke",
+            "levelRange": [
+              10,
+              24
+            ],
+            "ratePercent": 100,
+            "method": "1F · Surfing"
+          }
+        ],
+        "1F_old_rod": [
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 85,
+            "method": "1F · Old Rod"
+          },
+          {
+            "name": "Goldeen",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "1F · Old Rod"
+          }
+        ],
+        "1F_good_rod": [
+          {
+            "name": "Goldeen",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 65,
+            "method": "1F · Good Rod"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 35,
+            "method": "1F · Good Rod"
+          }
+        ],
+        "1F_super_rod": [
+          {
+            "name": "Goldeen",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 70,
+            "method": "1F · Super Rod"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 20,
+            "method": "1F · Super Rod"
+          },
+          {
+            "name": "Seaking",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 10,
+            "method": "1F · Super Rod"
+          }
+        ],
+        "B1F": [
+          {
+            "name": "Zubat",
+            "levelRange": [
+              19,
+              23
+            ],
+            "ratePercent": 80,
+            "method": "B1F · chodzenie"
+          },
+          {
+            "name": "Slowpoke",
+            "levelRange": [
+              21,
+              23
+            ],
+            "ratePercent": 15,
+            "method": "B1F · chodzenie"
+          },
+          {
+            "name": "Golbat",
+            "levelRange": [
+              23,
+              23
+            ],
+            "ratePercent": 5,
+            "method": "B1F · chodzenie"
+          }
+        ],
+        "B1F_surfing": [
+          {
+            "name": "Slowpoke",
+            "levelRange": [
+              15,
+              24
+            ],
+            "ratePercent": 90,
+            "method": "B1F · Surfing"
+          },
+          {
+            "name": "Slowbro",
+            "levelRange": [
+              20,
+              24
+            ],
+            "ratePercent": 10,
+            "method": "B1F · Surfing"
+          }
+        ],
+        "B1F_old_rod": [
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 85,
+            "method": "B1F · Old Rod"
+          },
+          {
+            "name": "Goldeen",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "B1F · Old Rod"
+          }
+        ],
+        "B1F_good_rod": [
+          {
+            "name": "Goldeen",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 65,
+            "method": "B1F · Good Rod"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 35,
+            "method": "B1F · Good Rod"
+          }
+        ],
+        "B1F_super_rod": [
+          {
+            "name": "Goldeen",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 70,
+            "method": "B1F · Super Rod"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 20,
+            "method": "B1F · Super Rod"
+          },
+          {
+            "name": "Seaking",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 10,
+            "method": "B1F · Super Rod"
+          }
+        ]
+      },
+      "wildPokemonSourceIds": [
+        "serebii-gs-slowpoke-well"
+      ],
+      "wildPokemonStatus": "verified_gen2_silver_rates_and_levels",
+      "items": [
+        {
+          "id": "slowpoke_well_super_potion",
+          "name": "Super Potion",
+          "locationDescription": "1F — przedmiot leży na ziemi; dokładna kratka niezweryfikowana.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-slowpoke-well"
+          ]
+        }
+      ],
+      "trainers": [
+        {
+          "name": "Rocket Grunt 1",
+          "team": [
+            {
+              "name": "Rattata",
+              "level": 9
+            },
+            {
+              "name": "Rattata",
+              "level": 9
+            }
+          ],
+          "note": "1F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-slowpoke-well"
+          ]
+        },
+        {
+          "name": "Rocket Grunt 2",
+          "team": [
+            {
+              "name": "Zubat",
+              "level": 9
+            },
+            {
+              "name": "Ekans",
+              "level": 11
+            }
+          ],
+          "note": "1F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-slowpoke-well"
+          ]
+        },
+        {
+          "name": "Rocket Grunt 3",
+          "team": [
+            {
+              "name": "Rattata",
+              "level": 7
+            },
+            {
+              "name": "Zubat",
+              "level": 9
+            },
+            {
+              "name": "Zubat",
+              "level": 9
+            }
+          ],
+          "note": "1F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-slowpoke-well"
+          ]
+        },
+        {
+          "name": "Rocket Grunt 4",
+          "team": [
+            {
+              "name": "Koffing",
+              "level": 14
+            }
+          ],
+          "note": "1F — lider oddziału Rocket",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-slowpoke-well"
+          ]
+        }
+      ]
     },
     {
       "id": "ilex_forest",
@@ -2969,10 +3473,12 @@
         "route_30",
         "route_31",
         "route_32",
-        "union_cave"
+        "union_cave",
+        "route_33",
+        "slowpoke_well"
       ],
-      "tableCount": 34,
-      "note": "Rates and levels transcribed from Gen II Gold/Silver encounter tables. Tables are separated by time of day, fishing/surfing method and cave floor. All included rate groups sum to 100%; no spatial coordinates are implied."
+      "tableCount": 48,
+      "note": "Partially expanded verified Gen II Silver encounter tables; route and cave tables remain separately keyed by time, method and floor. Each percentage group sums to 100%."
     }
   }
 }
