@@ -1,3 +1,20 @@
+### Lista rzeczy do zrobienia — synchronizacja postępu (2026-11-11)
+
+- **Do zrobienia: synchronizacja postępu między urządzeniami** — wspólna wymiana zapisów złapanych Pokémonów, ukończonych gier, osiągnięć i pozostałych danych profilu między telefonem, komputerem i AYN Thor.
+- Projektować jako funkcję działającą offline lokalnie, z synchronizacją po odzyskaniu połączenia; uwzględnić logowanie/konto, kopię bezpieczeństwa, konflikty równoczesnych zmian i możliwość odzyskania wcześniejszego zapisu.
+- Status: **niezaimplementowane**; dopisano do backlogu, bez deklarowania gotowej synchronizacji.
+
+### Mapa Pokémon Silver — Sprout Tower (2026-11-11)
+
+- Dodano 6 tabel spotkań dla 2F i 3F, osobno rano, w dzień i w nocy; nocne spotkania to Gastly 85% i Rattata 15%, a poranne/dzienne Rattata 100%.
+- Dodano 7 trenerów z pełnymi składami i poziomami: Sage Chow, Nico, Edmond, Jin, Neal, Troy i Sage Li.
+- Dodano 4 przedmioty: Paralyze Heal (1F), X Defend (2F), Escape Rope i Potion (3F). HM05 Flash pozostaje nagrodą Sage Li, a nie przedmiotem do podniesienia.
+- Dane dotyczą Pokémon Silver / Generation II, pochodzą z Serebii Pokéarth; nie mieszano z danymi HeartGold/SoulSilver.
+- Łącznie audyt obejmuje teraz 55 grup spotkań w 8 lokacjach, 33 wpisy trenerów i 13 przedmiotów w 5 lokacjach.
+- Test kontraktowy rozszerzono o 6 grup spotkań, 7 trenerów, 4 przedmioty i źródło Sprout Tower. Test nie został uruchomiony.
+- Współrzędne nadal są niezweryfikowane; Flutter Analyzer, testy i APK nie zostały uruchomione.
+- Szacowany postęp mapy Silver/Johto: **40% ukończone, 60% pozostało**. Nadal brakuje mapy graficznej Silver, dokładnych pozycji obiektów i danych wielu lokacji; wymagana jest też walidacja aplikacji.
+
 ### Mapa Pokémon Silver — Route 33 i Slowpoke Well (2026-11-11)
 
 - Route 33: dodano osobne tabele spotkań dla rana, dnia i nocy oraz dwie metody Headbutt, z uwzględnieniem specjalnych drzew. Uwzględniono wariant Silver, w którym poranne spotkania obejmują m.in. Ekans.
