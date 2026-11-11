@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -9,6 +10,7 @@ import '../data/type_effectiveness.dart';
 import '../data/move_data.dart';
 import '../data/pokemon_learnset_data.dart';
 import 'maps_screen.dart';
+import '../services/pokemon_sprite_cache.dart';
 
 class PokemonDetailsScreen extends StatefulWidget {
   final Pokemon pokemon;
@@ -58,6 +60,7 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
   @override
   void initState() {
     super.initState();
+    unawaited(PokemonSpriteCache.prefetchPair(widget.pokemon.id));
     _loadCaughtStatus();
   }
 
