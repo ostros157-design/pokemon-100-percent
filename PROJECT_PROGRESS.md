@@ -1,3 +1,12 @@
+### Nowe funkcje do zaplanowania — ROM, drugi ekran i Game Assist (2026-11-11)
+
+- **Przypisywanie ROM-u do gry:** przy wyborze gry w aplikacji ma być dostępna opcja wskazania pliku ROM przypisanego do konkretnej gry i zapisania tego przypisania. Na ekranie gry ma pojawić się przycisk uruchomienia jej w wybranym, zgodnym emulatorze; aplikacja nie będzie dostarczać ROM-ów ani pobierać ich z nieautoryzowanych źródeł. Trzeba uwzględnić uprawnienia do plików Androida, ponowne odnajdywanie przeniesionych plików oraz różnice między emulatorami i platformami.
+- **Drugi ekran / współpraca dwóch urządzeń:** możliwość grania na pierwszym urządzeniu i wyświetlania na drugim poradnika zsynchronizowanego z aktualną grą. Użytkownik ma móc udostępnić obraz gry lub połączyć urządzenia w trybie towarzyszącym; przed przechwytywaniem obrazu system musi poprosić o zgodę. Preferować połączenie lokalne i działanie bez internetu, jeśli urządzenia na to pozwalają.
+- **Automatyczna mapa na drugim ekranie:** mapa regionu ma samoczynnie podążać za aktualną lokacją gracza, a w przyszłości — jeśli uda się wiarygodnie odczytać pozycję z obrazu gry lub emulatora — także za jego ruchem. Mapa ma pokazywać, jakie Pokémony można złapać w danym miejscu (metoda, pora i szansa spotkania), trenerów oraz ich drużyny, przedmioty i ważne punkty. Jeśli lokalizacja nie zostanie rozpoznana, aplikacja ma pokazać wybór ręczny, a nie zgadywać.
+- **Pomoc w walkach:** opcjonalne rozpoznawanie ekranu walki i podpowiadanie przeciwnika, jego Pokémonów oraz możliwych ruchów/strategii na podstawie danych gry. To ma być asystent informacyjny — bez automatycznego sterowania grą; wyniki rozpoznawania powinny być oznaczone poziomem pewności i pozwalać na ręczną korektę.
+- **Powiązanie funkcji:** wybór gry ma ustalać aktywny ROM, emulator, wersję gry i zestaw danych poradnika/mapy. Tryb drugiego ekranu powinien móc pokazywać poradnik, automatyczną mapę lub pomoc walki i zapamiętywać preferowany układ dla danej gry.
+- **Status:** wszystkie powyższe elementy są **pomysłami zapisanymi do backlogu — nie są jeszcze zaimplementowane ani przetestowane**. Wykonalność udostępniania obrazu, automatycznego wykrywania lokacji i integracji z emulatorami trzeba sprawdzić osobno dla Androida, Windows i AYN Thor.
+
 ### Lista rzeczy do zrobienia — synchronizacja postępu (2026-11-11)
 
 - **Do zrobienia: synchronizacja postępu między urządzeniami** — wspólna wymiana zapisów złapanych Pokémonów, ukończonych gier, osiągnięć i pozostałych danych profilu między telefonem, komputerem i AYN Thor.
