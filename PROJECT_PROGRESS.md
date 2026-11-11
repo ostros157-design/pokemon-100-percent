@@ -6589,3 +6589,5 @@ Kontrola repozytorium: 64 lokacje, 30 lokacji z tabelami spotkań, 222 grupy spo
 - Dodano katalog 22 głównych gier i rzeczywiste pobieranie regionalnego indeksu mapy z repozytorium do katalogu danych aplikacji. Ekran map najpierw sprawdza pobrany plik, a gdy go nie ma, używa bezpiecznej kopii wbudowanej w APK. Gry współdzielące region korzystają z jednego pliku mapy.
 - Dodano usługę parowanego pobierania zwykłego i Shiny sprite’a dla Pokémona, gdy jego karta pojawia się w Pokédexie. Obydwa obrazy trafiają do cache; Shiny nie jest już odkładany do momentu ręcznego przełączenia widoku.
 - Nie uruchomiono komendy pub get, testów Flutter, Analyzer ani APK. Wymagana jest kontrola kompilacji oraz sprawdzenie pobierania offline i zachowania cache.
+
+- Dodano test jednostkowy katalogu pakietów: sprawdza liczbę 22 gier, unikalność identyfikatorów i poprawność ścieżek JSON; test nie został uruchomiony.
