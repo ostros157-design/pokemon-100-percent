@@ -128,7 +128,7 @@ void main() {
       }
     }
 
-    expect(trees, hasLength(15));
+    expect(trees, hasLength(16));
     expect(
       locations.where((value) =>
           ((value as Map<String, dynamic>)['berryTrees'] as List?)?.isNotEmpty ??
