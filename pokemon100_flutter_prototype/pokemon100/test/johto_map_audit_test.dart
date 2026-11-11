@@ -153,7 +153,7 @@ void main() {
       }
     }
 
-    expect(pickups, hasLength(178));
+    expect(pickups, hasLength(179));
     expect(
       locations.where((value) =>
           ((value as Map<String, dynamic>)['items'] as List?)?.isNotEmpty ?? false),
@@ -943,6 +943,45 @@ void main() {
     expect(cave['wildPokemonDetails'], isNull);
     expect(cave['trainers'], isNull);
     expect(cave['items'], isNull);
+  });
+
+
+  test('Silver Route 29 special-tree encounters and Tuscany Pink Bow gift are sourced', () {
+    final locations = audit['locations'] as List<dynamic>;
+    final route = locations.cast<Map<String, dynamic>>().firstWhere(
+      (value) => value['id'] == 'route_29',
+    );
+    expect(route['dataStatus'], 'verified_gen2_silver_encounters_headbutt_items_and_tuscany_gift');
+    expect(route['wildPokemonSourceIds'], contains('serebii-gs-route29'));
+    final groups = route['wildPokemonDetails'] as Map<String, dynamic>;
+    expect(groups, hasLength(5));
+    for (final group in groups.entries) {
+      expect(
+        (group.value as List).fold<int>(
+          0,
+          (sum, value) => sum + ((value as Map<String, dynamic>)['ratePercent'] as num).toInt(),
+        ),
+        100,
+        reason: 'route_29/${group.key} must total 100%',
+      );
+    }
+    final specialTrees = (groups['headbutt_special_trees'] as List)
+        .cast<Map<String, dynamic>>();
+    expect(specialTrees.map((value) => value['name']), ['Spearow', 'Aipom']);
+    expect(specialTrees.map((value) => value['ratePercent']), [80, 20]);
+    expect(route['trainers'], isNull);
+    final pinkBow = (route['items'] as List)
+        .cast<Map<String, dynamic>>()
+        .singleWhere((value) => value['id'] == 'route29_pink_bow_tuscany');
+    expect(pinkBow['category'], 'gift');
+    expect(pinkBow['availableIn'], containsAll(['gold_silver', 'crystal']));
+    expect(pinkBow['coordinateStatus'], 'unverified');
+    expect(pinkBow['sourceIds'], containsAll(['serebii-gs-route29', 'bulbapedia-johto-route29']));
+    final potion = (route['items'] as List)
+        .cast<Map<String, dynamic>>()
+        .singleWhere((value) => value['id'] == 'route_29_potion_1');
+    expect(potion['sourceIds'], contains('serebii-gs-route29'));
+    expect(route['berryTrees'], hasLength(1));
   });
 
 }
