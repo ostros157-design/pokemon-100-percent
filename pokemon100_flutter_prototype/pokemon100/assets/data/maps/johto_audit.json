@@ -240,6 +240,11 @@
       "id": "serebii-gs-route46",
       "url": "https://www.serebii.net/pokearth/johto/2nd/route46.shtml",
       "scope": "Pokémon Silver Generation II Route 46 morning/day/night walking and Headbutt encounter rates, trainer teams and item pickups"
+    },
+    {
+      "id": "serebii-gs-route29",
+      "url": "https://www.serebii.net/pokearth/johto/2nd/route29.shtml",
+      "scope": "Pokémon Gold/Silver/Crystal Route 29 Generation II walking and Headbutt encounter rates and listed item rewards"
     }
   ],
   "locations": [
@@ -274,7 +279,7 @@
         "bulbapedia-johto-region",
         "bulbapedia-route-list"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit",
+      "dataStatus": "verified_gen2_silver_encounters_headbutt_items_and_tuscany_gift",
       "berryTrees": [
         {
           "id": "route_29_berry_tree_1",
@@ -302,7 +307,23 @@
           ],
           "coordinateStatus": "unverified",
           "sourceIds": [
-            "bulbapedia-gs-walkthrough-parts-1-4"
+            "bulbapedia-gs-walkthrough-parts-1-4",
+            "serebii-gs-route29"
+          ]
+        },
+        {
+          "id": "route29_pink_bow_tuscany",
+          "name": "Pink Bow",
+          "locationDescription": "Prezent od Tuscany, która pojawia się na Route 29 we wtorki po pokonaniu Falknera i zdobyciu Zephyr Badge.",
+          "category": "gift",
+          "availableIn": [
+            "gold_silver",
+            "crystal"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route29",
+            "bulbapedia-johto-route29"
           ]
         }
       ],
@@ -413,10 +434,31 @@
             "ratePercent": 20,
             "method": "Headbutt"
           }
+        ],
+        "headbutt_special_trees": [
+          {
+            "name": "Spearow",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 80,
+            "method": "Headbutt — specjalne drzewa"
+          },
+          {
+            "name": "Aipom",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 20,
+            "method": "Headbutt — specjalne drzewa"
+          }
         ]
       },
       "wildPokemonSourceIds": [
-        "rotomlabs-gs-route29"
+        "rotomlabs-gs-route29",
+        "serebii-gs-route29"
       ],
       "wildPokemonStatus": "verified_gen2_silver_rates_and_levels"
     },
