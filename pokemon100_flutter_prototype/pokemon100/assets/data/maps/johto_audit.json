@@ -125,6 +125,16 @@
       "id": "serebii-gs-national-park",
       "url": "https://www.serebii.net/pokearth/johto/2nd/nationalpark.shtml",
       "scope": "Pokémon Silver Generation II National Park encounters, Bug-Catching Contest encounters, trainers and items"
+    },
+    {
+      "id": "serebii-gs-route36",
+      "url": "https://www.serebii.net/pokearth/johto/2nd/route36.shtml",
+      "scope": "Pokémon Silver Generation II Route 36 walking and Headbutt encounters, Sudowoodo interaction, trainers and items"
+    },
+    {
+      "id": "serebii-gs-route37",
+      "url": "https://www.serebii.net/pokearth/johto/2nd/route37.shtml",
+      "scope": "Pokémon Silver Generation II Route 37 walking and Headbutt encounters, trainers and items"
     }
   ],
   "locations": [
@@ -5336,9 +5346,10 @@
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-johto-region",
-        "bulbapedia-route-list"
+        "bulbapedia-route-list",
+        "serebii-gs-route36"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit",
+      "dataStatus": "verified_gen2_silver_encounters_trainers_items_and_sudowoodo",
       "berryTrees": [
         {
           "id": "route_36_berry_tree_1",
@@ -5352,6 +5363,316 @@
           "coordinateStatus": "unverified",
           "sourceIds": [
             "bulbapedia-berry-tree-generation-ii"
+          ]
+        }
+      ],
+      "wildPokemonDetails": {
+        "walking_morning": [
+          {
+            "name": "Nidoran♂",
+            "levelRange": [
+              12,
+              12
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Nidoran♀",
+            "levelRange": [
+              12,
+              12
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Pidgey",
+            "levelRange": [
+              13,
+              15
+            ],
+            "ratePercent": 25,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Vulpix",
+            "levelRange": [
+              13,
+              13
+            ],
+            "ratePercent": 10,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Stantler",
+            "levelRange": [
+              13,
+              13
+            ],
+            "ratePercent": 5,
+            "method": "Trawa · rano"
+          }
+        ],
+        "walking_day": [
+          {
+            "name": "Nidoran♂",
+            "levelRange": [
+              12,
+              12
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Nidoran♀",
+            "levelRange": [
+              12,
+              12
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Pidgey",
+            "levelRange": [
+              13,
+              15
+            ],
+            "ratePercent": 20,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Vulpix",
+            "levelRange": [
+              13,
+              13
+            ],
+            "ratePercent": 15,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Stantler",
+            "levelRange": [
+              13,
+              13
+            ],
+            "ratePercent": 5,
+            "method": "Trawa · dzień"
+          }
+        ],
+        "walking_night": [
+          {
+            "name": "Nidoran♂",
+            "levelRange": [
+              12,
+              12
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · noc"
+          },
+          {
+            "name": "Nidoran♀",
+            "levelRange": [
+              12,
+              12
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · noc"
+          },
+          {
+            "name": "Hoothoot",
+            "levelRange": [
+              13,
+              15
+            ],
+            "ratePercent": 25,
+            "method": "Trawa · noc"
+          },
+          {
+            "name": "Vulpix",
+            "levelRange": [
+              13,
+              13
+            ],
+            "ratePercent": 10,
+            "method": "Trawa · noc"
+          },
+          {
+            "name": "Stantler",
+            "levelRange": [
+              13,
+              13
+            ],
+            "ratePercent": 5,
+            "method": "Trawa · noc"
+          }
+        ],
+        "headbutt_special_trees": [
+          {
+            "name": "Weedle",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 65,
+            "method": "Headbutt · specjalne drzewa"
+          },
+          {
+            "name": "Kakuna",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "Headbutt · specjalne drzewa"
+          },
+          {
+            "name": "Exeggcute",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "Headbutt · specjalne drzewa"
+          },
+          {
+            "name": "Beedrill",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 5,
+            "method": "Headbutt · specjalne drzewa"
+          }
+        ],
+        "headbutt": [
+          {
+            "name": "Weedle",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 50,
+            "method": "Headbutt"
+          },
+          {
+            "name": "Pineco",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 30,
+            "method": "Headbutt"
+          },
+          {
+            "name": "Exeggcute",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "Headbutt"
+          },
+          {
+            "name": "Beedrill",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 5,
+            "method": "Headbutt"
+          }
+        ]
+      },
+      "wildPokemonSourceIds": [
+        "serebii-gs-route36"
+      ],
+      "wildPokemonStatus": "verified_gen2_silver_rates_and_levels",
+      "trainers": [
+        {
+          "name": "Psychic Mark",
+          "team": [
+            {
+              "name": "Abra",
+              "level": 13
+            },
+            {
+              "name": "Abra",
+              "level": 13
+            },
+            {
+              "name": "Kadabra",
+              "level": 15
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route36"
+          ]
+        },
+        {
+          "name": "School Kid Alan",
+          "team": [
+            {
+              "name": "Tangela",
+              "level": 16
+            }
+          ],
+          "note": "Telefoniczne rewanże: Tangela Lv. 17 + Yanma Lv. 17; Natu Lv. 20, Tangela Lv. 22, Quagsire Lv. 20, Yanma Lv. 25; później silniejsza drużyna.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route36"
+          ]
+        }
+      ],
+      "items": [
+        {
+          "id": "route_36_tm08_rock_smash",
+          "name": "TM08 — Rock Smash",
+          "locationDescription": "Prezent od mężczyzny na prawo od Sudowoodo po wydarzeniu z drzewnym Pokémonem.",
+          "category": "gift",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route36"
+          ]
+        },
+        {
+          "id": "route_36_hard_stone_gift",
+          "name": "Hard Stone",
+          "locationDescription": "Prezent od Arthura w czwartek.",
+          "category": "gift",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route36"
+          ]
+        }
+      ],
+      "specialServices": [
+        {
+          "id": "route_36_sudowoodo_encounter",
+          "name": "Sudowoodo Lv. 20",
+          "category": "interactable_pokemon",
+          "description": "Jednorazowe spotkanie z Sudowoodo blokującym przejście; nie jest zwykłym spotkaniem w trawie.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "serebii-gs-route36"
           ]
         }
       ]
@@ -5368,9 +5689,304 @@
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-johto-region",
-        "bulbapedia-route-list"
+        "bulbapedia-route-list",
+        "serebii-gs-route37"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit"
+      "dataStatus": "verified_gen2_silver_encounters_trainers_and_items",
+      "wildPokemonDetails": {
+        "walking_morning": [
+          {
+            "name": "Ledyba",
+            "levelRange": [
+              13,
+              15
+            ],
+            "ratePercent": 40,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Stantler",
+            "levelRange": [
+              15,
+              15
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Pidgey",
+            "levelRange": [
+              15,
+              15
+            ],
+            "ratePercent": 20,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Vulpix",
+            "levelRange": [
+              14,
+              14
+            ],
+            "ratePercent": 10,
+            "method": "Trawa · rano"
+          }
+        ],
+        "walking_day": [
+          {
+            "name": "Pidgey",
+            "levelRange": [
+              13,
+              15
+            ],
+            "ratePercent": 50,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Stantler",
+            "levelRange": [
+              15,
+              15
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Vulpix",
+            "levelRange": [
+              14,
+              16
+            ],
+            "ratePercent": 15,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Pidgeotto",
+            "levelRange": [
+              15,
+              15
+            ],
+            "ratePercent": 5,
+            "method": "Trawa · dzień"
+          }
+        ],
+        "walking_night": [
+          {
+            "name": "Hoothoot",
+            "levelRange": [
+              13,
+              15
+            ],
+            "ratePercent": 60,
+            "method": "Trawa · noc"
+          },
+          {
+            "name": "Stantler",
+            "levelRange": [
+              15,
+              15
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · noc"
+          },
+          {
+            "name": "Vulpix",
+            "levelRange": [
+              14,
+              14
+            ],
+            "ratePercent": 10,
+            "method": "Trawa · noc"
+          }
+        ],
+        "headbutt_special_trees": [
+          {
+            "name": "Weedle",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 65,
+            "method": "Headbutt · specjalne drzewa"
+          },
+          {
+            "name": "Kakuna",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "Headbutt · specjalne drzewa"
+          },
+          {
+            "name": "Exeggcute",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "Headbutt · specjalne drzewa"
+          },
+          {
+            "name": "Beedrill",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 5,
+            "method": "Headbutt · specjalne drzewa"
+          }
+        ],
+        "headbutt": [
+          {
+            "name": "Weedle",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 50,
+            "method": "Headbutt"
+          },
+          {
+            "name": "Pineco",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 30,
+            "method": "Headbutt"
+          },
+          {
+            "name": "Exeggcute",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "Headbutt"
+          },
+          {
+            "name": "Beedrill",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 5,
+            "method": "Headbutt"
+          }
+        ]
+      },
+      "wildPokemonSourceIds": [
+        "serebii-gs-route37"
+      ],
+      "wildPokemonStatus": "verified_gen2_silver_rates_and_levels",
+      "trainers": [
+        {
+          "name": "Twins Ann & Anne",
+          "team": [
+            {
+              "name": "Clefairy",
+              "level": 16
+            },
+            {
+              "name": "Jigglypuff",
+              "level": 16
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route37"
+          ]
+        },
+        {
+          "name": "Psychic Greg",
+          "team": [
+            {
+              "name": "Drowzee",
+              "level": 17
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route37"
+          ]
+        }
+      ],
+      "items": [
+        {
+          "id": "route_37_magnet_gift",
+          "name": "Magnet",
+          "locationDescription": "Prezent od Sunny w niedzielę.",
+          "category": "gift",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route37"
+          ]
+        },
+        {
+          "id": "route_37_red_apricorn_tree",
+          "name": "Red Apricorn",
+          "locationDescription": "Z drzewa Apricorn.",
+          "category": "apricorn_tree",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route37"
+          ]
+        },
+        {
+          "id": "route_37_blue_apricorn_tree",
+          "name": "Blu Apricorn",
+          "locationDescription": "Z drzewa Apricorn.",
+          "category": "apricorn_tree",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route37"
+          ]
+        },
+        {
+          "id": "route_37_black_apricorn_tree",
+          "name": "Blk Apricorn",
+          "locationDescription": "Z drzewa Apricorn.",
+          "category": "apricorn_tree",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route37"
+          ]
+        },
+        {
+          "id": "route_37_ether_hidden",
+          "name": "Ether",
+          "locationDescription": "Ukryty przedmiot wykrywany przez Itemfinder.",
+          "category": "hidden",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route37"
+          ]
+        }
+      ]
     },
     {
       "id": "ecruteak_city",
