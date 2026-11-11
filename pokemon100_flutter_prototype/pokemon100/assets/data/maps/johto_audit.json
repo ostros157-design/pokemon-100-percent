@@ -185,6 +185,16 @@
       "id": "serebii-gs-whirl-islands",
       "url": "https://www.serebii.net/pokearth/johto/2nd/whirlislands.shtml",
       "scope": "Pokémon Silver Generation II Whirl Islands sections, encounters, items and Lugia"
+    },
+    {
+      "id": "serebii-gs-route42",
+      "url": "https://www.serebii.net/pokearth/johto/2nd/route42.shtml",
+      "scope": "Pokémon Silver Generation II Route 42 time-of-day grass, surfing, fishing, Headbutt encounters, trainers and items"
+    },
+    {
+      "id": "serebii-gs-mt-mortar",
+      "url": "https://www.serebii.net/pokearth/johto/2nd/mt.mortar.shtml",
+      "scope": "Pokémon Silver Generation II Mt. Mortar 1F, 1F-2, 1F-3 and B1F encounters, trainers and item pickups"
     }
   ],
   "locations": [
@@ -10345,9 +10355,386 @@
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-johto-region",
-        "bulbapedia-route-list"
+        "bulbapedia-route-list",
+        "serebii-gs-route42"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit"
+      "dataStatus": "verified_gen2_silver_route42_encounters_trainers_and_items",
+      "wildPokemonDetails": {
+        "walking_morning": [
+          {
+            "name": "Mareep",
+            "levelRange": [
+              13,
+              15
+            ],
+            "ratePercent": 50,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Spearow",
+            "levelRange": [
+              14,
+              16
+            ],
+            "ratePercent": 40,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Flaaffy",
+            "levelRange": [
+              15,
+              17
+            ],
+            "ratePercent": 10,
+            "method": "Trawa · rano"
+          }
+        ],
+        "walking_day": [
+          {
+            "name": "Mareep",
+            "levelRange": [
+              13,
+              15
+            ],
+            "ratePercent": 50,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Spearow",
+            "levelRange": [
+              14,
+              16
+            ],
+            "ratePercent": 40,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Flaaffy",
+            "levelRange": [
+              15,
+              17
+            ],
+            "ratePercent": 10,
+            "method": "Trawa · dzień"
+          }
+        ],
+        "walking_night": [
+          {
+            "name": "Mareep",
+            "levelRange": [
+              13,
+              15
+            ],
+            "ratePercent": 50,
+            "method": "Trawa · noc"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              14,
+              16
+            ],
+            "ratePercent": 40,
+            "method": "Trawa · noc"
+          },
+          {
+            "name": "Flaaffy",
+            "levelRange": [
+              15,
+              17
+            ],
+            "ratePercent": 10,
+            "method": "Trawa · noc"
+          }
+        ],
+        "surfing": [
+          {
+            "name": "Goldeen",
+            "levelRange": [
+              15,
+              24
+            ],
+            "ratePercent": 90,
+            "method": "Surfing"
+          },
+          {
+            "name": "Seaking",
+            "levelRange": [
+              20,
+              24
+            ],
+            "ratePercent": 10,
+            "method": "Surfing"
+          }
+        ],
+        "old_rod": [
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 85,
+            "method": "Old Rod"
+          },
+          {
+            "name": "Goldeen",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "Old Rod"
+          }
+        ],
+        "good_rod": [
+          {
+            "name": "Goldeen",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 65,
+            "method": "Good Rod"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 35,
+            "method": "Good Rod"
+          }
+        ],
+        "super_rod": [
+          {
+            "name": "Goldeen",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 70,
+            "method": "Super Rod"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 20,
+            "method": "Super Rod"
+          },
+          {
+            "name": "Seaking",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 10,
+            "method": "Super Rod"
+          }
+        ],
+        "headbutt_special_trees": [
+          {
+            "name": "Spearow",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 80,
+            "method": "Headbutt · specjalne drzewa"
+          },
+          {
+            "name": "Aipom",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 20,
+            "method": "Headbutt · specjalne drzewa"
+          }
+        ],
+        "headbutt": [
+          {
+            "name": "Spearow",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 50,
+            "method": "Headbutt"
+          },
+          {
+            "name": "Heracross",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 30,
+            "method": "Headbutt"
+          },
+          {
+            "name": "Aipom",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 20,
+            "method": "Headbutt"
+          }
+        ]
+      },
+      "wildPokemonSourceIds": [
+        "serebii-gs-route42"
+      ],
+      "wildPokemonStatus": "verified_gen2_silver_rates_and_levels",
+      "trainers": [
+        {
+          "name": "Fisherman Chris",
+          "team": [
+            {
+              "name": "Qwilfish",
+              "level": 18
+            }
+          ],
+          "note": "Rematche telefoniczne: Qwilfish Lv. 23; Goldeen Lv. 32, Goldeen Lv. 32, Qwilfish Lv. 34.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route42"
+          ]
+        },
+        {
+          "name": "PokéManiac Shane",
+          "team": [
+            {
+              "name": "Nidorina",
+              "level": 16
+            },
+            {
+              "name": "Nidorino",
+              "level": 16
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route42"
+          ]
+        },
+        {
+          "name": "Hiker Benjamin",
+          "team": [
+            {
+              "name": "Diglett",
+              "level": 14
+            },
+            {
+              "name": "Geodude",
+              "level": 14
+            },
+            {
+              "name": "Dugtrio",
+              "level": 16
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route42"
+          ]
+        }
+      ],
+      "items": [
+        {
+          "id": "route_42_ultra_ball",
+          "name": "Ultra Ball",
+          "locationDescription": "Znajdźka na podłodze.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route42"
+          ]
+        },
+        {
+          "id": "route_42_super_potion",
+          "name": "Super Potion",
+          "locationDescription": "Znajdźka na podłodze.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route42"
+          ]
+        },
+        {
+          "id": "route_42_pink_apricorn",
+          "name": "Pink Apricorn",
+          "locationDescription": "Z drzewa Apricorn.",
+          "category": "apricorn_tree",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route42"
+          ]
+        },
+        {
+          "id": "route_42_yellow_apricorn",
+          "name": "Yellow Apricorn",
+          "locationDescription": "Z drzewa Apricorn.",
+          "category": "apricorn_tree",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route42"
+          ]
+        },
+        {
+          "id": "route_42_green_apricorn",
+          "name": "Green Apricorn",
+          "locationDescription": "Z drzewa Apricorn.",
+          "category": "apricorn_tree",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route42"
+          ]
+        },
+        {
+          "id": "route_42_max_potion_hidden",
+          "name": "Max Potion",
+          "locationDescription": "Ukryty przedmiot wykrywany przez Itemfinder.",
+          "category": "hidden",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route42"
+          ]
+        }
+      ]
     },
     {
       "id": "mt_mortar",
@@ -10360,9 +10747,431 @@
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-johto-region",
-        "bulbapedia-route-list"
+        "bulbapedia-route-list",
+        "serebii-gs-mt-mortar"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit"
+      "dataStatus": "verified_gen2_silver_mt_mortar_sections_encounters_trainers_and_items",
+      "wildPokemonDetails": {
+        "1f_walking": [
+          {
+            "name": "Zubat",
+            "levelRange": [
+              13,
+              15
+            ],
+            "ratePercent": 60,
+            "method": "1F · chodzenie"
+          },
+          {
+            "name": "Machop",
+            "levelRange": [
+              14,
+              14
+            ],
+            "ratePercent": 20,
+            "method": "1F · chodzenie"
+          },
+          {
+            "name": "Rattata",
+            "levelRange": [
+              14,
+              16
+            ],
+            "ratePercent": 14,
+            "method": "1F · chodzenie"
+          },
+          {
+            "name": "Geodude",
+            "levelRange": [
+              14,
+              14
+            ],
+            "ratePercent": 5,
+            "method": "1F · chodzenie"
+          },
+          {
+            "name": "Marill",
+            "levelRange": [
+              15,
+              15
+            ],
+            "ratePercent": 1,
+            "method": "1F · chodzenie"
+          }
+        ],
+        "1f_surfing": [
+          {
+            "name": "Goldeen",
+            "levelRange": [
+              15,
+              24
+            ],
+            "ratePercent": 90,
+            "method": "1F · Surfing"
+          },
+          {
+            "name": "Seaking",
+            "levelRange": [
+              20,
+              24
+            ],
+            "ratePercent": 10,
+            "method": "1F · Surfing"
+          }
+        ],
+        "1f_2_walking": [
+          {
+            "name": "Geodude",
+            "levelRange": [
+              13,
+              15
+            ],
+            "ratePercent": 50,
+            "method": "1F-2 · chodzenie"
+          },
+          {
+            "name": "Machop",
+            "levelRange": [
+              13,
+              15
+            ],
+            "ratePercent": 35,
+            "method": "1F-2 · chodzenie"
+          },
+          {
+            "name": "Rattata",
+            "levelRange": [
+              14,
+              14
+            ],
+            "ratePercent": 10,
+            "method": "1F-2 · chodzenie"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              14,
+              14
+            ],
+            "ratePercent": 5,
+            "method": "1F-2 · chodzenie"
+          }
+        ],
+        "1f_2_surfing": [
+          {
+            "name": "Goldeen",
+            "levelRange": [
+              20,
+              29
+            ],
+            "ratePercent": 90,
+            "method": "1F-2 · Surfing"
+          },
+          {
+            "name": "Seaking",
+            "levelRange": [
+              25,
+              29
+            ],
+            "ratePercent": 10,
+            "method": "1F-2 · Surfing"
+          }
+        ],
+        "1f_3_walking": [
+          {
+            "name": "Graveler",
+            "levelRange": [
+              31,
+              31
+            ],
+            "ratePercent": 30,
+            "method": "1F-3 · chodzenie"
+          },
+          {
+            "name": "Machoke",
+            "levelRange": [
+              32,
+              32
+            ],
+            "ratePercent": 30,
+            "method": "1F-3 · chodzenie"
+          },
+          {
+            "name": "Geodude",
+            "levelRange": [
+              31,
+              31
+            ],
+            "ratePercent": 20,
+            "method": "1F-3 · chodzenie"
+          },
+          {
+            "name": "Raticate",
+            "levelRange": [
+              30,
+              30
+            ],
+            "ratePercent": 10,
+            "method": "1F-3 · chodzenie"
+          },
+          {
+            "name": "Machop",
+            "levelRange": [
+              28,
+              28
+            ],
+            "ratePercent": 5,
+            "method": "1F-3 · chodzenie"
+          },
+          {
+            "name": "Golbat",
+            "levelRange": [
+              30,
+              30
+            ],
+            "ratePercent": 5,
+            "method": "1F-3 · chodzenie"
+          }
+        ],
+        "b1f_walking": [
+          {
+            "name": "Zubat",
+            "levelRange": [
+              15,
+              17
+            ],
+            "ratePercent": 60,
+            "method": "B1F · chodzenie"
+          },
+          {
+            "name": "Rattata",
+            "levelRange": [
+              16,
+              16
+            ],
+            "ratePercent": 20,
+            "method": "B1F · chodzenie"
+          },
+          {
+            "name": "Machop",
+            "levelRange": [
+              16,
+              16
+            ],
+            "ratePercent": 10,
+            "method": "B1F · chodzenie"
+          },
+          {
+            "name": "Geodude",
+            "levelRange": [
+              16,
+              16
+            ],
+            "ratePercent": 5,
+            "method": "B1F · chodzenie"
+          },
+          {
+            "name": "Raticate",
+            "levelRange": [
+              16,
+              16
+            ],
+            "ratePercent": 5,
+            "method": "B1F · chodzenie"
+          }
+        ],
+        "b1f_surfing": [
+          {
+            "name": "Goldeen",
+            "levelRange": [
+              15,
+              24
+            ],
+            "ratePercent": 90,
+            "method": "B1F · Surfing"
+          },
+          {
+            "name": "Seaking",
+            "levelRange": [
+              20,
+              24
+            ],
+            "ratePercent": 10,
+            "method": "B1F · Surfing"
+          }
+        ]
+      },
+      "wildPokemonSourceIds": [
+        "serebii-gs-mt-mortar"
+      ],
+      "wildPokemonStatus": "verified_gen2_silver_rates_and_levels",
+      "trainers": [
+        {
+          "name": "Super Nerd Markus",
+          "team": [
+            {
+              "name": "Slowpoke",
+              "level": 19
+            }
+          ],
+          "note": "1F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-mt-mortar"
+          ]
+        },
+        {
+          "name": "Poké Maniac Harrison",
+          "team": [
+            {
+              "name": "Nidoking",
+              "level": 17
+            },
+            {
+              "name": "Nidoqueen",
+              "level": 17
+            }
+          ],
+          "note": "1F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-mt-mortar"
+          ]
+        },
+        {
+          "name": "Black Belt Kiyo",
+          "team": [
+            {
+              "name": "Hitmonlee",
+              "level": 34
+            },
+            {
+              "name": "Hitmonchan",
+              "level": 34
+            }
+          ],
+          "note": "B1F",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-mt-mortar"
+          ]
+        }
+      ],
+      "items": [
+        {
+          "id": "mt_mortar_ether",
+          "name": "Ether",
+          "locationDescription": "1F — znajdźka na podłodze.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-mt-mortar"
+          ]
+        },
+        {
+          "id": "mt_mortar_guard_spec",
+          "name": "Guard Spec.",
+          "locationDescription": "1F — znajdźka na podłodze.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-mt-mortar"
+          ]
+        },
+        {
+          "id": "mt_mortar_hyper_potion",
+          "name": "Hyper Potion",
+          "locationDescription": "1F — ukryty przedmiot wykrywany przez Itemfinder.",
+          "category": "hidden",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-mt-mortar"
+          ]
+        },
+        {
+          "id": "mt_mortar_max_revive",
+          "name": "Max Revive",
+          "locationDescription": "1F-2 — znajdźka na podłodze.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-mt-mortar"
+          ]
+        },
+        {
+          "id": "mt_mortar_max_repel",
+          "name": "Max Repel",
+          "locationDescription": "1F-2 — ukryty przedmiot wykrywany przez Itemfinder.",
+          "category": "hidden",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-mt-mortar"
+          ]
+        },
+        {
+          "id": "mt_mortar_escape_rope",
+          "name": "Escape Rope",
+          "locationDescription": "1F-3 — znajdźka na podłodze.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-mt-mortar"
+          ]
+        },
+        {
+          "id": "mt_mortar_hyper_potion_b1f",
+          "name": "Hyper Potion",
+          "locationDescription": "B1F — znajdźka na podłodze.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-mt-mortar"
+          ]
+        },
+        {
+          "id": "mt_mortar_max_revive_b1f",
+          "name": "Max Revive",
+          "locationDescription": "B1F — ukryty przedmiot wykrywany przez Itemfinder.",
+          "category": "hidden",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-mt-mortar"
+          ]
+        }
+      ]
     },
     {
       "id": "mahogany_town",
