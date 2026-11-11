@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../services/app_appearance.dart';
 import '../services/app_update_service.dart';
 import '../services/notification_service.dart';
+import 'data_download_settings_screen.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
@@ -54,6 +55,15 @@ class _SettingsScreenState extends State<SettingsScreen> {
             subtitle: 'Kolor akcentów, znaczników i elementów wyróżnionych.',
             value: AppAppearance.badgeColor,
             onChanged: AppAppearance.setBadgeColor,
+          ),
+          ListTile(
+            leading: const Icon(Icons.language),
+            title: const Text('Języki testowe i pobieranie danych gier'),
+            subtitle: const Text('Wybierz język testowy i pobierz mapy tylko wybranych gier.'),
+            trailing: const Icon(Icons.chevron_right),
+            onTap: () => Navigator.push(context, MaterialPageRoute(
+              builder: (_) => const DataDownloadSettingsScreen(),
+            )),
           ),
           const Padding(
             padding: EdgeInsets.fromLTRB(16, 12, 16, 8),
