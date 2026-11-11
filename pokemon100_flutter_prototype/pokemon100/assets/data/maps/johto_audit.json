@@ -235,6 +235,11 @@
       "id": "serebii-gs-dragons-den",
       "url": "https://www.serebii.net/pokearth/johto/2nd/dragon%27sden.shtml",
       "scope": "Pokémon Silver Generation II Dragon's Den fishing and surfing encounters, items and Clair reward"
+    },
+    {
+      "id": "serebii-gs-route46",
+      "url": "https://www.serebii.net/pokearth/johto/2nd/route46.shtml",
+      "scope": "Pokémon Silver Generation II Route 46 morning/day/night walking and Headbutt encounter rates, trainer teams and item pickups"
     }
   ],
   "locations": [
@@ -14415,12 +14420,12 @@
         "bulbapedia-johto-region",
         "bulbapedia-route-list"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit",
+      "dataStatus": "verified_gen2_silver_encounters_trainers_and_items",
       "berryTrees": [
         {
           "id": "route_46_berry_tree_1",
           "berry": "PRZCureBerry",
-          "locationDescription": "Na zachód od wejścia do Dark Cave.",
+          "locationDescription": "Na wschodnim drzewie w małym zagajniku na zachód od wejścia do Dark Cave; codzienny zbiór.",
           "availableIn": [
             "gold_silver",
             "crystal"
@@ -14434,7 +14439,7 @@
         {
           "id": "route_46_berry_tree_2",
           "berry": "Berry",
-          "locationDescription": "Na zachód od wejścia do Dark Cave, osobne drzewko.",
+          "locationDescription": "Na zachodnim drzewie w małym zagajniku na zachód od wejścia do Dark Cave; codzienny zbiór.",
           "availableIn": [
             "gold_silver",
             "crystal"
@@ -14443,6 +14448,254 @@
           "coordinateStatus": "unverified",
           "sourceIds": [
             "bulbapedia-berry-tree-generation-ii"
+          ]
+        }
+      ],
+      "wildPokemonSourceIds": [
+        "serebii-gs-route46"
+      ],
+      "wildPokemonStatus": "verified_gen2_silver_rates_and_levels",
+      "wildPokemonDetails": {
+        "walking_morning": [
+          {
+            "name": "Geodude",
+            "levelRange": [
+              2,
+              3
+            ],
+            "ratePercent": 40,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Spearow",
+            "levelRange": [
+              2,
+              3
+            ],
+            "ratePercent": 35,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Rattata",
+            "levelRange": [
+              2,
+              2
+            ],
+            "ratePercent": 20,
+            "method": "Trawa · rano"
+          },
+          {
+            "name": "Jigglypuff",
+            "levelRange": [
+              3,
+              5
+            ],
+            "ratePercent": 5,
+            "method": "Trawa · rano"
+          }
+        ],
+        "walking_day": [
+          {
+            "name": "Geodude",
+            "levelRange": [
+              2,
+              3
+            ],
+            "ratePercent": 40,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Spearow",
+            "levelRange": [
+              2,
+              3
+            ],
+            "ratePercent": 35,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Rattata",
+            "levelRange": [
+              2,
+              2
+            ],
+            "ratePercent": 20,
+            "method": "Trawa · dzień"
+          },
+          {
+            "name": "Jigglypuff",
+            "levelRange": [
+              3,
+              5
+            ],
+            "ratePercent": 5,
+            "method": "Trawa · dzień"
+          }
+        ],
+        "walking_night": [
+          {
+            "name": "Rattata",
+            "levelRange": [
+              2,
+              3
+            ],
+            "ratePercent": 50,
+            "method": "Trawa · noc"
+          },
+          {
+            "name": "Geodude",
+            "levelRange": [
+              2,
+              4
+            ],
+            "ratePercent": 45,
+            "method": "Trawa · noc"
+          },
+          {
+            "name": "Jigglypuff",
+            "levelRange": [
+              3,
+              4
+            ],
+            "ratePercent": 5,
+            "method": "Trawa · noc"
+          }
+        ],
+        "headbutt_special_trees": [
+          {
+            "name": "Spearow",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 80,
+            "method": "Headbutt — specjalne drzewa"
+          },
+          {
+            "name": "Aipom",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 20,
+            "method": "Headbutt — specjalne drzewa"
+          }
+        ],
+        "headbutt": [
+          {
+            "name": "Spearow",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 50,
+            "method": "Headbutt"
+          },
+          {
+            "name": "Heracross",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 30,
+            "method": "Headbutt"
+          },
+          {
+            "name": "Aipom",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 20,
+            "method": "Headbutt"
+          }
+        ]
+      },
+      "trainers": [
+        {
+          "name": "Camper Ted",
+          "team": [
+            {
+              "name": "Mankey",
+              "level": 17
+            }
+          ],
+          "note": "Pojedynek na Route 46",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route46"
+          ]
+        },
+        {
+          "name": "Picnicker Erin",
+          "team": [
+            {
+              "name": "Ponyta",
+              "level": 16
+            },
+            {
+              "name": "Ponyta",
+              "level": 16
+            }
+          ],
+          "note": "Pierwsza walka; późniejsze rewanże PokéGear nie są liczone jako osobni trenerzy",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route46"
+          ]
+        },
+        {
+          "name": "Hiker Bailey",
+          "team": [
+            {
+              "name": "Geodude",
+              "level": 13
+            },
+            {
+              "name": "Geodude",
+              "level": 13
+            },
+            {
+              "name": "Geodude",
+              "level": 13
+            },
+            {
+              "name": "Geodude",
+              "level": 13
+            },
+            {
+              "name": "Geodude",
+              "level": 13
+            }
+          ],
+          "note": "Pojedynek na Route 46",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route46"
+          ]
+        }
+      ],
+      "items": [
+        {
+          "id": "route46_dire_hit",
+          "name": "Dire Hit",
+          "locationDescription": "Na ziemi, w środkowo-zachodniej części trasy, w pobliżu Camper Ted i Picnicker Erin.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route46"
           ]
         }
       ]
