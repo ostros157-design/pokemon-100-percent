@@ -6462,3 +6462,12 @@ Ostatnia kontrola repozytorium: 64 lokacje, 25 lokacji z tabelami spotkań, 184 
 | **Razem** | **100%** | **50%** |
 
 Kontrola repozytorium: 64 lokacje, 27 lokacji z tabelami spotkań, 196 grup spotkań (wszystkie sumują się do 100%), 172 wpisy trenerów w 29 lokacjach, 154 wpisy przedmiotów w 27 lokacjach i 16 drzewek jagodowych. JSON parsuje się poprawnie, a globalne liczniki w pliku testowym zgadzają się z danymi; Flutter testy, Analyzer i APK nadal nie zostały uruchomione. Następny etap: Route 44, Ice Path i Blackthorn City.
+
+
+### Pokémon Silver / Johto — Route 44, Ice Path i Blackthorn City (2026-11-11)
+- Route 44: dodano 7 grup spotkań (trawa, Surfing, trzy wędki, dwa warianty Headbutt), 7 trenerów z poziomami i notatkami o rewanżach telefonicznych oraz 3 przedmioty: Burnt Berry, Max Revive i Ultra Ball. Drzewo Burnt Berry pozostaje osobnym wpisem z indeksu jagód.
+- Ice Path: dodano osobne tabele rano/dzień/noc na 5 poziomach (1F, B1F, B2F, B2F-2, B3F), łącznie 15 grup spotkań z wersją Silver Delibird; 9 przedmiotów, w tym HM07 Waterfall, TM44 Rest i przedmioty ukryte Itemfinderem. Nie dodano trenerów, ponieważ źródło Gen II nie wykazuje tu trenerów.
+- Blackthorn City: dodano 4 tabele spotkań wodnych i wędkowania, 5 trenerów Gymu oraz Clair z Kingdrą Lv.40; Spell Tag jako prezent Santosa w sobotę.
+- Źródła Serebii Pokéarth Generation II; dane ograniczone do Gold/Silver, bez remake'ów. Nie dodano współrzędnych ani niepotwierdzonych pinezek.
+- Dodano testy sum procentowych, pięter, drużyn, itemów i źródeł oraz zaktualizowano globalne liczniki. Testy Flutter, Analyzer i APK nie zostały uruchomione.
+- Następny etap: Route 45, Dragon's Den i Dark Cave.
