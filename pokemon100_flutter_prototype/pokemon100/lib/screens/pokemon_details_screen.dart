@@ -686,6 +686,7 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
                   alignment: Alignment.center,
                   children: [
                     CachedNetworkImage(
+                      cacheManager: PokemonSpriteCache.manager,
                       imageUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${_shiny ? 'shiny/' : ''}${pokemon.id}.png',
                       fit: BoxFit.contain,
                       width: compact ? 112 : 230,
