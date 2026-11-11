@@ -6286,3 +6286,13 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Dodano test sprawdzający 22 wpisy, 4 lokacje, źródła, wersję gry i brak zgadywanych współrzędnych. Test zapisano, ale nie uruchomiono.
 - Źródła: Bulbapedia — Gold/Silver walkthrough, Parts 3–4. Zawartość drużyn i poziomy są oparte na tabelach trenerów w tych częściach.
 - Flutter Analyzer, testy i APK nie zostały uruchomione. Postęp mapy Pokémon Silver pozostaje 35%; nadal brakuje kompletnej grafiki mapy, zweryfikowanych współrzędnych i danych dzikich spotkań.
+
+
+
+### Pokémon Silver / Johto — Route 34 i pierwszy pakiet Goldenrod City (2026-11-11)
+- Route 34: dodano 11 tabel spotkań dla oryginalnego Gold/Silver — trawa, Surf, Old Rod, Good Rod (rano/dzień/noc), Super Rod (rano/dzień/noc) oraz Headbutt w zwykłych i specjalnych drzewach. Każda tabela ma poziomy, metodę i procenty sumujące się do 100%.
+- Route 34: dodano dziewięciu unikalnych trenerów z drużynami i poziomami oraz trzy przedmioty: Soft Sand (prezent po użyciu Surf), Rare Candy i Super Potion (ukryte, wykrywane Itemfinder). Rematche telefoniczne nie są dublowane jako osobne postacie na mapie.
+- Goldenrod City: dodano pięciu trenerów Goldenrod Gym, w tym Whitney (Clefairy Lv. 18, Miltank Lv. 20), oraz sześć nagród/przedmiotów: Bicycle, TM21, TM27, dwie Gold Berry za wymiany i TM45 od Whitney. To pierwszy, częściowy pakiet miasta — Game Corner, Radio Tower, Underground i pozostałe budynki wymagają osobnego opracowania.
+- Źródła: Serebii Pokéarth Generation II — Route 34 i Goldenrod City. Dane ograniczono do Gold/Silver; nie przeniesiono wariantów Crystal ani HG/SS. Opisy nie są współrzędnymi: brak pinezek i położeń na oko.
+- Dodano testy struktury, liczby wpisów, źródeł i sum procentowych. Testy zapisano, ale nie uruchomiono; Flutter Analyzer i APK również nie zostały uruchomione.
+- Postęp mapy Pokémon Silver pozostaje 40% do czasu walidacji oraz uzupełnienia grafiki i współrzędnych.
