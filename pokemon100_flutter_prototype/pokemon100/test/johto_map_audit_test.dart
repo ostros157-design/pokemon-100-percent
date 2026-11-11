@@ -877,7 +877,7 @@ void main() {
     }
   });
 
-  test('Silver Dragon\\'s Den fishing, Dragon Fang and Clair reward are version-specific', () {
+  test('Silver Dragon\'s Den fishing, Dragon Fang and Clair reward are version-specific', () {
     final locations = audit['locations'] as List<dynamic>;
     final den = locations.cast<Map<String, dynamic>>().firstWhere((value) => value['id'] == 'dragons_den');
     expect(den['wildPokemonSourceIds'], contains('serebii-gs-dragons-den'));
