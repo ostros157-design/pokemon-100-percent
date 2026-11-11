@@ -178,7 +178,7 @@ void main() {
       }
     }
 
-    expect(trainers, hasLength(33));
+    expect(trainers, hasLength(34));
     expect(
       locations.where((value) =>
           ((value as Map<String, dynamic>)['trainers'] as List?)?.isNotEmpty ?? false),
@@ -278,6 +278,36 @@ void main() {
       }
     }
     expect(expectedSources, hasLength(5));
+  });
+
+
+  test('Silver Ruins of Alph encounters, puzzle chambers and special reward are sourced', () {
+    final locations = audit['locations'] as List<dynamic>;
+    final ruins = locations.cast<Map<String, dynamic>>().firstWhere(
+      (value) => value['id'] == 'ruins_of_alph',
+    );
+    expect(ruins['wildPokemonSourceIds'], contains('serebii-gs-ruins-of-alph'));
+    final groups = ruins['wildPokemonDetails'] as Map<String, dynamic>;
+    expect(groups, hasLength(6));
+    for (final group in groups.entries) {
+      final entries = group.value as List<dynamic>;
+      expect(
+        entries.fold<int>(0, (sum, value) =>
+            sum + ((value as Map<String, dynamic>)['ratePercent'] as num).toInt()),
+        100,
+        reason: 'ruins_of_alph/${group.key} must total 100%',
+      );
+    }
+    expect(ruins['trainers'], hasLength(1));
+    final nathan = (ruins['trainers'] as List).single as Map<String, dynamic>;
+    expect(nathan['name'], 'Psychic Nathan');
+    expect(nathan['team'].single['level'], 26);
+    expect(nathan['note'], contains('Serebii'));
+    expect(ruins['puzzleChambers'], hasLength(4));
+    expect(ruins['specialRewards'].single['name'], 'Unown Mode');
+    expect(ruins['specialRewards'].single['coordinateStatus'], 'not_a_map_pickup');
+    expect(ruins['coordinateStatus'], 'unverified');
+    expect(ruins['localMapAsset'], isNull);
   });
 
 }
