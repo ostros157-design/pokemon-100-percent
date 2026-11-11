@@ -6313,3 +6313,12 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 - Korekta wersji: usunięto z listy Gold/Silver wymianę Abra na Machopa — ta wymiana dotyczy Pokémon Crystal; w Silver pozostaje Drowzee. Nie dodano towarów ani nagród z HG/SS.
 - Źródła: Serebii Gold/Silver Game Corner; Bulbapedia Goldenrod Department Store (tabele Generation II). Dodano testy liczby wpisów, pięter, źródeł i rozdzielenia wersji. Testy zapisano, ale nie uruchomiono; Flutter Analyzer i APK nie zostały uruchomione.
 - Goldenrod nadal wymaga pełnych danych pozostałych budynków i zweryfikowanej mapy graficznej/współrzędnych. Postęp mapy Pokémon Silver pozostaje 40%.
+
+
+### Pokémon Silver / Johto — Route 35 i National Park (2026-11-11)
+- Route 35: dodano dziewięć tabel spotkań dla Silvera — trawa rano/dzień/noc, Surf, trzy wędki oraz Headbutt w zwykłych i specjalnych drzewach. Każda tabela ma poziomy i procenty sumujące się do 100%.
+- Route 35: dodano dziewięciu trenerów z drużynami i poziomami, opisano telefoniczne rewanże Jugglera Irwina i Bug Catchera Arniego oraz prezent Spearow Lv. 10 z dostawy Kenya. Rewanże nie są liczone jako osobni trenerzy na mapie.
+- National Park: dodano trzy dzienne tabele spotkań, pełną tabelę 10 Pokémonów Konkursu Łapania Robaków, czterech trenerów, cztery przedmioty (Quick Claw, TM28 Dig, Paralyze Heal, ukryty Full Heal) oraz cztery nagrody konkursowe.
+- Dane są ograniczone do oryginalnego Pokémon Gold/Silver i mają źródła Serebii Pokéarth Generation II. Nie przeniesiono spotkań Crystal ani HG/SS; opisy przedmiotów nie są współrzędnymi, a pozycje na mapie pozostają niezweryfikowane.
+- Dodano testy liczby tabel, sum procentowych, trenerów, przedmiotów, nagród i źródeł; zaktualizowano łączne oczekiwane liczby danych. Testy zapisano, ale nie uruchomiono. Flutter Analyzer i APK również nie zostały uruchomione.
+- Postęp mapy Pokémon Silver pozostaje 40% — etap dodaje dużo danych do dwóch lokacji, ale nie zastępuje brakującej grafiki mapy ani zweryfikowanych współrzędnych i testów uruchomieniowych.
