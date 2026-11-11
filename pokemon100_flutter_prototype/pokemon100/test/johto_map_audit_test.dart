@@ -153,11 +153,11 @@ void main() {
       }
     }
 
-    expect(pickups, hasLength(141));
+    expect(pickups, hasLength(154));
     expect(
       locations.where((value) =>
           ((value as Map<String, dynamic>)['items'] as List?)?.isNotEmpty ?? false),
-      hasLength(24),
+      hasLength(27),
     );
   });
 
@@ -178,11 +178,11 @@ void main() {
       }
     }
 
-    expect(trainers, hasLength(156));
+    expect(trainers, hasLength(172));
     expect(
       locations.where((value) =>
           ((value as Map<String, dynamic>)['trainers'] as List?)?.isNotEmpty ?? false),
-      hasLength(26),
+      hasLength(29),
     );
   });
 
@@ -743,6 +743,59 @@ void main() {
     expect(mountain['items'], hasLength(8));
     for (final value in [...mountain['trainers'], ...mountain['items']]) {
       expect(value['sourceIds'], contains('serebii-gs-mt-mortar'));
+      expect(value['availableIn'], contains('gold_silver'));
+    }
+  });
+
+
+  test('Silver Route 43 encounters, trainers, tree and items are sourced', () {
+    final locations = audit['locations'] as List<dynamic>;
+    final route = locations.cast<Map<String, dynamic>>().firstWhere((value) => value['id'] == 'route_43');
+    expect(route['wildPokemonSourceIds'], contains('serebii-gs-route43'));
+    final groups = route['wildPokemonDetails'] as Map<String, dynamic>;
+    expect(groups, hasLength(6));
+    for (final group in groups.entries) {
+      expect((group.value as List).fold<int>(0, (sum, value) => sum + ((value as Map<String, dynamic>)['ratePercent'] as num).toInt()), 100);
+    }
+    expect(route['trainers'], hasLength(6));
+    expect(route['items'], hasLength(2));
+    expect(route['berryTrees'], hasLength(1));
+    for (final value in [...route['trainers'], ...route['items']]) {
+      expect(value['sourceIds'], contains('serebii-gs-route43'));
+      expect(value['availableIn'], contains('gold_silver'));
+    }
+  });
+
+  test('Silver Lake of Rage water, Headbutt, Red Gyarados, trainers and items are sourced', () {
+    final locations = audit['locations'] as List<dynamic>;
+    final lake = locations.cast<Map<String, dynamic>>().firstWhere((value) => value['id'] == 'lake_of_rage');
+    expect(lake['wildPokemonSourceIds'], contains('serebii-gs-lake-of-rage'));
+    final groups = lake['wildPokemonDetails'] as Map<String, dynamic>;
+    expect(groups, hasLength(6));
+    for (final group in groups.entries) {
+      expect((group.value as List).fold<int>(0, (sum, value) => sum + ((value as Map<String, dynamic>)['ratePercent'] as num).toInt()), 100);
+    }
+    expect(lake['trainers'], hasLength(4));
+    expect(lake['items'], hasLength(9));
+    expect(lake['specialServices'].first['name'], 'Red Gyarados Lv. 30');
+    for (final value in [...lake['trainers'], ...lake['items'], ...lake['specialServices']]) {
+      expect(value['sourceIds'], contains('serebii-gs-lake-of-rage'));
+      expect(value['availableIn'], contains('gold_silver'));
+    }
+  });
+
+  test('Silver Mahogany Town Gym, story item and shop phases are separated', () {
+    final locations = audit['locations'] as List<dynamic>;
+    final town = locations.cast<Map<String, dynamic>>().firstWhere((value) => value['id'] == 'mahogany_town');
+    expect(town['trainers'], hasLength(6));
+    expect(town['items'], hasLength(2));
+    expect(town['shopStock'], hasLength(13));
+    expect((town['shopStock'] as List).where((value) => value['phase'] == 'before_team_rocket_defeated'), hasLength(4));
+    expect((town['shopStock'] as List).where((value) => value['phase'] == 'after_team_rocket_defeated'), hasLength(9));
+    final pryce = (town['trainers'] as List).cast<Map<String, dynamic>>().firstWhere((value) => value['name'] == 'Gym Leader Pryce');
+    expect(pryce['team'].last['name'], 'Piloswine');
+    for (final value in [...town['trainers'], ...town['items'], ...town['shopStock']]) {
+      expect(value['sourceIds'], contains('bulbapedia-gs-mahogany-town'));
       expect(value['availableIn'], contains('gold_silver'));
     }
   });
