@@ -1,3 +1,13 @@
+### Mapa Pokémon Silver — dzikie spotkania Johto (2026-11-11)
+
+- Dodano zweryfikowane tabele dzikich spotkań dla Route 29, Route 30, Route 31, Route 32 oraz Union Cave.
+- Łącznie zapisano **34 grupy spotkań**: trawa rozdzielona na rano/dzień/noc, surfing, Old Rod, Good Rod, Super Rod, Headbutt oraz osobne piętra 1F/B1F/B2F Union Cave.
+- Każda tabela przechowuje nazwę Pokémona, zakres poziomów, procent oraz metodę spotkania; każda grupa procentowa została sprawdzona i sumuje się do 100%.
+- Dane są oznaczone jako Pokémon Silver (Generation II); Route 29–31 oparte na tabelach RotomLabs Gold/Silver, Route 32 i Union Cave na Serebii Pokéarth Generation II.
+- Dodano źródła do audytu oraz test kontraktowy sprawdzający 5 lokacji, obecność źródeł, strukturę wpisów i sumy procentów.
+- Dokładne współrzędne spotkań nie zostały dodane; wpisy opisują wyłącznie metodę, porę i poziomy. Nie dodano danych HeartGold/SoulSilver do tej partii.
+- **Nie uruchomiono Flutter Analyzer, flutter test ani APK** — test jest zapisany, ale wymaga uruchomienia na komputerze z projektem.
+
 ### Audyt mapy Let’s Go Kanto — ujednolicenie obiektów i budynków (2026-11-09)
 
 - Ujednolicono strukturę pól `features` w audycie `lets_go_kanto_audit.json`: 68 wcześniejszych wpisów tekstowych zamieniono na obiekty z identyfikatorem, nazwą, kategorią, statusem i odwołaniami do źródeł lokacji.
