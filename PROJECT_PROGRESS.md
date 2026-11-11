@@ -20,13 +20,25 @@
 - Projektować jako funkcję działającą offline lokalnie, z synchronizacją po odzyskaniu połączenia; uwzględnić logowanie/konto, kopię bezpieczeństwa, konflikty równoczesnych zmian i możliwość odzyskania wcześniejszego zapisu.
 - Status: **niezaimplementowane**; dopisano do backlogu, bez deklarowania gotowej synchronizacji.
 
+
+### Mapa Pokémon Silver — Ruins of Alph (2026-11-11)
+
+- Dodano 6 tabel spotkań: Natu i Smeargle na zewnątrz, Wooper i Quagsire podczas Surf, trzy poziomy wędkowania oraz Unown Lv. 5 po rozwiązaniu co najmniej jednej układanki. Każda grupa sumuje się do 100%.
+- Dodano Psychic Nathan z Girafarigiem Lv. 26. Źródła różnią się co do poziomu: walkthrough Bulbapedia podaje Lv. 26, a Serebii Lv. 16; wpis zachowuje wartość z walkthrough i jawnie opisuje rozbieżność.
+- Zapisano cztery komnaty zagadek i ich Pokémony/odblokowywane formy Unown: Kabuto (A–K), Aerodactyl (S–W), Ho-Oh (X–Z), Omanyte (L–R), wraz z warunkami dostępu.
+- Dodano nagrodę fabularną Unown Mode po złapaniu trzech różnych form Unown. Jest oznaczona jako ulepszenie Pokédexu, nie jako przedmiot do podniesienia.
+- Dane pochodzą z Serebii Pokéarth Generation II i walkthrough Pokémon Gold/Silver w Bulbapedii. Nie dodano współrzędnych ani pinezek; grafika lokacji nadal nie jest podłączona.
+- Test kontraktowy sprawdza 6 grup spotkań, trenera, cztery komnaty, nagrodę i brak fikcyjnych współrzędnych. Test zapisano, ale go nie uruchomiono; Flutter Analyzer i APK również nie zostały uruchomione.
+- Łącznie audyt Johto obejmuje teraz 61 grup spotkań w 9 lokacjach, 34 wpisy trenerów i 13 zwykłych przedmiotów w 5 lokacjach.
+- Szacowany postęp mapy Silver/Johto pozostaje **40% ukończone, 60% pozostało** — przybyły dane jednej lokacji, ale nadal brakuje grafiki mapy Silver, zweryfikowanych współrzędnych i danych większości regionu.
+
 ### Mapa Pokémon Silver — Sprout Tower (2026-11-11)
 
 - Dodano 6 tabel spotkań dla 2F i 3F, osobno rano, w dzień i w nocy; nocne spotkania to Gastly 85% i Rattata 15%, a poranne/dzienne Rattata 100%.
 - Dodano 7 trenerów z pełnymi składami i poziomami: Sage Chow, Nico, Edmond, Jin, Neal, Troy i Sage Li.
 - Dodano 4 przedmioty: Paralyze Heal (1F), X Defend (2F), Escape Rope i Potion (3F). HM05 Flash pozostaje nagrodą Sage Li, a nie przedmiotem do podniesienia.
 - Dane dotyczą Pokémon Silver / Generation II, pochodzą z Serebii Pokéarth; nie mieszano z danymi HeartGold/SoulSilver.
-- Łącznie audyt obejmuje teraz 55 grup spotkań w 8 lokacjach, 33 wpisy trenerów i 13 przedmiotów w 5 lokacjach.
+- Łącznie audyt obejmuje teraz 61 grup spotkań w 9 lokacjach, 34 wpisy trenerów i 13 przedmiotów w 5 lokacjach.
 - Test kontraktowy rozszerzono o 6 grup spotkań, 7 trenerów, 4 przedmioty i źródło Sprout Tower. Test nie został uruchomiony.
 - Współrzędne nadal są niezweryfikowane; Flutter Analyzer, testy i APK nie zostały uruchomione.
 - Szacowany postęp mapy Silver/Johto: **40% ukończone, 60% pozostało**. Nadal brakuje mapy graficznej Silver, dokładnych pozycji obiektów i danych wielu lokacji; wymagana jest też walidacja aplikacji.
