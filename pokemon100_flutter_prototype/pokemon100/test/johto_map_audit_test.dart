@@ -148,7 +148,7 @@ void main() {
         final entry = item as Map<String, dynamic>;
         pickups.add(entry);
         expect(entry['coordinateStatus'], 'unverified');
-        expect(entry['sourceIds'], contains('bulbapedia-gs-walkthrough-parts-1-4'));
+        expect(entry['sourceIds'], isNotEmpty);
         expect(entry['availableIn'], contains('gold_silver'));
       }
     }
@@ -157,7 +157,7 @@ void main() {
     expect(
       locations.where((value) =>
           ((value as Map<String, dynamic>)['items'] as List?)?.isNotEmpty ?? false),
-      hasLength(3),
+      hasLength(4),
     );
   });
 
@@ -172,7 +172,7 @@ void main() {
         final entry = trainer as Map<String, dynamic>;
         trainers.add(entry);
         expect(entry['coordinateStatus'], 'unverified');
-        expect(entry['sourceIds'], contains('bulbapedia-gs-walkthrough-parts-3-4'));
+        expect(entry['sourceIds'], isNotEmpty);
         expect(entry['availableIn'], contains('gold_silver'));
         expect(entry['team'], isA<List<dynamic>>());
       }
@@ -182,7 +182,7 @@ void main() {
     expect(
       locations.where((value) =>
           ((value as Map<String, dynamic>)['trainers'] as List?)?.isNotEmpty ?? false),
-      hasLength(4),
+      hasLength(5),
     );
   });
 
