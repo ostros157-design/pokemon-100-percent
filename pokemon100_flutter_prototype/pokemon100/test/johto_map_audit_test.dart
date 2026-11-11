@@ -1030,4 +1030,49 @@ void main() {
     expect(town['trainers'], isNull);
   });
 
+
+  test('Silver Cherrygrove City fishing, Rival variants and Mystic Water are sourced', () {
+    final locations = audit['locations'] as List<dynamic>;
+    final city = locations.cast<Map<String, dynamic>>().firstWhere(
+      (value) => value['id'] == 'cherrygrove_city',
+    );
+    expect(city['dataStatus'], 'verified_gen2_silver_water_encounters_rival_and_gift');
+    expect(city['wildPokemonSourceIds'], contains('serebii-gs-cherrygrove-city'));
+    final groups = city['wildPokemonDetails'] as Map<String, dynamic>;
+    expect(groups, hasLength(8));
+    for (final group in groups.entries) {
+      expect(
+        (group.value as List).fold<int>(
+          0,
+          (sum, value) => sum + ((value as Map<String, dynamic>)['ratePercent'] as num).toInt(),
+        ),
+        100,
+        reason: 'cherrygrove_city/${group.key} must total 100%',
+      );
+    }
+    expect(city['trainers'], hasLength(3));
+    final rivalNames = (city['trainers'] as List)
+        .cast<Map<String, dynamic>>()
+        .map((value) => value['name'])
+        .toSet();
+    expect(rivalNames, containsAll([
+      'Rival Silver — Chikorita',
+      'Rival Silver — Cyndaquil',
+      'Rival Silver — Totodile',
+    ]));
+    for (final rival in city['trainers']) {
+      expect(rival['team'], hasLength(1));
+      expect(rival['team'].single['level'], 5);
+      expect(rival['sourceIds'], contains('serebii-gs-cherrygrove-city'));
+      expect(rival['coordinateStatus'], 'unverified');
+    }
+    final mysticWater = (city['items'] as List).cast<Map<String, dynamic>>().single;
+    expect(mysticWater['name'], 'Mystic Water');
+    expect(mysticWater['category'], 'gift');
+    expect(mysticWater['locationDescription'], contains('Surf'));
+    expect(mysticWater['availableIn'], containsAll(['gold_silver', 'crystal']));
+    expect(mysticWater['sourceIds'], contains('serebii-gs-cherrygrove-city'));
+    expect(mysticWater['coordinateStatus'], 'unverified');
+  });
+
 }
