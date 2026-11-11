@@ -6552,3 +6552,13 @@ Kontrola repozytorium: 64 lokacje, 30 lokacji z tabelami spotkań, 222 grupy spo
 - Dodano testy grup Headbutt, składów trenerów, ukrytej Potion i prezentów; globalny licznik wzrósł do 191 wpisów przedmiotów w 36 lokacjach i 203 wpisów trenerów w 35 lokacjach. Kontrola JSON wykazała 64 lokacje, 35 lokacji ze spotkaniami, 253 grupy spotkań (wszystkie sumują się do 100%), 203 wpisy trenerów w 35 lokacjach, 191 wpisów przedmiotów w 36 lokacjach i 16 drzewek jagodowych.
 - Testów Flutter, Flutter Analyzer ani APK nie uruchomiono; postęp mapy pozostaje szacunkowo **53%**. Nadal brakuje grafiki mapy, zweryfikowanych współrzędnych i uruchomionych testów.
 - Następny obszar: Route 31. Dark Cave nadal pozostaje pominięta zgodnie z decyzją użytkownika.
+
+ 
+## Johto — Route 31 (Generation II, Gold/Silver)
+
+- Uzupełniono dwóch rewanżowych składów Bug Catcher Wade'a przez Pokégear: Metapod ×3 + Kakuna oraz Butterfree ×3 + Beedrill. Wpisy są przypisane do Gold/Silver; nie dopisano dodatkowych rewanżów z Crystal ani trenerów z HGSS.
+- Dodano Antidote przy tabliczce koło wejścia do Dark Cave, Poké Ball na południe od stawu oraz TM50 (Nightmare) jako nagrodę od mężczyzny po dostarczeniu Spearowa Kenya z Route 35. Istniejące drzewko Bitter Berry pozostaje osobnym wpisem.
+- Istniejące tabele spotkań zachowano bez zmian; dotyczą obecnie wariantu Silver i zawierają grupy chodzenia, surfowania, wędkowania oraz Headbutt. Dane dla Gold i Crystal wymagają osobnego rozdzielenia wariantów, zanim będą oznaczone jako kompletne.
+- Źródła: [Serebii Pokéarth — Route 31 Generation II](https://www.serebii.net/pokearth/johto/2nd/route31.shtml), [Bulbapedia — Gold/Silver walkthrough, Route 31](https://bulbapedia.bulbagarden.net/wiki/Walkthrough:Pok%C3%A9mon_Gold_and_Silver/Part_3) oraz [RotomLabs — Gold/Silver Route 31](https://rotomlabs.net/locations/gold-silver/route-31). Wszystkie współrzędne trenerów i przedmiotów pozostają niezweryfikowane; Dark Cave nie została zmieniona.
+- Dodano test obejmujący rematche, przedmioty, źródła i sumy procentów spotkań. Liczniki audytu: 64 lokacje, 253 grupy spotkań, 205 wpisów trenerów, 194 wpisy przedmiotów i 16 drzewek jagodowych.
+- Testów Flutter, Flutter Analyzer ani APK nie uruchomiono.
