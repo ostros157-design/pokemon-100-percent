@@ -12,6 +12,9 @@ class GameDataPackage {
 
 class GameDataDownloadService {
   static const packages = <GameDataPackage>[
+    GameDataPackage('fire_red_leaf_green','Pokémon FireRed / LeafGreen','assets/data/maps/kanto_audit.json','kanto_audit.json'),
+    GameDataPackage('omega_ruby_alpha_sapphire','Pokémon Omega Ruby / Alpha Sapphire','assets/data/maps/hoenn_audit.json','hoenn_audit.json'),
+    GameDataPackage('brilliant_diamond_shining_pearl','Pokémon Brilliant Diamond / Shining Pearl','assets/data/maps/sinnoh_audit.json','sinnoh_audit.json'),
     GameDataPackage('red_blue','Pokémon Red / Blue','assets/data/maps/kanto_audit.json','kanto_audit.json'),
     GameDataPackage('yellow','Pokémon Yellow','assets/data/maps/kanto_audit.json','kanto_audit.json'),
     GameDataPackage('gold_silver','Pokémon Gold / Silver','assets/data/maps/johto_audit.json','johto_audit.json'),
