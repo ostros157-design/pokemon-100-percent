@@ -210,6 +210,21 @@
       "id": "serebii-gs-lake-of-rage",
       "url": "https://www.serebii.net/pokearth/johto/2nd/lakeofrage.shtml",
       "scope": "Pokémon Silver Generation II Lake of Rage water and fishing encounters, Headbutt, Red Gyarados, trainers and items"
+    },
+    {
+      "id": "serebii-gs-route44",
+      "url": "https://www.serebii.net/pokearth/johto/2nd/route44.shtml",
+      "scope": "Pokémon Silver Generation II Route 44 encounters, fishing, Headbutt, trainers and floor items"
+    },
+    {
+      "id": "serebii-gs-ice-path",
+      "url": "https://www.serebii.net/pokearth/johto/2nd/icepath.shtml",
+      "scope": "Pokémon Silver Generation II Ice Path 1F, B1F, B2F, B2F-2, B3F encounter tables and items"
+    },
+    {
+      "id": "serebii-gs-blackthorn-city",
+      "url": "https://www.serebii.net/pokearth/johto/2nd/blackthorncity.shtml",
+      "scope": "Pokémon Silver Generation II Blackthorn City fishing, Santos gift and Gym trainer teams"
     }
   ],
   "locations": [
@@ -12334,9 +12349,10 @@
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-johto-region",
-        "bulbapedia-route-list"
+        "bulbapedia-route-list",
+        "serebii-gs-route44"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit",
+      "dataStatus": "verified_gen2_silver_encounters_trainers_items",
       "berryTrees": [
         {
           "id": "route_44_berry_tree_1",
@@ -12350,6 +12366,374 @@
           "coordinateStatus": "unverified",
           "sourceIds": [
             "bulbapedia-berry-tree-generation-ii"
+          ]
+        }
+      ],
+      "wildPokemonDetails": {
+        "walking": [
+          {
+            "name": "Weepinbell",
+            "levelRange": [
+              22,
+              24
+            ],
+            "ratePercent": 35,
+            "method": "Trawa"
+          },
+          {
+            "name": "Tangela",
+            "levelRange": [
+              23,
+              23
+            ],
+            "ratePercent": 30,
+            "method": "Trawa"
+          },
+          {
+            "name": "Bellsprout",
+            "levelRange": [
+              22,
+              22
+            ],
+            "ratePercent": 20,
+            "method": "Trawa"
+          },
+          {
+            "name": "Lickitung",
+            "levelRange": [
+              24,
+              26
+            ],
+            "ratePercent": 15,
+            "method": "Trawa"
+          }
+        ],
+        "surfing": [
+          {
+            "name": "Poliwag",
+            "levelRange": [
+              15,
+              24
+            ],
+            "ratePercent": 90,
+            "method": "Surfing"
+          },
+          {
+            "name": "Poliwhirl",
+            "levelRange": [
+              20,
+              24
+            ],
+            "ratePercent": 10,
+            "method": "Surfing"
+          }
+        ],
+        "old_rod": [
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 85,
+            "method": "Old Rod"
+          },
+          {
+            "name": "Poliwag",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "Old Rod"
+          }
+        ],
+        "good_rod": [
+          {
+            "name": "Poliwag",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 65,
+            "method": "Good Rod"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 35,
+            "method": "Good Rod"
+          }
+        ],
+        "super_rod": [
+          {
+            "name": "Poliwag",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 70,
+            "method": "Super Rod"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 20,
+            "method": "Super Rod"
+          },
+          {
+            "name": "Remoraid",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 10,
+            "method": "Super Rod"
+          }
+        ],
+        "headbutt_special_trees": [
+          {
+            "name": "Spearow",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 80,
+            "method": "Headbutt · specjalne drzewa"
+          },
+          {
+            "name": "Aipom",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 20,
+            "method": "Headbutt · specjalne drzewa"
+          }
+        ],
+        "headbutt": [
+          {
+            "name": "Spearow",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 50,
+            "method": "Headbutt"
+          },
+          {
+            "name": "Heracross",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 30,
+            "method": "Headbutt"
+          },
+          {
+            "name": "Aipom",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 20,
+            "method": "Headbutt"
+          }
+        ]
+      },
+      "wildPokemonSourceIds": [
+        "serebii-gs-route44"
+      ],
+      "wildPokemonStatus": "verified_gen2_silver_rates_and_levels",
+      "trainers": [
+        {
+          "name": "Psychic Phil",
+          "team": [
+            {
+              "name": "Natu",
+              "level": 24
+            },
+            {
+              "name": "Kadabra",
+              "level": 26
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route44"
+          ]
+        },
+        {
+          "name": "Fisherman Edgar",
+          "team": [
+            {
+              "name": "Remoraid",
+              "level": 25
+            },
+            {
+              "name": "Remoraid",
+              "level": 25
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route44"
+          ]
+        },
+        {
+          "name": "Cool Trainer Cybil",
+          "team": [
+            {
+              "name": "Butterfree",
+              "level": 25
+            },
+            {
+              "name": "Bellossom",
+              "level": 25
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route44"
+          ]
+        },
+        {
+          "name": "Cool Trainer Allen",
+          "team": [
+            {
+              "name": "Charmeleon",
+              "level": 27
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route44"
+          ]
+        },
+        {
+          "name": "PokéManiac Zach",
+          "team": [
+            {
+              "name": "Rhyhorn",
+              "level": 27
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route44"
+          ]
+        },
+        {
+          "name": "Fisherman Wilton",
+          "team": [
+            {
+              "name": "Goldeen",
+              "level": 23
+            },
+            {
+              "name": "Goldeen",
+              "level": 23
+            },
+            {
+              "name": "Seaking",
+              "level": 25
+            }
+          ],
+          "note": "Telefoniczne rewanże: drużyny Goldeen 29/Goldeen 29/Seaking 32 oraz Goldeen 31/Seaking 35/Seaking 35.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route44"
+          ]
+        },
+        {
+          "name": "Bird Keeper Vance",
+          "team": [
+            {
+              "name": "Pidgeotto",
+              "level": 25
+            },
+            {
+              "name": "Pidgeotto",
+              "level": 25
+            }
+          ],
+          "note": "Telefoniczne rewanże: Pidgeotto 31/Pidgeotto 33 oraz Pidgeotto 35/Pidgeot 37.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route44"
+          ]
+        }
+      ],
+      "items": [
+        {
+          "id": "route_44_burnt_berry",
+          "name": "Burnt Berry",
+          "locationDescription": "Znajdźka na podłodze.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route44"
+          ]
+        },
+        {
+          "id": "route_44_max_revive",
+          "name": "Max Revive",
+          "locationDescription": "Znajdźka na podłodze.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route44"
+          ]
+        },
+        {
+          "id": "route_44_ultra_ball",
+          "name": "Ultra Ball",
+          "locationDescription": "Znajdźka na podłodze.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route44"
           ]
         }
       ]
@@ -12366,9 +12750,795 @@
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-johto-region",
-        "bulbapedia-route-list"
+        "bulbapedia-route-list",
+        "serebii-gs-ice-path"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit"
+      "dataStatus": "verified_gen2_silver_floor_encounters_and_items",
+      "wildPokemonDetails": {
+        "1f_morning": [
+          {
+            "name": "Swinub",
+            "levelRange": [
+              21,
+              23
+            ],
+            "ratePercent": 40,
+            "method": "1F · chodzenie"
+          },
+          {
+            "name": "Golbat",
+            "levelRange": [
+              22,
+              22
+            ],
+            "ratePercent": 30,
+            "method": "1F · chodzenie"
+          },
+          {
+            "name": "Delibird",
+            "levelRange": [
+              22,
+              22
+            ],
+            "ratePercent": 20,
+            "method": "1F · chodzenie"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              22,
+              22
+            ],
+            "ratePercent": 5,
+            "method": "1F · chodzenie"
+          },
+          {
+            "name": "Jynx",
+            "levelRange": [
+              22,
+              22
+            ],
+            "ratePercent": 5,
+            "method": "1F · chodzenie"
+          }
+        ],
+        "1f_day": [
+          {
+            "name": "Swinub",
+            "levelRange": [
+              21,
+              23
+            ],
+            "ratePercent": 40,
+            "method": "1F · chodzenie"
+          },
+          {
+            "name": "Golbat",
+            "levelRange": [
+              22,
+              22
+            ],
+            "ratePercent": 30,
+            "method": "1F · chodzenie"
+          },
+          {
+            "name": "Delibird",
+            "levelRange": [
+              22,
+              22
+            ],
+            "ratePercent": 20,
+            "method": "1F · chodzenie"
+          },
+          {
+            "name": "Jynx",
+            "levelRange": [
+              20,
+              22
+            ],
+            "ratePercent": 10,
+            "method": "1F · chodzenie"
+          }
+        ],
+        "1f_night": [
+          {
+            "name": "Swinub",
+            "levelRange": [
+              21,
+              23
+            ],
+            "ratePercent": 40,
+            "method": "1F · chodzenie"
+          },
+          {
+            "name": "Golbat",
+            "levelRange": [
+              22,
+              22
+            ],
+            "ratePercent": 30,
+            "method": "1F · chodzenie"
+          },
+          {
+            "name": "Delibird",
+            "levelRange": [
+              22,
+              22
+            ],
+            "ratePercent": 20,
+            "method": "1F · chodzenie"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              22,
+              22
+            ],
+            "ratePercent": 5,
+            "method": "1F · chodzenie"
+          },
+          {
+            "name": "Jynx",
+            "levelRange": [
+              22,
+              22
+            ],
+            "ratePercent": 5,
+            "method": "1F · chodzenie"
+          }
+        ],
+        "b1f_morning": [
+          {
+            "name": "Swinub",
+            "levelRange": [
+              21,
+              23
+            ],
+            "ratePercent": 40,
+            "method": "B1F · chodzenie"
+          },
+          {
+            "name": "Golbat",
+            "levelRange": [
+              22,
+              22
+            ],
+            "ratePercent": 30,
+            "method": "B1F · chodzenie"
+          },
+          {
+            "name": "Delibird",
+            "levelRange": [
+              22,
+              22
+            ],
+            "ratePercent": 20,
+            "method": "B1F · chodzenie"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              22,
+              22
+            ],
+            "ratePercent": 5,
+            "method": "B1F · chodzenie"
+          },
+          {
+            "name": "Jynx",
+            "levelRange": [
+              22,
+              22
+            ],
+            "ratePercent": 5,
+            "method": "B1F · chodzenie"
+          }
+        ],
+        "b1f_day": [
+          {
+            "name": "Swinub",
+            "levelRange": [
+              21,
+              23
+            ],
+            "ratePercent": 40,
+            "method": "B1F · chodzenie"
+          },
+          {
+            "name": "Golbat",
+            "levelRange": [
+              22,
+              22
+            ],
+            "ratePercent": 30,
+            "method": "B1F · chodzenie"
+          },
+          {
+            "name": "Delibird",
+            "levelRange": [
+              22,
+              22
+            ],
+            "ratePercent": 20,
+            "method": "B1F · chodzenie"
+          },
+          {
+            "name": "Jynx",
+            "levelRange": [
+              20,
+              22
+            ],
+            "ratePercent": 10,
+            "method": "B1F · chodzenie"
+          }
+        ],
+        "b1f_night": [
+          {
+            "name": "Swinub",
+            "levelRange": [
+              21,
+              23
+            ],
+            "ratePercent": 40,
+            "method": "B1F · chodzenie"
+          },
+          {
+            "name": "Golbat",
+            "levelRange": [
+              22,
+              22
+            ],
+            "ratePercent": 30,
+            "method": "B1F · chodzenie"
+          },
+          {
+            "name": "Delibird",
+            "levelRange": [
+              22,
+              22
+            ],
+            "ratePercent": 20,
+            "method": "B1F · chodzenie"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              22,
+              22
+            ],
+            "ratePercent": 5,
+            "method": "B1F · chodzenie"
+          },
+          {
+            "name": "Jynx",
+            "levelRange": [
+              22,
+              22
+            ],
+            "ratePercent": 5,
+            "method": "B1F · chodzenie"
+          }
+        ],
+        "b2f_morning": [
+          {
+            "name": "Swinub",
+            "levelRange": [
+              22,
+              24
+            ],
+            "ratePercent": 40,
+            "method": "B2F · chodzenie"
+          },
+          {
+            "name": "Golbat",
+            "levelRange": [
+              23,
+              23
+            ],
+            "ratePercent": 30,
+            "method": "B2F · chodzenie"
+          },
+          {
+            "name": "Delibird",
+            "levelRange": [
+              23,
+              23
+            ],
+            "ratePercent": 20,
+            "method": "B2F · chodzenie"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              23,
+              23
+            ],
+            "ratePercent": 5,
+            "method": "B2F · chodzenie"
+          },
+          {
+            "name": "Jynx",
+            "levelRange": [
+              23,
+              23
+            ],
+            "ratePercent": 5,
+            "method": "B2F · chodzenie"
+          }
+        ],
+        "b2f_day": [
+          {
+            "name": "Swinub",
+            "levelRange": [
+              22,
+              24
+            ],
+            "ratePercent": 40,
+            "method": "B2F · chodzenie"
+          },
+          {
+            "name": "Golbat",
+            "levelRange": [
+              23,
+              23
+            ],
+            "ratePercent": 30,
+            "method": "B2F · chodzenie"
+          },
+          {
+            "name": "Delibird",
+            "levelRange": [
+              23,
+              23
+            ],
+            "ratePercent": 20,
+            "method": "B2F · chodzenie"
+          },
+          {
+            "name": "Jynx",
+            "levelRange": [
+              21,
+              23
+            ],
+            "ratePercent": 10,
+            "method": "B2F · chodzenie"
+          }
+        ],
+        "b2f_night": [
+          {
+            "name": "Swinub",
+            "levelRange": [
+              22,
+              24
+            ],
+            "ratePercent": 40,
+            "method": "B2F · chodzenie"
+          },
+          {
+            "name": "Golbat",
+            "levelRange": [
+              23,
+              23
+            ],
+            "ratePercent": 30,
+            "method": "B2F · chodzenie"
+          },
+          {
+            "name": "Delibird",
+            "levelRange": [
+              23,
+              23
+            ],
+            "ratePercent": 20,
+            "method": "B2F · chodzenie"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              23,
+              23
+            ],
+            "ratePercent": 5,
+            "method": "B2F · chodzenie"
+          },
+          {
+            "name": "Jynx",
+            "levelRange": [
+              23,
+              23
+            ],
+            "ratePercent": 5,
+            "method": "B2F · chodzenie"
+          }
+        ],
+        "b2f_2_morning": [
+          {
+            "name": "Swinub",
+            "levelRange": [
+              22,
+              24
+            ],
+            "ratePercent": 40,
+            "method": "B2F-2 · chodzenie"
+          },
+          {
+            "name": "Golbat",
+            "levelRange": [
+              23,
+              23
+            ],
+            "ratePercent": 30,
+            "method": "B2F-2 · chodzenie"
+          },
+          {
+            "name": "Delibird",
+            "levelRange": [
+              23,
+              23
+            ],
+            "ratePercent": 20,
+            "method": "B2F-2 · chodzenie"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              23,
+              23
+            ],
+            "ratePercent": 5,
+            "method": "B2F-2 · chodzenie"
+          },
+          {
+            "name": "Jynx",
+            "levelRange": [
+              23,
+              23
+            ],
+            "ratePercent": 5,
+            "method": "B2F-2 · chodzenie"
+          }
+        ],
+        "b2f_2_day": [
+          {
+            "name": "Swinub",
+            "levelRange": [
+              22,
+              24
+            ],
+            "ratePercent": 40,
+            "method": "B2F-2 · chodzenie"
+          },
+          {
+            "name": "Golbat",
+            "levelRange": [
+              23,
+              23
+            ],
+            "ratePercent": 30,
+            "method": "B2F-2 · chodzenie"
+          },
+          {
+            "name": "Delibird",
+            "levelRange": [
+              23,
+              23
+            ],
+            "ratePercent": 20,
+            "method": "B2F-2 · chodzenie"
+          },
+          {
+            "name": "Jynx",
+            "levelRange": [
+              21,
+              23
+            ],
+            "ratePercent": 10,
+            "method": "B2F-2 · chodzenie"
+          }
+        ],
+        "b2f_2_night": [
+          {
+            "name": "Swinub",
+            "levelRange": [
+              22,
+              24
+            ],
+            "ratePercent": 40,
+            "method": "B2F-2 · chodzenie"
+          },
+          {
+            "name": "Golbat",
+            "levelRange": [
+              23,
+              23
+            ],
+            "ratePercent": 30,
+            "method": "B2F-2 · chodzenie"
+          },
+          {
+            "name": "Delibird",
+            "levelRange": [
+              23,
+              23
+            ],
+            "ratePercent": 20,
+            "method": "B2F-2 · chodzenie"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              23,
+              23
+            ],
+            "ratePercent": 5,
+            "method": "B2F-2 · chodzenie"
+          },
+          {
+            "name": "Jynx",
+            "levelRange": [
+              23,
+              23
+            ],
+            "ratePercent": 5,
+            "method": "B2F-2 · chodzenie"
+          }
+        ],
+        "b3f_morning": [
+          {
+            "name": "Swinub",
+            "levelRange": [
+              23,
+              25
+            ],
+            "ratePercent": 40,
+            "method": "B3F · chodzenie"
+          },
+          {
+            "name": "Golbat",
+            "levelRange": [
+              24,
+              24
+            ],
+            "ratePercent": 30,
+            "method": "B3F · chodzenie"
+          },
+          {
+            "name": "Delibird",
+            "levelRange": [
+              24,
+              24
+            ],
+            "ratePercent": 20,
+            "method": "B3F · chodzenie"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              24,
+              24
+            ],
+            "ratePercent": 5,
+            "method": "B3F · chodzenie"
+          },
+          {
+            "name": "Jynx",
+            "levelRange": [
+              24,
+              24
+            ],
+            "ratePercent": 5,
+            "method": "B3F · chodzenie"
+          }
+        ],
+        "b3f_day": [
+          {
+            "name": "Swinub",
+            "levelRange": [
+              23,
+              25
+            ],
+            "ratePercent": 40,
+            "method": "B3F · chodzenie"
+          },
+          {
+            "name": "Golbat",
+            "levelRange": [
+              24,
+              24
+            ],
+            "ratePercent": 30,
+            "method": "B3F · chodzenie"
+          },
+          {
+            "name": "Delibird",
+            "levelRange": [
+              24,
+              24
+            ],
+            "ratePercent": 20,
+            "method": "B3F · chodzenie"
+          },
+          {
+            "name": "Jynx",
+            "levelRange": [
+              22,
+              24
+            ],
+            "ratePercent": 10,
+            "method": "B3F · chodzenie"
+          }
+        ],
+        "b3f_night": [
+          {
+            "name": "Swinub",
+            "levelRange": [
+              23,
+              25
+            ],
+            "ratePercent": 40,
+            "method": "B3F · chodzenie"
+          },
+          {
+            "name": "Golbat",
+            "levelRange": [
+              24,
+              24
+            ],
+            "ratePercent": 30,
+            "method": "B3F · chodzenie"
+          },
+          {
+            "name": "Delibird",
+            "levelRange": [
+              24,
+              24
+            ],
+            "ratePercent": 20,
+            "method": "B3F · chodzenie"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              24,
+              24
+            ],
+            "ratePercent": 5,
+            "method": "B3F · chodzenie"
+          },
+          {
+            "name": "Jynx",
+            "levelRange": [
+              24,
+              24
+            ],
+            "ratePercent": 5,
+            "method": "B3F · chodzenie"
+          }
+        ]
+      },
+      "wildPokemonSourceIds": [
+        "serebii-gs-ice-path"
+      ],
+      "wildPokemonStatus": "verified_gen2_silver_rates_by_floor_and_time",
+      "items": [
+        {
+          "id": "ice_path_hm07_waterfall",
+          "name": "HM07 — Waterfall",
+          "locationDescription": "Znajdźka na podłodze 1F.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-ice-path"
+          ]
+        },
+        {
+          "id": "ice_path_pp_up",
+          "name": "PP Up",
+          "locationDescription": "Znajdźka na podłodze 1F.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-ice-path"
+          ]
+        },
+        {
+          "id": "ice_path_iron",
+          "name": "Iron",
+          "locationDescription": "Znajdźka na podłodze B1F.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-ice-path"
+          ]
+        },
+        {
+          "id": "ice_path_max_potion_hidden",
+          "name": "Max Potion",
+          "locationDescription": "Ukryty przedmiot na B1F, wykrywany przez Itemfinder.",
+          "category": "hidden",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-ice-path"
+          ]
+        },
+        {
+          "id": "ice_path_full_heal",
+          "name": "Full Heal",
+          "locationDescription": "Znajdźka na podłodze B2F.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-ice-path"
+          ]
+        },
+        {
+          "id": "ice_path_max_potion",
+          "name": "Max Potion",
+          "locationDescription": "Znajdźka na podłodze B2F.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-ice-path"
+          ]
+        },
+        {
+          "id": "ice_path_ice_heal_hidden",
+          "name": "Ice Heal",
+          "locationDescription": "Ukryty przedmiot na B2F, wykrywany przez Itemfinder.",
+          "category": "hidden",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-ice-path"
+          ]
+        },
+        {
+          "id": "ice_path_carbos_hidden",
+          "name": "Carbos",
+          "locationDescription": "Ukryty przedmiot na B2F, wykrywany przez Itemfinder.",
+          "category": "hidden",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-ice-path"
+          ]
+        },
+        {
+          "id": "ice_path_tm44_rest",
+          "name": "TM44 — Rest",
+          "locationDescription": "Znajdźka na podłodze B2F-2.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-ice-path"
+          ]
+        }
+      ]
     },
     {
       "id": "blackthorn_city",
@@ -12383,9 +13553,243 @@
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-johto-region",
-        "bulbapedia-route-list"
+        "bulbapedia-route-list",
+        "serebii-gs-blackthorn-city"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit"
+      "dataStatus": "verified_gen2_silver_fishing_gym_trainers_and_gift",
+      "wildPokemonDetails": {
+        "surfing": [
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              5,
+              19
+            ],
+            "ratePercent": 100,
+            "method": "Surfing"
+          }
+        ],
+        "old_rod": [
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 85,
+            "method": "Old Rod"
+          },
+          {
+            "name": "Poliwag",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "Old Rod"
+          }
+        ],
+        "good_rod": [
+          {
+            "name": "Poliwag",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 65,
+            "method": "Good Rod"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 35,
+            "method": "Good Rod"
+          }
+        ],
+        "super_rod": [
+          {
+            "name": "Poliwag",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 70,
+            "method": "Super Rod"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 20,
+            "method": "Super Rod"
+          },
+          {
+            "name": "Poliwhirl",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 10,
+            "method": "Super Rod"
+          }
+        ]
+      },
+      "wildPokemonSourceIds": [
+        "serebii-gs-blackthorn-city"
+      ],
+      "wildPokemonStatus": "verified_gen2_silver_rates_and_levels",
+      "trainers": [
+        {
+          "name": "Cool Trainer Paul",
+          "team": [
+            {
+              "name": "Dratini",
+              "level": 34
+            },
+            {
+              "name": "Dratini",
+              "level": 34
+            },
+            {
+              "name": "Dratini",
+              "level": 34
+            }
+          ],
+          "note": "Blackthorn Gym",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-blackthorn-city"
+          ]
+        },
+        {
+          "name": "Cool Trainer Cody",
+          "team": [
+            {
+              "name": "Horsea",
+              "level": 34
+            },
+            {
+              "name": "Seadra",
+              "level": 36
+            }
+          ],
+          "note": "Blackthorn Gym",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-blackthorn-city"
+          ]
+        },
+        {
+          "name": "Cool Trainer Fran",
+          "team": [
+            {
+              "name": "Seadra",
+              "level": 37
+            }
+          ],
+          "note": "Blackthorn Gym",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-blackthorn-city"
+          ]
+        },
+        {
+          "name": "Cool Trainer Mike",
+          "team": [
+            {
+              "name": "Dragonair",
+              "level": 37
+            }
+          ],
+          "note": "Blackthorn Gym",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-blackthorn-city"
+          ]
+        },
+        {
+          "name": "Cool Trainer Lola",
+          "team": [
+            {
+              "name": "Dratini",
+              "level": 34
+            },
+            {
+              "name": "Dragonair",
+              "level": 36
+            }
+          ],
+          "note": "Blackthorn Gym",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-blackthorn-city"
+          ]
+        },
+        {
+          "name": "Gym Leader Clair",
+          "team": [
+            {
+              "name": "Dragonair",
+              "level": 37
+            },
+            {
+              "name": "Dragonair",
+              "level": 37
+            },
+            {
+              "name": "Dragonair",
+              "level": 37
+            },
+            {
+              "name": "Kingdra",
+              "level": 40
+            }
+          ],
+          "note": "Po zwycięstwie Clair przekazuje Rising Badge po wydarzeniu w Dragon's Den.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-blackthorn-city"
+          ]
+        }
+      ],
+      "items": [
+        {
+          "id": "blackthorn_spell_tag",
+          "name": "Spell Tag",
+          "locationDescription": "Prezent od Santosa w sobotę.",
+          "category": "weekly_gift",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "serebii-gs-blackthorn-city"
+          ]
+        }
+      ]
     },
     {
       "id": "dragons_den",
