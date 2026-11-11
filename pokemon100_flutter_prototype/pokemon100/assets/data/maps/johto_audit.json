@@ -245,6 +245,16 @@
       "id": "serebii-gs-route29",
       "url": "https://www.serebii.net/pokearth/johto/2nd/route29.shtml",
       "scope": "Pokémon Gold/Silver/Crystal Route 29 Generation II walking and Headbutt encounter rates and listed item rewards"
+    },
+    {
+      "id": "serebii-gs-new-bark-town",
+      "url": "https://www.serebii.net/pokearth/johto/2nd/newbarktown.shtml",
+      "scope": "Pokémon Gold/Silver/Crystal New Bark Town Generation II Surf and fishing encounter rates, starter gifts and Elm story gifts"
+    },
+    {
+      "id": "bulbapedia-new-bark-town",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/New_Bark_Town",
+      "scope": "New Bark Town Generation II item gifts, Pokégear, starter held Berry and progression requirements"
     }
   ],
   "locations": [
@@ -262,7 +272,251 @@
         "bulbapedia-johto-region",
         "bulbapedia-route-list"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit"
+      "dataStatus": "verified_gen2_silver_water_encounters_starter_and_story_gifts",
+      "wildPokemonDetails": {
+        "surfing": [
+          {
+            "name": "Tentacool",
+            "levelRange": [
+              15,
+              24
+            ],
+            "ratePercent": 90,
+            "method": "Surfing"
+          },
+          {
+            "name": "Tentacruel",
+            "levelRange": [
+              20,
+              40
+            ],
+            "ratePercent": 10,
+            "method": "Surfing"
+          }
+        ],
+        "old_rod": [
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 85,
+            "method": "Old Rod"
+          },
+          {
+            "name": "Tentacool",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "Old Rod"
+          }
+        ],
+        "good_rod": [
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 35,
+            "method": "Good Rod"
+          },
+          {
+            "name": "Tentacool",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 35,
+            "method": "Good Rod"
+          },
+          {
+            "name": "Chinchou",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 20,
+            "method": "Good Rod"
+          },
+          {
+            "name": "Shellder",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 10,
+            "method": "Good Rod"
+          }
+        ],
+        "super_rod": [
+          {
+            "name": "Chinchou",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 40,
+            "method": "Super Rod"
+          },
+          {
+            "name": "Shellder",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 30,
+            "method": "Super Rod"
+          },
+          {
+            "name": "Tentacruel",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 20,
+            "method": "Super Rod"
+          },
+          {
+            "name": "Lanturn",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 10,
+            "method": "Super Rod"
+          }
+        ]
+      },
+      "wildPokemonSourceIds": [
+        "serebii-gs-new-bark-town"
+      ],
+      "wildPokemonStatus": "verified_gen2_silver_rates_and_levels",
+      "items": [
+        {
+          "id": "new_bark_pokegear",
+          "name": "Pokégear",
+          "locationDescription": "Prezent od mamy na początku przygody, po wyjściu z domu.",
+          "category": "gift",
+          "availableIn": [
+            "gold_silver",
+            "crystal"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "bulbapedia-new-bark-town"
+          ]
+        },
+        {
+          "id": "new_bark_potion_elm_aide",
+          "name": "Potion",
+          "locationDescription": "Prezent od pomocnika Profesora Elma po wybraniu pierwszego Pokémona.",
+          "category": "gift",
+          "availableIn": [
+            "gold_silver",
+            "crystal"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "serebii-gs-new-bark-town",
+            "bulbapedia-new-bark-town"
+          ]
+        },
+        {
+          "id": "new_bark_pokeballs_5",
+          "name": "Poké Ball ×5",
+          "locationDescription": "Prezent od pomocnika Profesora Elma po pokonaniu rywala w Cherrygrove City.",
+          "category": "story_reward",
+          "availableIn": [
+            "gold_silver",
+            "crystal"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "serebii-gs-new-bark-town",
+            "bulbapedia-new-bark-town"
+          ]
+        },
+        {
+          "id": "new_bark_everstone_togepi",
+          "name": "Everstone",
+          "locationDescription": "Prezent od Profesora Elma po pokazaniu mu Togepi wyklutego z Mystery Egg.",
+          "category": "gift",
+          "availableIn": [
+            "gold_silver",
+            "crystal"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "serebii-gs-new-bark-town",
+            "bulbapedia-new-bark-town"
+          ]
+        },
+        {
+          "id": "new_bark_master_ball_badges",
+          "name": "Master Ball",
+          "locationDescription": "Prezent od Profesora Elma po zdobyciu wszystkich ośmiu odznak Johto.",
+          "category": "story_reward",
+          "availableIn": [
+            "gold_silver",
+            "crystal"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "serebii-gs-new-bark-town",
+            "bulbapedia-new-bark-town"
+          ]
+        },
+        {
+          "id": "new_bark_ss_ticket_hall_of_fame",
+          "name": "S.S. Ticket",
+          "locationDescription": "Prezent od Profesora Elma po wejściu do Hall of Fame, po pokonaniu Elite Four.",
+          "category": "story_reward",
+          "availableIn": [
+            "gold_silver",
+            "crystal"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "serebii-gs-new-bark-town",
+            "bulbapedia-new-bark-town"
+          ]
+        }
+      ],
+      "specialServices": [
+        {
+          "id": "new_bark_starter_choice",
+          "name": "Wybór pierwszego Pokémona",
+          "category": "gift_pokemon",
+          "description": "Profesor Elm pozwala wybrać jednego z trzech partnerów na poziomie 5: Chikorita, Cyndaquil albo Totodile. Wybór jest jednorazowy; to prezent startowy, nie dzikie spotkanie.",
+          "availableIn": [
+            "gold_silver",
+            "crystal"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "serebii-gs-new-bark-town",
+            "bulbapedia-new-bark-town"
+          ]
+        },
+        {
+          "id": "new_bark_starter_held_berry",
+          "name": "Berry trzymana przez startera",
+          "category": "held_item_gift",
+          "description": "Wybrany pierwszy Pokémon otrzymuje Berry jako trzymany przedmiot; nie jest to osobna znajdźka na mapie.",
+          "availableIn": [
+            "gold_silver",
+            "crystal"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "bulbapedia-new-bark-town"
+          ]
+        }
+      ]
     },
     {
       "id": "route_29",
