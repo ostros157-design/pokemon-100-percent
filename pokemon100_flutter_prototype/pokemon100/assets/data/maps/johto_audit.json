@@ -70,6 +70,11 @@
       "id": "serebii-gs-slowpoke-well",
       "url": "https://www.serebii.net/pokearth/johto/2nd/slowpokewell.shtml",
       "scope": "Pokémon Silver Generation II Slowpoke Well 1F/B1F walking, surfing, fishing, Rocket Grunt teams and item"
+    },
+    {
+      "id": "serebii-gs-sprout-tower",
+      "url": "https://www.serebii.net/pokearth/johto/2nd/sprouttower.shtml",
+      "scope": "Pokémon Silver Generation II Sprout Tower 2F/3F encounter rates, trainer teams and floor items"
     }
   ],
   "locations": [
@@ -842,9 +847,311 @@
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-johto-region",
-        "bulbapedia-route-list"
+        "bulbapedia-route-list",
+        "serebii-gs-sprout-tower"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit"
+      "dataStatus": "partial_verified_gen2_silver",
+      "wildPokemonStatus": "verified_gen2_silver_rates_and_levels",
+      "wildPokemonSourceIds": [
+        "serebii-gs-sprout-tower"
+      ],
+      "wildPokemonDetails": {
+        "2F_morning": [
+          {
+            "name": "Rattata",
+            "levelRange": [
+              3,
+              6
+            ],
+            "ratePercent": 100,
+            "method": "2F · chodzenie · rano"
+          }
+        ],
+        "2F_day": [
+          {
+            "name": "Rattata",
+            "levelRange": [
+              3,
+              6
+            ],
+            "ratePercent": 100,
+            "method": "2F · chodzenie · dzień"
+          }
+        ],
+        "2F_night": [
+          {
+            "name": "Gastly",
+            "levelRange": [
+              4,
+              6
+            ],
+            "ratePercent": 85,
+            "method": "2F · chodzenie · noc"
+          },
+          {
+            "name": "Rattata",
+            "levelRange": [
+              3,
+              5
+            ],
+            "ratePercent": 15,
+            "method": "2F · chodzenie · noc"
+          }
+        ],
+        "3F_morning": [
+          {
+            "name": "Rattata",
+            "levelRange": [
+              3,
+              6
+            ],
+            "ratePercent": 100,
+            "method": "3F · chodzenie · rano"
+          }
+        ],
+        "3F_day": [
+          {
+            "name": "Rattata",
+            "levelRange": [
+              3,
+              6
+            ],
+            "ratePercent": 100,
+            "method": "3F · chodzenie · dzień"
+          }
+        ],
+        "3F_night": [
+          {
+            "name": "Gastly",
+            "levelRange": [
+              4,
+              6
+            ],
+            "ratePercent": 85,
+            "method": "3F · chodzenie · noc"
+          },
+          {
+            "name": "Rattata",
+            "levelRange": [
+              3,
+              5
+            ],
+            "ratePercent": 15,
+            "method": "3F · chodzenie · noc"
+          }
+        ]
+      },
+      "trainers": [
+        {
+          "name": "Sage Chow",
+          "note": "1F",
+          "team": [
+            {
+              "name": "Bellsprout",
+              "level": 3
+            },
+            {
+              "name": "Bellsprout",
+              "level": 3
+            },
+            {
+              "name": "Bellsprout",
+              "level": 3
+            }
+          ],
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-sprout-tower"
+          ]
+        },
+        {
+          "name": "Sage Nico",
+          "note": "2F",
+          "team": [
+            {
+              "name": "Bellsprout",
+              "level": 3
+            },
+            {
+              "name": "Bellsprout",
+              "level": 3
+            },
+            {
+              "name": "Bellsprout",
+              "level": 3
+            }
+          ],
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-sprout-tower"
+          ]
+        },
+        {
+          "name": "Sage Edmond",
+          "note": "2F",
+          "team": [
+            {
+              "name": "Bellsprout",
+              "level": 3
+            },
+            {
+              "name": "Bellsprout",
+              "level": 3
+            },
+            {
+              "name": "Bellsprout",
+              "level": 3
+            }
+          ],
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-sprout-tower"
+          ]
+        },
+        {
+          "name": "Sage Jin",
+          "note": "3F",
+          "team": [
+            {
+              "name": "Bellsprout",
+              "level": 6
+            }
+          ],
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-sprout-tower"
+          ]
+        },
+        {
+          "name": "Sage Neal",
+          "note": "3F",
+          "team": [
+            {
+              "name": "Bellsprout",
+              "level": 6
+            }
+          ],
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-sprout-tower"
+          ]
+        },
+        {
+          "name": "Sage Troy",
+          "note": "3F",
+          "team": [
+            {
+              "name": "Bellsprout",
+              "level": 6
+            },
+            {
+              "name": "Hoothoot",
+              "level": 7
+            }
+          ],
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-sprout-tower"
+          ]
+        },
+        {
+          "name": "Sage Li",
+          "note": "3F — starszy mędrzec; nagroda HM05 Flash",
+          "team": [
+            {
+              "name": "Bellsprout",
+              "level": 7
+            },
+            {
+              "name": "Bellsprout",
+              "level": 7
+            },
+            {
+              "name": "Hoothoot",
+              "level": 10
+            }
+          ],
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-sprout-tower"
+          ]
+        }
+      ],
+      "items": [
+        {
+          "id": "sprout_tower_paralyze_heal",
+          "name": "Paralyze Heal",
+          "locationDescription": "1F — przedmiot na podłodze; dokładna kratka niezweryfikowana.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-sprout-tower"
+          ]
+        },
+        {
+          "id": "sprout_tower_x_defend",
+          "name": "X Defend",
+          "locationDescription": "2F — przedmiot na podłodze; dokładna kratka niezweryfikowana.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-sprout-tower"
+          ]
+        },
+        {
+          "id": "sprout_tower_escape_rope",
+          "name": "Escape Rope",
+          "locationDescription": "3F — przedmiot na podłodze; dokładna kratka niezweryfikowana.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-sprout-tower"
+          ]
+        },
+        {
+          "id": "sprout_tower_potion",
+          "name": "Potion",
+          "locationDescription": "3F — przedmiot na podłodze; dokładna kratka niezweryfikowana.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-sprout-tower"
+          ]
+        }
+      ]
     },
     {
       "id": "route_32",
@@ -3461,10 +3768,10 @@
     "imageCoverage": "0% — no Silver-specific Johto map asset connected",
     "note": "Connectivity audit checks only that every connectsTo ID points to an entry in this regional index. Cross-region links such as Route 27 to New Bark Town are intentionally handled as regional boundaries.",
     "berryTreeCoverage": "15 berry trees recorded across 13 Johto locations; exact map coordinates remain unverified",
-    "itemPickupCount": 8,
-    "itemPickupCoverage": "8 przedmiotów do podniesienia w 3 lokacjach; opisy źródłowe, współrzędne niezweryfikowane",
-    "trainerRecordCount": 22,
-    "trainerCoverage": "22 potwierdzone wpisy trenerów w Route 31, Route 32, Union Cave i Route 33; piętra i drużyny zapisane, współrzędne niezweryfikowane",
+    "itemPickupCount": 13,
+    "itemPickupCoverage": "13 przedmiotów do podniesienia w 5 lokacjach; opisy źródłowe, współrzędne niezweryfikowane",
+    "trainerRecordCount": 33,
+    "trainerCoverage": "33 potwierdzone wpisy trenerów w 6 lokacjach; piętra i drużyny zapisane, współrzędne niezweryfikowane",
     "wildEncounterCoverage": {
       "status": "partial_verified",
       "game": "Pokémon Silver (Generation II)",
@@ -3475,10 +3782,11 @@
         "route_32",
         "union_cave",
         "route_33",
-        "slowpoke_well"
+        "slowpoke_well",
+        "sprout_tower"
       ],
-      "tableCount": 49,
-      "note": "Partially expanded verified Gen II Silver encounter tables; route and cave tables remain separately keyed by time, method and floor. Each percentage group sums to 100%."
+      "tableCount": 55,
+      "note": "Partially expanded verified Gen II Silver encounter tables; route, tower and cave tables remain separately keyed by time, method and floor. Each percentage group sums to 100%."
     }
   }
 }
