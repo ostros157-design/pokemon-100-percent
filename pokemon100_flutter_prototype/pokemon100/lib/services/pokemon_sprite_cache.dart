@@ -62,8 +62,9 @@ class PokemonSpriteCache {
     var completed = 0;
     var failed = 0;
     for (var start = 1; start <= nationalDexCount; start += _parallelPokemon) {
-      final end = (start + _parallelPokemon - 1)
-          .clamp(1, nationalDexCount);
+      final end = start + _parallelPokemon - 1 < nationalDexCount
+          ? start + _parallelPokemon - 1
+          : nationalDexCount;
       await Future.wait([
         for (var id = start; id <= end; id++)
           () async {
@@ -73,7 +74,11 @@ class PokemonSpriteCache {
             ]);
             failed += results.where((ok) => !ok).length;
             completed++;
-            _requested.add(id);
+            if (results.every((ok) => ok)) {
+              _requested.add(id);
+            } else {
+              _requested.remove(id);
+            }
             onProgress(completed, nationalDexCount, failed);
           }(),
       ]);
