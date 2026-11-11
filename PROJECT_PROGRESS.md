@@ -6501,3 +6501,14 @@ Kontrola repozytorium: 64 lokacje, 30 lokacji z tabelami spotkań, 222 grupy spo
 ## Aktualizacja szacunku mapy Pokémon Silver — 2026-11-11
 
 **Postęp: 53% ukończone / 47% pozostało.** Dodano zweryfikowane dane dla Route 45 i Dragon's Den; grafika regionu, dokładne współrzędne oraz uruchomione testy nadal pozostają brakującymi elementami.
+
+
+### Pokémon Silver / Johto — Route 46 (2026-11-11)
+- Route 46: uzupełniono pięć grup spotkań Pokémon Silver — trawa rano/dzień/noc oraz Headbutt w zwykłych i specjalnych drzewach. Każda grupa ma poziomy i procenty sumujące się do 100%.
+- Dodano trzech trenerów z pełnymi drużynami i poziomami (Camper Ted, Picnicker Erin i Hiker Bailey) oraz zwykły przedmiot Dire Hit. Rewanże Picnicker Erin przez PokéGear nie są liczone jako osobni trenerzy.
+- Doprecyzowano opisy dwóch istniejących drzewek: PRZCureBerry rośnie na wschodnim, a Berry na zachodnim drzewie zagajnika na zachód od wejścia do Dark Cave. Zachowano je jako codzienne źródła jagód.
+- Źródło: [Serebii Pokéarth — Pokémon Gold/Silver Route 46](https://www.serebii.net/pokearth/johto/2nd/route46.shtml) oraz istniejące źródło Bulbapedia dla drzewek jagodowych. Dane spotkań, trenerów i Dire Hit dotyczą Gold/Silver; Crystal-only różnice nie zostały przeniesione. Współrzędne wszystkich trenerów i przedmiotów pozostają niezweryfikowane.
+- Dark Cave została celowo pominięta: nie dodano jej spotkań, trenerów ani przedmiotów i nie zmieniono jej statusu z wpisu topologicznego. Samo połączenie Route 46 z wejściem do jaskini pozostaje w indeksie.
+- Dodano test Route 46 oraz test pilnujący, że Dark Cave pozostaje nieuzupełniona; skorygowano globalne oczekiwane liczniki. Kontrola JSON i danych wykazała 64 lokacje, 33 lokacje ze spotkaniami, 238 grup spotkań (wszystkie sumują się do 100%), 195 trenerów w 33 lokacjach, 178 wpisów przedmiotów w 33 lokacjach i 16 drzewek jagodowych.
+- Testów Flutter, Flutter Analyzer ani APK nie uruchomiono. Szacunkowy postęp mapy pozostaje **53%** — nadal brakuje grafiki mapy, zweryfikowanych współrzędnych i uruchomionych testów.
+- Następny obszar: Route 46 jest uzupełniona; kontynuować od kolejnej nieukończonej lokacji Johto, z pominięciem Dark Cave do czasu dostarczenia jej przez użytkownika.
