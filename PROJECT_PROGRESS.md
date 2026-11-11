@@ -6572,3 +6572,13 @@ Kontrola repozytorium: 64 lokacje, 30 lokacji z tabelami spotkań, 222 grupy spo
 - Źródła: [Serebii Pokéarth — Route 32 Generation II](https://www.serebii.net/pokearth/johto/2nd/route32.shtml) i [Bulbapedia — Gold/Silver walkthrough, Route 32](https://bulbapedia.bulbagarden.net/wiki/Appendix:Gold_and_Silver_walkthrough/Section_4). Wszystkie współrzędne przedmiotów i trenerów pozostają niezweryfikowane.
 - Dodano testy wszystkich 16 grup spotkań (każda sumuje się do 100%), wariantów Crystal/Gold, rewanżów i kategorii przedmiotów. Liczniki audytu: 64 lokacje, 212 wpisów trenerów, 199 wpisów przedmiotów i 16 drzewek jagodowych.
 - Testów Flutter, Flutter Analyzer ani APK nie uruchomiono.
+
+ 
+## Johto — Route 33 (Generation II: Gold, Silver, Crystal)
+
+- Rozdzielono spotkania według wersji: istniejące grupy bazowe pozostają wariantem Silver, dodano osobne grupy Gold oraz Crystal dla poranka, dnia i nocy. Dodano też osobne tabele Headbutt dla Gold i Crystal, w tym różnice między zwykłymi i specjalnymi drzewami.
+- Uzupełniono Hiker Anthony'ego o cztery rewanże: Geodude Lv.16 + Machamp Lv.18 oraz Graveler Lv.25 + Graveler Lv.27 + Machoke Lv.29 dostępne w Gold/Silver/Crystal; dwa kolejne składy Crystal-only po zostaniu Championem i po oddaniu Machine Part. Pierwsza walka pozostaje wspólna dla trzech gier.
+- Zachowano codzienne drzewko PSNCureBerry przed Union Cave; nie dodano apricornów z HGSS do danych Generation II. Notatka przy trenerze przypomina, że jego telefon może wywołać rój Dunsparce w Dark Cave, ale nie zmieniono danych samej jaskini.
+- Źródła: [Serebii Pokéarth — Route 33 Generation II](https://www.serebii.net/pokearth/johto/2nd/route33.shtml) oraz [Bulbapedia — Johto Route 33](https://bulbapedia.bulbagarden.net/wiki/Johto_Route_33). Wszystkie współrzędne pozostają niezweryfikowane.
+- Dodano testy rozdzielenia wariantów, procentów spotkań, składów rewanżowych i źródła drzewka. Łączna liczba wpisów trenerów w audycie wzrosła z 212 do 216; liczba wpisów przedmiotów pozostała 199.
+- Testów Flutter, Flutter Analyzer ani APK nie uruchomiono.
