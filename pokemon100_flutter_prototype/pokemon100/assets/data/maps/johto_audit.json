@@ -180,6 +180,11 @@
       "id": "serebii-gs-cianwood-city",
       "url": "https://www.serebii.net/pokearth/johto/2nd/cianwoodcity.shtml",
       "scope": "Pokémon Silver Generation II Cianwood City encounters, Rock Smash, gifts, hidden items and Gym trainer teams"
+    },
+    {
+      "id": "serebii-gs-whirl-islands",
+      "url": "https://www.serebii.net/pokearth/johto/2nd/whirlislands.shtml",
+      "scope": "Pokémon Silver Generation II Whirl Islands sections, encounters, items and Lugia"
     }
   ],
   "locations": [
@@ -9108,9 +9113,784 @@
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-johto-region",
-        "bulbapedia-route-list"
+        "bulbapedia-route-list",
+        "serebii-gs-whirl-islands"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit"
+      "dataStatus": "verified_gen2_silver_cave_sections_encounters_items_and_lugia",
+      "wildPokemonDetails": {
+        "upper_left_walking": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              22,
+              24
+            ],
+            "ratePercent": 50,
+            "method": "Chodzenie"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              23,
+              23
+            ],
+            "ratePercent": 30,
+            "method": "Chodzenie"
+          },
+          {
+            "name": "Seel",
+            "levelRange": [
+              22,
+              24
+            ],
+            "ratePercent": 15,
+            "method": "Chodzenie"
+          },
+          {
+            "name": "Golbat",
+            "levelRange": [
+              23,
+              23
+            ],
+            "ratePercent": 5,
+            "method": "Chodzenie"
+          }
+        ],
+        "upper_right_walking": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              22,
+              24
+            ],
+            "ratePercent": 50,
+            "method": "Chodzenie"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              23,
+              23
+            ],
+            "ratePercent": 30,
+            "method": "Chodzenie"
+          },
+          {
+            "name": "Seel",
+            "levelRange": [
+              22,
+              24
+            ],
+            "ratePercent": 15,
+            "method": "Chodzenie"
+          },
+          {
+            "name": "Golbat",
+            "levelRange": [
+              23,
+              23
+            ],
+            "ratePercent": 5,
+            "method": "Chodzenie"
+          }
+        ],
+        "lower_left_walking": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              22,
+              24
+            ],
+            "ratePercent": 50,
+            "method": "Chodzenie"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              23,
+              23
+            ],
+            "ratePercent": 30,
+            "method": "Chodzenie"
+          },
+          {
+            "name": "Seel",
+            "levelRange": [
+              22,
+              24
+            ],
+            "ratePercent": 15,
+            "method": "Chodzenie"
+          },
+          {
+            "name": "Golbat",
+            "levelRange": [
+              23,
+              23
+            ],
+            "ratePercent": 5,
+            "method": "Chodzenie"
+          }
+        ],
+        "lower_left_surf": [
+          {
+            "name": "Tentacool",
+            "levelRange": [
+              20,
+              24
+            ],
+            "ratePercent": 60,
+            "method": "Surfing"
+          },
+          {
+            "name": "Horsea",
+            "levelRange": [
+              15,
+              19
+            ],
+            "ratePercent": 30,
+            "method": "Surfing"
+          },
+          {
+            "name": "Tentacruel",
+            "levelRange": [
+              20,
+              24
+            ],
+            "ratePercent": 10,
+            "method": "Surfing"
+          }
+        ],
+        "lower_left_old_rod": [
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 85,
+            "method": "Old Rod"
+          },
+          {
+            "name": "Krabby",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "Old Rod"
+          }
+        ],
+        "lower_left_good_rod": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 55,
+            "method": "Good Rod"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 35,
+            "method": "Good Rod"
+          },
+          {
+            "name": "Horsea",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 10,
+            "method": "Good Rod"
+          }
+        ],
+        "lower_left_super_rod": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 40,
+            "method": "Super Rod"
+          },
+          {
+            "name": "Horsea",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 30,
+            "method": "Super Rod"
+          },
+          {
+            "name": "Kingler",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 20,
+            "method": "Super Rod"
+          },
+          {
+            "name": "Seadra",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 10,
+            "method": "Super Rod"
+          }
+        ],
+        "lower_right_walking": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              22,
+              24
+            ],
+            "ratePercent": 50,
+            "method": "Chodzenie"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              23,
+              23
+            ],
+            "ratePercent": 30,
+            "method": "Chodzenie"
+          },
+          {
+            "name": "Seel",
+            "levelRange": [
+              22,
+              24
+            ],
+            "ratePercent": 15,
+            "method": "Chodzenie"
+          },
+          {
+            "name": "Golbat",
+            "levelRange": [
+              23,
+              23
+            ],
+            "ratePercent": 5,
+            "method": "Chodzenie"
+          }
+        ],
+        "b1f_walking": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              23,
+              25
+            ],
+            "ratePercent": 50,
+            "method": "Chodzenie"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              24,
+              24
+            ],
+            "ratePercent": 30,
+            "method": "Chodzenie"
+          },
+          {
+            "name": "Seel",
+            "levelRange": [
+              23,
+              25
+            ],
+            "ratePercent": 15,
+            "method": "Chodzenie"
+          },
+          {
+            "name": "Golbat",
+            "levelRange": [
+              24,
+              24
+            ],
+            "ratePercent": 5,
+            "method": "Chodzenie"
+          }
+        ],
+        "b1f_middle_walking": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              22,
+              24
+            ],
+            "ratePercent": 50,
+            "method": "Chodzenie"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              23,
+              23
+            ],
+            "ratePercent": 30,
+            "method": "Chodzenie"
+          },
+          {
+            "name": "Seel",
+            "levelRange": [
+              22,
+              24
+            ],
+            "ratePercent": 15,
+            "method": "Chodzenie"
+          },
+          {
+            "name": "Golbat",
+            "levelRange": [
+              23,
+              23
+            ],
+            "ratePercent": 5,
+            "method": "Chodzenie"
+          }
+        ],
+        "b2f_walking": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              23,
+              25
+            ],
+            "ratePercent": 50,
+            "method": "Chodzenie"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              24,
+              24
+            ],
+            "ratePercent": 30,
+            "method": "Chodzenie"
+          },
+          {
+            "name": "Seel",
+            "levelRange": [
+              23,
+              25
+            ],
+            "ratePercent": 15,
+            "method": "Chodzenie"
+          },
+          {
+            "name": "Golbat",
+            "levelRange": [
+              24,
+              24
+            ],
+            "ratePercent": 5,
+            "method": "Chodzenie"
+          }
+        ],
+        "b2f_surf": [
+          {
+            "name": "Horsea",
+            "levelRange": [
+              15,
+              24
+            ],
+            "ratePercent": 90,
+            "method": "Surfing"
+          },
+          {
+            "name": "Tentacruel",
+            "levelRange": [
+              20,
+              24
+            ],
+            "ratePercent": 10,
+            "method": "Surfing"
+          }
+        ],
+        "b2f_old_rod": [
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 85,
+            "method": "Old Rod"
+          },
+          {
+            "name": "Krabby",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "Old Rod"
+          }
+        ],
+        "b2f_good_rod": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 55,
+            "method": "Good Rod"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 35,
+            "method": "Good Rod"
+          },
+          {
+            "name": "Horsea",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 10,
+            "method": "Good Rod"
+          }
+        ],
+        "b2f_super_rod": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 40,
+            "method": "Super Rod"
+          },
+          {
+            "name": "Horsea",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 30,
+            "method": "Super Rod"
+          },
+          {
+            "name": "Kingler",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 20,
+            "method": "Super Rod"
+          },
+          {
+            "name": "Seadra",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 10,
+            "method": "Super Rod"
+          }
+        ],
+        "b2f_inner_walking": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              24,
+              26
+            ],
+            "ratePercent": 50,
+            "method": "Chodzenie"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              25,
+              25
+            ],
+            "ratePercent": 30,
+            "method": "Chodzenie"
+          },
+          {
+            "name": "Seel",
+            "levelRange": [
+              24,
+              26
+            ],
+            "ratePercent": 15,
+            "method": "Chodzenie"
+          },
+          {
+            "name": "Golbat",
+            "levelRange": [
+              25,
+              25
+            ],
+            "ratePercent": 5,
+            "method": "Chodzenie"
+          }
+        ],
+        "b2f_inner_surf": [
+          {
+            "name": "Horsea",
+            "levelRange": [
+              15,
+              24
+            ],
+            "ratePercent": 90,
+            "method": "Surfing"
+          },
+          {
+            "name": "Tentacruel",
+            "levelRange": [
+              20,
+              24
+            ],
+            "ratePercent": 10,
+            "method": "Surfing"
+          }
+        ],
+        "b2f_inner_old_rod": [
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 85,
+            "method": "Old Rod"
+          },
+          {
+            "name": "Krabby",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "Old Rod"
+          }
+        ],
+        "b2f_inner_good_rod": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 55,
+            "method": "Good Rod"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 35,
+            "method": "Good Rod"
+          },
+          {
+            "name": "Horsea",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 10,
+            "method": "Good Rod"
+          }
+        ],
+        "b2f_inner_super_rod": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 40,
+            "method": "Super Rod"
+          },
+          {
+            "name": "Horsea",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 30,
+            "method": "Super Rod"
+          },
+          {
+            "name": "Kingler",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 20,
+            "method": "Super Rod"
+          },
+          {
+            "name": "Seadra",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 10,
+            "method": "Super Rod"
+          }
+        ]
+      },
+      "wildPokemonSourceIds": [
+        "serebii-gs-whirl-islands"
+      ],
+      "wildPokemonStatus": "verified_gen2_silver_rates_and_levels",
+      "items": [
+        {
+          "id": "whirl_upper_left_ultra_ball",
+          "name": "Ultra Ball",
+          "locationDescription": "Upper Left — znajdźka na podłodze.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-whirl-islands"
+          ]
+        },
+        {
+          "id": "whirl_upper_left_rare_candy",
+          "name": "Rare Candy",
+          "locationDescription": "Upper Left — ukryty przedmiot wykrywany przez Itemfinder.",
+          "category": "hidden",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-whirl-islands"
+          ]
+        },
+        {
+          "id": "whirl_lower_left_guard_spec",
+          "name": "Guard Spec.",
+          "locationDescription": "Lower Left — znajdźka na podłodze.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-whirl-islands"
+          ]
+        },
+        {
+          "id": "whirl_lower_left_full_restore",
+          "name": "Full Restore",
+          "locationDescription": "Lower Left — ukryty przedmiot wykrywany przez Itemfinder.",
+          "category": "hidden",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-whirl-islands"
+          ]
+        },
+        {
+          "id": "whirl_lower_right_ultra_ball",
+          "name": "Ultra Ball",
+          "locationDescription": "Lower Right — ukryty przedmiot wykrywany przez Itemfinder.",
+          "category": "hidden",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-whirl-islands"
+          ]
+        },
+        {
+          "id": "whirl_b1f_full_restore",
+          "name": "Full Restore",
+          "locationDescription": "B1F — znajdźka na podłodze.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-whirl-islands"
+          ]
+        },
+        {
+          "id": "whirl_b1f_nugget",
+          "name": "Nugget",
+          "locationDescription": "B1F — znajdźka na podłodze.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-whirl-islands"
+          ]
+        },
+        {
+          "id": "whirl_b1f_escape_rope",
+          "name": "Escape Rope",
+          "locationDescription": "B1F — znajdźka na podłodze.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-whirl-islands"
+          ]
+        }
+      ],
+      "specialServices": [
+        {
+          "id": "whirl_islands_lugia",
+          "name": "Lugia Lv. 40",
+          "category": "legendary_encounter",
+          "description": "Jednorazowe interaktywne spotkanie z Lugią na poziomie 40 w Pokémon Silver; nie jest losową tabelą dzikich Pokémonów.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "serebii-gs-whirl-islands"
+          ]
+        },
+        {
+          "id": "whirl_islands_access",
+          "name": "Dostęp przez Whirlpool",
+          "category": "access_requirement",
+          "description": "Do dalszych sekcji wysp potrzebny jest ruch Whirlpool. Obszary: Upper Left, Upper Right, Lower Left, Lower Right, B1F, B1F Middle, B2F i B2F Inner.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "serebii-gs-whirl-islands"
+          ]
+        }
+      ]
     },
     {
       "id": "cianwood_city",
