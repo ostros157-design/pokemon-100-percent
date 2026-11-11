@@ -2275,15 +2275,17 @@
       "coordinateStatus": "unverified",
       "sourceIds": [
         "bulbapedia-johto-region",
-        "bulbapedia-route-list"
+        "bulbapedia-route-list",
+        "serebii-gs-route32",
+        "bulbapedia-gs-walkthrough-parts-3-4"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit",
+      "dataStatus": "verified_gen2_encounters_trainers_rematches_and_items",
       "items": [
         {
           "id": "route_32_miracle_seed_1",
           "name": "Miracle Seed",
-          "locationDescription": "Od mężczyzny w północno-wschodniej części trasy, na północ od pierwszego pola trawy.",
-          "category": "pickup",
+          "locationDescription": "Prezent od mężczyzny w północno-wschodniej części trasy, na północ od pierwszego pola trawy.",
+          "category": "gift",
           "availableIn": [
             "gold_silver"
           ],
@@ -2309,13 +2311,83 @@
           "id": "route_32_super_potion_hidden_1",
           "name": "Super Potion",
           "locationDescription": "Ukryty przedmiot w wysokiej trawie na północ od pomostu.",
-          "category": "pickup",
+          "category": "hidden",
           "availableIn": [
             "gold_silver"
           ],
           "coordinateStatus": "unverified",
           "sourceIds": [
             "bulbapedia-gs-walkthrough-parts-1-4"
+          ]
+        },
+        {
+          "id": "route_32_great_ball_floor",
+          "name": "Great Ball",
+          "locationDescription": "Na ziemi w wysokiej trawie na południowy zachód od pomostu.",
+          "category": "pickup",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-walkthrough-parts-3-4",
+            "serebii-gs-route32"
+          ]
+        },
+        {
+          "id": "route_32_great_ball_hidden",
+          "name": "Great Ball",
+          "locationDescription": "Ukryty na ślepej ścieżce za Pokémon Center; wymaga sprawdzenia pola.",
+          "category": "hidden",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-walkthrough-parts-3-4",
+            "serebii-gs-route32"
+          ]
+        },
+        {
+          "id": "route_32_poison_barb_frieda",
+          "name": "Poison Barb",
+          "locationDescription": "Prezent od Friedy za Pokémon Center, dostępny w piątek; przedmiot trzymany, nie pickup z ziemi.",
+          "category": "gift",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-walkthrough-parts-3-4",
+            "serebii-gs-route32"
+          ]
+        },
+        {
+          "id": "route_32_old_rod",
+          "name": "Old Rod",
+          "locationDescription": "Prezent od Fishing Guru w Pokémon Center.",
+          "category": "key_item",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-walkthrough-parts-3-4",
+            "serebii-gs-route32"
+          ]
+        },
+        {
+          "id": "route_32_tm05_roar",
+          "name": "TM05 — Roar",
+          "locationDescription": "Prezent od mężczyzny na północnym wzgórzu po uzyskaniu Cut; dostępny przy późniejszej wizycie.",
+          "category": "gift",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "bulbapedia-gs-walkthrough-parts-3-4",
+            "serebii-gs-route32"
           ]
         }
       ],
@@ -2473,6 +2545,164 @@
           ],
           "coordinateStatus": "unverified",
           "sourceIds": [
+            "bulbapedia-gs-walkthrough-parts-3-4"
+          ]
+        },
+        {
+          "name": "Picnicker Liz — rewanż 1",
+          "team": [
+            {
+              "name": "Weepinbell",
+              "level": 15
+            },
+            {
+              "name": "Nidorina",
+              "level": 15
+            }
+          ],
+          "note": "Rewanż przez Pokégear po dotarciu do Ecruteak City i pokonaniu poprzedniego składu.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route32",
+            "bulbapedia-gs-walkthrough-parts-3-4"
+          ]
+        },
+        {
+          "name": "Picnicker Liz — rewanż 2",
+          "team": [
+            {
+              "name": "Weepinbell",
+              "level": 19
+            },
+            {
+              "name": "Nidorino",
+              "level": 19
+            },
+            {
+              "name": "Nidoqueen",
+              "level": 21
+            }
+          ],
+          "note": "Kolejny rewanż przez Pokégear po incydencie w Mahogany Town i pokonaniu poprzedniego składu.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route32",
+            "bulbapedia-gs-walkthrough-parts-3-4"
+          ]
+        },
+        {
+          "name": "Fisherman Ralph — rewanż 1",
+          "team": [
+            {
+              "name": "Goldeen",
+              "level": 17
+            }
+          ],
+          "note": "Rewanż przez Pokégear; może też informować o Qwilfish Swarm.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route32",
+            "bulbapedia-gs-walkthrough-parts-3-4"
+          ]
+        },
+        {
+          "name": "Fisherman Ralph — rewanż 2",
+          "team": [
+            {
+              "name": "Qwilfish",
+              "level": 17
+            },
+            {
+              "name": "Goldeen",
+              "level": 19
+            }
+          ],
+          "note": "Kolejny rewanż przez Pokégear.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route32",
+            "bulbapedia-gs-walkthrough-parts-3-4"
+          ]
+        },
+        {
+          "name": "Picnicker Liz — rewanż Crystal",
+          "team": [
+            {
+              "name": "Weepinbell",
+              "level": 24
+            },
+            {
+              "name": "Nidorino",
+              "level": 24
+            },
+            {
+              "name": "Nidoqueen",
+              "level": 26
+            }
+          ],
+          "note": "Crystal-only; późniejszy rewanż przez Pokégear.",
+          "availableIn": [
+            "crystal"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route32",
+            "bulbapedia-gs-walkthrough-parts-3-4"
+          ]
+        },
+        {
+          "name": "Fisherman Ralph — rewanż Crystal 1",
+          "team": [
+            {
+              "name": "Qwilfish",
+              "level": 30
+            },
+            {
+              "name": "Goldeen",
+              "level": 32
+            }
+          ],
+          "note": "Crystal-only; późniejszy rewanż przez Pokégear.",
+          "availableIn": [
+            "crystal"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route32",
+            "bulbapedia-gs-walkthrough-parts-3-4"
+          ]
+        },
+        {
+          "name": "Fisherman Ralph — rewanż Crystal 2",
+          "team": [
+            {
+              "name": "Qwilfish",
+              "level": 35
+            },
+            {
+              "name": "Seaking",
+              "level": 39
+            }
+          ],
+          "note": "Crystal-only; późniejszy rewanż przez Pokégear.",
+          "availableIn": [
+            "crystal"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route32",
             "bulbapedia-gs-walkthrough-parts-3-4"
           ]
         }
@@ -2763,12 +2993,361 @@
             "ratePercent": 20,
             "method": "Headbutt"
           }
+        ],
+        "walking_morning_gold": [
+          {
+            "name": "Rattata",
+            "levelRange": [
+              4,
+              6
+            ],
+            "ratePercent": 35,
+            "method": "Trawa · rano · Gold"
+          },
+          {
+            "name": "Bellsprout",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · rano · Gold"
+          },
+          {
+            "name": "Mareep",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 20,
+            "method": "Trawa · rano · Gold"
+          },
+          {
+            "name": "Hoppip",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 10,
+            "method": "Trawa · rano · Gold"
+          },
+          {
+            "name": "Wooper",
+            "levelRange": [
+              4,
+              4
+            ],
+            "ratePercent": 4,
+            "method": "Trawa · rano · Gold"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              4,
+              4
+            ],
+            "ratePercent": 1,
+            "method": "Trawa · rano · Gold"
+          }
+        ],
+        "walking_day_gold": [
+          {
+            "name": "Rattata",
+            "levelRange": [
+              4,
+              8
+            ],
+            "ratePercent": 40,
+            "method": "Trawa · dzień · Gold"
+          },
+          {
+            "name": "Bellsprout",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · dzień · Gold"
+          },
+          {
+            "name": "Mareep",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 20,
+            "method": "Trawa · dzień · Gold"
+          },
+          {
+            "name": "Hoppip",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 10,
+            "method": "Trawa · dzień · Gold"
+          }
+        ],
+        "walking_night_gold": [
+          {
+            "name": "Wooper",
+            "levelRange": [
+              6,
+              8
+            ],
+            "ratePercent": 35,
+            "method": "Trawa · noc · Gold"
+          },
+          {
+            "name": "Rattata",
+            "levelRange": [
+              4,
+              4
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · noc · Gold"
+          },
+          {
+            "name": "Bellsprout",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 20,
+            "method": "Trawa · noc · Gold"
+          },
+          {
+            "name": "Mareep",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 10,
+            "method": "Trawa · noc · Gold"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              8,
+              8
+            ],
+            "ratePercent": 5,
+            "method": "Trawa · noc · Gold"
+          }
+        ],
+        "walking_morning_crystal": [
+          {
+            "name": "Rattata",
+            "levelRange": [
+              5,
+              5
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · rano · Crystal"
+          },
+          {
+            "name": "Ekans",
+            "levelRange": [
+              4,
+              4
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · rano · Crystal"
+          },
+          {
+            "name": "Bellsprout",
+            "levelRange": [
+              7,
+              7
+            ],
+            "ratePercent": 20,
+            "method": "Trawa · rano · Crystal"
+          },
+          {
+            "name": "Hoppip",
+            "levelRange": [
+              6,
+              7
+            ],
+            "ratePercent": 15,
+            "method": "Trawa · rano · Crystal"
+          },
+          {
+            "name": "Pidgey",
+            "levelRange": [
+              7,
+              7
+            ],
+            "ratePercent": 5,
+            "method": "Trawa · rano · Crystal"
+          }
+        ],
+        "walking_day_crystal": [
+          {
+            "name": "Rattata",
+            "levelRange": [
+              5,
+              5
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · dzień · Crystal"
+          },
+          {
+            "name": "Ekans",
+            "levelRange": [
+              4,
+              4
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · dzień · Crystal"
+          },
+          {
+            "name": "Bellsprout",
+            "levelRange": [
+              7,
+              7
+            ],
+            "ratePercent": 20,
+            "method": "Trawa · dzień · Crystal"
+          },
+          {
+            "name": "Hoppip",
+            "levelRange": [
+              6,
+              7
+            ],
+            "ratePercent": 15,
+            "method": "Trawa · dzień · Crystal"
+          },
+          {
+            "name": "Pidgey",
+            "levelRange": [
+              7,
+              7
+            ],
+            "ratePercent": 5,
+            "method": "Trawa · dzień · Crystal"
+          }
+        ],
+        "walking_night_crystal": [
+          {
+            "name": "Wooper",
+            "levelRange": [
+              4,
+              4
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · noc · Crystal"
+          },
+          {
+            "name": "Rattata",
+            "levelRange": [
+              5,
+              5
+            ],
+            "ratePercent": 30,
+            "method": "Trawa · noc · Crystal"
+          },
+          {
+            "name": "Bellsprout",
+            "levelRange": [
+              7,
+              7
+            ],
+            "ratePercent": 20,
+            "method": "Trawa · noc · Crystal"
+          },
+          {
+            "name": "Zubat",
+            "levelRange": [
+              6,
+              6
+            ],
+            "ratePercent": 10,
+            "method": "Trawa · noc · Crystal"
+          },
+          {
+            "name": "Hoothoot",
+            "levelRange": [
+              7,
+              7
+            ],
+            "ratePercent": 5,
+            "method": "Trawa · noc · Crystal"
+          },
+          {
+            "name": "Gastly",
+            "levelRange": [
+              7,
+              7
+            ],
+            "ratePercent": 5,
+            "method": "Trawa · noc · Crystal"
+          }
+        ],
+        "headbutt_special_trees_crystal": [
+          {
+            "name": "Hoothoot",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 50,
+            "method": "Headbutt · specjalne drzewa · Crystal"
+          },
+          {
+            "name": "Pineco",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 30,
+            "method": "Headbutt · specjalne drzewa · Crystal"
+          },
+          {
+            "name": "Exeggcute",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 20,
+            "method": "Headbutt · specjalne drzewa · Crystal"
+          }
+        ],
+        "headbutt_crystal": [
+          {
+            "name": "Hoothoot",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 65,
+            "method": "Headbutt · zwykłe drzewa · Crystal"
+          },
+          {
+            "name": "Exeggcute",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 20,
+            "method": "Headbutt · zwykłe drzewa · Crystal"
+          },
+          {
+            "name": "Ekans",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "Headbutt · zwykłe drzewa · Crystal"
+          }
         ]
       },
       "wildPokemonSourceIds": [
         "serebii-gs-route32"
       ],
-      "wildPokemonStatus": "verified_gen2_silver_rates_and_levels"
+      "wildPokemonStatus": "verified_gen2_silver_gold_crystal_rates_and_levels"
     },
     {
       "id": "union_cave",
