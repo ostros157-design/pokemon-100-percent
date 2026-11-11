@@ -85,6 +85,16 @@
       "id": "bulbapedia-gs-ruins-of-alph",
       "url": "https://bulbapedia.bulbagarden.net/wiki/Appendix:Gold_and_Silver_walkthrough/Section_4",
       "scope": "Original Gold/Silver Ruins of Alph puzzle chambers, Unown unlocks, Psychic Nathan team and Unown Mode reward"
+    },
+    {
+      "id": "serebii-gs-route34",
+      "url": "https://www.serebii.net/pokearth/johto/2nd/route34.shtml",
+      "scope": "Pokémon Silver Generation II Route 34 walking, surfing, rods, Headbutt, trainers and item pickups"
+    },
+    {
+      "id": "serebii-gs-goldenrod-city",
+      "url": "https://www.serebii.net/pokearth/johto/2nd/goldenrodcity.shtml",
+      "scope": "Pokémon Silver Generation II Goldenrod City gifts, Gym trainers, Whitney team and TM45 reward"
     }
   ],
   "locations": [
@@ -2823,7 +2833,573 @@
         "bulbapedia-johto-region",
         "bulbapedia-route-list"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit"
+      "dataStatus": "verified_gen2_silver_encounters_trainers_and_items",
+      "wildPokemonDetails": {
+        "walking": [
+          {
+            "name": "Drowzee",
+            "levelRange": [
+              10,
+              12
+            ],
+            "ratePercent": 50,
+            "method": "Trawa"
+          },
+          {
+            "name": "Rattata",
+            "levelRange": [
+              11,
+              13
+            ],
+            "ratePercent": 35,
+            "method": "Trawa"
+          },
+          {
+            "name": "Abra",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 10,
+            "method": "Trawa"
+          },
+          {
+            "name": "Ditto",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 5,
+            "method": "Trawa"
+          }
+        ],
+        "surfing": [
+          {
+            "name": "Tentacool",
+            "levelRange": [
+              15,
+              24
+            ],
+            "ratePercent": 90,
+            "method": "Surfing"
+          },
+          {
+            "name": "Tentacruel",
+            "levelRange": [
+              20,
+              24
+            ],
+            "ratePercent": 10,
+            "method": "Surfing"
+          }
+        ],
+        "old_rod": [
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 85,
+            "method": "Old Rod"
+          },
+          {
+            "name": "Krabby",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "Old Rod"
+          }
+        ],
+        "good_rod_morning": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 55,
+            "method": "Good Rod · rano"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 35,
+            "method": "Good Rod · rano"
+          },
+          {
+            "name": "Corsola",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 10,
+            "method": "Good Rod · rano"
+          }
+        ],
+        "good_rod_day": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 55,
+            "method": "Good Rod · dzień"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 35,
+            "method": "Good Rod · dzień"
+          },
+          {
+            "name": "Corsola",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 10,
+            "method": "Good Rod · dzień"
+          }
+        ],
+        "good_rod_night": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 55,
+            "method": "Good Rod · noc"
+          },
+          {
+            "name": "Magikarp",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 35,
+            "method": "Good Rod · noc"
+          },
+          {
+            "name": "Staryu",
+            "levelRange": [
+              20,
+              20
+            ],
+            "ratePercent": 10,
+            "method": "Good Rod · noc"
+          }
+        ],
+        "super_rod_morning": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 60,
+            "method": "Super Rod · rano"
+          },
+          {
+            "name": "Kingler",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 10,
+            "method": "Super Rod · rano"
+          },
+          {
+            "name": "Corsola",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 30,
+            "method": "Super Rod · rano"
+          }
+        ],
+        "super_rod_day": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 60,
+            "method": "Super Rod · dzień"
+          },
+          {
+            "name": "Kingler",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 10,
+            "method": "Super Rod · dzień"
+          },
+          {
+            "name": "Corsola",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 30,
+            "method": "Super Rod · dzień"
+          }
+        ],
+        "super_rod_night": [
+          {
+            "name": "Krabby",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 60,
+            "method": "Super Rod · noc"
+          },
+          {
+            "name": "Kingler",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 10,
+            "method": "Super Rod · noc"
+          },
+          {
+            "name": "Staryu",
+            "levelRange": [
+              40,
+              40
+            ],
+            "ratePercent": 30,
+            "method": "Super Rod · noc"
+          }
+        ],
+        "headbutt_special_trees": [
+          {
+            "name": "Weedle",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 65,
+            "method": "Headbutt · specjalne drzewa"
+          },
+          {
+            "name": "Kakuna",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "Headbutt · specjalne drzewa"
+          },
+          {
+            "name": "Exeggcute",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "Headbutt · specjalne drzewa"
+          },
+          {
+            "name": "Beedrill",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 5,
+            "method": "Headbutt · specjalne drzewa"
+          }
+        ],
+        "headbutt": [
+          {
+            "name": "Weedle",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 50,
+            "method": "Headbutt"
+          },
+          {
+            "name": "Pineco",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 30,
+            "method": "Headbutt"
+          },
+          {
+            "name": "Exeggcute",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 15,
+            "method": "Headbutt"
+          },
+          {
+            "name": "Beedrill",
+            "levelRange": [
+              10,
+              10
+            ],
+            "ratePercent": 5,
+            "method": "Headbutt"
+          }
+        ]
+      },
+      "wildPokemonSourceIds": [
+        "serebii-gs-route34"
+      ],
+      "wildPokemonStatus": "verified_gen2_silver_rates_and_levels",
+      "trainers": [
+        {
+          "name": "Youngster Samuel",
+          "team": [
+            {
+              "name": "Rattata",
+              "level": 7
+            },
+            {
+              "name": "Sandshrew",
+              "level": 10
+            },
+            {
+              "name": "Spearow",
+              "level": 8
+            },
+            {
+              "name": "Spearow",
+              "level": 8
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route34"
+          ]
+        },
+        {
+          "name": "PokéFan Brandon",
+          "team": [
+            {
+              "name": "Snubbull",
+              "level": 13
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route34"
+          ]
+        },
+        {
+          "name": "Youngster Ian",
+          "team": [
+            {
+              "name": "Mankey",
+              "level": 10
+            },
+            {
+              "name": "Diglett",
+              "level": 12
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route34"
+          ]
+        },
+        {
+          "name": "Picnicker Gina",
+          "team": [
+            {
+              "name": "Hoppip",
+              "level": 9
+            },
+            {
+              "name": "Hoppip",
+              "level": 9
+            },
+            {
+              "name": "Bulbasaur",
+              "level": 12
+            }
+          ],
+          "note": "Dalsze walki telefoniczne mają silniejsze drużyny; nie są osobnymi trenerami na mapie.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route34"
+          ]
+        },
+        {
+          "name": "Officer Keith",
+          "team": [
+            {
+              "name": "Growlithe",
+              "level": 17
+            }
+          ],
+          "note": "Pojawia się do walki nocą.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route34"
+          ]
+        },
+        {
+          "name": "Camper Todd",
+          "team": [
+            {
+              "name": "Psyduck",
+              "level": 14
+            }
+          ],
+          "note": "Dalsze walki telefoniczne mają silniejsze drużyny; nie są osobnymi trenerami na mapie.",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route34"
+          ]
+        },
+        {
+          "name": "Cool Trainer Irene",
+          "team": [
+            {
+              "name": "Goldeen",
+              "level": 22
+            },
+            {
+              "name": "Seaking",
+              "level": 24
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route34"
+          ]
+        },
+        {
+          "name": "Cool Trainer Jenn",
+          "team": [
+            {
+              "name": "Staryu",
+              "level": 24
+            },
+            {
+              "name": "Starmie",
+              "level": 26
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route34"
+          ]
+        },
+        {
+          "name": "Cool Trainer Kate",
+          "team": [
+            {
+              "name": "Shellder",
+              "level": 26
+            },
+            {
+              "name": "Cloyster",
+              "level": 28
+            }
+          ],
+          "note": "",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route34"
+          ]
+        }
+      ],
+      "items": [
+        {
+          "id": "route_34_soft_sand_gift",
+          "name": "Soft Sand",
+          "locationDescription": "Prezent od dziewczyny na najbardziej wysuniętym na południe odcinku trasy; wymaga Surf.",
+          "category": "gift",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route34"
+          ]
+        },
+        {
+          "id": "route_34_rare_candy_hidden",
+          "name": "Rare Candy",
+          "locationDescription": "Ukryty przedmiot wykrywany przez Itemfinder.",
+          "category": "hidden",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route34"
+          ]
+        },
+        {
+          "id": "route_34_super_potion_hidden",
+          "name": "Super Potion",
+          "locationDescription": "Ukryty przedmiot wykrywany przez Itemfinder.",
+          "category": "hidden",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-route34"
+          ]
+        }
+      ]
     },
     {
       "id": "goldenrod_city",
@@ -2841,7 +3417,198 @@
         "bulbapedia-johto-region",
         "bulbapedia-route-list"
       ],
-      "dataStatus": "topology_index_needs_game_variant_audit"
+      "dataStatus": "partial_gen2_silver_main_area_and_gym_data",
+      "items": [
+        {
+          "id": "goldenrod_bicycle",
+          "name": "Bicycle",
+          "locationDescription": "Prezent od właściciela sklepu rowerowego.",
+          "category": "gift",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-goldenrod-city"
+          ]
+        },
+        {
+          "id": "goldenrod_tm21",
+          "name": "TM21 — Frustration",
+          "locationDescription": "Prezent w Department Store w niedzielę, gdy prowadzący Pokémon ma niski poziom przyjaźni.",
+          "category": "gift",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-goldenrod-city"
+          ]
+        },
+        {
+          "id": "goldenrod_tm27",
+          "name": "TM27 — Return",
+          "locationDescription": "Prezent w Department Store w niedzielę, gdy prowadzący Pokémon ma wysoki poziom przyjaźni.",
+          "category": "gift",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-goldenrod-city"
+          ]
+        },
+        {
+          "id": "goldenrod_gold_berry_trade_drowzee",
+          "name": "Gold Berry",
+          "locationDescription": "Nagroda za wymianę Drowzee na Machopa na 5. piętrze Department Store.",
+          "category": "trade",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-goldenrod-city"
+          ]
+        },
+        {
+          "id": "goldenrod_gold_berry_trade_abra",
+          "name": "Gold Berry",
+          "locationDescription": "Nagroda za wymianę Abra na Machopa na 5. piętrze Department Store.",
+          "category": "trade",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-goldenrod-city"
+          ]
+        },
+        {
+          "id": "goldenrod_gym_tm45",
+          "name": "TM45 — Attract",
+          "locationDescription": "Nagroda od liderki Whitney po wygraniu walki w Goldenrod Gym.",
+          "category": "gym_reward",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "not_a_map_pickup",
+          "sourceIds": [
+            "serebii-gs-goldenrod-city"
+          ]
+        }
+      ],
+      "trainers": [
+        {
+          "name": "Beauty Victoria",
+          "team": [
+            {
+              "name": "Sentret",
+              "level": 9
+            },
+            {
+              "name": "Sentret",
+              "level": 13
+            },
+            {
+              "name": "Sentret",
+              "level": 17
+            }
+          ],
+          "note": "Goldenrod Gym",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-goldenrod-city"
+          ]
+        },
+        {
+          "name": "Beauty Samantha",
+          "team": [
+            {
+              "name": "Meowth",
+              "level": 16
+            },
+            {
+              "name": "Meowth",
+              "level": 16
+            }
+          ],
+          "note": "Goldenrod Gym",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-goldenrod-city"
+          ]
+        },
+        {
+          "name": "Lass Carrie",
+          "team": [
+            {
+              "name": "Snubbull",
+              "level": 18
+            }
+          ],
+          "note": "Goldenrod Gym",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-goldenrod-city"
+          ]
+        },
+        {
+          "name": "Lass Bridget",
+          "team": [
+            {
+              "name": "Jigglypuff",
+              "level": 15
+            },
+            {
+              "name": "Jigglypuff",
+              "level": 15
+            },
+            {
+              "name": "Jigglypuff",
+              "level": 15
+            }
+          ],
+          "note": "Goldenrod Gym",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-goldenrod-city"
+          ]
+        },
+        {
+          "name": "Gym Leader Whitney",
+          "team": [
+            {
+              "name": "Clefairy",
+              "level": 18
+            },
+            {
+              "name": "Miltank",
+              "level": 20
+            }
+          ],
+          "note": "Goldenrod Gym",
+          "availableIn": [
+            "gold_silver"
+          ],
+          "coordinateStatus": "unverified",
+          "sourceIds": [
+            "serebii-gs-goldenrod-city"
+          ]
+        }
+      ]
     },
     {
       "id": "route_35",
