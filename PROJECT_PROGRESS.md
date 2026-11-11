@@ -6598,3 +6598,14 @@ Kontrola repozytorium: 64 lokacje, 30 lokacji z tabelami spotkań, 222 grupy spo
 - Zmieniono cache na osobny współdzielony magazyn dla sprite’ów z limitem 2500 plików i długim okresem ważności. Widoki Pokédexu, szczegółów i miniatur ewolucji korzystają z tego samego cache, więc pobrane obrazy mogą być wyświetlane offline; system może jednak wyczyścić cache aplikacji.
 - Automatyczne pobieranie pary zwykły/Shiny przy wejściu w kartę Pokémona nadal działa. Pełne pobieranie wszystkich gatunków jest opcjonalne, aby nie zużywać transferu i pamięci bez zgody użytkownika.
 - Dodano testy adresów URL sprite’ów i liczby 1025 gatunków. Testów nie uruchomiono; nie wykonano też pub get, Flutter Analyzer ani APK. Wymagana jest walidacja kompilacji oraz praktyczny test pobrania i użycia cache offline.
+
+### Pokémon Silver / Johto — Union Cave (2026-11-11)
+- Rozbudowano Union Cave na trzy osobne piętra: 1F, B1F i B2F. Dodano 27 grup spotkań rozdzielonych według piętra, metody (chodzenie, Surf, Old Rod, Good Rod, Super Rod), wersji Gold/Silver/Crystal oraz pory dnia w Crystal; każda grupa ma poziomy i sumę szans 100%.
+- Zweryfikowano i zachowano składy 12 trenerów na właściwych piętrach; przypisano ich do Gold/Silver i Crystal. Skorygowano kolejność Pokémonów u Cooltrainer Nicka i Gwen według tabeli Gen II.
+- Uzupełniono pulę przedmiotów do ośmiu: Potion, Great Ball, X Attack, Awakening na 1F; TM39 Swift i X Defend na B1F; Ether i Hyper Potion na B2F. Wszystkie pozycje mają źródło i status współrzędnych „unverified”.
+- Dodano Laprasa poziomu 20 jako interaktywne spotkanie na B2F w piątki po uzyskaniu Surf; nie jest liczony jako zwykła losowa trawa ani przedmiot.
+- Źródło główne: [Serebii Pokéarth — Union Cave, Generation II](https://www.serebii.net/pokearth/johto/2nd/unioncave.shtml). Dane HGSS nie zostały przeniesione; nie dodano ich dodatkowych ukrytych przedmiotów ani trenerów.
+- Dodano test obejmujący 27 grup procentowych, warianty gier, 12 trenerów, osiem przedmiotów i piątkowego Laprasa. Kontrola struktury JSON wykazała 64 lokacje, 291 grup spotkań, 216 wpisów trenerów i 203 wpisy przedmiotów.
+- Testów Flutter, Flutter Analyzer ani APK nie uruchomiono; współrzędne i grafika mapy Union Cave nadal wymagają weryfikacji. Sam test jednostkowy został zaktualizowany, ale nie został uruchomiony.
+- Następny obszar do uzupełnienia: Azalea Town; Dark Cave pozostaje pominięta zgodnie z wcześniejszą decyzją.
+
