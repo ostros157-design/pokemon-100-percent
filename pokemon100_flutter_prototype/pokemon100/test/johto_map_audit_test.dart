@@ -161,7 +161,7 @@ void main() {
     );
   });
 
-  test('Silver trainer rosters are source-tracked and have no guessed coordinates', () {
+  test('Generation II trainer rosters are source-tracked and have no guessed coordinates', () {
     final locations = audit['locations'] as List<dynamic>;
     final trainers = <Map<String, dynamic>>[];
 
@@ -173,12 +173,12 @@ void main() {
         trainers.add(entry);
         expect(entry['coordinateStatus'], 'unverified');
         expect(entry['sourceIds'], isNotEmpty);
-        expect(entry['availableIn'], contains('gold_silver'));
+        expect(entry['availableIn'], isNotEmpty);
         expect(entry['team'], isA<List<dynamic>>());
       }
     }
 
-    expect(trainers, hasLength(212));
+    expect(trainers, hasLength(216));
     expect(
       locations.where((value) =>
           ((value as Map<String, dynamic>)['trainers'] as List?)?.isNotEmpty ?? false),
@@ -215,6 +215,60 @@ void main() {
     );
     expect(well['trainers'], hasLength(4));
     expect(well['items'], hasLength(1));
+  });
+
+
+  test('Route 33 Gold, Silver and Crystal encounters and Anthony rematches are distinct', () {
+    final locations = audit['locations'] as List<dynamic>;
+    final route = locations.cast<Map<String, dynamic>>()
+        .firstWhere((value) => value['id'] == 'route_33');
+    expect(route['wildPokemonSourceIds'], contains('serebii-gs-route33'));
+    final groups = route['wildPokemonDetails'] as Map<String, dynamic>;
+    const variantGroups = [
+      'walking_morning_gold', 'walking_day_gold', 'walking_night_gold',
+      'walking_morning_crystal', 'walking_day_crystal', 'walking_night_crystal',
+      'headbutt_gold', 'headbutt_special_trees_gold',
+      'headbutt_crystal', 'headbutt_special_trees_crystal',
+    ];
+    for (final key in variantGroups) {
+      expect(groups, contains(key));
+    }
+    for (final group in groups.entries) {
+      final entries = (group.value as List).cast<Map<String, dynamic>>();
+      expect(
+        entries.fold<int>(0, (sum, value) => sum + (value['ratePercent'] as int)),
+        100,
+        reason: 'route_33/${group.key} must total 100%',
+      );
+      for (final entry in entries) {
+        expect(entry['levelRange'], hasLength(2));
+      }
+    }
+    final goldMorning = (groups['walking_morning_gold'] as List)
+        .cast<Map<String, dynamic>>();
+    expect(goldMorning.map((value) => value['name']),
+        ['Rattata', 'Hoppip', 'Spearow', 'Zubat']);
+    final crystalMorning = (groups['walking_morning_crystal'] as List)
+        .cast<Map<String, dynamic>>();
+    expect(crystalMorning.map((value) => value['name']),
+        ['Rattata', 'Spearow', 'Geodude', 'Hoppip', 'Ekans']);
+    final trainers = (route['trainers'] as List).cast<Map<String, dynamic>>();
+    expect(trainers, hasLength(5));
+    final crystalFinal = trainers.firstWhere(
+      (value) => value['name'] == 'Hiker Anthony — rewanż Crystal 4',
+    );
+    expect(crystalFinal['availableIn'], ['crystal']);
+    expect(crystalFinal['team'].map((value) => value['name']),
+        ['Graveler', 'Golem', 'Machoke']);
+    final berry = (route['berryTrees'] as List).single;
+    expect(berry['berry'], 'PSNCureBerry');
+    expect(berry['respawns'], 'daily');
+    expect(berry['sourceIds'], contains('serebii-gs-route33'));
+    for (final trainer in trainers) {
+      expect(trainer['sourceIds'], contains('serebii-gs-route33'));
+      expect(trainer['coordinateStatus'], 'unverified');
+      expect(trainer['availableIn'], isNotEmpty);
+    }
   });
 
   test('Silver Sprout Tower encounter tables, trainers and item pickups are source-tracked', () {
