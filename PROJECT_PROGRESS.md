@@ -6309,7 +6309,7 @@ Dodano dane lokacji Route 7–14, Rock Tunnel, Lavender Town, Underground Path 7
 ### Pokémon Silver / Johto — Game Corner i Department Store w Goldenrod (2026-11-11)
 - Dodano osobne lokacje Goldenrod Game Corner i Goldenrod Department Store, połączone z Goldenrod City. Dane dotyczą oryginalnej generacji II i nie zawierają pinezek ani współrzędnych udawanych jako dokładne.
 - Game Corner: opisano zakup żetonów (50 za 1 000 ₽, 500 za 10 000 ₽), automaty i Card Flip oraz sześć nagród Silver: TM25 Thunder, TM14 Blizzard, TM38 Fire Blast, Abra Lv. 10 (200 żetonów), Sandshrew Lv. 10 (700) i Dratini Lv. 10 (2 100). Nagrody oznaczono jako wymiany, a nie znajdźki na mapie.
-- Department Store: dodano 32 wpisy asortymentu 2F–6F z cenami, trzy rzeczywiste znajdźki w piwnicy (Ultra Ball, Ether, Burn Heal) oraz usługi 5F: niedzielne TM21/TM27, wymianę Drowzee na Machopa z trzymaną Gold Berry i odblokowanie Mystery Gift.
+- Department Store: dodano 35 wpisów asortymentu 2F–6F z cenami, trzy rzeczywiste znajdźki w piwnicy (Ultra Ball, Ether, Burn Heal) oraz usługi 5F: niedzielne TM21/TM27, wymianę Drowzee na Machopa z trzymaną Gold Berry i odblokowanie Mystery Gift.
 - Korekta wersji: usunięto z listy Gold/Silver wymianę Abra na Machopa — ta wymiana dotyczy Pokémon Crystal; w Silver pozostaje Drowzee. Nie dodano towarów ani nagród z HG/SS.
 - Źródła: Serebii Gold/Silver Game Corner; Bulbapedia Goldenrod Department Store (tabele Generation II). Dodano testy liczby wpisów, pięter, źródeł i rozdzielenia wersji. Testy zapisano, ale nie uruchomiono; Flutter Analyzer i APK nie zostały uruchomione.
 - Goldenrod nadal wymaga pełnych danych pozostałych budynków i zweryfikowanej mapy graficznej/współrzędnych. Postęp mapy Pokémon Silver pozostaje 40%.
