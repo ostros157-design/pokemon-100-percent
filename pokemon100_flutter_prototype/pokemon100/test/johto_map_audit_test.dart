@@ -153,7 +153,7 @@ void main() {
       }
     }
 
-    expect(pickups, hasLength(177));
+    expect(pickups, hasLength(178));
     expect(
       locations.where((value) =>
           ((value as Map<String, dynamic>)['items'] as List?)?.isNotEmpty ?? false),
@@ -178,7 +178,7 @@ void main() {
       }
     }
 
-    expect(trainers, hasLength(192));
+    expect(trainers, hasLength(195));
     expect(
       locations.where((value) =>
           ((value as Map<String, dynamic>)['trainers'] as List?)?.isNotEmpty ?? false),
@@ -893,6 +893,56 @@ void main() {
       expect(value['sourceIds'], contains('serebii-gs-dragons-den'));
       expect(value['availableIn'], contains('gold_silver'));
     }
+  });
+
+
+  test('Silver Route 46 encounters, trainers, berries and pickup are source-tracked', () {
+    final locations = audit['locations'] as List<dynamic>;
+    final route = locations.cast<Map<String, dynamic>>().firstWhere(
+      (value) => value['id'] == 'route_46',
+    );
+    expect(route['dataStatus'], 'verified_gen2_silver_encounters_trainers_and_items');
+    expect(route['wildPokemonSourceIds'], contains('serebii-gs-route46'));
+    final groups = route['wildPokemonDetails'] as Map<String, dynamic>;
+    expect(groups, hasLength(5));
+    for (final group in groups.entries) {
+      expect(
+        (group.value as List).fold<int>(
+          0,
+          (sum, value) => sum + ((value as Map<String, dynamic>)['ratePercent'] as num).toInt(),
+        ),
+        100,
+        reason: 'route_46/${group.key} must total 100%',
+      );
+    }
+    expect(route['trainers'], hasLength(3));
+    expect(route['items'], hasLength(1));
+    expect(route['berryTrees'], hasLength(2));
+    final erin = (route['trainers'] as List)
+        .cast<Map<String, dynamic>>()
+        .firstWhere((value) => value['name'] == 'Picnicker Erin');
+    expect(erin['team'], hasLength(2));
+    expect(erin['team'].every((value) => value['level'] == 16), isTrue);
+    for (final value in [...route['trainers'], ...route['items'], ...route['berryTrees']]) {
+      expect(value['sourceIds'], contains(value == route['berryTrees'][0] || value == route['berryTrees'][1]
+          ? 'bulbapedia-berry-tree-generation-ii'
+          : 'serebii-gs-route46'));
+      expect(value['coordinateStatus'], 'unverified');
+      expect(value['availableIn'], contains('gold_silver'));
+    }
+    final direHit = (route['items'] as List).single as Map<String, dynamic>;
+    expect(direHit['category'], 'pickup');
+  });
+
+  test('Dark Cave remains an unfilled topology entry while its map work is deferred', () {
+    final locations = audit['locations'] as List<dynamic>;
+    final cave = locations.cast<Map<String, dynamic>>().firstWhere(
+      (value) => value['id'] == 'dark_cave',
+    );
+    expect(cave['dataStatus'], 'topology_index_needs_game_variant_audit');
+    expect(cave['wildPokemonDetails'], isNull);
+    expect(cave['trainers'], isNull);
+    expect(cave['items'], isNull);
   });
 
 }
