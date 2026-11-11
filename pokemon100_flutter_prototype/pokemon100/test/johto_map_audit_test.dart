@@ -153,7 +153,7 @@ void main() {
       }
     }
 
-    expect(pickups, hasLength(8));
+    expect(pickups, hasLength(9));
     expect(
       locations.where((value) =>
           ((value as Map<String, dynamic>)['items'] as List?)?.isNotEmpty ?? false),
@@ -178,7 +178,7 @@ void main() {
       }
     }
 
-    expect(trainers, hasLength(22));
+    expect(trainers, hasLength(26));
     expect(
       locations.where((value) =>
           ((value as Map<String, dynamic>)['trainers'] as List?)?.isNotEmpty ?? false),
@@ -186,6 +186,36 @@ void main() {
     );
   });
 
+
+
+  test('Silver Route 33 and Slowpoke Well encounter groups are sourced and sum to 100%', () {
+    final locations = audit['locations'] as List<dynamic>;
+    const expectedSources = <String, String>{
+      'route_33': 'serebii-gs-route33',
+      'slowpoke_well': 'serebii-gs-slowpoke-well',
+    };
+    for (final expected in expectedSources.entries) {
+      final location = locations.cast<Map<String, dynamic>>().firstWhere(
+        (value) => value['id'] == expected.key,
+      );
+      expect(location['wildPokemonSourceIds'], contains(expected.value));
+      final groups = location['wildPokemonDetails'] as Map<String, dynamic>;
+      for (final group in groups.entries) {
+        final entries = group.value as List<dynamic>;
+        expect(
+          entries.fold<int>(0, (sum, value) =>
+              sum + ((value as Map<String, dynamic>)['ratePercent'] as num).toInt()),
+          100,
+          reason: '${expected.key}/${group.key} must total 100%',
+        );
+      }
+    }
+    final well = locations.cast<Map<String, dynamic>>().firstWhere(
+      (value) => value['id'] == 'slowpoke_well',
+    );
+    expect(well['trainers'], hasLength(4));
+    expect(well['items'], hasLength(1));
+  });
 
   test('Silver wild encounter tables are sourced and each rate group totals 100%', () {
     final locations = audit['locations'] as List<dynamic>;
