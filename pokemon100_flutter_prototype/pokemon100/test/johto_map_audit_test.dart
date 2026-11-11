@@ -357,4 +357,41 @@ void main() {
     }
   });
 
+
+  test('Silver Goldenrod Underground trainer rosters and item pickups are sourced', () {
+    final locations = audit['locations'] as List<dynamic>;
+    final underground = locations.cast<Map<String, dynamic>>().firstWhere(
+      (value) => value['id'] == 'goldenrod_tunnel',
+    );
+    expect(underground['dataStatus'], 'verified_gen2_silver_trainers_and_items_1f_3f');
+    expect(underground['trainers'], hasLength(16));
+    expect(underground['items'], hasLength(15));
+    for (final entry in [...underground['trainers'], ...underground['items']]) {
+      expect(entry['sourceIds'], contains('serebii-gs-goldenrod-underground'));
+      expect(entry['availableIn'], contains('gold_silver'));
+      expect(entry['coordinateStatus'], 'unverified');
+    }
+    final rivalVariants = (underground['trainers'] as List)
+        .where((value) => (value as Map<String, dynamic>)['name'].toString().startsWith('Rival Silver'))
+        .toList();
+    expect(rivalVariants, hasLength(3));
+  });
+
+  test('Silver Radio Tower Rocket takeover trainers and rewards are sourced', () {
+    final locations = audit['locations'] as List<dynamic>;
+    final tower = locations.cast<Map<String, dynamic>>().firstWhere(
+      (value) => value['id'] == 'radio_tower',
+    );
+    expect(tower['dataStatus'], 'verified_gen2_silver_rocket_takeover_trainers_and_rewards');
+    expect(tower['trainers'], hasLength(16));
+    expect(tower['items'], hasLength(3));
+    for (final entry in [...tower['trainers'], ...tower['items']]) {
+      expect(entry['sourceIds'], contains('serebii-gs-radio-tower'));
+      expect(entry['availableIn'], contains('gold_silver'));
+      expect(entry['coordinateStatus'], 'unverified');
+    }
+    expect((tower['items'] as List).map((value) => value['name']),
+      containsAll(['TM11 — Sunny Day', 'Pink Bow', 'Basement Key']));
+  });
+
 }
