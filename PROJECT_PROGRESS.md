@@ -6489,3 +6489,15 @@ Kontrola repozytorium: 64 lokacje, 27 lokacji z tabelami spotkań, 196 grup spot
 | **Razem** | **100%** | **52%** |
 
 Kontrola repozytorium: 64 lokacje, 30 lokacji z tabelami spotkań, 222 grupy spotkań (wszystkie sumują się do 100%), 185 wpisów trenerów w 31 lokacjach, 167 wpisów przedmiotów w 30 lokacjach i 16 drzewek jagodowych. JSON poprawnie się parsuje, globalne liczniki w testach odpowiadają zawartości, a nowe testy trzech lokacji są zapisane; nie uruchomiono jednak testów Flutter, Analyzer ani APK. Następny pakiet: Route 45, Dragon's Den i Dark Cave.
+
+
+### Pokémon Silver / Johto — Route 45 i Dragon's Den (2026-11-11)
+- Route 45: dodano siedem grup spotkań Pokémon Silver (chodzenie, Surfing, trzy wędki oraz dwa warianty Headbutt), siedmiu unikalnych trenerów z drużynami i poziomami oraz pięć przedmiotów. Rewanże Hiker Parry i Black Belt Kenji przez PokéGear nie są liczone jako osobni trenerzy.
+- Dragon's Den: uzupełniono istniejącą lokację o cztery tabele spotkań wodnych i wędkowania, Dragon Fang, TM24 jako nagrodę fabularną Clair oraz trzy ukryte przedmioty. Gift Dratini Lv. 15 pominięto, ponieważ źródło oznacza go jako Crystal-only.
+- Źródła: Serebii Pokéarth Generation II. Wszystkie grupy procentowe sumują się do 100%; dane są ograniczone do Gold/Silver, a pozycje przedmiotów i trenerów pozostają niezweryfikowane.
+- Dodano testy obu lokacji oraz zaktualizowano liczniki: 192 trenerów i 177 wpisów przedmiotów. Walidacja JSON i połączeń wykonana przed zapisem; testów Flutter, Analyzer ani APK nie uruchomiono.
+- Dark Cave nadal wymaga osobnego opracowania sekcji Route 31 i Route 45; nie podnoszę postępu za tę lokację.
+
+## Aktualizacja szacunku mapy Pokémon Silver — 2026-11-11
+
+**Postęp: 53% ukończone / 47% pozostało.** Dodano zweryfikowane dane dla Route 45 i Dragon's Den; grafika regionu, dokładne współrzędne oraz uruchomione testy nadal pozostają brakującymi elementami.
