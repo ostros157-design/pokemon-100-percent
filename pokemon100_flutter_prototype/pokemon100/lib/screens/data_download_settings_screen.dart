@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../services/game_data_download_service.dart';
+import '../services/pokemon_sprite_cache.dart';
 
 class DataDownloadSettingsScreen extends StatefulWidget {
   const DataDownloadSettingsScreen({super.key});
@@ -12,6 +13,9 @@ class _DataDownloadSettingsScreenState extends State<DataDownloadSettingsScreen>
   String _language = 'pl';
   String _gameId = 'lets_go_pikachu';
   bool _busy = false;
+  bool _spriteBusy = false;
+  int _spriteCompleted = 0;
+  int _spriteFailed = 0;
   Set<String> _downloaded = <String>{};
 
   @override
@@ -41,6 +45,44 @@ class _DataDownloadSettingsScreenState extends State<DataDownloadSettingsScreen>
       if (mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Pobieranie nie powiodło się: $error')));
     } finally {
       if (mounted) setState(() => _busy = false);
+    }
+  }
+
+
+  Future<void> _downloadAllSprites() async {
+    setState(() {
+      _spriteBusy = true;
+      _spriteCompleted = 0;
+      _spriteFailed = 0;
+    });
+    try {
+      final result = await PokemonSpriteCache.downloadNationalDex(
+        onProgress: (completed, total, failed) {
+          if (!mounted) return;
+          setState(() {
+            _spriteCompleted = completed;
+            _spriteFailed = failed;
+          });
+        },
+      );
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(
+              'Zakończono: ${result.completedPokemon} Pokémonów; '
+              'brakujące pliki sprite’ów: ${result.failedSprites}.',
+            ),
+          ),
+        );
+      }
+    } catch (error) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Pobieranie sprite’ów przerwane: $error')),
+        );
+      }
+    } finally {
+      if (mounted) setState(() => _spriteBusy = false);
     }
   }
 
@@ -109,6 +151,41 @@ class _DataDownloadSettingsScreenState extends State<DataDownloadSettingsScreen>
           dense: true, leading: const Icon(Icons.check_circle,color:Colors.green),
           title: Text(p.title), subtitle: const Text('Dane mapy zapisane offline'),
         )),
+        const Divider(height: 32),
+        Text('Sprite’y Pokémonów — pobieranie offline',
+            style: Theme.of(context).textTheme.titleLarge),
+        const SizedBox(height: 8),
+        const Text(
+          'Pobierze zwykły i Shiny sprite dla każdego z 1025 numerów National Pokédex '
+          '(maksymalnie 2050 obrazów). Wymaga internetu i wolnego miejsca; '
+          'brakujące pliki zostaną pominięte, a pobieranie nie zatrzyma się przez pojedynczy błąd.',
+        ),
+        const SizedBox(height: 12),
+        FilledButton.icon(
+          onPressed: _spriteBusy ? null : _downloadAllSprites,
+          icon: _spriteBusy
+              ? const SizedBox(width: 18, height: 18,
+                  child: CircularProgressIndicator(strokeWidth: 2))
+              : const Icon(Icons.cloud_download_outlined),
+          label: Text(_spriteBusy ? 'Pobieranie sprite’ów…' : 'Pobierz wszystkie zwykłe + Shiny'),
+        ),
+        if (_spriteBusy || _spriteCompleted > 0) ...[
+          const SizedBox(height: 12),
+          LinearProgressIndicator(
+            value: _spriteCompleted / PokemonSpriteCache.nationalDexCount,
+          ),
+          const SizedBox(height: 6),
+          Text(
+            'Pokémony: $_spriteCompleted/${PokemonSpriteCache.nationalDexCount} '
+            '• błędy plików: $_spriteFailed',
+          ),
+        ],
+        const SizedBox(height: 8),
+        Text(
+          'Pliki trafiają do osobnego cache sprite’ów (limit 2500 plików, długi okres ważności). '
+          'System Android może jednak usunąć cache przy czyszczeniu pamięci.',
+          style: Theme.of(context).textTheme.bodySmall,
+        ),
       ]),
     );
   }
