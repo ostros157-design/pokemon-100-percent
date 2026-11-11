@@ -153,11 +153,11 @@ void main() {
       }
     }
 
-    expect(pickups, hasLength(179));
+    expect(pickups, hasLength(185));
     expect(
       locations.where((value) =>
           ((value as Map<String, dynamic>)['items'] as List?)?.isNotEmpty ?? false),
-      hasLength(33),
+      hasLength(34),
     );
   });
 
@@ -982,6 +982,52 @@ void main() {
         .singleWhere((value) => value['id'] == 'route_29_potion_1');
     expect(potion['sourceIds'], contains('serebii-gs-route29'));
     expect(route['berryTrees'], hasLength(1));
+  });
+
+
+  test('Silver New Bark Town water encounters and story gifts are source-tracked', () {
+    final locations = audit['locations'] as List<dynamic>;
+    final town = locations.cast<Map<String, dynamic>>().firstWhere(
+      (value) => value['id'] == 'new_bark_town',
+    );
+    expect(town['dataStatus'], 'verified_gen2_silver_water_encounters_starter_and_story_gifts');
+    expect(town['wildPokemonSourceIds'], contains('serebii-gs-new-bark-town'));
+    final groups = town['wildPokemonDetails'] as Map<String, dynamic>;
+    expect(groups.keys, containsAll(['surfing', 'old_rod', 'good_rod', 'super_rod']));
+    expect(groups, hasLength(4));
+    for (final group in groups.entries) {
+      expect(
+        (group.value as List).fold<int>(
+          0,
+          (sum, value) => sum + ((value as Map<String, dynamic>)['ratePercent'] as num).toInt(),
+        ),
+        100,
+        reason: 'new_bark_town/${group.key} must total 100%',
+      );
+    }
+    final items = (town['items'] as List).cast<Map<String, dynamic>>();
+    expect(items, hasLength(6));
+    expect(items.map((value) => value['id']), containsAll([
+      'new_bark_pokegear',
+      'new_bark_potion_elm_aide',
+      'new_bark_pokeballs_5',
+      'new_bark_everstone_togepi',
+      'new_bark_master_ball_badges',
+      'new_bark_ss_ticket_hall_of_fame',
+    ]));
+    for (final item in items) {
+      expect(item['sourceIds'], isNotEmpty);
+      expect(item['availableIn'], contains('gold_silver'));
+      expect(item['coordinateStatus'], 'unverified');
+    }
+    final services = (town['specialServices'] as List).cast<Map<String, dynamic>>();
+    expect(services, hasLength(2));
+    expect(services.first['category'], 'gift_pokemon');
+    expect(services.first['description'], contains('Chikorita'));
+    expect(services.first['description'], contains('Cyndaquil'));
+    expect(services.first['description'], contains('Totodile'));
+    expect(services.last['category'], 'held_item_gift');
+    expect(town['trainers'], isNull);
   });
 
 }
