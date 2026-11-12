@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../data/pokemon_data.dart';
 import '../models/guide.dart';
+import '../services/app_appearance.dart';
 import '../screens/pokemon_details_screen.dart';
 
 class GuideStepCard extends StatelessWidget {
@@ -18,16 +19,21 @@ class GuideStepCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final pixel = AppAppearance.visualStyle.value == 'pixel';
+    final borderColor = Theme.of(context).dividerColor.withValues(alpha: 0.75);
     return Card(
       margin: const EdgeInsets.only(bottom: 8),
       elevation: 0,
       clipBehavior: Clip.antiAlias,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(13),
-        side: BorderSide(
-          color: Theme.of(context).dividerColor.withValues(alpha: 0.55),
-        ),
-      ),
+      shape: pixel
+          ? PixelShapeBorder(
+              side: BorderSide(color: borderColor, width: 1.5),
+              step: 7,
+            )
+          : RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(13),
+              side: BorderSide(color: borderColor.withValues(alpha: 0.75)),
+            ),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
         child: Column(
@@ -41,6 +47,11 @@ class GuideStepCard extends StatelessWidget {
                   onChanged: (_) => onChanged(),
                   visualDensity: VisualDensity.compact,
                   materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                  shape: pixel
+                      ? const RoundedRectangleBorder(
+                          borderRadius: BorderRadius.zero,
+                        )
+                      : null,
                 ),
                 Expanded(
                   child: Text(
