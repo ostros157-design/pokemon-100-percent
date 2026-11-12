@@ -28,21 +28,38 @@ class AchievementCard extends StatelessWidget {
     return Card(
       margin: const EdgeInsets.only(bottom: 12),
       child: ListTile(
-        leading: CircleAvatar(
-          backgroundColor: unlocked
-              ? unlockedColor.withValues(alpha: 0.14)
-              : null,
-          child: pixel
-              ? PixelIcon(
+        leading: pixel
+            ? Container(
+                width: 42,
+                height: 42,
+                alignment: Alignment.center,
+                decoration: ShapeDecoration(
+                  color: unlocked
+                      ? unlockedColor.withValues(alpha: 0.14)
+                      : null,
+                  shape: PixelShapeBorder(
+                    side: BorderSide(
+                      color: unlockedColor.withValues(alpha: 0.65),
+                      width: 1.5,
+                    ),
+                    step: 6,
+                  ),
+                ),
+                child: PixelIcon(
                   name: unlocked ? 'trophy' : 'settings',
                   color: unlocked ? unlockedColor : Theme.of(context).disabledColor,
                   size: 23,
-                )
-              : Icon(
+                ),
+              )
+            : CircleAvatar(
+                backgroundColor: unlocked
+                    ? unlockedColor.withValues(alpha: 0.14)
+                    : null,
+                child: Icon(
                   unlocked ? Icons.emoji_events : Icons.lock_outline,
                   color: unlocked ? unlockedColor : null,
                 ),
-        ),
+              ),
         title: Text(
           achievement.title,
           style: TextStyle(
