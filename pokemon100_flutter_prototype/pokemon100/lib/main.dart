@@ -87,6 +87,7 @@ class _PokemonGuideAppState extends State<PokemonGuideApp> {
                       shape: AppAppearance.componentShape(
                         badgeColor,
                         pixel: isPixel,
+                        retro: isRetro,
                         width: 1.5,
                       ),
                     ),
@@ -95,6 +96,7 @@ class _PokemonGuideAppState extends State<PokemonGuideApp> {
                       shape: AppAppearance.componentShape(
                         badgeColor,
                         pixel: isPixel,
+                        retro: isRetro,
                       ),
                     ),
                     cardTheme: CardThemeData(
@@ -104,6 +106,7 @@ class _PokemonGuideAppState extends State<PokemonGuideApp> {
                           ? AppAppearance.componentShape(
                               badgeColor,
                               pixel: isPixel,
+                        retro: isRetro,
                               width: isPixel ? 2 : 1.5,
                             )
                           : RoundedRectangleBorder(
@@ -114,6 +117,7 @@ class _PokemonGuideAppState extends State<PokemonGuideApp> {
                       shape: AppAppearance.componentShape(
                         badgeColor,
                         pixel: isPixel,
+                        retro: isRetro,
                         width: 2,
                       ),
                     ),
@@ -121,6 +125,7 @@ class _PokemonGuideAppState extends State<PokemonGuideApp> {
                       shape: AppAppearance.componentShape(
                         badgeColor,
                         pixel: isPixel,
+                        retro: isRetro,
                         width: 2,
                       ),
                     ),
@@ -128,6 +133,7 @@ class _PokemonGuideAppState extends State<PokemonGuideApp> {
                       shape: AppAppearance.componentShape(
                         badgeColor,
                         pixel: isPixel,
+                        retro: isRetro,
                         width: 1.5,
                       ),
                       behavior: SnackBarBehavior.floating,
@@ -136,6 +142,7 @@ class _PokemonGuideAppState extends State<PokemonGuideApp> {
                       shape: AppAppearance.componentShape(
                         badgeColor,
                         pixel: isPixel,
+                        retro: isRetro,
                         width: 2,
                       ),
                     ),
@@ -167,6 +174,7 @@ class _PokemonGuideAppState extends State<PokemonGuideApp> {
                       shape: AppAppearance.componentShape(
                         badgeColor,
                         pixel: isPixel,
+                        retro: isRetro,
                         width: isPixel ? 2 : 1.5,
                       ),
                     ),
@@ -175,6 +183,7 @@ class _PokemonGuideAppState extends State<PokemonGuideApp> {
                         shape: AppAppearance.componentShape(
                           badgeColor,
                           pixel: isPixel,
+                        retro: isRetro,
                           width: isPixel ? 2 : 1,
                         ),
                       ),
@@ -184,6 +193,7 @@ class _PokemonGuideAppState extends State<PokemonGuideApp> {
                         shape: AppAppearance.componentShape(
                           badgeColor,
                           pixel: isPixel,
+                        retro: isRetro,
                           width: isPixel ? 2 : 1.5,
                         ),
                         elevation: isPixelStyled ? 0 : 1,
@@ -194,6 +204,7 @@ class _PokemonGuideAppState extends State<PokemonGuideApp> {
                         shape: AppAppearance.componentShape(
                           badgeColor,
                           pixel: isPixel,
+                        retro: isRetro,
                           width: isPixel ? 2 : 1.5,
                         ),
                       ),
