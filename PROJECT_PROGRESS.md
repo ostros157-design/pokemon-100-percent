@@ -1,3 +1,12 @@
+### Wygląd aplikacji — pikselowe ikony menu i Pokédexu (2026-11-12)
+
+- Rozszerzono zestaw własnych ikon Pixel Art o poradnik, mapę, muzykę, ruchy, Poké Ball, drużynę, osiągnięcia, profil, ustawienia, strzałkę, wyszukiwanie i filtr.
+- Podłączono ikony do wszystkich głównych pozycji menu: Poradniki, Mapy regionów, Muzyka Pokémon, Katalog ruchów, Pokédex, Wybór gry, Team, Osiągnięcia i Profil. Dodano też pikselową ikonę ustawień i strzałki nawigacyjnej.
+- W Pokédexie podmieniono ikony wyszukiwania, czyszczenia pola i filtrów w stylu Pełny Pixel Art.
+- Ikony zmieniają się zależnie od wybranego stylu; Nowoczesny i Retro nadal używają standardowych ikon Material.
+- Pliki ponownie odczytano z GitHuba i potwierdzono obecność zmian. Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK.
+- Nadal do wykonania: dedykowana czcionka pixel art, pikselowe tła i grafiki, dalsze ekrany oraz kontrola wyglądu na urządzeniu.
+
 ### Wygląd aplikacji — pierwsze ikony Pixel Art (2026-11-12)
 
 - Dodano komponent `PixelIcon`, który rysuje ikony z kwadratowych pikseli bez wygładzania.
