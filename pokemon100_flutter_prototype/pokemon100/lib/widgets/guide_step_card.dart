@@ -6,12 +6,14 @@ import '../screens/pokemon_details_screen.dart';
 
 class GuideStepCard extends StatelessWidget {
   final GuideStep step;
+  final int stepNumber;
   final bool completed;
   final VoidCallback onChanged;
 
   const GuideStepCard({
     super.key,
     required this.step,
+    required this.stepNumber,
     required this.completed,
     required this.onChanged,
   });
@@ -35,6 +37,44 @@ class GuideStepCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            Row(
+              children: [
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                  decoration: BoxDecoration(
+                    color: colors.primaryContainer,
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  child: Text(
+                    'KROK ${stepNumber.toString().padLeft(2, '0')}',
+                    style: TextStyle(
+                      color: colors.onPrimaryContainer,
+                      fontSize: 11,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 0.5,
+                    ),
+                  ),
+                ),
+                const Spacer(),
+                if (step.optional)
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 5),
+                    decoration: BoxDecoration(
+                      color: colors.tertiaryContainer,
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: Text(
+                      'DODATKOWE',
+                      style: TextStyle(
+                        color: colors.onTertiaryContainer,
+                        fontSize: 10,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+              ],
+            ),
+            const SizedBox(height: 10),
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -135,16 +175,6 @@ class GuideStepCard extends StatelessWidget {
                       ),
                     )
                     .toList(),
-              ),
-            ],
-            if (step.optional) ...[
-              const SizedBox(height: 8),
-              const Text(
-                'Opcjonalne',
-                style: TextStyle(
-                  fontSize: 12,
-                  fontStyle: FontStyle.italic,
-                ),
               ),
             ],
           ],
