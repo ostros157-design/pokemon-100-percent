@@ -1,3 +1,11 @@
+### Wygląd aplikacji — pierwsze ikony Pixel Art (2026-11-12)
+
+- Dodano komponent `PixelIcon`, który rysuje ikony z kwadratowych pikseli bez wygładzania.
+- Podłączono pierwsze pikselowe ikony do ustawień: wybór stylu, tryb jasny/ciemny, język, aktualizacje oraz zaznaczenie koloru.
+- W stylach Nowoczesny i Retro pozostają dotychczasowe ikony Material; zmiana dotyczy wyłącznie stylu Pełny Pixel Art.
+- To początkowy zestaw ikon dla ekranu ustawień, a nie kompletna podmiana ikon w całej aplikacji. Dedykowana czcionka pixel art, grafiki menu i pozostałe ikony nadal wymagają pracy.
+- Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK.
+ 
 ### Nowe funkcje do zaplanowania — ROM, drugi ekran i Game Assist (2026-11-11)
 
 - **Przypisywanie ROM-u do gry:** przy wyborze gry w aplikacji ma być dostępna opcja wskazania pliku ROM przypisanego do konkretnej gry i zapisania tego przypisania. Na ekranie gry ma pojawić się przycisk uruchomienia jej w wybranym, zgodnym emulatorze; aplikacja nie będzie dostarczać ROM-ów ani pobierać ich z nieautoryzowanych źródeł. Trzeba uwzględnić uprawnienia do plików Androida, ponowne odnajdywanie przeniesionych plików oraz różnice między emulatorami i platformami.
