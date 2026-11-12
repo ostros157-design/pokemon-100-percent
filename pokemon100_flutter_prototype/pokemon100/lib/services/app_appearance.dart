@@ -45,12 +45,19 @@ class AppAppearance {
   static ShapeBorder componentShape(
     Color accent, {
     required bool pixel,
+    bool retro = false,
     double width = 1,
   }) {
     if (pixel) {
       return PixelShapeBorder(
         side: BorderSide(color: accent, width: width),
         step: 5,
+      );
+    }
+    if (retro) {
+      return RoundedRectangleBorder(
+        borderRadius: BorderRadius.zero,
+        side: BorderSide(color: accent, width: width),
       );
     }
     return RoundedRectangleBorder(
