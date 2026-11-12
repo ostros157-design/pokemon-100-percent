@@ -201,7 +201,7 @@ class _GuideScreenState extends State<GuideScreen> {
             child: pixel
                 ? Container(
                     decoration: ShapeDecoration(
-                      color: Theme.of(context).colorScheme.surfaceContainer,
+                      color: Theme.of(context).colorScheme.surfaceContainerHighest,
                       shape: PixelShapeBorder(
                         side: BorderSide(
                           color: Theme.of(context).colorScheme.primary,
