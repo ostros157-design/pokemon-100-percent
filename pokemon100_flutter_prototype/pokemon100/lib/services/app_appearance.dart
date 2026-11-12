@@ -100,7 +100,7 @@ class PixelShapeBorder extends ShapeBorder {
   EdgeInsetsGeometry get dimensions => EdgeInsets.all(side.width);
 
   Path _path(Rect rect) {
-    final inset = step.clamp(1.0, rect.shortestSide / 3);
+    final inset = step.clamp(1.0, rect.shortestSide / 3).toDouble();
     return Path()
       ..moveTo(rect.left + inset, rect.top)
       ..lineTo(rect.right - inset, rect.top)
