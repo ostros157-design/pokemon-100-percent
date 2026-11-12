@@ -109,7 +109,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         : (completedObjectives * 100 / totalObjectives).round();
     final gameName = _gameNames[_selectedGameId] ?? _selectedGameId;
     final colors = Theme.of(context).colorScheme;
-    final safeProgress = (percent / 100).clamp(0.0, 1.0);
+    final safeProgress = (percent / 100).clamp(0.0, 1.0).toDouble();
 
     return Scaffold(
       appBar: AppBar(title: const Text('Profil')),
