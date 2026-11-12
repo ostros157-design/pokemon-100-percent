@@ -8,6 +8,7 @@ import '../data/evolution_data.dart';
 import '../data/type_effectiveness.dart';
 import '../data/move_data.dart';
 import '../data/pokemon_learnset_data.dart';
+import 'maps_screen.dart';
 
 class PokemonDetailsScreen extends StatefulWidget {
   final Pokemon pokemon;
@@ -673,6 +674,31 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
                         ),
                       ),
                     ],
+                  ),
+                ),
+                const SizedBox(height: 12),
+                Card(
+                  child: ListTile(
+                    leading: CircleAvatar(
+                      backgroundColor: colors.primaryContainer,
+                      foregroundColor: colors.onPrimaryContainer,
+                      child: const Icon(Icons.map_outlined),
+                    ),
+                    title: const Text('Szukaj na mapie'),
+                    subtitle: const Text(
+                      'Znajdź lokacje, w których ten Pokémon występuje w dostępnych danych spotkań.',
+                    ),
+                    trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute<void>(
+                          builder: (_) => MapsScreen(
+                            initialPokemonName: pokemon.name,
+                            initialGameId: _activeGameId,
+                          ),
+                        ),
+                      );
+                    },
                   ),
                 ),
                 const SizedBox(height: 28),
