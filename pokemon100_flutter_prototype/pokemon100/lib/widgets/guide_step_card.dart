@@ -18,6 +18,7 @@ class GuideStepCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colors = Theme.of(context).colorScheme;
     return Card(
       margin: const EdgeInsets.only(bottom: 12),
       elevation: 2,
@@ -51,7 +52,7 @@ class GuideStepCard extends StatelessWidget {
               step.description,
               style: TextStyle(
                 fontSize: 15,
-                color: Colors.grey.shade700,
+                color: colors.onSurfaceVariant,
                 decoration:
                     completed ? TextDecoration.lineThrough : null,
               ),
