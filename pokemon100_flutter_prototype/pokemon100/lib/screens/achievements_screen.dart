@@ -104,6 +104,8 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
   Widget build(BuildContext context) {
     final achievements = achievementsList;
 
+    final colors = Theme.of(context).colorScheme;
+
     return Scaffold(
       appBar: AppBar(title: const Text('Osiągnięcia')),
       body: _loading
@@ -114,7 +116,13 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
                   padding: const EdgeInsets.fromLTRB(16, 12, 16, 4),
                   child: Card(
                     child: ListTile(
-                      leading: const Icon(Icons.catching_pokemon),
+                      leading: CircleAvatar(
+                        backgroundColor: colors.primaryContainer,
+                        child: Icon(
+                          Icons.catching_pokemon,
+                          color: colors.onPrimaryContainer,
+                        ),
+                      ),
                       title: const Text('Kolekcja ze wszystkich gier'),
                       subtitle: Text(
                         '$_globalCaughtCount różnych Pokémonów zarejestrowanych łącznie',
