@@ -84,16 +84,59 @@ class _PokemonGuideAppState extends State<PokemonGuideApp> {
                     chipTheme: ChipThemeData(
                       backgroundColor: badgeColor.withOpacity(0.14),
                       labelStyle: TextStyle(color: foreground),
+                      shape: AppAppearance.componentShape(
+                        badgeColor,
+                        pixel: isPixel,
+                        width: 1.5,
+                      ),
                     ),
-                    listTileTheme: ListTileThemeData(textColor: foreground),
+                    listTileTheme: ListTileThemeData(
+                      textColor: foreground,
+                      shape: AppAppearance.componentShape(
+                        badgeColor,
+                        pixel: isPixel,
+                      ),
+                    ),
                     cardTheme: CardThemeData(
                       color: isDark ? const Color(0xFF1E1E1E) : const Color(0xFFF8F8F8),
                       elevation: isPixelStyled ? 0 : 1,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(isPixelStyled ? 0 : 12),
-                        side: isPixelStyled
-                            ? BorderSide(color: badgeColor, width: isPixel ? 2 : 1.5)
-                            : BorderSide.none,
+                      shape: isPixelStyled
+                          ? AppAppearance.componentShape(
+                              badgeColor,
+                              pixel: isPixel,
+                              width: isPixel ? 2 : 1.5,
+                            )
+                          : RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                    ),
+                    dialogTheme: DialogThemeData(
+                      shape: AppAppearance.componentShape(
+                        badgeColor,
+                        pixel: isPixel,
+                        width: 2,
+                      ),
+                    ),
+                    bottomSheetTheme: BottomSheetThemeData(
+                      shape: AppAppearance.componentShape(
+                        badgeColor,
+                        pixel: isPixel,
+                        width: 2,
+                      ),
+                    ),
+                    snackBarTheme: SnackBarThemeData(
+                      shape: AppAppearance.componentShape(
+                        badgeColor,
+                        pixel: isPixel,
+                        width: 1.5,
+                      ),
+                      behavior: SnackBarBehavior.floating,
+                    ),
+                    floatingActionButtonTheme: FloatingActionButtonThemeData(
+                      shape: AppAppearance.componentShape(
+                        badgeColor,
+                        pixel: isPixel,
+                        width: 2,
                       ),
                     ),
                     dividerTheme: DividerThemeData(
@@ -102,23 +145,20 @@ class _PokemonGuideAppState extends State<PokemonGuideApp> {
                     ),
                     elevatedButtonTheme: ElevatedButtonThemeData(
                       style: ElevatedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(isPixelStyled ? 0 : 12),
-                          side: isPixelStyled
-                              ? BorderSide(color: badgeColor, width: isPixel ? 2 : 1)
-                              : BorderSide.none,
+                        shape: AppAppearance.componentShape(
+                          badgeColor,
+                          pixel: isPixel,
+                          width: isPixel ? 2 : 1.5,
                         ),
                         elevation: isPixelStyled ? 0 : 1,
                       ),
                     ),
                     outlinedButtonTheme: OutlinedButtonThemeData(
                       style: OutlinedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(isPixelStyled ? 0 : 12),
-                          side: BorderSide(
-                            color: badgeColor,
-                            width: isPixel ? 2 : 1,
-                          ),
+                        shape: AppAppearance.componentShape(
+                          badgeColor,
+                          pixel: isPixel,
+                          width: isPixel ? 2 : 1.5,
                         ),
                       ),
                     ),
