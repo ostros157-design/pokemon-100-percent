@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../services/app_appearance.dart';
 import '../services/app_update_service.dart';
 import '../services/notification_service.dart';
+import '../widgets/pixel_icon.dart';
 import 'data_download_settings_screen.dart';
 
 class SettingsScreen extends StatefulWidget {
@@ -36,7 +37,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 final description = switch (entry.key) {
                   'modern' => 'Obecny, nowoczesny wygląd aplikacji.',
                   'retro' => 'Nowoczesny układ z pikselowymi ramkami i przyciskami.',
-                  'pixel' => 'Kanciaste elementy i monospace w całej aplikacji.',
+                  'pixel' => 'Pikselowe ikony, ostre ramki i kanciaste elementy interfejsu.',
                   _ => '',
                 };
                 return RadioListTile<String>(
@@ -44,7 +45,13 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   groupValue: selectedStyle,
                   title: Text(entry.value),
                   subtitle: Text(description),
-                  secondary: Icon(
+                  secondary: _settingsIcon(
+                    context,
+                    entry.key == 'modern'
+                        ? 'sparkles'
+                        : entry.key == 'retro'
+                            ? 'game'
+                            : 'grid',
                     entry.key == 'modern'
                         ? Icons.auto_awesome
                         : entry.key == 'retro'
@@ -62,7 +69,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
           ValueListenableBuilder<bool>(
             valueListenable: AppAppearance.darkBackground,
             builder: (context, isDark, _) => SwitchListTile(
-              secondary: Icon(isDark ? Icons.dark_mode : Icons.light_mode),
+              secondary: _settingsIcon(context, isDark ? 'moon' : 'sun', isDark ? Icons.dark_mode : Icons.light_mode),
               title: const Text('Ciemne tło'),
               subtitle: Text(isDark
                   ? 'Tło jest czarne, tekst zachowuje wybrany kolor.'
@@ -87,7 +94,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             onChanged: AppAppearance.setBadgeColor,
           ),
           ListTile(
-            leading: const Icon(Icons.language),
+            leading: _settingsIcon(context, 'language', Icons.language),
             title: const Text('Języki testowe i pobieranie danych gier'),
             subtitle: const Text('Wybierz język testowy i pobierz mapy tylko wybranych gier.'),
             trailing: const Icon(Icons.chevron_right),
@@ -120,7 +127,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
           ),
           ListTile(
-            leading: const Icon(Icons.system_update),
+            leading: _settingsIcon(context, 'update', Icons.system_update),
             title: const Text('Aktualizacje Google Play'),
             subtitle: const Text(
               'Aplikacja sprawdza aktualizacje po uruchomieniu i co 24 godziny. '
@@ -148,7 +155,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   },
           ),
           ListTile(
-            leading: Icon(
+            leading: _settingsIcon(
+              context,
+              'grid',
               NotificationService.isConfigured
                   ? Icons.notifications_active
                   : Icons.notifications_off_outlined,
@@ -229,13 +238,21 @@ class _ColorChoiceTile extends StatelessWidget {
                           ),
                         ),
                         child: isSelected
-                            ? Icon(
-                                Icons.check,
-                                color: entry.value.computeLuminance() > 0.5
-                                    ? Colors.black
-                                    : Colors.white,
-                                size: 20,
-                              )
+                            ? (AppAppearance.visualStyle.value == 'pixel'
+                                ? PixelIcon(
+                                    name: 'check',
+                                    color: entry.value.computeLuminance() > 0.5
+                                        ? Colors.black
+                                        : Colors.white,
+                                    size: 20,
+                                  )
+                                : Icon(
+                                    Icons.check,
+                                    color: entry.value.computeLuminance() > 0.5
+                                        ? Colors.black
+                                        : Colors.white,
+                                    size: 20,
+                                  ))
                             : null,
                       ),
                     ),
@@ -253,4 +270,16 @@ class _ColorChoiceTile extends StatelessWidget {
       },
     );
   }
+}
+
+Widget _settingsIcon(
+  BuildContext context,
+  String pixelName,
+  IconData fallback, {
+  double size = 24,
+}) {
+  if (AppAppearance.visualStyle.value == 'pixel') {
+    return PixelIcon(name: pixelName, size: size);
+  }
+  return Icon(fallback, size: size);
 }
