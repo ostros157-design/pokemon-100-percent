@@ -1,3 +1,10 @@
+### Pokédex — odświeżenie kart Pokémonów (2026-11-12)
+
+- Karty otrzymały czytelniejszą hierarchię: numer Pokédexa, sprite, nazwa, typy i status złapania.
+- Status złapania jest teraz wyróżniony obramowaniem i kolorem zgodnym z motywem; przycisk oznaczania znajduje się w górnej części karty.
+- Zachowano pikselowe sprite’y, siatkę, filtrowanie, sortowanie, oznaczanie złapanych Pokémonów i przejście do szczegółów.
+- Nie uruchomiono analyzer, testów ani APK; wygląd i dopasowanie na różnych rozmiarach ekranu wymagają sprawdzenia.
+
 ### Poradniki — szybkie przechodzenie między krokami (2026-11-12)
 
 - Pod paskiem postępu dodano poziomy pasek numerowanych skrótów do wszystkich kroków poradnika; kliknięcie numeru przewija bezpośrednio do odpowiedniej karty.
