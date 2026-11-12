@@ -1,3 +1,10 @@
+### Wygląd aplikacji — pikselowy ekran poradnika (2026-11-12)
+
+- Ekran poradnika reaguje teraz na wybrany styl wyglądu: w trybie Pełny Pixel Art otrzymuje kanciastą dolną ramkę paska aplikacji, pikselowy znacznik książki przy postępie oraz schodkowe ramki nagłówków sekcji.
+- Pasek ukończenia poradnika w trybie Pixel Art ma prostokątną oprawę i ostre narożniki; pozostałe style zachowują dotychczasowy zaokrąglony wygląd.
+- Karty poszczególnych kroków poradnika otrzymały schodkowe obramowanie, a pole ukończenia kwadratowy kształt w trybie Pixel Art. Zmiana nie powinna zmieniać danych ani sposobu zapisywania postępu.
+- Nie dodano jeszcze dedykowanej czcionki pixel art ani pikselowych grafik/tła. Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK; wygląd wymaga sprawdzenia na urządzeniu.
+
 ### Wygląd aplikacji — pikselowe ikony menu i Pokédexu (2026-11-12)
 
 - Rozszerzono zestaw własnych ikon Pixel Art o poradnik, mapę, muzykę, ruchy, Poké Ball, drużynę, osiągnięcia, profil, ustawienia, strzałkę, wyszukiwanie i filtr.
