@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../models/guide.dart';
+import '../services/app_appearance.dart';
+import '../widgets/pixel_icon.dart';
 import '../widgets/guide_step_card.dart';
 
 class GuideScreen extends StatefulWidget {
@@ -111,30 +113,44 @@ class _GuideScreenState extends State<GuideScreen> {
   Widget build(BuildContext context) {
     final guide = widget.guide;
 
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(guide.title),
-      ),
-      body: _isLoadingProgress
-          ? const Center(child: CircularProgressIndicator())
-          : Column(
-              children: [
-                _buildProgressHeader(),
-                Expanded(
-                  child: guide.steps.isEmpty
-                      ? _buildEmptyGuide()
-                      : ListView(
-                          controller: _scrollController,
-                          padding: const EdgeInsets.fromLTRB(12, 8, 12, 16),
-                          children: _buildGuideSteps(),
-                        ),
+    return ValueListenableBuilder<String>(
+      valueListenable: AppAppearance.visualStyle,
+      builder: (context, visualStyle, _) {
+        final pixel = visualStyle == 'pixel';
+        return Scaffold(
+          appBar: AppBar(
+            title: Text(guide.title),
+            shape: pixel
+                ? Border(
+                    bottom: BorderSide(
+                      color: Theme.of(context).colorScheme.primary,
+                      width: 2,
+                    ),
+                  )
+                : null,
+          ),
+          body: _isLoadingProgress
+              ? const Center(child: CircularProgressIndicator())
+              : Column(
+                  children: [
+                    _buildProgressHeader(pixel),
+                    Expanded(
+                      child: guide.steps.isEmpty
+                          ? _buildEmptyGuide()
+                          : ListView(
+                              controller: _scrollController,
+                              padding: const EdgeInsets.fromLTRB(12, 8, 12, 16),
+                              children: _buildGuideSteps(pixel),
+                            ),
+                    ),
+                  ],
                 ),
-              ],
-            ),
+        );
+      },
     );
   }
 
-  List<Widget> _buildGuideSteps() {
+  List<Widget> _buildGuideSteps(bool pixel) {
     final widgets = <Widget>[];
     String? previousSection;
 
@@ -157,28 +173,46 @@ class _GuideScreenState extends State<GuideScreen> {
             ? 0
             : (sectionCompleted * 100 / sectionIndexes.length).round();
 
+        final sectionContent = Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 7),
+          child: Row(
+            children: [
+              Expanded(
+                child: Text(
+                  section,
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                        fontWeight: FontWeight.bold,
+                      ),
+                ),
+              ),
+              Text(
+                '$sectionCompleted/${sectionIndexes.length} · $sectionPercent%',
+                style: Theme.of(context).textTheme.labelMedium,
+              ),
+            ],
+          ),
+        );
         widgets.add(
           Padding(
             padding: EdgeInsets.only(
               top: widgets.isEmpty ? 2 : 10,
-              bottom: 5,
+              bottom: 7,
             ),
-            child: Row(
-              children: [
-                Expanded(
-                  child: Text(
-                    section,
-                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                          fontWeight: FontWeight.bold,
+            child: pixel
+                ? Container(
+                    decoration: ShapeDecoration(
+                      color: Theme.of(context).colorScheme.surfaceContainer,
+                      shape: PixelShapeBorder(
+                        side: BorderSide(
+                          color: Theme.of(context).colorScheme.primary,
+                          width: 1.5,
                         ),
-                  ),
-                ),
-                Text(
-                  '$sectionCompleted/${sectionIndexes.length} · $sectionPercent%',
-                  style: Theme.of(context).textTheme.labelMedium,
-                ),
-              ],
-            ),
+                        step: 5,
+                      ),
+                    ),
+                    child: sectionContent,
+                  )
+                : sectionContent,
           ),
         );
         previousSection = section;
@@ -206,7 +240,7 @@ class _GuideScreenState extends State<GuideScreen> {
     return widgets;
   }
 
-  Widget _buildProgressHeader() {
+  Widget _buildProgressHeader(bool pixel) {
     final percent = (progress * 100).round();
     final colorScheme = Theme.of(context).colorScheme;
     final textTheme = Theme.of(context).textTheme;
@@ -226,11 +260,20 @@ class _GuideScreenState extends State<GuideScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                'Postęp poradnika',
-                style: textTheme.titleMedium?.copyWith(
-                  fontWeight: FontWeight.bold,
-                ),
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  if (pixel) ...[
+                    PixelIcon(name: 'book', size: 18, color: colorScheme.primary),
+                    const SizedBox(width: 7),
+                  ],
+                  Text(
+                    'Postęp poradnika',
+                    style: textTheme.titleMedium?.copyWith(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
               ),
               Text(
                 '$percent%',
@@ -241,15 +284,32 @@ class _GuideScreenState extends State<GuideScreen> {
             ],
           ),
           const SizedBox(height: 7),
-          ClipRRect(
-            borderRadius: BorderRadius.circular(10),
-            child: LinearProgressIndicator(
-              value: progress,
-              minHeight: 7,
-              color: colorScheme.primary,
-              backgroundColor: colorScheme.surfaceContainerHighest,
+          if (pixel)
+            Container(
+              decoration: ShapeDecoration(
+                shape: PixelShapeBorder(
+                  side: BorderSide(color: colorScheme.outline, width: 1),
+                  step: 3,
+                ),
+              ),
+              padding: const EdgeInsets.all(2),
+              child: LinearProgressIndicator(
+                value: progress,
+                minHeight: 9,
+                color: colorScheme.primary,
+                backgroundColor: colorScheme.surfaceContainerHighest,
+              ),
+            )
+          else
+            ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: LinearProgressIndicator(
+                value: progress,
+                minHeight: 7,
+                color: colorScheme.primary,
+                backgroundColor: colorScheme.surfaceContainerHighest,
+              ),
             ),
-          ),
           const SizedBox(height: 5),
           Text(
             '$completedCount / ${widget.guide.steps.length} kroków ukończonych',
