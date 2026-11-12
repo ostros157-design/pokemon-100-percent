@@ -1,3 +1,9 @@
+### Wygląd aplikacji — pikselowe ikony profilu i osiągnięć (2026-11-12)
+
+- Ekran profilu w stylu Pełny Pixel Art pokazuje teraz kwadratowy, schodkowo obramowany awatar oraz pikselowe ikony przy statystykach gry, postępu, poradników, złapanych Pokémonów i informacjach.
+- Karty osiągnięć korzystają z pikselowych symboli trofeum, blokady i zatwierdzenia oraz kwadratowych ramek zamiast okrągłych awatarów; w pozostałych stylach pozostają dotychczasowe ikony Material.
+- Globalny motyw już wcześniej ustawiał krój monospace w trybie Pixel Art; nie dodano jeszcze osobnego pliku czcionki pikselowej. Nie uruchomiono Flutter Analyzer, testów ani kompilacji APK — zmiany wymagają sprawdzenia wizualnego.
+
 ### Wygląd aplikacji — pikselowy ekran poradnika (2026-11-12)
 
 - Ekran poradnika reaguje teraz na wybrany styl wyglądu: w trybie Pełny Pixel Art otrzymuje kanciastą dolną ramkę paska aplikacji, pikselowy znacznik książki przy postępie oraz schodkowe ramki nagłówków sekcji.
