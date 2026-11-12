@@ -18,112 +18,145 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final colors = Theme.of(context).colorScheme;
+
     return Scaffold(
       appBar: AppBar(title: const Text('Ustawienia')),
       body: ListView(
-        padding: const EdgeInsets.only(bottom: 24),
+        padding: const EdgeInsets.fromLTRB(16, 8, 16, 28),
         children: [
-          const Padding(
-            padding: EdgeInsets.fromLTRB(16, 20, 16, 8),
-            child: Text('Wygląd aplikacji',
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-          ),
-          ValueListenableBuilder<bool>(
-            valueListenable: AppAppearance.darkBackground,
-            builder: (context, isDark, _) => SwitchListTile(
-              secondary: Icon(isDark ? Icons.dark_mode : Icons.light_mode),
-              title: const Text('Ciemne tło'),
-              subtitle: Text(isDark
-                  ? 'Tło jest czarne, tekst zachowuje wybrany kolor.'
-                  : 'Tło jest białe, tekst zachowuje wybrany kolor.'),
-              value: isDark,
-              onChanged: (value) async {
-                await AppAppearance.setDarkBackground(value);
-              },
-            ),
-          ),
-          const Divider(),
-          _ColorChoiceTile(
-            title: 'Kolor tekstu',
-            subtitle: 'Ustaw kolor tekstów w aplikacji niezależnie od tła.',
-            value: AppAppearance.textColor,
-            onChanged: AppAppearance.setTextColor,
-          ),
-          _ColorChoiceTile(
-            title: 'Kolor znaczków',
-            subtitle: 'Kolor akcentów, znaczników i elementów wyróżnionych.',
-            value: AppAppearance.badgeColor,
-            onChanged: AppAppearance.setBadgeColor,
-          ),
-          const Padding(
-            padding: EdgeInsets.fromLTRB(16, 12, 16, 8),
-            child: Text('Pozostałe ustawienia',
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-          ),
-          SwitchListTile(
-            title: const Text('Pokazuj spoilery'),
-            subtitle: const Text(
-              'Pozwala wyświetlać informacje o późniejszych wydarzeniach.',
-            ),
-            value: spoilers,
-            onChanged: (value) => setState(() => spoilers = value),
-          ),
-          SwitchListTile(
-            title: const Text('Animacje'),
-            value: animations,
-            onChanged: (value) => setState(() => animations = value),
-          ),
-          const Divider(),
-          const Padding(
-            padding: EdgeInsets.fromLTRB(16, 12, 16, 8),
-            child: Text('Aktualizacje i powiadomienia',
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-          ),
-          ListTile(
-            leading: const Icon(Icons.system_update),
-            title: const Text('Aktualizacje Google Play'),
-            subtitle: const Text(
-              'Aplikacja sprawdza aktualizacje po uruchomieniu i co 24 godziny. '
-              'Aktualizacje w aplikacji działają po instalacji z Google Play.',
-            ),
-            trailing: _checkingUpdates
-                ? const SizedBox(
-                    width: 22,
-                    height: 22,
-                    child: CircularProgressIndicator(strokeWidth: 2),
-                  )
-                : const Icon(Icons.chevron_right),
-            onTap: _checkingUpdates
-                ? null
-                : () async {
-                    setState(() => _checkingUpdates = true);
-                    try {
-                      await AppUpdateService.checkForUpdate(
-                        context: context,
-                        showStatusWhenUnavailable: true,
-                      );
-                    } finally {
-                      if (mounted) setState(() => _checkingUpdates = false);
-                    }
+          _SettingsSection(
+            icon: Icons.palette_outlined,
+            title: 'Wygląd aplikacji',
+            subtitle: 'Dostosuj tło, tekst i kolory akcentów.',
+            children: [
+              ValueListenableBuilder<bool>(
+                valueListenable: AppAppearance.darkBackground,
+                builder: (context, isDark, _) => SwitchListTile(
+                  secondary: _SettingsIcon(
+                    icon: isDark ? Icons.dark_mode : Icons.light_mode,
+                  ),
+                  title: const Text('Ciemne tło'),
+                  subtitle: Text(
+                    isDark
+                        ? 'Włączony ciemny wygląd'
+                        : 'Włączony jasny wygląd',
+                  ),
+                  value: isDark,
+                  onChanged: (value) async {
+                    await AppAppearance.setDarkBackground(value);
                   },
+                ),
+              ),
+              const Divider(height: 1, indent: 16, endIndent: 16),
+              _ColorChoiceTile(
+                icon: Icons.format_color_text,
+                title: 'Kolor tekstu',
+                subtitle: 'Niezależny od ustawienia tła.',
+                value: AppAppearance.textColor,
+                onChanged: AppAppearance.setTextColor,
+              ),
+              const Divider(height: 1, indent: 16, endIndent: 16),
+              _ColorChoiceTile(
+                icon: Icons.color_lens_outlined,
+                title: 'Kolor znaczków',
+                subtitle: 'Kolor akcentów i wyróżnionych elementów.',
+                value: AppAppearance.badgeColor,
+                onChanged: AppAppearance.setBadgeColor,
+              ),
+            ],
           ),
-          ListTile(
-            leading: Icon(
-              NotificationService.isConfigured
-                  ? Icons.notifications_active
-                  : Icons.notifications_off_outlined,
-            ),
-            title: const Text('Powiadomienia push'),
-            subtitle: Text(
-              NotificationService.isConfigured
-                  ? 'Powiadomienia są skonfigurowane na tym urządzeniu.'
-                  : 'Wymaga konfiguracji Firebase w projekcie. Ta funkcja nie jest jeszcze aktywna.',
-            ),
+          const SizedBox(height: 18),
+          _SettingsSection(
+            icon: Icons.tune_rounded,
+            title: 'Preferencje',
+            subtitle: 'Wybierz sposób wyświetlania treści.',
+            children: [
+              SwitchListTile(
+                secondary: const _SettingsIcon(icon: Icons.visibility_outlined),
+                title: const Text('Pokazuj spoilery'),
+                subtitle: const Text(
+                  'Pozwala wyświetlać informacje o późniejszych wydarzeniach.',
+                ),
+                value: spoilers,
+                onChanged: (value) => setState(() => spoilers = value),
+              ),
+              const Divider(height: 1, indent: 16, endIndent: 16),
+              SwitchListTile(
+                secondary: const _SettingsIcon(icon: Icons.animation),
+                title: const Text('Animacje'),
+                subtitle: const Text('Włącz lub wyłącz animacje interfejsu.'),
+                value: animations,
+                onChanged: (value) => setState(() => animations = value),
+              ),
+            ],
           ),
-          const Divider(),
-          const ListTile(
-            title: Text('Wersja aplikacji'),
-            subtitle: Text('Nowe wersje będą dostarczane przez prywatny kanał testowy Google Play.'),
+          const SizedBox(height: 18),
+          _SettingsSection(
+            icon: Icons.cloud_sync_outlined,
+            title: 'Aktualizacje i powiadomienia',
+            subtitle: 'Zarządzaj aktualizacjami aplikacji.',
+            children: [
+              ListTile(
+                leading: const _SettingsIcon(icon: Icons.system_update_alt),
+                title: const Text('Aktualizacje Google Play'),
+                subtitle: const Text(
+                  'Automatyczne sprawdzanie po uruchomieniu i co 24 godziny. '
+                  'Aktualizacje w aplikacji działają po instalacji z Google Play.',
+                ),
+                trailing: _checkingUpdates
+                    ? const SizedBox(
+                        width: 22,
+                        height: 22,
+                        child: CircularProgressIndicator(strokeWidth: 2),
+                      )
+                    : const Icon(Icons.chevron_right),
+                onTap: _checkingUpdates
+                    ? null
+                    : () async {
+                        setState(() => _checkingUpdates = true);
+                        try {
+                          await AppUpdateService.checkForUpdate(
+                            context: context,
+                            showStatusWhenUnavailable: true,
+                          );
+                        } finally {
+                          if (mounted) {
+                            setState(() => _checkingUpdates = false);
+                          }
+                        }
+                      },
+              ),
+              const Divider(height: 1, indent: 16, endIndent: 16),
+              ListTile(
+                leading: _SettingsIcon(
+                  icon: NotificationService.isConfigured
+                      ? Icons.notifications_active_outlined
+                      : Icons.notifications_off_outlined,
+                ),
+                title: const Text('Powiadomienia push'),
+                subtitle: Text(
+                  NotificationService.isConfigured
+                      ? 'Powiadomienia są skonfigurowane na tym urządzeniu.'
+                      : 'Wymaga konfiguracji Firebase w projekcie. '
+                          'Ta funkcja nie jest jeszcze aktywna.',
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 18),
+          Card(
+            child: ListTile(
+              leading: _SettingsIcon(
+                icon: Icons.info_outline,
+                background: colors.secondaryContainer,
+                foreground: colors.onSecondaryContainer,
+              ),
+              title: const Text('Wersja aplikacji'),
+              subtitle: const Text(
+                'Nowe wersje będą dostarczane przez prywatny kanał testowy Google Play.',
+              ),
+            ),
           ),
         ],
       ),
@@ -131,13 +164,101 @@ class _SettingsScreenState extends State<SettingsScreen> {
   }
 }
 
+class _SettingsSection extends StatelessWidget {
+  final IconData icon;
+  final String title;
+  final String subtitle;
+  final List<Widget> children;
+
+  const _SettingsSection({
+    required this.icon,
+    required this.title,
+    required this.subtitle,
+    required this.children,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final colors = Theme.of(context).colorScheme;
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Padding(
+          padding: const EdgeInsets.fromLTRB(4, 4, 4, 10),
+          child: Row(
+            children: [
+              Icon(icon, color: colors.primary),
+              const SizedBox(width: 10),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      title,
+                      style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                            fontWeight: FontWeight.bold,
+                          ),
+                    ),
+                    const SizedBox(height: 2),
+                    Text(
+                      subtitle,
+                      style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                            color: colors.onSurfaceVariant,
+                          ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+        Card(
+          clipBehavior: Clip.antiAlias,
+          margin: EdgeInsets.zero,
+          child: Column(children: children),
+        ),
+      ],
+    );
+  }
+}
+
+class _SettingsIcon extends StatelessWidget {
+  final IconData icon;
+  final Color? background;
+  final Color? foreground;
+
+  const _SettingsIcon({
+    required this.icon,
+    this.background,
+    this.foreground,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final colors = Theme.of(context).colorScheme;
+
+    return CircleAvatar(
+      radius: 19,
+      backgroundColor: background ?? colors.primaryContainer,
+      child: Icon(
+        icon,
+        size: 20,
+        color: foreground ?? colors.onPrimaryContainer,
+      ),
+    );
+  }
+}
+
 class _ColorChoiceTile extends StatelessWidget {
+  final IconData icon;
   final String title;
   final String subtitle;
   final ValueNotifier<Color> value;
   final Future<void> Function(Color) onChanged;
 
   const _ColorChoiceTile({
+    required this.icon,
     required this.title,
     required this.subtitle,
     required this.value,
@@ -154,18 +275,44 @@ class _ColorChoiceTile extends StatelessWidget {
         final selectedName = matchingColors.isEmpty
             ? 'Niestandardowy'
             : matchingColors.first.key;
+
         return Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+          padding: const EdgeInsets.fromLTRB(16, 14, 16, 14),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(title, style: const TextStyle(fontWeight: FontWeight.w600)),
-              const SizedBox(height: 4),
-              Text(subtitle, style: Theme.of(context).textTheme.bodySmall),
-              const SizedBox(height: 10),
+              Row(
+                children: [
+                  _SettingsIcon(icon: icon),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          title,
+                          style: Theme.of(context).textTheme.titleSmall
+                              ?.copyWith(fontWeight: FontWeight.w700),
+                        ),
+                        const SizedBox(height: 2),
+                        Text(
+                          subtitle,
+                          style: Theme.of(context).textTheme.bodySmall
+                              ?.copyWith(
+                                color: Theme.of(context)
+                                    .colorScheme
+                                    .onSurfaceVariant,
+                              ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 14),
               Wrap(
-                spacing: 10,
-                runSpacing: 10,
+                spacing: 12,
+                runSpacing: 12,
                 children: AppAppearance.colorOptions.entries.map((entry) {
                   final isSelected = selected.value == entry.value.value;
                   return Semantics(
@@ -176,8 +323,8 @@ class _ColorChoiceTile extends StatelessWidget {
                       onTap: () => onChanged(entry.value),
                       borderRadius: BorderRadius.circular(24),
                       child: Container(
-                        width: 42,
-                        height: 42,
+                        width: 40,
+                        height: 40,
                         decoration: BoxDecoration(
                           color: entry.value,
                           shape: BoxShape.circle,
@@ -194,7 +341,7 @@ class _ColorChoiceTile extends StatelessWidget {
                                 color: entry.value.computeLuminance() > 0.5
                                     ? Colors.black
                                     : Colors.white,
-                                size: 20,
+                                size: 19,
                               )
                             : null,
                       ),
@@ -202,10 +349,12 @@ class _ColorChoiceTile extends StatelessWidget {
                   );
                 }).toList(),
               ),
-              const SizedBox(height: 6),
+              const SizedBox(height: 8),
               Text(
                 'Wybrano: $selectedName',
-                style: Theme.of(context).textTheme.bodySmall,
+                style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                      color: Theme.of(context).colorScheme.onSurfaceVariant,
+                    ),
               ),
             ],
           ),
