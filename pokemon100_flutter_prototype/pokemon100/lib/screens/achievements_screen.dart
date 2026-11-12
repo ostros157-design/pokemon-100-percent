@@ -5,6 +5,8 @@ import '../data/achievements_data.dart';
 import '../data/pokemon_data.dart';
 import '../data/guides_data.dart';
 import '../models/achievement.dart';
+import '../services/app_appearance.dart';
+import '../widgets/pixel_icon.dart';
 import '../widgets/achievement_card.dart';
 
 class AchievementsScreen extends StatefulWidget {
@@ -199,6 +201,7 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
   @override
   Widget build(BuildContext context) {
     final achievements = achievementsList;
+    final pixel = AppAppearance.visualStyle.value == 'pixel';
 
     return Scaffold(
       appBar: AppBar(title: const Text('Osiągnięcia')),
@@ -210,7 +213,9 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
                   padding: const EdgeInsets.fromLTRB(16, 12, 16, 4),
                   child: Card(
                     child: ListTile(
-                      leading: const Icon(Icons.catching_pokemon),
+                      leading: pixel
+                          ? PixelIcon(name: 'pokeball', color: Theme.of(context).colorScheme.primary)
+                          : const Icon(Icons.catching_pokemon),
                       title: const Text('Kolekcja ze wszystkich gier'),
                       subtitle: Text(
                         '$_globalCaughtCount różnych Pokémonów zarejestrowanych łącznie',
