@@ -21,7 +21,15 @@ class GuideStepCard extends StatelessWidget {
     final colors = Theme.of(context).colorScheme;
     return Card(
       margin: const EdgeInsets.only(bottom: 12),
-      elevation: 2,
+      elevation: completed ? 0 : 1,
+      color: completed ? colors.surfaceContainerLow : colors.surface,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(16),
+        side: BorderSide(
+          color: completed ? colors.primary.withValues(alpha: 0.45) : colors.outlineVariant,
+          width: completed ? 1.2 : 0.8,
+        ),
+      ),
       child: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
@@ -40,11 +48,16 @@ class GuideStepCard extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
+                      color: completed ? colors.onSurfaceVariant : colors.onSurface,
                       decoration:
                           completed ? TextDecoration.lineThrough : null,
                     ),
                   ),
                 ),
+                if (completed) ...[
+                  const SizedBox(width: 8),
+                  Icon(Icons.check_circle, color: colors.primary, size: 22),
+                ],
               ],
             ),
             const SizedBox(height: 8),
@@ -59,23 +72,31 @@ class GuideStepCard extends StatelessWidget {
             ),
             if (step.location != null) ...[
               const SizedBox(height: 12),
-              Row(
-                children: [
-                  const Icon(
-                    Icons.location_on,
-                    size: 18,
-                    color: Colors.red,
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
+                  decoration: BoxDecoration(
+                    color: colors.surfaceContainerHighest,
+                    borderRadius: BorderRadius.circular(20),
                   ),
-                  const SizedBox(width: 6),
-                  Expanded(
-                    child: Text(
-                      step.location!,
-                      style: const TextStyle(
-                        fontWeight: FontWeight.w600,
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Icon(Icons.location_on, size: 17, color: colors.primary),
+                      const SizedBox(width: 6),
+                      Flexible(
+                        child: Text(
+                          step.location!,
+                          style: TextStyle(
+                            fontWeight: FontWeight.w600,
+                            color: colors.onSurface,
+                          ),
+                        ),
                       ),
-                    ),
+                    ],
                   ),
-                ],
+                ),
               ),
             ],
             if (step.pokemon.isNotEmpty) ...[
