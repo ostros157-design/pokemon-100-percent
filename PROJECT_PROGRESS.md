@@ -6615,3 +6615,9 @@ Kontrola repozytorium: 64 lokacje, 30 lokacji z tabelami spotkań, 222 grupy spo
 - Dodano zapisany wybór jednego z trzech stylów w Ustawieniach: Nowoczesny, Retro Pokémon i Pełny Pixel Art. Wybór jest przechowywany w SharedPreferences i odtwarzany po ponownym uruchomieniu.
 - Motyw Retro i Pixel zmienia globalne kształty kart, przycisków i separatorów na kanciaste, z obramowaniami w kolorze akcentu; Pixel używa dodatkowo kroju monospace. Styl Nowoczesny zachowuje dotychczasowe ustawienia.
 - To pierwsza warstwa motywu, nie pełny pakiet grafiki pixel-art: dedykowana czcionka pikselowa, ikony, tła, animacje i grafiki wymagają osobnego etapu. Testów Flutter, Analyzer ani APK nie uruchomiono.
+
+
+### Rozszerzenie stylu Pixel Art — 2026-11-12
+- Dodano własny kształt ramki z „pikselowymi schodkami” i zastosowano go w motywie Pixel Art dla kart, przycisków, chipów, kafelków listy, okien dialogowych, arkuszy dolnych, SnackBarów, menu, pól tekstowych i przycisków akcji.
+- Styl Retro Pokémon zachowuje osobne, proste kanciaste ramki bez schodkowego obrysu; styl Nowoczesny nadal używa zaokrągleń. Wybór stylu pozostaje zapisywany.
+- Pixel Art nadal korzysta z ogólnodostępnego kroju monospace, a nie dedykowanego fontu pixel; nie dodano jeszcze własnych ikon, teł ani animacji. Nie uruchomiono testów Flutter, Analyzer ani APK.
