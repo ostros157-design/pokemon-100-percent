@@ -123,6 +123,7 @@ class _GuideScreenState extends State<GuideScreen> {
                             return GuideStepCard(
                               key: _stepKeys[index],
                               step: step,
+                              stepNumber: index + 1,
                               completed: completedSteps.contains(index),
                               onChanged: () async {
                                 setState(() {
