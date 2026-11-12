@@ -479,110 +479,232 @@ class _PokemonDetailsScreenState extends State<PokemonDetailsScreen> {
   @override
   Widget build(BuildContext context) {
     final pokemon = widget.pokemon;
+    final theme = Theme.of(context);
+    final colors = theme.colorScheme;
+
     return Scaffold(
-      appBar: AppBar(title: Text(pokemon.name), centerTitle: true, actions: [IconButton(tooltip: _shiny ? 'Pokaż zwykłą formę' : 'Pokaż Shiny', onPressed: _toggleShiny, icon: Icon(_shiny ? Icons.auto_awesome : Icons.auto_awesome_outlined))]),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Text(
-              '#${pokemon.id.toString().padLeft(3, '0')}',
-              textAlign: TextAlign.center,
-              style: const TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.bold,
-                color: Colors.grey,
-              ),
+      appBar: AppBar(
+        title: Text(pokemon.name),
+        centerTitle: true,
+        actions: [
+          IconButton(
+            tooltip: _shiny ? 'Pokaż zwykłą formę' : 'Pokaż Shiny',
+            onPressed: _toggleShiny,
+            icon: Icon(
+              _shiny ? Icons.auto_awesome : Icons.auto_awesome_outlined,
+              color: _shiny ? colors.tertiary : null,
             ),
-            const SizedBox(height: 8),
-            Text(
-              pokemon.name,
-              textAlign: TextAlign.center,
-              style: const TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
-            ),
-            const SizedBox(height: 20),
-            Center(
-              child: SizedBox(
-                width: 220,
-                height: 220,
-                child: CachedNetworkImage(
-                  imageUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${_shiny ? 'shiny/' : ''}${pokemon.id}.png',
-                  fit: BoxFit.contain,
-                  placeholder: (context, url) => const SizedBox(
-                    width: 64,
-                    height: 64,
-                    child: Center(child: CircularProgressIndicator()),
+          ),
+        ],
+      ),
+      body: Center(
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 960),
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.all(16),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Container(
+                  padding: const EdgeInsets.fromLTRB(20, 18, 20, 20),
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                      colors: [
+                        colors.primaryContainer,
+                        colors.surfaceContainerHighest,
+                      ],
+                    ),
+                    borderRadius: BorderRadius.circular(24),
+                    border: Border.all(color: colors.outlineVariant),
                   ),
-                  errorWidget: (context, url, error) => const Icon(
-                    Icons.catching_pokemon,
-                    size: 120,
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            '#${pokemon.id.toString().padLeft(3, '0')}',
+                            style: theme.textTheme.titleMedium?.copyWith(
+                              color: colors.onPrimaryContainer,
+                              fontWeight: FontWeight.w800,
+                              letterSpacing: 1.2,
+                            ),
+                          ),
+                          if (pokemon.isLegendary || pokemon.isMythical || pokemon.isBaby)
+                            Wrap(
+                              spacing: 5,
+                              children: [
+                                if (pokemon.isLegendary)
+                                  _detailTag('Legendarny', colors.tertiary),
+                                if (pokemon.isMythical)
+                                  _detailTag('Mityczny', colors.tertiary),
+                                if (pokemon.isBaby)
+                                  _detailTag('Baby', colors.secondary),
+                              ],
+                            ),
+                        ],
+                      ),
+                      const SizedBox(height: 4),
+                      Text(
+                        pokemon.name,
+                        textAlign: TextAlign.center,
+                        style: theme.textTheme.headlineMedium?.copyWith(
+                          color: colors.onPrimaryContainer,
+                          fontWeight: FontWeight.w900,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 210,
+                        child: CachedNetworkImage(
+                          imageUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${_shiny ? 'shiny/' : ''}${pokemon.id}.png',
+                          fit: BoxFit.contain,
+                          placeholder: (context, url) => Center(
+                            child: CircularProgressIndicator(color: colors.primary),
+                          ),
+                          errorWidget: (context, url, error) => Icon(
+                            Icons.catching_pokemon,
+                            size: 112,
+                            color: colors.onSurfaceVariant,
+                          ),
+                        ),
+                      ),
+                      Wrap(
+                        alignment: WrapAlignment.center,
+                        spacing: 8,
+                        runSpacing: 8,
+                        children: pokemon.types.map((type) => Chip(
+                          avatar: Icon(Icons.brightness_1, size: 11, color: colors.primary),
+                          label: Text(type, style: const TextStyle(fontWeight: FontWeight.bold)),
+                          backgroundColor: colors.surface.withValues(alpha: 0.78),
+                          side: BorderSide(color: colors.outlineVariant),
+                        )).toList(),
+                      ),
+                      const SizedBox(height: 14),
+                      if (_shiny)
+                        Text(
+                          'Forma Shiny',
+                          style: theme.textTheme.labelLarge?.copyWith(
+                            color: colors.tertiary,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                    ],
                   ),
                 ),
-              ),
-            ),
-            const SizedBox(height: 20),
-            FilledButton.icon(
-              onPressed: _loadingCaught ? null : _toggleCaught,
-              icon: Icon(_caught ? Icons.check_circle : Icons.catching_pokemon),
-              label: Text(_loadingCaught
-                  ? 'Ładowanie statusu...'
-                  : _caught
-                      ? 'Oznacz jako niezłapany'
-                      : 'Oznacz jako złapany'),
-            ),
-            const SizedBox(height: 24),
-            const Text('Typ', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-            const SizedBox(height: 8),
-            Wrap(
-              spacing: 8,
-              runSpacing: 8,
-              children: pokemon.types.map((type) => Chip(
-                label: Text(type, style: const TextStyle(fontWeight: FontWeight.bold)),
-              )).toList(),
-            ),
-            _buildTypeMatchups(pokemon),
-            _buildBaseStats(pokemon),
-            _buildSpeciesData(pokemon),
-            _buildLearnset(pokemon),
-            const SizedBox(height: 24),
-            const Text('Informacje', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-            const SizedBox(height: 8),
-            Card(
-              child: Padding(
-                padding: const EdgeInsets.all(16),
-                child: Text(pokemon.description, style: const TextStyle(fontSize: 16, height: 1.5)),
-              ),
-            ),
-            _buildEvolutionTree(context, pokemon),
-            const SizedBox(height: 24),
-            const Text('Spotkanie i łapanie', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-            const SizedBox(height: 8),
-            const Card(
-              child: Column(
-                children: [
-                  ListTile(
-                    leading: Icon(Icons.location_on),
-                    title: Text('Szansa pojawienia się'),
-                    subtitle: Text('Procent musi zależeć od wybranej gry, lokacji, metody spotkania i warunków. Te dane nie są jeszcze dostępne — nie pokazujemy zmyślonej wartości.'),
+                const SizedBox(height: 14),
+                Card(
+                  child: Padding(
+                    padding: const EdgeInsets.all(12),
+                    child: Row(
+                      children: [
+                        CircleAvatar(
+                          backgroundColor: _caught
+                              ? colors.primaryContainer
+                              : colors.surfaceContainerHighest,
+                          child: Icon(
+                            _caught ? Icons.check_rounded : Icons.catching_pokemon,
+                            color: _caught ? colors.onPrimaryContainer : colors.onSurfaceVariant,
+                          ),
+                        ),
+                        const SizedBox(width: 12),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                _caught ? 'Jest w Twojej kolekcji' : 'Nie masz go jeszcze w kolekcji',
+                                style: theme.textTheme.titleSmall?.copyWith(fontWeight: FontWeight.bold),
+                              ),
+                              Text(
+                                'Postęp dla wybranej gry',
+                                style: theme.textTheme.bodySmall?.copyWith(color: colors.onSurfaceVariant),
+                              ),
+                            ],
+                          ),
+                        ),
+                        FilledButton.tonal(
+                          onPressed: _loadingCaught ? null : _toggleCaught,
+                          child: Text(_loadingCaught
+                              ? 'Ładowanie'
+                              : _caught ? 'Odznacz' : 'Złapany'),
+                        ),
+                      ],
+                    ),
                   ),
-                  Divider(),
-                  ListTile(
-                    leading: Icon(Icons.auto_awesome),
-                    title: Text('Szansa złapania'),
-                    subtitle: Text('Zależy m.in. od gry, aktualnego HP, statusu, Poké Balla i parametrów spotkania. Kalkulator wymaga tych danych, więc procent nie jest jeszcze wyliczany.'),
+                ),
+                const SizedBox(height: 20),
+                _buildTypeMatchups(pokemon),
+                _buildBaseStats(pokemon),
+                _buildSpeciesData(pokemon),
+                _buildLearnset(pokemon),
+                const SizedBox(height: 8),
+                _sectionHeading(context, 'Informacje'),
+                Card(
+                  child: Padding(
+                    padding: const EdgeInsets.all(16),
+                    child: Text(
+                      pokemon.description,
+                      style: theme.textTheme.bodyLarge?.copyWith(height: 1.55),
+                    ),
                   ),
-                  Divider(),
-                  ListTile(
-                    leading: Icon(Icons.bar_chart),
-                    title: Text('Statystyki'),
-                    subtitle: Text('Tutaj później będą wyświetlane statystyki Pokémona.'),
+                ),
+                const SizedBox(height: 16),
+                _buildEvolutionTree(context, pokemon),
+                const SizedBox(height: 8),
+                _sectionHeading(context, 'Spotkanie i łapanie'),
+                Card(
+                  child: Column(
+                    children: [
+                      ListTile(
+                        leading: Icon(Icons.location_on_outlined, color: colors.primary),
+                        title: const Text('Szansa pojawienia się'),
+                        subtitle: const Text(
+                          'Procent zależy od gry, lokacji, metody spotkania i warunków. Dane nie są jeszcze dostępne, więc nie pokazujemy zmyślonej wartości.',
+                        ),
+                      ),
+                      Divider(height: 1, color: colors.outlineVariant),
+                      ListTile(
+                        leading: Icon(Icons.catching_pokemon, color: colors.primary),
+                        title: const Text('Szansa złapania'),
+                        subtitle: const Text(
+                          'Zależy m.in. od gry, HP, statusu i użytego Poké Balla. Kalkulator wymaga tych danych, dlatego procent nie jest jeszcze wyliczany.',
+                        ),
+                      ),
+                    ],
                   ),
-                ],
-              ),
+                ),
+                const SizedBox(height: 28),
+              ],
             ),
-          ],
+          ),
         ),
+      ),
+    );
+  }
+
+  Widget _sectionHeading(BuildContext context, String title) {
+    final theme = Theme.of(context);
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 8),
+      child: Text(
+        title,
+        style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
+      ),
+    );
+  }
+
+  Widget _detailTag(String label, Color color) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 5),
+      decoration: BoxDecoration(
+        color: color.withValues(alpha: 0.14),
+        borderRadius: BorderRadius.circular(20),
+      ),
+      child: Text(
+        label,
+        style: TextStyle(color: color, fontSize: 11, fontWeight: FontWeight.bold),
       ),
     );
   }
