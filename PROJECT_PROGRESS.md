@@ -1,3 +1,10 @@
+### Poradnik i paski postępu — zgodność z jasnym i ciemnym motywem (2026-11-12)
+
+- Pasek „Postęp poradnika” nie używa już na sztywno jasnozielonego tła; korzysta z powierzchni, obramowania i kolorów tekstu aktualnego motywu.
+- Wypełnienie i tło pasków postępu w poradniku, kartach postępu oraz kartach zapisów korzystają teraz z kolorów `ColorScheme`, więc powinny poprawnie wyglądać także w ciemnym stylu.
+- Opis kroków poradnika i pomocnicze etykiety postępu korzystają z koloru tekstu drugorzędnego motywu.
+- Commity: `b20d22c` (nagłówek poradnika), `9881dec` (karty kroków), `c9d7914` (karta postępu), `a72c307` (karta zapisu). Zmiany zapisano na `fix/maps-screen-build-errors`; nie uruchomiono analyzer, testów ani APK. Wymagane sprawdzenie w jasnym i ciemnym motywie na telefonie i PC.
+
 ### Wygląd aplikacji — pierwszy etap ujednolicenia komponentów (2026-11-12)
 
 - Na gałęzi `fix/maps-screen-build-errors` ujednolicono globalne kształty kart, chipów, elementów list, pól tekstowych, przycisków i okien dialogowych.
