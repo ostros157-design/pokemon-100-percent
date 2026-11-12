@@ -19,6 +19,7 @@ this.onDelete,
 
 @override
 Widget build(BuildContext context) {
+final colors = Theme.of(context).colorScheme;
 final double safeProgress = progress.clamp(0.0, 1.0);
 final int percentage = (safeProgress * 100).round();
 
@@ -72,7 +73,7 @@ Text(
 subtitle,
 style: TextStyle(
 fontSize: 14,
-color: Colors.grey.shade600,
+color: colors.onSurfaceVariant,
 ),
 ),
 ],
@@ -98,7 +99,8 @@ borderRadius: BorderRadius.circular(10),
 child: LinearProgressIndicator(
 value: safeProgress,
 minHeight: 9,
-backgroundColor: Colors.grey.shade300,
+backgroundColor: colors.surfaceContainerHighest,
+color: colors.primary,
 ),
 ),
 ),
@@ -121,7 +123,7 @@ Text(
 '$percentage% ukończone',
 style: TextStyle(
 fontSize: 13,
-color: Colors.grey.shade600,
+color: colors.onSurfaceVariant,
 ),
 ),
 ],
