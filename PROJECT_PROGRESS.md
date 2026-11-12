@@ -1,3 +1,11 @@
+### Pokédex i mapy — wyszukiwanie Pokémona na mapie (2026-11-12)
+
+- W szczegółach Pokémona dodano przycisk „Szukaj na mapie”, który otwiera ekran map z nazwą Pokémona i aktualnie wybraną grą.
+- Na ekranie map dodano przełącznik wyszukiwania lokacji i Pokémonów. W trybie Pokémon wyniki wskazują lokacje, których dostępne dane spotkań zawierają szukanego Pokémona; wybranie wyniku przełącza z powrotem na lokację i otwiera jej szczegóły w indeksie.
+- Wyszukiwanie korzysta wyłącznie z danych offline już zawartych w indeksach (spotkania, Pokémony specjalne i rzadkie). Nie tworzy fikcyjnych lokalizacji ani nie udaje dokładnych pinezek; status współrzędnych pozostaje bez zmian.
+- Nie modyfikowano plików danych map ani grafik lokacji, aby nie naruszać trwającego uzupełniania ich przez użytkownika.
+- Nie uruchomiono Flutter analyzer, testów ani APK; trzeba sprawdzić na urządzeniu przekazanie gry, wyniki dla kilku Pokémonów i przejście z wyniku do lokacji.
+
 ### Katalog ruchów — odświeżenie listy i filtrów (2026-11-12)
 
 - Przebudowano nagłówek katalogu i wyniki: licznik dopasowanych ruchów, wyszukiwarka oraz czytelniejsze filtry typów i kategorii.
