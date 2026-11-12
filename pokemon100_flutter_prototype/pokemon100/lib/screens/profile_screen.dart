@@ -108,6 +108,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
         ? 0
         : (completedObjectives * 100 / totalObjectives).round();
     final gameName = _gameNames[_selectedGameId] ?? _selectedGameId;
+    final colors = Theme.of(context).colorScheme;
+    final safeProgress = (percent / 100).clamp(0.0, 1.0);
 
     return Scaffold(
       appBar: AppBar(title: const Text('Profil')),
@@ -116,11 +118,64 @@ class _ProfileScreenState extends State<ProfileScreen> {
           : ListView(
               padding: const EdgeInsets.all(16),
               children: [
-                const CircleAvatar(
-                  radius: 50,
-                  child: Icon(Icons.person, size: 55),
+                Center(
+                  child: CircleAvatar(
+                    radius: 42,
+                    backgroundColor: colors.primaryContainer,
+                    child: Icon(
+                      Icons.person,
+                      size: 46,
+                      color: colors.onPrimaryContainer,
+                    ),
+                  ),
                 ),
-                const SizedBox(height: 24),
+                const SizedBox(height: 18),
+                Card(
+                  child: Padding(
+                    padding: const EdgeInsets.all(18),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+                            Expanded(
+                              child: Text(
+                                'Postęp całkowity',
+                                style: Theme.of(context).textTheme.titleMedium
+                                    ?.copyWith(fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                            Text(
+                              '$percent%',
+                              style: Theme.of(context).textTheme.titleLarge
+                                  ?.copyWith(
+                                    color: colors.primary,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 12),
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(20),
+                          child: LinearProgressIndicator(
+                            value: safeProgress,
+                            minHeight: 10,
+                            color: colors.primary,
+                            backgroundColor: colors.surfaceContainerHighest,
+                          ),
+                        ),
+                        const SizedBox(height: 8),
+                        Text(
+                          '$completedObjectives / $totalObjectives celów ukończonych',
+                          style: Theme.of(context).textTheme.bodySmall
+                              ?.copyWith(color: colors.onSurfaceVariant),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 8),
                 Card(
                   child: ListTile(
                     leading: const Icon(Icons.videogame_asset),
@@ -149,22 +204,22 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     subtitle: Text('$_caughtPokemon / ${pokemonList.length}'),
                   ),
                 ),
-                const Card(
+                Card(
                   child: ListTile(
-                    leading: Icon(Icons.info_outline),
-                    title: Text('Jak liczymy postęp?'),
-                    subtitle: Text(
+                    leading: Icon(Icons.info_outline, color: colors.primary),
+                    title: const Text('Jak liczymy postęp?'),
+                    subtitle: const Text(
                       'Liczymy ukończone kroki poradników i Pokémony oznaczone '
                       'jako złapane dla aktualnie wybranej gry. Zapis każdej '
                       'gry jest oddzielny; wynik obejmuje dane dostępne w aplikacji.',
                     ),
                   ),
                 ),
-                const Card(
+                Card(
                   child: ListTile(
-                    leading: Icon(Icons.emoji_events),
-                    title: Text('Osiągnięcia'),
-                    subtitle: Text(
+                    leading: Icon(Icons.emoji_events, color: colors.primary),
+                    title: const Text('Osiągnięcia'),
+                    subtitle: const Text(
                       'Osiągnięcia są osobną sekcją i nie są jeszcze automatycznie '
                       'wyliczane na podstawie postępu profilu.',
                     ),
