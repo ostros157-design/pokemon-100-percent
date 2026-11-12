@@ -84,39 +84,99 @@ class _GameSelectScreenState extends State<GameSelectScreen> {
   @override
   Widget build(BuildContext context) {
     final selectedGame = _games.firstWhere((game) => game.id == _selectedGameId);
-    final availableGuides = guidesList.where((guide) => guide.gameId == selectedGame.id).toList();
+    final colors = Theme.of(context).colorScheme;
+    final textTheme = Theme.of(context).textTheme;
+    final generations = _games.map((game) => game.generation).toSet();
 
     return Scaffold(
       appBar: AppBar(title: const Text('Wybór gry')),
       body: _loading
           ? const Center(child: CircularProgressIndicator())
           : ListView(
-              padding: const EdgeInsets.all(16),
+              padding: const EdgeInsets.fromLTRB(16, 8, 16, 28),
               children: [
-                const Text(
-                  'Główne gry Pokémon',
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                Container(
+                  padding: const EdgeInsets.all(18),
+                  decoration: BoxDecoration(
+                    color: colors.primaryContainer,
+                    borderRadius: BorderRadius.circular(20),
+                    border: Border.all(
+                      color: colors.primary.withValues(alpha: 0.18),
+                    ),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.sports_esports_rounded,
+                            color: colors.onPrimaryContainer,
+                            size: 30,
+                          ),
+                          const SizedBox(width: 10),
+                          Expanded(
+                            child: Text(
+                              'Wybierz swoją przygodę',
+                              style: textTheme.titleLarge?.copyWith(
+                                color: colors.onPrimaryContainer,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 8),
+                      Text(
+                        'Wybór gry jest zapisywany i wykorzystywany przez '
+                        'pozostałe sekcje aplikacji.',
+                        style: textTheme.bodyMedium?.copyWith(
+                          color: colors.onPrimaryContainer,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
-                const SizedBox(height: 6),
-                const Text(
-                  'Wybierz konkretną wersję. Wybór jest zapisywany. Poradniki i dane gry będą dostępne, gdy zostaną dodane do aplikacji.',
-                ),
-                const SizedBox(height: 16),
+                const SizedBox(height: 18),
                 Card(
                   child: Padding(
                     padding: const EdgeInsets.all(16),
                     child: Row(
                       children: [
-                        const Icon(Icons.sports_esports, size: 36),
-                        const SizedBox(width: 12),
+                        CircleAvatar(
+                          radius: 25,
+                          backgroundColor: colors.primaryContainer,
+                          child: Icon(
+                            Icons.check_rounded,
+                            color: colors.onPrimaryContainer,
+                            size: 27,
+                          ),
+                        ),
+                        const SizedBox(width: 14),
                         Expanded(
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              const Text('Aktualnie wybrana gra',
-                                  style: TextStyle(fontWeight: FontWeight.bold)),
-                              Text(selectedGame.title),
-                              Text('Region: ${selectedGame.region} · Generacja ${selectedGame.generation}'),
+                              Text(
+                                'Aktualnie wybrana gra',
+                                style: textTheme.labelLarge?.copyWith(
+                                  color: colors.onSurfaceVariant,
+                                ),
+                              ),
+                              const SizedBox(height: 3),
+                              Text(
+                                selectedGame.title,
+                                style: textTheme.titleMedium?.copyWith(
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              const SizedBox(height: 3),
+                              Text(
+                                'Region ${selectedGame.region} · Generacja ${selectedGame.generation}',
+                                style: textTheme.bodySmall?.copyWith(
+                                  color: colors.onSurfaceVariant,
+                                ),
+                              ),
                             ],
                           ),
                         ),
@@ -124,45 +184,158 @@ class _GameSelectScreenState extends State<GameSelectScreen> {
                     ),
                   ),
                 ),
+                const SizedBox(height: 20),
+                Text(
+                  'Dostępne gry',
+                  style: textTheme.titleLarge?.copyWith(
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const SizedBox(height: 4),
+                Text(
+                  'Wybierz grę z listy poniżej.',
+                  style: textTheme.bodySmall?.copyWith(
+                    color: colors.onSurfaceVariant,
+                  ),
+                ),
                 const SizedBox(height: 12),
-                ..._games.map((game) {
-                  final isSelected = game.id == _selectedGameId;
-                  final gameGuides = guidesList.where((guide) => guide.gameId == game.id).toList();
-                  return Card(
-                    margin: const EdgeInsets.only(bottom: 8),
-                    child: ListTile(
-                      leading: CircleAvatar(
-                        child: Icon(isSelected ? Icons.check : Icons.videogame_asset),
-                      ),
-                      title: Text(game.title,
-                          style: const TextStyle(fontWeight: FontWeight.bold)),
-                      subtitle: Text('Gen. ${game.generation} · ${game.region} · ${game.platform}'),
-                      trailing: isSelected
-                          ? const Icon(Icons.check_circle, color: Colors.green)
-                          : const Icon(Icons.chevron_right),
+                for (final generation in generations) ...[
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(4, 14, 4, 8),
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 4,
+                          height: 22,
+                          decoration: BoxDecoration(
+                            color: colors.primary,
+                            borderRadius: BorderRadius.circular(4),
+                          ),
+                        ),
+                        const SizedBox(width: 9),
+                        Text(
+                          'Generacja $generation',
+                          style: textTheme.titleMedium?.copyWith(
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  for (final game in _games.where(
+                    (game) => game.generation == generation,
+                  ))
+                    _GameTile(
+                      game: game,
+                      selected: game.id == _selectedGameId,
                       onTap: () async {
                         await _selectGame(game);
                         if (!context.mounted) return;
+                        final gameGuides = guidesList
+                            .where((guide) => guide.gameId == game.id)
+                            .toList();
                         if (gameGuides.isNotEmpty) {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (_) => GuideScreen(guide: gameGuides.first),
+                              builder: (_) => GuideScreen(
+                                guide: gameGuides.first,
+                              ),
                             ),
                           );
                         } else {
                           ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(content: Text(
-                              'Zapisano wybór: ${game.title}. Poradnik dla tej gry nie został jeszcze dodany.',
-                            )),
+                            SnackBar(
+                              content: Text(
+                                'Zapisano wybór: ${game.title}. '
+                                'Poradnik dla tej gry nie został jeszcze dodany.',
+                              ),
+                            ),
                           );
                         }
                       },
                     ),
-                  );
-                }),
+                ],
               ],
             ),
+    );
+  }
+}
+
+class _GameTile extends StatelessWidget {
+  final _PokemonGame game;
+  final bool selected;
+  final VoidCallback onTap;
+
+  const _GameTile({
+    required this.game,
+    required this.selected,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final colors = Theme.of(context).colorScheme;
+    final textTheme = Theme.of(context).textTheme;
+
+    return Card(
+      margin: const EdgeInsets.only(bottom: 8),
+      clipBehavior: Clip.antiAlias,
+      color: selected ? colors.primaryContainer.withValues(alpha: 0.58) : null,
+      child: InkWell(
+        onTap: onTap,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 13, vertical: 12),
+          child: Row(
+            children: [
+              CircleAvatar(
+                radius: 22,
+                backgroundColor: selected
+                    ? colors.primary
+                    : colors.surfaceContainerHighest,
+                child: Icon(
+                  selected
+                      ? Icons.check_rounded
+                      : Icons.videogame_asset_outlined,
+                  color: selected
+                      ? colors.onPrimary
+                      : colors.onSurfaceVariant,
+                ),
+              ),
+              const SizedBox(width: 13),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      game.title,
+                      style: textTheme.titleSmall?.copyWith(
+                        fontWeight: FontWeight.bold,
+                        color: selected ? colors.primary : null,
+                      ),
+                    ),
+                    const SizedBox(height: 4),
+                    Text(
+                      '${selectedGame.region} · ${game.platform}',
+                      style: textTheme.bodySmall?.copyWith(
+                        color: colors.onSurfaceVariant,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(width: 8),
+              if (selected)
+                Icon(Icons.check_circle, color: colors.primary)
+              else
+                Icon(
+                  Icons.chevron_right_rounded,
+                  color: colors.onSurfaceVariant,
+                ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
