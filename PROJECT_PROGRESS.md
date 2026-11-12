@@ -1,3 +1,11 @@
+### Ekran wyboru gier — odświeżenie wyglądu (2026-11-12)
+
+- Dodano panel powitalny i wyróżnienie aktualnie wybranej gry.
+- Listę gier uporządkowano nagłówkami generacji; zaznaczona gra ma wyraźny stan wizualny.
+- Kafelki korzystają z kolorów aktywnego motywu, czytelniejszych opisów i większych obszarów dotykowych.
+- Zachowano zapis wybranej gry oraz dotychczasowe przejście do poradnika, jeśli jest dostępny; w przeciwnym razie pozostaje komunikat o braku poradnika.
+- Commit: `7877960`. Zmiany zapisano na `fix/maps-screen-build-errors`; nie uruchomiono analyzer, testów ani APK.
+
 ### Ekran ustawień — odświeżenie wyglądu (2026-11-12)
 
 - Uporządkowano ustawienia w oddzielne sekcje: wygląd aplikacji, preferencje oraz aktualizacje i powiadomienia.
