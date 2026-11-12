@@ -1,6 +1,8 @@
 import 'dart:async';
 import 'package:cached_network_image/cached_network_image.dart';
 import '../services/pokemon_sprite_cache.dart';
+import '../services/app_appearance.dart';
+import '../widgets/pixel_icon.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../data/pokemon_data.dart';
@@ -224,10 +226,10 @@ class _PokedexScreenState extends State<PokedexScreen> {
               onTap: () => setState(() => _showSearchOptions = true),
               decoration: InputDecoration(
                 hintText: 'Szukaj Pokémona lub numeru...',
-                prefixIcon: const Icon(Icons.search),
+                prefixIcon: _pokedexIcon(context, 'search', Icons.search),
                 suffixIcon: _search.isNotEmpty
                     ? IconButton(
-                        icon: const Icon(Icons.clear),
+                        icon: _pokedexIcon(context, 'check', Icons.clear),
                         onPressed: () {
                           _searchController.clear();
                         },
@@ -254,7 +256,7 @@ class _PokedexScreenState extends State<PokedexScreen> {
                               Expanded(
                                 child: OutlinedButton.icon(
                                   onPressed: _showTypeFilters,
-                                  icon: const Icon(Icons.filter_list),
+                                  icon: _pokedexIcon(context, 'filter', Icons.filter_list),
                                   label: Text(_selectedTypes.isEmpty
                                       ? 'Filtry typów'
                                       : 'Typy: ${_selectedTypes.length}'),
@@ -296,7 +298,7 @@ class _PokedexScreenState extends State<PokedexScreen> {
                                 IconButton(
                                   tooltip: 'Wyczyść filtry typów',
                                   onPressed: () => setState(() => _selectedTypes.clear()),
-                                  icon: const Icon(Icons.filter_list_off),
+                                  icon: _pokedexIcon(context, 'filter', Icons.filter_list_off),
                                 ),
                             ],
                           ),
@@ -497,4 +499,13 @@ class _PokemonCard extends StatelessWidget {
       ),
     );
   }
+}
+
+Widget _pokedexIcon(BuildContext context, String pixelName, IconData fallback) {
+  return ValueListenableBuilder<String>(
+    valueListenable: AppAppearance.visualStyle,
+    builder: (context, style, _) => style == 'pixel'
+        ? PixelIcon(name: pixelName, size: 22)
+        : Icon(fallback),
+  );
 }
