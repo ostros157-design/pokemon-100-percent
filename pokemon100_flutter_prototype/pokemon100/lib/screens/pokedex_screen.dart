@@ -436,56 +436,115 @@ class _PokemonCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colors = Theme.of(context).colorScheme;
     return Card(
-      elevation: 2,
+      elevation: caught ? 0 : 1,
+      color: caught ? colors.primaryContainer.withValues(alpha: 0.28) : colors.surface,
       clipBehavior: Clip.antiAlias,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(15),
+        side: BorderSide(
+          color: caught ? colors.primary.withValues(alpha: 0.55) : colors.outlineVariant,
+          width: caught ? 1.2 : 0.7,
+        ),
+      ),
       child: InkWell(
         onTap: onTap,
         child: Padding(
-          padding: const EdgeInsets.all(6),
+          padding: const EdgeInsets.fromLTRB(5, 5, 5, 3),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(
-                width: 76,
-                height: 76,
-                child: CachedNetworkImage(
+              Row(
+                children: [
+                  Expanded(
+                    child: Text(
+                      '#${pokemon.id.toString().padLeft(3, '0')}',
+                      style: TextStyle(
+                        color: colors.onSurfaceVariant,
+                        fontSize: 10,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                  ),
+                  IconButton(
+                    tooltip: caught ? 'Oznacz jako niezłapany' : 'Oznacz jako złapany',
+                    onPressed: onToggleCaught,
+                    visualDensity: VisualDensity.compact,
+                    constraints: const BoxConstraints(minWidth: 28, minHeight: 28),
+                    padding: EdgeInsets.zero,
+                    icon: Icon(
+                      caught ? Icons.check_circle : Icons.add_circle_outline,
+                      size: 17,
+                      color: caught ? colors.primary : colors.onSurfaceVariant,
+                    ),
+                  ),
+                ],
+              ),
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 2),
+                  child: CachedNetworkImage(
                     imageUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png',
                     fit: BoxFit.contain,
-                    placeholder: (context, url) => const Center(
+                    placeholder: (context, url) => Center(
                       child: SizedBox(
-                        width: 24,
-                        height: 24,
-                        child: CircularProgressIndicator(strokeWidth: 2),
+                        width: 20,
+                        height: 20,
+                        child: CircularProgressIndicator(
+                          strokeWidth: 2,
+                          color: colors.primary,
+                        ),
                       ),
                     ),
                     errorWidget: (context, url, error) =>
-                        const Icon(Icons.catching_pokemon, size: 42),
+                        Icon(Icons.catching_pokemon, size: 38, color: colors.onSurfaceVariant),
                   ),
+                ),
               ),
-              const SizedBox(height: 4),
               Text(
                 pokemon.name,
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
                 textAlign: TextAlign.center,
-                style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                  color: colors.onSurface,
+                  fontSize: 13,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-              Row(mainAxisAlignment: MainAxisAlignment.center, children: [Icon(caught ? Icons.check_circle : Icons.add_circle_outline, size: 16, color: caught ? Colors.green : null), const SizedBox(width: 3), Text(caught ? 'Złapany' : 'Nie złapany', style: const TextStyle(fontSize: 10)), IconButton(tooltip: caught ? 'Oznacz jako niezłapany' : 'Oznacz jako złapany', onPressed: onToggleCaught, visualDensity: VisualDensity.compact, constraints: const BoxConstraints(minWidth: 28, minHeight: 28), padding: EdgeInsets.zero, icon: Icon(caught ? Icons.check_circle : Icons.add_circle_outline, size: 16))]),
-              const SizedBox(height: 2),
+              const SizedBox(height: 4),
               Wrap(
                 spacing: 3,
-                runSpacing: 0,
+                runSpacing: 2,
                 alignment: WrapAlignment.center,
                 children: pokemon.types.map((type) {
-                  return Chip(
-                    label: Text(type, style: const TextStyle(fontSize: 9)),
-                    visualDensity: VisualDensity.compact,
-                    materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                    padding: EdgeInsets.zero,
-                    labelPadding: const EdgeInsets.symmetric(horizontal: 4),
+                  return Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 2),
+                    decoration: BoxDecoration(
+                      color: colors.secondaryContainer,
+                      borderRadius: BorderRadius.circular(6),
+                    ),
+                    child: Text(
+                      type,
+                      style: TextStyle(
+                        color: colors.onSecondaryContainer,
+                        fontSize: 9,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
                   );
                 }).toList(),
+              ),
+              const SizedBox(height: 3),
+              Text(
+                caught ? 'ZŁAPANY' : 'NIE ZŁAPANY',
+                style: TextStyle(
+                  color: caught ? colors.primary : colors.onSurfaceVariant,
+                  fontSize: 8,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 0.35,
+                ),
               ),
             ],
           ),
