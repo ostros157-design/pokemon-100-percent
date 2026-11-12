@@ -1,3 +1,10 @@
+## Wygląd aplikacji — globalne pikselowe tło (2026-11-12)
+- Dodano dekoracyjne tło dla stylu „Pełny Pixel Art”: delikatną siatkę pikselową oraz małe wzory w narożnikach.
+- Tło jest nakładane globalnie za nawigacją, a nie osobno na każdym ekranie; style Nowoczesny i Retro Pokémon zachowują dotychczasowe tła.
+- W trybie Pixel Art tło Scaffold i AppBar jest przezroczyste, dzięki czemu dekoracja pozostaje widoczna; karty zachowują własne kolory.
+- Do sprawdzenia: kontrast w jasnym i ciemnym motywie, przewijanie, dialogi i dolne arkusze.
+- Nie uruchomiono Flutter Analyze, testów ani budowania APK.
+
 ### Wygląd aplikacji — pikselowe ikony profilu i osiągnięć (2026-11-12)
 
 - Ekran profilu w stylu Pełny Pixel Art pokazuje teraz kwadratowy, schodkowo obramowany awatar oraz pikselowe ikony przy statystykach gry, postępu, poradników, złapanych Pokémonów i informacjach.
