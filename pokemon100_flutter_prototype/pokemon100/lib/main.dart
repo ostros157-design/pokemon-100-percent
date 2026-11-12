@@ -8,6 +8,7 @@ import 'services/app_navigation.dart';
 import 'services/app_update_service.dart';
 import 'services/notification_service.dart';
 import 'services/pokemon_music_service.dart';
+import 'widgets/pixel_backdrop.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -66,12 +67,12 @@ class _PokemonGuideAppState extends State<PokemonGuideApp> {
                   theme: ThemeData(
                     useMaterial3: true,
                     colorScheme: scheme,
-                    scaffoldBackgroundColor: background,
+                    scaffoldBackgroundColor: isPixel ? Colors.transparent : background,
                     canvasColor: background,
                     appBarTheme: AppBarTheme(
                       centerTitle: true,
                       elevation: 0,
-                      backgroundColor: background,
+                      backgroundColor: isPixel ? Colors.transparent : background,
                       foregroundColor: foreground,
                     ),
                     fontFamily: isPixel ? 'monospace' : null,
@@ -210,6 +211,14 @@ class _PokemonGuideAppState extends State<PokemonGuideApp> {
                       ),
                     ),
                   ),
+                  builder: (context, child) {
+                    if (!isPixel || child == null) return child ?? const SizedBox.shrink();
+                    return PixelBackdrop(
+                      accentColor: badgeColor,
+                      backgroundColor: background,
+                      child: child,
+                    );
+                  },
                   home: const HomeScreen(),
                 );
               },
