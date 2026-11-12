@@ -15,7 +15,8 @@ class AchievementCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final hiddenLocked = achievement.hidden && !unlocked;
-    final unlockedColor = Theme.of(context).colorScheme.primary;
+    final colors = Theme.of(context).colorScheme;
+    final unlockedColor = colors.primary;
 
     return Card(
       margin: const EdgeInsets.only(bottom: 12),
@@ -37,13 +38,13 @@ class AchievementCard extends StatelessWidget {
           hiddenLocked ? '???' : achievement.title,
           style: TextStyle(
             fontWeight: FontWeight.bold,
-            color: unlocked ? unlockedColor : Colors.grey,
+            color: unlocked ? unlockedColor : colors.onSurfaceVariant,
           ),
         ),
         subtitle: Text(
           hiddenLocked ? 'Ukryte osiągnięcie' : achievement.description,
           style: TextStyle(
-            color: unlocked ? null : Colors.grey,
+            color: unlocked ? null : colors.onSurfaceVariant,
           ),
         ),
         trailing: Icon(
