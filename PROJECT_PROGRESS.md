@@ -1,3 +1,10 @@
+### Profil i osiągnięcia — odświeżenie wyglądu (2026-11-12)
+
+- Profil otrzymał wyróżniony panel postępu całkowitego z procentem i paskiem, którego kolory wynikają z aktywnego motywu.
+- Ikona profilu i ikony informacyjne korzystają z kolorów motywu; zachowano dotychczasowe obliczanie postępu i źródła danych.
+- Podsumowanie kolekcji na ekranie osiągnięć ma spójny, tematyczny avatar. Karty osiągnięć używają koloru tekstu drugorzędnego motywu zamiast stałej szarości, dzięki czemu lepiej pasują do trybu ciemnego.
+- Commity: `00c93f9`, `33cbe68`, `34da62c`, `3b1405b`. Zmiany zapisano na `fix/maps-screen-build-errors` i ponownie odczytano. Nie uruchomiono analyzer, testów ani APK; wymagane sprawdzenie wizualne w jasnym i ciemnym motywie.
+
 ### Poradnik i paski postępu — zgodność z jasnym i ciemnym motywem (2026-11-12)
 
 - Pasek „Postęp poradnika” nie używa już na sztywno jasnozielonego tła; korzysta z powierzchni, obramowania i kolorów tekstu aktualnego motywu.
