@@ -1,3 +1,10 @@
+### Ekran ustawień — odświeżenie wyglądu (2026-11-12)
+
+- Uporządkowano ustawienia w oddzielne sekcje: wygląd aplikacji, preferencje oraz aktualizacje i powiadomienia.
+- Dodano spójne nagłówki sekcji i tematyczne ikony w kolorach aktywnego motywu.
+- Ujednolicono karty, odstępy i wybór kolorów; zachowano istniejące akcje zmiany motywu, sprawdzania aktualizacji i statusu powiadomień.
+- Commit: `088a9a9`. Zmiany zapisano na `fix/maps-screen-build-errors`; nie uruchomiono analyzer, testów ani APK.
+
 ### Menu główne — odświeżenie wyglądu (2026-11-12)
 
 - Zmieniono nagłówek na panel powitalny korzystający z kolorów aktywnego motywu.
