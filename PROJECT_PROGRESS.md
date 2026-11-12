@@ -1,3 +1,10 @@
+### Poradniki — czytelniejsze karty kroków (2026-11-12)
+
+- Karty kroków korzystają teraz z powierzchni i obramowań aktywnego motywu; ukończone kroki są delikatnie wyróżnione bez stałych kolorów.
+- Dodano czytelny znacznik ukończenia oraz tematyczną etykietę lokacji.
+- Zachowano mechanikę odhaczania, Pokémony jako klikalne przejścia do Pokédexu, procenty spotkań i listy przedmiotów.
+- Commit: `0c3c653`. Zmiany zapisano na `fix/maps-screen-build-errors`; nie uruchomiono analyzer, testów ani APK.
+
 ### Ekran wyboru gier — odświeżenie wyglądu (2026-11-12)
 
 - Dodano panel powitalny i wyróżnienie aktualnie wybranej gry.
