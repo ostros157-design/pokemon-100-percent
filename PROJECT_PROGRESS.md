@@ -1,3 +1,11 @@
+### Pokédex — odświeżenie ekranu szczegółów Pokémonów (2026-11-12)
+
+- Przebudowano nagłówek szczegółów: większy panel z nazwą, numerem, sprite’em, typami i oznaczeniami gatunków specjalnych; zachowano klasyczny pikselowy sprite bez celowego wygładzania.
+- Status złapania ma teraz osobny panel kolekcji, a przełącznik Shiny pozostał dostępny w pasku aplikacji.
+- Uporządkowano sekcje statystyk, danych gatunku, ruchów, opisu, ewolucji oraz spotkania; treść i istniejące mechanizmy danych pozostały podłączone.
+- Dodano ograniczenie szerokości treści, aby widok nie rozciągał się nadmiernie na dużych ekranach. Zachowano zapis złapanych i Shiny Pokémonów dla wybranej gry.
+- Nie uruchomiono Flutter analyzer, testów ani APK; należy sprawdzić wygląd w jasnym i ciemnym motywie oraz działanie zapisów na telefonie i PC.
+
 ### Pokédex — odświeżenie kart Pokémonów (2026-11-12)
 
 - Karty otrzymały czytelniejszą hierarchię: numer Pokédexa, sprite, nazwa, typy i status złapania.
