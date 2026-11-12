@@ -1,3 +1,11 @@
+### Menu główne — odświeżenie wyglądu (2026-11-12)
+
+- Zmieniono nagłówek na panel powitalny korzystający z kolorów aktywnego motywu.
+- Menu podzielono na sekcje „Twoje narzędzia” i „Twoje postępy”.
+- Ujednolicono kafelki: ikony w tematycznych avatarach, czytelniejsze opisy, strzałki nawigacyjne i większe obszary dotykowe.
+- Zachowano dotychczasowe przejścia do poradników, map, muzyki, katalogu ruchów, Pokédexu, wyboru gry, Teamu, osiągnięć, profilu i ustawień.
+- Commit: `eee6dc9`. Zmiany zapisano na `fix/maps-screen-build-errors`; nie uruchomiono analyzer, testów ani APK.
+
 ### Profil i osiągnięcia — odświeżenie wyglądu (2026-11-12)
 
 - Profil otrzymał wyróżniony panel postępu całkowitego z procentem i paskiem, którego kolory wynikają z aktywnego motywu.
