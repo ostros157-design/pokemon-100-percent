@@ -1,3 +1,9 @@
+### Wygląd aplikacji — pierwszy etap ujednolicenia komponentów (2026-11-12)
+
+- Na gałęzi `fix/maps-screen-build-errors` ujednolicono globalne kształty kart, chipów, elementów list, pól tekstowych, przycisków i okien dialogowych.
+- Karty mają teraz delikatne obramowanie w kolorze akcentu i mniejszy cień; pola tekstowe i przyciski korzystają ze spójnych zaokrągleń. Zmiana dotyczy wyłącznie motywu Flutter w `lib/main.dart`.
+- Commit: `e46d0d7`. Zmiana została zapisana i ponownie odczytana z repozytorium; nie uruchomiono Flutter analyzer, testów ani APK. Wymaga sprawdzenia wizualnego na telefonie i PC.
+
 ### Mapy — poprawa czytelności i ponowny audyt (2026-10-29)
 
 - Powiększono etykiety głównych lokacji do 11.5 px (13 px dla zaznaczonej) oraz plakietki numerów tras do 10.5 px; etykiety Underground Path są teraz widoczne na mapie regionu.
