@@ -143,6 +143,42 @@ class _PokemonGuideAppState extends State<PokemonGuideApp> {
                       thickness: isPixelStyled ? 2 : 1,
                       color: isPixelStyled ? badgeColor.withOpacity(0.55) : null,
                     ),
+                    inputDecorationTheme: InputDecorationTheme(
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.zero,
+                        borderSide: BorderSide(
+                          color: isPixelStyled ? badgeColor : scheme.outline,
+                          width: isPixel ? 2 : 1,
+                        ),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.zero,
+                        borderSide: BorderSide(
+                          color: isPixelStyled ? badgeColor.withOpacity(0.65) : scheme.outline,
+                          width: isPixel ? 2 : 1,
+                        ),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.zero,
+                        borderSide: BorderSide(color: badgeColor, width: isPixel ? 3 : 2),
+                      ),
+                    ),
+                    popupMenuTheme: PopupMenuThemeData(
+                      shape: AppAppearance.componentShape(
+                        badgeColor,
+                        pixel: isPixel,
+                        width: isPixel ? 2 : 1.5,
+                      ),
+                    ),
+                    textButtonTheme: TextButtonThemeData(
+                      style: TextButton.styleFrom(
+                        shape: AppAppearance.componentShape(
+                          badgeColor,
+                          pixel: isPixel,
+                          width: isPixel ? 2 : 1,
+                        ),
+                      ),
+                    ),
                     elevatedButtonTheme: ElevatedButtonThemeData(
                       style: ElevatedButton.styleFrom(
                         shape: AppAppearance.componentShape(
