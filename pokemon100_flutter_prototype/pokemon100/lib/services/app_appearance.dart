@@ -42,6 +42,23 @@ class AppAppearance {
     visualStyle.value = visualStyles.containsKey(savedStyle) ? savedStyle : 'modern';
   }
 
+  static ShapeBorder componentShape(
+    Color accent, {
+    required bool pixel,
+    double width = 1,
+  }) {
+    if (pixel) {
+      return PixelShapeBorder(
+        side: BorderSide(color: accent, width: width),
+        step: 5,
+      );
+    }
+    return RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(12),
+      side: BorderSide.none,
+    );
+  }
+
   static Future<void> setVisualStyle(String value) async {
     if (!visualStyles.containsKey(value)) return;
     visualStyle.value = value;
@@ -66,4 +83,60 @@ class AppAppearance {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setInt(_badgeKey, value.value);
   }
+}
+
+
+/// Kanciasta ramka z charakterystycznymi schodkami w stylu pixel art.
+class PixelShapeBorder extends ShapeBorder {
+  final BorderSide side;
+  final double step;
+
+  const PixelShapeBorder({
+    this.side = BorderSide.none,
+    this.step = 5,
+  });
+
+  @override
+  EdgeInsetsGeometry get dimensions => EdgeInsets.all(side.width);
+
+  Path _path(Rect rect) {
+    final inset = step.clamp(1.0, rect.shortestSide / 3);
+    return Path()
+      ..moveTo(rect.left + inset, rect.top)
+      ..lineTo(rect.right - inset, rect.top)
+      ..lineTo(rect.right - inset, rect.top + inset)
+      ..lineTo(rect.right, rect.top + inset)
+      ..lineTo(rect.right, rect.bottom - inset)
+      ..lineTo(rect.right - inset, rect.bottom - inset)
+      ..lineTo(rect.right - inset, rect.bottom)
+      ..lineTo(rect.left + inset, rect.bottom)
+      ..lineTo(rect.left + inset, rect.bottom - inset)
+      ..lineTo(rect.left, rect.bottom - inset)
+      ..lineTo(rect.left, rect.top + inset)
+      ..lineTo(rect.left + inset, rect.top + inset)
+      ..close();
+  }
+
+  @override
+  Path getOuterPath(Rect rect, {TextDirection? textDirection}) => _path(rect);
+
+  @override
+  Path getInnerPath(Rect rect, {TextDirection? textDirection}) =>
+      _path(rect.deflate(side.width));
+
+  @override
+  void paint(Canvas canvas, Rect rect, {TextDirection? textDirection}) {
+    if (side.style == BorderStyle.none || side.width == 0) return;
+    final paint = Paint()
+      ..color = side.color
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = side.width;
+    canvas.drawPath(_path(rect.deflate(side.width / 2)), paint);
+  }
+
+  @override
+  ShapeBorder scale(double t) => PixelShapeBorder(
+        side: side.scale(t),
+        step: step * t,
+      );
 }
