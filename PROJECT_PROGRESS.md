@@ -1,3 +1,11 @@
+### Katalog ruchów — odświeżenie listy i filtrów (2026-11-12)
+
+- Przebudowano nagłówek katalogu i wyniki: licznik dopasowanych ruchów, wyszukiwarka oraz czytelniejsze filtry typów i kategorii.
+- Karty ruchów pokazują teraz typ i kategorię jako osobne etykiety; po rozwinięciu parametry są prezentowane w małych panelach: moc, celność, PP, priorytet i generacja.
+- Dodano responsywny układ filtrów dla wąskich i szerokich ekranów, ograniczenie szerokości treści na dużych monitorach oraz pusty stan z przyciskiem czyszczenia filtrów.
+- Zachowano dotychczasowe lokalne wyszukiwanie, filtrowanie i komplet danych z katalogu; nie zmieniano źródła ani wartości ruchów.
+- Nie uruchomiono Flutter analyzer, testów ani APK; wymaga sprawdzenia działania filtrów i czytelności kart w jasnym/ciemnym motywie.
+
 ### Pokédex — odświeżenie ekranu szczegółów Pokémonów (2026-11-12)
 
 - Przebudowano nagłówek szczegółów: większy panel z nazwą, numerem, sprite’em, typami i oznaczeniami gatunków specjalnych; zachowano klasyczny pikselowy sprite bez celowego wygładzania.
