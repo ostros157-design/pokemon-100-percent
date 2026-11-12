@@ -1,3 +1,10 @@
+### Poradniki — wyraźniejsze oznaczenie kroków (2026-11-12)
+
+- Każda karta poradnika pokazuje teraz numer kroku w osobnej etykiecie, co ułatwia orientację podczas przechodzenia przez dłuższą listę.
+- Kroki opcjonalne mają osobny znacznik „DODATKOWE”; usunięto powtarzający się tekst „Opcjonalne” z dolnej części karty.
+- Zachowano odhaczanie i zapis postępu, status ukończenia, lokacje, Pokémony z procentami spotkań oraz listy przedmiotów.
+- Zmiany zapisano na `fix/maps-screen-build-errors`; nie uruchomiono analyzer, testów ani APK.
+
 ### Poradniki — czytelniejsze karty kroków (2026-11-12)
 
 - Karty kroków korzystają teraz z powierzchni i obramowań aktywnego motywu; ukończone kroki są delikatnie wyróżnione bez stałych kolorów.
