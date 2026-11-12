@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../models/achievement.dart';
+import '../services/app_appearance.dart';
+import 'pixel_icon.dart';
 
 class AchievementCard extends StatelessWidget {
   final Achievement achievement;
@@ -21,6 +23,7 @@ class AchievementCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final unlockedColor = Theme.of(context).colorScheme.primary;
+    final pixel = AppAppearance.visualStyle.value == 'pixel';
 
     return Card(
       margin: const EdgeInsets.only(bottom: 12),
@@ -29,12 +32,16 @@ class AchievementCard extends StatelessWidget {
           backgroundColor: unlocked
               ? unlockedColor.withValues(alpha: 0.14)
               : null,
-          child: Icon(
-            unlocked
-                ? Icons.emoji_events
-                : Icons.lock_outline,
-            color: unlocked ? unlockedColor : null,
-          ),
+          child: pixel
+              ? PixelIcon(
+                  name: unlocked ? 'trophy' : 'settings',
+                  color: unlocked ? unlockedColor : Theme.of(context).disabledColor,
+                  size: 23,
+                )
+              : Icon(
+                  unlocked ? Icons.emoji_events : Icons.lock_outline,
+                  color: unlocked ? unlockedColor : null,
+                ),
         ),
         title: Text(
           achievement.title,
@@ -55,17 +62,27 @@ class AchievementCard extends StatelessWidget {
                     ? 'Cofnij ręczne oznaczenie'
                     : 'Oznacz jako zdobyte',
                 onPressed: onManualToggle,
-                icon: Icon(
-                  manuallyUnlocked
-                      ? Icons.check_circle
-                      : Icons.check_circle_outline,
-                  color: manuallyUnlocked ? unlockedColor : null,
-                ),
+                icon: pixel
+                    ? PixelIcon(
+                        name: 'check',
+                        color: manuallyUnlocked ? unlockedColor : null,
+                      )
+                    : Icon(
+                        manuallyUnlocked
+                            ? Icons.check_circle
+                            : Icons.check_circle_outline,
+                        color: manuallyUnlocked ? unlockedColor : null,
+                      ),
               )
-            : Icon(
-                unlocked ? Icons.check_circle : Icons.lock,
-                color: unlocked ? unlockedColor : null,
-              ),
+            : pixel
+                ? PixelIcon(
+                    name: unlocked ? 'check' : 'settings',
+                    color: unlocked ? unlockedColor : Theme.of(context).disabledColor,
+                  )
+                : Icon(
+                    unlocked ? Icons.check_circle : Icons.lock,
+                    color: unlocked ? unlockedColor : null,
+                  ),
       ),
     );
   }
