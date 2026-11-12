@@ -61,6 +61,18 @@ class _GuideScreenState extends State<GuideScreen> {
     _revealInitialStep();
   }
 
+  void _jumpToStep(int index) {
+    if (index < 0 || index >= _stepKeys.length) return;
+    final targetContext = _stepKeys[index].currentContext;
+    if (targetContext == null) return;
+    Scrollable.ensureVisible(
+      targetContext,
+      alignment: 0.08,
+      duration: const Duration(milliseconds: 400),
+      curve: Curves.easeInOut,
+    );
+  }
+
   void _revealInitialStep() {
     if (_didApplyInitialStep) return;
     _didApplyInitialStep = true;
@@ -111,13 +123,15 @@ class _GuideScreenState extends State<GuideScreen> {
           : Column(
               children: [
                 _buildProgressHeader(),
+                if (guide.steps.isNotEmpty) _buildStepJumpBar(),
                 Expanded(
                   child: guide.steps.isEmpty
                       ? _buildEmptyGuide()
-                      : ListView(
+                      : SingleChildScrollView(
                           controller: _scrollController,
                           padding: const EdgeInsets.all(16),
-                          children: List<Widget>.generate(guide.steps.length, (index) {
+                          child: Column(
+                            children: List<Widget>.generate(guide.steps.length, (index) {
                             final step = guide.steps[index];
 
                             return GuideStepCard(
@@ -136,11 +150,66 @@ class _GuideScreenState extends State<GuideScreen> {
                                 await _saveProgress();
                               },
                             );
-                          }),
+                            }),
+                          ),
                         ),
                 ),
               ],
             ),
+    );
+  }
+
+  Widget _buildStepJumpBar() {
+    final colors = Theme.of(context).colorScheme;
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.fromLTRB(16, 10, 16, 10),
+      decoration: BoxDecoration(
+        color: colors.surfaceContainerLow,
+        border: Border(
+          bottom: BorderSide(color: colors.outlineVariant),
+        ),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Szybki wybór kroku',
+            style: TextStyle(
+              color: colors.onSurfaceVariant,
+              fontSize: 12,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+          const SizedBox(height: 8),
+          SizedBox(
+            height: 38,
+            child: ListView.separated(
+              scrollDirection: Axis.horizontal,
+              itemCount: widget.guide.steps.length,
+              separatorBuilder: (_, __) => const SizedBox(width: 7),
+              itemBuilder: (context, index) {
+                final completed = completedSteps.contains(index);
+                return ActionChip(
+                  tooltip: widget.guide.steps[index].title,
+                  visualDensity: VisualDensity.compact,
+                  avatar: completed
+                      ? Icon(Icons.check, size: 16, color: colors.onPrimaryContainer)
+                      : null,
+                  label: Text('${index + 1}'),
+                  backgroundColor: completed
+                      ? colors.primaryContainer
+                      : colors.surface,
+                  side: BorderSide(
+                    color: completed ? colors.primary : colors.outlineVariant,
+                  ),
+                  onPressed: () => _jumpToStep(index),
+                );
+              },
+            ),
+          ),
+        ],
+      ),
     );
   }
 
