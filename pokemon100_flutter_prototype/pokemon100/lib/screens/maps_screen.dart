@@ -18,7 +18,14 @@ import 'pokemon_details_screen.dart';
 /// Offline regional location indexes are loaded from bundled, source-tracked JSON.
 /// A schematic or decorative view is never presented as a scale-accurate game map.
 class MapsScreen extends StatefulWidget {
-  const MapsScreen({super.key});
+  final String? initialPokemonName;
+  final String? initialGameId;
+
+  const MapsScreen({
+    super.key,
+    this.initialPokemonName,
+    this.initialGameId,
+  });
 
   @override
   State<MapsScreen> createState() => _MapsScreenState();
@@ -34,6 +41,7 @@ class _MapsScreenState extends State<MapsScreen> {
   final TextEditingController _locationSearchController = TextEditingController();
   final Map<String, Map<String, dynamic>> _mapIndexes = <String, Map<String, dynamic>>{};
   bool _mapIndexesLoading = true;
+  bool _pokemonSearchMode = false;
 
   @override
   void dispose() {
@@ -56,6 +64,12 @@ class _MapsScreenState extends State<MapsScreen> {
   @override
   void initState() {
     super.initState();
+    final initialPokemon = widget.initialPokemonName?.trim();
+    if (initialPokemon != null && initialPokemon.isNotEmpty) {
+      _pokemonSearchMode = true;
+      _searchQuery = initialPokemon;
+      _locationSearchController.text = initialPokemon;
+    }
     _loadSelectedGame();
     _loadMapIndexes();
   }
@@ -164,7 +178,54 @@ class _MapsScreenState extends State<MapsScreen> {
   String _normalizePokemonName(String name) => name
       .toLowerCase()
       .replaceAll('’', "'")
-      .replaceAll('‘', "'");
+      .replaceAll('‘', "'")
+      .trim();
+
+  bool _matchesMapPokemon(Map<String, dynamic> location, String query) {
+    if (query.isEmpty) return true;
+    final normalizedQuery = _normalizePokemonName(query);
+    final encounterSource =
+        location['wildPokemonDetails'] ?? location['encounters'];
+    final encounters = _mapWildPokemonEntries(encounterSource);
+    if (encounters.any((entry) =>
+        _normalizePokemonName(entry['name'] ?? '').contains(normalizedQuery))) {
+      return true;
+    }
+    final notable = (location['notablePokemon'] as List?)
+            ?.map((value) => value.toString()) ??
+        const <String>[];
+    if (notable.any((name) =>
+        _normalizePokemonName(name).contains(normalizedQuery))) {
+      return true;
+    }
+    final rareEncounter = location['rareEncounter'];
+    if (rareEncounter is Map) {
+      final name = rareEncounter['name']?.toString() ?? '';
+      if (_normalizePokemonName(name).contains(normalizedQuery)) return true;
+    }
+    return false;
+  }
+
+  String _mapPokemonMatchDescription(
+    Map<String, dynamic> location,
+    String query,
+  ) {
+    final normalizedQuery = _normalizePokemonName(query);
+    final encounterSource =
+        location['wildPokemonDetails'] ?? location['encounters'];
+    final matches = _mapWildPokemonEntries(encounterSource).where((entry) =>
+        _normalizePokemonName(entry['name'] ?? '').contains(normalizedQuery));
+    final details = matches.map((entry) {
+      final parts = <String>[
+        if (entry['levels'] != null) 'Lv. ${entry['levels']}',
+        if (entry['rate'] != null) '${entry['rate']}%',
+        if (entry['method'] != null) entry['method']!,
+      ];
+      return parts.isEmpty ? 'spotkanie' : parts.join(' • ');
+    }).toSet().toList();
+    if (details.isNotEmpty) return details.join(' / ');
+    return 'Ważny lub specjalny Pokémon';
+  }
 
   String _mapDataStatusLabel(String status) {
     switch (status) {
@@ -639,7 +700,8 @@ class _MapsScreenState extends State<MapsScreen> {
 
   Future<void> _loadSelectedGame() async {
     final preferences = await SharedPreferences.getInstance();
-    final savedId = preferences.getString('selected_pokemon_game_id');
+    final savedId = widget.initialGameId ??
+        preferences.getString('selected_pokemon_game_id');
     Game? savedGame;
     for (final game in gamesList) {
       if (game.id == savedId) {
@@ -758,6 +820,9 @@ class _MapsScreenState extends State<MapsScreen> {
     // route progression better than alphabetical sorting.
     final allLocationEntries = _locations.entries.toList();
     final normalizedQuery = _searchQuery.trim().toLowerCase();
+    final pokemonLocationEntries = _activeMapIndexLocations
+        .where((location) => _matchesMapPokemon(location, normalizedQuery))
+        .toList(growable: false);
     // Every named node on the full Kanto schematic can be selected, not
     // only the first few tutorial locations.
     final localSchematicLocations = _KantoMapPainter.places
@@ -1311,12 +1376,49 @@ class _MapsScreenState extends State<MapsScreen> {
                   ),
                   const SizedBox(height: 12),
                 ],
+                SegmentedButton<bool>(
+                  segments: const [
+                    ButtonSegment<bool>(
+                      value: false,
+                      icon: Icon(Icons.place_outlined),
+                      label: Text('Lokacje'),
+                    ),
+                    ButtonSegment<bool>(
+                      value: true,
+                      icon: Icon(Icons.catching_pokemon),
+                      label: Text('Pokémony'),
+                    ),
+                  ],
+                  selected: <bool>{_pokemonSearchMode},
+                  onSelectionChanged: (selection) {
+                    setState(() {
+                      _pokemonSearchMode = selection.first;
+                      _searchQuery = '';
+                      _locationSearchController.clear();
+                    });
+                  },
+                ),
+                const SizedBox(height: 8),
                 TextField(
-                  decoration: const InputDecoration(
-                    labelText: 'Szukaj lokacji',
-                    hintText: 'Np. Viridian City, Route 1',
-                    prefixIcon: Icon(Icons.search),
-                    border: OutlineInputBorder(),
+                  decoration: InputDecoration(
+                    labelText: _pokemonSearchMode
+                        ? 'Szukaj Pokémona na mapie'
+                        : 'Szukaj lokacji',
+                    hintText: _pokemonSearchMode
+                        ? 'Np. Pikachu, Eevee'
+                        : 'Np. Viridian City, Route 1',
+                    prefixIcon: const Icon(Icons.search),
+                    suffixIcon: _searchQuery.isEmpty
+                        ? null
+                        : IconButton(
+                            tooltip: 'Wyczyść wyszukiwanie',
+                            icon: const Icon(Icons.close),
+                            onPressed: () {
+                              _locationSearchController.clear();
+                              setState(() => _searchQuery = '');
+                            },
+                          ),
+                    border: const OutlineInputBorder(),
                   ),
                   controller: _locationSearchController,
                   onChanged: (value) => setState(() => _searchQuery = value),
@@ -1342,30 +1444,64 @@ class _MapsScreenState extends State<MapsScreen> {
                             '${_activeMapIndexLocations.length} lokacji w katalogu. To indeks źródłowy, nie gotowa mapa w skali; pozycje pinezek wymagają dalszej weryfikacji.',
                           ),
                           const SizedBox(height: 8),
-                          ..._activeMapIndexLocations
-                              .where((location) => _matchesMapLocation(location, normalizedQuery))
-                              .take(normalizedQuery.isEmpty ? 8 : 15)
-                              .map((location) {
-                            final name = location['name'] as String? ?? 'Lokacja';
-                            final kind = location['kind'] as String? ?? 'lokacja';
-                            final status = (location['dataStatus'] as String? ?? 'status nieznany')
-                                .replaceAll('_', ' ');
-                            return ListTile(
-                              dense: true,
-                              contentPadding: EdgeInsets.zero,
-                              leading: const Icon(Icons.place_outlined),
-                              title: Text(name),
-                              subtitle: Text('$kind • $status'),
-                              onTap: () {
-                                _locationSearchController.text = name;
-                                setState(() => _searchQuery = name);
-                              },
-                            );
-                          }),
-                          if (_activeMapIndexLocations
-                              .where((location) => _matchesMapLocation(location, normalizedQuery))
-                              .isEmpty)
-                            const Text('Brak lokacji o tej nazwie w indeksie regionu.'),
+                          if (_pokemonSearchMode) ...[
+                            const Text(
+                              'Wyniki pokazują lokacje, w których dane spotkań zawierają szukanego Pokémona. Nie oznacza to jeszcze potwierdzonej pinezki jego dokładnego miejsca.',
+                              style: TextStyle(fontSize: 12),
+                            ),
+                            const SizedBox(height: 8),
+                            ...pokemonLocationEntries.take(20).map((location) {
+                              final name = location['name'] as String? ?? 'Lokacja';
+                              return ListTile(
+                                dense: true,
+                                contentPadding: EdgeInsets.zero,
+                                leading: const Icon(Icons.catching_pokemon),
+                                title: Text(name),
+                                subtitle: Text(
+                                  _mapPokemonMatchDescription(location, normalizedQuery),
+                                ),
+                                onTap: () {
+                                  _locationSearchController.text = name;
+                                  setState(() {
+                                    _pokemonSearchMode = false;
+                                    _searchQuery = name;
+                                  });
+                                },
+                              );
+                            }),
+                            if (normalizedQuery.isEmpty)
+                              const Text('Wpisz nazwę Pokémona, aby znaleźć lokacje.'),
+                            if (normalizedQuery.isNotEmpty &&
+                                pokemonLocationEntries.isEmpty)
+                              const Text(
+                                'Nie znaleziono go w dostępnych danych spotkań tej gry i regionu.',
+                              ),
+                          ] else ...[
+                            ..._activeMapIndexLocations
+                                .where((location) => _matchesMapLocation(location, normalizedQuery))
+                                .take(normalizedQuery.isEmpty ? 8 : 15)
+                                .map((location) {
+                              final name = location['name'] as String? ?? 'Lokacja';
+                              final kind = location['kind'] as String? ?? 'lokacja';
+                              final status = (location['dataStatus'] as String? ?? 'status nieznany')
+                                  .replaceAll('_', ' ');
+                              return ListTile(
+                                dense: true,
+                                contentPadding: EdgeInsets.zero,
+                                leading: const Icon(Icons.place_outlined),
+                                title: Text(name),
+                                subtitle: Text('$kind • $status'),
+                                onTap: () {
+                                  _locationSearchController.text = name;
+                                  setState(() => _searchQuery = name);
+                                },
+                              );
+                            }),
+                            if (_activeMapIndexLocations
+                                .where((location) => _matchesMapLocation(location, normalizedQuery))
+                                .isEmpty)
+                              const Text('Brak lokacji o tej nazwie w indeksie regionu.'),
+                          ],
                         ],
                       ),
                     ),
