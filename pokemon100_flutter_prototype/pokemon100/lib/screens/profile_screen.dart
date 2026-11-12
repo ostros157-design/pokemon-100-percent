@@ -3,6 +3,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../data/guides_data.dart';
 import '../data/pokemon_data.dart';
+import '../services/app_appearance.dart';
+import '../widgets/pixel_icon.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -108,6 +110,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         ? 0
         : (completedObjectives * 100 / totalObjectives).round();
     final gameName = _gameNames[_selectedGameId] ?? _selectedGameId;
+    final pixel = AppAppearance.visualStyle.value == 'pixel';
 
     return Scaffold(
       appBar: AppBar(title: const Text('Profil')),
@@ -116,35 +119,65 @@ class _ProfileScreenState extends State<ProfileScreen> {
           : ListView(
               padding: const EdgeInsets.all(16),
               children: [
-                const CircleAvatar(
-                  radius: 50,
-                  child: Icon(Icons.person, size: 55),
-                ),
+                if (pixel)
+                  Container(
+                    width: 100,
+                    height: 100,
+                    alignment: Alignment.center,
+                    decoration: ShapeDecoration(
+                      color: Theme.of(context).colorScheme.surfaceContainerHighest,
+                      shape: PixelShapeBorder(
+                        side: BorderSide(
+                          color: Theme.of(context).colorScheme.primary,
+                          width: 2,
+                        ),
+                        step: 12,
+                      ),
+                    ),
+                    child: PixelIcon(
+                      name: 'profile',
+                      size: 52,
+                      color: Theme.of(context).colorScheme.primary,
+                    ),
+                  )
+                else
+                  const CircleAvatar(
+                    radius: 50,
+                    child: Icon(Icons.person, size: 55),
+                  ),
                 const SizedBox(height: 24),
                 Card(
                   child: ListTile(
-                    leading: const Icon(Icons.videogame_asset),
+                    leading: pixel
+                        ? PixelIcon(name: 'game', color: Theme.of(context).colorScheme.primary)
+                        : const Icon(Icons.videogame_asset),
                     title: const Text('Postęp wybranej gry'),
                     subtitle: Text(gameName),
                   ),
                 ),
                 Card(
                   child: ListTile(
-                    leading: const Icon(Icons.track_changes),
+                    leading: pixel
+                        ? PixelIcon(name: 'bolt', color: Theme.of(context).colorScheme.primary)
+                        : const Icon(Icons.track_changes),
                     title: const Text('Postęp Pokémon 100%'),
                     subtitle: Text('$percent% — poradniki i Pokédex dla wybranej gry'),
                   ),
                 ),
                 Card(
                   child: ListTile(
-                    leading: const Icon(Icons.menu_book),
+                    leading: pixel
+                        ? PixelIcon(name: 'book', color: Theme.of(context).colorScheme.primary)
+                        : const Icon(Icons.menu_book),
                     title: const Text('Kroki poradników ukończone'),
                     subtitle: Text('$_completedGuideSteps / $_totalGuideSteps'),
                   ),
                 ),
                 Card(
                   child: ListTile(
-                    leading: const Icon(Icons.catching_pokemon),
+                    leading: pixel
+                        ? PixelIcon(name: 'pokeball', color: Theme.of(context).colorScheme.primary)
+                        : const Icon(Icons.catching_pokemon),
                     title: const Text('Pokémony oznaczone jako złapane'),
                     subtitle: Text('$_caughtPokemon / ${pokemonList.length}'),
                   ),
