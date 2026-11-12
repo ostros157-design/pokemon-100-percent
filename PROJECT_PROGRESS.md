@@ -1,3 +1,10 @@
+### Poradniki — szybkie przechodzenie między krokami (2026-11-12)
+
+- Pod paskiem postępu dodano poziomy pasek numerowanych skrótów do wszystkich kroków poradnika; kliknięcie numeru przewija bezpośrednio do odpowiedniej karty.
+- Ukończone kroki są oznaczone znacznikiem wyboru również na pasku skrótów, a nazwa kroku jest dostępna jako podpowiedź.
+- Widok listy zmieniono na przewijaną kolumnę, aby karty miały dostępne konteksty dla niezawodnego przewijania do wskazanego kroku.
+- Zachowano zapis postępu, wejście do wskazanego kroku z mapy i wszystkie dane kart. Nie uruchomiono analyzer, testów ani APK.
+
 ### Poradniki — wyraźniejsze oznaczenie kroków (2026-11-12)
 
 - Każda karta poradnika pokazuje teraz numer kroku w osobnej etykiecie, co ułatwia orientację podczas przechodzenia przez dłuższą listę.
