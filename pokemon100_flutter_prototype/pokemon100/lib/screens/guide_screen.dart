@@ -145,16 +145,15 @@ class _GuideScreenState extends State<GuideScreen> {
 
   Widget _buildProgressHeader() {
     final percent = (progress * 100).round();
+    final colors = Theme.of(context).colorScheme;
 
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.fromLTRB(16, 16, 16, 18),
       decoration: BoxDecoration(
-        color: Colors.green.shade50,
+        color: colors.surface,
         border: Border(
-          bottom: BorderSide(
-            color: Colors.green.shade100,
-          ),
+          bottom: BorderSide(color: colors.outlineVariant),
         ),
       ),
       child: Column(
@@ -185,13 +184,15 @@ class _GuideScreenState extends State<GuideScreen> {
             child: LinearProgressIndicator(
               value: progress,
               minHeight: 10,
+              color: colors.primary,
+              backgroundColor: colors.surfaceContainerHighest,
             ),
           ),
           const SizedBox(height: 8),
           Text(
             '$completedCount / ${widget.guide.steps.length} kroków ukończonych',
             style: TextStyle(
-              color: Colors.grey.shade700,
+              color: colors.onSurfaceVariant,
             ),
           ),
         ],
